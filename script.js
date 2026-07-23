@@ -166,4 +166,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // 8. Return to 4IC Button Click Action (Sections 5, 6, 7, 8)
+  const return4icBtns = document.querySelectorAll(".btn-return-4ic");
+  return4icBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetIndex = parseInt(btn.getAttribute("data-slide-target"), 10);
+      smartSlideTo(!isNaN(targetIndex) ? targetIndex : 3);
+    });
+  });
 });
+

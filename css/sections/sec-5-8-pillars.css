@@ -632,3 +632,38 @@
   transform: translateY(-50%) translateX(0) !important;
   transition: none !important;
 }
+
+/* --- RETURN TO 4IC BUTTON (Sections 5-8) --- */
+.btn-return-4ic {
+  position: absolute;
+  top: calc(80px + 20px); /* 20px below navbar (~80px) */
+  left: calc(50% + 18px); /* 18px right of center line */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+  color: #7e93a8;
+  font-family: var(--font-brand);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-return-4ic svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.btn-return-4ic:hover {
+  color: #ffffff;
+}
+
