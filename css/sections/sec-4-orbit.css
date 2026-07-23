@@ -156,7 +156,7 @@
   box-shadow: 0 0 20px rgba(79, 143, 157, 0.25);
   opacity: 0;
   /* Entry: opacity-only fade-in (no scale = no SVG re-rasterization) */
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Hover: Uses separate transition for paint-triggering props (only fires after entry completes) */
