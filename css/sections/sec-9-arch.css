@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Section 9: The Completed Architecture (Solid Background & 2-Column Grid)
+   ========================================================================== */
+.sec-9 {
+  position: relative;
+  background-color: rgba(18, 62, 107, 1);
+  overflow: hidden;
+}
+
+.sec-9 .flex-center-v {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.sec-9__grid {
+  width: 100%;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.sec-9__left {
+  width: 100%;
+}
+
+.sec-9__right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-9__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 570 / 423;
+  object-fit: contain;
+  display: block;
+}
+
+.sec-9__tag {
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-9__title {
+  font-family: var(--font-brand);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-9__desc {
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* Section 9 Entrance Animation (Slow-Motion 1.4s Staggered Bottom-Up Slide) */
+.sec-9 .phrase {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-9.slide-animated .sec-9__tag .phrase {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.sec-9.slide-animated .sec-9__title .phrase {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.sec-9.slide-animated .sec-9__desc .phrase {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.sec-9.slide-animated .sec-9__img.phrase {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.0s;
+}

@@ -1,0 +1,208 @@
+/* ==========================================================================
+   1. BASE SYSTEM - Variables, Reset, Swiper Engine & Professional Flexbox Helpers
+   ========================================================================== */
+
+:root {
+  --font-family:
+    "Inter", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-brand: "Aptos", "Inter", "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #2f6ea6;
+  --color-primary-hover: #265b8c;
+  --color-text-light: #ffffff;
+  --color-text-dark: #123e6b;
+  --bg-dark: #071729;
+
+  --container-width: 1170px; /* Figma 12-Column Grid Max-Width Standard */
+  --grid-gutter: 30px; /* Figma 30px Gutter Standard */
+  --header-offset: 129px; /* Precise Figma measurement from top edge to top of background grid */
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--color-text-light);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Swiper Vertical Slider Container */
+.main-swiper,
+.scroll-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fullscreen Section Base */
+.scroll-section,
+.swiper-slide {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Macro Layout System - Standard 1170px Container & 30px Gutter Grid
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px; /* Safe padding for mobile/tablet screen sizes */
+  padding-right: 24px;
+}
+
+/* Remove container padding on desktop screens (>= 1170px) to match Figma 1170px grid exactly */
+@media (min-width: 1170px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--grid-gutter);
+  column-gap: var(--grid-gutter);
+}
+
+/* Column Grid Fractions (30px Gutter Math) */
+.col {
+  flex: 1 0 0%;
+}
+.col-12 {
+  flex: 0 0 100%;
+  width: 100%;
+}
+.col-6 {
+  flex: 0 0 calc(50% - 15px);
+  width: calc(50% - 15px);
+} /* (30px * 1) / 2 = 15px */
+.col-4 {
+  flex: 0 0 calc(33.333% - 20px);
+  width: calc(33.333% - 20px);
+} /* (30px * 2) / 3 = 20px */
+.col-3 {
+  flex: 0 0 calc(25% - 22.5px);
+  width: calc(25% - 22.5px);
+} /* (30px * 3) / 4 = 22.5px */
+
+/* CSS Grid 12-Column Layout System Utilities */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gutter);
+}
+
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+.col-start-7 {
+  grid-column-start: 7;
+}
+.col-start-8 {
+  grid-column-start: 8;
+}
+
+/* ==========================================================================
+   Micro Layout Utilities - Flexbox & Pixel Gap Helpers
+   ========================================================================== */
+.d-flex {
+  display: flex;
+}
+.d-inline-flex {
+  display: inline-flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Alignment Helpers */
+.items-center {
+  align-items: center;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+/* Flexible Pixel Gaps (Measured directly from Figma) */
+.gap-4 {
+  gap: 4px;
+}
+.gap-8 {
+  gap: 8px;
+}
+.gap-12 {
+  gap: 12px;
+}
+.gap-16 {
+  gap: 16px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-24 {
+  gap: 24px;
+}
+.gap-30 {
+  gap: 30px;
+}
+.gap-32 {
+  gap: 32px;
+}
+.gap-40 {
+  gap: 40px;
+}
+.gap-48 {
+  gap: 48px;
+}

@@ -1,0 +1,266 @@
+/* ==========================================================================
+   2. COMPONENTS - Top Navbar Header, Side Progress Dash Lines & Buttons
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HTML Top Navbar Overlay (Figma Standard)
+   -------------------------------------------------------------------------- */
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1.11% 1.11% 0.28%;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Brand Logo (Far Left) */
+.logo-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: filter 0.6s ease;
+}
+
+/* Navigation Links (Centered in viewport using Flexbox & Gap) */
+.nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  z-index: 1;
+}
+
+.nav-item {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  padding: 4px 0;
+  transition:
+    color 0.6s ease,
+    opacity 0.6s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.6s ease;
+}
+
+/* CTA Conversation Button */
+.nav-actions {
+  z-index: 2;
+}
+
+.btn-conversation {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 0;
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.6s ease,
+    color 0.6s ease;
+  display: inline-block;
+}
+
+.btn-conversation:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Light Background Section Navbar Theme Adaptation */
+.navbar-overlay.light-theme .nav-item {
+  color: rgba(18, 62, 107, 0.45);
+}
+
+.navbar-overlay.light-theme .nav-item:hover,
+.navbar-overlay.light-theme .nav-item.active {
+  color: #123e6b;
+}
+
+.navbar-overlay.light-theme .nav-item.active::after {
+  background-color: #123e6b;
+}
+
+.navbar-overlay.light-theme .logo-img {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(50%) saturate(1475%)
+    hue-rotate(188deg) brightness(97%) contrast(92%);
+}
+
+.navbar-overlay.light-theme .btn-conversation {
+  background-color: #123e6b;
+  color: #ffffff;
+}
+
+.navbar-overlay.light-theme .btn-conversation:hover {
+  background-color: #0b2642;
+}
+
+/* --------------------------------------------------------------------------
+   Side Section Progress Navigation (Figma Node 4205:1756 Original Dash Style)
+   -------------------------------------------------------------------------- */
+.dots-navigation {
+  position: fixed;
+  right: 4.24vw; /* 61px / 1440px = 4.24vw fluid right offset */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.dot-item {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  border-radius: 0;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 8px 0;
+  background-clip: content-box;
+  box-sizing: content-box;
+  opacity: 0.35; /* Add default transparency for inactive dots */
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dot-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -30px;
+  right: -20px;
+  cursor: pointer;
+}
+
+.dot-item:hover,
+.dot-item.active {
+  opacity: 1; /* Full opacity on interaction or when active */
+}
+
+.dot-item:hover {
+  width: 30px;
+}
+
+.dot-item.active {
+  width: 40px;
+  height: 2px;
+  border-radius: 0;
+  background-color: #ffffff;
+}
+
+/* Light Section Adaptation */
+.dots-navigation.light-indicator .dot-item {
+  background-color: #123e6b;
+}
+
+.dots-navigation.light-indicator .dot-item:hover {
+  background-color: #123e6b;
+}
+
+.dots-navigation.light-indicator .dot-item.active {
+  background-color: #123e6b;
+}
+
+/* --------------------------------------------------------------------------
+   HTML & SVG Scroll Down Button (Section 1)
+   -------------------------------------------------------------------------- */
+.scroll-down-btn {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.scroll-down-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #7e93a8;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.scroll-down-icon {
+  animation: bounceDown 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.scroll-down-btn:hover .scroll-down-text {
+  color: #ffffff;
+}
+
+.scroll-down-btn:hover .scroll-down-icon path {
+  fill: #ffffff;
+}
+
+@keyframes bounceDown {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(6px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}

@@ -1,0 +1,409 @@
+/* ==========================================================================
+   Section 4: The Four Intelligence Continuum 4IC
+   ========================================================================== */
+.sec-continuum {
+  background-color: #123e6b; /* Deep Aliro Blue Background */
+  position: relative;
+  overflow: hidden;
+}
+
+.sec-continuum .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Orbit & Grid Central Wrapper (780px x 570px) */
+.sec-continuum__orbit-wrap {
+  position: relative;
+  width: 780px;
+  height: 570px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 1. Central Wireframe Grid Asset (570px x 326px Figma Standard) */
+.sec-continuum__grid-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 570px;
+  height: 326px;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    opacity 2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. Central Orbit Ring (480px Diameter, 12px Solid Border) */
+.sec-continuum__orbit-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  border: 12px solid #4f8f9d; /* 12px thick solid border */
+  box-sizing: border-box;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 3. Central Title Text Block */
+.sec-continuum__center-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  width: 320px;
+}
+
+.sec-continuum__tag {
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  color: #4f8f9d;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-continuum__title {
+  font-family: var(--font-brand);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* 4. Satellite Nodes (Interactive Buttons - 160px Circle Anchor) */
+.sec-continuum__node {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  z-index: 4;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* Precise 160px Circle Center Offsets (Y = 240 + 15 - 80 = 175px, X = 240 + 35 - 80 = 195px) */
+.node-top-left {
+  top: calc(50% - 175px);
+  left: calc(50% - 195px);
+  transform: translate(-50%, -50%);
+}
+
+.node-top-right {
+  top: calc(50% - 175px);
+  left: calc(50% + 195px);
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+
+.node-bottom-right {
+  top: calc(50% + 175px);
+  left: calc(50% + 195px);
+  bottom: auto;
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+
+.node-bottom-left {
+  top: calc(50% + 175px);
+  left: calc(50% - 195px);
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+
+/* Node Circle Interactive Button (160px x 160px Figma Standard) */
+.node-circle-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #4f8f9d;
+  background: #0e335b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(79, 143, 157, 0.25);
+  opacity: 0;
+  /* Entry: opacity-only fade-in (no scale = no SVG re-rasterization) */
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover: Uses separate transition for paint-triggering props (only fires after entry completes) */
+.sec-continuum__node:hover .node-circle-btn,
+.node-circle-btn:hover {
+  transform: scale(1.08) !important;
+  border-color: #ffffff;
+  background-color: #123e6b;
+  box-shadow: 0 0 35px rgba(79, 143, 157, 0.6);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.node-circle-btn svg {
+  max-width: 70%;
+  max-height: 70%;
+  height: auto;
+  display: block;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(15px) scale(0.8);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Node Text Typography (Positioned Side-by-Side without skewing Circle Center) */
+.node-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  user-select: none;
+  opacity: 0;
+  z-index: 5; /* Ensure text renders on top of circle button */
+  transition:
+    opacity 0.5s ease-out,
+    transform 1.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.node-top-left .node-text,
+.node-bottom-left .node-text {
+  position: absolute;
+  right: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%) translateX(calc(100px + 50%)) scale(0.5);
+  transform-origin: center center;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.node-top-right .node-text,
+.node-bottom-right .node-text {
+  position: absolute;
+  left: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%) translateX(calc(-100px - 50%)) scale(0.5);
+  transform-origin: center center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.node-num {
+  font-family: var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #4f8f9d;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.node-title {
+  font-family: var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.node-sub {
+  font-family: var(--font-brand);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #7e93a8;
+}
+
+/* 5. Bottom Vertical Connector Line (2px Thin Border Alignment) */
+.sec-continuum__connector-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: calc(50% - 240px);
+  background-color: #4f8f9d;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Section 4 Entrance Animation Sequence (Synced with Swiper Slide Active)
+   -------------------------------------------------------------------------- */
+.sec-continuum .phrase {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Disable phrase animation for node text to let container handle the translation */
+.sec-continuum .node-text .phrase {
+  display: inline-block;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* Active Entrance Animations */
+.sec-continuum.swiper-slide-active .sec-continuum__grid-img {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition-delay: 0.3s;
+}
+
+.sec-continuum.swiper-slide-active .sec-continuum__orbit-ring {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition-delay: 0.6s;
+}
+
+.sec-continuum.swiper-slide-active .sec-continuum__center-text .phrase {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.15s;
+}
+
+/* --- NODE 1 (Start: 1.7s) --- */
+.sec-continuum.swiper-slide-active .node-top-left .node-circle-btn {
+  opacity: 1;
+  transition-delay: 1.7s;
+}
+.sec-continuum.swiper-slide-active .node-top-left .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 2.1s, 2.6s;
+}
+.sec-continuum.swiper-slide-active .node-top-left .node-circle-btn svg {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 3.6s;
+}
+
+/* --- NODE 2 (Start: 3.8s) --- */
+.sec-continuum.swiper-slide-active .node-top-right .node-circle-btn {
+  opacity: 1;
+  transition-delay: 3.8s;
+}
+.sec-continuum.swiper-slide-active .node-top-right .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 4.2s, 4.7s;
+}
+.sec-continuum.swiper-slide-active .node-top-right .node-circle-btn svg {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 5.7s;
+}
+
+/* --- NODE 3 (Start: 5.9s) --- */
+.sec-continuum.swiper-slide-active .node-bottom-right .node-circle-btn {
+  opacity: 1;
+  transition-delay: 5.9s;
+}
+.sec-continuum.swiper-slide-active .node-bottom-right .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 6.3s, 6.8s;
+}
+.sec-continuum.swiper-slide-active .node-bottom-right .node-circle-btn svg {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 7.8s;
+}
+
+/* --- NODE 4 (Start: 8.0s) --- */
+.sec-continuum.swiper-slide-active .node-bottom-left .node-circle-btn {
+  opacity: 1;
+  transition-delay: 8.0s;
+}
+.sec-continuum.swiper-slide-active .node-bottom-left .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 8.4s, 8.9s;
+}
+.sec-continuum.swiper-slide-active .node-bottom-left .node-circle-btn svg {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 9.9s;
+}
+
+/* --- CONNECTOR LINE (Triggered after all 4 nodes complete) --- */
+.sec-continuum.swiper-slide-active .sec-continuum__connector-line {
+  opacity: 1;
+  transition-delay: 10.6s;
+}
+
+/* --- VISITED STATE: Locks Section 4 in completed state when scrolling away --- */
+.sec-continuum.visited .sec-continuum__grid-img,
+.sec-continuum.visited .sec-continuum__orbit-ring {
+  opacity: 1 !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  transition: none !important;
+}
+
+.sec-continuum.visited .sec-continuum__center-text .phrase {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: none !important;
+}
+
+.sec-continuum.visited .node-circle-btn {
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.sec-continuum.visited .node-text {
+  opacity: 1 !important;
+  transform: translateY(-50%) translateX(0) scale(1) !important;
+  transition: none !important;
+}
+
+.sec-continuum.visited .node-circle-btn svg {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  transition: none !important;
+}
+
+.sec-continuum.visited .sec-continuum__connector-line {
+  opacity: 1 !important;
+  transition: none !important;
+}

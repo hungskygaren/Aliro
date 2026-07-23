@@ -1,0 +1,378 @@
+/* ==========================================================================
+   Section 2: Architect Transformation Layout & Typography Specs
+   ========================================================================== */
+.sec-architect {
+  background-color: #f7f9fc;
+  position: relative;
+  overflow: hidden;
+}
+
+.sec-architect .container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: flex-start; /* Fluid top alignment matching 214px/720px Figma ratio */
+  justify-content: flex-start;
+  padding-top: 29.7dvh; /* Dynamic 29.7dvh padding-top for perfect scaling across all screen sizes */
+}
+
+/* Layer 3: Left Text Content (Top-most layer, expanding naturally based on explicit <br /> line breaks) */
+.sec-architect__content {
+  position: relative;
+  z-index: 3; /* Top-most layer overlaying graphic below */
+  width: auto;
+  max-width: none; /* Removed width restriction to allow natural intrinsic line-break layout */
+  text-align: left;
+}
+
+.sec-architect__sub-top {
+  font-family: var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+  color: #4f8f9d; /* Figma Teal Blue Accent */
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  margin-bottom: 12px;
+}
+
+.sec-architect__title {
+  font-family: var(--font-brand);
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 44px; /* 81.481% */
+  color: #123e6b; /* Figma Deep Blue */
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  margin-bottom: 18px;
+}
+
+.sec-architect__sub-bottom {
+  font-family: var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+  color: #4f8f9d; /* Figma Teal Blue Accent */
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  margin-bottom: 24px;
+}
+
+.sec-architect__desc {
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  color: #7e93a8; /* Figma Mid Blue Gray */
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-architect__desc .phrase {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Layer 2: Right Image inside 1170px Container (770px / 1440px = 53.47vw, Full Section Height) */
+.sec-architect__img {
+  position: absolute;
+  right: 0; /* Pinned to right edge of 1170px Container */
+  bottom: 0; /* Pinned to bottom of section */
+  width: 53.47vw; /* 770px / 1440px = 53.47vw fluid width */
+  max-width: 770px;
+  height: 100%; /* Full section height */
+  z-index: 2; /* Under text layer, above white bg */
+  pointer-events: none; /* Prevents image from blocking text interaction */
+  object-fit: contain;
+  object-position: right bottom;
+  opacity: 0;
+  transform: translateY(80px); /* 80px initial offset for slow cinematic rise */
+  transition:
+    opacity 4.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 4.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Section 2 Entrance Animation Sequence (Text Slides in from Right)
+   -------------------------------------------------------------------------- */
+.sec-architect .phrase {
+  display: inline-block;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(40px); /* Initial state: Slide in from the RIGHT */
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active State Triggered by Swiper Slide Change (Grouped Block Chunks) */
+.sec-architect.swiper-slide-active .sec-architect__sub-top .phrase {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.45s;
+}
+
+/* Chunk 2: Main Title Block (Entire 3-line Title together) */
+.sec-architect.swiper-slide-active .sec-architect__title .phrase {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1.15s;
+}
+
+/* Chunk 3: Subtitle Block (Entire 2-line Subtitle together) */
+.sec-architect.swiper-slide-active .sec-architect__sub-bottom .phrase {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1.85s;
+}
+
+/* Chunk 4: Description Block (Entire 2-line Description together) */
+.sec-architect.swiper-slide-active .sec-architect__desc .phrase {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 2.55s;
+}
+
+/* Isometric Visual Graphic */
+.sec-architect.swiper-slide-active .sec-architect__img {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+/* Responsive Overrides for Section 2 */
+@media (max-width: 991px) {
+  .sec-architect .container {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: var(--header-offset);
+  }
+
+  .sec-architect__content {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .sec-architect__title {
+    font-size: 42px;
+  }
+
+  .sec-architect__sub-top,
+  .sec-architect__sub-bottom {
+    font-size: 22px;
+  }
+
+  .sec-architect__visual {
+    position: relative;
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+    right: auto;
+    bottom: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Section 3: System Framework Layout & Typography Specs (Mirror Layout)
+   -------------------------------------------------------------------------- */
+.sec-framework {
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.sec-framework .container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end; /* Pushes text content block to RIGHT side */
+  align-items: flex-start;
+  padding-top: 28.2dvh; /* Exact 28.2dvh top offset (203px / 720px Figma ratio) */
+}
+
+/* Layer 3: Right Text Content (Starts at Column 7 of 12-column Grid) */
+.sec-framework__content {
+  position: relative;
+  z-index: 3;
+  width: calc(50% - 15px); /* 6/12 columns starting at Column 7 */
+  max-width: none;
+  text-align: left;
+}
+
+.sec-framework__sub-top {
+  font-family: var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #4f8f9d;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  margin-bottom: 12px;
+}
+
+.sec-framework__title {
+  font-family: var(--font-brand);
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 44px;
+  color: #123e6b;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  margin-bottom: 18px;
+}
+
+.sec-framework__sub-bottom {
+  font-family: var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #4f8f9d;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  margin-bottom: 24px;
+}
+
+.sec-framework__desc {
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  color: #7e93a8;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-framework__desc .phrase {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Layer 2: Direct Image Grid Bleed (Anchored to Column 6 boundary, Bleeds out to Screen Left Edge) */
+.sec-framework__img {
+  position: absolute;
+  top: 50%;
+  right: calc(50% + 15px); /* Locks right edge of image to Column 6 boundary */
+  left: calc(
+    (100vw - 1170px) / -2
+  ); /* Bleeds left edge out to screen left border */
+  width: calc(
+    50% + 15px + (100vw - 1170px) / 2
+  ); /* Spans from screen left edge to Column 6 */
+  height: 81.53dvh;
+  z-index: 2;
+  pointer-events: none;
+  object-fit: contain;
+  object-position: right center; /* Aligns image right side to Column 6 boundary */
+  opacity: 0;
+  transform: translate(-100px, -50%);
+  transition:
+    opacity 4.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 4.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 1169px) {
+  .sec-framework__img {
+    left: -24px;
+    right: calc(50% + 15px);
+    width: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Section 3 Entrance Animation Sequence (Text Slides in from Left)
+   -------------------------------------------------------------------------- */
+.sec-framework .phrase {
+  display: inline-block;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-40px); /* Initial state: Slide in from the LEFT */
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active State Triggered by Swiper Slide Change */
+.sec-framework.swiper-slide-active .sec-framework__sub-top .phrase {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.45s;
+}
+
+.sec-framework.swiper-slide-active .sec-framework__title .phrase {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1.15s;
+}
+
+.sec-framework.swiper-slide-active .sec-framework__sub-bottom .phrase {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1.85s;
+}
+
+.sec-framework.swiper-slide-active .sec-framework__desc .phrase {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 2.55s;
+}
+
+.sec-framework.swiper-slide-active .sec-framework__img {
+  opacity: 1;
+  transform: translate(0, -50%);
+  transition-delay: 0.5s;
+}
+
+/* Responsive Overrides for Section 3 */
+@media (max-width: 991px) {
+  .sec-framework .container {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: var(--header-offset);
+  }
+
+  .sec-framework__content {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .sec-framework__title {
+    font-size: 42px;
+  }
+
+  .sec-framework__sub-top,
+  .sec-framework__sub-bottom {
+    font-size: 22px;
+  }
+
+  .sec-framework__visual {
+    position: relative;
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+}

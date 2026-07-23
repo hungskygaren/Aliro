@@ -1,0 +1,47 @@
+/* ==========================================================================
+   3. SECTIONS - Modular Section Imports & Shared Background Colors
+   ========================================================================== */
+
+/* Modular Section Imports (MUST be first - CSS spec requirement) */
+@import "./sections/sec-1-hero.css";
+@import "./sections/sec-2-3-intro.css";
+@import "./sections/sec-4-orbit.css";
+@import "./sections/sec-5-8-pillars.css";
+@import "./sections/sec-9-arch.css";
+@import "./sections/sec-10-contact.css";
+
+/* Section Background Color Defaults */
+.sec-2 {
+  background-color: #f7f9fc;
+}
+.sec-3 {
+  background-color: #ffffff;
+}
+.sec-4 {
+  background-color: #123e6b;
+}
+.sec-5 {
+  background-color: #123e6b;
+}
+.sec-6 {
+  background-color: #123e6b;
+}
+.sec-7 {
+  background-color: #123e6b;
+}
+.sec-8 {
+  background-color: #123e6b;
+}
+.sec-9 {
+  background-color: #123e6b;
+}
+.sec-10 {
+  background-color: #f7f9fc;
+}
+
+/* Inner Content Container Wrapper inside Sections */
+.section-content {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}

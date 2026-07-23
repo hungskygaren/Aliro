@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Section 1: Hero Section (Background #123E6B + 152px Top Offset Pattern)
+   ========================================================================== */
+.sec-hero {
+  background-color: #123e6b;
+  position: relative;
+}
+
+.sec-hero__bg {
+  position: absolute;
+  top: var(--header-offset); /* Starts 132px from top (Figma Measurement) */
+  left: 0;
+  width: 100%;
+  height: calc(
+    100% - var(--header-offset)
+  ); /* Dynamic fluid height co dãn theo viewport */
+  background-image: url("../../assets/hero-bg-pattern.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; /* Sync image dimensions exactly to container height */
+  pointer-events: none;
+  z-index: 1; /* Layer 1: Bottom-most background grid */
+}
+
+/* Two side-layered cliff graphics (Figma Spec: 350px x 460px -> proportional responsive width) */
+.sec-hero__cliff {
+  position: absolute;
+  bottom: 0;
+  width: 24.3%; /* 350px / 1440px = 24.3% dynamic width */
+  aspect-ratio: 350 / 460; /* Locks aspect ratio to prevent graphic distortion */
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 2; /* Layer 2: Overlay over grid pattern (z-index: 1) */
+}
+
+.sec-hero__cliff--left {
+  left: 0;
+  background-image: url("../../assets/hero-bg-left.png");
+  background-position: left bottom;
+}
+
+.sec-hero__cliff--right {
+  right: 0;
+  background-image: url("../../assets/hero-bg-right.png");
+  background-position: right bottom;
+}
+
+.sec-hero__content {
+  position: relative;
+  z-index: 3; /* Layer 3: Top-most text content overlaying both grid and cliffs */
+  max-width: 770px; /* Figma 8/12 Columns Standard (770px / 1170px = 65.8%) */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Section 1 Typography Specs (Figma Node 4243:2526) */
+.sec-hero__sub-top {
+  font-family: var(--font-brand);
+  font-size: 30px;
+  font-weight: 700;
+  color: #4f8f9d; /* Figma Teal Blue */
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+}
+
+.sec-hero__title {
+  font-family: var(--font-brand);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 0.85; /* Adjusted to exactly 0.85 (54.4px) to restore Figma alignment */
+  color: #dce4ec; /* Figma Soft Gray */
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off; /* Exact Figma Typography setting */
+  margin-bottom: 18px;
+}
+
+.sec-hero__sub-bottom {
+  font-family: var(--font-brand);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 0.85; /* Adjusted to exactly 0.85 (25.5px) for authentic Figma tight layout */
+  color: #4f8f9d; /* Figma Teal Blue */
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 24px; /* Adjusted to exactly 24px per user request */
+}
+
+.btn-hero-cta {
+  display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   Section 1 Entrance Staggered Animation Sequence (Slowing Down Pace)
+   -------------------------------------------------------------------------- */
+/* Initial State: Hidden & Offset elements */
+.sec-hero .sec-hero__bg {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-hero .word,
+.sec-hero .phrase {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-hero .btn-hero-cta {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-hero .sec-hero__cliff--left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:
+    opacity 5.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 5.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-hero .sec-hero__cliff--right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    opacity 5.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 5.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Triggered State: Activated when Section 1 is Active (.swiper-slide-active) */
+.sec-hero.swiper-slide-active .sec-hero__bg {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+/* Sub-top phrase reveal (Chunk 1 - Bottom-to-Top) */
+.sec-hero.swiper-slide-active .sec-hero__sub-top .phrase {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.45s;
+}
+
+/* Main title phrase reveal (Chunk 2 - Entire H1 Block - 0.7s Gap) */
+.sec-hero.swiper-slide-active .sec-hero__title .phrase {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.15s;
+}
+
+/* Sub-bottom phrase reveal (Chunk 3 - Entire P Block - 0.7s Gap) */
+.sec-hero.swiper-slide-active .sec-hero__sub-bottom .phrase {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.85s;
+}
+
+/* Hero CTA Button (0.7s Gap) */
+.sec-hero.swiper-slide-active .btn-hero-cta {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 2.55s;
+}
+
+/* Side cliffs: Start early (0.50s) while text appears, slide super slowly (3.8s) to finish AFTER text */
+.sec-hero.swiper-slide-active .sec-hero__cliff--left,
+.sec-hero.swiper-slide-active .sec-hero__cliff--right {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.5s;
+}
