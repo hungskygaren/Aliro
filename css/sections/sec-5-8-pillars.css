@@ -653,7 +653,12 @@
   line-height: 1;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: color 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.3s ease;
 }
 
 .btn-return-4ic svg {
@@ -666,4 +671,25 @@
 .btn-return-4ic:hover {
   color: #ffffff;
 }
+
+/* Active Timeline Sequence: Fade-in after vertical line finishes drawing (1.2s delay) */
+.sec-5.swiper-slide-active .btn-return-4ic,
+.sec-6.swiper-slide-active .btn-return-4ic,
+.sec-7.swiper-slide-active .btn-return-4ic,
+.sec-8.swiper-slide-active .btn-return-4ic {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.2s;
+}
+
+/* Visited State: Stay visible when scrolling back */
+.sec-5.visited .btn-return-4ic,
+.sec-6.visited .btn-return-4ic,
+.sec-7.visited .btn-return-4ic,
+.sec-8.visited .btn-return-4ic {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: color 0.3s ease !important;
+}
+
 
