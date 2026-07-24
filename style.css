@@ -9,4 +9,4 @@
 @import "./css/components.css";
 
 /* 3. Page Sections: Background Colors & Section Containers */
-@import "./css/sections.css";
+@import "./css/pages/home/home-layout.css";

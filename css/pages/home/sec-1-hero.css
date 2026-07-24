@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   height: 81.9444%; /* 590px / 720px */
-  background-image: url("../../assets/hero-bg-pattern.png");
+  background-image: url("../../../assets/hero-bg-pattern.png");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100% 100%; /* Sync image dimensions exactly to container height */
@@ -66,7 +66,7 @@
 
 .sec-hero__cliff--left {
   left: 0;
-  background-image: url("../../assets/hero-bg-left.png");
+  background-image: url("../../../assets/hero-bg-left.png");
   background-position: left bottom;
   width: 29.2361%; /* 421px / 1440px */
   aspect-ratio: 421 / 579;
@@ -74,7 +74,7 @@
 
 .sec-hero__cliff--right {
   right: 0;
-  background-image: url("../../assets/hero-bg-right.png");
+  background-image: url("../../../assets/hero-bg-right.png");
   background-position: right bottom;
   width: 31.8056%; /* 458px / 1440px */
   aspect-ratio: 458 / 614;

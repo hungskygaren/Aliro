@@ -3,12 +3,12 @@
    ========================================================================== */
 
 /* Modular Section Imports (MUST be first - CSS spec requirement) */
-@import "./sections/sec-1-hero.css";
-@import "./sections/sec-2-3-intro.css";
-@import "./sections/sec-4-orbit.css";
-@import "./sections/sec-5-8-pillars.css";
-@import "./sections/sec-9-arch.css";
-@import "./sections/sec-10-contact.css";
+@import "./sec-1-hero.css";
+@import "./sec-2-3-intro.css";
+@import "./sec-4-orbit.css";
+@import "./sec-5-8-pillars.css";
+@import "./sec-9-arch.css";
+@import "./sec-10-contact.css";
 
 /* Slide Background Colors & Dynamic Transition Specs */
 .sec-hero, .sec-continuum, .sec-5, .sec-6, .sec-7, .sec-8 {
