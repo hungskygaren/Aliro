@@ -8,6 +8,80 @@ document.addEventListener("DOMContentLoaded", () => {
   const dots = document.querySelectorAll(".dot-item");
   const navItems = document.querySelectorAll(".nav-item");
   const scrollDownBtn = document.getElementById("scrollDownBtn");
+  const sectionBackgrounds = new WeakMap();
+  let clearBackgroundTransition = null;
+
+  document.querySelectorAll(".scroll-section").forEach((section) => {
+    sectionBackgrounds.set(section, getComputedStyle(section).backgroundColor);
+  });
+
+  function transitionIncomingBackground(swiperInstance, duration) {
+    const transitionDuration = Number.isFinite(duration)
+      ? duration
+      : swiperInstance.params.speed;
+
+    if (transitionDuration <= 0 || !swiperInstance.slides) return;
+
+    if (clearBackgroundTransition) clearBackgroundTransition();
+
+    const outgoingSlide = swiperInstance.slides[swiperInstance.previousIndex];
+    const incomingSlide = swiperInstance.slides[swiperInstance.activeIndex];
+    const fromBackground = outgoingSlide
+      ? getComputedStyle(outgoingSlide).backgroundColor
+      : null;
+    const toBackground = incomingSlide
+      ? sectionBackgrounds.get(incomingSlide)
+      : null;
+
+    if (
+      !incomingSlide ||
+      !fromBackground ||
+      !toBackground ||
+      fromBackground === toBackground
+    ) {
+      return;
+    }
+
+    const originalBackground = incomingSlide.style.backgroundColor;
+    const originalTransition = incomingSlide.style.transition;
+    let animationFrameId = null;
+    let timeoutId = null;
+
+    const cleanup = () => {
+      if (animationFrameId !== null) cancelAnimationFrame(animationFrameId);
+      if (timeoutId !== null) clearTimeout(timeoutId);
+      incomingSlide.removeEventListener("transitionend", handleTransitionEnd);
+      incomingSlide.style.backgroundColor = originalBackground;
+      incomingSlide.style.transition = originalTransition;
+      if (clearBackgroundTransition === cleanup) {
+        clearBackgroundTransition = null;
+      }
+    };
+
+    const handleTransitionEnd = (event) => {
+      if (
+        event.target === incomingSlide &&
+        event.propertyName === "background-color"
+      ) {
+        cleanup();
+      }
+    };
+
+    incomingSlide.style.transition = "none";
+    incomingSlide.style.backgroundColor = fromBackground;
+    void incomingSlide.offsetWidth;
+
+    incomingSlide.addEventListener("transitionend", handleTransitionEnd);
+    animationFrameId = requestAnimationFrame(() => {
+      incomingSlide.style.transition =
+        "background-color " +
+        transitionDuration +
+        "ms cubic-bezier(0.16, 1, 0.3, 1)";
+      incomingSlide.style.backgroundColor = toBackground;
+    });
+    timeoutId = setTimeout(cleanup, transitionDuration + 100);
+    clearBackgroundTransition = cleanup;
+  }
 
   // 1. Initialize Swiper 11 Vertical Slider Engine
   const swiper = new Swiper(".main-swiper", {
@@ -27,6 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
     grabCursor: false,
     touchThreshold: 5,
     on: {
+      beforeTransitionStart: function (_, duration) {
+        transitionIncomingBackground(this, duration);
+      },
       init: function () {
         updateActiveState(this.activeIndex);
         if (this.slides && this.slides[this.activeIndex]) {
@@ -162,8 +239,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     // JS-driven hover to bypass Chromium mousewheel pointer-events lock
     if (btn) {
-      node.addEventListener("mouseenter", () => btn.classList.add("is-hovered"));
-      node.addEventListener("mouseleave", () => btn.classList.remove("is-hovered"));
+      node.addEventListener("mouseenter", () =>
+        btn.classList.add("is-hovered"),
+      );
+      node.addEventListener("mouseleave", () =>
+        btn.classList.remove("is-hovered"),
+      );
     }
   });
 
@@ -177,4 +258,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-

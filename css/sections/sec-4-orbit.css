@@ -156,8 +156,12 @@
   box-sizing: border-box;
   box-shadow: 0 0 20px rgba(79, 143, 157, 0.25);
   opacity: 0;
-  /* Entry: opacity-only fade-in (no scale = no SVG re-rasterization) */
-  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  /* Keep hover feedback independent from the staggered opacity reveal. */
+  transition:
+    opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Hover: CSS :hover + JS-driven .is-hovered fallback */
@@ -168,10 +172,6 @@
   border: 2px solid #4F8F9D !important;
   background-color: #08325D !important;
   box-shadow: 0 0 35px rgba(123, 231, 255, 0.60), 0 0 15px rgba(79, 143, 157, 0.80) !important;
-  transition:
-    border-color 0.3s ease,
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
 }
 
 .node-circle-btn svg {
@@ -335,7 +335,7 @@
 /* --- NODE 1 (Start: 0.1s) --- */
 .sec-continuum.slide-animated .node-top-left .node-circle-btn {
   opacity: 1;
-  transition-delay: 0.1s;
+  transition-delay: 0.1s, 0s, 0s, 0s;
 }
 .sec-continuum.slide-animated .node-top-left .node-circle-btn svg {
   opacity: 1;
@@ -351,7 +351,7 @@
 /* --- NODE 2 (Start: 1.4s) --- */
 .sec-continuum.slide-animated .node-top-right .node-circle-btn {
   opacity: 1;
-  transition-delay: 1.4s;
+  transition-delay: 1.4s, 0s, 0s, 0s;
 }
 .sec-continuum.slide-animated .node-top-right .node-circle-btn svg {
   opacity: 1;
@@ -367,7 +367,7 @@
 /* --- NODE 3 (Start: 2.7s) --- */
 .sec-continuum.slide-animated .node-bottom-right .node-circle-btn {
   opacity: 1;
-  transition-delay: 2.7s;
+  transition-delay: 2.7s, 0s, 0s, 0s;
 }
 .sec-continuum.slide-animated .node-bottom-right .node-circle-btn svg {
   opacity: 1;
@@ -383,7 +383,7 @@
 /* --- NODE 4 (Start: 4.0s) --- */
 .sec-continuum.slide-animated .node-bottom-left .node-circle-btn {
   opacity: 1;
-  transition-delay: 4.0s;
+  transition-delay: 4.0s, 0s, 0s, 0s;
 }
 .sec-continuum.slide-animated .node-bottom-left .node-circle-btn svg {
   opacity: 1;
