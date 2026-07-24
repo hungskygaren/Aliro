@@ -142,6 +142,7 @@
 
 /* Node Circle Interactive Button (160px x 160px Figma Standard) */
 .node-circle-btn {
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -156,7 +157,7 @@
   box-shadow: 0 0 20px rgba(79, 143, 157, 0.25);
   opacity: 0;
   /* Entry: opacity-only fade-in (no scale = no SVG re-rasterization) */
-  transition: opacity 1.3s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Hover: Uses separate transition for paint-triggering props (only fires after entry completes) */
@@ -174,16 +175,45 @@
 }
 
 .node-circle-btn svg {
-  max-width: 70%;
-  max-height: 70%;
-  height: auto;
   display: block;
   margin: auto;
   opacity: 0;
   transform: translateY(15px) scale(0.8);
   transition:
-    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 1.0s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.node-top-left .node-circle-btn svg {
+  width: 119.83px;
+  height: 76.24px;
+}
+
+.node-top-right .node-circle-btn svg {
+  width: 119px;
+  height: 135px;
+  position: absolute;
+  left: 50%;
+  margin-left: -59.5px;
+  bottom: 38px;
+}
+
+.node-bottom-right .node-circle-btn svg {
+  width: 133px;
+  height: 151.49px;
+  position: absolute;
+  left: 50%;
+  margin-left: -66.5px;
+  bottom: 26.5px;
+}
+
+.node-bottom-left .node-circle-btn svg {
+  width: 172px;
+  height: 185px;
+  position: absolute;
+  left: 50%;
+  margin-left: -86px;
+  bottom: 17px;
 }
 
 /* Node Text Typography (Positioned Side-by-Side without skewing Circle Center) */
@@ -195,8 +225,8 @@
   opacity: 0;
   z-index: 5; /* Ensure text renders on top of circle button */
   transition:
-    opacity 0.5s ease-out,
-    transform 1.3s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity 0.8s ease-out,
+    transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .node-top-left .node-text,
@@ -204,7 +234,7 @@
   position: absolute;
   right: calc(100% + 20px);
   top: 50%;
-  transform: translateY(-50%) translateX(calc(100px + 50%)) scale(0.5);
+  transform: translateY(-50%) translateX(-40px) scale(0.95);
   transform-origin: center center;
   align-items: flex-end;
   text-align: right;
@@ -215,7 +245,7 @@
   position: absolute;
   left: calc(100% + 20px);
   top: 50%;
-  transform: translateY(-50%) translateX(calc(-100px - 50%)) scale(0.5);
+  transform: translateY(-50%) translateX(40px) scale(0.95);
   transform-origin: center center;
   align-items: flex-start;
   text-align: left;
@@ -307,15 +337,15 @@
   opacity: 1;
   transition-delay: 1.7s;
 }
-.sec-continuum.swiper-slide-active .node-top-left .node-text {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 2.1s, 2.6s;
-}
 .sec-continuum.swiper-slide-active .node-top-left .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 3.6s;
+  transition-delay: 2.5s;
+}
+.sec-continuum.swiper-slide-active .node-top-left .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 3.4s;
 }
 
 /* --- NODE 2 (Start: 3.8s) --- */
@@ -323,15 +353,15 @@
   opacity: 1;
   transition-delay: 3.8s;
 }
-.sec-continuum.swiper-slide-active .node-top-right .node-text {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 4.2s, 4.7s;
-}
 .sec-continuum.swiper-slide-active .node-top-right .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 5.7s;
+  transition-delay: 4.6s;
+}
+.sec-continuum.swiper-slide-active .node-top-right .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 5.5s;
 }
 
 /* --- NODE 3 (Start: 5.9s) --- */
@@ -339,15 +369,15 @@
   opacity: 1;
   transition-delay: 5.9s;
 }
-.sec-continuum.swiper-slide-active .node-bottom-right .node-text {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 6.3s, 6.8s;
-}
 .sec-continuum.swiper-slide-active .node-bottom-right .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 7.8s;
+  transition-delay: 6.7s;
+}
+.sec-continuum.swiper-slide-active .node-bottom-right .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 7.6s;
 }
 
 /* --- NODE 4 (Start: 8.0s) --- */
@@ -355,15 +385,15 @@
   opacity: 1;
   transition-delay: 8.0s;
 }
-.sec-continuum.swiper-slide-active .node-bottom-left .node-text {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 8.4s, 8.9s;
-}
 .sec-continuum.swiper-slide-active .node-bottom-left .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 9.9s;
+  transition-delay: 8.8s;
+}
+.sec-continuum.swiper-slide-active .node-bottom-left .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 9.7s;
 }
 
 /* --- CONNECTOR LINE (Triggered after all 4 nodes complete) --- */

@@ -3,7 +3,11 @@
    ========================================================================== */
 .sec-9 {
   position: relative;
-  background-color: rgba(18, 62, 107, 1);
+  background-color: #225a8d;
+  background-image: url("../../assets/sec-9-bg.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 

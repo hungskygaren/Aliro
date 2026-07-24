@@ -285,7 +285,7 @@
   object-fit: contain;
   object-position: right center; /* Aligns image right side to Column 6 boundary */
   opacity: 0;
-  transform: translate(-100px, -50%);
+  transform: translate(0, calc(-50% + 80px));
   transition:
     opacity 4.5s cubic-bezier(0.16, 1, 0.3, 1),
     transform 4.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -300,13 +300,13 @@
 }
 
 /* --------------------------------------------------------------------------
-   Section 3 Entrance Animation Sequence (Text Slides in from Left)
+   Section 3 Entrance Animation Sequence (Text Slides in from Right)
    -------------------------------------------------------------------------- */
 .sec-framework .phrase {
   display: inline-block;
   white-space: nowrap;
   opacity: 0;
-  transform: translateX(-40px); /* Initial state: Slide in from the LEFT */
+  transform: translateX(40px); /* Initial state: Slide in from the RIGHT */
   transition:
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);

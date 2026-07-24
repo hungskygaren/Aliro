@@ -76,7 +76,7 @@
   top: 50%;
   left: 100px; /* Locked 100px from Left Boundary of 1170px Grid */
   right: 50%; /* Connects to Center Dot */
-  height: 2px;
+  height: 1px;
   background-color: #4f8f9d;
   transform: translateY(-50%) scaleX(0);
   transform-origin: right center;
@@ -90,7 +90,7 @@
   top: 50%;
   left: 100px; /* Locked 100px from Left Boundary of 1170px Grid */
   right: 50%; /* Connects to Center Dot */
-  height: 2px;
+  height: 1px;
   background-color: #4f8f9d;
   transform: translateY(-50%) scaleX(0);
   transform-origin: right center; /* Connects at center dot on the right */
@@ -105,7 +105,7 @@
   top: 50%;
   left: 50%; /* Connects to Center Dot */
   right: 100px; /* Locked 100px from Right Boundary of 1170px Grid */
-  height: 2px;
+  height: 1px;
   background-color: #4f8f9d;
   transform: translateY(-50%) scaleX(0);
   transform-origin: left center; /* Connects at center dot on the left */
@@ -636,8 +636,10 @@
 /* --- RETURN TO 4IC BUTTON (Sections 5-8) --- */
 .btn-return-4ic {
   position: absolute;
-  top: calc(80px + 20px); /* 20px below navbar (~80px) */
-  left: calc(50% + 18px); /* 18px right of center line */
+  top: auto;
+  left: auto;
+  right: 4.2361%; /* 61px / 1440px */
+  bottom: 5.5556%; /* 40px / 720px */
   display: inline-flex;
   align-items: center;
   gap: 8px;

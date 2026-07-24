@@ -8,42 +8,77 @@
 
 .sec-hero__bg {
   position: absolute;
-  top: var(--header-offset); /* Starts 132px from top (Figma Measurement) */
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: calc(
-    100% - var(--header-offset)
-  ); /* Dynamic fluid height co dãn theo viewport */
+  height: 81.9444%; /* 590px / 720px */
   background-image: url("../../assets/hero-bg-pattern.png");
-  background-position: center top;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100% 100%; /* Sync image dimensions exactly to container height */
   pointer-events: none;
   z-index: 1; /* Layer 1: Bottom-most background grid */
 }
 
-/* Two side-layered cliff graphics (Figma Spec: 350px x 460px -> proportional responsive width) */
+.sec-hero::before,
+.sec-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+  filter: blur(10px);
+  z-index: 1;
+  opacity: 0; /* Animated on slide active */
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-hero::before {
+  left: calc((100vw - 1170px) / 2 + 29px);
+  background: linear-gradient(90deg, rgba(125, 232, 255, 0.35) 0%, rgba(125, 232, 255, 0.00) 100%);
+  width: 24.6528%; /* 355px / 1440px */
+  aspect-ratio: 355 / 516;
+}
+
+.sec-hero::after {
+  right: calc((100vw - 1170px) / 2 + 29px);
+  background: linear-gradient(270deg, rgba(125, 232, 255, 0.35) 0%, rgba(125, 232, 255, 0.00) 100%);
+  width: 26.875%; /* 387px / 1440px */
+  aspect-ratio: 387 / 516;
+}
+
+@media (max-width: 1228px) {
+  .sec-hero::before {
+    left: 29px;
+  }
+  .sec-hero::after {
+    right: 29px;
+  }
+}
+
+/* Two side-layered cliff graphics (Layer 3: Overlay over grid pattern and glows) */
 .sec-hero__cliff {
   position: absolute;
   bottom: 0;
-  width: 24.3%; /* 350px / 1440px = 24.3% dynamic width */
-  aspect-ratio: 350 / 460; /* Locks aspect ratio to prevent graphic distortion */
   background-repeat: no-repeat;
   background-size: contain;
   pointer-events: none;
-  z-index: 2; /* Layer 2: Overlay over grid pattern (z-index: 1) */
+  z-index: 2; /* Layer 3: Overlay over grid pattern (z-index: 1) */
 }
 
 .sec-hero__cliff--left {
   left: 0;
   background-image: url("../../assets/hero-bg-left.png");
   background-position: left bottom;
+  width: 29.2361%; /* 421px / 1440px */
+  aspect-ratio: 421 / 579;
 }
 
 .sec-hero__cliff--right {
   right: 0;
   background-image: url("../../assets/hero-bg-right.png");
   background-position: right bottom;
+  width: 31.8056%; /* 458px / 1440px */
+  aspect-ratio: 458 / 614;
 }
 
 .sec-hero__content {
@@ -144,6 +179,20 @@
   transition-delay: 0.2s;
 }
 
+.sec-hero.swiper-slide-active::before {
+  opacity: 1;
+  transition-delay: 3.5s;
+  animation: glowPulse 5s ease-in-out infinite alternate;
+  animation-delay: 5.0s;
+}
+
+.sec-hero.swiper-slide-active::after {
+  opacity: 1;
+  transition-delay: 3.5s;
+  animation: glowPulse 5s ease-in-out infinite alternate;
+  animation-delay: 5.0s;
+}
+
 /* Sub-top phrase reveal (Chunk 1 - Bottom-to-Top) */
 .sec-hero.swiper-slide-active .sec-hero__sub-top .phrase {
   opacity: 1;
@@ -178,4 +227,15 @@
   opacity: 1;
   transform: translateX(0);
   transition-delay: 0.5s;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.8;
+    filter: blur(10px) brightness(1);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(12px) brightness(1.15);
+  }
 }

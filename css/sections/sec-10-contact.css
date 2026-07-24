@@ -91,38 +91,38 @@
 
 .sec-10__card {
   position: relative;
-  background-color: transparent;         /* Initial state: NO BACKGROUND AT ALL! */
+  background-color: #dce4ec;              /* Soft-Gray background is visible from the start of card transition */
   padding: 40px 35px;                     /* 35px left/right inset padding */
   overflow: hidden;
-  clip-path: inset(49.5% 0 49.5% 0);
-  opacity: 1;                             /* PARENT CARD MUST BE VISIBLE FOR CHILD DIVIDER LINE TO SHOW! */
+  clip-path: inset(50% 0 50% 0);          /* Closed vertically */
+  opacity: 0;                             /* Starts invisible */
   transition:
-    background-color 0.3s ease 1.4s,
-    clip-path 1.0s cubic-bezier(0.16, 1, 0.3, 1) 1.4s; /* Phase 2: Opens frame vertically IMMEDIATELY at 1.4s when line finishes */
+    opacity 0.6s ease-out 0.1s,
+    clip-path 1.0s cubic-bezier(0.16, 1, 0.3, 1) 0.1s; /* Phase 1: Card opens vertically from 0.1s to 1.1s */
 }
 
-/* Phase 1: Starts 0.1s AFTER slide comes to a complete rest on screen (1.3s duration -> ends at 1.4s) */
+/* Phase 2: Starts after card has finished opening */
 .sec-10__divider {
   height: 1px;
   background-color: #7e93a8;
   opacity: 0;                             /* Initially 100% invisible! */
   margin: 24px 0;
   width: 100%;
-  transform: scaleX(0);                    /* 0px center point */
-  transform-origin: center center;
+  transform: scaleX(0);                    /* 0px left point */
+  transform-origin: left center;           /* Draws from left to right! */
   transition:
-    opacity 0.4s ease 0.1s,
-    transform 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+    opacity 0.3s ease 1.2s,
+    transform 1.0s cubic-bezier(0.16, 1, 0.3, 1) 1.2s; /* Phase 2: Line draws from 1.2s to 2.2s */
 }
 
 .sec-10.slide-animated .sec-10__divider {
   opacity: 0.5;
-  transform: scaleX(1);                    /* Expands horizontally right in front of user's eyes from 0.1s to 1.4s */
+  transform: scaleX(1);                    /* Draws horizontally from left to right */
 }
 
 .sec-10.slide-animated .sec-10__card {
-  background-color: #dce4ec;              /* Soft-Gray background appears at 1.4s */
-  clip-path: inset(0 0 0 0);              /* Phase 2: Opens frame vertically up & down from 1.4s to 2.4s */
+  opacity: 1;
+  clip-path: inset(0 0 0 0);              /* Opens frame vertically up & down */
 }
 
 .sec-10__label {
