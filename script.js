@@ -25,9 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "#123e6b", // Section 7 (6) - Deep Blue
     "#123e6b", // Section 8 (7) - Deep Blue
     "#225a8d", // Section 9 (8) - Architecture Blue
-    "#f7f9fc"  // Section 10 (9) - Light Gray
+    "#f7f9fc", // Section 10 (9) - Light Gray
   ];
-
 
   // --------------------------------------------------------------------------
   // 1. Swiper 11 Vertical Engine Initialization
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         // Inject morph overlay for every slide
         if (this.slides) {
-          this.slides.forEach(slide => {
+          this.slides.forEach((slide) => {
             let overlay = document.createElement("div");
             overlay.className = "morph-overlay";
             slide.appendChild(overlay);
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Dynamic Two-Way Background Inheritance Algorithm (Overlay Based)
           if (targetSlide && prevColor && prevColor !== targetColor) {
-            targetSlide.style.setProperty('--morph-color', prevColor);
+            targetSlide.style.setProperty("--morph-color", prevColor);
             targetSlide.classList.add("morph-active");
           }
 
@@ -107,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const currentSlide = this.slides[this.activeIndex];
         if (!currentSlide) return;
-        
+
         const currentIndex = this.activeIndex;
 
         // 4. Trigger morphing (Fade out the overlay to reveal actual content and background)
@@ -149,32 +148,20 @@ document.addEventListener("DOMContentLoaded", () => {
     navItems.forEach((navItem) => {
       navItem.classList.toggle(
         "active",
-        navItem.getAttribute("href") === activeNavHref
+        navItem.getAttribute("href") === activeNavHref,
       );
     });
   }
 
   // --------------------------------------------------------------------------
-  // 3. Smart Skip Navigation Helper (Smooth multi-slide jumping)
+  // 3. Navigation Helper (Native Hyper-Scroll)
   // --------------------------------------------------------------------------
   function smartSlideTo(targetIndex) {
     if (targetIndex < 0) return;
-    const currentIndex = swiper.activeIndex;
-    const distance = Math.abs(targetIndex - currentIndex);
 
-    if (distance <= 1) {
-      swiper.slideTo(targetIndex, 950);
-    } else {
-      // Pre-land on adjacent slide then slide into target for smooth visual effect
-      const preLandingIndex =
-        targetIndex > currentIndex ? targetIndex - 1 : targetIndex + 1;
-      swiper.slideTo(preLandingIndex, 0);
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          swiper.slideTo(targetIndex, 950);
-        }, 30);
-      });
-    }
+    // Native Swiper behavior: cuộn lướt qua mọi thứ trong 1 giây (1000ms)
+    // Giữ code nhẹ nhàng, ổn định và tận dụng tối đa animation Play-Once.
+    swiper.slideTo(targetIndex, 1000);
   }
 
   // --------------------------------------------------------------------------
@@ -195,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const targetIndex = parseInt(
         e.currentTarget.getAttribute("data-index"),
-        10
+        10,
       );
       if (!isNaN(targetIndex)) {
         smartSlideTo(targetIndex);
