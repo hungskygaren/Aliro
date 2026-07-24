@@ -46,6 +46,11 @@ body {
   position: relative;
 }
 
+/* Override Swiper inline pointer-events lock during mousewheel transitions */
+.main-swiper .swiper-wrapper {
+  pointer-events: auto !important;
+}
+
 /* Fullscreen Section Base */
 .scroll-section,
 .swiper-slide {

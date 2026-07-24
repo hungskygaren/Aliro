@@ -160,15 +160,15 @@
   transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Hover: Uses separate transition for paint-triggering props (only fires after entry completes) */
+/* Hover: CSS :hover + JS-driven .is-hovered fallback */
 .sec-continuum__node:hover .node-circle-btn,
-.node-circle-btn:hover {
-  transform: scale(1.08) !important;
-  border-color: #ffffff;
-  background-color: #123e6b;
-  box-shadow: 0 0 35px rgba(79, 143, 157, 0.6);
+.node-circle-btn:hover,
+.node-circle-btn.is-hovered {
+  transform: none !important;
+  border: 2px solid #4F8F9D !important;
+  background-color: #08325D !important;
+  box-shadow: 0 0 35px rgba(123, 231, 255, 0.60), 0 0 15px rgba(79, 143, 157, 0.80) !important;
   transition:
-    transform 0.3s ease,
     border-color 0.3s ease,
     background-color 0.3s ease,
     box-shadow 0.3s ease;
@@ -180,8 +180,8 @@
   opacity: 0;
   transform: translateY(15px) scale(0.8);
   transition:
-    opacity 1.0s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .node-top-left .node-circle-btn svg {
@@ -225,8 +225,8 @@
   opacity: 0;
   z-index: 5; /* Ensure text renders on top of circle button */
   transition:
-    opacity 0.8s ease-out,
-    transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity 0.6s ease-out,
+    transform 1.0s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .node-top-left .node-text,
@@ -314,92 +314,92 @@
 }
 
 /* Active Entrance Animations */
-.sec-continuum.swiper-slide-active .sec-continuum__grid-img {
+.sec-continuum.slide-animated .sec-continuum__grid-img {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  transition-delay: 0.3s;
+  transition-delay: 0.1s;
 }
 
-.sec-continuum.swiper-slide-active .sec-continuum__orbit-ring {
+.sec-continuum.slide-animated .sec-continuum__orbit-ring {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  transition-delay: 0.6s;
+  transition-delay: 0.1s;
 }
 
-.sec-continuum.swiper-slide-active .sec-continuum__center-text .phrase {
+.sec-continuum.slide-animated .sec-continuum__center-text .phrase {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 1.15s;
+  transition-delay: 0.25s;
 }
 
-/* --- NODE 1 (Start: 1.7s) --- */
-.sec-continuum.swiper-slide-active .node-top-left .node-circle-btn {
+/* --- NODE 1 (Start: 0.1s) --- */
+.sec-continuum.slide-animated .node-top-left .node-circle-btn {
   opacity: 1;
-  transition-delay: 1.7s;
+  transition-delay: 0.1s;
 }
-.sec-continuum.swiper-slide-active .node-top-left .node-circle-btn svg {
+.sec-continuum.slide-animated .node-top-left .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 2.5s;
+  transition-delay: 0.7s;
 }
-.sec-continuum.swiper-slide-active .node-top-left .node-text {
+.sec-continuum.slide-animated .node-top-left .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 3.4s;
+  transition-delay: 1.3s;
 }
 
-/* --- NODE 2 (Start: 3.8s) --- */
-.sec-continuum.swiper-slide-active .node-top-right .node-circle-btn {
+/* --- NODE 2 (Start: 1.4s) --- */
+.sec-continuum.slide-animated .node-top-right .node-circle-btn {
   opacity: 1;
-  transition-delay: 3.8s;
+  transition-delay: 1.4s;
 }
-.sec-continuum.swiper-slide-active .node-top-right .node-circle-btn svg {
+.sec-continuum.slide-animated .node-top-right .node-circle-btn svg {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 2.0s;
+}
+.sec-continuum.slide-animated .node-top-right .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 2.6s;
+}
+
+/* --- NODE 3 (Start: 2.7s) --- */
+.sec-continuum.slide-animated .node-bottom-right .node-circle-btn {
+  opacity: 1;
+  transition-delay: 2.7s;
+}
+.sec-continuum.slide-animated .node-bottom-right .node-circle-btn svg {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 3.3s;
+}
+.sec-continuum.slide-animated .node-bottom-right .node-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 3.9s;
+}
+
+/* --- NODE 4 (Start: 4.0s) --- */
+.sec-continuum.slide-animated .node-bottom-left .node-circle-btn {
+  opacity: 1;
+  transition-delay: 4.0s;
+}
+.sec-continuum.slide-animated .node-bottom-left .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
   transition-delay: 4.6s;
 }
-.sec-continuum.swiper-slide-active .node-top-right .node-text {
+.sec-continuum.slide-animated .node-bottom-left .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 5.5s;
-}
-
-/* --- NODE 3 (Start: 5.9s) --- */
-.sec-continuum.swiper-slide-active .node-bottom-right .node-circle-btn {
-  opacity: 1;
-  transition-delay: 5.9s;
-}
-.sec-continuum.swiper-slide-active .node-bottom-right .node-circle-btn svg {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  transition-delay: 6.7s;
-}
-.sec-continuum.swiper-slide-active .node-bottom-right .node-text {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 7.6s;
-}
-
-/* --- NODE 4 (Start: 8.0s) --- */
-.sec-continuum.swiper-slide-active .node-bottom-left .node-circle-btn {
-  opacity: 1;
-  transition-delay: 8.0s;
-}
-.sec-continuum.swiper-slide-active .node-bottom-left .node-circle-btn svg {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  transition-delay: 8.8s;
-}
-.sec-continuum.swiper-slide-active .node-bottom-left .node-text {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 9.7s;
+  transition-delay: 5.2s;
 }
 
 /* --- CONNECTOR LINE (Triggered after all 4 nodes complete) --- */
-.sec-continuum.swiper-slide-active .sec-continuum__connector-line {
+.sec-continuum.slide-animated .sec-continuum__connector-line {
   opacity: 1;
-  transition-delay: 10.6s;
+  transition-delay: 5.3s;
 }
 
 /* --- VISITED STATE: Locks Section 4 in completed state when scrolling away --- */
@@ -418,7 +418,6 @@
 
 .sec-continuum.visited .node-circle-btn {
   opacity: 1 !important;
-  transition: none !important;
 }
 
 .sec-continuum.visited .node-text {

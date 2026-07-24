@@ -119,7 +119,7 @@
   font-family: var(--font-brand);
   font-size: 30px;
   font-weight: 700;
-  line-height: 0.85; /* Adjusted to exactly 0.85 (25.5px) for authentic Figma tight layout */
+  line-height: 30px; /* Set to exactly 30px to achieve 60px total height for 2 lines */
   color: #4f8f9d; /* Figma Teal Blue */
   text-transform: uppercase;
   letter-spacing: 0;
@@ -238,4 +238,151 @@
     opacity: 1;
     filter: blur(12px) brightness(1.15);
   }
+}
+
+/* ==========================================================================
+   Connector Dotted Lines (Figma Node 4363:3990)
+   ========================================================================== */
+.sec-hero__connector {
+  position: absolute;
+  width: 162px;
+  height: 10px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2; /* Positioned above background grid (1) and below text overlay (3) */
+  transition: opacity 0.6s ease;
+}
+
+.sec-hero__connector::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #68BFD2;
+}
+
+.sec-hero__connector::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 159px;
+  height: 2px;
+  background-image: linear-gradient(90deg, #68BFD2 50%, transparent 50%);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Specific Positions for Left Connectors */
+.sec-hero__connector--left-1 {
+  left: calc((100vw - 1170px) / 2 + 162px);
+  top: 229px;
+}
+
+.sec-hero__connector--left-2 {
+  left: calc((100vw - 1170px) / 2 + 220px);
+  top: 333px;
+}
+
+.sec-hero__connector--left-3 {
+  left: calc((100vw - 1170px) / 2 + 259px);
+  top: 494px;
+}
+
+/* Active Staggered Fade-in and Draw Timeline */
+.sec-hero.swiper-slide-active .sec-hero__connector--left-1 {
+  opacity: 1;
+  transition-delay: 3.0s;
+}
+.sec-hero.swiper-slide-active .sec-hero__connector--left-1::after {
+  transform: scaleX(1);
+  transition-delay: 3.2s;
+}
+
+.sec-hero.swiper-slide-active .sec-hero__connector--left-2 {
+  opacity: 1;
+  transition-delay: 3.2s;
+}
+.sec-hero.swiper-slide-active .sec-hero__connector--left-2::after {
+  transform: scaleX(1);
+  transition-delay: 3.4s;
+}
+
+.sec-hero.swiper-slide-active .sec-hero__connector--left-3 {
+  opacity: 1;
+  transition-delay: 3.4s;
+}
+.sec-hero.swiper-slide-active .sec-hero__connector--left-3::after {
+  transform: scaleX(1);
+  transition-delay: 3.6s;
+}
+
+/* Specific Positions for Right Connectors */
+.sec-hero__connector--right-1 {
+  right: calc((100vw - 1170px) / 2 + 152px);
+  top: 244px;
+}
+
+.sec-hero__connector--right-2 {
+  right: calc((100vw - 1170px) / 2 + 221px);
+  top: 312px;
+}
+
+.sec-hero__connector--right-3 {
+  right: calc((100vw - 1170px) / 2 + 296px);
+  top: 526px;
+}
+
+/* Override Directional Styles for Right Side Connectors */
+.sec-hero__connector--right-1::before,
+.sec-hero__connector--right-2::before,
+.sec-hero__connector--right-3::before {
+  left: auto;
+  right: 0;
+}
+
+.sec-hero__connector--right-1::after,
+.sec-hero__connector--right-2::after,
+.sec-hero__connector--right-3::after {
+  left: auto;
+  right: 3px;
+  transform-origin: right center; /* Grows from right to left */
+  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+/* Active Staggered Fade-in and Draw Timeline for Right Connectors */
+.sec-hero.swiper-slide-active .sec-hero__connector--right-1 {
+  opacity: 1;
+  transition-delay: 3.1s;
+}
+.sec-hero.swiper-slide-active .sec-hero__connector--right-1::after {
+  transform: scaleX(1);
+  transition-delay: 3.3s;
+}
+
+.sec-hero.swiper-slide-active .sec-hero__connector--right-2 {
+  opacity: 1;
+  transition-delay: 3.3s;
+}
+.sec-hero.swiper-slide-active .sec-hero__connector--right-2::after {
+  transform: scaleX(1);
+  transition-delay: 3.5s;
+}
+
+.sec-hero.swiper-slide-active .sec-hero__connector--right-3 {
+  opacity: 1;
+  transition-delay: 3.5s;
+}
+.sec-hero.swiper-slide-active .sec-hero__connector--right-3::after {
+  transform: scaleX(1);
+  transition-delay: 3.7s;
 }

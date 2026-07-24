@@ -414,7 +414,7 @@
   width: calc(50% - 130px);
   max-width: 480px;
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateX(30px);
   z-index: 4;
   transition:
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
@@ -459,7 +459,7 @@
   width: calc(50% - 130px);
   max-width: 480px;
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateX(30px);
   z-index: 4;
   transition:
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),

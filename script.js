@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
       onlyInViewport: true,
     },
     grabCursor: false,
-    preventInteractionOnTransition: true,
     touchThreshold: 5,
     on: {
       init: function () {
@@ -81,14 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Map section index to top Navbar link index
-    let activeNavHref = "#section-1";
-    if (index === 1) activeNavHref = "#section-2";
-    else if (index === 2) activeNavHref = "#section-3";
-    else if (index === 3) activeNavHref = "#section-4";
-    else if (index >= 4 && index <= 7) activeNavHref = "#section-5";
-    else if (index === 8) activeNavHref = "#section-9";
-    else if (index === 9) activeNavHref = "#section-10";
+    // Keep 'Home' (#section-1) permanently active as this is the homepage
+    const activeNavHref = "#section-1";
 
     navItems.forEach((navItem) => {
       if (navItem.getAttribute("href") === activeNavHref) {
@@ -141,12 +134,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 6. Navbar Link Action
-  navItems.forEach((navItem) => {
-    navItem.addEventListener("click", (e) => {
+  // 6. Section Hash Links Click Action (Intercept all #section- links to prevent default jump scroll freeze)
+  const hashLinks = document.querySelectorAll('a[href^="#section-"]');
+  hashLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
-      const href = navItem.getAttribute("href");
-      if (href && href.startsWith("#section-")) {
+      const href = link.getAttribute("href");
+      if (href) {
         const sectionNum = parseInt(href.replace("#section-", ""), 10);
         if (!isNaN(sectionNum) && sectionNum >= 1) {
           smartSlideTo(sectionNum - 1);
@@ -155,9 +149,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 7. Section 4 Continuum Satellite Node Buttons Click Action
+  // 7. Section 4 Continuum Satellite Node Buttons Click & Hover Action
   const continuumNodes = document.querySelectorAll(".sec-continuum__node");
   continuumNodes.forEach((node) => {
+    const btn = node.querySelector(".node-circle-btn");
     node.addEventListener("click", (e) => {
       e.preventDefault();
       const targetIndex = parseInt(node.getAttribute("data-slide-target"), 10);
@@ -165,6 +160,11 @@ document.addEventListener("DOMContentLoaded", () => {
         smartSlideTo(targetIndex);
       }
     });
+    // JS-driven hover to bypass Chromium mousewheel pointer-events lock
+    if (btn) {
+      node.addEventListener("mouseenter", () => btn.classList.add("is-hovered"));
+      node.addEventListener("mouseleave", () => btn.classList.remove("is-hovered"));
+    }
   });
 
   // 8. Return to 4IC Button Click Action (Sections 5, 6, 7, 8)
