@@ -2,7 +2,6 @@
    Section 1: Hero Section (Background #123E6B + 152px Top Offset Pattern)
    ========================================================================== */
 .sec-hero {
-  background-color: #123e6b;
   position: relative;
 }
 
@@ -173,20 +172,20 @@
     transform 5.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Triggered State: Activated when Section 1 is Active (.swiper-slide-active) */
-.sec-hero.swiper-slide-active .sec-hero__bg {
+/* Triggered State: Activated when Section 1 is Active (.slide-animated) */
+.sec-hero.slide-animated .sec-hero__bg {
   opacity: 1;
   transition-delay: 0.2s;
 }
 
-.sec-hero.swiper-slide-active::before {
+.sec-hero.slide-animated::before {
   opacity: 1;
   transition-delay: 3.5s;
   animation: glowPulse 5s ease-in-out infinite alternate;
   animation-delay: 5.0s;
 }
 
-.sec-hero.swiper-slide-active::after {
+.sec-hero.slide-animated::after {
   opacity: 1;
   transition-delay: 3.5s;
   animation: glowPulse 5s ease-in-out infinite alternate;
@@ -194,36 +193,49 @@
 }
 
 /* Sub-top phrase reveal (Chunk 1 - Bottom-to-Top) */
-.sec-hero.swiper-slide-active .sec-hero__sub-top .phrase {
+.sec-hero.slide-animated .sec-hero__sub-top .phrase {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.45s;
 }
 
 /* Main title phrase reveal (Chunk 2 - Entire H1 Block - 0.7s Gap) */
-.sec-hero.swiper-slide-active .sec-hero__title .phrase {
+.sec-hero.slide-animated .sec-hero__title .phrase {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 1.15s;
 }
 
 /* Sub-bottom phrase reveal (Chunk 3 - Entire P Block - 0.7s Gap) */
-.sec-hero.swiper-slide-active .sec-hero__sub-bottom .phrase {
+.sec-hero.slide-animated .sec-hero__sub-bottom .phrase {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 1.85s;
 }
 
 /* Hero CTA Button (0.7s Gap) */
-.sec-hero.swiper-slide-active .btn-hero-cta {
+.sec-hero.slide-animated .btn-hero-cta {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 2.55s;
 }
 
+/* Scroll Down Button (Appears last) */
+.sec-hero .scroll-down-btn {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-hero.slide-animated .scroll-down-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  transition-delay: 2.8s;
+}
+
 /* Side cliffs: Start early (0.50s) while text appears, slide super slowly (3.8s) to finish AFTER text */
-.sec-hero.swiper-slide-active .sec-hero__cliff--left,
-.sec-hero.swiper-slide-active .sec-hero__cliff--right {
+.sec-hero.slide-animated .sec-hero__cliff--left,
+.sec-hero.slide-animated .sec-hero__cliff--right {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 0.5s;
@@ -298,29 +310,29 @@
 }
 
 /* Active Staggered Fade-in and Draw Timeline */
-.sec-hero.swiper-slide-active .sec-hero__connector--left-1 {
+.sec-hero.slide-animated .sec-hero__connector--left-1 {
   opacity: 1;
   transition-delay: 3.0s;
 }
-.sec-hero.swiper-slide-active .sec-hero__connector--left-1::after {
+.sec-hero.slide-animated .sec-hero__connector--left-1::after {
   transform: scaleX(1);
   transition-delay: 3.2s;
 }
 
-.sec-hero.swiper-slide-active .sec-hero__connector--left-2 {
+.sec-hero.slide-animated .sec-hero__connector--left-2 {
   opacity: 1;
   transition-delay: 3.2s;
 }
-.sec-hero.swiper-slide-active .sec-hero__connector--left-2::after {
+.sec-hero.slide-animated .sec-hero__connector--left-2::after {
   transform: scaleX(1);
   transition-delay: 3.4s;
 }
 
-.sec-hero.swiper-slide-active .sec-hero__connector--left-3 {
+.sec-hero.slide-animated .sec-hero__connector--left-3 {
   opacity: 1;
   transition-delay: 3.4s;
 }
-.sec-hero.swiper-slide-active .sec-hero__connector--left-3::after {
+.sec-hero.slide-animated .sec-hero__connector--left-3::after {
   transform: scaleX(1);
   transition-delay: 3.6s;
 }
@@ -360,29 +372,29 @@
 }
 
 /* Active Staggered Fade-in and Draw Timeline for Right Connectors */
-.sec-hero.swiper-slide-active .sec-hero__connector--right-1 {
+.sec-hero.slide-animated .sec-hero__connector--right-1 {
   opacity: 1;
   transition-delay: 3.1s;
 }
-.sec-hero.swiper-slide-active .sec-hero__connector--right-1::after {
+.sec-hero.slide-animated .sec-hero__connector--right-1::after {
   transform: scaleX(1);
   transition-delay: 3.3s;
 }
 
-.sec-hero.swiper-slide-active .sec-hero__connector--right-2 {
+.sec-hero.slide-animated .sec-hero__connector--right-2 {
   opacity: 1;
   transition-delay: 3.3s;
 }
-.sec-hero.swiper-slide-active .sec-hero__connector--right-2::after {
+.sec-hero.slide-animated .sec-hero__connector--right-2::after {
   transform: scaleX(1);
   transition-delay: 3.5s;
 }
 
-.sec-hero.swiper-slide-active .sec-hero__connector--right-3 {
+.sec-hero.slide-animated .sec-hero__connector--right-3 {
   opacity: 1;
   transition-delay: 3.5s;
 }
-.sec-hero.swiper-slide-active .sec-hero__connector--right-3::after {
+.sec-hero.slide-animated .sec-hero__connector--right-3::after {
   transform: scaleX(1);
   transition-delay: 3.7s;
 }

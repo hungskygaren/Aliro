@@ -2,7 +2,6 @@
    Section 2: Architect Transformation Layout & Typography Specs
    ========================================================================== */
 .sec-architect {
-  background-color: #f7f9fc;
   position: relative;
   overflow: hidden;
 }
@@ -116,35 +115,35 @@
 }
 
 /* Active State Triggered by Swiper Slide Change (Grouped Block Chunks) */
-.sec-architect.swiper-slide-active .sec-architect__sub-top .phrase {
+.sec-architect.slide-animated .sec-architect__sub-top .phrase {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 0.45s;
 }
 
 /* Chunk 2: Main Title Block (Entire 3-line Title together) */
-.sec-architect.swiper-slide-active .sec-architect__title .phrase {
+.sec-architect.slide-animated .sec-architect__title .phrase {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 1.15s;
 }
 
 /* Chunk 3: Subtitle Block (Entire 2-line Subtitle together) */
-.sec-architect.swiper-slide-active .sec-architect__sub-bottom .phrase {
+.sec-architect.slide-animated .sec-architect__sub-bottom .phrase {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 1.85s;
 }
 
 /* Chunk 4: Description Block (Entire 2-line Description together) */
-.sec-architect.swiper-slide-active .sec-architect__desc .phrase {
+.sec-architect.slide-animated .sec-architect__desc .phrase {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 2.55s;
 }
 
 /* Isometric Visual Graphic */
-.sec-architect.swiper-slide-active .sec-architect__img {
+.sec-architect.slide-animated .sec-architect__img {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.5s;
@@ -187,7 +186,6 @@
    Section 3: System Framework Layout & Typography Specs (Mirror Layout)
    -------------------------------------------------------------------------- */
 .sec-framework {
-  background-color: #ffffff;
   position: relative;
   overflow: hidden;
 }
@@ -313,31 +311,31 @@
 }
 
 /* Active State Triggered by Swiper Slide Change */
-.sec-framework.swiper-slide-active .sec-framework__sub-top .phrase {
+.sec-framework.slide-animated .sec-framework__sub-top .phrase {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 0.45s;
 }
 
-.sec-framework.swiper-slide-active .sec-framework__title .phrase {
+.sec-framework.slide-animated .sec-framework__title .phrase {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 1.15s;
 }
 
-.sec-framework.swiper-slide-active .sec-framework__sub-bottom .phrase {
+.sec-framework.slide-animated .sec-framework__sub-bottom .phrase {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 1.85s;
 }
 
-.sec-framework.swiper-slide-active .sec-framework__desc .phrase {
+.sec-framework.slide-animated .sec-framework__desc .phrase {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 2.55s;
 }
 
-.sec-framework.swiper-slide-active .sec-framework__img {
+.sec-framework.slide-animated .sec-framework__img {
   opacity: 1;
   transform: translate(0, -50%);
   transition-delay: 0.5s;

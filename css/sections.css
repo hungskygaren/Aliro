@@ -10,38 +10,43 @@
 @import "./sections/sec-9-arch.css";
 @import "./sections/sec-10-contact.css";
 
-/* Section Background Color Defaults */
-.sec-2 {
+/* Slide Background Colors & Dynamic Transition Specs */
+.sec-hero, .sec-continuum, .sec-5, .sec-6, .sec-7, .sec-8 {
+  background-color: #123e6b;
+  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sec-architect, .sec-10 {
   background-color: #f7f9fc;
+  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sec-3 {
+.sec-framework {
   background-color: #ffffff;
-}
-.sec-4 {
-  background-color: #123e6b;
-}
-.sec-5 {
-  background-color: #123e6b;
-}
-.sec-6 {
-  background-color: #123e6b;
-}
-.sec-7 {
-  background-color: #123e6b;
-}
-.sec-8 {
-  background-color: #123e6b;
+  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .sec-9 {
   background-color: #123e6b;
-}
-.sec-10 {
-  background-color: #f7f9fc;
+  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Inner Content Container Wrapper inside Sections */
 .section-content {
   width: 100%;
+  align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Ensures content stays above background */
+}
+
+/* Morph Overlay for seamless background transition */
+.morph-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--morph-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+}
+.morph-active .morph-overlay {
+  opacity: 1;
+  transition: none;
 }

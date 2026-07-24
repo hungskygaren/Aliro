@@ -2,7 +2,6 @@
    Section 4: The Four Intelligence Continuum 4IC
    ========================================================================== */
 .sec-continuum {
-  background-color: #123e6b; /* Deep Aliro Blue Background */
   position: relative;
   overflow: hidden;
 }
@@ -164,10 +163,9 @@
     box-shadow 0.3s ease;
 }
 
-/* Hover: CSS :hover + JS-driven .is-hovered fallback */
+/* Pure CSS Hover */
 .sec-continuum__node:hover .node-circle-btn,
-.node-circle-btn:hover,
-.node-circle-btn.is-hovered {
+.node-circle-btn:hover {
   transform: none !important;
   border: 2px solid #4F8F9D !important;
   background-color: #08325D !important;
@@ -332,68 +330,68 @@
   transition-delay: 0.25s;
 }
 
-/* --- NODE 1 (Start: 0.1s) --- */
+/* --- NODE 1 (Start: 1.0s) --- */
 .sec-continuum.slide-animated .node-top-left .node-circle-btn {
   opacity: 1;
-  transition-delay: 0.1s, 0s, 0s, 0s;
+  transition-delay: 1.0s, 0s, 0s, 0s;
 }
 .sec-continuum.slide-animated .node-top-left .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 0.7s;
+  transition-delay: 1.6s;
 }
 .sec-continuum.slide-animated .node-top-left .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 1.3s;
+  transition-delay: 2.2s;
 }
 
-/* --- NODE 2 (Start: 1.4s) --- */
+/* --- NODE 2 (Start: 2.3s) --- */
 .sec-continuum.slide-animated .node-top-right .node-circle-btn {
   opacity: 1;
-  transition-delay: 1.4s, 0s, 0s, 0s;
+  transition-delay: 2.3s, 0s, 0s, 0s;
 }
 .sec-continuum.slide-animated .node-top-right .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 2.0s;
+  transition-delay: 2.9s;
 }
 .sec-continuum.slide-animated .node-top-right .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 2.6s;
+  transition-delay: 3.5s;
 }
 
-/* --- NODE 3 (Start: 2.7s) --- */
+/* --- NODE 3 (Start: 3.6s) --- */
 .sec-continuum.slide-animated .node-bottom-right .node-circle-btn {
   opacity: 1;
-  transition-delay: 2.7s, 0s, 0s, 0s;
+  transition-delay: 3.6s, 0s, 0s, 0s;
 }
 .sec-continuum.slide-animated .node-bottom-right .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 3.3s;
+  transition-delay: 4.2s;
 }
 .sec-continuum.slide-animated .node-bottom-right .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 3.9s;
+  transition-delay: 4.8s;
 }
 
-/* --- NODE 4 (Start: 4.0s) --- */
+/* --- NODE 4 (Start: 4.9s) --- */
 .sec-continuum.slide-animated .node-bottom-left .node-circle-btn {
   opacity: 1;
-  transition-delay: 4.0s, 0s, 0s, 0s;
+  transition-delay: 4.9s, 0s, 0s, 0s;
 }
 .sec-continuum.slide-animated .node-bottom-left .node-circle-btn svg {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 4.6s;
+  transition-delay: 5.5s;
 }
 .sec-continuum.slide-animated .node-bottom-left .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 5.2s;
+  transition-delay: 6.1s;
 }
 
 /* --- CONNECTOR LINE (Triggered after all 4 nodes complete) --- */
@@ -402,37 +400,15 @@
   transition-delay: 5.3s;
 }
 
-/* --- VISITED STATE: Locks Section 4 in completed state when scrolling away --- */
-.sec-continuum.visited .sec-continuum__grid-img,
-.sec-continuum.visited .sec-continuum__orbit-ring {
-  opacity: 1 !important;
-  transform: translate(-50%, -50%) scale(1) !important;
-  transition: none !important;
-}
-
-.sec-continuum.visited .sec-continuum__center-text .phrase {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: none !important;
-}
-
-.sec-continuum.visited .node-circle-btn {
-  opacity: 1 !important;
-}
-
-.sec-continuum.visited .node-text {
-  opacity: 1 !important;
-  transform: translateY(-50%) translateX(0) scale(1) !important;
-  transition: none !important;
-}
-
-.sec-continuum.visited .node-circle-btn svg {
-  opacity: 1 !important;
-  transform: translateY(0) scale(1) !important;
-  transition: none !important;
-}
-
-.sec-continuum.visited .sec-continuum__connector-line {
-  opacity: 1 !important;
-  transition: none !important;
+/* --- VISITED STATE: Re-animate softly and uniformly --- */
+/* Instead of permanently pinning them, we let them re-animate but with FAST, UNIFORM timing */
+.sec-continuum.visited.slide-animated .sec-continuum__grid-img,
+.sec-continuum.visited.slide-animated .sec-continuum__orbit-ring,
+.sec-continuum.visited.slide-animated .sec-continuum__center-text .phrase,
+.sec-continuum.visited.slide-animated .node-circle-btn,
+.sec-continuum.visited.slide-animated .node-circle-btn svg,
+.sec-continuum.visited.slide-animated .node-text,
+.sec-continuum.visited.slide-animated .sec-continuum__connector-line {
+  transition-delay: 0s !important;
+  transition-duration: 0.8s !important;
 }

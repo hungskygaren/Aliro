@@ -1,89 +1,37 @@
 /**
  * Aliro Consulting - Full-Screen Vertical Swiper Engine
  * Uses GPU Hardware Acceleration for 60fps ultra-smooth vertical sliding.
+ * Clean, modular structure for easy maintenance and readability.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  // DOM Element Selectors
+  const mainHeader = document.getElementById("mainHeader");
   const dotsNav = document.getElementById("dotsNav");
   const dots = document.querySelectorAll(".dot-item");
   const navItems = document.querySelectorAll(".nav-item");
   const scrollDownBtn = document.getElementById("scrollDownBtn");
-  const sectionBackgrounds = new WeakMap();
-  let clearBackgroundTransition = null;
+  const hashLinks = document.querySelectorAll('a[href^="#section-"]');
+  const continuumNodes = document.querySelectorAll(".sec-continuum__node");
+  const return4icBtns = document.querySelectorAll(".btn-return-4ic");
+  // Section Background Colors for Global Morphing
+  const sectionColors = [
+    "#123e6b", // Section 1 (0) - Deep Blue
+    "#f7f9fc", // Section 2 (1) - Light Gray
+    "#ffffff", // Section 3 (2) - White
+    "#123e6b", // Section 4 (3) - Deep Blue
+    "#123e6b", // Section 5 (4) - Deep Blue
+    "#123e6b", // Section 6 (5) - Deep Blue
+    "#123e6b", // Section 7 (6) - Deep Blue
+    "#123e6b", // Section 8 (7) - Deep Blue
+    "#225a8d", // Section 9 (8) - Architecture Blue
+    "#f7f9fc"  // Section 10 (9) - Light Gray
+  ];
 
-  document.querySelectorAll(".scroll-section").forEach((section) => {
-    sectionBackgrounds.set(section, getComputedStyle(section).backgroundColor);
-  });
 
-  function transitionIncomingBackground(swiperInstance, duration) {
-    const transitionDuration = Number.isFinite(duration)
-      ? duration
-      : swiperInstance.params.speed;
-
-    if (transitionDuration <= 0 || !swiperInstance.slides) return;
-
-    if (clearBackgroundTransition) clearBackgroundTransition();
-
-    const outgoingSlide = swiperInstance.slides[swiperInstance.previousIndex];
-    const incomingSlide = swiperInstance.slides[swiperInstance.activeIndex];
-    const fromBackground = outgoingSlide
-      ? getComputedStyle(outgoingSlide).backgroundColor
-      : null;
-    const toBackground = incomingSlide
-      ? sectionBackgrounds.get(incomingSlide)
-      : null;
-
-    if (
-      !incomingSlide ||
-      !fromBackground ||
-      !toBackground ||
-      fromBackground === toBackground
-    ) {
-      return;
-    }
-
-    const originalBackground = incomingSlide.style.backgroundColor;
-    const originalTransition = incomingSlide.style.transition;
-    let animationFrameId = null;
-    let timeoutId = null;
-
-    const cleanup = () => {
-      if (animationFrameId !== null) cancelAnimationFrame(animationFrameId);
-      if (timeoutId !== null) clearTimeout(timeoutId);
-      incomingSlide.removeEventListener("transitionend", handleTransitionEnd);
-      incomingSlide.style.backgroundColor = originalBackground;
-      incomingSlide.style.transition = originalTransition;
-      if (clearBackgroundTransition === cleanup) {
-        clearBackgroundTransition = null;
-      }
-    };
-
-    const handleTransitionEnd = (event) => {
-      if (
-        event.target === incomingSlide &&
-        event.propertyName === "background-color"
-      ) {
-        cleanup();
-      }
-    };
-
-    incomingSlide.style.transition = "none";
-    incomingSlide.style.backgroundColor = fromBackground;
-    void incomingSlide.offsetWidth;
-
-    incomingSlide.addEventListener("transitionend", handleTransitionEnd);
-    animationFrameId = requestAnimationFrame(() => {
-      incomingSlide.style.transition =
-        "background-color " +
-        transitionDuration +
-        "ms cubic-bezier(0.16, 1, 0.3, 1)";
-      incomingSlide.style.backgroundColor = toBackground;
-    });
-    timeoutId = setTimeout(cleanup, transitionDuration + 100);
-    clearBackgroundTransition = cleanup;
-  }
-
-  // 1. Initialize Swiper 11 Vertical Slider Engine
+  // --------------------------------------------------------------------------
+  // 1. Swiper 11 Vertical Engine Initialization
+  // --------------------------------------------------------------------------
   const swiper = new Swiper(".main-swiper", {
     direction: "vertical",
     speed: 950,
@@ -101,43 +49,86 @@ document.addEventListener("DOMContentLoaded", () => {
     grabCursor: false,
     touchThreshold: 5,
     on: {
-      beforeTransitionStart: function (_, duration) {
-        transitionIncomingBackground(this, duration);
-      },
+      // Called when Swiper finishes initializing
       init: function () {
         updateActiveState(this.activeIndex);
         if (this.slides && this.slides[this.activeIndex]) {
           this.slides[this.activeIndex].classList.add("slide-animated");
         }
+        // Inject morph overlay for every slide
+        if (this.slides) {
+          this.slides.forEach(slide => {
+            let overlay = document.createElement("div");
+            overlay.className = "morph-overlay";
+            slide.appendChild(overlay);
+          });
+        }
       },
+
+      // Called as soon as a slide transition starts
       slideChange: function () {
         updateActiveState(this.activeIndex);
         if (this.slides) {
-          this.slides.forEach((slide) =>
-            slide.classList.remove("slide-animated"),
-          );
+          const targetSlide = this.slides[this.activeIndex];
+          const prevColor = sectionColors[this.previousIndex];
+          const targetColor = sectionColors[this.activeIndex];
+
+          // Dynamic Two-Way Background Inheritance Algorithm (Overlay Based)
+          if (targetSlide && prevColor && prevColor !== targetColor) {
+            targetSlide.style.setProperty('--morph-color', prevColor);
+            targetSlide.classList.add("morph-active");
+          }
+
+          // Reset animation classes and morph overlay on inactive slides
+          this.slides.forEach((slide, idx) => {
+            if (idx !== this.activeIndex) {
+              slide.classList.remove("slide-animated");
+              slide.classList.remove("morph-active");
+            }
+          });
+
+          // Mark previous slide as visited
           if (this.slides[this.previousIndex]) {
             this.slides[this.previousIndex].classList.add("visited");
           }
         }
       },
+
+      // Called when the slide transition completes (slide has fully stopped)
       slideChangeTransitionEnd: function () {
-        if (this.slides) {
-          this.slides.forEach((slide) =>
-            slide.classList.remove("slide-animated"),
-          );
-          if (this.slides[this.activeIndex]) {
-            this.slides[this.activeIndex].classList.add("slide-animated");
+        if (!this.slides) return;
+
+        // Cleanup inactive slides
+        this.slides.forEach((slide, idx) => {
+          if (idx !== this.activeIndex) {
+            slide.classList.remove("slide-animated");
           }
-        }
+        });
+
+        const currentSlide = this.slides[this.activeIndex];
+        if (!currentSlide) return;
+        
+        const currentIndex = this.activeIndex;
+
+        // 4. Trigger morphing (Fade out the overlay to reveal actual content and background)
+        currentSlide.classList.remove("morph-active");
+
+        // 5. Sequential Content Reveal: Wait 150ms for background to morph before animating text
+        setTimeout(() => {
+          // Only animate if user hasn't scrolled away during the wait
+          if (this.activeIndex === currentIndex) {
+            currentSlide.classList.add("slide-animated");
+          }
+        }, 150);
       },
     },
   });
 
-  // 2. Active State Manager (Sync Side Dash Lines, Navbar, and Contrast Theme)
+  // --------------------------------------------------------------------------
+  // 2. Active State Manager (Sync Navigation Dots, Navbar, and Header Theme)
+  // --------------------------------------------------------------------------
   function updateActiveState(index) {
-    // Light Background Sections (Section 2 = Index 1, Section 3 = Index 2, Section 10 = Index 9)
-    const mainHeader = document.getElementById("mainHeader");
+    // Light Background Sections (Section 2 = index 1, Section 3 = index 2, Section 10 = index 9)
     const isLightSection = [1, 2, 9].includes(index);
 
     if (isLightSection) {
@@ -148,28 +139,24 @@ document.addEventListener("DOMContentLoaded", () => {
       if (mainHeader) mainHeader.classList.remove("light-theme");
     }
 
-    // Update Side Dash Lines
+    // Update Side Dash Dots Active State
     dots.forEach((dot, idx) => {
-      if (idx === index) {
-        dot.classList.add("active");
-      } else {
-        dot.classList.remove("active");
-      }
+      dot.classList.toggle("active", idx === index);
     });
 
-    // Keep 'Home' (#section-1) permanently active as this is the homepage
+    // Keep 'Home' (#section-1) permanently active as this is a single landing page
     const activeNavHref = "#section-1";
-
     navItems.forEach((navItem) => {
-      if (navItem.getAttribute("href") === activeNavHref) {
-        navItem.classList.add("active");
-      } else {
-        navItem.classList.remove("active");
-      }
+      navItem.classList.toggle(
+        "active",
+        navItem.getAttribute("href") === activeNavHref
+      );
     });
   }
 
-  // 3. Apple-Style Smart Skip Jump Navigation Helper
+  // --------------------------------------------------------------------------
+  // 3. Smart Skip Navigation Helper (Smooth multi-slide jumping)
+  // --------------------------------------------------------------------------
   function smartSlideTo(targetIndex) {
     if (targetIndex < 0) return;
     const currentIndex = swiper.activeIndex;
@@ -178,6 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (distance <= 1) {
       swiper.slideTo(targetIndex, 950);
     } else {
+      // Pre-land on adjacent slide then slide into target for smooth visual effect
       const preLandingIndex =
         targetIndex > currentIndex ? targetIndex - 1 : targetIndex + 1;
       swiper.slideTo(preLandingIndex, 0);
@@ -189,7 +177,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 4. Scroll Down Button Action
+  // --------------------------------------------------------------------------
+  // 4. Interactive Click Handlers
+  // --------------------------------------------------------------------------
+
+  // Hero Scroll Down Button
   if (scrollDownBtn) {
     scrollDownBtn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -197,13 +189,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 5. Side Dash Lines Click Action
+  // Side Dash Lines Navigation Dots
   dots.forEach((dot) => {
     dot.addEventListener("click", (e) => {
       e.preventDefault();
       const targetIndex = parseInt(
         e.currentTarget.getAttribute("data-index"),
-        10,
+        10
       );
       if (!isNaN(targetIndex)) {
         smartSlideTo(targetIndex);
@@ -211,8 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 6. Section Hash Links Click Action (Intercept all #section- links to prevent default jump scroll freeze)
-  const hashLinks = document.querySelectorAll('a[href^="#section-"]');
+  // Intercept all #section- links (Logo, Navbar, CTA buttons) to prevent jump freeze
   hashLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -226,10 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 7. Section 4 Continuum Satellite Node Buttons Click & Hover Action
-  const continuumNodes = document.querySelectorAll(".sec-continuum__node");
+  // Section 4 Satellite Node Buttons Click Handler
   continuumNodes.forEach((node) => {
-    const btn = node.querySelector(".node-circle-btn");
     node.addEventListener("click", (e) => {
       e.preventDefault();
       const targetIndex = parseInt(node.getAttribute("data-slide-target"), 10);
@@ -237,19 +226,9 @@ document.addEventListener("DOMContentLoaded", () => {
         smartSlideTo(targetIndex);
       }
     });
-    // JS-driven hover to bypass Chromium mousewheel pointer-events lock
-    if (btn) {
-      node.addEventListener("mouseenter", () =>
-        btn.classList.add("is-hovered"),
-      );
-      node.addEventListener("mouseleave", () =>
-        btn.classList.remove("is-hovered"),
-      );
-    }
   });
 
-  // 8. Return to 4IC Button Click Action (Sections 5, 6, 7, 8)
-  const return4icBtns = document.querySelectorAll(".btn-return-4ic");
+  // Return to 4IC Button Click Handler (Sections 5, 6, 7, 8)
   return4icBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
