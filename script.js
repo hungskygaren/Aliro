@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "#123e6b", // Section 6 (5) - Deep Blue
     "#123e6b", // Section 7 (6) - Deep Blue
     "#123e6b", // Section 8 (7) - Deep Blue
-    "#225a8d", // Section 9 (8) - Architecture Blue
+    "#123e6b", // Section 9 (8) - Architecture Blue (Updated to Deep Blue)
     "#f7f9fc", // Section 10 (9) - Light Gray
   ];
 
