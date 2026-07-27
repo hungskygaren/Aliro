@@ -19,40 +19,7 @@
   z-index: 1; /* Layer 1: Bottom-most background grid */
 }
 
-.sec-hero::before,
-.sec-hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  pointer-events: none;
-  filter: blur(10px);
-  z-index: 1;
-  opacity: 0; /* Animated on slide active */
-  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
-.sec-hero::before {
-  left: calc((100vw - 1170px) / 2 + 29px);
-  background: linear-gradient(90deg, rgba(125, 232, 255, 0.35) 0%, rgba(125, 232, 255, 0.00) 100%);
-  width: 24.6528%; /* 355px / 1440px */
-  aspect-ratio: 355 / 516;
-}
-
-.sec-hero::after {
-  right: calc((100vw - 1170px) / 2 + 29px);
-  background: linear-gradient(270deg, rgba(125, 232, 255, 0.35) 0%, rgba(125, 232, 255, 0.00) 100%);
-  width: 26.875%; /* 387px / 1440px */
-  aspect-ratio: 387 / 516;
-}
-
-@media (max-width: 1228px) {
-  .sec-hero::before {
-    left: 29px;
-  }
-  .sec-hero::after {
-    right: 29px;
-  }
-}
 
 /* Two side-layered cliff graphics (Layer 3: Overlay over grid pattern and glows) */
 .sec-hero__cliff {
@@ -68,16 +35,16 @@
   left: 0;
   background-image: url("../../../assets/hero-bg-left.png");
   background-position: left bottom;
-  width: 29.2361%; /* 421px / 1440px */
-  aspect-ratio: 421 / 579;
+  width: 38.4028%; /* 553px / 1440px */
+  height: 80.4167%; /* 579px / 720px */
 }
 
 .sec-hero__cliff--right {
   right: 0;
   background-image: url("../../../assets/hero-bg-right.png");
   background-position: right bottom;
-  width: 31.8056%; /* 458px / 1440px */
-  aspect-ratio: 458 / 614;
+  width: 37.9167%; /* 546px / 1440px */
+  height: 85.2778%; /* 614px / 720px */
 }
 
 .sec-hero__content {
@@ -94,10 +61,11 @@
   font-family: var(--font-brand);
   font-size: 30px;
   font-weight: 700;
+  line-height: 65px;
   color: #4f8f9d; /* Figma Teal Blue */
   text-transform: uppercase;
   letter-spacing: 0;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .sec-hero__title {
@@ -178,19 +146,7 @@
   transition-delay: 0.2s;
 }
 
-.sec-hero.slide-animated::before {
-  opacity: 1;
-  transition-delay: 3.5s;
-  animation: glowPulse 5s ease-in-out infinite alternate;
-  animation-delay: 5.0s;
-}
 
-.sec-hero.slide-animated::after {
-  opacity: 1;
-  transition-delay: 3.5s;
-  animation: glowPulse 5s ease-in-out infinite alternate;
-  animation-delay: 5.0s;
-}
 
 /* Sub-top phrase reveal (Chunk 1 - Bottom-to-Top) */
 .sec-hero.slide-animated .sec-hero__sub-top .phrase {
@@ -241,160 +197,5 @@
   transition-delay: 0.5s;
 }
 
-@keyframes glowPulse {
-  0% {
-    opacity: 0.8;
-    filter: blur(10px) brightness(1);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(12px) brightness(1.15);
-  }
-}
 
-/* ==========================================================================
-   Connector Dotted Lines (Figma Node 4363:3990)
-   ========================================================================== */
-.sec-hero__connector {
-  position: absolute;
-  width: 162px;
-  height: 10px;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 2; /* Positioned above background grid (1) and below text overlay (3) */
-  transition: opacity 0.6s ease;
-}
 
-.sec-hero__connector::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #68BFD2;
-}
-
-.sec-hero__connector::after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 4px;
-  width: 159px;
-  height: 2px;
-  background-image: linear-gradient(90deg, #68BFD2 50%, transparent 50%);
-  background-size: 10px 2px;
-  background-repeat: repeat-x;
-  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-  mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 1.0s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Specific Positions for Left Connectors */
-.sec-hero__connector--left-1 {
-  left: calc((100vw - 1170px) / 2 + 162px);
-  top: 229px;
-}
-
-.sec-hero__connector--left-2 {
-  left: calc((100vw - 1170px) / 2 + 220px);
-  top: 333px;
-}
-
-.sec-hero__connector--left-3 {
-  left: calc((100vw - 1170px) / 2 + 259px);
-  top: 494px;
-}
-
-/* Active Staggered Fade-in and Draw Timeline */
-.sec-hero.slide-animated .sec-hero__connector--left-1 {
-  opacity: 1;
-  transition-delay: 3.0s;
-}
-.sec-hero.slide-animated .sec-hero__connector--left-1::after {
-  transform: scaleX(1);
-  transition-delay: 3.2s;
-}
-
-.sec-hero.slide-animated .sec-hero__connector--left-2 {
-  opacity: 1;
-  transition-delay: 3.2s;
-}
-.sec-hero.slide-animated .sec-hero__connector--left-2::after {
-  transform: scaleX(1);
-  transition-delay: 3.4s;
-}
-
-.sec-hero.slide-animated .sec-hero__connector--left-3 {
-  opacity: 1;
-  transition-delay: 3.4s;
-}
-.sec-hero.slide-animated .sec-hero__connector--left-3::after {
-  transform: scaleX(1);
-  transition-delay: 3.6s;
-}
-
-/* Specific Positions for Right Connectors */
-.sec-hero__connector--right-1 {
-  right: calc((100vw - 1170px) / 2 + 152px);
-  top: 244px;
-}
-
-.sec-hero__connector--right-2 {
-  right: calc((100vw - 1170px) / 2 + 221px);
-  top: 312px;
-}
-
-.sec-hero__connector--right-3 {
-  right: calc((100vw - 1170px) / 2 + 296px);
-  top: 526px;
-}
-
-/* Override Directional Styles for Right Side Connectors */
-.sec-hero__connector--right-1::before,
-.sec-hero__connector--right-2::before,
-.sec-hero__connector--right-3::before {
-  left: auto;
-  right: 0;
-}
-
-.sec-hero__connector--right-1::after,
-.sec-hero__connector--right-2::after,
-.sec-hero__connector--right-3::after {
-  left: auto;
-  right: 3px;
-  transform-origin: right center; /* Grows from right to left */
-  -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-  mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-}
-
-/* Active Staggered Fade-in and Draw Timeline for Right Connectors */
-.sec-hero.slide-animated .sec-hero__connector--right-1 {
-  opacity: 1;
-  transition-delay: 3.1s;
-}
-.sec-hero.slide-animated .sec-hero__connector--right-1::after {
-  transform: scaleX(1);
-  transition-delay: 3.3s;
-}
-
-.sec-hero.slide-animated .sec-hero__connector--right-2 {
-  opacity: 1;
-  transition-delay: 3.3s;
-}
-.sec-hero.slide-animated .sec-hero__connector--right-2::after {
-  transform: scaleX(1);
-  transition-delay: 3.5s;
-}
-
-.sec-hero.slide-animated .sec-hero__connector--right-3 {
-  opacity: 1;
-  transition-delay: 3.5s;
-}
-.sec-hero.slide-animated .sec-hero__connector--right-3::after {
-  transform: scaleX(1);
-  transition-delay: 3.7s;
-}

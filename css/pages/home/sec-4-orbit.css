@@ -172,7 +172,7 @@
   box-shadow: 0 0 35px rgba(123, 231, 255, 0.60), 0 0 15px rgba(79, 143, 157, 0.80) !important;
 }
 
-.node-circle-btn svg {
+.node-circle-btn img {
   display: block;
   margin: auto;
   opacity: 0;
@@ -182,36 +182,32 @@
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.node-top-left .node-circle-btn svg {
-  width: 119.83px;
-  height: 76.24px;
+.node-top-left .node-circle-btn img {
+  width: 137px;
+  height: 81px;
 }
 
-.node-top-right .node-circle-btn svg {
-  width: 119px;
-  height: 135px;
-  position: absolute;
-  left: 50%;
-  margin-left: -59.5px;
-  bottom: 38px;
+.node-top-right .node-circle-btn img {
+  width: 141px;
+  height: 90px;
 }
 
-.node-bottom-right .node-circle-btn svg {
-  width: 133px;
-  height: 151.49px;
+.node-bottom-right .node-circle-btn img {
+  width: 142px;
+  height: 139px;
   position: absolute;
   left: 50%;
-  margin-left: -66.5px;
-  bottom: 26.5px;
+  margin-left: -71px;
+  bottom: 25px;
 }
 
-.node-bottom-left .node-circle-btn svg {
-  width: 172px;
-  height: 185px;
+.node-bottom-left .node-circle-btn img {
+  width: 142px;
+  height: 199px;
   position: absolute;
   left: 50%;
-  margin-left: -86px;
-  bottom: 17px;
+  margin-left: -71px;
+  bottom: 22px;
 }
 
 /* Node Text Typography (Positioned Side-by-Side without skewing Circle Center) */
@@ -335,69 +331,69 @@
   opacity: 1;
   transition-delay: 1.0s, 0s, 0s, 0s;
 }
-.sec-continuum.slide-animated .node-top-left .node-circle-btn svg {
+.sec-continuum.slide-animated .node-top-left .node-circle-btn img {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 1.6s;
+  transition-delay: 1.8s;
 }
 .sec-continuum.slide-animated .node-top-left .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 2.2s;
+  transition-delay: 2.6s;
 }
 
-/* --- NODE 2 (Start: 2.3s) --- */
+/* --- NODE 2 (Start: 2.0s) --- */
 .sec-continuum.slide-animated .node-top-right .node-circle-btn {
   opacity: 1;
-  transition-delay: 2.3s, 0s, 0s, 0s;
+  transition-delay: 2.0s, 0s, 0s, 0s;
 }
-.sec-continuum.slide-animated .node-top-right .node-circle-btn svg {
+.sec-continuum.slide-animated .node-top-right .node-circle-btn img {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 2.9s;
+  transition-delay: 2.8s;
 }
 .sec-continuum.slide-animated .node-top-right .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 3.5s;
+  transition-delay: 3.6s;
 }
 
-/* --- NODE 3 (Start: 3.6s) --- */
+/* --- NODE 3 (Start: 3.0s) --- */
 .sec-continuum.slide-animated .node-bottom-right .node-circle-btn {
   opacity: 1;
-  transition-delay: 3.6s, 0s, 0s, 0s;
+  transition-delay: 3.0s, 0s, 0s, 0s;
 }
-.sec-continuum.slide-animated .node-bottom-right .node-circle-btn svg {
+.sec-continuum.slide-animated .node-bottom-right .node-circle-btn img {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 4.2s;
+  transition-delay: 3.8s;
 }
 .sec-continuum.slide-animated .node-bottom-right .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 4.8s;
+  transition-delay: 4.6s;
 }
 
-/* --- NODE 4 (Start: 4.9s) --- */
+/* --- NODE 4 (Start: 4.0s) --- */
 .sec-continuum.slide-animated .node-bottom-left .node-circle-btn {
   opacity: 1;
-  transition-delay: 4.9s, 0s, 0s, 0s;
+  transition-delay: 4.0s, 0s, 0s, 0s;
 }
-.sec-continuum.slide-animated .node-bottom-left .node-circle-btn svg {
+.sec-continuum.slide-animated .node-bottom-left .node-circle-btn img {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition-delay: 5.5s;
+  transition-delay: 4.8s;
 }
 .sec-continuum.slide-animated .node-bottom-left .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 6.1s;
+  transition-delay: 5.6s;
 }
 
-/* --- CONNECTOR LINE (Triggered after all 4 nodes complete) --- */
+/* --- CONNECTOR LINE (Triggered before Node 4 finishes) --- */
 .sec-continuum.slide-animated .sec-continuum__connector-line {
   opacity: 1;
-  transition-delay: 5.3s;
+  transition-delay: 5.0s;
 }
 
 /* --- VISITED STATE: Re-animate softly and uniformly --- */
@@ -406,7 +402,7 @@
 .sec-continuum.visited.slide-animated .sec-continuum__orbit-ring,
 .sec-continuum.visited.slide-animated .sec-continuum__center-text .phrase,
 .sec-continuum.visited.slide-animated .node-circle-btn,
-.sec-continuum.visited.slide-animated .node-circle-btn svg,
+.sec-continuum.visited.slide-animated .node-circle-btn img,
 .sec-continuum.visited.slide-animated .node-text,
 .sec-continuum.visited.slide-animated .sec-continuum__connector-line {
   transition-delay: 0s !important;
