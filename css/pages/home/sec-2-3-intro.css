@@ -104,9 +104,7 @@
 /* --------------------------------------------------------------------------
    Section 2 Entrance Animation Sequence (Text Slides in from Right)
    -------------------------------------------------------------------------- */
-.sec-architect .phrase {
-  display: inline-block;
-  white-space: nowrap;
+.sec-architect__content {
   opacity: 0;
   transform: translateX(40px); /* Initial state: Slide in from the RIGHT */
   transition:
@@ -114,39 +112,21 @@
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Active State Triggered by Swiper Slide Change (Grouped Block Chunks) */
-.sec-architect.slide-animated .sec-architect__sub-top .phrase {
+/* Active State Triggered by Swiper Slide Change */
+.sec-architect.slide-animated .sec-architect__content {
   opacity: 1;
   transform: translateX(0);
-  transition-delay: 0.45s;
 }
 
-/* Chunk 2: Main Title Block (Entire 3-line Title together) */
-.sec-architect.slide-animated .sec-architect__title .phrase {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 1.15s;
-}
-
-/* Chunk 3: Subtitle Block (Entire 2-line Subtitle together) */
-.sec-architect.slide-animated .sec-architect__sub-bottom .phrase {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 1.85s;
-}
-
-/* Chunk 4: Description Block (Entire 2-line Description together) */
-.sec-architect.slide-animated .sec-architect__desc .phrase {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 2.55s;
+.sec-architect .phrase {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 /* Isometric Visual Graphic */
 .sec-architect.slide-animated .sec-architect__img {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.5s;
 }
 
 /* Responsive Overrides for Section 2 */
@@ -300,9 +280,7 @@
 /* --------------------------------------------------------------------------
    Section 3 Entrance Animation Sequence (Text Slides in from Right)
    -------------------------------------------------------------------------- */
-.sec-framework .phrase {
-  display: inline-block;
-  white-space: nowrap;
+.sec-framework__content {
   opacity: 0;
   transform: translateX(40px); /* Initial state: Slide in from the RIGHT */
   transition:
@@ -311,34 +289,19 @@
 }
 
 /* Active State Triggered by Swiper Slide Change */
-.sec-framework.slide-animated .sec-framework__sub-top .phrase {
+.sec-framework.slide-animated .sec-framework__content {
   opacity: 1;
   transform: translateX(0);
-  transition-delay: 0.45s;
 }
 
-.sec-framework.slide-animated .sec-framework__title .phrase {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 1.15s;
-}
-
-.sec-framework.slide-animated .sec-framework__sub-bottom .phrase {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 1.85s;
-}
-
-.sec-framework.slide-animated .sec-framework__desc .phrase {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 2.55s;
+.sec-framework .phrase {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .sec-framework.slide-animated .sec-framework__img {
   opacity: 1;
   transform: translate(0, -50%);
-  transition-delay: 0.5s;
 }
 
 /* Responsive Overrides for Section 3 */

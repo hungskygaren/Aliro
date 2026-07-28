@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------------------------
   const swiper = new Swiper(".main-swiper", {
     direction: "vertical",
-    speed: 950,
+    speed: 650,
     effect: "slide",
     autoHeight: false,
     mousewheel: {
@@ -54,7 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (this.slides && this.slides[this.activeIndex]) {
           this.slides[this.activeIndex].classList.add("slide-animated");
         }
-        // Inject morph overlay for every slide
+        // Inject morph overlay for every slide (Temporarily disabled)
+        /*
         if (this.slides) {
           this.slides.forEach((slide) => {
             let overlay = document.createElement("div");
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slide.appendChild(overlay);
           });
         }
+        */
       },
 
       // Called as soon as a slide transition starts
@@ -72,17 +74,19 @@ document.addEventListener("DOMContentLoaded", () => {
           const prevColor = sectionColors[this.previousIndex];
           const targetColor = sectionColors[this.activeIndex];
 
-          // Dynamic Two-Way Background Inheritance Algorithm (Overlay Based)
+          // Dynamic Two-Way Background Inheritance Algorithm (Overlay Based) (Temporarily disabled)
+          /*
           if (targetSlide && prevColor && prevColor !== targetColor) {
             targetSlide.style.setProperty("--morph-color", prevColor);
             targetSlide.classList.add("morph-active");
           }
+          */
 
-          // Reset animation classes and morph overlay on inactive slides
+          // Reset animation classes and morph overlay on inactive slides (Temporarily disabled morph-active)
           this.slides.forEach((slide, idx) => {
             if (idx !== this.activeIndex) {
               slide.classList.remove("slide-animated");
-              slide.classList.remove("morph-active");
+              // slide.classList.remove("morph-active");
             }
           });
 
@@ -104,21 +108,11 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
+        // Trigger entrance animation immediately when the slide transition completes (no setTimeout delay)
         const currentSlide = this.slides[this.activeIndex];
-        if (!currentSlide) return;
-
-        const currentIndex = this.activeIndex;
-
-        // 4. Trigger morphing (Fade out the overlay to reveal actual content and background)
-        currentSlide.classList.remove("morph-active");
-
-        // 5. Sequential Content Reveal: Wait 150ms for background to morph before animating text
-        setTimeout(() => {
-          // Only animate if user hasn't scrolled away during the wait
-          if (this.activeIndex === currentIndex) {
-            currentSlide.classList.add("slide-animated");
-          }
-        }, 150);
+        if (currentSlide) {
+          currentSlide.classList.add("slide-animated");
+        }
       },
     },
   });
@@ -159,9 +153,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function smartSlideTo(targetIndex) {
     if (targetIndex < 0) return;
 
-    // Native Swiper behavior: cuộn lướt qua mọi thứ trong 1 giây (1000ms)
+    // Native Swiper behavior: cuộn lướt qua mọi thứ trong 650ms
     // Giữ code nhẹ nhàng, ổn định và tận dụng tối đa animation Play-Once.
-    swiper.slideTo(targetIndex, 1000);
+    swiper.slideTo(targetIndex, 650);
   }
 
   // --------------------------------------------------------------------------
