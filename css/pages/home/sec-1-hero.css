@@ -54,6 +54,11 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Section 1 Typography Specs (Figma Node 4243:2526) */
@@ -109,74 +114,35 @@
 .sec-hero .word,
 .sec-hero .phrase {
   display: inline-block;
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sec-hero .btn-hero-cta {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-hero .sec-hero__cliff--left {
   opacity: 0;
   transform: translateX(-100%);
   transition:
-    opacity 5.5s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 5.5s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 2.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 2.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-hero .sec-hero__cliff--right {
   opacity: 0;
   transform: translateX(100%);
   transition:
-    opacity 5.5s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 5.5s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 2.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 2.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Triggered State: Activated when Section 1 is Active (.slide-animated) */
 .sec-hero.slide-animated .sec-hero__bg {
   opacity: 1;
-  transition-delay: 0.2s;
 }
 
-
-
-/* Sub-top phrase reveal (Chunk 1 - Bottom-to-Top) */
-.sec-hero.slide-animated .sec-hero__sub-top .phrase {
+.sec-hero.slide-animated .sec-hero__content {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.45s;
 }
 
-/* Main title phrase reveal (Chunk 2 - Entire H1 Block - 0.7s Gap) */
-.sec-hero.slide-animated .sec-hero__title .phrase {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 1.15s;
-}
-
-/* Sub-bottom phrase reveal (Chunk 3 - Entire P Block - 0.7s Gap) */
-.sec-hero.slide-animated .sec-hero__sub-bottom .phrase {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 1.85s;
-}
-
-/* Hero CTA Button (0.7s Gap) */
-.sec-hero.slide-animated .btn-hero-cta {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 2.55s;
-}
-
-/* Scroll Down Button (Appears last) */
+/* Scroll Down Button (Appears immediately with content) */
 .sec-hero .scroll-down-btn {
   opacity: 0;
   transform: translateX(-50%) translateY(20px);
@@ -186,15 +152,13 @@
 .sec-hero.slide-animated .scroll-down-btn {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
-  transition-delay: 2.8s;
 }
 
-/* Side cliffs: Start early (0.50s) while text appears, slide super slowly (3.8s) to finish AFTER text */
+/* Side cliffs: Start immediately when slide active */
 .sec-hero.slide-animated .sec-hero__cliff--left,
 .sec-hero.slide-animated .sec-hero__cliff--right {
   opacity: 1;
   transform: translateX(0);
-  transition-delay: 0.5s;
 }
 
 

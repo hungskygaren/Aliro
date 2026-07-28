@@ -34,6 +34,12 @@
 
 .sec-10__left {
   width: 100%;
+  opacity: 0;
+  transform: translateX(40px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
 }
 
 .sec-10__desc p {
@@ -110,8 +116,8 @@
   transform: scaleX(0);                    /* 0px left point */
   transform-origin: left center;           /* Draws from left to right! */
   transition:
-    opacity 0.3s ease 1.2s,
-    transform 1.0s cubic-bezier(0.16, 1, 0.3, 1) 1.2s; /* Phase 2: Line draws from 1.2s to 2.2s */
+    opacity 0.3s ease 0.8s,
+    transform 1.0s cubic-bezier(0.16, 1, 0.3, 1) 0.8s; /* Phase 2: Line draws from 0.8s to 1.8s */
 }
 
 .sec-10.slide-animated .sec-10__divider {
@@ -174,19 +180,14 @@
     "clig" off;
 }
 
-/* Section 10 Left Column Entrance Animation (Right-to-Left Staggered Slide In) */
+/* Section 10 Left Column Entrance Animation (Right-to-Left Slide In) */
 .sec-10__left .phrase {
-  opacity: 0;
-  transform: translateX(40px);
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
 }
 
-.sec-10.slide-animated .sec-10__left .phrase {
+.sec-10.slide-animated .sec-10__left {
   opacity: 1;
   transform: translateX(0);
-  transition-delay: 2.4s;
 }
 
 /* Section 10 Right Column & Copyright Entrance Animation */
@@ -202,17 +203,17 @@
 .sec-10.slide-animated .sec-10__card-content .sec-10__entity-item:nth-child(1) {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 2.4s;
+  transition-delay: 1.0s;
 }
 
 .sec-10.slide-animated .sec-10__card-content .sec-10__entity-item:nth-child(3) {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 2.6s;
+  transition-delay: 1.2s;
 }
 
 .sec-10.slide-animated .sec-10__copyright {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 2.7s;
+  transition-delay: 1.3s;
 }

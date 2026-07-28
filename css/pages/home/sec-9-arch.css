@@ -41,12 +41,17 @@
   z-index: 3;
 }
 
-.sec-9__left {
+.sec-9__left,
+.sec-9__right {
   width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-9__right {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,36 +102,13 @@
     "clig" off;
 }
 
-/* Section 9 Entrance Animation (Slow-Motion 1.4s Staggered Bottom-Up Slide) */
+/* Section 9 Entrance Animation (Optimized Concurrent Bottom-Up Slide) */
+.sec-9.slide-animated .sec-9__left,
+.sec-9.slide-animated .sec-9__right {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .sec-9 .phrase {
   display: inline-block;
-  opacity: 0;
-  transform: translateY(35px);
-  transition:
-    opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sec-9.slide-animated .sec-9__tag .phrase {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.2s;
-}
-
-.sec-9.slide-animated .sec-9__title .phrase {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.5s;
-}
-
-.sec-9.slide-animated .sec-9__desc .phrase {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.8s;
-}
-
-.sec-9.slide-animated .sec-9__img.phrase {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 1.0s;
 }
