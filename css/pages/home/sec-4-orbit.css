@@ -294,14 +294,17 @@
 .sec-continuum__connector-line {
   position: absolute;
   bottom: 0;
-  left: calc(50% - 3.85px); /* Align perfectly with bottom arrow tip at X = 248.146px inside 504px SVG */
-  transform: translateX(-50%);
+  left: 50%; /* Center perfectly along page axis */
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top center;
   width: 2px;
-  height: calc(50% - 240px); /* Touch bottom arrow tip perfectly at Y = 239.183px from center */
+  height: calc(50% - 255px); /* Exactly 7px away from the bottom of the arrow (248px + 7px) */
   background-color: #4f8f9d;
   z-index: 2;
   opacity: 0;
-  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* 6. Satellite Connector Lines & Dots Overlay */
@@ -316,10 +319,23 @@
   pointer-events: none;
 }
 
-.sec-continuum__connector-svg line,
+.sec-continuum__connector-svg line {
+  opacity: 0;
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  transition:
+    opacity 0.8s ease-out,
+    stroke-dashoffset 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .sec-continuum__connector-svg circle {
   opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: scale(0);
+  transform-origin: center;
+  transform-box: fill-box;
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -377,11 +393,6 @@
   transform: translateY(-50%) translateX(0) scale(1);
   transition-delay: 0.3s;
 }
-.sec-continuum.slide-animated .line-top-left,
-.sec-continuum.slide-animated .dot-top-left {
-  opacity: 1;
-  transition-delay: 0.3s;
-}
 
 /* --- NODE 2 (Start: 0.9s) --- */
 .sec-continuum.slide-animated .node-top-right .node-circle-btn {
@@ -396,11 +407,6 @@
 .sec-continuum.slide-animated .node-top-right .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
-  transition-delay: 0.9s;
-}
-.sec-continuum.slide-animated .line-top-right,
-.sec-continuum.slide-animated .dot-top-right {
-  opacity: 1;
   transition-delay: 0.9s;
 }
 
@@ -419,11 +425,6 @@
   transform: translateY(-50%) translateX(0) scale(1);
   transition-delay: 1.5s;
 }
-.sec-continuum.slide-animated .line-bottom-right,
-.sec-continuum.slide-animated .dot-bottom-right {
-  opacity: 1;
-  transition-delay: 1.5s;
-}
 
 /* --- NODE 4 (Start: 2.1s) --- */
 .sec-continuum.slide-animated .node-bottom-left .node-circle-btn {
@@ -440,30 +441,67 @@
   transform: translateY(-50%) translateX(0) scale(1);
   transition-delay: 2.1s;
 }
-.sec-continuum.slide-animated .line-bottom-left,
-.sec-continuum.slide-animated .dot-bottom-left {
-  opacity: 1;
-  transition-delay: 2.1s;
-}
 
-/* --- CONNECTOR LINE (Triggered before Node 4 finishes) --- */
+/* --- CONNECTOR LINE & INNER SATELLITE LINES (Starts at 2.7s after Node 4 finishes appearing) --- */
 .sec-continuum.slide-animated .sec-continuum__connector-line {
   opacity: 1;
-  transition-delay: 2.4s;
+  transform: translateX(-50%) scaleY(1);
+  transition-delay: 2.7s;
+}
+
+.sec-continuum.slide-animated .line-top-left,
+.sec-continuum.slide-animated .line-top-right,
+.sec-continuum.slide-animated .line-bottom-right,
+.sec-continuum.slide-animated .line-bottom-left {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  transition-delay: 2.7s;
+}
+
+.sec-continuum.slide-animated .dot-top-left,
+.sec-continuum.slide-animated .dot-top-right,
+.sec-continuum.slide-animated .dot-bottom-right,
+.sec-continuum.slide-animated .dot-bottom-left {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 2.7s;
 }
 
 /* --- VISITED STATE: Re-animate softly and uniformly --- */
-/* Instead of permanently pinning them, we let them re-animate but with FAST, UNIFORM timing */
 .sec-continuum.visited.slide-animated .sec-continuum__center-img,
 .sec-continuum.visited.slide-animated .sec-continuum__orbit-ring,
 .sec-continuum.visited.slide-animated .sec-continuum__top-text .phrase,
 .sec-continuum.visited.slide-animated .sec-continuum__bottom-text .phrase,
 .sec-continuum.visited.slide-animated .node-circle-btn,
 .sec-continuum.visited.slide-animated .node-circle-btn img,
-.sec-continuum.visited.slide-animated .node-text,
-.sec-continuum.visited.slide-animated .sec-continuum__connector-line,
-.sec-continuum.visited.slide-animated .sec-continuum__connector-svg line,
-.sec-continuum.visited.slide-animated .sec-continuum__connector-svg circle {
+.sec-continuum.visited.slide-animated .node-text {
   transition-delay: 0s !important;
   transition-duration: 0.8s !important;
+}
+
+.sec-continuum.visited.slide-animated .sec-continuum__connector-line {
+  transition-delay: 0s !important;
+  transition-duration: 0.8s !important;
+  transform: translateX(-50%) scaleY(1) !important;
+  opacity: 1 !important;
+}
+
+.sec-continuum.visited.slide-animated .line-top-left,
+.sec-continuum.visited.slide-animated .line-top-right,
+.sec-continuum.visited.slide-animated .line-bottom-right,
+.sec-continuum.visited.slide-animated .line-bottom-left {
+  transition-delay: 0s !important;
+  transition-duration: 0.8s !important;
+  stroke-dashoffset: 0 !important;
+  opacity: 1 !important;
+}
+
+.sec-continuum.visited.slide-animated .dot-top-left,
+.sec-continuum.visited.slide-animated .dot-top-right,
+.sec-continuum.visited.slide-animated .dot-bottom-right,
+.sec-continuum.visited.slide-animated .dot-bottom-left {
+  transition-delay: 0s !important;
+  transition-duration: 0.8s !important;
+  transform: scale(1) !important;
+  opacity: 1 !important;
 }

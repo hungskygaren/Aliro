@@ -42,26 +42,50 @@
   transition-delay: 0.1s;
 }
 
+.sec-10__tag {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  color: #01103B;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-10__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  color: #01103B;
+  margin: 0 0 20px 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
 .sec-10__desc p {
-  font-family: var(--font-brand);
+  font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-weight: 400;
-  line-height: 26px;
-  color: #123e6b;
-  margin-bottom: 16px;
+  line-height: normal;
+  color: #2F6EA6;
+  margin-bottom: 24px;
   font-feature-settings:
     "liga" off,
     "clig" off;
 }
 
 .sec-10__email {
-  font-family: var(--font-brand);
-  font-size: 40px;
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
   font-weight: 700;
-  line-height: 48px;
-  color: #123e6b;
+  line-height: normal;
+  color: #01103B;
   display: inline-block;
-  margin: 20px 0 28px;
+  margin: 0 0 32px 0;
   text-decoration: none;
   font-feature-settings:
     "liga" off,
@@ -74,15 +98,22 @@
 }
 
 .sec-10__btn {
+  display: inline-flex;
+  padding: 10px 18px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   background-color: #0431B1;
   color: #ffffff;
-  font-family: var(--font-brand);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Aptos, var(--font-brand);
   font-size: 18px;
+  font-style: normal;
   font-weight: 700;
-  padding: 10px 24px;
-  border-radius: 0;
-  display: inline-block;
+  line-height: normal;
   text-decoration: none;
+  border-radius: 0;
   transition: background-color 0.3s ease;
 }
 
@@ -132,10 +163,10 @@
 
 .sec-10__label {
   display: block;
-  font-family: var(--font-brand);
-  font-size: 18px;
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
   font-weight: 400;
-  color: #5c7896;
+  color: #0431B1;
   margin-bottom: 6px;
   font-feature-settings:
     "liga" off,
@@ -144,10 +175,10 @@
 
 .sec-10__company {
   display: block;
-  font-family: var(--font-brand);
+  font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-weight: 700;
-  color: #123e6b;
+  color: #01103B;
   line-height: 24px;
   font-feature-settings:
     "liga" off,
@@ -156,28 +187,51 @@
 
 .sec-10__location {
   display: block;
-  font-family: var(--font-brand);
+  font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-weight: 700;
-  color: #123e6b;
+  color: #01103B;
   line-height: 24px;
   font-feature-settings:
     "liga" off,
     "clig" off;
 }
 
-.sec-10__copyright {
+.sec-10__bottom {
   position: absolute;
   bottom: 40px;
   left: 0;
-  font-family: var(--font-brand);
-  font-size: 18px;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.sec-10__copyright-text {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
   font-weight: 400;
   color: #7e93a8;
-  z-index: 3;
   font-feature-settings:
     "liga" off,
     "clig" off;
+}
+
+.sec-10__link {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 700;
+  color: #0431B1;
+  text-decoration: underline;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  transition: color 0.3s ease;
+}
+
+.sec-10__link:hover {
+  color: #03258c;
 }
 
 /* Section 10 Left Column Entrance Animation (Right-to-Left Slide In) */
@@ -192,7 +246,7 @@
 
 /* Section 10 Right Column & Copyright Entrance Animation */
 .sec-10__card-content .phrase,
-.sec-10__copyright {
+.sec-10__bottom {
   opacity: 0;
   transform: translateY(20px);
   transition:
@@ -212,7 +266,7 @@
   transition-delay: 1.2s;
 }
 
-.sec-10.slide-animated .sec-10__copyright {
+.sec-10.slide-animated .sec-10__bottom {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 1.3s;
