@@ -44,11 +44,12 @@
 
 .sec-10__tag {
   font-family: Aptos, var(--font-brand);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
-  color: #01103B;
+  color: var(--Secondary-Deep-Blue, #011B7F);
   text-transform: uppercase;
   margin-bottom: 20px;
+  line-height: 24px; /* 100% */
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -58,8 +59,8 @@
   font-family: Aptos, var(--font-brand);
   font-size: 40px;
   font-weight: 700;
-  line-height: 48px;
-  color: #01103B;
+  line-height: normal;
+  color: var(--Midnight-Navy, #01103B);
   margin: 0 0 20px 0;
   font-feature-settings:
     "liga" off,
@@ -68,10 +69,10 @@
 
 .sec-10__desc p {
   font-family: Aptos, var(--font-brand);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   line-height: normal;
-  color: #2F6EA6;
+  color: var(--Secondary-Deep-Blue, #011B7F);
   margin-bottom: 24px;
   font-feature-settings:
     "liga" off,
@@ -80,10 +81,10 @@
 
 .sec-10__email {
   font-family: Aptos, var(--font-brand);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   line-height: normal;
-  color: #01103B;
+  color: var(--Secondary-Deep-Blue, #011B7F);
   display: inline-block;
   margin: 0 0 32px 0;
   text-decoration: none;
