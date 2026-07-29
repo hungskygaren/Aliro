@@ -85,7 +85,8 @@
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
   margin-bottom: 30px;
 }
 
