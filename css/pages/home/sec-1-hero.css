@@ -78,10 +78,11 @@
   font-family: var(--font-brand);
   font-size: 30px;
   font-weight: 700;
-  line-height: 30px; /* Set to exactly 30px to achieve 60px total height for 2 lines */
-  color: #C5DAF3; /* Light gray-blue */
+  line-height: 40px; /* Increased slightly for better breathability */
+  color: #C5DAF3;
   text-transform: uppercase;
   letter-spacing: 0;
+  text-align: center;
   margin-bottom: 30px;
 }
 

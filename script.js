@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Section Background Colors for Global Morphing
   const sectionColors = [
     "#01103B", // Section 1 (0) - New Dark Blue
-    "#f7f9fc", // Section 2 (1) - Light Gray
+    "#ffffff", // Section 2 (1) - White (Updated)
     "#ffffff", // Section 3 (2) - White
     "#01103B", // Section 4 (3) - New Dark Blue
     "#01103B", // Section 5 (4) - New Dark Blue

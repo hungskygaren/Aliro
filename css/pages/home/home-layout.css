@@ -15,11 +15,11 @@
   background-color: #01103B;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sec-architect, .sec-10 {
+.sec-10 {
   background-color: #f7f9fc;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sec-framework {
+.sec-architect, .sec-framework {
   background-color: #ffffff;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }

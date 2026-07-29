@@ -165,9 +165,11 @@
 .sec-10__label {
   display: block;
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  color: #0431B1;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #011B7F;
   margin-bottom: 6px;
   font-feature-settings:
     "liga" off,
