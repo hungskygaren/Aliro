@@ -138,3 +138,12 @@
 .sec-9 .phrase {
   display: inline-block;
 }
+
+/* --- VISITED STATE: Lock in completed state (No re-animation) --- */
+.sec-9.visited .sec-9__left,
+.sec-9.visited .sec-9__right {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: none !important;
+  animation: none !important;
+}

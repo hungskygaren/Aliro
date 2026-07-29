@@ -148,5 +148,26 @@
   transform: translateX(0);
 }
 
+/* --- VISITED STATE: Lock in completed state (No re-animation) --- */
+.sec-hero.visited .sec-hero__bg,
+.sec-hero.visited .sec-hero__cliff--left,
+.sec-hero.visited .sec-hero__cliff--right,
+.sec-hero.visited .sec-hero__content,
+.sec-hero.visited .scroll-down-btn {
+  opacity: 1 !important;
+  transition: none !important;
+  animation: none !important;
+}
 
+.sec-hero.visited .sec-hero__cliff--left,
+.sec-hero.visited .sec-hero__cliff--right {
+  transform: translateX(0) !important;
+}
 
+.sec-hero.visited .sec-hero__content {
+  transform: translateY(0) !important;
+}
+
+.sec-hero.visited .scroll-down-btn {
+  transform: translateX(-50%) translateY(0) !important;
+}
