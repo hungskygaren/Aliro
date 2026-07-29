@@ -69,7 +69,7 @@
   font-family: var(--font-brand);
   font-size: 18px;
   font-weight: 700;
-  color: #ffffff;
+  color: #C5DAF3;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 24px;
@@ -79,15 +79,14 @@
 }
 
 .sec-9__title {
-  font-family: var(--font-brand);
-  font-size: 38px;
+  color: var(--White, #FFF);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 40px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 46px;
-  color: #ffffff;
+  line-height: normal;
   margin-bottom: 30px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
 }
 
 .sec-9__desc {
@@ -95,11 +94,38 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
+  color: #C5DAF3;
+  margin: 0 0 28px 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
+}
+
+.sec-9__btn-wrapper {
+  display: block;
+}
+
+.sec-9__btn {
+  display: inline-flex;
+  padding: 10px 18px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #0431B1;
+  color: var(--White, #FFF);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sec-9__btn:hover {
+  background-color: #03258c;
 }
 
 /* Section 9 Entrance Animation (Optimized Concurrent Bottom-Up Slide) */
