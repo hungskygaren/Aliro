@@ -24,14 +24,14 @@
   align-items: center;
 }
 
-/* 1. Central Wireframe Grid Asset (570px x 326px Figma Standard) */
-.sec-continuum__grid-img {
+/* 1. Central Concept Image (380px x 380px fitting inside 504px ring) */
+.sec-continuum__center-img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.95);
-  width: 570px;
-  height: 326px;
+  width: 380px;
+  height: 380px;
   object-fit: contain;
   z-index: 1;
   pointer-events: none;
@@ -41,16 +41,14 @@
     transform 2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* 2. Central Orbit Ring (480px Diameter, 12px Solid Border) */
+/* 2. Central Orbit Ring SVG (504px x 504px Figma Standard) */
 .sec-continuum__orbit-ring {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.85);
-  width: 480px;
-  height: 480px;
-  border-radius: 50%;
-  border: 12px solid #4f8f9d; /* 12px thick solid border */
+  width: 504px;
+  height: 504px;
   box-sizing: border-box;
   z-index: 2;
   pointer-events: none;
@@ -60,41 +58,60 @@
     transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* 3. Central Title Text Block */
-.sec-continuum__center-text {
+/* 3. Top Title Text Block (Above Orbit Ring, 50px offset) */
+.sec-continuum__top-text {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(50% - 202px); /* 50px inside from top edge of 504px circle */
+  transform: translateX(-50%);
   text-align: center;
   z-index: 3;
-  width: 320px;
+  width: 360px;
 }
 
 .sec-continuum__tag {
-  font-family: var(--font-brand);
-  font-size: 18px;
+  font-family: Aptos, var(--font-family);
+  font-size: 16px;
   font-weight: 700;
-  color: #4f8f9d;
+  line-height: 24px; /* 150% */
+  color: var(--Light-Glow, #C5DAF3);
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0;
   margin-bottom: 8px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-style: normal;
 }
 
 .sec-continuum__title {
-  font-family: var(--font-brand);
-  font-size: 38px;
+  font-family: Aptos, var(--font-family);
+  font-size: 32px;
   font-weight: 700;
-  line-height: 36px;
-  color: #ffffff;
+  line-height: 32px; /* 100% */
+  color: var(--White, #FFF);
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-style: normal;
+}
+
+/* 3.1 Bottom Subtitle Text Block (Below Orbit Ring, 42px offset) */
+.sec-continuum__bottom-text {
+  position: absolute;
+  left: 50%;
+  bottom: calc(50% - 210px); /* 42px inside from bottom edge of 504px circle */
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+  width: 360px;
+  font-family: Aptos, var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--Light-Glow, #C5DAF3);
+  text-transform: uppercase;
+  font-style: normal;
 }
 
 /* 4. Satellite Nodes (Interactive Buttons - 160px Circle Anchor) */
@@ -145,15 +162,15 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 2px solid #4f8f9d;
-  background: #0e335b;
+  border: 1px solid var(--Teal-Blue, #4F8F9D);
+  background: var(--Midnight-Navy, #01103B);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   flex-shrink: 0;
   box-sizing: border-box;
-  box-shadow: 0 0 20px rgba(79, 143, 157, 0.25);
+  box-shadow: 0 0 20px rgba(123, 231, 255, 0.30);
   opacity: 0;
   /* Keep hover feedback independent from the staggered opacity reveal. */
   transition:
@@ -167,8 +184,8 @@
 .sec-continuum__node:hover .node-circle-btn,
 .node-circle-btn:hover {
   transform: none !important;
-  border: 2px solid #4F8F9D !important;
-  background-color: #08325D !important;
+  border: 1px solid var(--Teal-Blue, #4F8F9D) !important;
+  background-color: var(--Midnight-Navy, #01103B) !important;
   box-shadow: 0 0 35px rgba(123, 231, 255, 0.60), 0 0 15px rgba(79, 143, 157, 0.80) !important;
 }
 
@@ -277,14 +294,32 @@
 .sec-continuum__connector-line {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: calc(50% - 3.85px); /* Align perfectly with bottom arrow tip at X = 248.146px inside 504px SVG */
   transform: translateX(-50%);
   width: 2px;
-  height: calc(50% - 240px);
+  height: calc(50% - 240px); /* Touch bottom arrow tip perfectly at Y = 239.183px from center */
   background-color: #4f8f9d;
   z-index: 2;
   opacity: 0;
   transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 6. Satellite Connector Lines & Dots Overlay */
+.sec-continuum__connector-svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 780px;
+  height: 570px;
+  z-index: 5; /* above interactive nodes (z-index: 4) to let dots sit on top of borders */
+  pointer-events: none;
+}
+
+.sec-continuum__connector-svg line,
+.sec-continuum__connector-svg circle {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -308,7 +343,7 @@
 }
 
 /* Active Entrance Animations */
-.sec-continuum.slide-animated .sec-continuum__grid-img {
+.sec-continuum.slide-animated .sec-continuum__center-img {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition-delay: 0.1s;
@@ -320,7 +355,8 @@
   transition-delay: 0.1s;
 }
 
-.sec-continuum.slide-animated .sec-continuum__center-text .phrase {
+.sec-continuum.slide-animated .sec-continuum__top-text .phrase,
+.sec-continuum.slide-animated .sec-continuum__bottom-text .phrase {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.2s;
@@ -341,6 +377,11 @@
   transform: translateY(-50%) translateX(0) scale(1);
   transition-delay: 0.3s;
 }
+.sec-continuum.slide-animated .line-top-left,
+.sec-continuum.slide-animated .dot-top-left {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
 
 /* --- NODE 2 (Start: 0.9s) --- */
 .sec-continuum.slide-animated .node-top-right .node-circle-btn {
@@ -355,6 +396,11 @@
 .sec-continuum.slide-animated .node-top-right .node-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0) scale(1);
+  transition-delay: 0.9s;
+}
+.sec-continuum.slide-animated .line-top-right,
+.sec-continuum.slide-animated .dot-top-right {
+  opacity: 1;
   transition-delay: 0.9s;
 }
 
@@ -373,6 +419,11 @@
   transform: translateY(-50%) translateX(0) scale(1);
   transition-delay: 1.5s;
 }
+.sec-continuum.slide-animated .line-bottom-right,
+.sec-continuum.slide-animated .dot-bottom-right {
+  opacity: 1;
+  transition-delay: 1.5s;
+}
 
 /* --- NODE 4 (Start: 2.1s) --- */
 .sec-continuum.slide-animated .node-bottom-left .node-circle-btn {
@@ -389,6 +440,11 @@
   transform: translateY(-50%) translateX(0) scale(1);
   transition-delay: 2.1s;
 }
+.sec-continuum.slide-animated .line-bottom-left,
+.sec-continuum.slide-animated .dot-bottom-left {
+  opacity: 1;
+  transition-delay: 2.1s;
+}
 
 /* --- CONNECTOR LINE (Triggered before Node 4 finishes) --- */
 .sec-continuum.slide-animated .sec-continuum__connector-line {
@@ -398,13 +454,16 @@
 
 /* --- VISITED STATE: Re-animate softly and uniformly --- */
 /* Instead of permanently pinning them, we let them re-animate but with FAST, UNIFORM timing */
-.sec-continuum.visited.slide-animated .sec-continuum__grid-img,
+.sec-continuum.visited.slide-animated .sec-continuum__center-img,
 .sec-continuum.visited.slide-animated .sec-continuum__orbit-ring,
-.sec-continuum.visited.slide-animated .sec-continuum__center-text .phrase,
+.sec-continuum.visited.slide-animated .sec-continuum__top-text .phrase,
+.sec-continuum.visited.slide-animated .sec-continuum__bottom-text .phrase,
 .sec-continuum.visited.slide-animated .node-circle-btn,
 .sec-continuum.visited.slide-animated .node-circle-btn img,
 .sec-continuum.visited.slide-animated .node-text,
-.sec-continuum.visited.slide-animated .sec-continuum__connector-line {
+.sec-continuum.visited.slide-animated .sec-continuum__connector-line,
+.sec-continuum.visited.slide-animated .sec-continuum__connector-svg line,
+.sec-continuum.visited.slide-animated .sec-continuum__connector-svg circle {
   transition-delay: 0s !important;
   transition-duration: 0.8s !important;
 }

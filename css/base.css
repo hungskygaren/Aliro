@@ -8,9 +8,15 @@
     Roboto, sans-serif;
   --font-brand: "Aptos", "Inter", "Plus Jakarta Sans", sans-serif;
 
-  --color-primary: #2f6ea6;
-  --color-primary-hover: #265b8c;
+  --color-primary: #0431B1;
+  --color-primary-hover: #03258c;
   --color-text-light: #ffffff;
+  --White: #ffffff;
+  --Mid-Blue-Gray: #7E93A8;
+  --Midnight-Navy: #01103B;
+  --Highlight-Blue: #0431B1;
+  --Light-Glow: #C5DAF3;
+  --Teal-Blue: #4F8F9D;
   --color-text-dark: #123e6b;
   --bg-dark: #071729;
 

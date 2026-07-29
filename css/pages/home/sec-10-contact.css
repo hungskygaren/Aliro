@@ -70,11 +70,11 @@
 }
 
 .sec-10__email:hover {
-  color: #2f6ea6;
+  color: #0431B1;
 }
 
 .sec-10__btn {
-  background-color: #2f6ea6;
+  background-color: #0431B1;
   color: #ffffff;
   font-family: var(--font-brand);
   font-size: 18px;
@@ -87,7 +87,7 @@
 }
 
 .sec-10__btn:hover {
-  background-color: #123e6b;
+  background-color: #03258c;
 }
 
 .sec-10__right {
@@ -96,7 +96,7 @@
 
 .sec-10__card {
   position: relative;
-  background-color: #dce4ec;              /* Soft-Gray background is visible from the start of card transition */
+  background-color: #C5DAF3;              /* Soft-Blue background is visible from the start of card transition */
   padding: 40px 35px;                     /* 35px left/right inset padding */
   overflow: hidden;
   clip-path: inset(50% 0 50% 0);          /* Closed vertically */

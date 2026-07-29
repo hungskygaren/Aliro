@@ -12,7 +12,7 @@
 
 /* Slide Background Colors & Dynamic Transition Specs */
 .sec-hero, .sec-continuum, .sec-5, .sec-6, .sec-7, .sec-8 {
-  background-color: #123e6b;
+  background-color: #01103B;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .sec-architect, .sec-10 {
@@ -24,7 +24,7 @@
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .sec-9 {
-  background-color: #123e6b;
+  background-color: #01103B;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

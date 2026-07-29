@@ -16,15 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const return4icBtns = document.querySelectorAll(".btn-return-4ic");
   // Section Background Colors for Global Morphing
   const sectionColors = [
-    "#123e6b", // Section 1 (0) - Deep Blue
+    "#01103B", // Section 1 (0) - New Dark Blue
     "#f7f9fc", // Section 2 (1) - Light Gray
     "#ffffff", // Section 3 (2) - White
-    "#123e6b", // Section 4 (3) - Deep Blue
-    "#123e6b", // Section 5 (4) - Deep Blue
-    "#123e6b", // Section 6 (5) - Deep Blue
-    "#123e6b", // Section 7 (6) - Deep Blue
-    "#123e6b", // Section 8 (7) - Deep Blue
-    "#123e6b", // Section 9 (8) - Architecture Blue (Updated to Deep Blue)
+    "#01103B", // Section 4 (3) - New Dark Blue
+    "#01103B", // Section 5 (4) - New Dark Blue
+    "#01103B", // Section 6 (5) - New Dark Blue
+    "#01103B", // Section 7 (6) - New Dark Blue
+    "#01103B", // Section 8 (7) - New Dark Blue
+    "#01103B", // Section 9 (8) - New Dark Blue
     "#f7f9fc", // Section 10 (9) - Light Gray
   ];
 

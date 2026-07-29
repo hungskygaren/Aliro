@@ -29,7 +29,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 24px; /* 100% */
-  color: #4f8f9d; /* Figma Teal Blue Accent */
+  color: #011B7F;
   text-transform: uppercase;
   letter-spacing: 0;
   font-feature-settings:
@@ -43,7 +43,7 @@
   font-size: 54px;
   font-weight: 700;
   line-height: 44px; /* 81.481% */
-  color: #123e6b; /* Figma Deep Blue */
+  color: #01103B;
   text-transform: uppercase;
   letter-spacing: 0;
   font-feature-settings:
@@ -57,7 +57,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 24px; /* 100% */
-  color: #4f8f9d; /* Figma Teal Blue Accent */
+  color: #011B7F;
   text-transform: uppercase;
   letter-spacing: 0;
   font-feature-settings:
@@ -69,17 +69,44 @@
 .sec-architect__desc {
   font-family: var(--font-brand);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: normal;
-  color: #7e93a8; /* Figma Mid Blue Gray */
+  color: var(--Midnight-Navy, #01103B);
   font-feature-settings:
     "liga" off,
     "clig" off;
+  margin-bottom: 22px;
 }
 
 .sec-architect__desc .phrase {
   display: block;
   white-space: nowrap;
+}
+
+.sec-architect__btn,
+.sec-framework__btn {
+  display: inline-flex;
+  padding: 10px 18px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--Highlight-Blue, #0431B1);
+  color: var(--White, #FFF);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Aptos, var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.sec-architect__btn:hover,
+.sec-framework__btn:hover {
+  background-color: var(--color-primary-hover, #03258c);
 }
 
 /* Layer 2: Right Image inside 1170px Container (770px / 1440px = 53.47vw, Full Section Height) */
@@ -175,8 +202,7 @@
   height: 100%;
   display: flex;
   justify-content: flex-end; /* Pushes text content block to RIGHT side */
-  align-items: flex-start;
-  padding-top: 28.2dvh; /* Exact 28.2dvh top offset (203px / 720px Figma ratio) */
+  align-items: center; /* Vertically center right text content */
 }
 
 /* Layer 3: Right Text Content (Starts at Column 7 of 12-column Grid) */
@@ -193,7 +219,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
-  color: #4f8f9d;
+  color: #011B7F;
   text-transform: uppercase;
   letter-spacing: 0;
   font-feature-settings:
@@ -207,7 +233,7 @@
   font-size: 54px;
   font-weight: 700;
   line-height: 44px;
-  color: #123e6b;
+  color: #01103B;
   text-transform: uppercase;
   letter-spacing: 0;
   font-feature-settings:
@@ -221,7 +247,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
-  color: #4f8f9d;
+  color: #011B7F;
   text-transform: uppercase;
   letter-spacing: 0;
   font-feature-settings:
@@ -233,12 +259,13 @@
 .sec-framework__desc {
   font-family: var(--font-brand);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: normal;
-  color: #7e93a8;
+  color: #01103B;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  margin-bottom: 22px;
 }
 
 .sec-framework__desc .phrase {
@@ -250,31 +277,20 @@
 .sec-framework__img {
   position: absolute;
   top: 50%;
-  right: calc(50% + 15px); /* Locks right edge of image to Column 6 boundary */
-  left: calc(
-    (100vw - 1170px) / -2
-  ); /* Bleeds left edge out to screen left border */
-  width: calc(
-    50% + 15px + (100vw - 1170px) / 2
-  ); /* Spans from screen left edge to Column 6 */
-  height: 81.53dvh;
+  left: 0;
+  width: calc(50% - 15px);
+  max-width: 570px;
+  height: auto;
+  aspect-ratio: 570 / 525;
   z-index: 2;
   pointer-events: none;
   object-fit: contain;
-  object-position: right center; /* Aligns image right side to Column 6 boundary */
+  object-position: left center;
   opacity: 0;
   transform: translate(0, calc(-50% + 80px));
   transition:
     opacity 4.5s cubic-bezier(0.16, 1, 0.3, 1),
     transform 4.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@media (max-width: 1169px) {
-  .sec-framework__img {
-    left: -24px;
-    right: calc(50% + 15px);
-    width: auto;
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -327,7 +343,7 @@
     font-size: 22px;
   }
 
-  .sec-framework__visual {
+  .sec-framework__img {
     position: relative;
     width: 90%;
     max-width: 480px;
@@ -335,5 +351,10 @@
     left: auto;
     top: auto;
     height: auto;
+    transform: none;
+  }
+
+  .sec-framework.slide-animated .sec-framework__img {
+    transform: none;
   }
 }
