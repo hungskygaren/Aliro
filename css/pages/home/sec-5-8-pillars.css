@@ -174,7 +174,7 @@
 }
 
 .sec-5__title .d-block {
-  display: block;
+  display: block !important;
 }
 
 /* Section 5 Bottom Content Block (Below Horizontal Line: Description top 24px below line) */
@@ -343,7 +343,7 @@
 }
 
 .sec-7__title .d-block {
-  display: block;
+  display: block !important;
 }
 
 .sec-7__bottom-block {
@@ -547,7 +547,7 @@
 
 .sec-6__title .d-block,
 .sec-8__title .d-block {
-  display: block;
+  display: block !important;
 }
 
 .sec-6__bottom-block,

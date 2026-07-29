@@ -51,8 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
       // Called when Swiper finishes initializing
       init: function () {
         updateActiveState(this.activeIndex);
-        if (this.slides && this.slides[this.activeIndex]) {
-          this.slides[this.activeIndex].classList.add("slide-animated");
+        
+        // Wait for all assets (especially hero images) to fully load before triggering the entrance animation
+        const startHeroAnimation = () => {
+          if (this.slides && this.slides[this.activeIndex]) {
+            this.slides[this.activeIndex].classList.add("slide-animated");
+          }
+        };
+
+        if (document.readyState === "complete") {
+          startHeroAnimation();
+        } else {
+          window.addEventListener("load", startHeroAnimation);
         }
         // Inject morph overlay for every slide (Temporarily disabled)
         /*

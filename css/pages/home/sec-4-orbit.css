@@ -4,6 +4,8 @@
 .sec-continuum {
   position: relative;
   overflow: hidden;
+  --orbit-scale: 1;
+  --connector-offset: 255px;
 }
 
 .sec-continuum .container {
@@ -22,16 +24,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(var(--orbit-scale, 1));
 }
 
-/* 1. Central Concept Image (380px x 380px fitting inside 504px ring) */
+/* 1. Central Concept Image (328px x 286px Figma Standard) */
 .sec-continuum__center-img {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: calc(50% + 4px); /* Shifted down 4px for optical centering (90.73px top / 82.73px bottom space) */
   transform: translate(-50%, -50%) scale(0.95);
-  width: 380px;
-  height: 380px;
+  width: 328px;
+  height: 286px;
   object-fit: contain;
   z-index: 1;
   pointer-events: none;
@@ -62,10 +65,10 @@
 .sec-continuum__top-text {
   position: absolute;
   left: 50%;
-  top: calc(50% - 202px); /* 50px inside from top edge of 504px circle */
+  top: calc(50% - 174px); /* Shifted up 5px from -169px for visual balance */
   transform: translateX(-50%);
   text-align: center;
-  z-index: 3;
+  z-index: 10; /* Topmost layer to stay above connector lines */
   width: 360px;
 }
 
@@ -103,7 +106,7 @@
   bottom: calc(50% - 210px); /* 42px inside from bottom edge of 504px circle */
   transform: translateX(-50%);
   text-align: center;
-  z-index: 3;
+  z-index: 10; /* Topmost layer to stay above connector lines */
   width: 360px;
   font-family: Aptos, var(--font-family);
   font-size: 16px;
@@ -298,7 +301,7 @@
   transform: translateX(-50%) scaleY(0);
   transform-origin: top center;
   width: 2px;
-  height: calc(50% - 255px); /* Exactly 7px away from the bottom of the arrow (248px + 7px) */
+  height: calc(50% - var(--connector-offset, 255px)); /* Exactly 7px away from bottom arrow tail */
   background-color: #4f8f9d;
   z-index: 2;
   opacity: 0;
@@ -504,4 +507,21 @@
   transition-duration: 0.8s !important;
   transform: scale(1) !important;
   opacity: 1 !important;
+}
+
+/* ==========================================================================
+   Section 4 Responsive Scaling & Adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+  .sec-continuum {
+    --orbit-scale: 0.65;
+    --connector-offset: 168px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec-continuum {
+    --orbit-scale: 0.45;
+    --connector-offset: 119px;
+  }
 }
