@@ -11,20 +11,32 @@
 @import "./sec-10-contact.css";
 
 /* Slide Background Colors & Dynamic Transition Specs */
-.sec-hero, .sec-continuum, .sec-5, .sec-6, .sec-7, .sec-8 {
-  background-color: #01103B;
+.sec-hero {
+  background-color: #c5daf3;
+  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sec-continuum {
+  background-color: #1F6CA0;
+  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sec-5,
+.sec-6,
+.sec-7,
+.sec-8 {
+  background-color: #01103b;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .sec-10 {
   background-color: #f7f9fc;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sec-architect, .sec-framework {
+.sec-architect,
+.sec-framework {
   background-color: #ffffff;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .sec-9 {
-  background-color: #01103B;
+  background-color: #01103b;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

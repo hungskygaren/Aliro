@@ -9,18 +9,20 @@
 .sec-architect .container {
   position: relative;
   height: 100%;
-  display: flex;
-  align-items: flex-start; /* Fluid top alignment matching 214px/720px Figma ratio */
-  justify-content: flex-start;
-  padding-top: 29.7dvh; /* Dynamic 29.7dvh padding-top for perfect scaling across all screen sizes */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  align-items: flex-start;
+  padding-top: 151px; /* Exact 151px Top Offset matching Figma Node 5703-2241 */
+  box-sizing: border-box;
 }
 
-/* Layer 3: Left Text Content (Top-most layer, expanding naturally based on explicit <br /> line breaks) */
+/* Layer 3: Left Text Content (Occupies 4 columns: Cols 1-4) */
 .sec-architect__content {
   position: relative;
-  z-index: 3; /* Top-most layer overlaying graphic below */
-  width: auto;
-  max-width: none; /* Removed width restriction to allow natural intrinsic line-break layout */
+  z-index: 3;
+  grid-column: 1 / span 4;
+  width: 100%;
   text-align: left;
 }
 
@@ -40,15 +42,14 @@
 
 .sec-architect__title {
   font-family: var(--font-brand);
-  font-size: 54px;
+  font-size: 44px;
   font-weight: 700;
-  line-height: 54px; /* 100% */
-  color: #01103B;
+  line-height: 50px; /* 113.636% */
+  color: var(--Midnight-Navy, #01103B);
   text-transform: uppercase;
   letter-spacing: 0;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-style: normal;
   margin-bottom: 18px;
 }
 
@@ -109,23 +110,22 @@
   background-color: var(--color-primary-hover, #03258c);
 }
 
-/* Layer 2: Right Image inside 1170px Container (770px / 1440px = 53.47vw, Full Section Height) */
+/* Layer 2: Right Image inside 1170px Container (Starts at Col 5, extends to Col 11 - Spans 7 Cols) */
 .sec-architect__img {
-  position: absolute;
-  right: 0; /* Pinned to right edge of 1170px Container */
-  bottom: 0; /* Pinned to bottom of section */
-  width: 53.47vw; /* 770px / 1440px = 53.47vw fluid width */
-  max-width: 770px;
-  height: 100%; /* Full section height */
-  z-index: 2; /* Under text layer, above white bg */
-  pointer-events: none; /* Prevents image from blocking text interaction */
+  position: relative;
+  grid-column: 5 / span 7;
+  z-index: 2;
+  width: 100%;
+  max-width: 670px;
+  height: auto;
   object-fit: contain;
-  object-position: right bottom;
+  object-position: left top;
+  align-self: flex-start;
   opacity: 0;
-  transform: translateY(80px); /* 80px initial offset for slow cinematic rise */
+  transform: translateY(80px);
   transition:
-    opacity 4.5s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 4.5s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -200,17 +200,37 @@
 .sec-framework .container {
   position: relative;
   height: 100%;
-  display: flex;
-  justify-content: flex-end; /* Pushes text content block to RIGHT side */
-  align-items: center; /* Vertically center right text content */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-/* Layer 3: Right Text Content (Starts at Column 7 of 12-column Grid) */
+/* Layer 2: Left Image (Occupies 5 columns: Cols 1-5) */
+.sec-framework__img {
+  position: relative;
+  grid-column: 1 / span 5;
+  z-index: 2;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  align-self: center;
+  opacity: 0;
+  transform: translateY(80px);
+  transition:
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Layer 3: Right Text Content (Occupies 7 columns: Cols 6-12) */
 .sec-framework__content {
   position: relative;
   z-index: 3;
-  width: calc(50% - 15px); /* 6/12 columns starting at Column 7 */
-  max-width: none;
+  grid-column: 6 / span 7;
+  width: 100%;
   text-align: left;
 }
 
@@ -218,27 +238,25 @@
   font-family: var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 24px;
-  color: #011B7F;
+  line-height: 28px; /* 116.667% */
+  color: var(--Secondary-Deep-Blue, #011B7F);
   text-transform: uppercase;
   letter-spacing: 0;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-style: normal;
   margin-bottom: 12px;
 }
 
 .sec-framework__title {
   font-family: var(--font-brand);
-  font-size: 54px;
+  font-size: 44px;
   font-weight: 700;
-  line-height: 54px; /* 100% */
-  color: #01103B;
+  line-height: 50px; /* 113.636% */
+  color: var(--Midnight-Navy, #01103B);
   text-transform: uppercase;
   letter-spacing: 0;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-style: normal;
   margin-bottom: 18px;
 }
 
@@ -247,12 +265,11 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 28px; /* 116.667% */
-  color: #011B7F;
+  color: var(--Secondary-Deep-Blue, #011B7F);
   text-transform: uppercase;
   letter-spacing: 0;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-style: normal;
   margin-bottom: 24px;
 }
 
@@ -261,36 +278,14 @@
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
-  color: #01103B;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  color: var(--Midnight-Navy, #01103B);
+  font-feature-settings: 'liga' off, 'clig' off;
   margin-bottom: 22px;
 }
 
 .sec-framework__desc .phrase {
   display: block;
   white-space: nowrap;
-}
-
-/* Layer 2: Direct Image Grid Bleed (Anchored to Column 6 boundary, Bleeds out to Screen Left Edge) */
-.sec-framework__img {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: calc(50% - 15px);
-  max-width: 570px;
-  height: auto;
-  aspect-ratio: 570 / 525;
-  z-index: 2;
-  pointer-events: none;
-  object-fit: contain;
-  object-position: left center;
-  opacity: 0;
-  transform: translate(0, calc(-50% + 80px));
-  transition:
-    opacity 4.5s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 4.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -317,7 +312,7 @@
 
 .sec-framework.slide-animated .sec-framework__img {
   opacity: 1;
-  transform: translate(0, -50%);
+  transform: translateY(0);
 }
 
 /* Responsive Overrides for Section 3 */

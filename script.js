@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const return4icBtns = document.querySelectorAll(".btn-return-4ic");
   // Section Background Colors for Global Morphing
   const sectionColors = [
-    "#01103B", // Section 1 (0) - New Dark Blue
+    "#C5DAF3", // Section 1 (0) - Light Glow Blue (#C5DAF3)
     "#ffffff", // Section 2 (1) - White (Updated)
     "#ffffff", // Section 3 (2) - White
-    "#01103B", // Section 4 (3) - New Dark Blue
+    "#1F6CA0", // Section 4 (3) - New Dark Blue
     "#01103B", // Section 5 (4) - New Dark Blue
     "#01103B", // Section 6 (5) - New Dark Blue
     "#01103B", // Section 7 (6) - New Dark Blue
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Called when Swiper finishes initializing
       init: function () {
         updateActiveState(this.activeIndex);
-        
+
         // Wait for all assets (especially hero images) to fully load before triggering the entrance animation
         const startHeroAnimation = () => {
           if (this.slides && this.slides[this.activeIndex]) {
@@ -131,8 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. Active State Manager (Sync Navigation Dots, Navbar, and Header Theme)
   // --------------------------------------------------------------------------
   function updateActiveState(index) {
-    // Light Background Sections (Section 2 = index 1, Section 3 = index 2, Section 10 = index 9)
-    const isLightSection = [1, 2, 9].includes(index);
+    // Light Background Sections (Section 1 = index 0, Section 2 = index 1, Section 3 = index 2, Section 4 = index 3, Section 10 = index 9)
+    const isLightSection = [0, 1, 2, 3, 9].includes(index);
 
     if (isLightSection) {
       if (dotsNav) dotsNav.classList.add("light-indicator");

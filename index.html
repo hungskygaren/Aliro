@@ -27,12 +27,22 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Preload Hero Background Images for instant animation -->
-    <link rel="preload" href="assets/hero-bg-left.png" as="image" fetchpriority="high" />
-    <link rel="preload" href="assets/hero-bg-right.png" as="image" fetchpriority="high" />
+    <link
+      rel="preload"
+      href="assets/hero-bg-left.png"
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="assets/hero-bg-right.png"
+      as="image"
+      fetchpriority="high"
+    />
   </head>
   <body>
     <!-- Top Navigation Header (HTML Overlay) -->
-    <header class="navbar-overlay" id="mainHeader">
+    <header class="navbar-overlay light-theme" id="mainHeader">
       <div class="navbar-container">
         <!-- Logo -->
         <a
@@ -144,8 +154,6 @@
           <div class="sec-hero__cliff sec-hero__cliff--left"></div>
           <div class="sec-hero__cliff sec-hero__cliff--right"></div>
 
-
-
           <!-- Hero Main Content Container (Centered 1170px) -->
           <div class="container">
             <div class="sec-hero__content d-flex flex-col items-center">
@@ -228,7 +236,9 @@
                 <span class="phrase">Aliro is not a solution vendor.</span>
                 <span class="phrase">We are architects of transformation.</span>
               </div>
-              <a href="#section-3" class="sec-architect__btn phrase">Discover Our Approach</a>
+              <a href="#section-3" class="sec-architect__btn phrase"
+                >Discover Our Approach</a
+              >
             </div>
 
             <!-- Right Column: Isometric Visual Graphic (53.47vw / 770px) -->
@@ -260,10 +270,8 @@
               </p>
 
               <h2 class="sec-framework__title">
-                <span class="phrase">Healthcare</span><br />
-                <span class="phrase">transformation</span><br />
-                <span class="phrase">is not built</span><br />
-                <span class="phrase">by chance.</span>
+                <span class="phrase">HEALTHCARE TRANSFORMATION</span><br />
+                <span class="phrase">IS NOT BUILT BY CHANCE.</span>
               </h2>
 
               <p class="sec-framework__sub-bottom">
@@ -278,7 +286,9 @@
                   >built on four co-equal dimensions of intelligence.</span
                 >
               </div>
-              <a href="#section-4" class="sec-framework__btn phrase">Explore The 4iC.</a>
+              <a href="#section-4" class="sec-framework__btn phrase"
+                >Explore The 4iC.</a
+              >
             </div>
           </div>
         </section>
@@ -290,17 +300,17 @@
           data-section-index="3"
         >
           <div class="container relative flex-center">
-            <div class="sec-continuum__orbit-wrap">
-              <!-- Top Text (Above Orbit Ring) -->
-              <div class="sec-continuum__top-text">
-                <p class="sec-continuum__tag">
-                  <span class="phrase">OUR METHOD</span>
-                </p>
-                <h2 class="sec-continuum__title">
-                  <span class="phrase">THE<br />4-INTELLIGENCES<br />CONTINUUM – 4iC</span>
-                </h2>
-              </div>
+            <!-- Top Text Block (Above and Outside Orbit system) -->
+            <div class="sec-continuum__top-text">
+              <p class="sec-continuum__tag">
+                <span class="phrase">OUR TRANSFORMATION ARCHITECTURE</span>
+              </p>
+              <h2 class="sec-continuum__title">
+                <span class="phrase">THE FOUR INTELLIGENCES CONTINUUM – 4iC</span>
+              </h2>
+            </div>
 
+            <div class="sec-continuum__orbit-wrap">
               <!-- Central Concept Image sec-4-center.png -->
               <img
                 src="assets/sec-4-center.png"
@@ -308,53 +318,194 @@
                 class="sec-continuum__center-img"
               />
 
+              <!-- Center Text inside Orbit Ring -->
+              <div class="sec-continuum__center-text">
+                <span class="phrase"
+                  >FOUR INTELLIGENCES<br />ONE integrated<br />TRANSFORMATION ARCHITECTURE.</span
+                >
+              </div>
+
               <!-- Outer Orbit SVG Ring with Arrows -->
-              <svg class="sec-continuum__orbit-ring" width="504" height="504" viewBox="0 0 504 504" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.4302 242.664C17.2169 117.401 119.21 15.894 246.254 12.8343" stroke="#4F8F9D" stroke-width="3" stroke-miterlimit="10"/>
-                <path d="M242.664 491.57C117.401 486.783 15.8942 384.79 12.8345 257.746" stroke="#4F8F9D" stroke-width="3" stroke-miterlimit="10"/>
-                <path d="M491.57 261.336C486.783 386.599 384.79 488.106 257.746 491.23" stroke="#4F8F9D" stroke-width="3" stroke-miterlimit="10"/>
-                <path d="M261.336 12.4302C386.599 17.2169 488.106 119.21 491.166 246.19" stroke="#4F8F9D" stroke-width="3" stroke-miterlimit="10"/>
-                <path d="M247.101 4L256.557 12.8811L247.676 22.2733" stroke="#4F8F9D" stroke-width="3" stroke-miterlimit="10"/>
-                <path d="M256.963 481.727L248.146 491.183L257.538 500" stroke="#4F8F9D" stroke-width="3" stroke-miterlimit="10"/>
-                <path d="M500 246.462L491.183 255.918L481.727 247.037" stroke="#4F8F9D" stroke-width="3" stroke-miterlimit="10"/>
-                <path d="M22.2733 256.324L12.8811 247.507L4 256.899" stroke="#4F8F9D" stroke-width="3" stroke-miterlimit="10"/>
+              <svg
+                class="sec-continuum__orbit-ring"
+                width="440"
+                height="440"
+                viewBox="0 0 504 504"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.4302 242.664C17.2169 117.401 119.21 15.894 246.254 12.8343"
+                  stroke="#C5DAF3"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M242.664 491.57C117.401 486.783 15.8942 384.79 12.8345 257.746"
+                  stroke="#C5DAF3"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M491.57 261.336C486.783 386.599 384.79 488.106 257.746 491.23"
+                  stroke="#C5DAF3"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M261.336 12.4302C386.599 17.2169 488.106 119.21 491.166 246.19"
+                  stroke="#C5DAF3"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M247.101 4L256.557 12.8811L247.676 22.2733"
+                  stroke="#C5DAF3"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M256.963 481.727L248.146 491.183L257.538 500"
+                  stroke="#C5DAF3"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M500 246.462L491.183 255.918L481.727 247.037"
+                  stroke="#C5DAF3"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M22.2733 256.324L12.8811 247.507L4 256.899"
+                  stroke="#C5DAF3"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                />
               </svg>
 
               <!-- Connector Lines Overlay -->
-              <svg class="sec-continuum__connector-svg" width="780" height="570" viewBox="0 0 780 570" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                class="sec-continuum__connector-svg"
+                width="440"
+                height="440"
+                viewBox="0 0 440 440"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <defs>
-                  <linearGradient id="grad-top-left" x1="254.5" y1="163.4" x2="355" y2="253.6" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#68BFD2" stop-opacity="1"/>
-                    <stop offset="100%" stop-color="#68BFD2" stop-opacity="0"/>
+                  <linearGradient
+                    id="grad-top-left"
+                    x1="98.3"
+                    y1="99.1"
+                    x2="202"
+                    y2="160"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="#C5DAF3" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#C5DAF3" stop-opacity="0" />
                   </linearGradient>
-                  <linearGradient id="grad-top-right" x1="525.5" y1="163.4" x2="425" y2="253.6" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#68BFD2" stop-opacity="1"/>
-                    <stop offset="100%" stop-color="#68BFD2" stop-opacity="0"/>
+                  <linearGradient
+                    id="grad-top-right"
+                    x1="342.7"
+                    y1="98.0"
+                    x2="238"
+                    y2="160"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="#C5DAF3" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#C5DAF3" stop-opacity="0" />
                   </linearGradient>
-                  <linearGradient id="grad-bottom-right" x1="525.5" y1="406.6" x2="425" y2="316.4" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#68BFD2" stop-opacity="1"/>
-                    <stop offset="100%" stop-color="#68BFD2" stop-opacity="0"/>
+                  <linearGradient
+                    id="grad-bottom-right"
+                    x1="344.0"
+                    y1="344.6"
+                    x2="238"
+                    y2="280"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="#C5DAF3" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#C5DAF3" stop-opacity="0" />
                   </linearGradient>
-                  <linearGradient id="grad-bottom-left" x1="254.5" y1="406.6" x2="355" y2="316.4" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#68BFD2" stop-opacity="1"/>
-                    <stop offset="100%" stop-color="#68BFD2" stop-opacity="0"/>
+                  <linearGradient
+                    id="grad-bottom-left"
+                    x1="98.5"
+                    y1="345.2"
+                    x2="202"
+                    y2="280"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="#C5DAF3" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#C5DAF3" stop-opacity="0" />
                   </linearGradient>
                 </defs>
-                <line class="line-top-left" x1="254.5" y1="163.4" x2="355" y2="253.6" stroke="url(#grad-top-left)" stroke-width="2"/>
-                <line class="line-top-right" x1="525.5" y1="163.4" x2="425" y2="253.6" stroke="url(#grad-top-right)" stroke-width="2"/>
-                <line class="line-bottom-right" x1="525.5" y1="406.6" x2="425" y2="316.4" stroke="url(#grad-bottom-right)" stroke-width="2"/>
-                <line class="line-bottom-left" x1="254.5" y1="406.6" x2="355" y2="316.4" stroke="url(#grad-bottom-left)" stroke-width="2"/>
-                
-                <circle class="dot-top-left" cx="254.5" cy="163.4" r="5" fill="#68BFD2"/>
-                <circle class="dot-top-right" cx="525.5" cy="163.4" r="5" fill="#68BFD2"/>
-                <circle class="dot-bottom-right" cx="525.5" cy="406.6" r="5" fill="#68BFD2"/>
-                <circle class="dot-bottom-left" cx="254.5" cy="406.6" r="5" fill="#68BFD2"/>
+                <line
+                  class="line-top-left"
+                  x1="98.3"
+                  y1="99.1"
+                  x2="202"
+                  y2="160"
+                  stroke="url(#grad-top-left)"
+                  stroke-width="2"
+                />
+                <line
+                  class="line-top-right"
+                  x1="342.7"
+                  y1="98.0"
+                  x2="238"
+                  y2="160"
+                  stroke="url(#grad-top-right)"
+                  stroke-width="2"
+                />
+                <line
+                  class="line-bottom-right"
+                  x1="344.0"
+                  y1="344.6"
+                  x2="238"
+                  y2="280"
+                  stroke="url(#grad-bottom-right)"
+                  stroke-width="2"
+                />
+                <line
+                  class="line-bottom-left"
+                  x1="98.5"
+                  y1="345.2"
+                  x2="202"
+                  y2="280"
+                  stroke="url(#grad-bottom-left)"
+                  stroke-width="2"
+                />
+
+                <circle
+                  class="dot-top-left"
+                  cx="98.3"
+                  cy="99.1"
+                  r="5"
+                  fill="#C5DAF3"
+                />
+                <circle
+                  class="dot-top-right"
+                  cx="342.7"
+                  cy="98.0"
+                  r="5"
+                  fill="#C5DAF3"
+                />
+                <circle
+                  class="dot-bottom-right"
+                  cx="344.0"
+                  cy="344.6"
+                  r="5"
+                  fill="#C5DAF3"
+                />
+                <circle
+                  class="dot-bottom-left"
+                  cx="98.5"
+                  cy="345.2"
+                  r="5"
+                  fill="#C5DAF3"
+                />
               </svg>
 
-              <!-- Bottom Text (Below Orbit Ring) -->
-              <div class="sec-continuum__bottom-text">
-                <span class="phrase">FOUR INTELLIGENCES.<br />ONE TRANSFORMATION<br />ARCHITECTURE.</span>
-              </div>
 
               <!-- Node 01 (Top-Left): Market Intelligence -->
               <div
@@ -366,8 +517,14 @@
                   <h3 class="phrase node-title">MARKET<br />INTELLIGENCE</h3>
                   <p class="phrase node-sub">Understand Reality</p>
                 </div>
-                <button class="node-circle-btn" aria-label="Go to Market Intelligence">
-                  <img src="./assets/icon-market-intelligence.svg" alt="Market Intelligence" style="width: 137px; height: 81px;" />
+                <button
+                  class="node-circle-btn"
+                  aria-label="Go to Market Intelligence"
+                >
+                  <img
+                    src="./assets/icon-market-intelligence.svg"
+                    alt="Market Intelligence"
+                  />
                 </button>
               </div>
 
@@ -376,8 +533,14 @@
                 class="sec-continuum__node node-top-right"
                 data-slide-target="5"
               >
-                <button class="node-circle-btn" aria-label="Go to Operational Intelligence">
-                  <img src="./assets/icon-operational-intelligence.svg" alt="Operational Intelligence" style="width: 141px; height: 90px;" />
+                <button
+                  class="node-circle-btn"
+                  aria-label="Go to Operational Intelligence"
+                >
+                  <img
+                    src="./assets/icon-operational-intelligence.svg"
+                    alt="Operational Intelligence"
+                  />
                 </button>
                 <div class="node-text text-left">
                   <span class="phrase node-num">02</span>
@@ -393,8 +556,14 @@
                 class="sec-continuum__node node-bottom-right"
                 data-slide-target="6"
               >
-                <button class="node-circle-btn" aria-label="Go to Digital Intelligence">
-                  <img src="./assets/icon-digital-intelligence.svg" alt="Digital Intelligence" style="width: 142px; height: 139px;" />
+                <button
+                  class="node-circle-btn"
+                  aria-label="Go to Digital Intelligence"
+                >
+                  <img
+                    src="./assets/icon-digital-intelligence.svg"
+                    alt="Digital Intelligence"
+                  />
                 </button>
                 <div class="node-text text-left">
                   <span class="phrase node-num">03</span>
@@ -415,14 +584,18 @@
                   </h3>
                   <p class="phrase node-sub">Sustain Change</p>
                 </div>
-                <button class="node-circle-btn" aria-label="Go to Capacity & Capability Intelligence">
-                  <img src="./assets/icon-capacity&amp;capability.svg" alt="Capacity &amp; Capability Intelligence" style="width: 142px; height: 199px;" />
+                <button
+                  class="node-circle-btn"
+                  aria-label="Go to Capacity & Capability Intelligence"
+                >
+                  <img
+                    src="./assets/icon-capacity&amp;capability.svg"
+                    alt="Capacity &amp; Capability Intelligence"
+                  />
                 </button>
               </div>
             </div>
 
-            <!-- Bottom Vertical Line Connector -->
-            <div class="sec-continuum__connector-line"></div>
           </div>
         </section>
 
@@ -433,18 +606,31 @@
           data-section-index="4"
         >
           <div class="container">
-            <div class="sec-5__line"></div>
-            <div class="sec-5__dot"></div>
-            <div class="sec-5__h-line"></div>
-            <button class="btn-return-4ic" data-slide-target="3" aria-label="Return to 4IC">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <button
+              class="btn-return-4ic"
+              data-slide-target="3"
+              aria-label="Return to 4IC"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
                 <g clip-path="url(#clip0_4261_3627)">
-                  <path d="M6 17.5898L7.41 18.9998L12 14.4198L16.59 18.9998L18 17.5898L12 11.5898L6 17.5898Z" fill="currentColor"/>
-                  <path d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z" fill="currentColor"/>
+                  <path
+                    d="M6 17.5898L7.41 18.9998L12 14.4198L16.59 18.9998L18 17.5898L12 11.5898L6 17.5898Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z"
+                    fill="currentColor"
+                  />
                 </g>
                 <defs>
                   <clipPath id="clip0_4261_3627">
-                    <rect width="24" height="24" fill="white"/>
+                    <rect width="24" height="24" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -463,13 +649,19 @@
             <!-- Bottom Block (Below Horizontal Line: Description) -->
             <div class="sec-5__bottom-block">
               <p class="sec-5__desc">
-                <span class="phrase">Regulatory environments, demographic trends, competitive dynamics, and investment flows. Without this pillar, strategy is built on assumptions.</span>
+                <span class="phrase"
+                  >Regulatory environments, demographic trends, competitive
+                  dynamics, and investment flows. Without this pillar, strategy
+                  is built on assumptions.</span
+                >
               </p>
               <p class="sec-5__sub-desc">
                 <span class="phrase">SEE THE MARKET AS IT REALLY IS.</span>
               </p>
               <div class="sec-5__btn-wrapper">
-                <a href="#section-6" class="sec-5__btn">Explore Market Intelligence</a>
+                <a href="#section-6" class="sec-5__btn"
+                  >Explore Market Intelligence</a
+                >
               </div>
             </div>
 
@@ -488,18 +680,31 @@
           data-section-index="5"
         >
           <div class="container">
-            <div class="sec-6__line"></div>
-            <div class="sec-6__dot"></div>
-            <div class="sec-6__h-line"></div>
-            <button class="btn-return-4ic" data-slide-target="3" aria-label="Return to 4IC">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <button
+              class="btn-return-4ic"
+              data-slide-target="3"
+              aria-label="Return to 4IC"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
                 <g clip-path="url(#clip0_4261_3627)">
-                  <path d="M6 17.5898L7.41 18.9998L12 14.4198L16.59 18.9998L18 17.5898L12 11.5898L6 17.5898Z" fill="currentColor"/>
-                  <path d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z" fill="currentColor"/>
+                  <path
+                    d="M6 17.5898L7.41 18.9998L12 14.4198L16.59 18.9998L18 17.5898L12 11.5898L6 17.5898Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z"
+                    fill="currentColor"
+                  />
                 </g>
                 <defs>
                   <clipPath id="clip0_4261_3627">
-                    <rect width="24" height="24" fill="white"/>
+                    <rect width="24" height="24" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -518,13 +723,21 @@
             <!-- Bottom Block (Below Horizontal Line: Description) -->
             <div class="sec-6__bottom-block">
               <p class="sec-6__desc">
-                <span class="phrase">Governance structures, operational systems, and institutional culture required to sustain growth. Without this pillar, ambition becomes a structural constraint.</span>
+                <span class="phrase"
+                  >Governance structures, operational systems, and institutional
+                  culture required to sustain growth. Without this pillar,
+                  ambition becomes a structural constraint.</span
+                >
               </p>
               <p class="sec-6__sub-desc">
-                <span class="phrase">DESIGN OPERATIONS THAT DELIVER RESULTS.</span>
+                <span class="phrase"
+                  >DESIGN OPERATIONS THAT DELIVER RESULTS.</span
+                >
               </p>
               <div class="sec-6__btn-wrapper">
-                <a href="#section-7" class="sec-6__btn">Explore Operational Intelligence</a>
+                <a href="#section-7" class="sec-6__btn"
+                  >Explore Operational Intelligence</a
+                >
               </div>
             </div>
 
@@ -543,18 +756,31 @@
           data-section-index="6"
         >
           <div class="container">
-            <div class="sec-7__line"></div>
-            <div class="sec-7__dot"></div>
-            <div class="sec-7__h-line"></div>
-            <button class="btn-return-4ic" data-slide-target="3" aria-label="Return to 4IC">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <button
+              class="btn-return-4ic"
+              data-slide-target="3"
+              aria-label="Return to 4IC"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
                 <g clip-path="url(#clip0_4261_3627)">
-                  <path d="M6 17.5898L7.41 18.9998L12 14.4198L16.59 18.9998L18 17.5898L12 11.5898L6 17.5898Z" fill="currentColor"/>
-                  <path d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z" fill="currentColor"/>
+                  <path
+                    d="M6 17.5898L7.41 18.9998L12 14.4198L16.59 18.9998L18 17.5898L12 11.5898L6 17.5898Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z"
+                    fill="currentColor"
+                  />
                 </g>
                 <defs>
                   <clipPath id="clip0_4261_3627">
-                    <rect width="24" height="24" fill="white"/>
+                    <rect width="24" height="24" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -573,13 +799,21 @@
             <!-- Bottom Block (Below Horizontal Line: Description) -->
             <div class="sec-7__bottom-block">
               <p class="sec-7__desc">
-                <span class="phrase">Digital infrastructure that serves operational performance and clinical reality. Technology deployed ahead of readiness creates fragility, not capability.</span>
+                <span class="phrase"
+                  >Digital infrastructure that serves operational performance
+                  and clinical reality. Technology deployed ahead of readiness
+                  creates fragility, not capability.</span
+                >
               </p>
               <p class="sec-7__sub-desc">
-                <span class="phrase">ENABLE INTELLIGENCE. DRIVE INNOVATION.</span>
+                <span class="phrase"
+                  >ENABLE INTELLIGENCE. DRIVE INNOVATION.</span
+                >
               </p>
               <div class="sec-7__btn-wrapper">
-                <a href="#section-8" class="sec-7__btn">Explore Digital Intelligence</a>
+                <a href="#section-8" class="sec-7__btn"
+                  >Explore Digital Intelligence</a
+                >
               </div>
             </div>
 
@@ -599,18 +833,31 @@
           data-section-index="7"
         >
           <div class="container">
-            <div class="sec-8__line"></div>
-            <div class="sec-8__dot"></div>
-            <div class="sec-8__h-line"></div>
-            <button class="btn-return-4ic" data-slide-target="3" aria-label="Return to 4IC">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <button
+              class="btn-return-4ic"
+              data-slide-target="3"
+              aria-label="Return to 4IC"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
                 <g clip-path="url(#clip0_4261_3627)">
-                  <path d="M6 17.5898L7.41 18.9998L12 14.4198L16.59 18.9998L18 17.5898L12 11.5898L6 17.5898Z" fill="currentColor"/>
-                  <path d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z" fill="currentColor"/>
+                  <path
+                    d="M6 17.5898L7.41 18.9998L12 14.4198L16.59 18.9998L18 17.5898L12 11.5898L6 17.5898Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M6 11L7.41 12.41L12 7.83L16.59 12.41L18 11L12 5L6 11Z"
+                    fill="currentColor"
+                  />
                 </g>
                 <defs>
                   <clipPath id="clip0_4261_3627">
-                    <rect width="24" height="24" fill="white"/>
+                    <rect width="24" height="24" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -630,13 +877,19 @@
             <!-- Bottom Block (Below Horizontal Line: Description) -->
             <div class="sec-8__bottom-block">
               <p class="sec-8__desc">
-                <span class="phrase">Leadership alignment, workforce skills, and institutional culture required to sustain transformation. The human infrastructure without which everything else stalls.</span>
+                <span class="phrase"
+                  >Leadership alignment, workforce skills, and institutional
+                  culture required to sustain transformation. The human
+                  infrastructure without which everything else stalls.</span
+                >
               </p>
               <p class="sec-8__sub-desc">
                 <span class="phrase">BUILD CAPABILITY. SUSTAIN CHANGE.</span>
               </p>
               <div class="sec-8__btn-wrapper">
-                <a href="#section-9" class="sec-8__btn">Explore Capacity & Capability Intelligence</a>
+                <a href="#section-9" class="sec-8__btn"
+                  >Explore Capacity & Capability Intelligence</a
+                >
               </div>
             </div>
 
@@ -662,13 +915,22 @@
                   <span class="phrase">THE COMPLETED ARCHITECTURE</span>
                 </div>
                 <h2 class="sec-9__title">
-                  <span class="phrase">When the four Intelligence dimensions are aligned and integrated, transformation becomes sustainable, scalable and measurable.</span>
+                  <span class="phrase"
+                    >When the four Intelligence dimensions are aligned and
+                    integrated, transformation becomes sustainable, scalable and
+                    measurable.</span
+                  >
                 </h2>
                 <p class="sec-9__desc">
-                  <span class="phrase">This is transformation that holds. This is the Aliro difference.</span>
+                  <span class="phrase"
+                    >This is transformation that holds. This is the Aliro
+                    difference.</span
+                  >
                 </p>
                 <div class="sec-9__btn-wrapper">
-                  <a href="#section-10" class="sec-9__btn">Start a Conversation</a>
+                  <a href="#section-10" class="sec-9__btn"
+                    >Start a Conversation</a
+                  >
                 </div>
               </div>
 
@@ -695,17 +957,26 @@
               <!-- Left Column: Messages, Email & CTA Button -->
               <div class="sec-10__left col-start-1 col-span-6">
                 <div class="sec-10__tag phrase">THE COMPLETED ARCHITECTURE</div>
-                <h2 class="sec-10__title phrase">Every transformation begins with one conversation.</h2>
+                <h2 class="sec-10__title phrase">
+                  Every transformation begins with one conversation.
+                </h2>
                 <div class="sec-10__desc">
                   <p class="phrase">
-                    Better outcomes. Stronger organisations. Healthier communities.
+                    Better outcomes. Stronger organisations. Healthier
+                    communities.
                   </p>
                 </div>
-                <a href="mailto:info@aliroconsulting.com" class="sec-10__email phrase">
+                <a
+                  href="mailto:info@aliroconsulting.com"
+                  class="sec-10__email phrase"
+                >
                   info@aliroconsulting.com
                 </a>
                 <div class="sec-10__btn-wrapper">
-                  <a href="mailto:info@aliroconsulting.com" class="btn btn-primary sec-10__btn phrase">
+                  <a
+                    href="mailto:info@aliroconsulting.com"
+                    class="btn btn-primary sec-10__btn phrase"
+                  >
                     Start a Conversation
                   </a>
                 </div>
@@ -724,7 +995,9 @@
                     <div class="sec-10__divider"></div>
                     <div class="sec-10__entity-item phrase">
                       <div class="sec-10__label">Viet Nam operations:</div>
-                      <div class="sec-10__company">Aliro Consulting Vietnam Co., Ltd.</div>
+                      <div class="sec-10__company">
+                        Aliro Consulting Vietnam Co., Ltd.
+                      </div>
                       <div class="sec-10__location">(Ho Chi Minh City)</div>
                     </div>
                   </div>
@@ -734,7 +1007,9 @@
 
             <!-- Bottom Copyright & Links -->
             <div class="sec-10__bottom phrase">
-              <div class="sec-10__copyright-text">© 2026 Aliro Consulting. All rights reserved.</div>
+              <div class="sec-10__copyright-text">
+                © 2026 Aliro Consulting. All rights reserved.
+              </div>
               <div class="sec-10__links">
                 <a href="#" class="sec-10__link">Privacy và Terms</a>
               </div>
