@@ -10,11 +10,12 @@
 }
 
 .sec-continuum .container {
-  height: 100%;
+  height: 100dvh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 27.08vh; /* 195px on 720px screen height (195 / 720 = 27.08%) */
+  align-items: center;
+  padding-top: 70px; /* Offset fixed header menu */
   box-sizing: border-box;
   position: relative;
 }
@@ -92,7 +93,7 @@
 .sec-continuum__top-text {
   position: absolute;
   left: 50%;
-  top: 99px;
+  top: 13.75dvh; /* Fluid percentage scaling: exactly 99px at 720px height (99 / 720 = 13.75%) */
   transform: translateX(-50%);
   text-align: center;
   z-index: 10;
@@ -595,6 +596,26 @@
 /* ==========================================================================
    Section 4 Responsive Scaling & Adjustments
    ========================================================================== */
+/* Height Breakpoints (Unitless float values for valid transform: scale()) */
+@media (max-height: 760px) {
+  .sec-continuum {
+    --orbit-scale: 0.82;
+  }
+}
+
+@media (max-height: 660px) {
+  .sec-continuum {
+    --orbit-scale: 0.8;
+  }
+}
+
+@media (max-height: 580px) {
+  .sec-continuum {
+    --orbit-scale: 0.6;
+  }
+}
+
+/* Width Breakpoints */
 @media (max-width: 768px) {
   .sec-continuum {
     --orbit-scale: 0.65;
@@ -608,3 +629,4 @@
     --connector-offset: 119px;
   }
 }
+

@@ -56,6 +56,7 @@
   margin-right: auto;
   text-align: center;
   padding-top: 0;
+  padding-bottom: 75px; /* Safe buffer zone to prevent overlap with bottom 3% scroll-down button */
   margin-top: auto;
   margin-bottom: auto;
   opacity: 0;
