@@ -19,9 +19,7 @@
   background-color: #1F6CA0;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sec-5,
 .sec-6,
-.sec-7,
 .sec-8 {
   background-color: #01103b;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
@@ -31,8 +29,11 @@
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .sec-architect,
-.sec-framework {
-  background-color: #ffffff;
+.sec-framework,
+.sec-5,
+.sec-7,
+.sec-10 {
+  background-color: #ffffff !important;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .sec-9 {

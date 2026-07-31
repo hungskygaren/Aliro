@@ -4,18 +4,7 @@
 .sec-10 {
   position: relative;
   overflow: hidden;
-}
-
-.sec-10__decor-img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 52.15vw;
-  height: 95.28dvh;
-  object-fit: contain;
-  object-position: right bottom;
-  z-index: 1;
-  pointer-events: none;
+  background-color: #ffffff !important;
 }
 
 /* SECTION 10 CONTENT LAYOUT & TYPOGRAPHY (FIGMA NODE 4243:2522) */
@@ -24,12 +13,15 @@
   align-items: center;
   height: 100%;
   position: relative;
+  padding-top: 0;
+  padding-bottom: 60px; /* Leave space for bottom copyright footer */
 }
 
 .sec-10__grid {
   width: 100%;
   position: relative;
   z-index: 3;
+  align-items: center;
 }
 
 .sec-10__left {
@@ -48,7 +40,7 @@
   font-weight: 700;
   color: var(--Secondary-Deep-Blue, #011B7F);
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   line-height: 24px; /* 100% */
   font-feature-settings:
     "liga" off,
@@ -61,22 +53,43 @@
   font-weight: 700;
   line-height: normal;
   color: var(--Midnight-Navy, #01103B);
-  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
 }
 
-.sec-10__desc p {
+.sec-10__sub-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 700;
   line-height: normal;
   color: var(--Secondary-Deep-Blue, #011B7F);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-feature-settings:
     "liga" off,
     "clig" off;
+}
+
+.sec-10__desc {
+  margin-bottom: 16px;
+}
+
+.sec-10__desc p {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--Midnight-Navy, #01103B);
+  margin-bottom: 8px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-10__desc p:last-child {
+  margin-bottom: 0;
 }
 
 .sec-10__email {
@@ -86,7 +99,7 @@
   line-height: normal;
   color: var(--Secondary-Deep-Blue, #011B7F);
   display: inline-block;
-  margin: 0 0 32px 0;
+  margin: 0 0 24px 0;
   text-decoration: none;
   font-feature-settings:
     "liga" off,
@@ -124,12 +137,24 @@
 
 .sec-10__right {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .sec-10__card {
   position: relative;
-  background-color: #C5DAF3;              /* Soft-Blue background is visible from the start of card transition */
-  padding: 40px 35px;                     /* 35px left/right inset padding */
+  background-color: #01103B;              /* Dark Midnight Navy background visible from Figma */
+  padding: 36px 35px 36px 25px;           /* Figma 5701:764 exact padding specs */
+  width: 470px;
+  max-width: 100%;
+  height: 330px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   clip-path: inset(50% 0 50% 0);          /* Closed vertically */
   opacity: 0;                             /* Starts invisible */
@@ -143,7 +168,7 @@
   height: 1px;
   background-color: #7e93a8;
   opacity: 0;                             /* Initially 100% invisible! */
-  margin: 24px 0;
+  margin: 38px 0 34px 0;                  /* Figma y=323 to y=361 is 38px top, y=361 to y=395 is 34px bottom */
   width: 100%;
   transform: scaleX(0);                    /* 0px left point */
   transform-origin: left center;           /* Draws from left to right! */
@@ -162,14 +187,32 @@
   clip-path: inset(0 0 0 0);              /* Opens frame vertically up & down */
 }
 
+.sec-10__entity-item {
+  display: flex;
+  align-items: center;
+  gap: 23px;                              /* Figma 5701:764: 25px card left offset + 80px icon width + 23px gap = 128px text offset */
+}
+
+.sec-10__icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.sec-10__entity-info {
+  flex: 1;
+}
+
 .sec-10__label {
   display: block;
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 100%;
   letter-spacing: 0px;
-  color: #011B7F;
+  color: #C5DAF3;
+  text-transform: uppercase;
   margin-bottom: 6px;
   font-feature-settings:
     "liga" off,
@@ -179,10 +222,11 @@
 .sec-10__company {
   display: block;
   font-family: Aptos, var(--font-brand);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  color: #01103B;
-  line-height: 24px;
+  color: #ffffff;
+  line-height: 26px;
+  margin-bottom: 4px;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -192,8 +236,8 @@
   display: block;
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
-  font-weight: 700;
-  color: #01103B;
+  font-weight: 400;
+  color: #ffffff;
   line-height: 24px;
   font-feature-settings:
     "liga" off,
@@ -202,7 +246,7 @@
 
 .sec-10__bottom {
   position: absolute;
-  bottom: 40px;
+  bottom: 6.25dvh;
   left: 0;
   right: 0;
   display: flex;
@@ -213,9 +257,11 @@
 
 .sec-10__copyright-text {
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 18px;
+  font-style: normal;
   font-weight: 400;
-  color: #7e93a8;
+  line-height: normal;
+  color: var(--Mid-Blue-Gray, #7E93A8);
   font-feature-settings:
     "liga" off,
     "clig" off;

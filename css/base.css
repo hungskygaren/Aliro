@@ -128,6 +128,12 @@ body {
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
+.col-span-8 {
+  grid-column: span 8 / span 8;
+}
+.col-span-7 {
+  grid-column: span 7 / span 7;
+}
 .col-span-6 {
   grid-column: span 6 / span 6;
 }

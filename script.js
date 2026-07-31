@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "#ffffff", // Section 2 (1) - White (Updated)
     "#ffffff", // Section 3 (2) - White
     "#1F6CA0", // Section 4 (3) - New Dark Blue
-    "#01103B", // Section 5 (4) - New Dark Blue
+    "#ffffff", // Section 5 (4) - White
     "#01103B", // Section 6 (5) - New Dark Blue
     "#01103B", // Section 7 (6) - New Dark Blue
     "#01103B", // Section 8 (7) - New Dark Blue
@@ -28,11 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
     "#f7f9fc", // Section 10 (9) - Light Gray
   ];
 
-  // --------------------------------------------------------------------------
-  // 1. Swiper 11 Vertical Engine Initialization
-  // --------------------------------------------------------------------------
+  // Read initial slide index from URL Hash (#section-X), fallback to 0 (Section 1)
+  const initialSlideIndex = (() => {
+    if (window.location.hash) {
+      const match = window.location.hash.match(/#section-(\d+)/);
+      if (match && match[1]) {
+        const secIndex = parseInt(match[1], 10) - 1;
+        if (secIndex >= 0 && secIndex <= 9) return secIndex;
+      }
+    }
+    return 0; // Default: Section 1
+  })();
+
   const swiper = new Swiper(".main-swiper", {
     direction: "vertical",
+    initialSlide: initialSlideIndex,
     speed: 650,
     effect: "slide",
     autoHeight: false,
@@ -64,21 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           window.addEventListener("load", startHeroAnimation);
         }
-        // Inject morph overlay for every slide (Temporarily disabled)
-        /*
-        if (this.slides) {
-          this.slides.forEach((slide) => {
-            let overlay = document.createElement("div");
-            overlay.className = "morph-overlay";
-            slide.appendChild(overlay);
-          });
-        }
-        */
       },
 
       // Called as soon as a slide transition starts
       slideChange: function () {
         updateActiveState(this.activeIndex);
+
+        // Sync URL Hash without triggering page jump/reload
+        history.replaceState(null, "", `#section-${this.activeIndex + 1}`);
         if (this.slides) {
           const targetSlide = this.slides[this.activeIndex];
           const prevColor = sectionColors[this.previousIndex];
@@ -131,8 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. Active State Manager (Sync Navigation Dots, Navbar, and Header Theme)
   // --------------------------------------------------------------------------
   function updateActiveState(index) {
-    // Light Background Sections (Section 1 = index 0, Section 2 = index 1, Section 3 = index 2, Section 4 = index 3, Section 10 = index 9)
-    const isLightSection = [0, 1, 2, 3, 9].includes(index);
+    // Light Background Sections (Section 1 = 0, Section 2 = 1, Section 3 = 2, Section 4 = 3, Section 5 = 4, Section 10 = 9)
+    const isLightSection = [0, 1, 2, 3, 4, 9].includes(index);
 
     if (isLightSection) {
       if (dotsNav) dotsNav.classList.add("light-indicator");
@@ -157,20 +160,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 3. Navigation Helper (Native Hyper-Scroll)
-  // --------------------------------------------------------------------------
   function smartSlideTo(targetIndex) {
-    if (targetIndex < 0) return;
+    if (targetIndex < 0 || targetIndex >= swiper.slides.length) return;
 
-    // Native Swiper behavior: cuộn lướt qua mọi thứ trong 650ms
-    // Giữ code nhẹ nhàng, ổn định và tận dụng tối đa animation Play-Once.
-    swiper.slideTo(targetIndex, 650);
+    const currentIndex = swiper.activeIndex;
+    const distance = Math.abs(targetIndex - currentIndex);
+
+    if (distance <= 1) {
+      swiper.slideTo(targetIndex, 650);
+    } else if (distance === 2) {
+      swiper.slideTo(targetIndex, 650);
+    } else {
+      const nearTargetIndex =
+        targetIndex > currentIndex ? targetIndex - 1 : targetIndex + 1;
+
+      swiper.slideTo(nearTargetIndex, 0);
+      requestAnimationFrame(() => {
+        swiper.slideTo(targetIndex, 650);
+      });
+    }
   }
-
-  // --------------------------------------------------------------------------
-  // 4. Interactive Click Handlers
-  // --------------------------------------------------------------------------
 
   // Hero Scroll Down Button
   if (scrollDownBtn) {

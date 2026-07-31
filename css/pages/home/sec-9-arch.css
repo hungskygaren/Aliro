@@ -4,27 +4,7 @@
 .sec-9 {
   position: relative;
   overflow: hidden;
-}
-
-.sec-9::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../../assets/sec-9-bg.png");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.sec-9.slide-animated::before {
-  opacity: 1;
+  background-color: #01103b;
 }
 
 .sec-9 .flex-center-v {
@@ -59,20 +39,24 @@
 
 .sec-9__img {
   width: 100%;
+  max-width: 570px;
   height: auto;
-  aspect-ratio: 570 / 430;
+  max-height: 451px;
+  aspect-ratio: 570 / 451;
   object-fit: contain;
   display: block;
 }
 
 .sec-9__tag {
-  font-family: var(--font-brand);
-  font-size: 18px;
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-style: normal;
   font-weight: 700;
+  line-height: 24px;
   color: #C5DAF3;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 24px;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -85,18 +69,19 @@
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 1.25;
   letter-spacing: 0px;
   margin-bottom: 30px;
 }
 
 .sec-9__desc {
-  font-family: var(--font-brand);
+  font-family: Aptos, var(--font-brand);
   font-size: 18px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 1.4;
   color: #C5DAF3;
-  margin: 0 0 28px 0;
+  margin: 0 0 40px 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
