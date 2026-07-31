@@ -7,15 +7,16 @@
   background-color: #ffffff !important;
 }
 
-/* Background Decor Image (Bottom: 0, Right: 0, 870x720) */
+/* Background Decor Image (Bottom: 0, Right: 0, fills section height) */
 .sec-10__decor {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 870px;
-  height: 720px;
-  max-height: 100%;
-  object-fit: contain;
+  width: auto;
+  height: 100%;
+  max-width: 870px;
+  object-fit: cover;
+  object-position: left center;
   pointer-events: none;
   z-index: 1;
 }
@@ -127,9 +128,13 @@
 
 .sec-10__btn {
   display: inline-flex;
+  width: 205px;
+  height: 42px;
   padding: 10px 18px;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   background-color: #0431B1;
   color: #ffffff;
@@ -139,7 +144,9 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1;
+  letter-spacing: 0px;
+  white-space: nowrap;
   text-decoration: none;
   border-radius: 0;
   transition: background-color 0.3s ease;
@@ -271,7 +278,7 @@
 
 .sec-10__copyright-text {
   font-family: Aptos, var(--font-brand);
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
