@@ -134,15 +134,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. Active State Manager (Sync Navigation Dots, Navbar, and Header Theme)
   // --------------------------------------------------------------------------
   function updateActiveState(index) {
-    // Light Background Sections (Section 1 = 0, Section 2 = 1, Section 3 = 2, Section 4 = 3, Section 5 = 4, Section 10 = 9)
-    const isLightSection = [0, 1, 2, 3, 4, 9].includes(index);
+    // Sections 1, 2, 3, 5, 7, 10 (indices: 0, 1, 2, 4, 6, 9):
+    // - Header: Thanh menu MÀU TỐI (#01103B)
+    // - Dots Navigation: Dot MÀU TỐI (light-indicator)
+    const isDarkThemeGroup = [0, 1, 2, 4, 6, 9].includes(index);
 
-    if (isLightSection) {
-      if (dotsNav) dotsNav.classList.add("light-indicator");
-      if (mainHeader) mainHeader.classList.add("light-theme");
-    } else {
-      if (dotsNav) dotsNav.classList.remove("light-indicator");
+    if (isDarkThemeGroup) {
       if (mainHeader) mainHeader.classList.remove("light-theme");
+      if (dotsNav) dotsNav.classList.add("light-indicator");
+    } else {
+      if (mainHeader) mainHeader.classList.add("light-theme");
+      if (dotsNav) dotsNav.classList.remove("light-indicator");
     }
 
     // Update Side Dash Dots Active State

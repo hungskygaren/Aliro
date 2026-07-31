@@ -7,14 +7,28 @@
   background-color: #ffffff !important;
 }
 
+/* Background Decor Image (Bottom: 0, Right: 0, 870x720) */
+.sec-10__decor {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 870px;
+  height: 720px;
+  max-height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* SECTION 10 CONTENT LAYOUT & TYPOGRAPHY (FIGMA NODE 4243:2522) */
 .sec-10 .flex-center-v {
   display: flex;
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 0;
+  padding-top: 80px; /* Safe minimum padding-top to prevent top navbar (70px) from covering "LET'S START" */
   padding-bottom: 60px; /* Leave space for bottom copyright footer */
+  box-sizing: border-box;
 }
 
 .sec-10__grid {
@@ -246,7 +260,7 @@
 
 .sec-10__bottom {
   position: absolute;
-  bottom: 6.25dvh;
+  bottom: 30px; /* Figma specs: 30px from bottom */
   left: 0;
   right: 0;
   display: flex;
@@ -267,20 +281,38 @@
     "clig" off;
 }
 
-.sec-10__link {
+.sec-10__legal-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sec-10__legal-separator {
+  display: inline-block;
+  width: 1px;
+  height: 24px;
+  background: #7E93A8;
+}
+
+.sec-10__legal-link {
   font-family: Aptos, var(--font-brand);
   font-size: 16px;
   font-weight: 700;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
   color: #0431B1;
-  text-decoration: underline;
+  text-decoration: none;
+  text-align: right;
   font-feature-settings:
     "liga" off,
     "clig" off;
   transition: color 0.3s ease;
 }
 
-.sec-10__link:hover {
-  color: #03258c;
+.sec-10__legal-link:hover {
+  color: #022384;
+  text-decoration: underline;
 }
 
 /* Section 10 Left Column Entrance Animation (Right-to-Left Slide In) */

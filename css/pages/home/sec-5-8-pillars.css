@@ -404,8 +404,9 @@
 .sec-8__content {
   position: absolute;
   top: 23.8889dvh;
-  right: 0;
-  width: calc(50% - 15px);
+  left: calc(50% + 15px); /* Starts at Column 7 */
+  right: auto;
+  width: calc(41.667% - 15px); /* Spans Columns 7-11 (5 columns total) */
   opacity: 0;
   transform: translateX(30px);
   z-index: 4;
@@ -636,8 +637,8 @@
   position: absolute;
   top: auto;
   left: auto;
-  right: 4.2361%; /* 61px / 1440px */
-  bottom: 5.5556%; /* 40px / 720px */
+  right: 4.2361vw; /* 61px / 1440px = 4.2361vw fluid scaling */
+  bottom: 5.5556dvh; /* 40px / 720px = 5.5556dvh fluid scaling */
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -661,7 +662,12 @@
     color 0.3s ease;
 }
 
+.btn-return-4ic span {
+  order: 1;
+}
+
 .btn-return-4ic svg {
+  order: 2;
   width: 24px;
   height: 24px;
   display: block;
