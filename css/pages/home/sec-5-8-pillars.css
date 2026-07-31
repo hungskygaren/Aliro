@@ -663,7 +663,7 @@
   padding: 0;
   cursor: pointer;
   z-index: 10;
-  color: #7e93a8;
+  color: #C5DAF3;
   font-family: var(--font-brand);
   font-weight: 700;
   font-size: 14px;
@@ -696,7 +696,7 @@
 
 .sec-5 .btn-return-4ic,
 .sec-7 .btn-return-4ic {
-  color: #5d748c;
+  color: #7E93A8;
 }
 
 .sec-5 .btn-return-4ic:hover,
