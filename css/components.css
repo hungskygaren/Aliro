@@ -135,11 +135,11 @@
 
 .navbar-overlay.light-theme .nav-item:hover,
 .navbar-overlay.light-theme .nav-item.active {
-  color: #01103B;
+  color: #0431B1;
 }
 
 .navbar-overlay.light-theme .nav-item.active::after {
-  background-color: #01103B;
+  background-color: #0431B1;
 }
 
 .navbar-overlay.light-theme .logo-img {

@@ -19,6 +19,7 @@
   align-items: center;
   position: relative;
   z-index: 3;
+  gap: 30px;
 }
 
 .sec-9__left,
@@ -53,7 +54,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  color: #C5DAF3;
+  color: #c5daf3;
   text-transform: uppercase;
   letter-spacing: 0px;
   margin-bottom: 30px;
@@ -63,8 +64,10 @@
 }
 
 .sec-9__title {
-  color: var(--White, #FFF);
-  font-feature-settings: 'liga' off, 'clig' off;
+  color: var(--White, #fff);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 32px;
   font-style: normal;
@@ -80,7 +83,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1;
-  color: #C5DAF3;
+  color: #c5daf3;
   margin: 0 0 40px 0;
   font-feature-settings:
     "liga" off,
@@ -96,15 +99,16 @@
   width: 205px;
   height: 42px;
   padding: 10px 18px;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
   box-sizing: border-box;
-  background-color: #0431B1;
-  color: var(--White, #FFF);
+  background-color: #0431b1;
+  color: var(--White, #fff);
   text-align: center;
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-style: normal;
