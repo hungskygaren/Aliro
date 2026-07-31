@@ -87,7 +87,7 @@
 .sec-architect__btn,
 .sec-framework__btn {
   display: inline-flex;
-  width: 221px;
+  width: fit-content;
   height: 32px;
   padding: 7px 16px 8px 16px;
   box-sizing: border-box;
