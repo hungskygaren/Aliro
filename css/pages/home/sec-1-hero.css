@@ -5,10 +5,11 @@
   position: relative;
   background-color: #C5DAF3 !important;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
+  padding-top: 70px; /* Deduct Header Height */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   box-sizing: border-box;
@@ -54,8 +55,9 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  /* Calculated Top Offset: Header 70px + 114px distance = 184px (Design height 720px => 25.555vh / 184px) */
-  padding-top: calc(70px + 114px);
+  padding-top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
   opacity: 0;
   transform: translateY(30px);
   transition:
@@ -208,3 +210,5 @@
 .sec-hero.visited .scroll-down-btn {
   transform: translateX(-50%) translateY(0) !important;
 }
+
+

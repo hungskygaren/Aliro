@@ -372,7 +372,7 @@
 
 .sec-framework.visited .sec-framework__img {
   opacity: 1 !important;
-  transform: translate(0, -50%) !important;
+  transform: translateY(0) !important;
   transition: none !important;
   animation: none !important;
 }

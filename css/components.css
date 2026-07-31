@@ -231,7 +231,7 @@
    -------------------------------------------------------------------------- */
 .scroll-down-btn {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
