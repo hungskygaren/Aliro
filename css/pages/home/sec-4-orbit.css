@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Section 4: The Four Intelligence Continuum 4IC
+   Section 4: The Four Intelligence Continuum 4iC
    ========================================================================== */
 .sec-continuum {
   position: relative;
   overflow: hidden;
-  background-color: #1F6CA0 !important;
+  background-color: #2c6ba8 !important;
   --orbit-scale: 1;
   --connector-offset: 255px;
 }
@@ -22,13 +22,16 @@
 
 /* Orbit & Grid Central Wrapper (440px x 440px Figma Standard) */
 .sec-continuum__orbit-wrap {
-  position: relative;
+  position: absolute;
+  top: 28.333dvh;
+  left: 50%;
   width: 440px;
   height: 440px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(var(--orbit-scale, 1));
+  transform: translateX(-50%) scale(var(--orbit-scale, 1));
+  transform-origin: top center;
 }
 
 /* 1. Central Concept Image (301px x 262px Figma Standard) */
@@ -83,7 +86,7 @@
 }
 
 .sec-continuum__orbit-ring path {
-  stroke: #C5DAF3 !important;
+  stroke: #c5daf3 !important;
   stroke-width: 3px !important;
   stroke-miterlimit: 10 !important;
   opacity: 1 !important;
@@ -105,12 +108,14 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
-  color: #ffffff !important;
-  opacity: 0.6 !important;
+  color: var(--White, #fff) !important;
+  opacity: 1 !important;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 8px;
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-style: normal;
 }
 
@@ -121,8 +126,10 @@
   line-height: 32px;
   color: #ffffff !important;
   text-align: center;
-  text-transform: uppercase;
-  font-feature-settings: 'liga' off, 'clig' off;
+  text-transform: none;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-style: normal;
 }
 
@@ -192,8 +199,8 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 1px solid var(--Light-Glow, #C5DAF3) !important;
-  background-color: var(--Bright-Blue, #1F6CA0) !important;
+  border: 1px solid var(--Light-Glow, #c5daf3) !important;
+  background-color: #2c6ba8 !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,78 +208,36 @@
   flex-shrink: 0;
   box-sizing: border-box;
   box-shadow: none !important;
-  filter: drop-shadow(0 0 20px rgba(123, 231, 255, 0.30)) !important;
+  filter: none !important;
   opacity: 0;
   /* Keep hover feedback independent from the staggered opacity reveal. */
   transition:
     opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
     border-color 0.3s ease,
     background-color 0.3s ease,
-    filter 0.3s ease;
+    box-shadow 0.3s ease;
 }
 
-/* Pure CSS Hover (Best Practice Luminous Glow & Subtle Scale) */
+/* Subtle Soft Glow Hover State */
 .sec-continuum__node:hover .node-circle-btn,
 .node-circle-btn:hover {
   border-color: #ffffff !important;
-  background-color: #2684c4 !important;
-  box-shadow: 0 0 25px rgba(197, 218, 243, 0.4), inset 0 0 12px rgba(255, 255, 255, 0.25) !important;
-  filter: drop-shadow(0 0 35px rgba(123, 231, 255, 0.75)) !important;
+  box-shadow: 0 0 16px rgba(197, 218, 243, 0.4) !important;
+  filter: none !important;
 }
 
-.sec-continuum__node:hover .node-circle-btn img,
-.node-circle-btn:hover img {
-  transform: translateY(-2px) scale(1.06) !important;
-}
+/* Node Circle Image inside Button */
 
 .node-circle-btn img {
   display: block;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   opacity: 0;
   transform: translateY(15px) scale(0.8);
   transition:
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.node-top-left .node-circle-btn img {
-  width: 118px !important;
-  height: 76px !important;
-  aspect-ratio: 59 / 38;
-  position: relative;
-}
-
-.node-top-right .node-circle-btn img {
-  width: 119px !important;
-  height: 79px !important;
-  aspect-ratio: 119 / 79;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  top: 24px;
-}
-
-.node-bottom-right .node-circle-btn img {
-  width: 118px !important;
-  height: 121px !important;
-  aspect-ratio: 118 / 121;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  bottom: 26px;
-}
-
-.node-bottom-left .node-circle-btn img {
-  width: 118px !important;
-  height: 157px !important;
-  aspect-ratio: 118 / 157;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  bottom: 26px;
 }
 
 /* Node Text Typography (Positioned Side-by-Side without skewing Circle Center) */
@@ -318,7 +283,9 @@
   color: #ffffff;
   opacity: 0.6 !important;
   text-transform: uppercase;
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-style: normal;
   display: block;
   margin-bottom: 2px;
@@ -332,19 +299,23 @@
   color: #ffffff;
   opacity: 1 !important;
   text-transform: uppercase;
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-style: normal;
   margin-bottom: 2px;
 }
 
 .node-sub {
   font-family: Aptos, var(--font-brand);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: normal;
-  color: #ffffff;
-  opacity: 0.6 !important;
-  font-feature-settings: 'liga' off, 'clig' off;
+  color: var(--White, #fff) !important;
+  opacity: 1 !important;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-style: normal;
 }
 
@@ -597,7 +568,7 @@
    Section 4 Responsive Scaling & Adjustments
    ========================================================================== */
 /* Height Breakpoints (Unitless float values for valid transform: scale()) */
-@media (max-height: 760px) {
+@media (max-height: 719px) {
   .sec-continuum {
     --orbit-scale: 0.82;
   }
@@ -629,4 +600,3 @@
     --connector-offset: 119px;
   }
 }
-

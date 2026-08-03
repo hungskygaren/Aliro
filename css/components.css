@@ -76,6 +76,7 @@
   color: #ffffff;
 }
 
+/*
 .nav-item.active::after {
   content: "";
   position: absolute;
@@ -87,6 +88,7 @@
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
   transition: background-color 0.4s ease;
 }
+*/
 
 /* CTA Conversation Button */
 .nav-actions {
@@ -138,9 +140,11 @@
   color: #0431B1;
 }
 
+/*
 .navbar-overlay.light-theme .nav-item.active::after {
   background-color: #0431B1;
 }
+*/
 
 .navbar-overlay.light-theme .logo-img {
   filter: brightness(0) saturate(100%) invert(18%) sepia(50%) saturate(1475%)
@@ -247,19 +251,21 @@
   gap: 8px;
   padding: 10px 16px;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  color: var(--Midnight-Navy, #01103B);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .scroll-down-text {
-  font-family: var(--font-brand);
+  font-family: Aptos, var(--font-brand);
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
-  color: var(--Mid-Blue-Gray, #7E93A8);
+  color: inherit;
   text-transform: uppercase;
   text-align: center;
   font-feature-settings: 'liga' off, 'clig' off;
-  transition: color 0.3s ease;
+  font-style: normal;
 }
 
 .scroll-down-icon {
@@ -267,12 +273,14 @@
   transition: transform 0.3s ease;
 }
 
-.scroll-down-btn:hover .scroll-down-text {
-  color: #ffffff;
+.scroll-down-icon path {
+  fill: currentColor;
+  transition: fill 0.3s ease;
 }
 
-.scroll-down-btn:hover .scroll-down-icon path {
-  fill: #ffffff;
+.scroll-down-btn:hover {
+  opacity: 1;
+  color: #ffffff;
 }
 
 @keyframes bounceDown {

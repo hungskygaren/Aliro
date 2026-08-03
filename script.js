@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Return to 4IC Button Click Handler (Sections 5, 6, 7, 8)
+  // Return to 4iC Button Click Handler (Sections 5, 6, 7, 8)
   return4icBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();

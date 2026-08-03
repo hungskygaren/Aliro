@@ -122,9 +122,9 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: normal;
   letter-spacing: 0px;
-  color: #01103B;
+  color: var(--Midnight-Navy, #01103B);
   margin: 0 0 20px 0;
   font-feature-settings:
     "liga" off,
@@ -132,7 +132,7 @@
 }
 
 .sec-5__sub-desc {
-  color: #011B7F;
+  color: var(--Secondary-Deep-Blue, #011B7F);
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: Aptos, var(--font-family);
   font-size: 18px;
@@ -150,7 +150,7 @@
 
 .sec-5__btn {
   display: inline-flex;
-  width: 221px;
+  width: fit-content;
   height: 32px;
   padding: 7px 16px 8px 16px;
   box-sizing: border-box;
@@ -248,9 +248,9 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: normal;
   letter-spacing: 0px;
-  color: #01103B;
+  color: var(--Midnight-Navy, #01103B);
   margin: 0 0 20px 0;
   font-feature-settings:
     "liga" off,
@@ -258,13 +258,14 @@
 }
 
 .sec-7__sub-desc {
-  color: #011B7F;
+  color: var(--Secondary-Deep-Blue, #011B7F);
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: Aptos, var(--font-family);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+  letter-spacing: 0px;
   text-transform: uppercase;
   margin: 0 0 30px 0;
 }
@@ -275,7 +276,7 @@
 
 .sec-7__btn {
   display: inline-flex;
-  width: 221px;
+  width: fit-content;
   height: 32px;
   padding: 7px 16px 8px 16px;
   box-sizing: border-box;
@@ -483,9 +484,9 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: normal;
   letter-spacing: 0px;
-  color: #C5DAF3;
+  color: var(--White, #FFF);
   margin: 0 0 20px 0;
   font-feature-settings:
     "liga" off,
@@ -493,7 +494,7 @@
 }
 
 .sec-6__sub-desc {
-  color: var(--Light-Glow, #C5DAF3);
+  color: var(--White, #FFF);
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: Aptos, var(--font-family);
   font-size: 18px;
@@ -510,7 +511,7 @@
 
 .sec-6__btn {
   display: inline-flex;
-  width: 221px;
+  width: fit-content;
   height: 32px;
   padding: 7px 16px 8px 16px;
   box-sizing: border-box;
@@ -541,9 +542,9 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: normal;
   letter-spacing: 0px;
-  color: #C5DAF3;
+  color: var(--White, #FFF);
   margin: 0 0 20px 0;
   font-feature-settings:
     "liga" off,
@@ -551,7 +552,7 @@
 }
 
 .sec-8__sub-desc {
-  color: var(--Light-Glow, #C5DAF3);
+  color: var(--White, #FFF);
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: Aptos, var(--font-family);
   font-size: 18px;
@@ -568,7 +569,7 @@
 
 .sec-8__btn {
   display: inline-flex;
-  width: 221px;
+  width: fit-content;
   height: 32px;
   padding: 7px 16px 8px 16px;
   box-sizing: border-box;
@@ -648,7 +649,7 @@
   transition: none !important;
 }
 
-/* --- RETURN TO 4IC BUTTON (Sections 5-8) --- */
+/* --- RETURN TO 4iC BUTTON (Sections 5-8) --- */
 .btn-return-4ic {
   position: absolute;
   top: auto;
@@ -669,7 +670,7 @@
   font-size: 14px;
   line-height: 1;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: none;
   opacity: 0;
   transform: translateY(-8px);
   transition:

@@ -15,30 +15,24 @@
   background-color: #c5daf3;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sec-continuum {
-  background-color: #1f6ca0;
-  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-}
+.sec-continuum,
 .sec-6,
-.sec-8 {
-  background-color: #1f6ca0;
+.sec-8,
+.sec-9 {
+  background-color: #2C6BA8;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sec-10 {
-  background-color: #f7f9fc;
-  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-}
+
 .sec-architect,
 .sec-framework,
 .sec-5,
-.sec-7,
-.sec-10 {
+.sec-7 {
   background-color: #ffffff !important;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.sec-9 {
-  background-color: #1f6ca0;
+
+.sec-10 {
+  background-color: #f7f9fc;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
