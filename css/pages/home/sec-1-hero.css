@@ -5,6 +5,7 @@
   position: relative;
   background-color: #C5DAF3 !important;
   width: 100vw;
+  height: 100vh;
   height: 100dvh;
   padding-top: 70px; /* Deduct Header Height */
   display: flex;

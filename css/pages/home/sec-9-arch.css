@@ -143,3 +143,97 @@
   transition: none !important;
   animation: none !important;
 }
+
+/* ==========================================================================
+   Section 9: The Completed Architecture Responsive Rules (<= 991px & <= 767px)
+   ========================================================================== */
+@media (max-width: 991px) {
+  .sec-9 .flex-center-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  .sec-9__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sec-9__left {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 3 !important;
+    width: 100% !important;
+    max-width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+  }
+
+  /* 3D Visual Graphic Anchored at Bottom Edge */
+  .sec-9__right {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    top: auto !important;
+    transform: translateX(-50%) translateY(100%) !important;
+    z-index: 1 !important;
+    width: 85% !important;
+    max-width: 300px !important;
+    opacity: 0 !important;
+    pointer-events: none;
+    transition:
+      opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .sec-9.slide-animated .sec-9__right,
+  .sec-9.visited .sec-9__right {
+    opacity: 0.35 !important;
+    transform: translateX(-50%) translateY(0) !important;
+    transition-delay: 0.25s !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .sec-9__tag {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+
+  .sec-9__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 14px;
+  }
+
+  .sec-9__desc {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .sec-9__btn {
+    width: fit-content;
+    padding: 8px 20px;
+    font-size: 15px;
+    margin-inline: auto;
+  }
+
+  .sec-9__img {
+    max-width: 280px !important;
+  }
+}

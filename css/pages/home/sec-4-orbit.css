@@ -592,17 +592,157 @@
   }
 }
 
-/* Width Breakpoints */
-@media (max-width: 768px) {
+/* ==========================================================================
+   Section 4 Orbit System Desktop-First Responsive Rules (<= 991px & <= 767px)
+   ========================================================================== */
+@media (max-width: 991px) {
   .sec-continuum {
-    --orbit-scale: 0.65;
-    --connector-offset: 168px;
+    --orbit-scale: 0.68;
+    --connector-offset: 175px;
+  }
+
+  .sec-continuum .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  .sec-continuum__top-text {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    white-space: normal !important;
+    width: 100%;
+    max-width: 90%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .sec-continuum__title {
+    white-space: normal !important;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .sec-continuum__tag {
+    font-size: 15px;
+    white-space: normal !important;
+  }
+
+  .sec-continuum__orbit-wrap {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: scale(var(--orbit-scale, 0.68)) !important;
+    transform-origin: center center !important;
+    margin-top: -30px !important;
+    margin-bottom: -30px !important;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .sec-continuum {
-    --orbit-scale: 0.45;
-    --connector-offset: 119px;
+    --orbit-scale: 0.63;
+    --connector-offset: 160px;
+  }
+
+  .sec-continuum .container {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  .sec-continuum__top-text {
+    max-width: 95%;
+    margin-bottom: 5px;
+  }
+
+  .sec-continuum__tag {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  .sec-continuum__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .sec-continuum__orbit-wrap {
+    transform: scale(var(--orbit-scale, 0.63)) !important;
+    margin-top: -35px !important;
+    margin-bottom: -35px !important;
+  }
+
+  /* Node absolute anchor preservation */
+  .sec-continuum__node {
+    position: absolute !important;
+    display: block !important;
+  }
+
+  /* Common node text base styling */
+  .sec-continuum__node .node-text {
+    position: absolute !important;
+    width: 115px !important;
+    white-space: normal !important;
+  }
+
+  /* 1. NODE 01 & 04 (Left Column): Right-aligned text starting at 50% center axis */
+  .node-top-left .node-text,
+  .node-bottom-left .node-text {
+    right: 50% !important;
+    left: auto !important;
+    transform: none !important;
+    text-align: right !important;
+    align-items: flex-end !important;
+  }
+
+  /* 2. NODE 02 & 03 (Right Column): Left-aligned text starting at 50% center axis */
+  .node-top-right .node-text,
+  .node-bottom-right .node-text {
+    left: 50% !important;
+    right: auto !important;
+    transform: none !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  /* 3. TOP NODES (01 & 02): Pulled 20px closer down to circle graphics */
+  .node-top-left .node-text,
+  .node-top-right .node-text {
+    bottom: calc(100% - 12px) !important;
+    top: auto !important;
+  }
+
+  /* 4. BOTTOM NODES (03 & 04): Pushed 30px further down from circle graphics */
+  .node-bottom-left .node-text,
+  .node-bottom-right .node-text {
+    top: calc(100% + 38px) !important;
+    bottom: auto !important;
+  }
+
+  /* Text Font Size Reductions */
+  .node-num {
+    font-size: 13px !important;
+    line-height: 15px !important;
+  }
+
+  .node-title {
+    font-size: 11px !important;
+    line-height: 13px !important;
+  }
+
+  .node-sub {
+    font-size: 10px !important;
+    line-height: 12px !important;
+  }
+
+  .sec-continuum__center-text {
+    font-size: 14px !important;
+    line-height: 18px !important;
   }
 }

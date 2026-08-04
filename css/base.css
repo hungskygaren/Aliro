@@ -65,6 +65,7 @@ body {
 .scroll-container {
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -80,6 +81,7 @@ body {
 .swiper-slide {
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   position: relative;
   display: flex;
   justify-content: center;

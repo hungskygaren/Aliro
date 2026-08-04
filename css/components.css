@@ -301,6 +301,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     background: rgba(1, 16, 59, 0.55);
     backdrop-filter: blur(3px);
     opacity: 0;

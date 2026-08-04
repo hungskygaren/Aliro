@@ -386,3 +386,153 @@
     transform: none !important;
   }
 }
+
+/* ==========================================================================
+   Section 2 Architect & Section 3 Framework Mobile Background Layer Rules (<= 991px & <= 767px)
+   ========================================================================== */
+.sec-architect__title .line-desktop,
+.sec-architect__sub-bottom .line-desktop,
+.sec-framework__title .line-desktop {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .sec-architect__title .line-desktop,
+  .sec-architect__sub-bottom .line-desktop,
+  .sec-framework__title .line-desktop {
+    display: inline;
+  }
+
+  /* Centered container for Section 2 & 3 */
+  .sec-architect .container,
+  .sec-framework .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    gap: 0;
+  }
+
+  /* Text content centered with z-index above background image */
+  .sec-architect__content,
+  .sec-framework__content {
+    position: relative;
+    z-index: 3 !important;
+    grid-column: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+  }
+
+  .sec-architect__title,
+  .sec-framework__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .sec-architect__sub-top,
+  .sec-architect__sub-bottom,
+  .sec-framework__sub-top,
+  .sec-framework__sub-bottom {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .sec-architect__btn,
+  .sec-framework__btn {
+    margin-inline: auto;
+  }
+
+  /* Isometric 3D image graphic mobile initial state: 100% height hidden below bottom edge */
+  .sec-architect__img,
+  .sec-framework__img {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    right: auto !important;
+    top: auto !important;
+    transform: translateX(-50%) translateY(100%) !important;
+    z-index: 1 !important;
+    grid-column: auto;
+    width: 85% !important;
+    max-width: 360px !important;
+    opacity: 0 !important;
+    pointer-events: none;
+    align-self: center;
+    transition:
+      opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  /* Active Slide & Visited State: Silky smooth glide up to translateY(0) at bottom */
+  .sec-architect.slide-animated .sec-architect__img,
+  .sec-framework.slide-animated .sec-framework__img,
+  .sec-architect.visited .sec-architect__img,
+  .sec-framework.visited .sec-framework__img {
+    opacity: 0.35 !important;
+    transform: translateX(-50%) translateY(0) !important;
+    transition-delay: 0.25s !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .sec-architect .container,
+  .sec-framework .container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .sec-architect__sub-top,
+  .sec-framework__sub-top {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  .sec-architect__title,
+  .sec-framework__title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .sec-architect__sub-bottom,
+  .sec-framework__sub-bottom {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 14px;
+  }
+
+  .sec-architect__desc,
+  .sec-framework__desc {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  .sec-architect__desc .phrase,
+  .sec-framework__desc .phrase {
+    white-space: normal;
+  }
+
+  .sec-architect__btn,
+  .sec-framework__btn {
+    margin-inline: auto;
+    padding: 8px 20px;
+    height: auto;
+    font-size: 15px;
+  }
+
+  .sec-architect__img,
+  .sec-framework__img {
+    max-width: 290px !important;
+    opacity: 0.35 !important;
+  }
+}
