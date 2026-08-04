@@ -107,6 +107,14 @@ body {
   }
 }
 
+/* Mobile container safe padding (8px) */
+@media (max-width: 767px) {
+  .container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;

@@ -238,4 +238,50 @@ document.addEventListener("DOMContentLoaded", () => {
       smartSlideTo(!isNaN(targetIndex) ? targetIndex : 3);
     });
   });
+
+  // --------------------------------------------------------------------------
+  // Mobile Off-Canvas Navigation Drawer Toggle Logic
+  // --------------------------------------------------------------------------
+  const hamburgerToggle = document.getElementById("hamburgerToggle");
+  const drawerClose = document.getElementById("drawerClose");
+  const navDrawer = document.getElementById("navDrawer");
+  const navBackdrop = document.getElementById("navBackdrop");
+
+  const openMobileMenu = () => {
+    if (navDrawer && navBackdrop) {
+      navDrawer.classList.add("is-active");
+      navBackdrop.classList.add("is-active");
+      document.body.classList.add("no-scroll");
+      if (hamburgerToggle) hamburgerToggle.setAttribute("aria-expanded", "true");
+    }
+  };
+
+  const closeMobileMenu = () => {
+    if (navDrawer && navBackdrop) {
+      navDrawer.classList.remove("is-active");
+      navBackdrop.classList.remove("is-active");
+      document.body.classList.remove("no-scroll");
+      if (hamburgerToggle) hamburgerToggle.setAttribute("aria-expanded", "false");
+    }
+  };
+
+  if (hamburgerToggle) {
+    hamburgerToggle.addEventListener("click", openMobileMenu);
+  }
+
+  if (drawerClose) {
+    drawerClose.addEventListener("click", closeMobileMenu);
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener("click", closeMobileMenu);
+  }
+
+  // Close drawer automatically when clicking any nav item or action button inside drawer
+  const drawerLinks = document.querySelectorAll(
+    ".nav-drawer .nav-item, .nav-drawer .btn-conversation"
+  );
+  drawerLinks.forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
 });
