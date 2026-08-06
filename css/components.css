@@ -321,78 +321,7 @@ body.no-scroll {
   overflow: hidden !important;
 }
 
-/* --------------------------------------------------------------------------
-   Side Section Progress Navigation (Figma Node 4205:1756 Original Dash Style)
-   -------------------------------------------------------------------------- */
-.dots-navigation {
-  position: fixed;
-  right: 4.24vw; /* 61px / 1440px = 4.24vw fluid right offset */
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  background: transparent;
-  padding: 0;
-  border: none;
-  box-shadow: none;
-}
 
-.dot-item {
-  position: relative;
-  width: 20px;
-  height: 2px;
-  border-radius: 0;
-  border: none;
-  background-color: #ffffff;
-  cursor: pointer;
-  padding: 8px 0;
-  background-clip: content-box;
-  box-sizing: content-box;
-  opacity: 0.35; /* Add default transparency for inactive dots */
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.dot-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -30px;
-  right: -20px;
-  cursor: pointer;
-}
-
-.dot-item:hover,
-.dot-item.active {
-  opacity: 1; /* Full opacity on interaction or when active */
-}
-
-.dot-item:hover {
-  width: 30px;
-}
-
-.dot-item.active {
-  width: 40px;
-  height: 2px;
-  border-radius: 0;
-  background-color: #ffffff;
-}
-
-/* Light Section Adaptation */
-.dots-navigation.light-indicator .dot-item {
-  background-color: #123e6b;
-}
-
-.dots-navigation.light-indicator .dot-item:hover {
-  background-color: #123e6b;
-}
-
-.dots-navigation.light-indicator .dot-item.active {
-  background-color: #123e6b;
-}
 
 /* --------------------------------------------------------------------------
    HTML & SVG Scroll Down Button (Section 1)

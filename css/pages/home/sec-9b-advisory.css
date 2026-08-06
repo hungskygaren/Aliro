@@ -1,0 +1,372 @@
+/* ==========================================================================
+   Section 9b: Three Advisory Pathways (How We Help)
+   ========================================================================== */
+.sec-9b {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  background-image: url("../../../assets/sec-9b.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sec-9b .container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sec-9b__wrapper {
+  width: 100%;
+  position: absolute;
+  top: 12.9167dvh; /* Exactly 93px at 720px height (93/720 = 12.9167%) */
+  bottom: 5.1389dvh; /* Exactly 37px at 720px height (37/720 = 5.1389%) */
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.sec-9b__header {
+  margin-bottom: 24px; /* cách dưới 24px mới đến danh sách card */
+}
+
+.sec-9b__tag {
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 116.667% */
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  margin-bottom: 10px; /* cách dưới 10px */
+}
+
+.sec-9b__title {
+  color: var(--Midnight-Navy, #01103b);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  margin-bottom: 10px; /* cách dưới 10px */
+}
+
+.sec-9b__desc {
+  color: var(--Midnight-Navy, #01103b);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+/* Cards Layout (3 Horizontal Rectangular Rows) */
+.sec-9b__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.sec-9b__card {
+  width: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #f7faff 100%);
+  border: 1px solid rgba(1, 27, 127, 0.12);
+  border-radius: 10px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(1, 16, 59, 0.04);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
+}
+
+.sec-9b__card-img-wrapper {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  margin-bottom: 0;
+  background: rgba(1, 27, 127, 0.05);
+  border-radius: 8px;
+  padding: 6px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.sec-9b__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.sec-9b__card:hover {
+  transform: translateX(6px);
+  border-color: rgba(4, 49, 177, 0.35);
+  box-shadow: 0 8px 24px rgba(1, 16, 59, 0.08);
+}
+
+.sec-9b__card:hover .sec-9b__card-img-wrapper {
+  background: rgba(4, 49, 177, 0.1);
+}
+
+.sec-9b__card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.sec-9b__card-title {
+  color: #01103b;
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin: 0 0 2px 0;
+}
+
+.sec-9b__card-desc {
+  color: rgba(1, 16, 59, 0.8);
+  font-family: Aptos, var(--font-brand);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0 0 4px 0;
+}
+
+.sec-9b__card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0431b1;
+  font-family: Aptos, var(--font-brand);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.sec-9b__card:hover .sec-9b__card-btn {
+  color: #011b7f;
+  gap: 12px;
+}
+
+/* Entrance Animations */
+.sec-9b .phrase {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-9b.slide-animated .phrase,
+.sec-9b.visited .phrase {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Tablet, Mobile & Low-Height Screens)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .sec-9b {
+    overflow-y: auto;
+  }
+
+  .sec-9b .container {
+    padding-top: 90px;
+    padding-bottom: 40px;
+    height: auto;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+
+  .sec-9b__wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .sec-9b__cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .sec-9b__card {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-9b {
+    overflow-y: auto;
+  }
+
+  .sec-9b .container {
+    padding-top: 100px; /* Safe top padding to clear 60px mobile header */
+    padding-bottom: 40px;
+    height: auto;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+
+  .sec-9b__wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .sec-9b__header {
+    margin-bottom: 18px;
+  }
+
+  .sec-9b__tag {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+
+  .sec-9b__title {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 6px;
+  }
+
+  .sec-9b__desc {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .sec-9b__cards {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 0;
+  }
+
+  .sec-9b__card {
+    width: 100%;
+    flex: 0 0 100%;
+    border-radius: 10px;
+    padding: 10px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sec-9b__card-img-wrapper {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    padding: 6px;
+    border-radius: 8px;
+  }
+
+  .sec-9b__card-title {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+
+  .sec-9b__card-desc {
+    display: none;
+  }
+
+  .sec-9b__card-btn {
+    width: 100%;
+    font-size: 13px;
+    border-top: 1px solid rgba(197, 218, 243, 0.5);
+    padding-top: 10px;
+    margin-top: 2px;
+    justify-content: space-between;
+  }
+}
+
+/* 1-Section Full-Screen Viewport Scaling for Desktop (Height <= 768px) */
+@media (min-width: 769px) and (max-height: 768px) {
+  .sec-9b__wrapper {
+    top: 10.5dvh;
+    bottom: 3.5dvh;
+  }
+
+  .sec-9b__header {
+    margin-bottom: 12px;
+  }
+
+  .sec-9b__tag {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+
+  .sec-9b__title {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 4px;
+  }
+
+  .sec-9b__desc {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .sec-9b__cards {
+    gap: 20px;
+  }
+
+  .sec-9b__card {
+    padding: 14px 16px;
+  }
+
+  .sec-9b__card-img-wrapper {
+    margin-bottom: 8px;
+  }
+
+  .sec-9b__card-title {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+
+  .sec-9b__card-desc {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

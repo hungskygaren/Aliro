@@ -7,35 +7,49 @@
 document.addEventListener("DOMContentLoaded", () => {
   // DOM Element Selectors
   const mainHeader = document.getElementById("mainHeader");
-  const dotsNav = document.getElementById("dotsNav");
-  const dots = document.querySelectorAll(".dot-item");
   const navItems = document.querySelectorAll(".nav-item");
   const scrollDownBtn = document.getElementById("scrollDownBtn");
   const hashLinks = document.querySelectorAll('a[href^="#section-"]');
   const continuumNodes = document.querySelectorAll(".sec-continuum__node");
   const return4icBtns = document.querySelectorAll(".btn-return-4ic");
-  // Section Background Colors for Global Morphing
-  const sectionColors = [
-    "#C5DAF3", // Section 1 (0) - Light Glow Blue (#C5DAF3)
-    "#ffffff", // Section 2 (1) - White (Updated)
-    "#ffffff", // Section 3 (2) - White
-    "#1F6CA0", // Section 4 (3) - New Dark Blue
-    "#ffffff", // Section 5 (4) - White
-    "#01103B", // Section 6 (5) - New Dark Blue
-    "#01103B", // Section 7 (6) - New Dark Blue
-    "#01103B", // Section 8 (7) - New Dark Blue
-    "#01103B", // Section 9 (8) - New Dark Blue
-    "#f7f9fc", // Section 10 (9) - Light Gray
+  // Section IDs mapping in exact slide order
+  const sectionIds = [
+    "section-1",
+    "section-2",
+    "section-2b",
+    "section-3",
+    "section-4",
+    "section-5",
+    "section-6",
+    "section-7",
+    "section-8",
+    "section-9",
+    "section-9b",
+    "section-10",
   ];
 
-  // Read initial slide index from URL Hash (#section-X), fallback to 0 (Section 1)
+  // Section Background Colors for Global Morphing
+  const sectionColors = [
+    "#C5DAF3", // Section 1 (0) - Light Glow Blue
+    "#ffffff", // Section 2 (1) - White Architect
+    "#01103B", // Section 2b (2) - Dark Radial Highlights
+    "#ffffff", // Section 3 (3) - White Framework
+    "#1F6CA0", // Section 4 (4) - Dark Blue Orbit
+    "#ffffff", // Section 5 (5) - White Pillar 1
+    "#01103B", // Section 6 (6) - Dark Blue Pillar 2
+    "#01103B", // Section 7 (7) - Dark Blue Pillar 3
+    "#01103B", // Section 8 (8) - Dark Blue Pillar 4
+    "#01103B", // Section 9 (9) - Dark Blue Arch
+    "#ffffff", // Section 9b (10) - White Advisory
+    "#ffffff", // Section 10 (11) - White Contact
+  ];
+
+  // Read initial slide index from URL Hash (#section-2b, #section-9b, etc.), fallback to 0 (Section 1)
   const initialSlideIndex = (() => {
     if (window.location.hash) {
-      const match = window.location.hash.match(/#section-(\d+)/);
-      if (match && match[1]) {
-        const secIndex = parseInt(match[1], 10) - 1;
-        if (secIndex >= 0 && secIndex <= 9) return secIndex;
-      }
+      const hash = window.location.hash.replace("#", "");
+      const foundIdx = sectionIds.indexOf(hash);
+      if (foundIdx !== -1) return foundIdx;
     }
     return 0; // Default: Section 1
   })();
@@ -80,26 +94,19 @@ document.addEventListener("DOMContentLoaded", () => {
       slideChange: function () {
         updateActiveState(this.activeIndex);
 
-        // Sync URL Hash without triggering page jump/reload
-        history.replaceState(null, "", `#section-${this.activeIndex + 1}`);
+        // Sync URL Hash without triggering page jump/reload (#section-2b, #section-9b, etc.)
+        const targetId =
+          sectionIds[this.activeIndex] || `section-${this.activeIndex + 1}`;
+        history.replaceState(null, "", `#${targetId}`);
         if (this.slides) {
           const targetSlide = this.slides[this.activeIndex];
           const prevColor = sectionColors[this.previousIndex];
           const targetColor = sectionColors[this.activeIndex];
 
-          // Dynamic Two-Way Background Inheritance Algorithm (Overlay Based) (Temporarily disabled)
-          /*
-          if (targetSlide && prevColor && prevColor !== targetColor) {
-            targetSlide.style.setProperty("--morph-color", prevColor);
-            targetSlide.classList.add("morph-active");
-          }
-          */
-
-          // Reset animation classes and morph overlay on inactive slides (Temporarily disabled morph-active)
+          // Reset animation classes on inactive slides
           this.slides.forEach((slide, idx) => {
             if (idx !== this.activeIndex) {
               slide.classList.remove("slide-animated");
-              // slide.classList.remove("morph-active");
             }
           });
 
@@ -121,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        // Trigger entrance animation immediately when the slide transition completes (no setTimeout delay)
+        // Trigger entrance animation immediately when the slide transition completes
         const currentSlide = this.slides[this.activeIndex];
         if (currentSlide) {
           currentSlide.classList.add("slide-animated");
@@ -131,26 +138,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --------------------------------------------------------------------------
-  // 2. Active State Manager (Sync Navigation Dots, Navbar, and Header Theme)
+  // 2. Active State Manager (Sync Navbar and Header Theme)
   // --------------------------------------------------------------------------
   function updateActiveState(index) {
-    // Sections 1, 2, 3, 5, 7, 10 (indices: 0, 1, 2, 4, 6, 9):
-    // - Header: Thanh menu MÀU TỐI (#01103B)
-    // - Dots Navigation: Dot MÀU TỐI (light-indicator)
-    const isDarkThemeGroup = [0, 1, 2, 4, 6, 9].includes(index);
+    // Header theme switching: Light vs Dark Header
+    const isDarkThemeGroup = [0, 1, 3, 5, 10, 11].includes(index);
 
     if (isDarkThemeGroup) {
       if (mainHeader) mainHeader.classList.remove("light-theme");
-      if (dotsNav) dotsNav.classList.add("light-indicator");
     } else {
       if (mainHeader) mainHeader.classList.add("light-theme");
-      if (dotsNav) dotsNav.classList.remove("light-indicator");
     }
-
-    // Update Side Dash Dots Active State
-    dots.forEach((dot, idx) => {
-      dot.classList.toggle("active", idx === index);
-    });
 
     // Keep 'Home' (#section-1) permanently active as this is a single landing page
     const activeNavHref = "#section-1";
@@ -191,29 +189,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Side Dash Lines Navigation Dots
-  dots.forEach((dot) => {
-    dot.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetIndex = parseInt(
-        e.currentTarget.getAttribute("data-index"),
-        10,
-      );
-      if (!isNaN(targetIndex)) {
-        smartSlideTo(targetIndex);
-      }
-    });
-  });
-
-  // Intercept all #section- links (Logo, Navbar, CTA buttons) to prevent jump freeze
-  hashLinks.forEach((link) => {
+  // Intercept all # links (Logo, Navbar, CTA buttons) to prevent jump freeze
+  const allHashLinks = document.querySelectorAll('a[href^="#"]');
+  allHashLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-      e.preventDefault();
       const href = link.getAttribute("href");
-      if (href) {
-        const sectionNum = parseInt(href.replace("#section-", ""), 10);
-        if (!isNaN(sectionNum) && sectionNum >= 1) {
-          smartSlideTo(sectionNum - 1);
+      if (href && href.startsWith("#")) {
+        const hash = href.replace("#", "");
+        const targetIdx = sectionIds.indexOf(hash);
+        if (targetIdx !== -1) {
+          e.preventDefault();
+          smartSlideTo(targetIdx);
         }
       }
     });
@@ -252,7 +238,8 @@ document.addEventListener("DOMContentLoaded", () => {
       navDrawer.classList.add("is-active");
       navBackdrop.classList.add("is-active");
       document.body.classList.add("no-scroll");
-      if (hamburgerToggle) hamburgerToggle.setAttribute("aria-expanded", "true");
+      if (hamburgerToggle)
+        hamburgerToggle.setAttribute("aria-expanded", "true");
     }
   };
 
@@ -261,7 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
       navDrawer.classList.remove("is-active");
       navBackdrop.classList.remove("is-active");
       document.body.classList.remove("no-scroll");
-      if (hamburgerToggle) hamburgerToggle.setAttribute("aria-expanded", "false");
+      if (hamburgerToggle)
+        hamburgerToggle.setAttribute("aria-expanded", "false");
     }
   };
 
@@ -279,9 +267,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Close drawer automatically when clicking any nav item or action button inside drawer
   const drawerLinks = document.querySelectorAll(
-    ".nav-drawer .nav-item, .nav-drawer .btn-conversation"
+    ".nav-drawer .nav-item, .nav-drawer .btn-conversation",
   );
   drawerLinks.forEach((link) => {
     link.addEventListener("click", closeMobileMenu);
   });
+
+  // Stop Swiper section slide change ONLY when wheeling over .sec-9b__card-body
+  document.addEventListener(
+    "wheel",
+    (e) => {
+      if (e.target.closest(".sec-9b__card-body")) {
+        e.stopPropagation();
+      }
+    },
+    { capture: true },
+  );
 });

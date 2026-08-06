@@ -1,0 +1,202 @@
+/* ==========================================================================
+   Section 2b: Key Highlights (4 Pillars)
+   ========================================================================== */
+.sec-2b {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(50% 50% at 50% 50%, #1e55b3 0%, #174495 25%, #103377 50%, #082159 75%, #01103b 100%) !important;
+}
+
+.sec-2b .container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sec-2b__wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.sec-2b__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  width: 100%;
+  position: relative;
+}
+
+.sec-2b__col {
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Vertical Divider Lines between columns */
+.sec-2b__col:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 5%;
+  bottom: 5%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sec-2b__icon-wrapper {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px; /* cách dưới 20px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-2b__icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+}
+
+.sec-2b__item-title {
+  color: #ffffff;
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 10px 0; /* cách dưới 10px */
+  min-height: 56px; /* Đúng 2 dòng (28px * 2) để tất cả đoạn mô tả phẳng hàng 100% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-2b__item-desc {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  max-width: 270px;
+}
+
+/* Entrance Animation */
+.sec-2b .phrase {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-2b.slide-animated .phrase,
+.sec-2b.visited .phrase {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Tablet, Mobile & Low-Height Screens)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .sec-2b__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+
+  .sec-2b__col:not(:last-child)::after {
+    display: none;
+  }
+
+  .sec-2b__item-title {
+    font-size: 18px;
+    line-height: 24px;
+    min-height: 48px;
+  }
+
+  .sec-2b__item-desc {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-2b {
+    overflow-y: auto;
+  }
+
+  .sec-2b .container {
+    padding-top: 120px; /* Increased safe spacing from top navbar on mobile */
+    padding-bottom: 50px;
+    height: auto;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+
+  .sec-2b__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sec-2b__col {
+    padding: 0 10px;
+  }
+
+  .sec-2b__icon-wrapper,
+  .sec-2b__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sec-2b__icon-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .sec-2b__item-title {
+    font-size: 15px;
+    line-height: 20px;
+    min-height: auto;
+    margin-bottom: 6px;
+  }
+
+  .sec-2b__item-desc {
+    font-size: 13px;
+    line-height: 18px;
+    max-width: 100%;
+  }
+}
+
+@media (max-height: 720px) and (min-width: 769px) {
+  .sec-2b__icon-wrapper,
+  .sec-2b__icon {
+    width: 75px;
+    height: 75px;
+  }
+
+  .sec-2b__icon-wrapper {
+    margin-bottom: 14px;
+  }
+
+  .sec-2b__item-title {
+    font-size: 17px;
+    line-height: 24px;
+    min-height: 48px;
+    margin-bottom: 8px;
+  }
+
+  .sec-2b__item-desc {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

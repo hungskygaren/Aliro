@@ -5,9 +5,11 @@
 /* Modular Section Imports (MUST be first - CSS spec requirement) */
 @import "./sec-1-hero.css";
 @import "./sec-2-3-intro.css";
+@import "./sec-2b-highlights.css";
 @import "./sec-4-orbit.css";
 @import "./sec-5-8-pillars.css";
 @import "./sec-9-arch.css";
+@import "./sec-9b-advisory.css";
 @import "./sec-10-contact.css";
 
 /* Slide Background Colors & Dynamic Transition Specs */
@@ -19,7 +21,7 @@
 .sec-6,
 .sec-8,
 .sec-9 {
-  background-color: #2C6BA8;
+  background-color: #01103b;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

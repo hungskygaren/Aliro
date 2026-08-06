@@ -4,7 +4,12 @@
 .sec-continuum {
   position: relative;
   overflow: hidden;
-  background-color: #2c6ba8 !important;
+  background-image:
+    url("../../../assets/sec-4-bg.png"),
+    radial-gradient(50% 50% at 50% 50%, #1e55b3 0%, #01103b 100%) !important;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   --orbit-scale: 1;
   --connector-offset: 255px;
 }
@@ -32,6 +37,28 @@
   align-items: center;
   transform: translateX(-50%) scale(var(--orbit-scale, 1));
   transform-origin: top center;
+}
+
+/* 550x550 Luminous Glow Background Layer behind 440px Orbit ring */
+.sec-continuum__glow-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: var(--Bright-Blue, #226cb4);
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-continuum.slide-animated .sec-continuum__glow-bg,
+.sec-continuum.visited .sec-continuum__glow-bg {
+  opacity: 1;
 }
 
 /* 1. Central Concept Image (301px x 262px Figma Standard) */
@@ -711,17 +738,17 @@
     align-items: flex-start !important;
   }
 
-  /* 3. TOP NODES (01 & 02): Pulled 20px closer down to circle graphics */
+  /* 3. TOP NODES (01 & 02): Positioned cleanly above circle graphics */
   .node-top-left .node-text,
   .node-top-right .node-text {
-    bottom: calc(100% - 12px) !important;
+    bottom: calc(100% + 2px) !important;
     top: auto !important;
   }
 
-  /* 4. BOTTOM NODES (03 & 04): Pushed 30px further down from circle graphics */
+  /* 4. BOTTOM NODES (03 & 04): Positioned cleanly below circle graphics */
   .node-bottom-left .node-text,
   .node-bottom-right .node-text {
-    top: calc(100% + 38px) !important;
+    top: calc(100% + 5px) !important;
     bottom: auto !important;
   }
 

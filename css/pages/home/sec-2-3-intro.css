@@ -9,20 +9,16 @@
 .sec-architect .container {
   position: relative;
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
-  align-items: flex-start;
-  padding-top: 151px; /* Exact 151px Top Offset matching Figma Node 5703-2241 */
+  padding-top: 23.0555vh; /* 166px / 720px = 23.0555% height */
   box-sizing: border-box;
 }
 
-/* Layer 3: Left Text Content (Occupies 4 columns: Cols 1-4) */
+/* Layer 3: Left Text Content (Occupies 6 columns = 50% width) */
 .sec-architect__content {
   position: relative;
   z-index: 3;
-  grid-column: 1 / span 4;
-  width: 100%;
+  width: 50%;
+  max-width: 585px;
   text-align: left;
 }
 
@@ -31,13 +27,13 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 24px; /* 100% */
-  color: #011B7F;
+  color: #011b7f;
   text-transform: uppercase;
   letter-spacing: 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .sec-architect__title {
@@ -45,12 +41,14 @@
   font-size: 44px;
   font-weight: 700;
   line-height: 50px; /* 113.636% */
-  color: var(--Midnight-Navy, #01103B);
+  color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   letter-spacing: 0;
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-style: normal;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .sec-architect__sub-bottom {
@@ -58,13 +56,13 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 28px; /* 116.667% */
-  color: #011B7F;
+  color: #011b7f;
   text-transform: uppercase;
   letter-spacing: 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .sec-architect__desc {
@@ -72,32 +70,34 @@
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
-  color: var(--Midnight-Navy, #01103B);
+  color: var(--Midnight-Navy, #01103b);
   font-feature-settings:
     "liga" off,
     "clig" off;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .sec-architect__desc .phrase {
   display: block;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .sec-architect__btn,
 .sec-framework__btn {
-  display: inline-flex;
-  width: fit-content;
-  height: 32px;
-  padding: 7px 16px 8px 16px;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
+  display: inline-flex !important;
+  width: fit-content !important;
+  height: 32px !important;
+  padding: 7px 16px 8px 16px !important;
+  box-sizing: border-box !important;
+  align-items: center !important;
+  justify-content: center !important;
   gap: 10px;
-  background: var(--Highlight-Blue, #0431B1);
-  color: var(--White, #FFF);
+  background: var(--Highlight-Blue, #0431b1);
+  color: var(--White, #fff);
   text-align: center;
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-family);
   font-size: 14px;
   font-style: normal;
@@ -114,19 +114,20 @@
   background-color: var(--color-primary-hover, #03258c);
 }
 
-/* Layer 2: Right Image inside 1170px Container (Starts at Col 5, extends to Col 11 - Spans 7 Cols) */
+/* Layer 2: Right Image inside 1170px Container (Absolute position underneath text) */
 .sec-architect__img {
-  position: relative;
-  grid-column: 5 / span 7;
+  position: absolute;
+  right: 0;
+  top: 50%;
   z-index: 2;
-  width: 100%;
+  width: 57.26%; /* 670px / 1170px */
   max-width: 670px;
   height: auto;
   object-fit: contain;
-  object-position: left top;
-  align-self: flex-start;
+  object-position: right center;
+  pointer-events: none;
   opacity: 0;
-  transform: translateY(80px);
+  transform: translateY(calc(-50% + 80px));
   transition:
     opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
     transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -157,7 +158,7 @@
 /* Isometric Visual Graphic */
 .sec-architect.slide-animated .sec-architect__img {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-50%);
 }
 
 /* Responsive Overrides for Section 2 */
@@ -243,10 +244,12 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 28px; /* 116.667% */
-  color: var(--Secondary-Deep-Blue, #011B7F);
+  color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0;
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-style: normal;
   margin-bottom: 12px;
 }
@@ -256,10 +259,12 @@
   font-size: 44px;
   font-weight: 700;
   line-height: 50px; /* 113.636% */
-  color: var(--Midnight-Navy, #01103B);
+  color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   letter-spacing: 0;
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-style: normal;
   margin-bottom: 18px;
 }
@@ -269,10 +274,12 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 28px; /* 116.667% */
-  color: var(--Secondary-Deep-Blue, #011B7F);
+  color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0;
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-style: normal;
   margin-bottom: 24px;
 }
@@ -282,8 +289,10 @@
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
-  color: var(--Midnight-Navy, #01103B);
-  font-feature-settings: 'liga' off, 'clig' off;
+  color: var(--Midnight-Navy, #01103b);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   margin-bottom: 22px;
 }
 
@@ -369,7 +378,7 @@
 
 .sec-architect.visited .sec-architect__img {
   opacity: 1 !important;
-  transform: translateY(0) !important;
+  transform: translateY(-50%) !important;
   transition: none !important;
   animation: none !important;
 }
@@ -392,6 +401,7 @@
    ========================================================================== */
 .sec-architect__title .line-desktop,
 .sec-architect__sub-bottom .line-desktop,
+.sec-architect__desc .line-desktop,
 .sec-framework__title .line-desktop {
   display: block;
 }
@@ -399,6 +409,7 @@
 @media (max-width: 991px) {
   .sec-architect__title .line-desktop,
   .sec-architect__sub-bottom .line-desktop,
+  .sec-architect__desc .line-desktop,
   .sec-framework__title .line-desktop {
     display: inline;
   }
