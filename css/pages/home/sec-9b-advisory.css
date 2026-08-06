@@ -75,7 +75,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 0 0 24px 0; /* cách card bên dưới đúng 24px */
+  margin: 0;
 }
 
 /* Cards Layout (Proportional 370x400 Scaling matching Figma Node 5705:1056) */
@@ -99,7 +99,7 @@
   flex: 0 0 auto;
   background: #ffffff;
   border: 1px solid #c5daf3;
-  padding: 20px;
+  padding: 20px 19px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -137,7 +137,6 @@
   overflow-y: auto;
   overscroll-behavior: contain;
   margin-bottom: 10px;
-  padding-right: 2px;
 }
 
 .sec-9b__card-body::-webkit-scrollbar {
@@ -165,10 +164,13 @@
 
 .sec-9b__card-desc {
   color: #01103b;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 20px;
   margin: 0;
 }
 

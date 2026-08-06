@@ -92,8 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
             swiperInstance.slideTo(initialTargetIndex, 0);
           }
           // Trigger entrance animation on the active slide
-          if (swiperInstance.slides && swiperInstance.slides[swiperInstance.activeIndex]) {
-            swiperInstance.slides[swiperInstance.activeIndex].classList.add("slide-animated");
+          if (
+            swiperInstance.slides &&
+            swiperInstance.slides[swiperInstance.activeIndex]
+          ) {
+            swiperInstance.slides[swiperInstance.activeIndex].classList.add(
+              "slide-animated",
+            );
           }
         };
 
