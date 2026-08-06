@@ -4,7 +4,17 @@
 .sec-2b {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(50% 50% at 50% 50%, #1e55b3 0%, #174495 25%, #103377 50%, #082159 75%, #01103b 100%) !important;
+  height: 400px !important;
+  min-height: 400px !important;
+  max-height: 400px !important;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #1e55b3 0%,
+    #174495 25%,
+    #103377 50%,
+    #082159 75%,
+    #01103b 100%
+  ) !important;
 }
 
 .sec-2b .container {
@@ -91,25 +101,23 @@
   max-width: 270px;
 }
 
-/* Entrance Animation */
-.sec-2b .phrase {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sec-2b.slide-animated .phrase,
-.sec-2b.visited .phrase {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* No entrance animation — static content (pass-through slide, always visible) */
 
 /* ==========================================================================
    Responsive Adaptations (Tablet, Mobile & Low-Height Screens)
    ========================================================================== */
 @media (max-width: 1024px) {
+  .sec-2b {
+    height: auto !important;
+    min-height: 400px !important;
+    max-height: none !important;
+    padding: 60px 0;
+  }
+
+  .sec-2b .container {
+    height: auto;
+  }
+
   .sec-2b__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 20px;
@@ -117,6 +125,17 @@
 
   .sec-2b__col:not(:last-child)::after {
     display: none;
+  }
+
+  .sec-2b__col:nth-child(odd)::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 5%;
+    bottom: 5%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
   }
 
   .sec-2b__item-title {
@@ -134,10 +153,13 @@
 @media (max-width: 768px) {
   .sec-2b {
     overflow-y: auto;
+    height: auto !important;
+    min-height: 100%;
+    max-height: none !important;
   }
 
   .sec-2b .container {
-    padding-top: 120px; /* Increased safe spacing from top navbar on mobile */
+    padding-top: 100px;
     padding-bottom: 50px;
     height: auto;
     min-height: 100%;
@@ -145,12 +167,23 @@
   }
 
   .sec-2b__grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 16px;
   }
 
   .sec-2b__col {
     padding: 0 10px;
+  }
+
+  .sec-2b__col:nth-child(odd)::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 5%;
+    bottom: 5%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .sec-2b__icon-wrapper,
@@ -164,16 +197,48 @@
   }
 
   .sec-2b__item-title {
-    font-size: 15px;
-    line-height: 20px;
-    min-height: auto;
+    font-size: 14px;
+    line-height: 19px;
+    min-height: 38px;
     margin-bottom: 6px;
   }
 
   .sec-2b__item-desc {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 17px;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec-2b__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+  }
+
+  .sec-2b__col {
+    padding: 0 5px;
+  }
+
+  .sec-2b__col:nth-child(odd)::after {
+    right: -5px;
+  }
+
+  .sec-2b__icon-wrapper,
+  .sec-2b__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sec-2b__item-title {
+    font-size: 13px;
+    line-height: 17px;
+    min-height: 34px;
+  }
+
+  .sec-2b__item-desc {
+    font-size: 11px;
+    line-height: 15px;
   }
 }
 
@@ -200,3 +265,4 @@
     line-height: 20px;
   }
 }
+

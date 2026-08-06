@@ -107,30 +107,7 @@
   display: block !important;
 }
 
-/* Animations for Section 5 */
-.sec-5.slide-animated .sec-5__content {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.2s;
-}
-
-.sec-5.slide-animated .sec-5__img-right {
-  opacity: 1;
-  transform: translateY(-50%) translateY(0); /* Slides UP to exact Y-50% center line */
-  transition-delay: 0.3s;
-}
-
-.sec-5.visited .sec-5__content {
-  opacity: 1 !important;
-  transform: translateX(0) !important;
-  transition: none !important;
-}
-
-.sec-5.visited .sec-5__img-right {
-  opacity: 1 !important;
-  transform: translateY(-50%) translateY(0) !important;
-  transition: none !important;
-}
+/* Animations for Section 5 unified with 6, 7, 8 below */
 
 .sec-5__desc {
   font-family: Aptos, var(--font-brand);
@@ -203,24 +180,7 @@
   transition: none;
 }
 
-/* --- SECTION 5 ACTIVE TIMELINE SEQUENCE --- */
-
-/* 4. Animate contents (Top block starts at 0.2s, Image starts at 0.3s, Desc starts at 0.5s) */
-.sec-5.slide-animated .sec-5__top-block {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.9s;
-}
-.sec-5.slide-animated .sec-5__img-right {
-  opacity: 1;
-  transform: translateY(-50%) translateY(0);
-  transition-delay: 1s;
-}
-.sec-5.slide-animated .sec-5__bottom-block {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 1.2s;
-}
+/* Section 5 Active Timeline Sequence removed to prevent delay - unified below */
 
 /* ==========================================================================
    Section 7: Digital Intelligence Details (100% Synced with Section 5 Layout)

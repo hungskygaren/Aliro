@@ -5,6 +5,13 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Reset any native scroll offset the browser applied from hash anchors before Swiper takes over
+  const swiperEl = document.querySelector(".main-swiper");
+  const wrapperEl = document.querySelector(".swiper-wrapper");
+  if (swiperEl) swiperEl.scrollTop = 0;
+  if (wrapperEl) wrapperEl.scrollTop = 0;
+  window.scrollTo(0, 0);
+
   // DOM Element Selectors
   const mainHeader = document.getElementById("mainHeader");
   const navItems = document.querySelectorAll(".nav-item");
@@ -44,49 +51,59 @@ document.addEventListener("DOMContentLoaded", () => {
     "#ffffff", // Section 10 (11) - White Contact
   ];
 
-  // Read initial slide index from URL Hash (#section-2b, #section-9b, etc.), fallback to 0 (Section 1)
-  const initialSlideIndex = (() => {
-    if (window.location.hash) {
-      const hash = window.location.hash.replace("#", "");
-      const foundIdx = sectionIds.indexOf(hash);
-      if (foundIdx !== -1) return foundIdx;
-    }
-    return 0; // Default: Section 1
-  })();
+  // Parse hash to slide index helper
+  function hashToSlideIndex(hash) {
+    if (!hash) return 0;
+    const id = hash.replace("#", "");
+    const idx = sectionIds.indexOf(id);
+    if (idx === -1) return 0;
+    // Skip section-2b (index 2): redirect to section-3
+    return idx === 2 ? 3 : idx;
+  }
+
+  // Read initial target from URL Hash, fallback to 0 (Section 1)
+  const initialTargetIndex = hashToSlideIndex(window.location.hash);
 
   const swiper = new Swiper(".main-swiper", {
     direction: "vertical",
-    initialSlide: initialSlideIndex,
+    initialSlide: 0, // Always start at 0 to avoid Swiper layout desync
+    slidesPerView: "auto", // Measure each slide's actual height (sec-2b = 400px, others = 100dvh)
     speed: 650,
     effect: "slide",
     autoHeight: false,
     mousewheel: {
-      enabled: true,
-      sensitivity: 1,
-      thresholdDelta: 10,
+      enabled: false, // Disabled: custom wheel handler skips section-2b
     },
     keyboard: {
-      enabled: true,
-      onlyInViewport: true,
+      enabled: false, // Disabled: custom keydown handler skips section-2b
     },
     grabCursor: false,
     touchThreshold: 5,
     on: {
       // Called when Swiper finishes initializing
       init: function () {
-        updateActiveState(this.activeIndex);
+        const swiperInstance = this;
+        updateActiveState(swiperInstance.activeIndex);
 
-        // Wait for all assets (especially hero images) to fully load before triggering the entrance animation
-        const startHeroAnimation = () => {
-          if (this.slides && this.slides[this.activeIndex]) {
-            this.slides[this.activeIndex].classList.add("slide-animated");
+        // Deferred navigation: wait until all assets are loaded so slide
+        // heights are fully resolved before jumping to target section
+        const navigateAndAnimate = () => {
+          if (initialTargetIndex > 0) {
+            swiperInstance.slideTo(initialTargetIndex, 0);
+          }
+          // Trigger entrance animation on the active slide
+          if (swiperInstance.slides && swiperInstance.slides[swiperInstance.activeIndex]) {
+            swiperInstance.slides[swiperInstance.activeIndex].classList.add("slide-animated");
           }
         };
 
         if (document.readyState === "complete") {
-          startHeroAnimation();
+          // Layout already done, but use rAF to ensure paint cycle is complete
+          requestAnimationFrame(() => navigateAndAnimate());
         } else {
-          window.addEventListener("load", startHeroAnimation);
+          window.addEventListener("load", () => {
+            requestAnimationFrame(() => navigateAndAnimate());
+          });
         }
       },
 
@@ -120,6 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Called when the slide transition completes (slide has fully stopped)
       slideChangeTransitionEnd: function () {
         if (!this.slides) return;
+
+        // Auto-skip section-2b (index 2): if Swiper lands here, continue to next/prev
+        if (this.activeIndex === 2) {
+          const goingDown = this.previousIndex < 2;
+          this.slideTo(goingDown ? 3 : 1, 650);
+          return;
+        }
 
         // Cleanup inactive slides
         this.slides.forEach((slide, idx) => {
@@ -159,6 +183,68 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
   }
+
+  // --------------------------------------------------------------------------
+  // 2b. Custom Wheel Handler (Skip Section-2b pass-through slide)
+  // --------------------------------------------------------------------------
+  let wheelLocked = false;
+  document.querySelector(".main-swiper").addEventListener(
+    "wheel",
+    (e) => {
+      if (wheelLocked || swiper.animating) return;
+      wheelLocked = true;
+
+      const current = swiper.activeIndex;
+      const delta = e.deltaY;
+
+      if (delta > 0) {
+        // Scrolling DOWN
+        if (current === 1) {
+          // From Section 2 → skip 2b → land on Section 3
+          swiper.slideTo(3, 1200);
+        } else {
+          swiper.slideNext(650);
+        }
+      } else if (delta < 0) {
+        // Scrolling UP
+        if (current === 3) {
+          // From Section 3 → skip 2b → land on Section 2
+          swiper.slideTo(1, 1200);
+        } else {
+          swiper.slidePrev(650);
+        }
+      }
+
+      setTimeout(() => {
+        wheelLocked = false;
+      }, 800);
+    },
+    { passive: true },
+  );
+
+  // --------------------------------------------------------------------------
+  // 2c. Custom Keyboard Handler (Skip Section-2b on arrow keys)
+  // --------------------------------------------------------------------------
+  document.addEventListener("keydown", (e) => {
+    if (swiper.animating) return;
+    const current = swiper.activeIndex;
+
+    if (e.key === "ArrowDown" || e.key === "PageDown") {
+      e.preventDefault();
+      if (current === 1) {
+        swiper.slideTo(3, 1200);
+      } else {
+        swiper.slideNext(650);
+      }
+    } else if (e.key === "ArrowUp" || e.key === "PageUp") {
+      e.preventDefault();
+      if (current === 3) {
+        swiper.slideTo(1, 1200);
+      } else {
+        swiper.slidePrev(650);
+      }
+    }
+  });
 
   function smartSlideTo(targetIndex) {
     if (targetIndex < 0 || targetIndex >= swiper.slides.length) return;
@@ -203,6 +289,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+  });
+
+  // Handle URL hash changes typed directly into the address bar
+  window.addEventListener("hashchange", () => {
+    const targetIdx = hashToSlideIndex(window.location.hash);
+    if (targetIdx !== swiper.activeIndex) {
+      // Reset native scroll offset that browser applied when jumping to hash anchor
+      const wrapper = document.querySelector(".swiper-wrapper");
+      if (wrapper) {
+        wrapper.scrollTop = 0;
+      }
+      document.querySelector(".main-swiper").scrollTop = 0;
+      smartSlideTo(targetIdx);
+    }
   });
 
   // Section 4 Satellite Node Buttons Click Handler

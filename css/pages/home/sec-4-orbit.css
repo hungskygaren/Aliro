@@ -600,20 +600,20 @@
 /* ==========================================================================
    Section 4 Responsive Scaling & Adjustments
    ========================================================================== */
-/* Height Breakpoints (Unitless float values for valid transform: scale()) */
-@media (max-height: 719px) {
+/* Height Breakpoints for Desktop/Tablet Full-Screen Viewports */
+@media (max-height: 719px) and (min-width: 992px) {
   .sec-continuum {
     --orbit-scale: 0.82;
   }
 }
 
-@media (max-height: 660px) {
+@media (max-height: 660px) and (min-width: 992px) {
   .sec-continuum {
     --orbit-scale: 0.8;
   }
 }
 
-@media (max-height: 580px) {
+@media (max-height: 580px) and (min-width: 992px) {
   .sec-continuum {
     --orbit-scale: 0.6;
   }
@@ -674,8 +674,8 @@
 
 @media (max-width: 767px) {
   .sec-continuum {
-    --orbit-scale: 0.63;
-    --connector-offset: 160px;
+    --orbit-scale: 0.58;
+    --connector-offset: 150px;
   }
 
   .sec-continuum .container {
@@ -700,9 +700,9 @@
   }
 
   .sec-continuum__orbit-wrap {
-    transform: scale(var(--orbit-scale, 0.63)) !important;
-    margin-top: -35px !important;
-    margin-bottom: -35px !important;
+    transform: scale(var(--orbit-scale, 0.58)) !important;
+    margin-top: -30px !important;
+    margin-bottom: -30px !important;
   }
 
   /* Node absolute anchor preservation */
@@ -714,8 +714,9 @@
   /* Common node text base styling */
   .sec-continuum__node .node-text {
     position: absolute !important;
-    width: 115px !important;
+    width: 120px !important;
     white-space: normal !important;
+    box-sizing: border-box !important;
   }
 
   /* 1. NODE 01 & 04 (Left Column): Right-aligned text starting at 50% center axis */
@@ -738,18 +739,20 @@
     align-items: flex-start !important;
   }
 
-  /* 3. TOP NODES (01 & 02): Positioned cleanly above circle graphics */
+  /* 3. TOP NODES (01 & 02): Anchored exactly 10px above top circle edge (130px + 10px) */
   .node-top-left .node-text,
   .node-top-right .node-text {
-    bottom: calc(100% + 2px) !important;
+    bottom: 140px !important;
     top: auto !important;
+    height: auto !important;
   }
 
-  /* 4. BOTTOM NODES (03 & 04): Positioned cleanly below circle graphics */
+  /* 4. BOTTOM NODES (03 & 04): Anchored exactly 10px below bottom circle edge (130px + 10px) */
   .node-bottom-left .node-text,
   .node-bottom-right .node-text {
-    top: calc(100% + 5px) !important;
+    top: 140px !important;
     bottom: auto !important;
+    height: auto !important;
   }
 
   /* Text Font Size Reductions */
@@ -773,3 +776,10 @@
     line-height: 18px !important;
   }
 }
+
+@media (max-width: 480px) {
+  .sec-continuum {
+    --orbit-scale: 0.52;
+  }
+}
+
