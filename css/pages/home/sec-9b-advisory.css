@@ -207,6 +207,40 @@
   transform: translateY(0);
 }
 
+@media (max-height: 650px) and (min-width: 769px) {
+  .sec-9b__header {
+    margin-bottom: 12px;
+  }
+  .sec-9b__tag {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+  .sec-9b__title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 4px;
+  }
+  .sec-9b__desc {
+    font-size: 14px;
+  }
+  .sec-9b__card {
+    padding: 14px 16px;
+  }
+  .sec-9b__card-img-wrapper {
+    margin-bottom: 8px;
+  }
+  .sec-9b__card-title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+  .sec-9b__card-desc {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
 /* ==========================================================================
    Responsive Adaptations (Mobile: Native Horizontal Scroll / Swipe Layout)
    ========================================================================== */
