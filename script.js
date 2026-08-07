@@ -190,7 +190,100 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --------------------------------------------------------------------------
-  // 2b. Custom Wheel Handler (Skip Section-2b pass-through slide)
+  // 2b. Section 2b Intermediate Pause Handler (Center Position for 2s)
+  // --------------------------------------------------------------------------
+  let isPausingOnSec2b = false;
+  let isIndefiniteHold = false;
+  let sec2bPauseTimer = null;
+
+  function clearSec2bTimer() {
+    if (sec2bPauseTimer) {
+      clearTimeout(sec2bPauseTimer);
+      sec2bPauseTimer = null;
+    }
+  }
+
+  function resumeFromSec2bToSection3(targetSlide = 3) {
+    clearSec2bTimer();
+    isPausingOnSec2b = false;
+    isIndefiniteHold = false;
+    swiper.slideTo(targetSlide, 650);
+  }
+
+  function runSec2bPauseTransition(goingDown) {
+    clearSec2bTimer();
+    isPausingOnSec2b = true;
+    isIndefiniteHold = false;
+
+    const viewportH = window.innerHeight;
+    const h0 = swiper.slides[0] ? swiper.slides[0].offsetHeight : viewportH;
+    const h1 = swiper.slides[1] ? swiper.slides[1].offsetHeight : viewportH;
+    const h2 = swiper.slides[2] ? swiper.slides[2].offsetHeight : 400;
+
+    const sec2bTop = h0 + h1;
+    const desiredTopOnScreen = Math.max(0, (viewportH - h2) / 2);
+    const intermediateTranslate = -(sec2bTop - desiredTopOnScreen);
+
+    if (goingDown) {
+      // Step 1: Smooth glide to intermediate position (Section 2b centered vertically in viewport)
+      swiper.translateTo(intermediateTranslate, 800, true, true);
+      if (swiper.slides[2]) {
+        requestAnimationFrame(() => {
+          swiper.slides[2].classList.add("slide-animated");
+        });
+      }
+
+      // Step 2: AFTER glide completes (800ms), pause 2 seconds centered on screen
+      sec2bPauseTimer = setTimeout(() => {
+        sec2bPauseTimer = setTimeout(() => {
+          if (!isIndefiniteHold && isPausingOnSec2b) {
+            resumeFromSec2bToSection3(3);
+          }
+        }, 2000);
+      }, 800);
+    } else {
+      // Going UP from Section 3
+      swiper.translateTo(intermediateTranslate, 800, true, true);
+      if (swiper.slides[2]) {
+        requestAnimationFrame(() => {
+          swiper.slides[2].classList.add("slide-animated");
+        });
+      }
+
+      sec2bPauseTimer = setTimeout(() => {
+        sec2bPauseTimer = setTimeout(() => {
+          if (!isIndefiniteHold && isPausingOnSec2b) {
+            resumeFromSec2bToSection3(1);
+          }
+        }, 2000);
+      }, 800);
+    }
+  }
+
+  // Click listener on Section 2b element and Document:
+  let lastClickTime = 0;
+  function handleSec2bClickOrTouch(e) {
+    const now = Date.now();
+    if (now - lastClickTime < 300) return; // Prevent double-firing within 300ms
+    lastClickTime = now;
+
+    if (isPausingOnSec2b) {
+      if (!isIndefiniteHold) {
+        // First click while stationary: cancel 2s auto-timer -> convert to INDEFINITE HOLD!
+        clearSec2bTimer();
+        isIndefiniteHold = true;
+      } else {
+        // Second click during indefinite hold: resume to Section 3!
+        resumeFromSec2bToSection3(3);
+      }
+    }
+  }
+
+  // Single document-level click listener (catches all clicks via bubbling, no duplication)
+  document.addEventListener("click", handleSec2bClickOrTouch);
+
+  // --------------------------------------------------------------------------
+  // 2c. Custom Wheel Handler
   // --------------------------------------------------------------------------
   let wheelLocked = false;
   document.querySelector(".main-swiper").addEventListener(
@@ -201,20 +294,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const current = swiper.activeIndex;
       const delta = e.deltaY;
+      const isSec2Transition = (current === 1 && delta > 0) || (current === 3 && delta < 0) || isPausingOnSec2b;
 
-      if (delta > 0) {
+      if (isPausingOnSec2b) {
+        resumeFromSec2bToSection3(delta > 0 ? 3 : 1);
+      } else if (delta > 0) {
         // Scrolling DOWN
         if (current === 1) {
-          // From Section 2 → skip 2b → land on Section 3
-          swiper.slideTo(3, 1200);
+          // From Section 2 → pause with Section 2b centered → land on Section 3
+          runSec2bPauseTransition(true);
         } else {
           swiper.slideNext(650);
         }
       } else if (delta < 0) {
         // Scrolling UP
         if (current === 3) {
-          // From Section 3 → skip 2b → land on Section 2
-          swiper.slideTo(1, 1200);
+          // From Section 3 → pause with Section 2b centered → land on Section 2
+          runSec2bPauseTransition(false);
         } else {
           swiper.slidePrev(650);
         }
@@ -222,13 +318,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         wheelLocked = false;
-      }, 800);
+      }, isSec2Transition ? 850 : 800);
     },
     { passive: true },
   );
 
   // --------------------------------------------------------------------------
-  // 2c. Custom Keyboard Handler (Skip Section-2b on arrow keys)
+  // 2d. Custom Keyboard Handler
   // --------------------------------------------------------------------------
   document.addEventListener("keydown", (e) => {
     if (swiper.animating) return;
@@ -236,15 +332,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (e.key === "ArrowDown" || e.key === "PageDown") {
       e.preventDefault();
-      if (current === 1) {
-        swiper.slideTo(3, 1200);
+      if (isPausingOnSec2b) {
+        clearSec2bTimer();
+        isPausingOnSec2b = false;
+        swiper.slideTo(3, 650);
+      } else if (current === 1) {
+        runSec2bPauseTransition(true);
       } else {
         swiper.slideNext(650);
       }
     } else if (e.key === "ArrowUp" || e.key === "PageUp") {
       e.preventDefault();
-      if (current === 3) {
-        swiper.slideTo(1, 1200);
+      if (isPausingOnSec2b) {
+        clearSec2bTimer();
+        isPausingOnSec2b = false;
+        swiper.slideTo(1, 650);
+      } else if (current === 3) {
+        runSec2bPauseTransition(false);
       } else {
         swiper.slidePrev(650);
       }
@@ -258,9 +362,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const distance = Math.abs(targetIndex - currentIndex);
 
     if (distance <= 1) {
+      if (isPausingOnSec2b) {
+        clearSec2bTimer();
+        isPausingOnSec2b = false;
+      }
       swiper.slideTo(targetIndex, 650);
     } else if (distance === 2) {
-      swiper.slideTo(targetIndex, 650);
+      if (currentIndex === 1 && targetIndex === 3) {
+        runSec2bPauseTransition(true);
+      } else if (currentIndex === 3 && targetIndex === 1) {
+        runSec2bPauseTransition(false);
+      } else {
+        swiper.slideTo(targetIndex, 650);
+      }
     } else {
       const nearTargetIndex =
         targetIndex > currentIndex ? targetIndex - 1 : targetIndex + 1;
