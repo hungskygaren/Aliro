@@ -152,17 +152,18 @@
 
 @media (max-width: 768px) {
   .sec-2b {
-    overflow-y: auto;
+    overflow: hidden;
     height: auto !important;
-    min-height: 100%;
+    min-height: auto !important;
     max-height: none !important;
+    padding: 24px 0 !important;
   }
 
   .sec-2b .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
     height: auto;
-    min-height: 100%;
+    min-height: auto;
     box-sizing: border-box;
   }
 

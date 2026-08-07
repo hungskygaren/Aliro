@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     direction: "vertical",
     initialSlide: 0, // Always start at 0 to avoid Swiper layout desync
     slidesPerView: "auto", // Measure each slide's actual height (sec-2b = 400px, others = 100dvh)
-    speed: 650,
+    speed: 750,
     effect: "slide",
     autoHeight: false,
     mousewheel: {
@@ -143,10 +143,12 @@ document.addEventListener("DOMContentLoaded", () => {
       slideChangeTransitionEnd: function () {
         if (!this.slides) return;
 
-        // Auto-skip section-2b (index 2): if Swiper lands here, continue to next/prev
+        // Pause on section-2b (index 2): when Swiper lands here via touch swipe, run intermediate pause transition
         if (this.activeIndex === 2) {
-          const goingDown = this.previousIndex < 2;
-          this.slideTo(goingDown ? 3 : 1, 650);
+          if (!isPausingOnSec2b) {
+            const goingDown = this.previousIndex < 2;
+            runSec2bPauseTransition(goingDown);
+          }
           return;
         }
 
@@ -279,8 +281,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Single document-level click listener (catches all clicks via bubbling, no duplication)
+  // Single document-level click & touchstart listener for mobile and desktop
   document.addEventListener("click", handleSec2bClickOrTouch);
+  document.addEventListener(
+    "touchstart",
+    (e) => {
+      if (isPausingOnSec2b) {
+        handleSec2bClickOrTouch(e);
+      }
+    },
+    { passive: true },
+  );
 
   // --------------------------------------------------------------------------
   // 2c. Custom Wheel Handler
@@ -294,7 +305,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const current = swiper.activeIndex;
       const delta = e.deltaY;
-      const isSec2Transition = (current === 1 && delta > 0) || (current === 3 && delta < 0) || isPausingOnSec2b;
+      const isSec2Transition =
+        (current === 1 && delta > 0) ||
+        (current === 3 && delta < 0) ||
+        isPausingOnSec2b;
 
       if (isPausingOnSec2b) {
         resumeFromSec2bToSection3(delta > 0 ? 3 : 1);
@@ -316,9 +330,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      setTimeout(() => {
-        wheelLocked = false;
-      }, isSec2Transition ? 850 : 800);
+      setTimeout(
+        () => {
+          wheelLocked = false;
+        },
+        isSec2Transition ? 850 : 800,
+      );
     },
     { passive: true },
   );

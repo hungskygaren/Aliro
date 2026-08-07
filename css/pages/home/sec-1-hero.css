@@ -276,10 +276,11 @@
   }
 
   .sec-hero {
-    padding-top: 60px;
+    padding-top: 0;
   }
 
   .sec-hero__content {
+    padding-top: 85px !important;
     padding-bottom: 80px;
     padding-inline: 24px;
   }
@@ -318,6 +319,7 @@
 
 @media (max-width: 767px) {
   .sec-hero__content {
+    padding-top: 85px !important;
     padding-bottom: 85px;
     padding-inline: 0 !important;
   }

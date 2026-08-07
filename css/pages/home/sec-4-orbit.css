@@ -631,10 +631,10 @@
   .sec-continuum .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100dvh;
-    padding-top: 50px;
+    padding-top: 85px;
     padding-bottom: 20px;
   }
 
@@ -667,19 +667,19 @@
     left: auto !important;
     transform: scale(var(--orbit-scale, 0.68)) !important;
     transform-origin: center center !important;
-    margin-top: -30px !important;
+    margin-top: 10px !important;
     margin-bottom: -30px !important;
   }
 }
 
 @media (max-width: 767px) {
   .sec-continuum {
-    --orbit-scale: 0.58;
+    --orbit-scale: 0.72;
     --connector-offset: 150px;
   }
 
   .sec-continuum .container {
-    padding-top: 50px;
+    padding-top: 85px;
     padding-bottom: 20px;
   }
 
@@ -700,9 +700,9 @@
   }
 
   .sec-continuum__orbit-wrap {
-    transform: scale(var(--orbit-scale, 0.58)) !important;
-    margin-top: -30px !important;
-    margin-bottom: -30px !important;
+    transform: scale(var(--orbit-scale, 0.72)) !important;
+    margin-top: 15px !important;
+    margin-bottom: 0px !important;
   }
 
   /* Node absolute anchor preservation */
@@ -711,10 +711,16 @@
     display: block !important;
   }
 
-  /* Common node text base styling */
+  /* Common node text base styling & transform reset for animation/visited states */
+  .sec-continuum.slide-animated .node-text,
+  .sec-continuum.visited .node-text,
+  .sec-continuum__node .node-text {
+    transform: none !important;
+  }
+
   .sec-continuum__node .node-text {
     position: absolute !important;
-    width: 120px !important;
+    width: 130px !important;
     white-space: normal !important;
     box-sizing: border-box !important;
   }
@@ -724,7 +730,6 @@
   .node-bottom-left .node-text {
     right: 50% !important;
     left: auto !important;
-    transform: none !important;
     text-align: right !important;
     align-items: flex-end !important;
   }
@@ -734,24 +739,25 @@
   .node-bottom-right .node-text {
     left: 50% !important;
     right: auto !important;
-    transform: none !important;
     text-align: left !important;
     align-items: flex-start !important;
   }
 
-  /* 3. TOP NODES (01 & 02): Anchored exactly 10px above top circle edge (130px + 10px) */
+  /* 3. TOP NODES (01 & 02): Anchored above top circle edge */
   .node-top-left .node-text,
   .node-top-right .node-text {
-    bottom: 140px !important;
+    bottom: 100% !important;
     top: auto !important;
+    margin-bottom: 8px !important;
     height: auto !important;
   }
 
-  /* 4. BOTTOM NODES (03 & 04): Anchored exactly 10px below bottom circle edge (130px + 10px) */
+  /* 4. BOTTOM NODES (03 & 04): Anchored below bottom circle edge */
   .node-bottom-left .node-text,
   .node-bottom-right .node-text {
-    top: 140px !important;
+    top: 100% !important;
     bottom: auto !important;
+    margin-top: 8px !important;
     height: auto !important;
   }
 
@@ -779,7 +785,6 @@
 
 @media (max-width: 480px) {
   .sec-continuum {
-    --orbit-scale: 0.52;
+    --orbit-scale: 0.68;
   }
 }
-

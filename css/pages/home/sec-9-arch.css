@@ -184,10 +184,10 @@
   .sec-9 .flex-center-v {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100dvh;
-    padding-top: 60px;
+    padding-top: 85px;
     padding-bottom: 20px;
     position: relative;
   }
@@ -211,13 +211,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto 0;
+    margin: 0;
   }
 
-  /* 3D Visual Graphic Anchored at Bottom Edge */
+  /* 3D Visual Graphic Anchored below Bottom Edge */
   .sec-9__right {
     position: absolute !important;
-    bottom: 0 !important;
+    bottom: -20px !important;
     left: 50% !important;
     right: auto !important;
     top: auto !important;
@@ -234,7 +234,7 @@
 
   .sec-9.slide-animated .sec-9__right,
   .sec-9.visited .sec-9__right {
-    opacity: 0.35 !important;
+    opacity: 1 !important;
     transform: translateX(-50%) translateY(0) !important;
     transition-delay: 0.25s !important;
   }
@@ -266,7 +266,10 @@
     margin-inline: auto;
   }
 
+  .sec-9__right,
   .sec-9__img {
-    max-width: 280px !important;
+    max-width: 400px !important;
+    width: 100% !important;
+    opacity: 1 !important;
   }
 }

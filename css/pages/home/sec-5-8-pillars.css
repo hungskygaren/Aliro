@@ -745,21 +745,35 @@
   transition: color 0.3s ease !important;
 }
 
+.sec-5__title .line-desktop,
+.sec-6__title .line-desktop,
+.sec-7__title .line-desktop,
+.sec-8__title .line-desktop {
+  display: block;
+}
+
 /* ==========================================================================
    Sections 5, 6, 7, 8 Pillars Responsive Rules (<= 991px & <= 767px)
    ========================================================================== */
 @media (max-width: 991px) {
-  /* 1. Centered Container Flexbox */
+  .sec-5__title .line-desktop,
+  .sec-6__title .line-desktop,
+  .sec-7__title .line-desktop,
+  .sec-8__title .line-desktop {
+    display: inline;
+  }
+
+  /* 1. Upper-Third Container Flexbox */
   .sec-5 .container,
   .sec-6 .container,
   .sec-7 .container,
   .sec-8 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100dvh;
-    padding-top: 60px;
+    padding-top: 85px;
     padding-bottom: 20px;
     position: relative;
   }
@@ -780,7 +794,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto 0;
+    margin: 0;
   }
 
   /* 3. 3D Visual Graphics Mobile Initial State: 100% height hidden below bottom edge */
@@ -813,7 +827,7 @@
   .sec-6.visited .sec-6__img-left,
   .sec-7.visited .sec-7__img-right,
   .sec-8.visited .sec-8__img-left {
-    opacity: 0.35 !important;
+    opacity: 1 !important;
     transform: translateX(-50%) translateY(0) !important;
     transition-delay: 0.25s !important;
   }
@@ -876,11 +890,29 @@
     margin-inline: auto;
   }
 
-  .sec-5__img-right,
-  .sec-6__img-left,
-  .sec-7__img-right,
+  .sec-5__img-right {
+    left: 52% !important;
+    max-width: 400px !important;
+    width: 95% !important;
+    opacity: 1 !important;
+  }
+
+  .sec-6__img-left {
+    max-width: 400px !important;
+    width: 95% !important;
+    bottom: 50px !important;
+    opacity: 1 !important;
+  }
+
+  .sec-7__img-right {
+    max-width: 400px !important;
+    width: 85% !important;
+    opacity: 1 !important;
+  }
+
   .sec-8__img-left {
-    max-width: 280px !important;
-    opacity: 0.35 !important;
+    max-width: 400px !important;
+    width: 95% !important;
+    opacity: 1 !important;
   }
 }
