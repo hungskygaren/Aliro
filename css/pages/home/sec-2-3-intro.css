@@ -544,6 +544,7 @@
   .sec-architect__img {
     max-width: 400px !important;
     width: 100% !important;
+    bottom: 50px !important;
     opacity: 1 !important;
   }
 
@@ -551,6 +552,7 @@
     left: 54% !important;
     max-width: 400px !important;
     width: 100% !important;
+    bottom: 50px !important;
     opacity: 1 !important;
   }
 }

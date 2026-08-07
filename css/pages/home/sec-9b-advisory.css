@@ -338,7 +338,7 @@
     scroll-snap-align: start !important;
     background: #ffffff !important;
     border: 1px solid #c5daf3 !important;
-    border-radius: 12px !important;
+    border-radius: 0 !important;
     padding: 16px !important;
     box-sizing: border-box !important;
     display: flex !important;
@@ -352,7 +352,7 @@
     aspect-ratio: 3 / 2;
     margin-bottom: 12px;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 0 !important;
     flex-shrink: 0;
   }
 

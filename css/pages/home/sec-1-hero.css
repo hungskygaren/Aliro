@@ -344,17 +344,10 @@
     max-width: 100%;
   }
 
-  /* Scale down cliffs for mobile screen */
-  .sec-hero__cliff--left {
-    width: 42%;
-    max-width: 170px;
-    opacity: 0.8;
-  }
-
+  /* Temporarily hide side cliff graphics on mobile screen */
+  .sec-hero__cliff--left,
   .sec-hero__cliff--right {
-    width: 42%;
-    max-width: 170px;
-    opacity: 0.8;
+    display: none !important;
   }
 
   .btn-hero-cta {
