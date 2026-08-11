@@ -424,7 +424,7 @@
     min-height: 100dvh;
     height: auto !important;
     position: relative;
-    padding-top: 85px;
+    padding-top: 100px;
     padding-bottom: 30px;
     box-sizing: border-box;
     gap: 0;
@@ -505,7 +505,7 @@
 @media (max-width: 767px) {
   .sec-architect .container,
   .sec-framework .container {
-    padding-top: 85px;
+    padding-top: 100px;
     padding-bottom: 30px;
   }
 

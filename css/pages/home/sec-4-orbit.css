@@ -728,7 +728,7 @@
   /* 1. NODE 01 & 04 (Left Column): Right-aligned text starting at 50% center axis */
   .node-top-left .node-text,
   .node-bottom-left .node-text {
-    right: 30% !important;
+    right: 15% !important;
     left: auto !important;
     text-align: right !important;
     align-items: flex-end !important;
@@ -737,7 +737,7 @@
   /* 2. NODE 02 & 03 (Right Column): Left-aligned text starting at 50% center axis */
   .node-top-right .node-text,
   .node-bottom-right .node-text {
-    left: 30% !important;
+    left: 15% !important;
     right: auto !important;
     text-align: left !important;
     align-items: flex-start !important;
