@@ -113,6 +113,14 @@ document.addEventListener("DOMContentLoaded", () => {
       },
 
       // Called as soon as a slide transition starts
+      slideChangeTransitionStart: function () {
+        if (this.activeIndex === 2 && window.innerWidth <= 991) {
+          const goingDown = this.previousIndex < 2;
+          this.slideTo(goingDown ? 3 : 1, 850);
+        }
+      },
+
+      // Called as soon as a slide transition starts
       slideChange: function () {
         updateActiveState(this.activeIndex);
 
@@ -150,10 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
               const goingDown = this.previousIndex < 2;
               runSec2bPauseTransition(goingDown);
             }
-          } else {
-            // Mobile: skip section-2b completely (Section 2 <-> Section 3 direct transition)
-            const goingDown = this.previousIndex < 2;
-            this.slideTo(goingDown ? 3 : 1, 850);
           }
           return;
         }
