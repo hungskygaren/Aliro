@@ -678,7 +678,7 @@
   }
 
   .sec-continuum .container {
-    padding-top: 85px;
+    padding-top: 70px;
     padding-bottom: 20px;
   }
 
@@ -688,14 +688,14 @@
   }
 
   .sec-continuum__tag {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 20px;
     margin-bottom: 4px;
   }
 
   .sec-continuum__title {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 30px;
   }
 
   .sec-continuum__orbit-wrap {
@@ -728,7 +728,7 @@
   /* 1. NODE 01 & 04 (Left Column): Right-aligned text starting at 50% center axis */
   .node-top-left .node-text,
   .node-bottom-left .node-text {
-    right: 15% !important;
+    right: 8% !important;
     left: auto !important;
     text-align: right !important;
     align-items: flex-end !important;
@@ -737,7 +737,7 @@
   /* 2. NODE 02 & 03 (Right Column): Left-aligned text starting at 50% center axis */
   .node-top-right .node-text,
   .node-bottom-right .node-text {
-    left: 15% !important;
+    left: 8% !important;
     right: auto !important;
     text-align: left !important;
     align-items: flex-start !important;
@@ -763,24 +763,24 @@
 
   /* Text Font Size & Spacing Adjustments for Mobile */
   .node-num {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+
+  .node-title {
     font-size: 18px !important;
     line-height: 22px !important;
   }
 
-  .node-title {
+  .node-sub {
     font-size: 16px !important;
     line-height: 20px !important;
-  }
-
-  .node-sub {
-    font-size: 15px !important;
-    line-height: 19px !important;
     white-space: nowrap !important;
   }
 
   .sec-continuum__center-text {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
   }
 }
 
