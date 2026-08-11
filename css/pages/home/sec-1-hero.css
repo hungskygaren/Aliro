@@ -28,7 +28,7 @@
 
 .sec-hero__cliff--left {
   left: 0;
-  background-image: url("../../../assets/hero-bg-left.png");
+  background-image: url("../../../assets/hero-bg-left.webp");
   background-position: left bottom;
   width: 37.64%; /* 542px / 1440px */
   height: 70.8333%; /* 510px / 720px */
@@ -39,7 +39,7 @@
 
 .sec-hero__cliff--right {
   right: 0;
-  background-image: url("../../../assets/hero-bg-right.png");
+  background-image: url("../../../assets/hero-bg-right.webp");
   background-position: right bottom;
   width: 38.68%; /* 557px / 1440px */
   height: 70.6944%; /* 509px / 720px */

@@ -29,14 +29,16 @@
     <!-- Preload Hero Background Images for instant animation -->
     <link
       rel="preload"
-      href="assets/hero-bg-left.png"
+      href="assets/hero-bg-left.webp"
       as="image"
+      type="image/webp"
       fetchpriority="high"
     />
     <link
       rel="preload"
-      href="assets/hero-bg-right.png"
+      href="assets/hero-bg-right.webp"
       as="image"
+      type="image/webp"
       fetchpriority="high"
     />
   </head>
@@ -51,7 +53,7 @@
           aria-label="Aliro Consulting Home"
         >
           <img
-            src="assets/logo.png"
+            src="assets/logo.webp"
             alt="Aliro Consulting Logo"
             class="logo-img"
           />
@@ -148,12 +150,12 @@
             <!-- Mobile Dedicated Graphic Block (Flowing directly below content like Section 2 & 3) -->
             <div class="sec-hero__img-mobile">
               <img
-                src="assets/hero-mb-bg-left.png"
+                src="assets/hero-mb-bg-left.webp"
                 alt="Aliro Hero Graphic Left"
                 class="hero-mb-img hero-mb-img--left"
               />
               <img
-                src="assets/hero-mb-bg-right.png"
+                src="assets/hero-mb-bg-right.webp"
                 alt="Aliro Hero Graphic Right"
                 class="hero-mb-img hero-mb-img--right"
               />
@@ -221,7 +223,7 @@
 
             <!-- Right Column: Isometric Visual Graphic (53.47vw / 770px) -->
             <img
-              src="assets/sec-2-right.png"
+              src="assets/sec-2-right.webp"
               alt="Aliro Architectural Transformation Layers"
               class="sec-architect__img"
             />
@@ -240,7 +242,7 @@
                 <!-- Column 1: 25+ Years Experience -->
                 <div class="sec-2b__col phrase">
                   <div class="sec-2b__icon-wrapper">
-                    <img src="assets/sec-2b-icon-1.png" alt="25+ Years of Experience" class="sec-2b__icon" />
+                    <img src="assets/sec-2b-icon-1.webp" alt="25+ Years of Experience" class="sec-2b__icon" />
                   </div>
                   <h3 class="sec-2b__item-title">25+ YEARS OF HEALTHCARE<br>ADVISORY EXPERIENCE</h3>
                   <p class="sec-2b__item-desc">
@@ -251,7 +253,7 @@
                 <!-- Column 2: 11 ASEAN Member States -->
                 <div class="sec-2b__col phrase">
                   <div class="sec-2b__icon-wrapper">
-                    <img src="assets/sec-2b-icon-2.png" alt="11 ASEAN Member States" class="sec-2b__icon" />
+                    <img src="assets/sec-2b-icon-2.webp" alt="11 ASEAN Member States" class="sec-2b__icon" />
                   </div>
                   <h3 class="sec-2b__item-title">PRESENCE ACROSS<br>11 ASEAN MEMBER STATES</h3>
                   <p class="sec-2b__item-desc">
@@ -262,7 +264,7 @@
                 <!-- Column 3: Trusted by Leading Organisations -->
                 <div class="sec-2b__col phrase">
                   <div class="sec-2b__icon-wrapper">
-                    <img src="assets/sec-2b-icon-3.png" alt="Trusted by Leading Organisations" class="sec-2b__icon" />
+                    <img src="assets/sec-2b-icon-3.webp" alt="Trusted by Leading Organisations" class="sec-2b__icon" />
                   </div>
                   <h3 class="sec-2b__item-title">TRUSTED ACROSS THE<br>HEALTHCARE ECOSYSTEM</h3>
                   <p class="sec-2b__item-desc">
@@ -273,7 +275,7 @@
                 <!-- Column 4: Two Operating Entities -->
                 <div class="sec-2b__col phrase">
                   <div class="sec-2b__icon-wrapper">
-                    <img src="assets/sec-2b-icon-4.png" alt="Two Operating Entities" class="sec-2b__icon" />
+                    <img src="assets/sec-2b-icon-4.webp" alt="Two Operating Entities" class="sec-2b__icon" />
                   </div>
                   <h3 class="sec-2b__item-title">TWO OPERATING ENTITIES<br>HONG KONG &amp; VIETNAM</h3>
                   <p class="sec-2b__item-desc">
@@ -294,9 +296,10 @@
           <div class="container">
             <!-- Left Column: Isometric Visual Graphic (Direct Image Grid Bleed Anchored to Column 6) -->
             <img
-              src="assets/sec-3-left.png"
+              src="assets/sec-3-left.webp"
               alt="Aliro System Transformation Architecture"
               class="sec-framework__img"
+              loading="lazy"
             />
 
             <div class="sec-framework__content d-flex flex-col">
@@ -353,9 +356,10 @@
 
               <!-- Central Concept Image sec-4-center.png -->
               <img
-                src="assets/sec-4-center.png"
+                src="assets/sec-4-center.webp"
                 alt="Aliro Central Concept"
                 class="sec-continuum__center-img"
+                loading="lazy"
               />
 
               <!-- Center Text inside Orbit Ring -->
@@ -705,9 +709,10 @@
 
             <!-- Right Visual Bleed Image (Positioned Absolute at Column 6 with 50% Y-centering) -->
             <img
-              src="assets/sec-5-visual.png"
+              src="assets/sec-5-visual.webp"
               class="sec-5__img-right"
               alt="Market Intelligence Visual"
+              loading="lazy"
             />
           </div>
         </section>
@@ -777,9 +782,10 @@
             </div>
 
             <img
-              src="assets/sec-6-visual.png"
+              src="assets/sec-6-visual.webp"
               class="sec-6__img-left"
               alt="Operational Intelligence Visual"
+              loading="lazy"
             />
           </div>
         </section>
@@ -851,9 +857,10 @@
 
             <!-- Right Image (Full Bleed to 100vw Screen Edge) -->
             <img
-              src="assets/sec-7-visual.png"
+              src="assets/sec-7-visual.webp"
               class="sec-7__img-right"
               alt="Digital Intelligence Visual"
+              loading="lazy"
             />
           </div>
         </section>
@@ -924,9 +931,10 @@
             </div>
 
             <img
-              src="assets/sec-8-visual.png"
+              src="assets/sec-8-visual.webp"
               class="sec-8__img-left"
               alt="Capacity & Capability Visual"
+              loading="lazy"
             />
           </div>
         </section>
@@ -967,9 +975,10 @@
               <!-- Right Column: Visual Image -->
               <div class="sec-9__right col-start-6 col-span-7">
                 <img
-                  src="assets/sec-9-right.png"
+                  src="assets/sec-9-right.webp"
                   class="sec-9__img phrase"
                   alt="The Completed Architecture Visual"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -998,7 +1007,7 @@
                 <!-- Card 1: Strategic and Market Intelligence -->
                 <div class="sec-9b__card phrase">
                   <div class="sec-9b__card-img-wrapper">
-                    <img src="assets/sec-9b-card-1.png" alt="Strategic &amp; Market Intelligence" class="sec-9b__card-img" />
+                    <img src="assets/sec-9b-card-1.webp" alt="Strategic &amp; Market Intelligence" class="sec-9b__card-img" loading="lazy" />
                   </div>
                   <div class="sec-9b__card-body">
                     <h3 class="sec-9b__card-title">STRATEGIC AND MARKET INTELLIGENCE</h3>
@@ -1017,7 +1026,7 @@
                 <!-- Card 2: Transformation Advisory -->
                 <div class="sec-9b__card phrase">
                   <div class="sec-9b__card-img-wrapper">
-                    <img src="assets/sec-9b-card-2.png" alt="Transformation Advisory" class="sec-9b__card-img" />
+                    <img src="assets/sec-9b-card-2.webp" alt="Transformation Advisory" class="sec-9b__card-img" />
                   </div>
                   <div class="sec-9b__card-body">
                     <h3 class="sec-9b__card-title">TRANSFORMATION ADVISORY</h3>
@@ -1036,7 +1045,7 @@
                 <!-- Card 3: Digital and Capability Advisory -->
                 <div class="sec-9b__card phrase">
                   <div class="sec-9b__card-img-wrapper">
-                    <img src="assets/sec-9b-card-3.png" alt="Digital &amp; Capability Advisory" class="sec-9b__card-img" />
+                    <img src="assets/sec-9b-card-3.webp" alt="Digital &amp; Capability Advisory" class="sec-9b__card-img" />
                   </div>
                   <div class="sec-9b__card-body">
                     <h3 class="sec-9b__card-title">DIGITAL AND CAPABILITY ADVISORY</h3>
@@ -1062,7 +1071,7 @@
           id="section-10"
           data-section-index="9"
         >
-          <img src="assets/sec-10-decor.png" alt="" class="sec-10__decor" />
+                    <img src="assets/sec-10-decor.webp" alt="" class="sec-10__decor" loading="lazy" />
           <div class="container height-100 flex-center-v">
             <div class="sec-10__grid grid-12">
               <!-- Left Column: Messages, Email & CTA Button -->

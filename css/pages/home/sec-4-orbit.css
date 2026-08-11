@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   background-image:
-    url("../../../assets/sec-4-bg.png"),
+    url("../../../assets/sec-4-bg.webp"),
     radial-gradient(50% 50% at 50% 50%, #1e55b3 0%, #01103b 100%) !important;
   background-position: center center;
   background-size: cover;
