@@ -273,7 +273,7 @@
 .node-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
   user-select: none;
   opacity: 0;
   z-index: 5; /* Ensure text renders on top of circle button */
@@ -332,7 +332,6 @@
     "liga" off,
     "clig" off;
   font-style: normal;
-  margin-bottom: 2px;
 }
 
 .node-sub {
@@ -720,15 +719,16 @@
 
   .sec-continuum__node .node-text {
     position: absolute !important;
-    width: 130px !important;
+    width: 150px !important;
     white-space: normal !important;
     box-sizing: border-box !important;
+    gap: 2px !important;
   }
 
   /* 1. NODE 01 & 04 (Left Column): Right-aligned text starting at 50% center axis */
   .node-top-left .node-text,
   .node-bottom-left .node-text {
-    right: 32% !important;
+    right: 30% !important;
     left: auto !important;
     text-align: right !important;
     align-items: flex-end !important;
@@ -737,7 +737,7 @@
   /* 2. NODE 02 & 03 (Right Column): Left-aligned text starting at 50% center axis */
   .node-top-right .node-text,
   .node-bottom-right .node-text {
-    left: 32% !important;
+    left: 30% !important;
     right: auto !important;
     text-align: left !important;
     align-items: flex-start !important;
@@ -761,25 +761,26 @@
     height: auto !important;
   }
 
-  /* Text Font Size Reductions */
+  /* Text Font Size & Spacing Adjustments for Mobile */
   .node-num {
-    font-size: 16px !important;
-    line-height: 15px !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
   }
 
   .node-title {
-    font-size: 14px !important;
-    line-height: 13px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
   }
 
   .node-sub {
-    font-size: 13px !important;
-    line-height: 12px !important;
+    font-size: 15px !important;
+    line-height: 19px !important;
+    white-space: nowrap !important;
   }
 
   .sec-continuum__center-text {
-    font-size: 14px !important;
-    line-height: 18px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
   }
 }
 
