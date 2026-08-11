@@ -401,22 +401,25 @@
     height: 60% !important;
   }
 
+  .sec-10 .container,
   .sec-10 .flex-center-v {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    height: 100dvh;
-    padding-top: 85px;
-    padding-bottom: 16px;
+    min-height: 100dvh;
+    height: auto !important;
+    padding-top: 75px;
+    padding-bottom: 24px;
     box-sizing: border-box;
+    position: relative;
   }
 
   .sec-10__grid {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px !important;
+    gap: 20px !important;
     width: 100%;
     margin: 0;
   }

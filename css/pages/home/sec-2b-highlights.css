@@ -76,27 +76,35 @@
 }
 
 .sec-2b__item-title {
-  color: #ffffff;
+  color: var(--White, #ffffff);
+  text-align: center;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 20px;
+  font-style: normal;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
-  text-align: center;
-  margin: 0 0 10px 0; /* cách dưới 10px */
-  min-height: 56px; /* Đúng 2 dòng (28px * 2) để tất cả đoạn mô tả phẳng hàng 100% */
+  margin: 0 0 10px 0;
+  min-height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .sec-2b__item-desc {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--White, #ffffff);
+  text-align: center;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 24px;
-  text-align: center;
+  line-height: normal;
   margin: 0;
   max-width: 270px;
 }

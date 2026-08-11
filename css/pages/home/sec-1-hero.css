@@ -48,6 +48,10 @@
   aspect-ratio: 836 / 764;
 }
 
+.sec-hero__img-mobile {
+  display: none;
+}
+
 .sec-hero__content {
   position: relative;
   z-index: 3;
@@ -56,7 +60,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 16.9444vh; /* 122px / 720px = 16.9444% height */
+  padding-top: 20.5556vh; /* 148px / 720px = 20.5556% height */
   padding-bottom: 0;
   margin-top: 0;
   margin-bottom: auto;
@@ -85,18 +89,18 @@
 }
 
 .sec-hero__title {
-  font-family: var(--font-brand);
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 60px;
   color: var(--Midnight-Navy, #01103b);
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 44px;
   font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0;
   margin-top: 2px;
   margin-bottom: 0;
   width: 100%;
@@ -133,7 +137,7 @@
   font-style: normal;
   margin-top: 20px;
   margin-bottom: 0;
-  max-width: 660px;
+  max-width: 570px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -275,14 +279,28 @@
     display: inline;
   }
 
-  .sec-hero {
-    padding-top: 0;
+  .sec-hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    height: auto !important;
+    padding-top: 75px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    position: relative;
   }
 
   .sec-hero__content {
-    padding-top: 85px !important;
-    padding-bottom: 80px;
-    padding-inline: 24px;
+    position: relative;
+    z-index: 3 !important;
+    width: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-inline: 0 !important;
   }
 
   .sec-hero__sub-top {
@@ -318,10 +336,9 @@
 }
 
 @media (max-width: 767px) {
-  .sec-hero__content {
-    padding-top: 85px !important;
-    padding-bottom: 85px;
-    padding-inline: 0 !important;
+  .sec-hero .container {
+    padding-top: 75px;
+    padding-bottom: 30px;
   }
 
   .sec-hero__sub-top {
@@ -344,25 +361,46 @@
     max-width: 100%;
   }
 
-  /* Mobile side cliff graphics (Shifted 50% of width outside screen edges, 20% bottom offset) */
-  .sec-hero__cliff--left {
-    display: block !important;
-    background-image: url("../../../assets/hero-mb-bg-left.png");
-    width: 70%;
-    max-width: none;
-    max-height: none;
-    left: -20%;
-    bottom: 10%;
+  /* Hide Desktop background cliffs on mobile */
+  .sec-hero__cliff--left,
+  .sec-hero__cliff--right {
+    display: none !important;
   }
 
-  .sec-hero__cliff--right {
-    display: block !important;
-    background-image: url("../../../assets/hero-mb-bg-right.png");
-    width: 70%;
-    max-width: none;
-    max-height: none;
-    right: -20%;
-    bottom: 10%;
+  /* Mobile dedicated graphic block flowing directly 24px below content block like Section 2 & 3 */
+  .sec-hero__img-mobile {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100% !important;
+    max-width: 380px !important;
+    height: auto !important;
+    margin-top: 24px !important;
+    margin-inline: auto !important;
+    order: 2 !important;
+    z-index: 2 !important;
+    position: relative !important;
+    opacity: 0 !important;
+    transform: translateY(60px) !important;
+    transition:
+      opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .hero-mb-img {
+    width: 48%;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .sec-hero.slide-animated .sec-hero__img-mobile,
+  .sec-hero.visited .sec-hero__img-mobile {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition-delay: 0.25s !important;
   }
 
   .btn-hero-cta {
@@ -370,6 +408,16 @@
     margin-inline: auto !important;
     width: fit-content !important;
     padding: 10px 18px !important;
+  }
+
+  /* Mobile Scroll Down Button size reduction */
+  .sec-hero .scroll-down-text {
+    font-size: 12px;
+  }
+
+  .sec-hero .scroll-down-icon {
+    width: 18px;
+    height: 18px;
   }
 }
 

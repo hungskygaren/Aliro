@@ -271,16 +271,36 @@
 
 @media (max-width: 768px) {
   .sec-9b .container {
-    padding-top: 85px; /* Clear mobile header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    height: auto !important;
+    padding-top: 75px;
     padding-bottom: 30px;
-    height: 100%;
     box-sizing: border-box;
+    position: relative;
+  }
+
+  .sec-9b__wrapper {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .sec-9b__header {
     margin-bottom: 16px;
     padding-left: 8px !important;
     padding-right: 8px !important;
+    width: 100%;
+    text-align: center;
   }
 
   .sec-9b__tag {
@@ -312,8 +332,10 @@
     -webkit-overflow-scrolling: touch !important;
     gap: 16px !important;
     width: 100% !important;
-    margin-left: 8px !important;
+    margin-left: 0 !important;
+    padding-inline: 16px !important;
     padding-bottom: 10px !important;
+    box-sizing: border-box !important;
     scrollbar-width: none !important; /* Firefox */
   }
 
@@ -328,11 +350,11 @@
     pointer-events: none !important;
   }
 
-  /* Mobile Horizontal Card (Card 1 occupies 70% width, Card 2 peeks cleanly) */
+  /* Mobile Horizontal Card (Card 1 occupies 85% width, 15% peeks cleanly) */
   .sec-9b__card {
-    flex: 0 0 75% !important;
-    width: 75% !important;
-    max-width: 290px !important;
+    flex: 0 0 85% !important;
+    width: 85% !important;
+    max-width: 330px !important;
     height: auto !important;
     aspect-ratio: auto !important;
     scroll-snap-align: start !important;

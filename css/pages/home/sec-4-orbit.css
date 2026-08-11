@@ -147,17 +147,17 @@
 }
 
 .sec-continuum__title {
-  font-family: Aptos, var(--font-family);
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 32px;
-  color: #ffffff !important;
+  color: var(--White, #ffffff) !important;
   text-align: center;
-  text-transform: none;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
   font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: none;
 }
 
 /* 3.1 Bottom Subtitle Text Block (Below Orbit Ring, 42px offset) */

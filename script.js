@@ -143,11 +143,17 @@ document.addEventListener("DOMContentLoaded", () => {
       slideChangeTransitionEnd: function () {
         if (!this.slides) return;
 
-        // Pause on section-2b (index 2): when Swiper lands here via touch swipe, run intermediate pause transition
+        // Pause on section-2b (index 2): when Swiper lands here via touch swipe on desktop, run intermediate pause transition
         if (this.activeIndex === 2) {
-          if (!isPausingOnSec2b) {
+          if (window.innerWidth > 991) {
+            if (!isPausingOnSec2b) {
+              const goingDown = this.previousIndex < 2;
+              runSec2bPauseTransition(goingDown);
+            }
+          } else {
+            // Mobile: skip section-2b completely (Section 2 <-> Section 3 direct transition)
             const goingDown = this.previousIndex < 2;
-            runSec2bPauseTransition(goingDown);
+            this.slideTo(goingDown ? 3 : 1, 850);
           }
           return;
         }
@@ -306,25 +312,29 @@ document.addEventListener("DOMContentLoaded", () => {
       const current = swiper.activeIndex;
       const delta = e.deltaY;
       const isSec2Transition =
-        (current === 1 && delta > 0) ||
-        (current === 3 && delta < 0) ||
-        isPausingOnSec2b;
+        (current === 1 && delta > 0) || (current === 3 && delta < 0);
 
       if (isPausingOnSec2b) {
         resumeFromSec2bToSection3(delta > 0 ? 3 : 1);
       } else if (delta > 0) {
         // Scrolling DOWN
         if (current === 1) {
-          // From Section 2 → pause with Section 2b centered → land on Section 3
-          runSec2bPauseTransition(true);
+          if (window.innerWidth > 991) {
+            runSec2bPauseTransition(true);
+          } else {
+            swiper.slideTo(3, 850);
+          }
         } else {
           swiper.slideNext(650);
         }
       } else if (delta < 0) {
         // Scrolling UP
         if (current === 3) {
-          // From Section 3 → pause with Section 2b centered → land on Section 2
-          runSec2bPauseTransition(false);
+          if (window.innerWidth > 991) {
+            runSec2bPauseTransition(false);
+          } else {
+            swiper.slideTo(1, 850);
+          }
         } else {
           swiper.slidePrev(650);
         }
@@ -334,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
         () => {
           wheelLocked = false;
         },
-        isSec2Transition ? 850 : 800,
+        isSec2Transition ? 950 : 800,
       );
     },
     { passive: true },
@@ -354,7 +364,11 @@ document.addEventListener("DOMContentLoaded", () => {
         isPausingOnSec2b = false;
         swiper.slideTo(3, 650);
       } else if (current === 1) {
-        runSec2bPauseTransition(true);
+        if (window.innerWidth > 991) {
+          runSec2bPauseTransition(true);
+        } else {
+          swiper.slideTo(3, 850);
+        }
       } else {
         swiper.slideNext(650);
       }
@@ -365,7 +379,11 @@ document.addEventListener("DOMContentLoaded", () => {
         isPausingOnSec2b = false;
         swiper.slideTo(1, 650);
       } else if (current === 3) {
-        runSec2bPauseTransition(false);
+        if (window.innerWidth > 991) {
+          runSec2bPauseTransition(false);
+        } else {
+          swiper.slideTo(1, 850);
+        }
       } else {
         swiper.slidePrev(650);
       }
@@ -386,9 +404,17 @@ document.addEventListener("DOMContentLoaded", () => {
       swiper.slideTo(targetIndex, 650);
     } else if (distance === 2) {
       if (currentIndex === 1 && targetIndex === 3) {
-        runSec2bPauseTransition(true);
+        if (window.innerWidth > 991) {
+          runSec2bPauseTransition(true);
+        } else {
+          swiper.slideTo(3, 850);
+        }
       } else if (currentIndex === 3 && targetIndex === 1) {
-        runSec2bPauseTransition(false);
+        if (window.innerWidth > 991) {
+          runSec2bPauseTransition(false);
+        } else {
+          swiper.slideTo(1, 850);
+        }
       } else {
         swiper.slideTo(targetIndex, 650);
       }
