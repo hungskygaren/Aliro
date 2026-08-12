@@ -26,6 +26,7 @@
 }
 
 /* Orbit & Grid Central Wrapper (440px x 440px Figma Standard) */
+/* === CODE CŨ (Absolute positioning theo % dvh) ===
 .sec-continuum__orbit-wrap {
   position: absolute;
   top: 28.333dvh;
@@ -37,6 +38,18 @@
   align-items: center;
   transform: translateX(-50%) scale(var(--orbit-scale, 1));
   transform-origin: top center;
+}
+================================================= */
+/* === CODE MỚI (Relative Flexbox căn giữa tự nhiên mọi màn hình) === */
+.sec-continuum__orbit-wrap {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(var(--orbit-scale, 1));
+  transform-origin: center center;
 }
 
 /* 550x550 Luminous Glow Background Layer behind 440px Orbit ring */
@@ -119,15 +132,25 @@
   opacity: 1 !important;
 }
 
-/* 3. Top Title Text Block (Above Orbit Ring, 99px from section top) */
+/* 3. Top Title Text Block (Flexbox relative flow above Orbit Ring) */
+/* === CODE CŨ (Absolute positioning theo % dvh) ===
 .sec-continuum__top-text {
   position: absolute;
   left: 50%;
-  top: 13.75dvh; /* Fluid percentage scaling: exactly 99px at 720px height (99 / 720 = 13.75%) */
+  top: 13.75dvh;
   transform: translateX(-50%);
   text-align: center;
   z-index: 10;
   white-space: nowrap;
+}
+================================================= */
+/* === CODE MỚI (Relative Flexbox căn giữa tự nhiên mọi màn hình) === */
+.sec-continuum__top-text {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  white-space: nowrap;
+  margin-bottom: 24px;
 }
 
 .sec-continuum__tag {

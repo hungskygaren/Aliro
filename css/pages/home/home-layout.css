@@ -14,8 +14,8 @@
 
 /* Slide Background Colors & Dynamic Transition Specs */
 .sec-hero {
-  background-color: #c5daf3;
-  transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  background: radial-gradient(50% 50% at 50% 50%, #1E55B3 20%, #01103B 100%);
+  transition: background 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .sec-continuum,
 .sec-6,

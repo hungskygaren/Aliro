@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------------------------
   function updateActiveState(index) {
     // Header theme switching: Light vs Dark Header
-    const isDarkThemeGroup = [0, 1, 3, 5, 10, 11].includes(index);
+    const isDarkThemeGroup = [1, 3, 5, 10, 11].includes(index);
 
     if (isDarkThemeGroup) {
       if (mainHeader) mainHeader.classList.remove("light-theme");
