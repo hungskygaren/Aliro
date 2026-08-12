@@ -191,8 +191,18 @@ document.addEventListener("DOMContentLoaded", () => {
       if (mainHeader) mainHeader.classList.add("light-theme");
     }
 
-    // Keep 'Home' (#section-1) permanently active as this is a single landing page
-    const activeNavHref = "#section-1";
+    // Active Nav Link highlighting based on current slide index
+    let activeNavHref = "#section-1";
+    if (index === 4) {
+      activeNavHref = "#section-4";
+    } else if ([5, 6, 7, 8, 10].includes(index)) {
+      activeNavHref = "#section-9b";
+    } else if ([1, 2, 3, 9].includes(index)) {
+      activeNavHref = "#section-2";
+    } else if (index === 11) {
+      activeNavHref = "#section-10";
+    }
+
     navItems.forEach((navItem) => {
       navItem.classList.toggle(
         "active",
