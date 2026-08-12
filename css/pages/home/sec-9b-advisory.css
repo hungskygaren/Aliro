@@ -113,7 +113,7 @@
 .sec-9b__card-img-wrapper {
   width: 100%;
   aspect-ratio: 3 / 2;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -164,7 +164,7 @@
 }
 
 .sec-9b__card-desc {
-  color: var(--Midnight-Navy, #01103B);
+  color: var(--Midnight-Navy, #01103b);
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -180,7 +180,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--Highlight-Blue, #0431B1);
+  color: var(--Highlight-Blue, #0431b1);
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -221,7 +221,7 @@
   transform: translateY(0);
 }
 
-@media (max-height: 650px) and (min-width: 769px) {
+@media (max-height: 720px) and (min-width: 769px) {
   .sec-9b__header {
     margin-bottom: 12px;
   }
@@ -242,7 +242,7 @@
     padding: 14px 16px;
   }
   .sec-9b__card-img-wrapper {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
   .sec-9b__card-title {
     font-size: 18px;
@@ -385,7 +385,7 @@
   .sec-9b__card-img-wrapper {
     width: 100%;
     aspect-ratio: 3 / 2;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     overflow: hidden;
     border-radius: 0 !important;
     flex-shrink: 0;
@@ -408,8 +408,8 @@
   }
 
   .sec-9b__card-title {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 15px;
+    line-height: 20px;
     margin-bottom: 6px;
     color: #01103b;
     font-weight: 700;
