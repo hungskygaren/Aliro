@@ -158,6 +158,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
+  min-height: 44px;
   text-transform: uppercase;
   margin: 0 0 8px 0;
 }
