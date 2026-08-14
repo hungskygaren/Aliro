@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const swiper = new Swiper(".main-swiper", {
     direction: "vertical",
-    initialSlide: 0,
+    initialSlide: initialTargetIndex,
     slidesPerView: 1,
     speed: 750,
     effect: "slide",
@@ -84,10 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const swiperInstance = this;
         updateActiveState(swiperInstance.activeIndex);
 
-        const navigateAndAnimate = () => {
-          if (initialTargetIndex > 0) {
-            swiperInstance.slideTo(initialTargetIndex, 0);
-          }
+        requestAnimationFrame(() => {
           if (
             swiperInstance.slides &&
             swiperInstance.slides[swiperInstance.activeIndex]
@@ -96,15 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
               "slide-animated",
             );
           }
-        };
-
-        if (document.readyState === "complete") {
-          requestAnimationFrame(() => navigateAndAnimate());
-        } else {
-          window.addEventListener("load", () => {
-            requestAnimationFrame(() => navigateAndAnimate());
-          });
-        }
+        });
       },
 
       slideChange: function () {

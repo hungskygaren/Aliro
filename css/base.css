@@ -2,10 +2,18 @@
    1. BASE SYSTEM - Variables, Reset, Swiper Engine & Professional Flexbox Helpers
    ========================================================================== */
 
-/* Self-hosted Aptos Font (Microsoft) — Weights 400 through 700 */
+/* Self-hosted Aptos Font (Microsoft) — Weights 300 through 900 */
 @font-face {
   font-family: "Aptos";
-  src: url("../assets/fonts/Aptos-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Aptos-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aptos";
+  src: url("../assets/fonts/Aptos.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -13,7 +21,7 @@
 
 @font-face {
   font-family: "Aptos";
-  src: url("../assets/fonts/Aptos-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Aptos-SemiBold.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -21,7 +29,7 @@
 
 @font-face {
   font-family: "Aptos";
-  src: url("../assets/fonts/Aptos-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Aptos-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -31,6 +39,22 @@
   font-family: "Aptos";
   src: url("../assets/fonts/Aptos-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aptos";
+  src: url("../assets/fonts/Aptos-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aptos";
+  src: url("../assets/fonts/Aptos-Black.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
