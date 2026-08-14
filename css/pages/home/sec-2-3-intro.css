@@ -68,7 +68,7 @@
 .sec-architect__desc {
   font-family: var(--font-brand);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   color: var(--Midnight-Navy, #01103b);
   font-feature-settings:
@@ -287,7 +287,7 @@
 .sec-framework__desc {
   font-family: var(--font-brand);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   color: var(--Midnight-Navy, #01103b);
   font-feature-settings:

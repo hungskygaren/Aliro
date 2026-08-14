@@ -17,6 +17,10 @@
   background: radial-gradient(50% 50% at 50% 50%, #1E55B3 20%, #01103B 100%);
   transition: background 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
+.sec-2b {
+  background: radial-gradient(50% 50% at 50% 50%, #0E6CC7 0%, #1E61B3 30%, #01103B 100%);
+  transition: background 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
 .sec-continuum,
 .sec-6,
 .sec-8,

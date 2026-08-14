@@ -16,10 +16,9 @@
   box-sizing: border-box;
 }
 
-/* Two side-layered cliff graphics (Left: 813x765, Figma 510px height | Right: 836x764, Figma 509px height) */
+/* Two side-layered cliff graphics (Left: 550x468 | Right: 564x465) */
 .sec-hero__cliff {
   position: absolute;
-  bottom: 0;
   background-repeat: no-repeat;
   background-size: contain;
   pointer-events: none;
@@ -28,24 +27,26 @@
 
 .sec-hero__cliff--left {
   left: 0;
+  bottom: 6.8056%; /* 49px / 720px = 6.8056% */
   background-image: url("../../../assets/hero-bg-left.webp");
   background-position: left bottom;
-  width: 38.01%; /* 547px / 1440px */
-  height: 71.5278%; /* 515px / 720px (Exact 205px top gap) */
-  max-width: 547px;
-  max-height: 515px;
-  aspect-ratio: 813 / 765;
+  width: 38.1944%; /* 550px / 1440px */
+  height: 65%; /* 468px / 720px */
+  max-width: 550px;
+  max-height: 468px;
+  aspect-ratio: 550 / 468;
 }
 
 .sec-hero__cliff--right {
   right: 0;
+  bottom: 6.9444%; /* 50px / 720px = 6.9444% */
   background-image: url("../../../assets/hero-bg-right.webp");
   background-position: right bottom;
-  width: 39.14%; /* 564px / 1440px */
-  height: 71.5278%; /* 515px / 720px (Exact 205px top gap) */
+  width: 39.1667%; /* 564px / 1440px */
+  height: 64.5833%; /* 465px / 720px */
   max-width: 564px;
-  max-height: 515px;
-  aspect-ratio: 836 / 764;
+  max-height: 465px;
+  aspect-ratio: 564 / 465;
 }
 
 .sec-hero__img-mobile {
@@ -127,7 +128,7 @@
 .sec-hero__desc {
   font-family: var(--font-brand);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.4;
   color: #ffffff;
   text-align: center;
