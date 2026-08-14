@@ -4,7 +4,13 @@
 .sec-9 {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(50% 50% at 50% 50%, #1e55b3 0%, #01103b 100%);
+  background: linear-gradient(
+    98deg,
+    #fff 27.99%,
+    #8eaad9 41.97%,
+    #2053a9 51.95%,
+    #01103b 67.93%
+  ) !important;
 }
 
 .sec-9 .flex-center-v {
@@ -23,7 +29,7 @@
 
 .sec-9__left {
   position: absolute;
-  top: 25dvh; /* 180px / 720px = 25% */
+  top: 180px;
   left: 0;
   width: 41.667%;
   grid-column: auto !important;
@@ -66,22 +72,22 @@
 }
 
 .sec-9__tag {
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px;
-  color: #c5daf3;
+  line-height: 24px; /* 100% */
   text-transform: uppercase;
   letter-spacing: 0px;
   margin-bottom: 30px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
 }
 
 .sec-9__title {
-  color: var(--White, #fff);
+  color: var(--Midnight-Navy, #01103b);
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -95,16 +101,16 @@
 }
 
 .sec-9__desc {
-  font-family: Aptos, var(--font-brand);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1;
-  color: #ffffff;
-  margin: 0 0 40px 0;
+  color: var(--Midnight-Navy, #01103b);
   font-feature-settings:
     "liga" off,
     "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 2 dòng x 24px = đúng 48px height như Figma */
+  margin: 0 0 40px 0;
 }
 
 .sec-9__btn-wrapper {
@@ -165,6 +171,16 @@
    Section 9: The Completed Architecture Responsive Rules (<= 991px & <= 767px)
    ========================================================================== */
 @media (max-width: 991px) {
+  .sec-9 {
+    background: linear-gradient(
+      180deg,
+      #fff 27.99%,
+      #8eaad9 41.97%,
+      #2053a9 51.95%,
+      #01103b 67.93%
+    ) !important;
+  }
+
   .sec-9 .flex-center-v {
     display: flex;
     flex-direction: column;
@@ -262,5 +278,37 @@
     max-width: 400px !important;
     width: 100% !important;
     margin-top: 0 !important;
+  }
+}
+
+/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-9__tag {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 14px;
+  }
+
+  .sec-9__title {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 16px;
+  }
+
+  .sec-9__desc {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  .sec-9__btn {
+    padding: 10px 24px;
+    font-size: 16px;
+  }
+
+  .sec-9__right,
+  .sec-9__img {
+    max-width: 440px !important;
+    max-height: 340px !important;
   }
 }

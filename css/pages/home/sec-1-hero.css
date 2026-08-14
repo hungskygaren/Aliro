@@ -3,7 +3,11 @@
    ========================================================================== */
 .sec-hero {
   position: relative;
-  background: radial-gradient(50% 50% at 50% 50%, #1E55B3 20%, #01103B 100%) !important;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #1e55b3 20%,
+    #01103b 100%
+  ) !important;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
@@ -437,5 +441,46 @@
 
   .sec-hero .scroll-down-btn {
     bottom: 1.5%;
+  }
+}
+
+/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-hero__sub-top {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .sec-hero__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 6px;
+  }
+
+  .sec-hero__sub-bottom {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 12px;
+  }
+
+  .sec-hero__desc {
+    font-size: 16px;
+    line-height: 23px;
+    margin-top: 14px;
+  }
+
+  .sec-hero__img-mobile {
+    max-width: 440px !important;
+    margin-top: 24px !important;
+  }
+
+  .hero-mb-img {
+    max-width: 210px;
+  }
+
+  .btn-hero-cta {
+    margin-top: 24px !important;
+    padding: 11px 24px !important;
+    font-size: 16px !important;
   }
 }

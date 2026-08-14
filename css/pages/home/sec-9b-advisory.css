@@ -72,14 +72,14 @@
     "liga" off,
     "clig" off;
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   margin: 0;
 }
 
-/* Cards Layout (Proportional 330x390 Specs matching Figma Node 5705:1056) */
+/* Cards Layout (Proportional 370x390 Specs matching Figma Node 5705:1056) */
 .sec-9b__cards {
   display: flex;
   flex-direction: row;
@@ -93,13 +93,13 @@
 .sec-9b__card {
   height: 100%;
   max-height: 390px;
-  aspect-ratio: 330 / 390;
+  aspect-ratio: 370 / 390;
   width: 100%;
-  max-width: 330px;
-  flex: 0 1 330px;
+  max-width: 370px;
+  flex: 0 1 370px;
   background: #ffffff;
   border: 1px solid #c5daf3;
-  padding: 20px 19px;
+  padding: 19px 19px 17px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -112,7 +112,7 @@
 
 .sec-9b__card-img-wrapper {
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 330 / 195;
   margin-bottom: 20px;
   overflow: hidden;
   flex-shrink: 0;
@@ -121,7 +121,7 @@
 .sec-9b__card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
 }
@@ -136,7 +136,15 @@
   min-height: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 0.3s ease;
   margin-bottom: 10px;
+}
+
+.sec-9b__card-body:hover,
+.sec-9b__card:hover .sec-9b__card-body {
+  scrollbar-color: #c5daf3 transparent;
 }
 
 .sec-9b__card-body::-webkit-scrollbar {
@@ -148,19 +156,28 @@
 }
 
 .sec-9b__card-body::-webkit-scrollbar-thumb {
-  background: #c5daf3;
+  background: transparent;
   border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.sec-9b__card-body:hover::-webkit-scrollbar-thumb,
+.sec-9b__card:hover .sec-9b__card-body::-webkit-scrollbar-thumb {
+  background: #c5daf3;
 }
 
 .sec-9b__card-title {
-  color: #01103b;
+  color: var(--Midnight-Navy, #01103b);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 22px;
-  min-height: 44px;
+  line-height: normal;
   text-transform: uppercase;
-  margin: 0 0 8px 0;
+  margin: 0 0 7px 0;
 }
 
 .sec-9b__card-desc {
@@ -169,9 +186,9 @@
     "liga" off,
     "clig" off;
   font-family: Aptos, var(--font-brand);
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   margin: 0;
 }
@@ -185,12 +202,13 @@
     "liga" off,
     "clig" off;
   font-family: Aptos, var(--font-brand);
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
   flex-shrink: 0;
+  margin-top: auto;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -235,23 +253,13 @@
     line-height: 32px;
     margin-bottom: 4px;
   }
-  .sec-9b__desc {
-    font-size: 14px;
-  }
-  .sec-9b__card {
-    padding: 14px 16px;
-  }
   .sec-9b__card-img-wrapper {
     margin-bottom: 20px;
   }
   .sec-9b__card-title {
     font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 4px;
-  }
-  .sec-9b__card-desc {
-    font-size: 14px;
-    line-height: 18px;
+    line-height: normal;
+    margin-bottom: 7px;
   }
 }
 
@@ -367,7 +375,7 @@
   .sec-9b__card {
     flex: 0 0 85% !important;
     width: 85% !important;
-    max-width: 330px !important;
+    max-width: 370px !important;
     height: auto !important;
     aspect-ratio: auto !important;
     scroll-snap-align: start !important;
@@ -384,7 +392,7 @@
 
   .sec-9b__card-img-wrapper {
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 330 / 195;
     margin-bottom: 20px;
     overflow: hidden;
     border-radius: 0 !important;
@@ -436,5 +444,49 @@
     margin-top: auto;
     width: 100%;
     flex-shrink: 0;
+  }
+}
+
+/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
+@media (max-width: 768px) and (min-height: 780px) {
+  .sec-9b__tag {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 6px;
+  }
+
+  .sec-9b__title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 6px;
+  }
+
+  .sec-9b__desc {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sec-9b__card {
+    flex: 0 0 310px !important;
+    max-width: 310px !important;
+    min-height: 340px !important;
+    padding: 18px !important;
+  }
+
+  .sec-9b__card-title {
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  .sec-9b__card-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .sec-9b__card-btn {
+    font-size: 14px;
+    padding-top: 12px;
   }
 }

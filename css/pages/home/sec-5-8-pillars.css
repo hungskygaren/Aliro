@@ -20,7 +20,13 @@
 
 .sec-5,
 .sec-7 {
-  background: #ffffff !important;
+  background: linear-gradient(
+    98deg,
+    #fff 27.99%,
+    #8eaad9 41.97%,
+    #2053a9 51.95%,
+    #01103b 67.93%
+  ) !important;
 }
 
 .sec-5 .container,
@@ -49,6 +55,7 @@
   left: 0;
   z-index: 4;
   width: 41.667%;
+  max-width: 470px;
   opacity: 0;
   transform: translateY(40px);
   transition:
@@ -115,12 +122,12 @@
     "liga" off,
     "clig" off;
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 0px;
-  max-width: 469px;
+  max-width: 470px;
   margin: 0 0 20px 0;
 }
 
@@ -229,12 +236,12 @@
     "liga" off,
     "clig" off;
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 0px;
-  max-width: 469px;
+  max-width: 470px;
   margin: 0 0 20px 0;
 }
 
@@ -417,6 +424,7 @@
   top: 22.7778dvh; /* 164px / 720px */
   left: 0;
   width: 41.667%;
+  max-width: 470px;
   opacity: 0;
   transform: translateY(40px);
   z-index: 4;
@@ -434,6 +442,7 @@
   left: calc(58.333% + 15px); /* Starts at Column 8 */
   right: auto;
   width: calc(41.667% - 15px); /* Spans 5 columns total */
+  max-width: 470px;
   opacity: 0;
   transform: translateY(40px);
   z-index: 4;
@@ -448,6 +457,7 @@
   left: calc(50% + 15px); /* Starts at Column 7 */
   right: auto;
   width: calc(41.667% - 15px); /* Spans Columns 7-11 (5 columns total) */
+  max-width: 470px;
   opacity: 0;
   transform: translateY(40px);
   z-index: 4;
@@ -512,17 +522,18 @@
 }
 
 .sec-6__desc {
-  font-family: Aptos, var(--font-brand);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0px;
   color: var(--White, #fff);
-  margin: 0 0 20px 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0px;
+  max-width: 470px;
+  margin: 0 0 20px 0;
 }
 
 .sec-6__sub-desc {
@@ -574,17 +585,18 @@
 }
 
 .sec-8__desc {
-  font-family: Aptos, var(--font-brand);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0px;
   color: var(--White, #fff);
-  margin: 0 0 20px 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0px;
+  max-width: 470px;
+  margin: 0 0 20px 0;
 }
 
 .sec-8__sub-desc {
@@ -758,6 +770,17 @@
    Sections 5, 6, 7, 8 Pillars Responsive Rules (<= 991px & <= 767px)
    ========================================================================== */
 @media (max-width: 991px) {
+  .sec-5,
+  .sec-7 {
+    background: linear-gradient(
+      180deg,
+      #fff 27.99%,
+      #8eaad9 41.97%,
+      #2053a9 51.95%,
+      #01103b 67.93%
+    ) !important;
+  }
+
   .sec-5__title .line-desktop,
   .sec-6__title .line-desktop,
   .sec-7__title .line-desktop,
@@ -903,5 +926,62 @@
     max-width: 350px !important;
     width: 100% !important;
     margin-top: 20px !important;
+  }
+}
+
+/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-5__number,
+  .sec-6__number,
+  .sec-7__number,
+  .sec-8__number {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+
+  .sec-5__title,
+  .sec-6__title,
+  .sec-7__title,
+  .sec-8__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  .sec-5__desc,
+  .sec-6__desc,
+  .sec-7__desc,
+  .sec-8__desc {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 14px;
+    max-width: 440px;
+  }
+
+  .sec-5__sub-desc,
+  .sec-6__sub-desc,
+  .sec-7__sub-desc,
+  .sec-8__sub-desc {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 22px;
+  }
+
+  .sec-5__btn,
+  .sec-6__btn,
+  .sec-7__btn,
+  .sec-8__btn {
+    padding: 9px 24px;
+    font-size: 15px;
+  }
+
+  .sec-5__img-right,
+  .sec-6__img-left,
+  .sec-7__img-right,
+  .sec-8__img-left {
+    max-width: 400px !important;
+    max-height: 320px !important;
+    margin-top: 28px !important;
   }
 }

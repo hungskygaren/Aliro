@@ -23,16 +23,25 @@
 }
 .sec-continuum,
 .sec-6,
-.sec-8,
-.sec-9 {
+.sec-8 {
   background-color: #01103b;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
+.sec-5,
+.sec-7,
+.sec-9 {
+  background: linear-gradient(
+    98deg,
+    #fff 27.99%,
+    #8eaad9 41.97%,
+    #2053a9 51.95%,
+    #01103b 67.93%
+  );
+  transition: background 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
 .sec-architect,
-.sec-framework,
-.sec-5,
-.sec-7 {
+.sec-framework {
   background-color: #ffffff !important;
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }

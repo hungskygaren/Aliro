@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "#01103B", // Section 6 (6) - Dark Blue Pillar 2
     "#ffffff", // Section 7 (7) - White Pillar 3
     "#01103B", // Section 8 (8) - Dark Blue Pillar 4
-    "#01103B", // Section 9 (9) - Dark Blue Arch
+    "#ffffff", // Section 9 (9) - Linear Gradient with White Left
     "#ffffff", // Section 9b (10) - White Advisory
     "#f7f9fc", // Section 10 (11) - White/Light Contact
   ];
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------------------------
   function updateActiveState(index) {
     // Sections with white/light backgrounds have dark header icons & text (no .light-theme class on header)
-    const isDarkThemeGroup = [1, 3, 5, 7, 10, 11].includes(index);
+    const isDarkThemeGroup = [1, 3, 5, 7, 9, 10, 11].includes(index);
 
     if (isDarkThemeGroup) {
       if (mainHeader) mainHeader.classList.remove("light-theme");

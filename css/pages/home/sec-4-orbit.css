@@ -100,13 +100,13 @@
   text-align: center;
   z-index: 10;
   white-space: nowrap;
-  font-family: Aptos, var(--font-family);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #ffffff !important;
-  text-transform: none;
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
   font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--White, #ffffff);
+  text-transform: none;
 }
 
 /* 2. Central Orbit Ring SVG (440px x 440px Figma Standard) */
@@ -810,5 +810,28 @@
 @media (max-width: 480px) {
   .sec-continuum {
     --orbit-scale: 0.72;
+  }
+}
+
+/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-continuum {
+    --orbit-scale: 0.8 !important;
+  }
+
+  .sec-continuum__tag {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  .sec-continuum__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .sec-continuum__orbit-wrap {
+    margin-top: 70px !important;
+    margin-bottom: 24px !important;
   }
 }

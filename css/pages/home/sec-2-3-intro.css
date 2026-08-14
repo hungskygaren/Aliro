@@ -557,3 +557,47 @@
     margin-top: 20px !important;
   }
 }
+
+/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-architect__sub-top,
+  .sec-framework__sub-top {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .sec-architect__title,
+  .sec-framework__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  .sec-architect__sub-bottom,
+  .sec-framework__sub-bottom {
+    font-size: 19px;
+    line-height: 26px;
+    margin-bottom: 18px;
+  }
+
+  .sec-architect__desc,
+  .sec-framework__desc {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 22px;
+  }
+
+  .sec-architect__btn,
+  .sec-framework__btn {
+    padding: 10px 24px;
+    font-size: 16px;
+  }
+
+  .sec-architect__img,
+  .sec-framework__img {
+    max-width: 500px !important;
+    max-height: 380px !important;
+    margin-top: 24px !important;
+  }
+}

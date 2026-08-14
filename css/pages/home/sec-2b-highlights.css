@@ -43,7 +43,7 @@
 }
 
 .sec-2b__col {
-  padding: 0 15px;
+  padding: 0 16px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -52,15 +52,26 @@
   position: relative;
 }
 
-/* Vertical Divider Lines between columns */
+.sec-2b__col:first-child {
+  padding-left: 0;
+  padding-right: 16px;
+}
+
+.sec-2b__col:last-child {
+  padding-left: 16px;
+  padding-right: 0;
+}
+
+/* Vertical Divider Lines between columns — centered in the 32px gap between content */
 .sec-2b__col:not(:last-child)::after {
   content: "";
   position: absolute;
   right: 0;
-  top: 5%;
-  bottom: 5%;
+  top: 0;
+  bottom: 0;
   width: 1px;
-  background: rgba(255, 255, 255, 0.2);
+  background: #ffffff;
+  opacity: 0.3;
 }
 
 .sec-2b__icon-wrapper {
@@ -80,7 +91,7 @@
 }
 
 .sec-2b__item-title {
-  color: var(--White, #ffffff);
+  color: var(--White, #fff);
   text-align: center;
   font-feature-settings:
     "liga" off,
@@ -89,7 +100,7 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 28px; /* 140% */
   text-transform: uppercase;
   margin: 0 0 10px 0;
   min-height: 56px;
@@ -99,7 +110,7 @@
 }
 
 .sec-2b__item-desc {
-  color: var(--White, #ffffff);
+  color: var(--White, #fff);
   text-align: center;
   font-feature-settings:
     "liga" off,
@@ -107,7 +118,7 @@
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   margin: 0;
   max-width: 270px;
@@ -180,7 +191,8 @@
     top: 5%;
     bottom: 5%;
     width: 1px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #ffffff;
+    opacity: 0.3;
   }
 
   .sec-2b__item-title {
@@ -284,26 +296,4 @@
   }
 }
 
-@media (max-height: 720px) and (min-width: 769px) {
-  .sec-2b__icon-wrapper,
-  .sec-2b__icon {
-    width: 75px;
-    height: 75px;
-  }
 
-  .sec-2b__icon-wrapper {
-    margin-bottom: 14px;
-  }
-
-  .sec-2b__item-title {
-    font-size: 17px;
-    line-height: 24px;
-    min-height: 48px;
-    margin-bottom: 8px;
-  }
-
-  .sec-2b__item-desc {
-    font-size: 15px;
-    line-height: 20px;
-  }
-}
