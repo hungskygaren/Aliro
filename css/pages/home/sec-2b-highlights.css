@@ -176,7 +176,13 @@
 
   .sec-2b__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px 20px;
+    gap: 42px 24px;
+  }
+
+  .sec-2b__col,
+  .sec-2b__col:first-child,
+  .sec-2b__col:last-child {
+    padding: 0 10px !important;
   }
 
   .sec-2b__col:not(:last-child)::after {
@@ -187,12 +193,11 @@
     display: block;
     content: "";
     position: absolute;
-    right: -10px;
-    top: 5%;
-    bottom: 5%;
+    right: -12px;
+    top: 0;
+    bottom: 0;
     width: 1px;
-    background: #ffffff;
-    opacity: 0.3;
+    background: rgba(255, 255, 255, 0.5);
   }
 
   .sec-2b__item-title {
@@ -211,7 +216,7 @@
   .sec-2b {
     height: 100vh;
     height: 100dvh;
-    padding: 20px 0;
+    padding: 24px 0;
     background: radial-gradient(
       circle at 50% 50%,
       #0e6cc7 0%,
@@ -229,22 +234,24 @@
 
   .sec-2b__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 36px 16px;
+    gap: 42px 20px;
   }
 
-  .sec-2b__col {
-    padding: 0 10px;
+  .sec-2b__col,
+  .sec-2b__col:first-child,
+  .sec-2b__col:last-child {
+    padding: 0 8px !important;
   }
 
   .sec-2b__col:nth-child(odd)::after {
     display: block;
     content: "";
     position: absolute;
-    right: -8px;
-    top: 5%;
-    bottom: 5%;
+    right: -10px;
+    top: 0;
+    bottom: 0;
     width: 1px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
   }
 
   .sec-2b__icon-wrapper,
@@ -254,19 +261,19 @@
   }
 
   .sec-2b__icon-wrapper {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .sec-2b__item-title {
-    font-size: 14px;
-    line-height: 19px;
-    min-height: 38px;
+    font-size: 15px;
+    line-height: 20px;
+    min-height: 40px;
     margin-bottom: 6px;
   }
 
   .sec-2b__item-desc {
-    font-size: 12px;
-    line-height: 17px;
+    font-size: 13px;
+    line-height: 18px;
     max-width: 100%;
   }
 }
@@ -274,39 +281,44 @@
 @media (max-width: 480px) {
   .sec-2b__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 12px;
+    gap: 38px 16px;
   }
 
-  .sec-2b__col {
-    padding: 0 6px;
+  .sec-2b__col,
+  .sec-2b__col:first-child,
+  .sec-2b__col:last-child {
+    padding: 0 4px !important;
   }
 
   .sec-2b__col:nth-child(odd)::after {
-    right: -6px;
+    right: -8px;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.55);
   }
 
   .sec-2b__icon-wrapper,
   .sec-2b__icon {
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
   }
 
   .sec-2b__item-title {
-    font-size: 13px;
-    line-height: 17px;
-    min-height: 34px;
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 36px;
   }
 
   .sec-2b__item-desc {
-    font-size: 11px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
 /* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-2b__grid {
-    gap: 48px 16px;
+    gap: 58px 16px;
   }
 
   .sec-2b__icon-wrapper,
