@@ -107,6 +107,11 @@
   margin-bottom: 0;
 }
 
+.sec-10__desc .sec-10__desc-highlight {
+  display: block;
+  margin-top: 0;
+}
+
 .sec-10__desc .sec-10__desc-highlight,
 .sec-10__desc strong,
 .sec-10__desc b {
@@ -566,13 +571,17 @@
   .sec-10__sub-desc {
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   .sec-10__desc p {
     font-size: 15px;
     line-height: 20px;
     margin-bottom: 8px;
+  }
+
+  .sec-10__desc .sec-10__desc-highlight {
+    margin-top: 5px;
   }
 
   .sec-10__email {
@@ -641,7 +650,7 @@
   .sec-10__sub-desc {
     font-size: 17px;
     line-height: 23px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 
   .sec-10__desc p {
