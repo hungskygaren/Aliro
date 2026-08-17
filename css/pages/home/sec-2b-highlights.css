@@ -10,12 +10,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #0e6cc7 0%,
-    #1e61b3 30%,
-    #01103b 100%
-  ) !important;
+  background-color: #01103b;
+  background-image: url("../../../assets/sec-2b-bg.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   box-sizing: border-box;
 }
 
@@ -197,7 +196,7 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
   }
 
   .sec-2b__item-title {
@@ -217,13 +216,7 @@
     height: 100vh;
     height: 100dvh;
     padding: 24px 0;
-    background: radial-gradient(
-      circle at 50% 50%,
-      #0e6cc7 0%,
-      #1556a8 20%,
-      #0d3d7a 45%,
-      #01103b 70%
-    ) !important;
+    background-position: 40% center !important;
   }
 
   .sec-2b .container {
@@ -251,7 +244,7 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
   }
 
   .sec-2b__icon-wrapper,
@@ -294,7 +287,7 @@
     right: -8px;
     top: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.8);
   }
 
   .sec-2b__icon-wrapper,
