@@ -1,0 +1,327 @@
+/* ==========================================================================
+   Section 4: About Us - Strategic Intelligence & Advisory Services Matrix
+   Figma Node: 4826:3373
+   ========================================================================== */
+
+.sec-about-4 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #ffffff !important;
+  box-sizing: border-box;
+}
+
+/* Background image with soft opacity */
+.sec-about-4__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../../../assets/about/sec-4-bg.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec-about-4 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  padding-top: 75px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* Header Area */
+.sec-about-4__header {
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-about-4__tag {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-about-4__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* Services Matrix Table Wrapper */
+.sec-about-4__matrix-wrapper {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+  box-shadow: 0 10px 30px rgba(1, 16, 59, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.sec-about-4__matrix {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+  background: #ffffff;
+}
+
+/* Table Header Styles */
+.sec-about-4__matrix th {
+  padding: 16px 12px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  font-family: Aptos, var(--font-brand);
+  border-radius: 4px;
+}
+
+.sec-about-4__matrix th.col-deliverables {
+  background-color: #011b7f;
+  width: 34%;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.sec-about-4__matrix th.col-service-1 {
+  background-color: #0431b1;
+  width: 16.5%;
+}
+
+.sec-about-4__matrix th.col-service-2 {
+  background-color: #011b7f;
+  width: 16.5%;
+}
+
+.sec-about-4__matrix th.col-service-3 {
+  background-color: #0431b1;
+  width: 16.5%;
+}
+
+.sec-about-4__matrix th.col-service-4 {
+  background-color: #011b7f;
+  width: 16.5%;
+}
+
+.sec-about-4__service-title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.sec-about-4__service-badge {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  opacity: 0.9;
+}
+
+/* Table Rows & Cells */
+.sec-about-4__matrix td {
+  height: 38px;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+.sec-about-4__matrix td.cell-label {
+  background-color: #d2dfef;
+  font-family: Manrope, Aptos, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #01103b;
+  text-align: left;
+  padding-left: 20px;
+  white-space: nowrap;
+}
+
+.sec-about-4__matrix td.cell-tint-1 {
+  background-color: #e7eef8;
+}
+
+.sec-about-4__matrix td.cell-tint-2 {
+  background-color: #d2dfef;
+}
+
+/* Checkmark Icon */
+.sec-about-4__check {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #01103b;
+}
+
+.sec-about-4__check svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Slide Entrance Animations */
+.sec-about-4.slide-animated .sec-about-4__header,
+.sec-about-4.slide-animated .sec-about-4__matrix-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-about-4.visited .sec-about-4__header,
+.sec-about-4.visited .sec-about-4__matrix-wrapper {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Tablet & Mobile)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .sec-about-4 {
+    height: auto !important;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-y: auto !important;
+  }
+
+  .sec-about-4 .flex-center-v {
+    height: auto !important;
+    min-height: 100%;
+    padding-top: 85px !important;
+    padding-bottom: 35px !important;
+  }
+
+  .sec-about-4__header {
+    transform: none !important;
+    opacity: 1 !important;
+    margin-bottom: 16px;
+  }
+
+  .sec-about-4__tag {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .sec-about-4__title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .sec-about-4__matrix-wrapper {
+    overflow-x: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sec-about-4__matrix {
+    min-width: 780px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-about-4 .flex-center-v {
+    padding-top: 75px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .sec-about-4__tag {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .sec-about-4__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .sec-about-4__matrix th {
+    padding: 12px 8px;
+  }
+
+  .sec-about-4__service-title {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .sec-about-4__service-badge {
+    font-size: 12px;
+  }
+
+  .sec-about-4__matrix td {
+    height: 34px;
+    padding: 4px 8px;
+  }
+
+  .sec-about-4__matrix td.cell-label {
+    font-size: 13px;
+    padding-left: 12px;
+  }
+
+  .sec-about-4__check svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec-about-4__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .sec-about-4__matrix {
+    min-width: 700px;
+  }
+}
+
+/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-about-4__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

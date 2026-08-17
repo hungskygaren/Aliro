@@ -14,26 +14,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // DOM Element Selectors
   const mainHeader = document.getElementById("mainHeader");
-  const navItems = document.querySelectorAll(".nav-item");
   const scrollDownBtn = document.getElementById("scrollDownBtn");
   const continuumNodes = document.querySelectorAll(".sec-continuum__node");
   const return4icBtns = document.querySelectorAll(".btn-return-4ic");
 
-  // Section IDs mapping in exact slide order (12 sections)
-  const sectionIds = [
-    "section-1",
-    "section-2",
-    "section-2b",
-    "section-3",
-    "section-4",
-    "section-5",
-    "section-6",
-    "section-7",
-    "section-8",
-    "section-9",
-    "section-9b",
-    "section-10",
-  ];
+  const isAboutPage = document.body.classList.contains("page-about");
+
+  // Section IDs mapping in exact slide order
+  const sectionIds = isAboutPage
+    ? [
+        "section-about-1",
+        "section-about-2",
+        "section-about-3",
+        "section-about-4",
+        "section-about-5",
+      ]
+    : [
+        "section-1",
+        "section-2",
+        "section-2b",
+        "section-3",
+        "section-4",
+        "section-5",
+        "section-6",
+        "section-7",
+        "section-8",
+        "section-9",
+        "section-9b",
+        "section-10",
+      ];
 
   // Section Background Colors for Global Morphing
   const sectionColors = [
@@ -82,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     on: {
       init: function () {
         const swiperInstance = this;
-        updateActiveState(swiperInstance.activeIndex);
+        updateHeaderTheme(swiperInstance.activeIndex);
 
         requestAnimationFrame(() => {
           if (
@@ -97,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
 
       slideChange: function () {
-        updateActiveState(this.activeIndex);
+        updateHeaderTheme(this.activeIndex);
 
         const targetId =
           sectionIds[this.activeIndex] || `section-${this.activeIndex + 1}`;
@@ -134,38 +143,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --------------------------------------------------------------------------
-  // Active State Manager (Sync Navbar and Header Theme)
+  // Header Theme Switcher (Sync Header text/icon color with Section background)
   // --------------------------------------------------------------------------
-  function updateActiveState(index) {
-    // Sections with white/light backgrounds have dark header icons & text (no .light-theme class on header)
-    const isDarkThemeGroup = [1, 3, 5, 7, 9, 10, 11].includes(index);
+  function updateHeaderTheme(index) {
+    if (!mainHeader) return;
 
-    if (isDarkThemeGroup) {
-      if (mainHeader) mainHeader.classList.remove("light-theme");
-    } else {
-      if (mainHeader) mainHeader.classList.add("light-theme");
+    if (isAboutPage) {
+      // About Page: index 1, 3, 4 have white/light backgrounds -> dark header (remove .light-theme)
+      const isLightBg = [1, 3, 4].includes(index);
+      mainHeader.classList.toggle("light-theme", !isLightBg);
+      return;
     }
 
-    // Active Nav Link highlighting based on current slide index
-    let activeNavHref = "#section-1";
-    if (index === 0) {
-      activeNavHref = "#section-1";
-    } else if (index === 1 || index === 2 || index === 3) {
-      activeNavHref = "#section-2";
-    } else if (index === 4) {
-      activeNavHref = "#section-4";
-    } else if (index >= 5 && index <= 10) {
-      activeNavHref = "#section-9b";
-    } else if (index === 11) {
-      activeNavHref = "#section-10";
-    }
-
-    navItems.forEach((navItem) => {
-      navItem.classList.toggle(
-        "active",
-        navItem.getAttribute("href") === activeNavHref,
-      );
-    });
+    // Home Page: Sections with white/light backgrounds (1, 3, 5, 7, 9, 10, 11) -> dark header (remove .light-theme)
+    const isLightBg = [1, 3, 5, 7, 9, 10, 11].includes(index);
+    mainHeader.classList.toggle("light-theme", !isLightBg);
   }
 
   function smartSlideTo(targetIndex) {
