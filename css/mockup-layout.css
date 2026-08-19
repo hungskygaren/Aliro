@@ -1,6 +1,6 @@
 /* ==========================================================================
    Generic Mockup Preview Layout (Full-Page Slide Image View)
-   Pixel-Perfect Aspect Ratio Fitting (object-fit: contain)
+   Full-Width & Full-Height Responsive Display (object-fit: cover)
    ========================================================================== */
 
 /* Mockup Slide Container - Clean White Default */
@@ -29,14 +29,13 @@
   background-color: #ffffff;
 }
 
-/* Mockup Image - Always Fit 100% Without Cropping Content */
+/* Mockup Image - Full Width & Full Screen Cover */
 .mockup-img {
   width: 100%;
   height: 100%;
-  max-width: 100vw;
-  max-height: 100vh;
-  max-height: 100dvh;
-  object-fit: contain;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
   object-position: center center;
   display: block;
   user-select: none;

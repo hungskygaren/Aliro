@@ -17,7 +17,9 @@ async function loadSharedHeader() {
     }
   } catch (err) {
     // Fallback for file:// protocol direct browser open where AJAX fetch is blocked
-    console.info("Using local header template fallback for direct file:// access.");
+    console.info(
+      "Using local header template fallback for direct file:// access.",
+    );
     mainHeader.innerHTML = `
       <div class="navbar-container">
         <a href="index.html#section-1" class="logo-brand" aria-label="Aliro Consulting Home">
@@ -36,12 +38,18 @@ async function loadSharedHeader() {
               <a href="market-intelligence.html" class="nav-item" data-nav="4ic" aria-haspopup="true" aria-expanded="false">4iC</a>
               <div class="nav-dropdown-menu" role="menu">
                 <a href="market-intelligence.html" class="nav-dropdown-item" data-nav="market" role="menuitem">Market Intelligence</a>
-                <a href="operational-intelligence.html" class="nav-dropdown-item" data-nav="operational" role="menuitem">Operational Intelligence</a>
-                <a href="digital-intelligence.html" class="nav-dropdown-item" data-nav="digital" role="menuitem">Digital Intelligence</a>
-                <a href="capacity-capability-intelligence.html" class="nav-dropdown-item" data-nav="capacity" role="menuitem">Capacity Capability Intelligence</a>
+                <a href="javascript:void(0)" class="nav-dropdown-item" data-nav="operational" role="menuitem">Operational Intelligence</a>
+                <a href="javascript:void(0)" class="nav-dropdown-item" data-nav="digital" role="menuitem">Digital Intelligence</a>
+                <a href="javascript:void(0)" class="nav-dropdown-item" data-nav="capacity" role="menuitem">Capacity Capability Intelligence</a>
               </div>
             </div>
-            <a href="services.html" class="nav-item" data-nav="services">Services</a>
+            <div class="nav-dropdown-wrapper">
+              <a href="phase-0-diagnostic.html" class="nav-item" data-nav="services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <div class="nav-dropdown-menu" role="menu">
+                <a href="phase-0-diagnostic.html" class="nav-dropdown-item" data-nav="phase0" role="menuitem">Phase 0 Diagnostic</a>
+                <a href="javascript:void(0)" class="nav-dropdown-item" data-nav="thirdeye" role="menuitem">ThirdEye</a>
+              </div>
+            </div>
             <a href="about.html" class="nav-item" data-nav="about">About Us</a>
             <a href="index.html#section-10" class="nav-item" data-nav="contact">Contact</a>
           </nav>
@@ -67,8 +75,12 @@ function highlightActiveNav() {
 
   if (currentPath.includes("about")) {
     activeKey = "about";
+  } else if (currentPath.includes("phase-0") || currentPath.includes("diagnostic")) {
+    activeKey = "phase0";
+  } else if (currentPath.includes("thirdeye") || currentPath.includes("third-eye")) {
+    activeKey = "thirdeye";
   } else if (currentPath.includes("services")) {
-    activeKey = "services";
+    activeKey = "phase0";
   } else if (currentPath.includes("market-intelligence")) {
     activeKey = "market";
   } else if (currentPath.includes("operational-intelligence")) {
@@ -82,7 +94,10 @@ function highlightActiveNav() {
     activeKey = "capacity";
   }
 
-  const is4iC = ["market", "operational", "digital", "capacity"].includes(activeKey);
+  const is4iC = ["market", "operational", "digital", "capacity"].includes(
+    activeKey,
+  );
+  const isServices = ["phase0", "thirdeye"].includes(activeKey);
 
   document
     .querySelectorAll(".nav-menu .nav-item, .nav-menu .nav-dropdown-item")
@@ -91,6 +106,13 @@ function highlightActiveNav() {
   if (is4iC) {
     const parent4iC = document.querySelector('.nav-item[data-nav="4ic"]');
     if (parent4iC) parent4iC.classList.add("active");
+    const subItem = document.querySelector(
+      `.nav-dropdown-item[data-nav="${activeKey}"]`,
+    );
+    if (subItem) subItem.classList.add("active");
+  } else if (isServices) {
+    const parentServices = document.querySelector('.nav-item[data-nav="services"]');
+    if (parentServices) parentServices.classList.add("active");
     const subItem = document.querySelector(
       `.nav-dropdown-item[data-nav="${activeKey}"]`,
     );
@@ -114,7 +136,8 @@ function bindNavEvents() {
       navDrawer.classList.add("is-active");
       navBackdrop.classList.add("is-active");
       document.body.classList.add("no-scroll");
-      if (hamburgerToggle) hamburgerToggle.setAttribute("aria-expanded", "true");
+      if (hamburgerToggle)
+        hamburgerToggle.setAttribute("aria-expanded", "true");
     }
   };
 
