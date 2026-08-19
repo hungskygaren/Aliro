@@ -1,0 +1,61 @@
+/* ==========================================================================
+   About Us Page Layout & Modular Section Imports (Development Mode)
+   ========================================================================== */
+
+/* Section 1: About Hero */
+@import "./sec-1-about-hero.css";
+
+/* Section 2: Four Intelligence Continuum (4iC) */
+@import "./sec-2-about-continuum.css";
+
+/* Section 3: Regional Presence */
+@import "./sec-3-about-regional.css";
+
+/* Section 4: Strategic Intelligence & Advisory Services Matrix */
+@import "./sec-4-about-services.css";
+
+/* Slide Background Colors for About Us Page Placeholders */
+.sec-about-contact {
+  background-color: #f7f9fc;
+  color: #01103b;
+}
+
+/* Placeholder content layout */
+.about-placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 80px 20px 40px;
+  box-sizing: border-box;
+}
+
+.about-placeholder-tag {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.about-placeholder-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.about-placeholder-desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 680px;
+  line-height: 1.5;
+  opacity: 0.9;
+}

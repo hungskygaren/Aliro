@@ -1,0 +1,47 @@
+<!-- ==========================================================================
+     Aliro Consulting - Shared Reusable Navigation Header Component
+     Edit this file to update the navigation menu across all pages.
+     ========================================================================== -->
+
+<div class="navbar-container">
+  <!-- Logo -->
+  <a href="index.html#section-1" class="logo-brand" aria-label="Aliro Consulting Home">
+    <img src="assets/logo.webp" alt="Aliro Consulting Logo" class="logo-img" />
+  </a>
+
+  <!-- Mobile Hamburger Toggle Button -->
+  <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+  </button>
+
+  <!-- Off-canvas Navigation Drawer -->
+  <div class="nav-drawer" id="navDrawer">
+    <button class="drawer-close" id="drawerClose" aria-label="Close navigation menu">&times;</button>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html#section-1" class="nav-item" data-nav="home">Home</a>
+      <div class="nav-dropdown-wrapper">
+        <a href="market-intelligence.html" class="nav-item" data-nav="4ic" aria-haspopup="true" aria-expanded="false">4iC</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="market-intelligence.html" class="nav-dropdown-item" data-nav="market" role="menuitem">Market Intelligence</a>
+          <a href="operational-intelligence.html" class="nav-dropdown-item" data-nav="operational" role="menuitem">Operational Intelligence</a>
+          <a href="digital-intelligence.html" class="nav-dropdown-item" data-nav="digital" role="menuitem">Digital Intelligence</a>
+          <a href="capacity-capability-intelligence.html" class="nav-dropdown-item" data-nav="capacity" role="menuitem">Capacity Capability Intelligence</a>
+        </div>
+      </div>
+      <a href="services.html" class="nav-item" data-nav="services">Services</a>
+      <a href="about.html" class="nav-item" data-nav="about">About Us</a>
+      <a href="index.html#section-10" class="nav-item" data-nav="contact">Contact</a>
+    </nav>
+
+    <!-- Action Button inside Drawer on Mobile -->
+    <div class="nav-actions">
+      <a href="index.html#section-10" class="btn-conversation">Start a Conversation</a>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</div>

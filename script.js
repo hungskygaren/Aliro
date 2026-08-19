@@ -1,10 +1,160 @@
 /**
- * Aliro Consulting - Full-Screen Vertical Swiper Engine
- * Uses GPU Hardware Acceleration for 60fps ultra-smooth vertical sliding.
- * Clean, modular structure for easy maintenance and readability.
+ * Aliro Consulting - Full-Screen Vertical Swiper Engine & Reusable Navigation
+ * Loads standalone components/header.html for clean, decoupled architecture.
  */
 
-document.addEventListener("DOMContentLoaded", () => {
+// ----------------------------------------------------------------------------
+// 1. Standalone Header Component Loader
+// ----------------------------------------------------------------------------
+async function loadSharedHeader() {
+  const mainHeader = document.getElementById("mainHeader");
+  if (!mainHeader) return;
+
+  try {
+    const res = await fetch("components/header.html");
+    if (res.ok) {
+      mainHeader.innerHTML = await res.text();
+    }
+  } catch (err) {
+    // Fallback for file:// protocol direct browser open where AJAX fetch is blocked
+    console.info("Using local header template fallback for direct file:// access.");
+    mainHeader.innerHTML = `
+      <div class="navbar-container">
+        <a href="index.html#section-1" class="logo-brand" aria-label="Aliro Consulting Home">
+          <img src="assets/logo.webp" alt="Aliro Consulting Logo" class="logo-img" />
+        </a>
+        <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <div class="nav-drawer" id="navDrawer">
+          <button class="drawer-close" id="drawerClose" aria-label="Close navigation menu">&times;</button>
+          <nav class="nav-menu" id="navMenu">
+            <a href="index.html#section-1" class="nav-item" data-nav="home">Home</a>
+            <div class="nav-dropdown-wrapper">
+              <a href="market-intelligence.html" class="nav-item" data-nav="4ic" aria-haspopup="true" aria-expanded="false">4iC</a>
+              <div class="nav-dropdown-menu" role="menu">
+                <a href="market-intelligence.html" class="nav-dropdown-item" data-nav="market" role="menuitem">Market Intelligence</a>
+                <a href="operational-intelligence.html" class="nav-dropdown-item" data-nav="operational" role="menuitem">Operational Intelligence</a>
+                <a href="digital-intelligence.html" class="nav-dropdown-item" data-nav="digital" role="menuitem">Digital Intelligence</a>
+                <a href="capacity-capability-intelligence.html" class="nav-dropdown-item" data-nav="capacity" role="menuitem">Capacity Capability Intelligence</a>
+              </div>
+            </div>
+            <a href="services.html" class="nav-item" data-nav="services">Services</a>
+            <a href="about.html" class="nav-item" data-nav="about">About Us</a>
+            <a href="index.html#section-10" class="nav-item" data-nav="contact">Contact</a>
+          </nav>
+          <div class="nav-actions">
+            <a href="index.html#section-10" class="btn-conversation">Start a Conversation</a>
+          </div>
+        </div>
+        <div class="nav-backdrop" id="navBackdrop"></div>
+      </div>
+    `;
+  }
+
+  // Auto-highlight active navigation item based on current URL path
+  highlightActiveNav();
+
+  // Attach all mobile drawer toggle & click events
+  bindNavEvents();
+}
+
+function highlightActiveNav() {
+  const currentPath = window.location.pathname.toLowerCase();
+  let activeKey = "home";
+
+  if (currentPath.includes("about")) {
+    activeKey = "about";
+  } else if (currentPath.includes("services")) {
+    activeKey = "services";
+  } else if (currentPath.includes("market-intelligence")) {
+    activeKey = "market";
+  } else if (currentPath.includes("operational-intelligence")) {
+    activeKey = "operational";
+  } else if (currentPath.includes("digital-intelligence")) {
+    activeKey = "digital";
+  } else if (
+    currentPath.includes("capacity-capability-intelligence") ||
+    currentPath.includes("capacity")
+  ) {
+    activeKey = "capacity";
+  }
+
+  const is4iC = ["market", "operational", "digital", "capacity"].includes(activeKey);
+
+  document
+    .querySelectorAll(".nav-menu .nav-item, .nav-menu .nav-dropdown-item")
+    .forEach((item) => item.classList.remove("active"));
+
+  if (is4iC) {
+    const parent4iC = document.querySelector('.nav-item[data-nav="4ic"]');
+    if (parent4iC) parent4iC.classList.add("active");
+    const subItem = document.querySelector(
+      `.nav-dropdown-item[data-nav="${activeKey}"]`,
+    );
+    if (subItem) subItem.classList.add("active");
+  } else {
+    const activeItem = document.querySelector(
+      `.nav-item[data-nav="${activeKey}"]`,
+    );
+    if (activeItem) activeItem.classList.add("active");
+  }
+}
+
+function bindNavEvents() {
+  const hamburgerToggle = document.getElementById("hamburgerToggle");
+  const drawerClose = document.getElementById("drawerClose");
+  const navDrawer = document.getElementById("navDrawer");
+  const navBackdrop = document.getElementById("navBackdrop");
+
+  const openMobileMenu = () => {
+    if (navDrawer && navBackdrop) {
+      navDrawer.classList.add("is-active");
+      navBackdrop.classList.add("is-active");
+      document.body.classList.add("no-scroll");
+      if (hamburgerToggle) hamburgerToggle.setAttribute("aria-expanded", "true");
+    }
+  };
+
+  const closeMobileMenu = () => {
+    if (navDrawer && navBackdrop) {
+      navDrawer.classList.remove("is-active");
+      navBackdrop.classList.remove("is-active");
+      document.body.classList.remove("no-scroll");
+      if (hamburgerToggle)
+        hamburgerToggle.setAttribute("aria-expanded", "false");
+    }
+  };
+
+  if (hamburgerToggle) {
+    hamburgerToggle.addEventListener("click", openMobileMenu);
+  }
+
+  if (drawerClose) {
+    drawerClose.addEventListener("click", closeMobileMenu);
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener("click", closeMobileMenu);
+  }
+
+  const drawerLinks = document.querySelectorAll(
+    ".nav-drawer .nav-item, .nav-drawer .nav-dropdown-item, .nav-drawer .btn-conversation",
+  );
+  drawerLinks.forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+}
+
+// ----------------------------------------------------------------------------
+// 2. Swiper Initialization & Interactive Engine
+// ----------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", async () => {
+  // Load standalone header component from components/header.html
+  await loadSharedHeader();
+
   // Reset any native scroll offset the browser applied from hash anchors before Swiper takes over
   const swiperEl = document.querySelector(".main-swiper");
   const wrapperEl = document.querySelector(".swiper-wrapper");
@@ -18,31 +168,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const continuumNodes = document.querySelectorAll(".sec-continuum__node");
   const return4icBtns = document.querySelectorAll(".btn-return-4ic");
 
-  const isAboutPage = document.body.classList.contains("page-about");
-
-  // Section IDs mapping in exact slide order
-  const sectionIds = isAboutPage
-    ? [
-        "section-about-1",
-        "section-about-2",
-        "section-about-3",
-        "section-about-4",
-        "section-about-5",
-      ]
-    : [
-        "section-1",
-        "section-2",
-        "section-2b",
-        "section-3",
-        "section-4",
-        "section-5",
-        "section-6",
-        "section-7",
-        "section-8",
-        "section-9",
-        "section-9b",
-        "section-10",
-      ];
+  // Collect section IDs dynamically in exact slide order from DOM
+  const domSlides = Array.from(
+    document.querySelectorAll(".main-swiper .swiper-slide"),
+  );
+  const sectionIds = domSlides.map(
+    (slide, idx) => slide.id || `section-${idx + 1}`,
+  );
 
   // Section Background Colors for Global Morphing
   const sectionColors = [
@@ -148,14 +280,24 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateHeaderTheme(index) {
     if (!mainHeader) return;
 
-    if (isAboutPage) {
-      // About Page: index 1, 3, 4 have white/light backgrounds -> dark header (remove .light-theme)
-      const isLightBg = [1, 3, 4].includes(index);
-      mainHeader.classList.toggle("light-theme", !isLightBg);
-      return;
+    const activeSlide = domSlides[index];
+    if (activeSlide) {
+      if (
+        activeSlide.classList.contains("sec-mockup-bg-dark") ||
+        activeSlide.classList.contains("sec-about-bg-dark")
+      ) {
+        mainHeader.classList.add("light-theme");
+        return;
+      } else if (
+        activeSlide.classList.contains("sec-mockup-bg-light") ||
+        activeSlide.classList.contains("sec-about-bg-light")
+      ) {
+        mainHeader.classList.remove("light-theme");
+        return;
+      }
     }
 
-    // Home Page: Sections with white/light backgrounds (1, 3, 5, 7, 9, 10, 11) -> dark header (remove .light-theme)
+    // Default Home Page Theme: Sections with white/light backgrounds -> dark header (remove .light-theme)
     const isLightBg = [1, 3, 5, 7, 9, 10, 11].includes(index);
     mainHeader.classList.toggle("light-theme", !isLightBg);
   }
@@ -173,13 +315,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Intercept all # links (Logo, Navbar, CTA buttons) to prevent jump freeze
-  const allHashLinks = document.querySelectorAll('a[href^="#"]');
-  allHashLinks.forEach((link) => {
+  // Intercept all hash links (including index.html# links on Home page) to prevent jump freeze
+  const isHomePage =
+    !document.body.classList.contains("page-about") &&
+    !document.body.classList.contains("page-mockup");
+
+  const allNavLinks = document.querySelectorAll('a[href*="#"]');
+  allNavLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
-      if (href && href.startsWith("#")) {
+      if (!href) return;
+
+      if (href.startsWith("#")) {
         const hash = href.replace("#", "");
+        const targetIdx = sectionIds.indexOf(hash);
+        if (targetIdx !== -1) {
+          e.preventDefault();
+          smartSlideTo(targetIdx);
+        }
+      } else if (href.startsWith("index.html#") && isHomePage) {
+        const hash = href.replace("index.html#", "");
         const targetIdx = sectionIds.indexOf(hash);
         if (targetIdx !== -1) {
           e.preventDefault();
@@ -220,54 +375,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetIndex = parseInt(btn.getAttribute("data-slide-target"), 10);
       smartSlideTo(!isNaN(targetIndex) ? targetIndex : 4);
     });
-  });
-
-  // --------------------------------------------------------------------------
-  // Mobile Off-Canvas Navigation Drawer Toggle Logic
-  // --------------------------------------------------------------------------
-  const hamburgerToggle = document.getElementById("hamburgerToggle");
-  const drawerClose = document.getElementById("drawerClose");
-  const navDrawer = document.getElementById("navDrawer");
-  const navBackdrop = document.getElementById("navBackdrop");
-
-  const openMobileMenu = () => {
-    if (navDrawer && navBackdrop) {
-      navDrawer.classList.add("is-active");
-      navBackdrop.classList.add("is-active");
-      document.body.classList.add("no-scroll");
-      if (hamburgerToggle)
-        hamburgerToggle.setAttribute("aria-expanded", "true");
-    }
-  };
-
-  const closeMobileMenu = () => {
-    if (navDrawer && navBackdrop) {
-      navDrawer.classList.remove("is-active");
-      navBackdrop.classList.remove("is-active");
-      document.body.classList.remove("no-scroll");
-      if (hamburgerToggle)
-        hamburgerToggle.setAttribute("aria-expanded", "false");
-    }
-  };
-
-  if (hamburgerToggle) {
-    hamburgerToggle.addEventListener("click", openMobileMenu);
-  }
-
-  if (drawerClose) {
-    drawerClose.addEventListener("click", closeMobileMenu);
-  }
-
-  if (navBackdrop) {
-    navBackdrop.addEventListener("click", closeMobileMenu);
-  }
-
-  // Close drawer automatically when clicking any nav item or action button inside drawer
-  const drawerLinks = document.querySelectorAll(
-    ".nav-drawer .nav-item, .nav-drawer .btn-conversation",
-  );
-  drawerLinks.forEach((link) => {
-    link.addEventListener("click", closeMobileMenu);
   });
 
   // Stop Swiper section slide change ONLY when wheeling over .sec-9b__card-body

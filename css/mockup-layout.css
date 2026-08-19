@@ -1,11 +1,11 @@
 /* ==========================================================================
-   About Us Page Layout (Simplified Mockup Preview Mode)
+   Generic Mockup Preview Layout (Full-Page Slide Image View)
    Full-Width & Full-Height Responsive Display
    ========================================================================== */
 
 /* Mockup Slide Container - Clean White Default */
-.sec-about-mockup,
-.sec-mockup {
+.sec-mockup,
+.sec-about-mockup {
   position: relative;
   display: flex;
   align-items: center;
@@ -20,13 +20,13 @@
 }
 
 /* Section Background Themes */
-.sec-about-bg-dark,
-.sec-mockup-bg-dark {
+.sec-mockup-bg-dark,
+.sec-about-bg-dark {
   background-color: #01103b;
 }
 
-.sec-about-bg-light,
-.sec-mockup-bg-light {
+.sec-mockup-bg-light,
+.sec-about-bg-light {
   background-color: #ffffff;
 }
 
@@ -43,7 +43,7 @@
   -webkit-user-drag: none;
 }
 
-/* Hide fallback containers */
+/* Hide any fallback text boxes */
 .mockup-fallback {
   display: none !important;
 }
