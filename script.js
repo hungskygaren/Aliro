@@ -47,14 +47,14 @@ async function loadSharedHeader() {
               <a href="phase-0-diagnostic.html" class="nav-item" data-nav="services" aria-haspopup="true" aria-expanded="false">Services</a>
               <div class="nav-dropdown-menu" role="menu">
                 <a href="phase-0-diagnostic.html" class="nav-dropdown-item" data-nav="phase0" role="menuitem">Phase 0 Diagnostic</a>
-                <a href="javascript:void(0)" class="nav-dropdown-item" data-nav="thirdeye" role="menuitem">ThirdEye</a>
+                <a href="thirdeye.html" class="nav-dropdown-item" data-nav="thirdeye" role="menuitem">ThirdEye</a>
               </div>
             </div>
             <a href="about.html" class="nav-item" data-nav="about">About Us</a>
-            <a href="index.html#section-10" class="nav-item" data-nav="contact">Contact</a>
+            <a href="contact.html" class="nav-item" data-nav="contact">Contact</a>
           </nav>
           <div class="nav-actions">
-            <a href="index.html#section-10" class="btn-conversation">Start a Conversation</a>
+            <a href="contact.html" class="btn-conversation">Start a Conversation</a>
           </div>
         </div>
         <div class="nav-backdrop" id="navBackdrop"></div>
@@ -75,6 +75,8 @@ function highlightActiveNav() {
 
   if (currentPath.includes("about")) {
     activeKey = "about";
+  } else if (currentPath.includes("contact")) {
+    activeKey = "contact";
   } else if (currentPath.includes("phase-0") || currentPath.includes("diagnostic")) {
     activeKey = "phase0";
   } else if (currentPath.includes("thirdeye") || currentPath.includes("third-eye")) {
@@ -307,13 +309,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (activeSlide) {
       if (
         activeSlide.classList.contains("sec-mockup-bg-dark") ||
-        activeSlide.classList.contains("sec-about-bg-dark")
+        activeSlide.classList.contains("sec-about-bg-dark") ||
+        activeSlide.classList.contains("sec-contact-form")
       ) {
         mainHeader.classList.add("light-theme");
         return;
       } else if (
         activeSlide.classList.contains("sec-mockup-bg-light") ||
-        activeSlide.classList.contains("sec-about-bg-light")
+        activeSlide.classList.contains("sec-about-bg-light") ||
+        activeSlide.classList.contains("sec-contact-mockup")
       ) {
         mainHeader.classList.remove("light-theme");
         return;

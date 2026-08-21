@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Aliro Consulting - Start a conversation about strategic intelligence and healthcare transformation."
+    />
+    <title>Contact Us | Aliro Consulting</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/mockup-layout.css" />
+    <link rel="stylesheet" href="css/pages/contact/contact-layout.css" />
+  </head>
+  <body class="page-mockup page-contact">
+    <!-- Top Navigation Header (Reusable Component) -->
+    <header class="navbar-overlay light-theme" id="mainHeader"></header>
+
+    <!-- Swiper Fullscreen Container for Contact Page -->
+    <main class="swiper main-swiper" id="scrollContainer">
+      <div class="swiper-wrapper">
+        <!-- Section 1 (Image Mockup) -->
+        <section
+          class="scroll-section swiper-slide sec-mockup sec-contact-mockup"
+          id="section-contact-1"
+          data-section-index="0"
+        >
+          <img
+            src="assets/mock_contact/sec-1.png"
+            alt="Contact Us - Section 1"
+            class="mockup-img"
+            onerror="this.style.opacity = '0'"
+          />
+        </section>
+
+        <section
+          class="scroll-section swiper-slide sec-contact-form"
+          id="section-contact-2"
+          data-section-index="1"
+        >
+          <div class="container">
+            <div class="sec-contact__wrapper">
+              <div class="sec-contact__left">
+                <h2 class="sec-contact__title">START A CONVERSATION</h2>
+                <form class="sec-contact__form" id="contactForm">
+                  <div class="sec-contact__row">
+                    <div class="sec-contact__field">
+                      <label class="sec-contact__label" for="fullName"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        class="sec-contact__input"
+                        placeholder="Your full name"
+                        required
+                      />
+                    </div>
+                    <div class="sec-contact__field">
+                      <label class="sec-contact__label" for="workEmail"
+                        >Work Email</label
+                      >
+                      <input
+                        type="email"
+                        id="workEmail"
+                        name="workEmail"
+                        class="sec-contact__input"
+                        placeholder="E.g., name@yourcompany.com"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="sec-contact__field">
+                    <label class="sec-contact__label" for="organization"
+                      >Organization</label
+                    >
+                    <input
+                      type="text"
+                      id="organization"
+                      name="organization"
+                      class="sec-contact__input"
+                      placeholder="Your company or institution name"
+                    />
+                  </div>
+                  <div class="sec-contact__field">
+                    <label class="sec-contact__label" for="jobTitle"
+                      >Job Title</label
+                    >
+                    <input
+                      type="text"
+                      id="jobTitle"
+                      name="jobTitle"
+                      class="sec-contact__input"
+                      placeholder="E.g., Chief Medical Officer, CEO, Operations Director"
+                    />
+                  </div>
+                  <div class="sec-contact__field">
+                    <label class="sec-contact__label" for="situation"
+                      >Your Situation</label
+                    >
+                    <textarea
+                      id="situation"
+                      name="situation"
+                      class="sec-contact__textarea"
+                      rows="3"
+                      placeholder="Briefly share the strategic or operational challenge you are evaluating. We’ll keep our first conversation focused on your reality."
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="sec-contact__btn-submit">
+                    Submit
+                  </button>
+                </form>
+              </div>
+              <div class="sec-contact__right">
+                <img
+                  src="assets/mock_contact/sec-2-right.png"
+                  class="sec-contact__img"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3 (Image Mockup) -->
+        <section
+          class="scroll-section swiper-slide sec-mockup sec-contact-mockup"
+          id="section-contact-3"
+          data-section-index="2"
+        >
+          <img
+            src="assets/mock_contact/sec-3.png"
+            alt="Contact Us - Section 3"
+            class="mockup-img"
+            onerror="this.style.opacity = '0'"
+          />
+        </section>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script>
+      const contactForm = document.getElementById("contactForm");
+
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const formData = new FormData(contactForm);
+
+          console.log(formData);
+
+          for (let [key, value] of formData.entries()) {
+            console.log(`${key} : ${value}`);
+          }
+
+          const dataObject = Object.fromEntries(formData);
+          console.log(dataObject);
+          const jsonPayload = JSON.stringify(dataObject, null, 2);
+          console.log(jsonPayload);
+          contactForm.reset();
+        });
+      }
+    </script>
+  </body>
+</html>

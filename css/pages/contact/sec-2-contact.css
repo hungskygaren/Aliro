@@ -1,0 +1,137 @@
+.sec-contact__left,
+.sec-contact__right {
+  flex: 1;
+}
+
+.sec-contact__img {
+  aspect-ratio: 570/456;
+  width: 100%;
+  max-width: 570px;
+  height: auto;
+  object-fit: contain;
+}
+.sec-contact__title {
+  color: var(--Midnight-Navy, #01103b);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: Aptos;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.sec-contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.sec-contact__row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+}
+.sec-contact__field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+  flex: 1;
+}
+
+.sec-contact__label {
+  color: var(--Dark-1, #141416);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+
+  /* Body text 2 */
+  font-family: Aptos;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.sec-contact__input {
+  border: 1px solid var(--Grey-3, #dbdee2);
+  background: var(--White, #fff);
+  height: 36px;
+  color: var(--Dark-1, #141416); /* 👈 Chữ gõ thực tế màu đen */
+  font-family: Aptos, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 7px 12px 9px 13px;
+  outline: none;
+}
+
+.sec-contact__input::placeholder {
+  color: var(--Grey-2, #a8abb8); /* 👈 Chữ gợi ý màu xám */
+  font-family: Aptos, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 1; /* Đảm bảo màu xám hiển thị rõ trên mọi trình duyệt */
+}
+/* 1. Ô Textarea (Your Situation) */
+.sec-contact__textarea {
+  width: 100%;
+  height: 120px; /* Chiều cao theo chuẩn Figma */
+  background: var(--White, #fff);
+  border: 1px solid var(--Grey-3, #dbdee2);
+  color: var(--Dark-1, #141416);
+  font-family: Aptos, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  padding: 7px 12px 9px 13px;
+
+  resize: none; /* Khóa không cho kéo dãn vỡ layout */
+  outline: none;
+}
+
+/* 2. Placeholder cho Textarea */
+.sec-contact__textarea::placeholder {
+  color: var(--Grey-2, #a8abb8);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+
+  /* Body text 2 */
+  font-family: Aptos;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* 3. Hiệu ứng khi bấm vào ô nhập */
+.sec-contact__textarea:focus,
+.sec-contact__input:focus {
+  border-color: var(--Highlight-Blue, #0431b1);
+}
+
+/* 4. Nút Submit */
+.sec-contact__btn-submit {
+  display: inline-flex;
+  padding: 7px 16px 8px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--Highlight-Blue, #0431b1);
+  color: var(--White, #ffffff);
+  text-align: center;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: Aptos, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  align-self: center;
+}
