@@ -1,48 +1,70 @@
 /* ==========================================================================
-   About Us Page Layout (Simplified Mockup Preview Mode)
-   Full-Width & Full-Height Responsive Display (object-fit: cover)
+   About Us Page Layout & Modular Section Imports (Development Mode)
    ========================================================================== */
 
-/* Mockup Slide Container - Clean White Default */
-.sec-about-mockup,
-.sec-mockup {
-  position: relative;
+/* Section 1: About Hero */
+@import "./sec-1-about-hero.css";
+
+/* Section 2: Four Intelligence Continuum (4iC) */
+@import "./sec-2-about-continuum.css";
+
+/* Section 3: Regional Presence */
+@import "./sec-3-about-regional.css";
+
+/* Section 4: Strategic Intelligence & Advisory Services Matrix */
+@import "./sec-4-about-services.css";
+
+/* Section 5: Why Partner with Aliro? */
+@import "./sec-5-about-why.css";
+
+/* Section 6: Selected Engagements & Stats */
+@import "./sec-6-about-engagements.css";
+
+/* Section 7: The Senior Bench */
+@import "./sec-7-about-bench.css";
+
+/* Section 8: Connected Journey (6 Steps) */
+@import "./sec-8-about-journey.css";
+
+/* Section 9: Final Contact & Entity Details (Reused Footer from Home) */
+@import "../home/sec-10-contact.css";
+
+/* Placeholder content layout */
+.about-placeholder-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh;
-  overflow: hidden;
-  box-sizing: border-box;
-  background-color: #ffffff;
-}
-
-/* Section Background Themes */
-.sec-about-bg-dark,
-.sec-mockup-bg-dark {
-  background-color: #01103b;
-}
-
-.sec-about-bg-light,
-.sec-mockup-bg-light {
-  background-color: #ffffff;
-}
-
-/* Mockup Image - Full Width & Full Screen Cover */
-.mockup-img {
-  width: 100%;
   height: 100%;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
-  user-select: none;
-  -webkit-user-drag: none;
+  text-align: center;
+  padding: 80px 20px 40px;
+  box-sizing: border-box;
 }
 
-/* Hide fallback containers */
-.mockup-fallback {
-  display: none !important;
+.about-placeholder-tag {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.about-placeholder-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.about-placeholder-desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 680px;
+  line-height: 1.5;
+  opacity: 0.9;
 }

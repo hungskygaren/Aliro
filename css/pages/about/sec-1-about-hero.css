@@ -37,7 +37,7 @@
 /* Left Content Column */
 .sec-about-1__left {
   position: absolute;
-  top: 180px;
+  top: 28.19%; /* 203px / 720px Figma frame height */
   left: 0;
   width: 50%;
   max-width: 570px;
@@ -54,7 +54,7 @@
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 28px; /* 116.667% */
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -67,10 +67,10 @@
   font-family: Aptos, var(--font-brand);
   font-size: 44px;
   font-weight: 700;
-  line-height: 50px;
+  line-height: 50px; /* 113.636% */
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0 0 20px 0;
+  margin: 0 0 18px 0; /* Exact 18px gap to catchphrase */
   max-width: 570px;
   font-feature-settings:
     "liga" off,
@@ -81,7 +81,7 @@
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 28px; /* 116.667% */
   color: var(--Secondary-Deep-Blue, #011b7f);
   margin-bottom: 20px;
   font-feature-settings:
@@ -93,7 +93,7 @@
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-weight: 600;
-  line-height: 26px;
+  line-height: 22px; /* 4 lines x 22px = exactly 88px height matching Figma */
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
   max-width: 470px;
@@ -105,12 +105,13 @@
 /* Right Visual Column */
 .sec-about-1__right {
   position: absolute;
-  top: 170px;
+  top: 22.08%; /* 159px / 720px Figma frame height */
   right: 0;
   width: 50%;
+  max-width: 570px;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   z-index: 3;
   opacity: 0;
   transform: translateY(40px);
@@ -118,6 +119,17 @@
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.25s;
+}
+
+.sec-about-1__subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  color: #ffffff;
+  text-align: right;
+  margin-bottom: 18px; /* 201px (image top) - (159px + 24px) = 18px exact */
+  width: 100%;
 }
 
 .sec-about-1__img-wrapper {
@@ -292,7 +304,14 @@
     right: auto !important;
     width: 100% !important;
     max-width: 480px !important;
+    align-items: center !important;
     justify-content: center !important;
+  }
+
+  .sec-about-1__subtitle {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 14px;
   }
 
   .sec-about-1__img {
@@ -339,6 +358,11 @@
 
   .sec-about-1__right {
     max-width: 340px !important;
+  }
+
+  .sec-about-1__subtitle {
+    font-size: 15px;
+    margin-bottom: 12px;
   }
 
   .sec-about-1__img {

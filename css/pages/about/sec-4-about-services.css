@@ -13,16 +13,9 @@
   box-sizing: border-box;
 }
 
-/* Background image with soft opacity */
+/* Background image layer - Disabled for clean pure white design matching Figma */
 .sec-about-4__bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("../../../assets/about/sec-4-bg.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 .sec-about-4 .flex-center-v {
@@ -78,7 +71,7 @@
     "clig" off;
 }
 
-/* Services Matrix Table Wrapper */
+/* Services Matrix Table Wrapper (Clean flat white, no border-radius or shadow per Figma) */
 .sec-about-4__matrix-wrapper {
   width: 100%;
   max-width: 1170px;
@@ -89,8 +82,7 @@
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.2s;
-  box-shadow: 0 10px 30px rgba(1, 16, 59, 0.06);
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   background: #ffffff;
 }
@@ -98,106 +90,118 @@
 .sec-about-4__matrix {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 4px;
+  border-spacing: 5px;
   background: #ffffff;
 }
 
-/* Table Header Styles */
+/* Table Header Styles (All #011b7f, height 90px, sharp corners) */
 .sec-about-4__matrix th {
-  padding: 16px 12px;
-  text-align: center;
-  vertical-align: middle;
+  background-color: #011b7f;
+  height: 90px;
+  padding: 14px 16px;
+  vertical-align: top;
   color: #ffffff;
   font-family: Aptos, var(--font-brand);
-  border-radius: 4px;
+  border-radius: 0;
+  box-sizing: border-box;
 }
 
 .sec-about-4__matrix th.col-deliverables {
-  background-color: #011b7f;
-  width: 34%;
+  width: 350px;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 24px;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.5px;
+  vertical-align: middle;
 }
 
-.sec-about-4__matrix th.col-service-1 {
-  background-color: #0431b1;
-  width: 16.5%;
+.sec-about-4__matrix th.col-service {
+  width: 200px;
+  text-align: left;
 }
 
-.sec-about-4__matrix th.col-service-2 {
-  background-color: #011b7f;
-  width: 16.5%;
-}
-
-.sec-about-4__matrix th.col-service-3 {
-  background-color: #0431b1;
-  width: 16.5%;
-}
-
-.sec-about-4__matrix th.col-service-4 {
-  background-color: #011b7f;
-  width: 16.5%;
+.sec-about-4__service-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+  width: 100%;
 }
 
 .sec-about-4__service-title {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 20px;
-  margin-bottom: 4px;
+  line-height: 18px;
   text-transform: uppercase;
+  text-align: left;
+}
+
+.sec-about-4__service-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  margin-left: 6px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.sec-about-4__matrix th:hover .sec-about-4__service-arrow {
+  transform: translate(2px, -2px);
 }
 
 .sec-about-4__service-badge {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: normal;
+  color: #ffffff;
   opacity: 0.9;
+  text-align: left;
 }
 
-/* Table Rows & Cells */
+/* Table Rows & Cells (Height 40px, sharp corners, alternating tints) */
 .sec-about-4__matrix td {
-  height: 38px;
-  padding: 6px 12px;
+  height: 40px;
+  padding: 0 12px;
   text-align: center;
   vertical-align: middle;
-  border-radius: 4px;
+  border-radius: 0;
+  box-sizing: border-box;
 }
 
-.sec-about-4__matrix td.cell-label {
-  background-color: #d2dfef;
-  font-family: Manrope, Aptos, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #01103b;
-  text-align: left;
-  padding-left: 20px;
-  white-space: nowrap;
-}
-
-.sec-about-4__matrix td.cell-tint-1 {
+/* Alternating Row Tints matching Figma */
+.sec-about-4__matrix tbody tr:nth-child(odd) td {
   background-color: #e7eef8;
 }
 
-.sec-about-4__matrix td.cell-tint-2 {
+.sec-about-4__matrix tbody tr:nth-child(even) td {
   background-color: #d2dfef;
+}
+
+.sec-about-4__matrix td.cell-label {
+  font-family: Manrope, Aptos, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #01103b;
+  text-align: left;
+  padding-left: 24px;
+  white-space: nowrap;
 }
 
 /* Checkmark Icon */
 .sec-about-4__check {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #01103b;
+  color: #011b7f;
 }
 
 .sec-about-4__check svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   fill: currentColor;
 }
 
@@ -258,7 +262,7 @@
   }
 
   .sec-about-4__matrix {
-    min-width: 780px;
+    min-width: 820px;
   }
 }
 
@@ -274,17 +278,18 @@
   }
 
   .sec-about-4__title {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   .sec-about-4__matrix th {
-    padding: 12px 8px;
+    padding: 12px 10px;
+    height: 75px;
   }
 
   .sec-about-4__service-title {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 13px;
+    line-height: 16px;
   }
 
   .sec-about-4__service-badge {
@@ -292,36 +297,17 @@
   }
 
   .sec-about-4__matrix td {
-    height: 34px;
-    padding: 4px 8px;
+    height: 36px;
+    padding: 0 8px;
   }
 
   .sec-about-4__matrix td.cell-label {
     font-size: 13px;
-    padding-left: 12px;
+    padding-left: 14px;
   }
 
   .sec-about-4__check svg {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .sec-about-4__title {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .sec-about-4__matrix {
-    min-width: 700px;
-  }
-}
-
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
-@media (max-width: 767px) and (min-height: 780px) {
-  .sec-about-4__title {
-    font-size: 24px;
-    line-height: 30px;
+    width: 18px;
+    height: 18px;
   }
 }

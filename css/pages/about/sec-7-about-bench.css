@@ -1,0 +1,348 @@
+/* ==========================================================================
+   Section 7: About Us - The Senior Bench (Senior Advisors)
+   Figma Node: 6701:4296
+   ========================================================================== */
+
+.sec-about-7 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #1e55b3 0%,
+    #174495 25%,
+    #103277 50%,
+    #082159 75%,
+    #01103b 100%
+  ) !important;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.sec-about-7 .container {
+  position: relative;
+  height: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header Area: top 130px / 720px = 18.06% */
+.sec-about-7__header {
+  position: absolute;
+  top: 15.06%;
+  left: 50%;
+  transform: translate(-50%, -20px);
+  text-align: center;
+  width: 100%;
+  z-index: 4;
+  opacity: 0;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-about-7__tag {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px 0;
+  display: block;
+}
+
+.sec-about-7__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* Main Content Stage */
+.sec-about-7__stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+/* Center Graphic: Full 1170x428 3D Command Platform with connecting brackets */
+.sec-about-7__center {
+  position: absolute;
+  top: 35.28%;
+  left: 0;
+  width: 100%;
+  max-width: 1170px;
+  height: 428px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+.sec-about-7__center-img {
+  width: 100%;
+  max-width: 1170px;
+  height: 428px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.8;
+}
+
+/* Left & Right Advisor Columns (Top 196px / 720px = 27.22%) */
+.sec-about-7__advisor {
+  position: absolute;
+  top: 27.22%; /* 196px / 720px */
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+}
+
+.sec-about-7__advisor--left {
+  left: 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.25s;
+}
+
+.sec-about-7__advisor--right {
+  right: 0;
+  opacity: 0;
+  transform: translateX(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.25s;
+}
+
+/* Circular Portrait Avatar (Method 2: Full CSS Border & Glow) */
+.sec-about-7__avatar-wrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid var(--Light-Glow, #c5daf3);
+  background-color: #01103b;
+  box-shadow: 0 0 20px 0 rgba(123, 231, 255, 0.3);
+  margin: 0 auto 15px auto;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sec-about-7__avatar-wrap:hover {
+  border-color: #00e5ff;
+  box-shadow: 0 0 25px 0 rgba(0, 229, 255, 0.5);
+}
+
+.sec-about-7__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Advisor Name (Top 411px / 720px = 57.08%, margin-bottom 34px for bracket line space) */
+.sec-about-7__name {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 0 0 34px 0;
+  white-space: nowrap;
+}
+
+/* Advisor Role & Bio */
+.sec-about-7__role {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  white-space: nowrap;
+}
+
+.sec-about-7__bio {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #ffffff;
+  opacity: 0.9;
+  margin: 0;
+  max-width: 370px;
+}
+
+/* Slide Entrance Animations */
+.sec-about-7.slide-animated .sec-about-7__header {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.sec-about-7.slide-animated .sec-about-7__center,
+.sec-about-7.slide-animated .sec-about-7__advisor--left,
+.sec-about-7.slide-animated .sec-about-7__advisor--right {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.sec-about-7.slide-animated .sec-about-7__center {
+  opacity: 1;
+  transform: none;
+}
+
+.sec-about-7.visited .sec-about-7__header {
+  opacity: 1 !important;
+  transform: translate(-50%, 0) !important;
+  transition: none !important;
+}
+
+.sec-about-7.visited .sec-about-7__center {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.sec-about-7.visited .sec-about-7__advisor--left,
+.sec-about-7.visited .sec-about-7__advisor--right {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Tablet & Mobile)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .sec-about-7 {
+    height: auto !important;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-y: auto !important;
+  }
+
+  .sec-about-7 .container {
+    height: auto !important;
+    padding-top: 85px !important;
+    padding-bottom: 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+  }
+
+  .sec-about-7__header {
+    position: static !important;
+    transform: none !important;
+    opacity: 1 !important;
+    margin-bottom: 20px;
+  }
+
+  .sec-about-7__title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .sec-about-7__stage {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+    height: auto !important;
+  }
+
+  .sec-about-7__center {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    height: auto !important;
+    opacity: 1 !important;
+    order: 2;
+  }
+
+  .sec-about-7__center-img {
+    height: auto !important;
+    max-height: 280px !important;
+  }
+
+  .sec-about-7__advisor {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 420px !important;
+    opacity: 1 !important;
+  }
+
+  .sec-about-7__advisor--left {
+    order: 1;
+  }
+
+  .sec-about-7__advisor--right {
+    order: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-about-7 .container {
+    padding-top: 75px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .sec-about-7__tag {
+    font-size: 16px;
+  }
+
+  .sec-about-7__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .sec-about-7__avatar-wrap {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .sec-about-7__name {
+    font-size: 20px !important;
+    white-space: normal !important;
+  }
+
+  .sec-about-7__role {
+    font-size: 16px !important;
+    white-space: normal !important;
+  }
+
+  .sec-about-7__bio {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}

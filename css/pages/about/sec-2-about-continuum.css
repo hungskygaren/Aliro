@@ -1,6 +1,6 @@
 /* ==========================================================================
    Section 2: About Us - The Four Intelligence Continuum (4iC)
-   Figma Node: 4826:3370
+   Figma Node: 6701:1927
    ========================================================================== */
 
 .sec-about-2 {
@@ -28,7 +28,7 @@
 /* Header Info */
 .sec-about-2__header {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   z-index: 4;
   opacity: 0;
   transform: translateY(-20px);
@@ -68,8 +68,8 @@
 .sec-about-2__stage {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  height: 480px;
+  max-width: 1170px;
+  height: 460px; /* Exact 460px height matching the isometric diagram in Figma */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,9 +80,7 @@
 .sec-about-2__center-img-wrapper {
   position: absolute;
   width: 690px;
-  max-width: 60%;
-  height: auto;
-  aspect-ratio: 690 / 460;
+  height: 460px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,23 +100,62 @@
   display: block;
 }
 
-/* 4 Quadrants Positioning on Desktop */
-.sec-about-2__quadrant {
+/* Quadrants Cards Container */
+.sec-about-2__cards-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* 4 Quadrant Cards */
+.sec-about-2__card {
   position: absolute;
   width: 270px;
+  min-height: 190px;
+  height: 190px;
+  background-color: #ffffff;
+  border: 1px solid rgba(126, 147, 168, 0.5);
+  box-sizing: border-box;
+  padding: 15px 14px 16px 14px; /* Figma: top 16, right 15, bottom 17, left 15 (trừ 1px border) */
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  text-decoration: none;
+  pointer-events: auto;
   z-index: 4;
   opacity: 0;
   transition:
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sec-about-2__card:hover {
+  border-color: var(--Secondary-Deep-Blue, #011b7f);
+  box-shadow: 0 10px 24px rgba(1, 27, 127, 0.1);
+  transform: translateY(-4px) !important;
+}
+
+.sec-about-2__card:hover .sec-about-2__card-arrow {
+  transform: translateX(4px);
+  color: var(--Secondary-Deep-Blue, #011b7f);
+}
+
+/* Card Top: Icon + Title */
+.sec-about-2__card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .sec-about-2__icon-wrapper {
   width: 60px;
   height: 60px;
-  margin-bottom: 8px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,69 +165,90 @@
   width: 60px;
   height: 60px;
   object-fit: contain;
+  display: block;
 }
 
-.sec-about-2__quadrant-title {
+.sec-about-2__card-title {
   font-family: Aptos, var(--font-brand);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 28px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0 0 6px 0;
+  margin: 0;
+  text-align: left;
   font-feature-settings:
     "liga" off,
     "clig" off;
 }
 
-.sec-about-2__quadrant-desc {
+.sec-about-2__card-title--capacity {
+  font-size: 19px;
+  line-height: 23px;
+}
+
+/* Card Description */
+.sec-about-2__card-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 20px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
+  text-align: left;
   font-feature-settings:
     "liga" off,
     "clig" off;
 }
 
+/* Card Arrow Icon */
+.sec-about-2__card-arrow {
+  position: absolute;
+  bottom: 16px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sec-about-2__card-arrow svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
 /* Top-Left: Market Intelligence */
-.sec-about-2__quadrant--top-left {
-  top: 10px;
-  left: 30px;
-  align-items: flex-end;
-  text-align: right;
+.sec-about-2__card--top-left {
+  top: 14px;
+  left: 0;
   transform: translate(-30px, -20px);
   transition-delay: 0.3s;
 }
 
 /* Top-Right: Operational Intelligence */
-.sec-about-2__quadrant--top-right {
-  top: 10px;
-  right: 30px;
-  align-items: flex-start;
-  text-align: left;
+.sec-about-2__card--top-right {
+  top: 14px;
+  right: 0;
   transform: translate(30px, -20px);
   transition-delay: 0.35s;
 }
 
 /* Bottom-Left: Capacity & Capability */
-.sec-about-2__quadrant--bottom-left {
-  bottom: 10px;
-  left: 30px;
-  align-items: flex-end;
-  text-align: right;
+.sec-about-2__card--bottom-left {
+  bottom: 16px; /* Exact 16px from bottom edge in Figma (652px image bottom - 636px card bottom) */
+  left: 0;
   transform: translate(-30px, 20px);
   transition-delay: 0.4s;
 }
 
 /* Bottom-Right: Digital Intelligence */
-.sec-about-2__quadrant--bottom-right {
-  bottom: 10px;
-  right: 30px;
-  align-items: flex-start;
-  text-align: left;
+.sec-about-2__card--bottom-right {
+  bottom: 16px; /* Exact 16px from bottom edge in Figma */
+  right: 0;
   transform: translate(30px, 20px);
   transition-delay: 0.45s;
 }
@@ -206,14 +264,14 @@
   transform: scale(1);
 }
 
-.sec-about-2.slide-animated .sec-about-2__quadrant {
+.sec-about-2.slide-animated .sec-about-2__card {
   opacity: 1;
   transform: translate(0, 0);
 }
 
 .sec-about-2.visited .sec-about-2__header,
 .sec-about-2.visited .sec-about-2__center-img-wrapper,
-.sec-about-2.visited .sec-about-2__quadrant {
+.sec-about-2.visited .sec-about-2__card {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
@@ -254,14 +312,17 @@
     margin: 0 auto !important;
   }
 
-  .sec-about-2__quadrants-grid {
+  .sec-about-2__cards-container {
+    position: relative !important;
+    inset: auto !important;
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 24px 20px !important;
+    gap: 16px !important;
     width: 100% !important;
+    height: auto !important;
   }
 
-  .sec-about-2__quadrant {
+  .sec-about-2__card {
     position: relative !important;
     top: auto !important;
     bottom: auto !important;
@@ -269,8 +330,8 @@
     right: auto !important;
     width: 100% !important;
     max-width: 100% !important;
-    text-align: center !important;
-    align-items: center !important;
+    height: auto !important;
+    min-height: 170px !important;
     transform: none !important;
     opacity: 1 !important;
   }
@@ -297,30 +358,32 @@
     max-width: 320px !important;
   }
 
-  .sec-about-2__quadrants-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 18px 12px !important;
+  .sec-about-2__cards-container {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
   }
 
   .sec-about-2__icon-wrapper,
   .sec-about-2__icon {
-    width: 44px !important;
-    height: 44px !important;
+    width: 48px !important;
+    height: 48px !important;
   }
 
-  .sec-about-2__icon-wrapper {
-    margin-bottom: 4px !important;
+  .sec-about-2__card-title {
+    font-size: 18px !important;
+    line-height: 22px !important;
   }
 
-  .sec-about-2__quadrant-title {
-    font-size: 15px !important;
-    line-height: 19px !important;
-    margin-bottom: 4px !important;
+  .sec-about-2__card-title--capacity {
+    font-size: 16px !important;
+    line-height: 20px !important;
   }
 
-  .sec-about-2__quadrant-desc {
-    font-size: 12px !important;
-    line-height: 16px !important;
+  .sec-about-2__card-desc {
+    font-size: 14px !important;
+    line-height: 18px !important;
   }
 }
 
@@ -334,53 +397,23 @@
     line-height: 24px;
   }
 
-  .sec-about-2__quadrants-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 14px 10px !important;
-  }
-
-  .sec-about-2__quadrant-title {
-    font-size: 13px !important;
-    line-height: 16px !important;
-  }
-
-  .sec-about-2__quadrant-desc {
-    font-size: 11px !important;
-    line-height: 15px !important;
-  }
-}
-
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
-@media (max-width: 767px) and (min-height: 780px) {
-  .sec-about-2__stage {
-    gap: 28px !important;
-  }
-
-  .sec-about-2__center-img-wrapper {
-    max-width: 360px !important;
-  }
-
-  .sec-about-2__title {
-    font-size: 28px;
-    line-height: 32px;
-  }
-
-  .sec-about-2__quadrants-grid {
-    gap: 22px 16px !important;
+  .sec-about-2__card {
+    padding: 12px 10px !important;
+    min-height: 140px !important;
   }
 
   .sec-about-2__icon-wrapper,
   .sec-about-2__icon {
-    width: 50px !important;
-    height: 50px !important;
+    width: 42px !important;
+    height: 42px !important;
   }
 
-  .sec-about-2__quadrant-title {
+  .sec-about-2__card-title {
     font-size: 16px !important;
     line-height: 20px !important;
   }
 
-  .sec-about-2__quadrant-desc {
+  .sec-about-2__card-desc {
     font-size: 13px !important;
     line-height: 17px !important;
   }
