@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Phase 0 Diagnostic Page Layout & Modular Section Imports
+   ========================================================================== */
+
+/* Section 1: Hero - The 4iC Diagnostic */
+@import "./sec-1-phase0-hero.css";
+
+/* Section 2: How It Runs (4 Steps) */
+@import "./sec-2-phase0-runs.css";
+
+/* Section 3: Four Lenses, One Read */
+@import "./sec-3-phase0-lenses.css";
+
+/* Section 4: What You Receive (Deliverables & Outcome) */
+@import "./sec-4-phase0-receive.css";
+
+/* Section 5: Diagnostic Principles (4 Key Value Props) */
+@import "./sec-5-phase0-principles.css";
+
+/* Section 6: After The Gate */
+@import "./sec-6-phase0-gate.css";
+
+/* Section 7: Where It Enters */
+@import "./sec-7-phase0-enters.css";
+
+/* Section 8: Final Contact & Entity Details (Reused Footer from Home) */
+@import "../home/sec-10-contact.css";

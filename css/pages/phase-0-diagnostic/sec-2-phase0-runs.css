@@ -1,0 +1,386 @@
+/* ==========================================================================
+   Section 2: How It Runs (4 Steps Timeline & Fixed Scope Banner)
+   Figma Node: 4900:3473
+   ========================================================================== */
+
+.sec-phase0-2 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: var(--Midnight-Navy, #01103b);
+}
+
+.sec-phase0-2 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 85px 20px 40px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Top Banner & Subtitle Header
+   -------------------------------------------------------------------------- */
+.sec-phase0-2__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.sec-phase0-2__banner {
+  background-color: var(--Midnight-Navy, #01103b);
+  width: 100%;
+  max-width: 900px;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 24px rgba(1, 16, 59, 0.12);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-phase0-2__banner-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-phase0-2__banner-highlight {
+  color: #eaa936;
+}
+
+.sec-phase0-2__subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+/* --------------------------------------------------------------------------
+   4-Step Interactive Process Grid
+   -------------------------------------------------------------------------- */
+.sec-phase0-2__grid-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+}
+
+.sec-phase0-2__timeline-line {
+  position: absolute;
+  top: 220px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #9fc2ee 0%,
+    #4a8fe2 50%,
+    #0431b1 100%
+  );
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.3s;
+}
+
+.sec-phase0-2__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.sec-phase0-2__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-phase0-2__step:nth-child(1) {
+  transition-delay: 0.25s;
+}
+.sec-phase0-2__step:nth-child(2) {
+  transition-delay: 0.38s;
+}
+.sec-phase0-2__step:nth-child(3) {
+  transition-delay: 0.51s;
+}
+.sec-phase0-2__step:nth-child(4) {
+  transition-delay: 0.64s;
+}
+
+/* Step Illustration Area */
+.sec-phase0-2__step-visual {
+  width: 100%;
+  height: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.sec-phase0-2__step-img {
+  max-width: 100%;
+  max-height: 190px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  filter: drop-shadow(0 6px 12px rgba(1, 16, 59, 0.08));
+}
+
+.sec-phase0-2__step:hover .sec-phase0-2__step-img {
+  transform: translateY(-6px) scale(1.04);
+  filter: drop-shadow(0 12px 20px rgba(1, 16, 59, 0.16));
+}
+
+/* Step Number Badge */
+.sec-phase0-2__badge-wrapper {
+  position: relative;
+  z-index: 3;
+  margin-bottom: 12px;
+}
+
+.sec-phase0-2__badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--Midnight-Navy, #01103b);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 0 0 4px #ffffff, 0 4px 10px rgba(1, 16, 59, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sec-phase0-2__step:hover .sec-phase0-2__badge {
+  transform: scale(1.1);
+  background-color: var(--Highlight-Blue, #0431b1);
+}
+
+/* Step Typography */
+.sec-phase0-2__step-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.5px;
+}
+
+.sec-phase0-2__step-desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0;
+  max-width: 250px;
+  opacity: 0.92;
+}
+
+/* --------------------------------------------------------------------------
+   Swiper Active Slide Animation Triggers
+   -------------------------------------------------------------------------- */
+.sec-phase0-2.swiper-slide-active .sec-phase0-2__banner,
+.sec-phase0-2.slide-animated .sec-phase0-2__banner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-phase0-2.swiper-slide-active .sec-phase0-2__subtitle,
+.sec-phase0-2.slide-animated .sec-phase0-2__subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-phase0-2.swiper-slide-active .sec-phase0-2__timeline-line,
+.sec-phase0-2.slide-animated .sec-phase0-2__timeline-line {
+  transform: scaleX(1);
+}
+
+.sec-phase0-2.swiper-slide-active .sec-phase0-2__step,
+.sec-phase0-2.slide-animated .sec-phase0-2__step {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout & Mobile Adaptation
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-phase0-2__banner-title {
+    font-size: 28px;
+  }
+  .sec-phase0-2__subtitle {
+    font-size: 20px;
+  }
+  .sec-phase0-2__step-visual {
+    height: 170px;
+  }
+  .sec-phase0-2__timeline-line {
+    top: 195px;
+  }
+  .sec-phase0-2__step-title {
+    font-size: 20px;
+  }
+  .sec-phase0-2__step-desc {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-phase0-2 .flex-center-v {
+    padding: 75px 16px 30px;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .sec-phase0-2__banner {
+    max-width: 100%;
+    padding: 12px 16px;
+  }
+
+  .sec-phase0-2__banner-title {
+    font-size: 22px;
+  }
+
+  .sec-phase0-2__subtitle {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .sec-phase0-2__timeline-line {
+    display: none;
+  }
+
+  .sec-phase0-2__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+  }
+
+  .sec-phase0-2__step-visual {
+    height: 130px;
+  }
+
+  .sec-phase0-2__step-img {
+    max-height: 125px;
+  }
+
+  .sec-phase0-2__badge {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .sec-phase0-2__step-title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 6px;
+  }
+
+  .sec-phase0-2__step-desc {
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-phase0-2 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  .sec-phase0-2__banner-title {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+
+  .sec-phase0-2__subtitle {
+    font-size: 16px;
+  }
+
+  .sec-phase0-2__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sec-phase0-2__step {
+    display: grid;
+    grid-template-columns: 80px 40px 1fr;
+    align-items: center;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .sec-phase0-2__step-visual {
+    height: 80px;
+    margin-bottom: 0;
+  }
+
+  .sec-phase0-2__step-img {
+    max-height: 75px;
+  }
+
+  .sec-phase0-2__badge-wrapper {
+    margin-bottom: 0;
+  }
+
+  .sec-phase0-2__step-desc {
+    display: block;
+  }
+}

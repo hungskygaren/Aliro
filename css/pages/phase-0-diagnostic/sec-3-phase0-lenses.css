@@ -1,0 +1,443 @@
+/* ==========================================================================
+   Section 3: Four Lenses, One Read (One Integrated 4iC Diagnostic)
+   Figma Node: 6704:1857
+   ========================================================================== */
+
+.sec-phase0-3 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #1e55b3 0%,
+    #174495 25%,
+    #103277 50%,
+    #082159 75%,
+    #01103b 100%
+  ) !important;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.sec-phase0-3 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  padding-top: 75px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Header: Title & Subtitle
+   -------------------------------------------------------------------------- */
+.sec-phase0-3__header {
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-phase0-3__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-phase0-3__subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.9;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* --------------------------------------------------------------------------
+   Main Stage: Center Isometric Graphic & 4 Corner Cards
+   -------------------------------------------------------------------------- */
+.sec-phase0-3__stage {
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+/* Center Isometric Image with Ambient Glow */
+.sec-phase0-3__center-wrapper {
+  position: absolute;
+  width: 650px;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+.sec-phase0-3__glow {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(72, 147, 220, 0.35) 0%,
+    rgba(1, 16, 59, 0) 100%
+  );
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+  animation: secPhase03GlowPulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes secPhase03GlowPulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+.sec-phase0-3__center-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
+  animation: secPhase03Float 7s ease-in-out infinite alternate;
+}
+
+@keyframes secPhase03Float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4 Quadrant Lens Cards
+   -------------------------------------------------------------------------- */
+.sec-phase0-3__cards-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sec-phase0-3__card {
+  position: absolute;
+  width: 270px;
+  min-height: 180px;
+  background: rgba(1, 16, 59, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid #4893dc;
+  box-sizing: border-box;
+  padding: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  pointer-events: auto;
+  z-index: 4;
+  opacity: 0;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sec-phase0-3__card:hover {
+  border-color: #8bbef5;
+  background: rgba(4, 49, 177, 0.4);
+  box-shadow: 0 12px 35px rgba(72, 147, 220, 0.35);
+  transform: translateY(-4px) !important;
+}
+
+/* Card Header: Icon + Title */
+.sec-phase0-3__card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.sec-phase0-3__icon-wrapper {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-phase0-3__icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
+.sec-phase0-3__card-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-phase0-3__card-title--capacity {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+/* Card Subtitle & Description */
+.sec-phase0-3__card-subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.sec-phase0-3__card-desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #ffffff;
+  opacity: 0.88;
+  margin: 0;
+}
+
+/* Card Absolute Positions in Desktop Stage */
+.sec-phase0-3__card--top-left {
+  top: 10px;
+  left: 0;
+  transform: translate(-30px, -20px);
+  transition-delay: 0.3s;
+}
+
+.sec-phase0-3__card--top-right {
+  top: 10px;
+  right: 0;
+  transform: translate(30px, -20px);
+  transition-delay: 0.35s;
+}
+
+.sec-phase0-3__card--bottom-left {
+  bottom: 10px;
+  left: 0;
+  transform: translate(-30px, 20px);
+  transition-delay: 0.4s;
+}
+
+.sec-phase0-3__card--bottom-right {
+  bottom: 10px;
+  right: 0;
+  transform: translate(30px, 20px);
+  transition-delay: 0.45s;
+}
+
+/* --------------------------------------------------------------------------
+   Swiper Active Slide Animation Triggers
+   -------------------------------------------------------------------------- */
+.sec-phase0-3.swiper-slide-active .sec-phase0-3__header,
+.sec-phase0-3.slide-animated .sec-phase0-3__header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-phase0-3.swiper-slide-active .sec-phase0-3__center-wrapper,
+.sec-phase0-3.slide-animated .sec-phase0-3__center-wrapper {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sec-phase0-3.swiper-slide-active .sec-phase0-3__card,
+.sec-phase0-3.slide-animated .sec-phase0-3__card {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout & Mobile Adaptation
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-phase0-3__title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .sec-phase0-3__subtitle {
+    font-size: 20px;
+  }
+  .sec-phase0-3__stage {
+    height: 420px;
+  }
+  .sec-phase0-3__center-wrapper {
+    width: 540px;
+    height: 380px;
+  }
+  .sec-phase0-3__card {
+    width: 240px;
+    min-height: 170px;
+    padding: 14px;
+  }
+  .sec-phase0-3__card-title {
+    font-size: 19px;
+  }
+  .sec-phase0-3__card-subtitle {
+    font-size: 15px;
+  }
+  .sec-phase0-3__card-desc {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-phase0-3 .flex-center-v {
+    padding-top: 75px;
+    padding-bottom: 30px;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .sec-phase0-3__stage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+  }
+
+  .sec-phase0-3__center-wrapper {
+    position: static;
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    margin-bottom: 24px;
+  }
+
+  .sec-phase0-3__cards-container {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+
+  .sec-phase0-3__card {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-phase0-3 .flex-center-v {
+    padding-top: 65px;
+    padding-bottom: 20px;
+  }
+
+  .sec-phase0-3__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .sec-phase0-3__subtitle {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .sec-phase0-3__center-wrapper {
+    max-width: 320px;
+    margin-bottom: 16px;
+  }
+
+  .sec-phase0-3__cards-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sec-phase0-3__card {
+    padding: 12px 14px;
+  }
+
+  .sec-phase0-3__icon-wrapper {
+    width: 38px;
+    height: 38px;
+  }
+
+  .sec-phase0-3__icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .sec-phase0-3__card-title {
+    font-size: 17px;
+  }
+
+  .sec-phase0-3__card-subtitle {
+    font-size: 14px;
+  }
+
+  .sec-phase0-3__card-desc {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

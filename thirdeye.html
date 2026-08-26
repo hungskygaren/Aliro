@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ThirdEye Service - Aliro Consulting."
+      content="ThirdEye by Aliro Consulting — Advanced intelligence, automated analytics, and data clarity for strategic decision-making."
     />
     <title>ThirdEye | Aliro Consulting</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts Preconnect & Inter / Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,60 +17,771 @@
       rel="stylesheet"
     />
 
-    <!-- Swiper CSS CDN -->
+    <!-- Swiper Fullscreen CSS CDN -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Stylesheets -->
+    <!-- Base & Components CSS -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/mockup-layout.css" />
-  </head>
-  <body class="page-mockup page-thirdeye">
-    <!-- Top Navigation Header (Reusable Component) -->
-    <header class="navbar-overlay light-theme" id="mainHeader"></header>
 
-    <!-- Swiper Fullscreen Container for ThirdEye Mockup -->
+    <!-- ThirdEye Modular Section Layout -->
+    <link rel="stylesheet" href="css/pages/thirdeye/thirdeye-layout.css" />
+  </head>
+  <body class="page-thirdeye">
+    <!-- Top Navigation Header (Dynamic Shared Component) -->
+    <header class="navbar-overlay" id="mainHeader"></header>
+
+    <!-- Swiper Fullscreen Container for ThirdEye -->
     <main class="swiper main-swiper" id="scrollContainer">
       <div class="swiper-wrapper">
-        
-        <!-- Section 1 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-thirdeye-1" data-section-index="0">
-          <img src="assets/mock_thirdeye/sec-1.png" alt="ThirdEye - Section 1" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 1: Hero - The Third Eye (Figma Node 6705:1907) -->
+        <section
+          class="scroll-section swiper-slide sec-thirdeye-1 sec-thirdeye-bg-light"
+          id="section-thirdeye-1"
+          data-section-index="0"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-thirdeye-1__grid grid-12">
+              <!-- Left Column: Strategic Typography -->
+              <div class="sec-thirdeye-1__left">
+                <div class="sec-thirdeye-1__tag phrase">
+                  ALIRO'S FLAGSHIP STRATEGIC<br />
+                  INTELLIGENCE SERVICE
+                </div>
+                <h1 class="sec-thirdeye-1__title phrase">THE THIRD EYE</h1>
+                <div class="sec-thirdeye-1__catchphrase phrase">
+                  See further, act sooner.
+                </div>
+                <p class="sec-thirdeye-1__desc phrase">
+                  Agentic AI that scans your markets without fatigue. Senior
+                  human judgment that decides what it means. Neither alone is
+                  enough.
+                </p>
+              </div>
+
+              <!-- Right Column: Hologram Third Eye Scanning & ASEAN Radar Art -->
+              <div class="sec-thirdeye-1__right">
+                <div class="sec-thirdeye-1__img-wrapper">
+                  <div class="sec-thirdeye-1__glow"></div>
+                  <img
+                    src="assets/thirdeye/sec-1-right.png"
+                    alt="The Third Eye - Agentic AI Scanning & Strategic ASEAN Radar"
+                    class="sec-thirdeye-1__img phrase"
+                  />
+                </div>
+                <div class="sec-thirdeye-1__badge phrase">
+                  ROOTED IN VIET NAM. BUILT FOR ASEAN.
+                </div>
+              </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <a
+              href="#section-thirdeye-2"
+              class="sec-thirdeye-1__scroll"
+              id="scrollDownBtn"
+              aria-label="Scroll to Next Section"
+            >
+              <span class="sec-thirdeye-1__scroll-text">scroll down</span>
+              <svg
+                class="sec-thirdeye-1__scroll-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M7.41 14.59L12 19.17l4.59-4.58L18 16l-6 6-6-6 1.41-1.41z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
         </section>
 
-        <!-- Section 2 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-thirdeye-2" data-section-index="1">
-          <img src="assets/mock_thirdeye/sec-2.png" alt="ThirdEye - Section 2" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 2: Overview / 3-Step Engine (Figma Node 6705:1908) -->
+        <section
+          class="scroll-section swiper-slide sec-thirdeye-2 sec-thirdeye-bg-light"
+          id="section-thirdeye-2"
+          data-section-index="1"
+        >
+          <div class="container flex-center-v">
+            <!-- Header: Title -->
+            <div class="sec-thirdeye-2__header">
+              <h2 class="sec-thirdeye-2__title phrase">
+                MACHINE SCALE. HUMAN JUDGMENT.<br />
+                ONE INTELLIGENCE ENGINE.
+              </h2>
+            </div>
+
+            <!-- 3-Step Pipeline Grid with Connecting Line & Chevrons -->
+            <div class="sec-thirdeye-2__pipeline-wrapper">
+              <div class="sec-thirdeye-2__timeline-line"></div>
+
+              <!-- Chevron Arrow 1 -> 2 -->
+              <div
+                class="sec-thirdeye-2__arrow sec-thirdeye-2__arrow--1-2 phrase"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.41 6L5 7.41 9.58 12 5 16.59 6.41 18l6-6-6-6zM13 6l-1.41 1.41L16.17 12l-4.58 4.59L13 18l6-6-6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+
+              <!-- Chevron Arrow 2 -> 3 -->
+              <div
+                class="sec-thirdeye-2__arrow sec-thirdeye-2__arrow--2-3 phrase"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.41 6L5 7.41 9.58 12 5 16.59 6.41 18l6-6-6-6zM13 6l-1.41 1.41L16.17 12l-4.58 4.59L13 18l6-6-6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+
+              <div class="sec-thirdeye-2__grid">
+                <!-- Step 1: Gather -->
+                <div class="sec-thirdeye-2__col phrase">
+                  <div class="sec-thirdeye-2__card">
+                    <img
+                      src="assets/thirdeye/sec-2-gather.png"
+                      alt="Gather Step 1 - AI Continuous Monitoring Cube"
+                      class="sec-thirdeye-2__card-img"
+                    />
+                  </div>
+                  <div class="sec-thirdeye-2__col-content">
+                    <div class="sec-thirdeye-2__badge-wrapper">
+                      <div class="sec-thirdeye-2__badge">1</div>
+                    </div>
+                    <h3 class="sec-thirdeye-2__step-title">GATHER</h3>
+                    <p class="sec-thirdeye-2__step-desc">
+                      Agentic AI continuously monitors regulatory,
+                      reimbursement, scientific, industry, market, and
+                      competitive signals across your markets, expanding
+                      coverage and frequency beyond conventional manual review.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 2: Prioritize -->
+                <div class="sec-thirdeye-2__col phrase">
+                  <div class="sec-thirdeye-2__card">
+                    <img
+                      src="assets/thirdeye/sec-2-prioritize.png"
+                      alt="Prioritize Step 2 - AI Signal Filtering & Priority Funnel"
+                      class="sec-thirdeye-2__card-img"
+                    />
+                  </div>
+                  <div class="sec-thirdeye-2__col-content">
+                    <div class="sec-thirdeye-2__badge-wrapper">
+                      <div class="sec-thirdeye-2__badge">2</div>
+                    </div>
+                    <h3 class="sec-thirdeye-2__step-title">PRIORITIZE</h3>
+                    <p class="sec-thirdeye-2__step-desc">
+                      Noise is filtered and material signals surfaced against
+                      your priorities, so attention goes where decisions are
+                      made.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 3: Interpret & Advise -->
+                <div class="sec-thirdeye-2__col phrase">
+                  <div
+                    class="sec-thirdeye-2__card sec-thirdeye-2__card--highlight"
+                  >
+                    <img
+                      src="assets/thirdeye/sec-2-interpret.png"
+                      alt="Interpret & Advise Step 3 - Senior Advisors Strategic Guidance"
+                      class="sec-thirdeye-2__card-img"
+                    />
+                  </div>
+                  <div class="sec-thirdeye-2__col-content">
+                    <div class="sec-thirdeye-2__badge-wrapper">
+                      <div
+                        class="sec-thirdeye-2__badge sec-thirdeye-2__badge--gold"
+                      >
+                        3
+                      </div>
+                    </div>
+                    <h3 class="sec-thirdeye-2__step-title">
+                      INTERPRET & ADVISE
+                    </h3>
+                    <p class="sec-thirdeye-2__step-desc">
+                      Aliro's senior advisors determine what it means, what to
+                      do, and what to watch. The judgment machines cannot
+                      supply.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 3 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-thirdeye-3" data-section-index="2">
-          <img src="assets/mock_thirdeye/sec-3.png" alt="ThirdEye - Section 3" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 3: Seven Intelligence Domains (Figma Node 4955:2004) -->
+        <section
+          class="scroll-section swiper-slide sec-thirdeye-3 sec-thirdeye-bg-dark"
+          id="section-thirdeye-3"
+          data-section-index="2"
+        >
+          <!-- Blueprint Background Pattern Overlay -->
+          <img
+            src="assets/thirdeye/sec-3-blueprint.png"
+            alt="Seven Intelligence Domains Blueprint Overlay"
+            class="sec-thirdeye-3__blueprint"
+            loading="lazy"
+          />
+
+          <div class="container flex-center-v">
+            <!-- Header: Title -->
+            <div class="sec-thirdeye-3__header">
+              <h2 class="sec-thirdeye-3__title phrase">
+                SEVEN INTELLIGENCE DOMAINS,<br />
+                WEIGHTED TO YOUR PRIORITIES.
+              </h2>
+            </div>
+
+            <!-- Main Stage: Central Dome Diagram & 7 Floating Labels -->
+            <div class="sec-thirdeye-3__stage">
+              <!-- Central Diagram Graphic -->
+              <div class="sec-thirdeye-3__diagram-wrapper">
+                <div class="sec-thirdeye-3__glow"></div>
+                <img
+                  src="assets/thirdeye/sec-3-diagram.png"
+                  alt="Seven Intelligence Domains Central Strategic Dome Diagram"
+                  class="sec-thirdeye-3__diagram-img phrase"
+                />
+              </div>
+
+              <!-- 7 Floating Domain Labels -->
+              <div class="sec-thirdeye-3__labels">
+                <!-- 1. Regulatory (Top Center) -->
+                <div
+                  class="sec-thirdeye-3__label sec-thirdeye-3__label--regulatory phrase"
+                >
+                  REGULATORY
+                </div>
+
+                <!-- 2. Reimbursement (Top Left) -->
+                <div
+                  class="sec-thirdeye-3__label sec-thirdeye-3__label--reimbursement phrase"
+                >
+                  REIMBURSEMENT
+                </div>
+
+                <!-- 3. Scientific (Top Right) -->
+                <div
+                  class="sec-thirdeye-3__label sec-thirdeye-3__label--scientific phrase"
+                >
+                  SCIENTIFIC
+                </div>
+
+                <!-- 4. Market (Middle Left) -->
+                <div
+                  class="sec-thirdeye-3__label sec-thirdeye-3__label--market phrase"
+                >
+                  MARKET
+                </div>
+
+                <!-- 5. Competitive (Middle Right) -->
+                <div
+                  class="sec-thirdeye-3__label sec-thirdeye-3__label--competitive phrase"
+                >
+                  COMPETITIVE
+                </div>
+
+                <!-- 6. Industry (Bottom Left) -->
+                <div
+                  class="sec-thirdeye-3__label sec-thirdeye-3__label--industry phrase"
+                >
+                  INDUSTRY
+                </div>
+
+                <!-- 7. Adjacent Signals (Bottom Right) -->
+                <div
+                  class="sec-thirdeye-3__label sec-thirdeye-3__label--adjacent phrase"
+                >
+                  ADJACENT SIGNALS
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 4 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-thirdeye-4" data-section-index="3">
-          <img src="assets/mock_thirdeye/sec-4.png" alt="ThirdEye - Section 4" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 4: What Makes The Third Eye Different (Figma Node 6705:1909) -->
+        <section
+          class="scroll-section swiper-slide sec-thirdeye-4 sec-thirdeye-bg-light"
+          id="section-thirdeye-4"
+          data-section-index="3"
+        >
+          <div class="container flex-center-v">
+            <!-- Header: Title -->
+            <div class="sec-thirdeye-4__header">
+              <h2 class="sec-thirdeye-4__title phrase">
+                WHAT MAKES THE THIRD EYE DIFFERENT
+              </h2>
+            </div>
+
+            <!-- Main Stage: Center Isometric Art & 4 Differentiator Features -->
+            <div class="sec-thirdeye-4__stage">
+              <!-- Center 4-Station Isometric Art -->
+              <div class="sec-thirdeye-4__center-wrapper">
+                <img
+                  src="assets/thirdeye/sec-4-diagram.png"
+                  alt="What Makes Third Eye Different - 4 Connected Intelligence Stations"
+                  class="sec-thirdeye-4__center-img phrase"
+                />
+              </div>
+
+              <!-- 4 Clockwise Flow Arrows -->
+              <div class="sec-thirdeye-4__arrows-container">
+                <!-- Top Arrow (1 -> 2) -->
+                <div class="sec-thirdeye-4__arrow-line sec-thirdeye-4__arrow--top">
+                  <svg viewBox="0 0 160 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 7H156M156 7L148 1M156 7L148 13" stroke="#e09b21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <!-- Right Arrow (2 -> 3) -->
+                <div class="sec-thirdeye-4__arrow-line sec-thirdeye-4__arrow--right">
+                  <svg viewBox="0 0 14 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 0V126M7 126L1 118M7 126L13 118" stroke="#e09b21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <!-- Bottom Arrow (3 -> 4) -->
+                <div class="sec-thirdeye-4__arrow-line sec-thirdeye-4__arrow--bottom">
+                  <svg viewBox="0 0 150 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M150 7H4M4 7L12 1M4 7L12 13" stroke="#e09b21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <!-- Left Arrow (4 -> 1) -->
+                <div class="sec-thirdeye-4__arrow-line sec-thirdeye-4__arrow--left">
+                  <svg viewBox="0 0 14 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 130V4M7 4L1 12M7 4L13 12" stroke="#e09b21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- 4 Feature Differentiators -->
+              <!-- Feature 1: Partner-Led, Not Junior-Staffed (Top Left) -->
+              <div
+                class="sec-thirdeye-4__feature sec-thirdeye-4__feature--top-left phrase"
+              >
+                <div class="sec-thirdeye-4__feature-header">
+                  <div class="sec-thirdeye-4__icon-wrap">
+                    <img
+                      src="assets/thirdeye/sec-4-icon-1.svg"
+                      alt="Partner-Led Icon"
+                      class="sec-thirdeye-4__icon"
+                    />
+                    <div class="sec-thirdeye-4__badge">1</div>
+                  </div>
+                  <h3 class="sec-thirdeye-4__feature-title">
+                    PARTNER-LED,<br />NOT JUNIOR-STAFFED
+                  </h3>
+                </div>
+                <p class="sec-thirdeye-4__feature-desc">
+                  Partners do the reading. Senior judgment, not junior
+                  summaries.
+                </p>
+              </div>
+
+              <!-- Feature 2: Discreet Network Consultation (Top Right) -->
+              <div
+                class="sec-thirdeye-4__feature sec-thirdeye-4__feature--top-right phrase"
+              >
+                <div class="sec-thirdeye-4__feature-header">
+                  <div class="sec-thirdeye-4__icon-wrap">
+                    <img
+                      src="assets/thirdeye/sec-4-icon-2.svg"
+                      alt="Discreet Network Consultation Icon"
+                      class="sec-thirdeye-4__icon"
+                    />
+                    <div class="sec-thirdeye-4__badge">2</div>
+                  </div>
+                  <h3 class="sec-thirdeye-4__feature-title">
+                    DISCREET NETWORK<br />CONSULTATION
+                  </h3>
+                </div>
+                <p class="sec-thirdeye-4__feature-desc">
+                  On-the-ground expert views under agreed confidentiality
+                  protocols.
+                </p>
+              </div>
+
+              <!-- Feature 3: Continuous Monitoring Engine (Bottom Right) -->
+              <div
+                class="sec-thirdeye-4__feature sec-thirdeye-4__feature--bottom-right phrase"
+              >
+                <div class="sec-thirdeye-4__feature-header">
+                  <div class="sec-thirdeye-4__icon-wrap">
+                    <img
+                      src="assets/thirdeye/sec-4-icon-3.svg"
+                      alt="Standing Intelligence Engine Icon"
+                      class="sec-thirdeye-4__icon"
+                    />
+                    <div class="sec-thirdeye-4__badge">3</div>
+                  </div>
+                </div>
+                <p class="sec-thirdeye-4__feature-desc">
+                  A standing intelligence engine, continuously monitored and
+                  interpreted by senior advisors.
+                </p>
+              </div>
+
+              <!-- Feature 4: Intelligence As A Product (Bottom Left) -->
+              <div
+                class="sec-thirdeye-4__feature sec-thirdeye-4__feature--bottom-left phrase"
+              >
+                <div class="sec-thirdeye-4__feature-header">
+                  <div class="sec-thirdeye-4__icon-wrap">
+                    <img
+                      src="assets/thirdeye/sec-4-icon-4.svg"
+                      alt="Intelligence As A Product Icon"
+                      class="sec-thirdeye-4__icon"
+                    />
+                    <div class="sec-thirdeye-4__badge">4</div>
+                  </div>
+                  <h3 class="sec-thirdeye-4__feature-title">
+                    INTELLIGENCE<br />AS A PRODUCT
+                  </h3>
+                </div>
+                <p class="sec-thirdeye-4__feature-desc">
+                  Verified trackers and briefings that compound, not one-off
+                  decks.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 5 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-thirdeye-5" data-section-index="4">
-          <img src="assets/mock_thirdeye/sec-5.png" alt="ThirdEye - Section 5" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 5: How We Work With You (Figma Node 6705:1910) -->
+        <section
+          class="scroll-section swiper-slide sec-thirdeye-5 sec-thirdeye-bg-dark"
+          id="section-thirdeye-5"
+          data-section-index="4"
+        >
+          <div class="container flex-center-v">
+            <!-- Header: Title -->
+            <div class="sec-thirdeye-5__header">
+              <h2 class="sec-thirdeye-5__title phrase">HOW WE WORK WITH YOU</h2>
+            </div>
+
+            <!-- 2 Engagement Models Grid with Connecting Arrow -->
+            <div class="sec-thirdeye-5__grid-wrapper">
+              <div class="sec-thirdeye-5__timeline-line"></div>
+              <div class="sec-thirdeye-5__timeline-arrow phrase">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12h14M12 5l7 7-7 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <div class="sec-thirdeye-5__grid">
+                <!-- Option 1: Scoped Intelligence Deliverable (Highlighted Gold Box) -->
+                <div
+                  class="sec-thirdeye-5__option sec-thirdeye-5__option--highlight phrase"
+                >
+                  <div class="sec-thirdeye-5__visual">
+                    <img
+                      src="assets/thirdeye/sec-5-scoped.png"
+                      alt="Scoped Intelligence Deliverable - Searchlight & Strategic Report"
+                      class="sec-thirdeye-5__img"
+                    />
+                  </div>
+                  <div class="sec-thirdeye-5__badge-wrapper">
+                    <div
+                      class="sec-thirdeye-5__badge sec-thirdeye-5__badge--gold"
+                    >
+                      1
+                    </div>
+                  </div>
+                  <div class="sec-thirdeye-5__tag sec-thirdeye-5__tag--gold">
+                    PHASE 0 · FIXED SCOPE
+                  </div>
+                  <h3 class="sec-thirdeye-5__opt-title">
+                    SCOPED INTELLIGENCE DELIVERABLE
+                  </h3>
+                  <p class="sec-thirdeye-5__opt-desc">
+                    A defined first read that closes your most urgent
+                    intelligence gap and proves the engine on your terrain.
+                  </p>
+                  <a
+                    href="contact.html"
+                    class="sec-thirdeye-5__btn"
+                  >
+                    START A SCOPED INTELLIGENCE READ
+                  </a>
+                </div>
+
+                <!-- Option 2: The Third Eye Retainer -->
+                <div
+                  class="sec-thirdeye-5__option sec-thirdeye-5__option--default phrase"
+                >
+                  <div class="sec-thirdeye-5__visual">
+                    <img
+                      src="assets/thirdeye/sec-5-retainer.png"
+                      alt="The Third Eye Retainer - Global Intelligence & Continuous Monitoring"
+                      class="sec-thirdeye-5__img"
+                    />
+                  </div>
+                  <div class="sec-thirdeye-5__badge-wrapper">
+                    <div
+                      class="sec-thirdeye-5__badge sec-thirdeye-5__badge--blue"
+                    >
+                      2
+                    </div>
+                  </div>
+                  <div class="sec-thirdeye-5__tag">ONGOING · MONTHLY</div>
+                  <h3 class="sec-thirdeye-5__opt-title">
+                    THE THIRD EYE RETAINER
+                  </h3>
+                  <p class="sec-thirdeye-5__opt-desc">
+                    Continuous monitoring, prioritization, and senior
+                    interpretation across your priority domains and markets.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 6 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-thirdeye-6" data-section-index="5">
-          <img src="assets/mock_thirdeye/sec-6.png" alt="ThirdEye - Section 6" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 6: Who It's For (Figma Node 6705:1911) -->
+        <section
+          class="scroll-section swiper-slide sec-thirdeye-6 sec-thirdeye-bg-light"
+          id="section-thirdeye-6"
+          data-section-index="5"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-thirdeye-6__grid grid-12">
+              <!-- Left Column: Audience List & Mission Statement -->
+              <div class="sec-thirdeye-6__left">
+                <h1 class="sec-thirdeye-6__title phrase">WHO IT'S FOR</h1>
+                <div class="sec-thirdeye-6__list">
+                  <!-- Item 1: Diagnostics & medtech manufacturers -->
+                  <div class="sec-thirdeye-6__item phrase">
+                    <div class="sec-thirdeye-6__icon-wrap">
+                      <img
+                        src="assets/thirdeye/sec-6-icon-1.svg"
+                        alt="Diagnostics & Medtech Icon"
+                        class="sec-thirdeye-6__icon"
+                      />
+                    </div>
+                    <h2 class="sec-thirdeye-6__item-text">
+                      Diagnostics & medtech<br />manufacturers
+                    </h2>
+                  </div>
+
+                  <!-- Item 2: Pharma market-access teams -->
+                  <div class="sec-thirdeye-6__item phrase">
+                    <div class="sec-thirdeye-6__icon-wrap">
+                      <img
+                        src="assets/thirdeye/sec-6-icon-2.svg"
+                        alt="Pharma Market-Access Icon"
+                        class="sec-thirdeye-6__icon"
+                      />
+                    </div>
+                    <h2 class="sec-thirdeye-6__item-text">
+                      Pharma market-access<br />teams
+                    </h2>
+                  </div>
+
+                  <!-- Item 3: Investors -->
+                  <div class="sec-thirdeye-6__item phrase">
+                    <div class="sec-thirdeye-6__icon-wrap">
+                      <img
+                        src="assets/thirdeye/sec-6-icon-3.svg"
+                        alt="Investors Icon"
+                        class="sec-thirdeye-6__icon"
+                      />
+                    </div>
+                    <h2 class="sec-thirdeye-6__item-text">Investors</h2>
+                  </div>
+
+                  <!-- Item 4: Institutional actors -->
+                  <div class="sec-thirdeye-6__item phrase">
+                    <div class="sec-thirdeye-6__icon-wrap">
+                      <img
+                        src="assets/thirdeye/sec-6-icon-4.svg"
+                        alt="Institutional Actors Icon"
+                        class="sec-thirdeye-6__icon"
+                      />
+                    </div>
+                    <h2 class="sec-thirdeye-6__item-text">
+                      Institutional actors
+                    </h2>
+                  </div>
+                </div>
+
+                <p class="sec-thirdeye-6__subtitle phrase">
+                  For leaders who need to anticipate rather than react.
+                </p>
+              </div>
+
+              <!-- Right Column: 3D Isometric 4-Sector Network Graphic -->
+              <div class="sec-thirdeye-6__right">
+                <div class="sec-thirdeye-6__img-wrapper">
+                  <div class="sec-thirdeye-6__glow"></div>
+                  <img
+                    src="assets/thirdeye/sec-6-audience.png"
+                    alt="Who It's For - 4 Core Target Sectors Network"
+                    class="sec-thirdeye-6__img phrase"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 7 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-thirdeye-7" data-section-index="6">
-          <img src="assets/mock_thirdeye/sec-7.png" alt="ThirdEye - Section 7" class="mockup-img" onerror="this.style.opacity='0'" />
-        </section>
+        <!-- Section 7: Final Contact & Entity Details (Reused Footer from About / Home) -->
+        <section
+          class="scroll-section swiper-slide sec-10 sec-thirdeye-7 sec-thirdeye-bg-light"
+          id="section-thirdeye-7"
+          data-section-index="6"
+        >
+          <!-- Background Decor Graphic (Figma Node 4243:2523) -->
+          <img
+            src="assets/sec-10-decor.webp"
+            alt="Aliro Blueprint Lines Decoration Background"
+            class="sec-10__decor"
+            loading="lazy"
+          />
 
+          <div class="container flex-center-v h-100">
+            <div class="sec-10__grid grid-12">
+              <!-- Left Column: Contact Copy & CTA (Columns 1 to 6) -->
+              <div class="sec-10__left col-span-6">
+                <!-- Eyebrow (Phase 1) -->
+                <div class="sec-10__tag phrase">
+                  LET'S START WITH YOUR REALITY
+                </div>
+
+                <!-- Headline (Phase 2) -->
+                <h2 class="sec-10__title phrase">
+                  EVERY TRANSFORMATION BEGINS WITH ONE CONVERSATION.
+                </h2>
+
+                <!-- Subheadline (Phase 3) -->
+                <p class="sec-10__sub-desc phrase">
+                  Better outcomes. Stronger organisations. Healthier
+                  communities.
+                </p>
+
+                <!-- Body Paragraph (Phase 4) -->
+                <div class="sec-10__desc">
+                  <p class="phrase">
+                    Every Aliro engagement begins with a candid conversation
+                    about your situation and what would actually be useful.
+                  </p>
+                  <p class="phrase">
+                    We keep the first meeting focused on your situation-not our
+                    services.
+                    <span class="sec-10__desc-highlight"
+                      >When there is a strong fit, we will define the right next
+                      step together.</span
+                    >
+                  </p>
+                </div>
+
+                <!-- Direct Email Link (Phase 5) -->
+                <a
+                  href="mailto:info@aliroconsulting.com"
+                  class="sec-10__email phrase"
+                >
+                  info@aliroconsulting.com
+                </a>
+
+                <!-- CTA Button (Phase 6) -->
+                <div class="sec-10__btn-wrapper">
+                  <a
+                    href="mailto:info@aliroconsulting.com"
+                    class="btn btn-primary sec-10__btn phrase"
+                  >
+                    Start a Conversation
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: Entity Details (Card Box covering columns 8 to 12 with #01103B Dark Background) -->
+              <div class="sec-10__right col-start-8 col-span-5">
+                <div class="sec-10__card">
+                  <!-- Card Content Blocks (Staggered Fade-in) -->
+                  <div class="sec-10__card-content">
+                    <div class="sec-10__entity-item phrase d-flex align-center">
+                      <img
+                        src="assets/icon-building-hongkong.svg"
+                        class="sec-10__icon"
+                        alt="Hong Kong Office Building Icon"
+                      />
+                      <div class="sec-10__entity-info">
+                        <div class="sec-10__label">HONG KONG ENTITY</div>
+                        <div class="sec-10__company">Aliro Consulting Ltd.</div>
+                        <div class="sec-10__location">Hong Kong</div>
+                      </div>
+                    </div>
+                    <div class="sec-10__divider"></div>
+                    <div class="sec-10__entity-item phrase d-flex align-center">
+                      <img
+                        src="assets/icon-building-vietnam.svg"
+                        class="sec-10__icon"
+                        alt="Vietnam Office Building Icon"
+                      />
+                      <div class="sec-10__entity-info">
+                        <div class="sec-10__label">VIET NAM OPERATIONS</div>
+                        <div class="sec-10__company">
+                          Aliro Consulting Vietnam Co., Ltd.
+                        </div>
+                        <div class="sec-10__location">Ho Chi Minh City</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Copyright & Links -->
+            <div class="sec-10__bottom phrase">
+              <div class="sec-10__copyright-text">
+                © 2026 Aliro Consulting. All rights reserved.
+              </div>
+              <div class="sec-10__legal-links">
+                <a href="javascript:void(0)" class="sec-10__legal-link"
+                  >Privacy</a
+                >
+                <span class="sec-10__legal-separator"></span>
+                <a href="javascript:void(0)" class="sec-10__legal-link"
+                  >Terms</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 

@@ -1,0 +1,367 @@
+/* ==========================================================================
+   Section 3: Seven Intelligence Domains (Weighted To Your Priorities)
+   Figma Node: 4955:2004
+   ========================================================================== */
+
+.sec-thirdeye-3 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #1e55b3 0%,
+    #174495 25%,
+    #103277 50%,
+    #082159 75%,
+    #01103b 100%
+  ) !important;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+/* Blueprint Pattern Overlay */
+.sec-thirdeye-3__blueprint {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec-thirdeye-3 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 75px 20px 30px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Header: Title
+   -------------------------------------------------------------------------- */
+.sec-thirdeye-3__header {
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-thirdeye-3__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* --------------------------------------------------------------------------
+   Main Stage: 7 Domains Diagram & Floating Labels
+   -------------------------------------------------------------------------- */
+.sec-thirdeye-3__stage {
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  height: 470px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+/* Central Diagram Graphic & Glow */
+.sec-thirdeye-3__diagram-wrapper {
+  position: relative;
+  width: 630px;
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+.sec-thirdeye-3__glow {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(34, 108, 180, 0.45) 0%,
+    rgba(1, 16, 59, 0) 75%
+  );
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sec-thirdeye-3__diagram-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.35));
+  animation: secThirdEye3Float 7s ease-in-out infinite alternate;
+}
+
+@keyframes secThirdEye3Float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7 Floating Domain Labels
+   -------------------------------------------------------------------------- */
+.sec-thirdeye-3__labels {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.sec-thirdeye-3__label {
+  position: absolute;
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(1, 16, 59, 0.7);
+  pointer-events: auto;
+  opacity: 0;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.3s ease;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-thirdeye-3__label:hover {
+  color: #eaa936;
+  transform: scale(1.08) !important;
+}
+
+/* Label Positions */
+.sec-thirdeye-3__label--regulatory {
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-15px);
+  transition-delay: 0.25s;
+}
+
+.sec-thirdeye-3__label--reimbursement {
+  top: 15%;
+  left: 3%;
+  transform: translateX(-20px);
+  transition-delay: 0.35s;
+}
+
+.sec-thirdeye-3__label--scientific {
+  top: 15%;
+  right: 5%;
+  transform: translateX(20px);
+  transition-delay: 0.45s;
+}
+
+.sec-thirdeye-3__label--market {
+  top: 48%;
+  left: 1%;
+  transform: translateX(-20px);
+  transition-delay: 0.55s;
+}
+
+.sec-thirdeye-3__label--competitive {
+  top: 48%;
+  right: 1%;
+  transform: translateX(20px);
+  transition-delay: 0.65s;
+}
+
+.sec-thirdeye-3__label--industry {
+  bottom: 5%;
+  left: 10%;
+  transform: translateY(20px);
+  transition-delay: 0.75s;
+}
+
+.sec-thirdeye-3__label--adjacent {
+  bottom: 5%;
+  right: 6%;
+  transform: translateY(20px);
+  transition-delay: 0.85s;
+}
+
+/* --------------------------------------------------------------------------
+   Swiper Active Slide Animation Triggers
+   -------------------------------------------------------------------------- */
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__header,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__diagram-wrapper,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__diagram-wrapper {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__label,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__label {
+  opacity: 1;
+}
+
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__label--regulatory,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__label--regulatory {
+  transform: translateX(-50%) translateY(0);
+}
+
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__label--reimbursement,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__label--reimbursement,
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__label--market,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__label--market {
+  transform: translateX(0);
+}
+
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__label--scientific,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__label--scientific,
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__label--competitive,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__label--competitive {
+  transform: translateX(0);
+}
+
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__label--industry,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__label--industry,
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__label--adjacent,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__label--adjacent {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout & Mobile Adaptation
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-thirdeye-3__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .sec-thirdeye-3__stage {
+    height: 420px;
+    max-width: 900px;
+  }
+  .sec-thirdeye-3__diagram-wrapper {
+    width: 540px;
+    height: 370px;
+  }
+  .sec-thirdeye-3__label {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-thirdeye-3 .flex-center-v {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .sec-thirdeye-3__stage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec-thirdeye-3__diagram-wrapper {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    aspect-ratio: 630 / 430;
+    margin-bottom: 20px;
+  }
+
+  .sec-thirdeye-3__labels {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
+    max-width: 600px;
+  }
+
+  .sec-thirdeye-3__label {
+    position: static;
+    font-size: 16px;
+    line-height: 20px;
+    background: rgba(1, 16, 59, 0.6);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(159, 194, 238, 0.3);
+    transform: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-thirdeye-3 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  .sec-thirdeye-3__title {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 14px;
+  }
+
+  .sec-thirdeye-3__diagram-wrapper {
+    max-width: 320px;
+    margin-bottom: 16px;
+  }
+
+  .sec-thirdeye-3__label {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}

@@ -1,0 +1,364 @@
+/* ==========================================================================
+   Section 3: What We Examine (The Anatomy of Market Intelligence)
+   Figma Node: 6701:4245
+   ========================================================================== */
+
+.sec-market-3 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #1e55b3 0%,
+    #174495 25%,
+    #103277 50%,
+    #082159 75%,
+    #01103b 100%
+  ) !important;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+/* Blueprint Pattern Overlay */
+.sec-market-3__blueprint {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec-market-3 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 75px 20px 25px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Header: Title & Subtitle
+   -------------------------------------------------------------------------- */
+.sec-market-3__header {
+  text-align: center;
+  margin-bottom: 16px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-market-3__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.5px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-market-3__subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* --------------------------------------------------------------------------
+   Main Stage: 6 Stations Diagram & Floating Labels
+   -------------------------------------------------------------------------- */
+.sec-market-3__stage {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  height: 490px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+/* Central Diagram Graphic & Ambient Radial Glow */
+.sec-market-3__diagram-wrapper {
+  position: relative;
+  width: 650px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+.sec-market-3__glow {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(34, 108, 180, 0.45) 0%,
+    rgba(1, 16, 59, 0) 75%
+  );
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sec-market-3__diagram-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.35));
+  animation: secMarket3Float 7s ease-in-out infinite alternate;
+}
+
+@keyframes secMarket3Float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6 Floating Examination Labels
+   -------------------------------------------------------------------------- */
+.sec-market-3__labels {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.sec-market-3__label {
+  position: absolute;
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(1, 16, 59, 0.7);
+  pointer-events: auto;
+  opacity: 0;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.3s ease;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-market-3__label:hover {
+  color: #eaa936;
+  transform: scale(1.08) !important;
+}
+
+/* Positions for 6 Labels */
+/* 1. Market Prioritisation (Top Left) */
+.sec-market-3__label--prioritisation {
+  top: 8%;
+  left: 3%;
+  text-align: right;
+  transform: translateX(-25px);
+  transition-delay: 0.25s;
+}
+
+/* 2. Regulatory Perimeter (Middle Left) */
+.sec-market-3__label--regulatory {
+  top: 46%;
+  left: 1%;
+  text-align: right;
+  transform: translateX(-25px);
+  transition-delay: 0.35s;
+}
+
+/* 3. Distribution & Channels (Bottom Left) */
+.sec-market-3__label--distribution {
+  bottom: 8%;
+  left: 5%;
+  text-align: right;
+  transform: translateX(-25px);
+  transition-delay: 0.45s;
+}
+
+/* 4. Competitive Landscape (Top Right) */
+.sec-market-3__label--competitive {
+  top: 8%;
+  right: 3%;
+  text-align: left;
+  transform: translateX(25px);
+  transition-delay: 0.55s;
+}
+
+/* 5. Buyer & Willingness to Pay (Middle Right) */
+.sec-market-3__label--buyers {
+  top: 42%;
+  right: 0%;
+  text-align: left;
+  transform: translateX(25px);
+  transition-delay: 0.65s;
+}
+
+/* 6. Capital Flows (Bottom Right) */
+.sec-market-3__label--capital {
+  bottom: 8%;
+  right: 6%;
+  text-align: left;
+  transform: translateX(25px);
+  transition-delay: 0.75s;
+}
+
+/* --------------------------------------------------------------------------
+   Swiper Active Slide Animation Triggers
+   -------------------------------------------------------------------------- */
+.sec-market-3.swiper-slide-active .sec-market-3__header,
+.sec-market-3.slide-animated .sec-market-3__header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-market-3.swiper-slide-active .sec-market-3__diagram-wrapper,
+.sec-market-3.slide-animated .sec-market-3__diagram-wrapper {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sec-market-3.swiper-slide-active .sec-market-3__label,
+.sec-market-3.slide-animated .sec-market-3__label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout & Mobile Adaptation
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-market-3__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .sec-market-3__subtitle {
+    font-size: 18px;
+  }
+  .sec-market-3__stage {
+    height: 430px;
+    max-width: 920px;
+  }
+  .sec-market-3__diagram-wrapper {
+    width: 540px;
+    height: 400px;
+  }
+  .sec-market-3__label {
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-market-3 .flex-center-v {
+    padding-top: 85px;
+    padding-bottom: 35px;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .sec-market-3__stage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec-market-3__diagram-wrapper {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    aspect-ratio: 651 / 520;
+    margin-bottom: 20px;
+  }
+
+  .sec-market-3__labels {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
+    max-width: 620px;
+  }
+
+  .sec-market-3__label {
+    position: static;
+    font-size: 16px;
+    line-height: 20px;
+    background: rgba(1, 16, 59, 0.6);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(159, 194, 238, 0.3);
+    text-align: center !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-market-3 .flex-center-v {
+    padding-top: 75px;
+    padding-bottom: 20px;
+  }
+
+  .sec-market-3__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .sec-market-3__subtitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .sec-market-3__diagram-wrapper {
+    max-width: 320px;
+    margin-bottom: 16px;
+  }
+
+  .sec-market-3__label {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Market Intelligence - Aliro Consulting 4iC Framework."
+      content="Market Intelligence - Aliro Consulting. Deep, verified healthcare market intelligence and strategic insights across Vietnam and Southeast Asia."
     />
     <title>Market Intelligence | Aliro Consulting</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts Preconnect & Inter / Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,59 +23,537 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Stylesheets -->
+    <!-- Global Base Styles & Design Tokens -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/mockup-layout.css" />
+
+    <!-- Market Intelligence Modular Layout CSS -->
+    <link
+      rel="stylesheet"
+      href="css/pages/market-intelligence/market-intelligence-layout.css"
+    />
   </head>
-  <body class="page-mockup page-market-intelligence">
-    <!-- Top Navigation Header (Reusable Component) -->
+  <body class="page-market-intelligence">
+    <!-- Top Navigation Header (Reusable Component from components/header.html) -->
     <header class="navbar-overlay light-theme" id="mainHeader"></header>
 
-    <!-- Swiper Fullscreen Container for Market Intelligence Mockup -->
+    <!-- Swiper Fullscreen Container for Market Intelligence Page -->
     <main class="swiper main-swiper" id="scrollContainer">
       <div class="swiper-wrapper">
-        
-        <!-- Section 1 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-market-1" data-section-index="0">
-          <img src="assets/mock_market/sec-1.png" alt="Market Intelligence - Section 1" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 1: Hero - Market Intelligence (Figma Node 6701:2042) -->
+        <section
+          class="scroll-section swiper-slide sec-market-1 sec-market-bg-light"
+          id="section-market-1"
+          data-section-index="0"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-market-1__grid grid-12">
+              <!-- Left Column: Strategic Typography & Breadcrumbs -->
+              <div class="sec-market-1__left">
+                <!-- Eyebrow (Phase 1) -->
+                <div class="sec-market-1__eyebrow phrase">
+                  ALIRO'S FOUR INTELLIGENCE CONTINUUM<br />
+                  PILLAR 1 OF 4
+                </div>
+
+                <!-- Main Title (Phase 2) -->
+                <h1 class="sec-market-1__title phrase">
+                  MARKET<br />
+                  INTELLIGENCE
+                </h1>
+
+                <!-- Subtitle Tagline (Phase 3) -->
+                <div class="sec-market-1__subtitle phrase">
+                  Know WHAT to do, and where.
+                </div>
+
+                <!-- Body Description (Phase 4) -->
+                <p class="sec-market-1__desc phrase">
+                  The outward-facing read: which markets to prioritise, what the
+                  regulation allows, what buyers actually pay, and who the
+                  channels are. The pillar that anchors any entry, expansion,
+                  partnership, or defence decision.
+                </p>
+
+                <!-- 4iC Breadcrumb Navigation (Phase 5) -->
+                <div class="sec-market-1__breadcrumb phrase">
+                  <a
+                    href="market-intelligence.html"
+                    class="sec-market-1__crumb sec-market-1__crumb--active"
+                  >
+                    MARKET
+                  </a>
+                  <span class="sec-market-1__crumb-sep">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+
+                  <a
+                    href="operational-intelligence.html"
+                    class="sec-market-1__crumb"
+                  >
+                    OPERATIONAL
+                  </a>
+                  <span class="sec-market-1__crumb-sep">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+
+                  <a
+                    href="digital-intelligence.html"
+                    class="sec-market-1__crumb"
+                  >
+                    DIGITAL
+                  </a>
+                  <span class="sec-market-1__crumb-sep">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+
+                  <a
+                    href="capacity-intelligence.html"
+                    class="sec-market-1__crumb"
+                  >
+                    CAPACITY & CAPABILITY
+                  </a>
+                </div>
+
+                <!-- Primary CTA Button (Phase 6) -->
+                <div class="sec-market-1__cta-wrap phrase">
+                  <a
+                    href="contact.html"
+                    class="sec-market-1__btn"
+                  >
+                    Discuss your market question
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: 3D Holographic ASEAN Radar & Market Displays -->
+              <div class="sec-market-1__right">
+                <div class="sec-market-1__img-wrapper">
+                  <div class="sec-market-1__glow"></div>
+                  <img
+                    src="assets/market-intelligence/sec-1-right.png"
+                    alt="Market Intelligence - 3D ASEAN Radar and Four Strategic Market Displays"
+                    class="sec-market-1__img phrase"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <a
+              href="#section-market-2"
+              class="sec-market-1__scroll"
+              id="scrollDownBtn"
+              aria-label="Scroll to Next Section"
+            >
+              <span class="sec-market-1__scroll-text">scroll down</span>
+              <svg
+                class="sec-market-1__scroll-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M7.41 14.59L12 19.17l4.59-4.58L18 16l-6 6-6-6 1.41-1.41z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
         </section>
 
-        <!-- Section 2 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-market-2" data-section-index="1">
-          <img src="assets/mock_market/sec-2.png" alt="Market Intelligence - Section 2" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 2: The Questions We Answer (Figma Node 6701:4234) -->
+        <section
+          class="scroll-section swiper-slide sec-market-2 sec-market-bg-light"
+          id="section-market-2"
+          data-section-index="1"
+        >
+          <div class="container flex-center-v">
+            <!-- Header: Title -->
+            <div class="sec-market-2__header">
+              <h2 class="sec-market-2__title phrase">THE QUESTIONS WE ANSWER</h2>
+            </div>
+
+            <!-- 2x2 Question Cards Grid -->
+            <div class="sec-market-2__grid">
+              <!-- Card 1: Which markets should we prioritise? -->
+              <div class="sec-market-2__card phrase">
+                <div class="sec-market-2__card-left">
+                  <div class="sec-market-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-market-2__card-question">
+                    Which markets should we prioritise?
+                  </h3>
+                  <a
+                    href="#section-market-3"
+                    class="sec-market-2__card-link"
+                  >
+                    <span>Explore</span>
+                    <span class="sec-market-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="sec-market-2__card-right">
+                  <img
+                    src="assets/market-intelligence/sec-2-prioritise.png"
+                    alt="Market Prioritisation Map Art"
+                    class="sec-market-2__card-img"
+                  />
+                </div>
+              </div>
+
+              <!-- Card 2: What's the competitive landscape? -->
+              <div class="sec-market-2__card phrase">
+                <div class="sec-market-2__card-left">
+                  <div class="sec-market-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-market-2__card-question">
+                    What's the competitive landscape?
+                  </h3>
+                  <a
+                    href="#section-market-3"
+                    class="sec-market-2__card-link"
+                  >
+                    <span>Explore</span>
+                    <span class="sec-market-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="sec-market-2__card-right">
+                  <img
+                    src="assets/market-intelligence/sec-2-competitive.png"
+                    alt="Competitive Landscape Art"
+                    class="sec-market-2__card-img"
+                  />
+                </div>
+              </div>
+
+              <!-- Card 3: What are buyers actually paying? -->
+              <div class="sec-market-2__card phrase">
+                <div class="sec-market-2__card-left">
+                  <div class="sec-market-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-market-2__card-question">
+                    What are buyers actually paying?
+                  </h3>
+                  <a
+                    href="#section-market-3"
+                    class="sec-market-2__card-link"
+                  >
+                    <span>Explore</span>
+                    <span class="sec-market-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="sec-market-2__card-right">
+                  <img
+                    src="assets/market-intelligence/sec-2-buyers.png"
+                    alt="Buyer and Pricing Insights Art"
+                    class="sec-market-2__card-img"
+                  />
+                </div>
+              </div>
+
+              <!-- Card 4: Who are the channels, and how do they work? -->
+              <div class="sec-market-2__card phrase">
+                <div class="sec-market-2__card-left">
+                  <div class="sec-market-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-market-2__card-question">
+                    Who are the channels, and how do they work?
+                  </h3>
+                  <a
+                    href="#section-market-3"
+                    class="sec-market-2__card-link"
+                  >
+                    <span>Explore</span>
+                    <span class="sec-market-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="sec-market-2__card-right">
+                  <img
+                    src="assets/market-intelligence/sec-2-channels.png"
+                    alt="Channel and Distribution Art"
+                    class="sec-market-2__card-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 3 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-market-3" data-section-index="2">
-          <img src="assets/mock_market/sec-3.png" alt="Market Intelligence - Section 3" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 3: What We Examine (Figma Node 6701:4245) -->
+        <section
+          class="scroll-section swiper-slide sec-market-3 sec-market-bg-dark"
+          id="section-market-3"
+          data-section-index="2"
+        >
+          <!-- Blueprint Background Pattern Overlay -->
+          <img
+            src="assets/market-intelligence/sec-3-blueprint.png"
+            alt="What We Examine Blueprint Overlay"
+            class="sec-market-3__blueprint"
+            loading="lazy"
+          />
+
+          <div class="container flex-center-v">
+            <!-- Header: Title & Subtitle -->
+            <div class="sec-market-3__header">
+              <h2 class="sec-market-3__title phrase">WHAT WE EXAMINE</h2>
+              <p class="sec-market-3__subtitle phrase">
+                The anatomy of this intelligence
+              </p>
+            </div>
+
+            <!-- Main Stage: 6 Stations Isometric Diagram & 6 Floating Labels -->
+            <div class="sec-market-3__stage">
+              <!-- Central Diagram Graphic -->
+              <div class="sec-market-3__diagram-wrapper">
+                <div class="sec-market-3__glow"></div>
+                <img
+                  src="assets/market-intelligence/sec-3-anatomy.png"
+                  alt="What We Examine - 6 Core Market Stations and Central Intelligence Engine"
+                  class="sec-market-3__diagram-img phrase"
+                />
+              </div>
+
+              <!-- 6 Floating Examination Labels -->
+              <div class="sec-market-3__labels">
+                <!-- 1. Market prioritisation (Top Left) -->
+                <div
+                  class="sec-market-3__label sec-market-3__label--prioritisation phrase"
+                >
+                  Market<br />prioritisation
+                </div>
+
+                <!-- 2. Regulatory perimeter (Middle Left) -->
+                <div
+                  class="sec-market-3__label sec-market-3__label--regulatory phrase"
+                >
+                  Regulatory<br />perimeter
+                </div>
+
+                <!-- 3. Distribution & channels (Bottom Left) -->
+                <div
+                  class="sec-market-3__label sec-market-3__label--distribution phrase"
+                >
+                  Distribution<br />& channels
+                </div>
+
+                <!-- 4. Competitive landscape (Top Right) -->
+                <div
+                  class="sec-market-3__label sec-market-3__label--competitive phrase"
+                >
+                  Competitive<br />landscape
+                </div>
+
+                <!-- 5. Buyer & willingness to pay (Middle Right) -->
+                <div
+                  class="sec-market-3__label sec-market-3__label--buyers phrase"
+                >
+                  Buyer &<br />willingness<br />to pay
+                </div>
+
+                <!-- 6. Capital flows (Bottom Right) -->
+                <div
+                  class="sec-market-3__label sec-market-3__label--capital phrase"
+                >
+                  Capital<br />flows
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 4 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-market-4" data-section-index="3">
-          <img src="assets/mock_market/sec-4.png" alt="Market Intelligence - Section 4" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 4: Four Deliverables / Core Pillars -->
+        <section
+          class="scroll-section swiper-slide sec-market-4 sec-market-bg-dark"
+          id="section-market-4"
+          data-section-index="3"
+        >
+          <!-- Section 4 Content will be built here -->
         </section>
 
-        <!-- Section 5 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-market-5" data-section-index="4">
-          <img src="assets/mock_market/sec-5.png" alt="Market Intelligence - Section 5" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 5: Methodology / How We Do It -->
+        <section
+          class="scroll-section swiper-slide sec-market-5 sec-market-bg-light"
+          id="section-market-5"
+          data-section-index="4"
+        >
+          <!-- Section 5 Content will be built here -->
         </section>
 
-        <!-- Section 6 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-market-6" data-section-index="5">
-          <img src="assets/mock_market/sec-6.png" alt="Market Intelligence - Section 6" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 6: When To Engage -->
+        <section
+          class="scroll-section swiper-slide sec-market-6 sec-market-bg-dark"
+          id="section-market-6"
+          data-section-index="5"
+        >
+          <!-- Section 6 Content will be built here -->
         </section>
 
-        <!-- Section 7 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-market-7" data-section-index="6">
-          <img src="assets/mock_market/sec-7.png" alt="Market Intelligence - Section 7" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 7: Case in Point / Strategic Impact -->
+        <section
+          class="scroll-section swiper-slide sec-market-7 sec-market-bg-light"
+          id="section-market-7"
+          data-section-index="6"
+        >
+          <!-- Section 7 Content will be built here -->
         </section>
 
-        <!-- Section 8 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-market-8" data-section-index="7">
-          <img src="assets/mock_market/sec-8.png" alt="Market Intelligence - Section 8" class="mockup-img" onerror="this.style.opacity='0'" />
-        </section>
+        <!-- Section 8: Final Contact & Entity Details (Reused Footer from About / Home) -->
+        <section
+          class="scroll-section swiper-slide sec-10 sec-market-8 sec-market-bg-light"
+          id="section-market-8"
+          data-section-index="7"
+        >
+          <!-- Background Decor Graphic (Figma Node 4243:2523) -->
+          <img
+            src="assets/sec-10-decor.webp"
+            alt="Aliro Blueprint Lines Decoration Background"
+            class="sec-10__decor"
+            loading="lazy"
+          />
 
+          <div class="container flex-center-v h-100">
+            <div class="sec-10__grid grid-12">
+              <!-- Left Column: Contact Copy & CTA (Columns 1 to 6) -->
+              <div class="sec-10__left col-span-6">
+                <!-- Eyebrow (Phase 1) -->
+                <div class="sec-10__tag phrase">
+                  LET'S START WITH YOUR REALITY
+                </div>
+
+                <!-- Headline (Phase 2) -->
+                <h2 class="sec-10__title phrase">
+                  EVERY TRANSFORMATION BEGINS WITH ONE CONVERSATION.
+                </h2>
+
+                <!-- Subheadline (Phase 3) -->
+                <p class="sec-10__sub-desc phrase">
+                  Better outcomes. Stronger organisations. Healthier
+                  communities.
+                </p>
+
+                <!-- Body Paragraph (Phase 4) -->
+                <p class="sec-10__body-desc phrase">
+                  Every Aliro engagement begins with a candid conversation about
+                  your situation and what would actually be useful.<br /><br />
+                  We keep the first meeting focused on your situation—not our
+                  services. When there is a strong fit, we will define the right
+                  next step together.
+                </p>
+
+                <!-- Contact Email Link (Phase 5) -->
+                <a
+                  href="mailto:info@aliroconsulting.com"
+                  class="sec-10__email phrase"
+                >
+                  info@aliroconsulting.com
+                </a>
+
+                <!-- Primary CTA Button (Phase 6) -->
+                <div class="sec-10__cta-wrapper phrase">
+                  <a
+                    href="contact.html"
+                    class="btn-conversation btn-primary"
+                    id="footerConversationBtn"
+                  >
+                    Start a Conversation
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: Entity Office Information Cards (Columns 8 to 12) -->
+              <div class="sec-10__right col-span-5 col-start-8">
+                <!-- Hong Kong Entity Card -->
+                <div class="sec-10__card phrase">
+                  <div class="sec-10__card-icon-wrap">
+                    <img
+                      src="assets/hk-building-icon.svg"
+                      alt="Hong Kong Office Landmark Icon"
+                      class="sec-10__card-icon"
+                    />
+                  </div>
+                  <div class="sec-10__card-content">
+                    <div class="sec-10__card-tag">HONG KONG ENTITY</div>
+                    <div class="sec-10__card-title">Aliro Consulting Ltd.</div>
+                    <div class="sec-10__card-address">Hong Kong</div>
+                  </div>
+                </div>
+
+                <!-- Vietnam Operations Card -->
+                <div class="sec-10__card phrase">
+                  <div class="sec-10__card-icon-wrap">
+                    <img
+                      src="assets/vn-building-icon.svg"
+                      alt="Vietnam Office Landmark Landmark 81 Icon"
+                      class="sec-10__card-icon"
+                    />
+                  </div>
+                  <div class="sec-10__card-content">
+                    <div class="sec-10__card-tag">VIET NAM OPERATIONS</div>
+                    <div class="sec-10__card-title">
+                      Aliro Consulting Vietnam Co., Ltd.
+                    </div>
+                    <div class="sec-10__card-address">Ho Chi Minh City</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Bottom Strip: Copyright & Legal Navigation Links -->
+            <footer class="sec-10__footer">
+              <p class="sec-10__copyright phrase">
+                © 2026 Aliro Consulting. All rights reserved.
+              </p>
+              <div class="sec-10__legal-links phrase">
+                <a href="privacy.html" class="sec-10__link">Privacy</a>
+                <span class="sec-10__divider"></span>
+                <a href="terms.html" class="sec-10__link">Terms</a>
+              </div>
+            </footer>
+          </div>
+        </section>
       </div>
     </main>
 

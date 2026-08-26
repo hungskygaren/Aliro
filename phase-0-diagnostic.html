@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Phase 0 Diagnostic Service - Aliro Consulting."
+      content="Phase 0 Diagnostic Service - Aliro's Four Intelligence Continuum Entry Engagement."
     />
     <title>Phase 0 Diagnostic | Aliro Consulting</title>
 
@@ -26,56 +26,738 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/mockup-layout.css" />
+    <link rel="stylesheet" href="css/pages/phase-0-diagnostic/phase-0-diagnostic-layout.css" />
   </head>
-  <body class="page-mockup page-phase-0-diagnostic">
+  <body class="page-phase-0-diagnostic">
     <!-- Top Navigation Header (Reusable Component) -->
     <header class="navbar-overlay light-theme" id="mainHeader"></header>
 
-    <!-- Swiper Fullscreen Container for Phase 0 Diagnostic Mockup -->
+    <!-- Swiper Fullscreen Container for Phase 0 Diagnostic -->
     <main class="swiper main-swiper" id="scrollContainer">
       <div class="swiper-wrapper">
-        
-        <!-- Section 1 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-phase0-1" data-section-index="0">
-          <img src="assets/mock_phase0/sec-1.png" alt="Phase 0 Diagnostic - Section 1" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 1: Hero - The 4iC Diagnostic (Figma Node 6704:1856) -->
+        <section
+          class="scroll-section swiper-slide sec-phase0-1 sec-phase0-bg-light"
+          id="section-phase0-1"
+          data-section-index="0"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-phase0-1__grid grid-12">
+              <!-- Left Column: Strategic Typography & CTA -->
+              <div class="sec-phase0-1__left">
+                <div class="sec-phase0-1__tag phrase">
+                  ALIRO'S FOUR INTELLIGENCE CONTINUUM<br />
+                  THE ENTRY ENGAGEMENT
+                </div>
+                <h1 class="sec-phase0-1__title phrase">
+                  THE 4iC DIAGNOSTIC
+                </h1>
+                <div class="sec-phase0-1__catchphrase phrase">
+                  Phase 0. Start with the read.
+                </div>
+                <p class="sec-phase0-1__desc phrase">
+                  A scoped, fixed-fee diagnostic across the four intelligences.
+                  Before you commit to transformation, know what you are
+                  committing to: a senior read of where you stand, what matters
+                  most, and what to do next.
+                </p>
+                <div class="sec-phase0-1__btn-wrapper phrase">
+                  <a href="contact.html" class="sec-phase0-1__btn">
+                    Define the Decision
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: 4iC Isometric Art & Ambient Glow -->
+              <div class="sec-phase0-1__right">
+                <div class="sec-phase0-1__img-wrapper">
+                  <div class="sec-phase0-1__glow"></div>
+                  <img
+                    src="assets/phase-0-diagnostic/sec-1-right.png"
+                    alt="The 4iC Diagnostic - Four Intelligences Continuum"
+                    class="sec-phase0-1__img phrase"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <a
+              href="#section-phase0-2"
+              class="sec-phase0-1__scroll"
+              id="scrollDownBtn"
+              aria-label="Scroll to Next Section"
+            >
+              <span class="sec-phase0-1__scroll-text">scroll down</span>
+              <svg
+                class="sec-phase0-1__scroll-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M7.41 14.59L12 19.17l4.59-4.58L18 16l-6 6-6-6 1.41-1.41z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
         </section>
 
-        <!-- Section 2 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-phase0-2" data-section-index="1">
-          <img src="assets/mock_phase0/sec-2.png" alt="Phase 0 Diagnostic - Section 2" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 2: How It Runs (4 Steps Timeline) (Figma Node 4900:3473) -->
+        <section
+          class="scroll-section swiper-slide sec-phase0-2 sec-phase0-bg-light"
+          id="section-phase0-2"
+          data-section-index="1"
+        >
+          <div class="container flex-center-v">
+            <!-- Header: Banner & Subtitle -->
+            <div class="sec-phase0-2__header">
+              <div class="sec-phase0-2__banner phrase">
+                <h2 class="sec-phase0-2__banner-title">
+                  FIXED SCOPE. FIXED FEE.
+                  <span class="sec-phase0-2__banner-highlight"
+                    >A DECISION AT THE END.</span
+                  >
+                </h2>
+              </div>
+              <div class="sec-phase0-2__subtitle phrase">HOW IT RUNS</div>
+            </div>
+
+            <!-- 4-Step Process Grid with Connecting Timeline -->
+            <div class="sec-phase0-2__grid-wrapper">
+              <div class="sec-phase0-2__timeline-line"></div>
+              <div class="sec-phase0-2__grid">
+                <!-- Step 1: SCOPE -->
+                <div class="sec-phase0-2__step phrase">
+                  <div class="sec-phase0-2__step-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-2-step-1.png"
+                      alt="Scope - Fixed Scope Diagnostic Step 1"
+                      class="sec-phase0-2__step-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-2__badge-wrapper">
+                    <div class="sec-phase0-2__badge">1</div>
+                  </div>
+                  <h3 class="sec-phase0-2__step-title">SCOPE</h3>
+                  <p class="sec-phase0-2__step-desc">
+                    We agree the decision the diagnostic must serve, and weight
+                    the lenses to it.
+                  </p>
+                </div>
+
+                <!-- Step 2: ASSESS -->
+                <div class="sec-phase0-2__step phrase">
+                  <div class="sec-phase0-2__step-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-2-step-2.png"
+                      alt="Assess - Four Intelligence Terrains Step 2"
+                      class="sec-phase0-2__step-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-2__badge-wrapper">
+                    <div class="sec-phase0-2__badge">2</div>
+                  </div>
+                  <h3 class="sec-phase0-2__step-title">ASSESS</h3>
+                  <p class="sec-phase0-2__step-desc">
+                    Senior-led assessment across all four intelligence terrains.
+                  </p>
+                </div>
+
+                <!-- Step 3: SYNTHESISE -->
+                <div class="sec-phase0-2__step phrase">
+                  <div class="sec-phase0-2__step-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-2-step-3.png"
+                      alt="Synthesise - Integrated Read Step 3"
+                      class="sec-phase0-2__step-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-2__badge-wrapper">
+                    <div class="sec-phase0-2__badge">3</div>
+                  </div>
+                  <h3 class="sec-phase0-2__step-title">SYNTHESISE</h3>
+                  <p class="sec-phase0-2__step-desc">
+                    Findings prioritised into one integrated read: what is true,
+                    what it means.
+                  </p>
+                </div>
+
+                <!-- Step 4: DECIDE -->
+                <div class="sec-phase0-2__step phrase">
+                  <div class="sec-phase0-2__step-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-2-step-4.png"
+                      alt="Decide - Leadership Session Step 4"
+                      class="sec-phase0-2__step-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-2__badge-wrapper">
+                    <div class="sec-phase0-2__badge">4</div>
+                  </div>
+                  <h3 class="sec-phase0-2__step-title">DECIDE</h3>
+                  <p class="sec-phase0-2__step-desc">
+                    A leadership session: the roadmap, the priorities, the go or
+                    no-go.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 3 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-phase0-3" data-section-index="2">
-          <img src="assets/mock_phase0/sec-3.png" alt="Phase 0 Diagnostic - Section 3" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 3: Four Lenses, One Read (Figma Node 6704:1857) -->
+        <section
+          class="scroll-section swiper-slide sec-phase0-3 sec-phase0-bg-dark"
+          id="section-phase0-3"
+          data-section-index="2"
+        >
+          <div class="container flex-center-v">
+            <!-- Header Title -->
+            <div class="sec-phase0-3__header">
+              <h2 class="sec-phase0-3__title phrase">
+                FOUR LENSES, ONE READ
+              </h2>
+              <div class="sec-phase0-3__subtitle phrase">
+                One Integrated 4iC Diagnostic
+              </div>
+            </div>
+
+            <!-- Stage with Center Isometric Graphic & 4 Surrounding Quadrant Cards -->
+            <div class="sec-phase0-3__stage">
+              <!-- Center Isometric Graphic -->
+              <div class="sec-phase0-3__center-wrapper">
+                <div class="sec-phase0-3__glow"></div>
+                <img
+                  src="assets/phase-0-diagnostic/sec-3-center.png"
+                  alt="Four Lenses, One Read - 4iC Integrated Diagnostic Diagram"
+                  class="sec-phase0-3__center-img phrase"
+                />
+              </div>
+
+              <!-- 4 Quadrants Lenses Container -->
+              <div class="sec-phase0-3__cards-container">
+                <!-- Top-Left Card: Market -->
+                <div
+                  class="sec-phase0-3__card sec-phase0-3__card--top-left phrase"
+                >
+                  <div class="sec-phase0-3__card-top">
+                    <div class="sec-phase0-3__icon-wrapper">
+                      <img
+                        src="assets/phase-0-diagnostic/sec-3-icon-market.svg"
+                        alt="Market Lens Icon"
+                        class="sec-phase0-3__icon"
+                      />
+                    </div>
+                    <h3 class="sec-phase0-3__card-title">MARKET</h3>
+                  </div>
+                  <div class="sec-phase0-3__card-subtitle">
+                    Know WHAT to do, and where.
+                  </div>
+                  <p class="sec-phase0-3__card-desc">
+                    Landscape, regulation, buyers, and channels.
+                  </p>
+                </div>
+
+                <!-- Top-Right Card: Operational -->
+                <div
+                  class="sec-phase0-3__card sec-phase0-3__card--top-right phrase"
+                >
+                  <div class="sec-phase0-3__card-top">
+                    <div class="sec-phase0-3__icon-wrapper">
+                      <img
+                        src="assets/phase-0-diagnostic/sec-3-icon-operational.svg"
+                        alt="Operational Lens Icon"
+                        class="sec-phase0-3__icon"
+                      />
+                    </div>
+                    <h3 class="sec-phase0-3__card-title">OPERATIONAL</h3>
+                  </div>
+                  <div class="sec-phase0-3__card-subtitle">
+                    Know HOW it gets done.
+                  </div>
+                  <p class="sec-phase0-3__card-desc">
+                    Cost, bottlenecks, and readiness to scale.
+                  </p>
+                </div>
+
+                <!-- Bottom-Left Card: Capacity & Capability -->
+                <div
+                  class="sec-phase0-3__card sec-phase0-3__card--bottom-left phrase"
+                >
+                  <div class="sec-phase0-3__card-top">
+                    <div class="sec-phase0-3__icon-wrapper">
+                      <img
+                        src="assets/phase-0-diagnostic/sec-3-icon-capacity.svg"
+                        alt="Capacity & Capability Lens Icon"
+                        class="sec-phase0-3__icon"
+                      />
+                    </div>
+                    <h3
+                      class="sec-phase0-3__card-title sec-phase0-3__card-title--capacity"
+                    >
+                      CAPACITY &amp; CAPABILITY
+                    </h3>
+                  </div>
+                  <div class="sec-phase0-3__card-subtitle">
+                    Ensure it CONTINUES.
+                  </div>
+                  <p class="sec-phase0-3__card-desc">
+                    People, governance, and whether gains persist.
+                  </p>
+                </div>
+
+                <!-- Bottom-Right Card: Digital -->
+                <div
+                  class="sec-phase0-3__card sec-phase0-3__card--bottom-right phrase"
+                >
+                  <div class="sec-phase0-3__card-top">
+                    <div class="sec-phase0-3__icon-wrapper">
+                      <img
+                        src="assets/phase-0-diagnostic/sec-3-icon-digital.svg"
+                        alt="Digital Lens Icon"
+                        class="sec-phase0-3__icon"
+                      />
+                    </div>
+                    <h3 class="sec-phase0-3__card-title">DIGITAL</h3>
+                  </div>
+                  <div class="sec-phase0-3__card-subtitle">
+                    Accelerate HOW it is done.
+                  </div>
+                  <p class="sec-phase0-3__card-desc">
+                    Systems, data, and where AI genuinely pays.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 4 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-phase0-4" data-section-index="3">
-          <img src="assets/mock_phase0/sec-4.png" alt="Phase 0 Diagnostic - Section 4" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 4: What You Receive (Deliverables & Outcome) (Figma Node 4900:3475) -->
+        <section
+          class="scroll-section swiper-slide sec-phase0-4 sec-phase0-bg-dark"
+          id="section-phase0-4"
+          data-section-index="3"
+        >
+          <div class="container flex-center-v">
+            <!-- Header: Title -->
+            <div class="sec-phase0-4__header">
+              <h2 class="sec-phase0-4__title phrase">WHAT YOU RECEIVE</h2>
+            </div>
+
+            <!-- 4 Deliverables Grid with Connecting Timeline -->
+            <div class="sec-phase0-4__grid-wrapper">
+              <div class="sec-phase0-4__timeline-line"></div>
+              <div class="sec-phase0-4__grid">
+                <!-- Deliverable 1: Four-Intelligence Baseline -->
+                <div class="sec-phase0-4__item phrase">
+                  <div class="sec-phase0-4__item-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-4-deliverable-1.png"
+                      alt="Four-Intelligence Baseline Deliverable 1"
+                      class="sec-phase0-4__item-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-4__badge-wrapper">
+                    <div class="sec-phase0-4__badge">1</div>
+                  </div>
+                  <h3 class="sec-phase0-4__item-title">
+                    FOUR-INTELLIGENCE<br />BASELINE
+                  </h3>
+                  <p class="sec-phase0-4__item-desc">
+                    A four-intelligence baseline of where your organisation
+                    actually stands.
+                  </p>
+                </div>
+
+                <!-- Deliverable 2: Prioritised Findings -->
+                <div class="sec-phase0-4__item phrase">
+                  <div class="sec-phase0-4__item-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-4-deliverable-2.png"
+                      alt="Prioritised Findings Deliverable 2"
+                      class="sec-phase0-4__item-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-4__badge-wrapper">
+                    <div class="sec-phase0-4__badge">2</div>
+                  </div>
+                  <h3 class="sec-phase0-4__item-title">
+                    PRIORITISED<br />FINDINGS
+                  </h3>
+                  <p class="sec-phase0-4__item-desc">
+                    Prioritised findings, ranked by impact on the decision you
+                    face.
+                  </p>
+                </div>
+
+                <!-- Deliverable 3: Phased Roadmap -->
+                <div class="sec-phase0-4__item phrase">
+                  <div class="sec-phase0-4__item-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-4-deliverable-3.png"
+                      alt="Phased Roadmap Deliverable 3"
+                      class="sec-phase0-4__item-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-4__badge-wrapper">
+                    <div class="sec-phase0-4__badge">3</div>
+                  </div>
+                  <h3 class="sec-phase0-4__item-title">
+                    PHASED<br />ROADMAP
+                  </h3>
+                  <p class="sec-phase0-4__item-desc">
+                    A phased roadmap sequencing what to do first, next, and
+                    later.
+                  </p>
+                </div>
+
+                <!-- Deliverable 4: Leadership Working Session -->
+                <div class="sec-phase0-4__item phrase">
+                  <div class="sec-phase0-4__item-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-4-deliverable-4.png"
+                      alt="Leadership Working Session Deliverable 4"
+                      class="sec-phase0-4__item-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-4__badge-wrapper">
+                    <div class="sec-phase0-4__badge">4</div>
+                  </div>
+                  <h3 class="sec-phase0-4__item-title">
+                    LEADERSHIP<br />WORKING SESSION
+                  </h3>
+                  <p class="sec-phase0-4__item-desc">
+                    A leadership working session to land the read and agree the
+                    path.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Outcome Banner -->
+            <div class="sec-phase0-4__outcome phrase">
+              <div class="sec-phase0-4__outcome-tag">THE OUTCOME</div>
+              <h3 class="sec-phase0-4__outcome-text">
+                Proceed. Redirect. Or stop. With confidence.
+              </h3>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 5 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-phase0-5" data-section-index="4">
-          <img src="assets/mock_phase0/sec-5.png" alt="Phase 0 Diagnostic - Section 5" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 5: Why Start Here (4 Value Props) (Figma Node 6704:1858) -->
+        <section
+          class="scroll-section swiper-slide sec-phase0-5 sec-phase0-bg-light"
+          id="section-phase0-5"
+          data-section-index="4"
+        >
+          <div class="container flex-center-v">
+            <!-- Header: Title -->
+            <div class="sec-phase0-5__header">
+              <h2 class="sec-phase0-5__title phrase">WHY START HERE</h2>
+            </div>
+
+            <!-- Main Stage: Center Pedestal & 4 Cards -->
+            <div class="sec-phase0-5__stage">
+              <!-- Center Isometric Node Pedestal -->
+              <div class="sec-phase0-5__center-wrapper">
+                <img
+                  src="assets/phase-0-diagnostic/sec-5-center.png"
+                  alt="Diagnostic Node Center Pedestal"
+                  class="sec-phase0-5__center-img phrase"
+                />
+              </div>
+
+              <!-- 4 Value Proposition Cards -->
+              <div class="sec-phase0-5__cards-container">
+                <!-- Card 1: De-risked by Design (Top Left) -->
+                <div
+                  class="sec-phase0-5__card sec-phase0-5__card--top-left phrase"
+                >
+                  <div class="sec-phase0-5__card-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-5-card-1.png"
+                      alt="De-risked by Design Isometric Icon"
+                      class="sec-phase0-5__card-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-5__card-content">
+                    <h3 class="sec-phase0-5__card-title">
+                      DE-RISKED BY<br />DESIGN
+                    </h3>
+                    <p class="sec-phase0-5__card-desc">
+                      A fixed fee for a defined outcome.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 2: Priced Work, Shaped Work (Top Right) -->
+                <div
+                  class="sec-phase0-5__card sec-phase0-5__card--top-right phrase"
+                >
+                  <div class="sec-phase0-5__card-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-5-card-2.png"
+                      alt="Priced Work, Shaped Work Isometric Icon"
+                      class="sec-phase0-5__card-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-5__card-content">
+                    <h3 class="sec-phase0-5__card-title">
+                      PRICED WORK,<br />SHAPED WORK
+                    </h3>
+                    <p class="sec-phase0-5__card-desc">
+                      We never price a transformation whose shape is unknown.
+                      Phase 0 gives it shape.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 3: Senior-Led Throughout (Bottom Left) -->
+                <div
+                  class="sec-phase0-5__card sec-phase0-5__card--bottom-left phrase"
+                >
+                  <div class="sec-phase0-5__card-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-5-card-3.png"
+                      alt="Senior-Led Throughout Isometric Icon"
+                      class="sec-phase0-5__card-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-5__card-content">
+                    <h3 class="sec-phase0-5__card-title">
+                      SENIOR-LED<br />THROUGHOUT
+                    </h3>
+                    <p class="sec-phase0-5__card-desc">
+                      Partners do the reading, not juniors.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 4: Useful Even If You Stop (Bottom Right) -->
+                <div
+                  class="sec-phase0-5__card sec-phase0-5__card--bottom-right phrase"
+                >
+                  <div class="sec-phase0-5__card-visual">
+                    <img
+                      src="assets/phase-0-diagnostic/sec-5-card-4.png"
+                      alt="Useful Even If You Stop Isometric Icon"
+                      class="sec-phase0-5__card-img"
+                    />
+                  </div>
+                  <div class="sec-phase0-5__card-content">
+                    <h3 class="sec-phase0-5__card-title">
+                      USEFUL EVEN IF<br />YOU STOP
+                    </h3>
+                    <p class="sec-phase0-5__card-desc">
+                      The read stands on its own. No lock-in.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 6 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-phase0-6" data-section-index="5">
-          <img src="assets/mock_phase0/sec-6.png" alt="Phase 0 Diagnostic - Section 6" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 6: After The Gate (Figma Node 6704:1859) -->
+        <section
+          class="scroll-section swiper-slide sec-phase0-6 sec-phase0-bg-light"
+          id="section-phase0-6"
+          data-section-index="5"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-phase0-6__grid grid-12">
+              <!-- Left Column: Gate Statements & Callout -->
+              <div class="sec-phase0-6__left">
+                <div class="sec-phase0-6__tag phrase">AFTER THE GATE</div>
+                <h2 class="sec-phase0-6__statement-1 phrase">
+                  The roadmap converts into priced, phased engagements, each
+                  mapped to the intelligence that carries it.
+                </h2>
+                <h1 class="sec-phase0-6__statement-2 phrase">
+                  You commission the phases the decision justifies.
+                </h1>
+                <div class="sec-phase0-6__callout phrase">
+                  <span class="sec-phase0-6__callout-bar"></span>
+                  <span class="sec-phase0-6__callout-text">Nothing more.</span>
+                </div>
+              </div>
+
+              <!-- Right Column: Isometric Gate & Phased Engagements Graphic -->
+              <div class="sec-phase0-6__right">
+                <div class="sec-phase0-6__img-wrapper">
+                  <div class="sec-phase0-6__glow"></div>
+                  <img
+                    src="assets/phase-0-diagnostic/sec-6-gate.png"
+                    alt="After The Gate - Phased Engagements Roadmap"
+                    class="sec-phase0-6__img phrase"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 7 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-phase0-7" data-section-index="6">
-          <img src="assets/mock_phase0/sec-7.png" alt="Phase 0 Diagnostic - Section 7" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 7: The Entry Point (Figma Node 4904:3488) -->
+        <section
+          class="scroll-section swiper-slide sec-phase0-7 sec-phase0-bg-light"
+          id="section-phase0-7"
+          data-section-index="6"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-phase0-7__grid grid-12">
+              <!-- Left Column: Isometric Entry Point Graphic -->
+              <div class="sec-phase0-7__left">
+                <div class="sec-phase0-7__img-wrapper">
+                  <img
+                    src="assets/phase-0-diagnostic/sec-7-entry.png"
+                    alt="The Entry Point - Strategic Engagement Gateway"
+                    class="sec-phase0-7__img phrase"
+                  />
+                </div>
+              </div>
+
+              <!-- Right Column: Strategic Entry Copy -->
+              <div class="sec-phase0-7__right">
+                <div class="sec-phase0-7__tag phrase">THE ENTRY POINT</div>
+                <h2 class="sec-phase0-7__text phrase">
+                  For entry, expansion, investment, or transformation decisions.
+                  And the recommended starting point when the path forward is
+                  not yet clear.
+                </h2>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 8 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-phase0-8" data-section-index="7">
-          <img src="assets/mock_phase0/sec-8.png" alt="Phase 0 Diagnostic - Section 8" class="mockup-img" onerror="this.style.opacity='0'" />
-        </section>
+        <!-- Section 8: Final Contact & Entity Details (Reused Footer from About / Home) -->
+        <section
+          class="scroll-section swiper-slide sec-10 sec-phase0-8 sec-phase0-bg-light"
+          id="section-phase0-8"
+          data-section-index="7"
+        >
+          <!-- Background Decor Graphic (Figma Node 4243:2523) -->
+          <img
+            src="assets/sec-10-decor.webp"
+            alt="Aliro Blueprint Lines Decoration Background"
+            class="sec-10__decor"
+            loading="lazy"
+          />
 
+          <div class="container flex-center-v h-100">
+            <div class="sec-10__grid grid-12">
+              <!-- Left Column: Contact Copy & CTA (Columns 1 to 6) -->
+              <div class="sec-10__left col-span-6">
+                <!-- Eyebrow (Phase 1) -->
+                <div class="sec-10__tag phrase">
+                  LET'S START WITH YOUR REALITY
+                </div>
+
+                <!-- Headline (Phase 2) -->
+                <h2 class="sec-10__title phrase">
+                  EVERY TRANSFORMATION BEGINS WITH ONE CONVERSATION.
+                </h2>
+
+                <!-- Subheadline (Phase 3) -->
+                <p class="sec-10__sub-desc phrase">
+                  Better outcomes. Stronger organisations. Healthier
+                  communities.
+                </p>
+
+                <!-- Body Paragraph (Phase 4) -->
+                <div class="sec-10__desc">
+                  <p class="phrase">
+                    Every Aliro engagement begins with a candid conversation
+                    about your situation and what would actually be useful.
+                  </p>
+                  <p class="phrase">
+                    We keep the first meeting focused on your situation-not our
+                    services.
+                    <span class="sec-10__desc-highlight"
+                      >When there is a strong fit, we will define the right next
+                      step together.</span
+                    >
+                  </p>
+                </div>
+
+                <!-- Direct Email Link (Phase 5) -->
+                <a
+                  href="mailto:info@aliroconsulting.com"
+                  class="sec-10__email phrase"
+                >
+                  info@aliroconsulting.com
+                </a>
+
+                <!-- CTA Button (Phase 6) -->
+                <div class="sec-10__btn-wrapper">
+                  <a
+                    href="mailto:info@aliroconsulting.com"
+                    class="btn btn-primary sec-10__btn phrase"
+                  >
+                    Start a Conversation
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: Entity Details (Card Box covering columns 8 to 12 with #01103B Dark Background) -->
+              <div class="sec-10__right col-start-8 col-span-5">
+                <div class="sec-10__card">
+                  <!-- Card Content Blocks (Staggered Fade-in) -->
+                  <div class="sec-10__card-content">
+                    <div class="sec-10__entity-item phrase d-flex align-center">
+                      <img
+                        src="assets/icon-building-hongkong.svg"
+                        class="sec-10__icon"
+                        alt="Hong Kong Office Building Icon"
+                      />
+                      <div class="sec-10__entity-info">
+                        <div class="sec-10__label">HONG KONG ENTITY</div>
+                        <div class="sec-10__company">Aliro Consulting Ltd.</div>
+                        <div class="sec-10__location">Hong Kong</div>
+                      </div>
+                    </div>
+                    <div class="sec-10__divider"></div>
+                    <div class="sec-10__entity-item phrase d-flex align-center">
+                      <img
+                        src="assets/icon-building-vietnam.svg"
+                        class="sec-10__icon"
+                        alt="Vietnam Office Building Icon"
+                      />
+                      <div class="sec-10__entity-info">
+                        <div class="sec-10__label">VIET NAM OPERATIONS</div>
+                        <div class="sec-10__company">
+                          Aliro Consulting Vietnam Co., Ltd.
+                        </div>
+                        <div class="sec-10__location">Ho Chi Minh City</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Copyright & Links -->
+            <div class="sec-10__bottom phrase">
+              <div class="sec-10__copyright-text">
+                © 2026 Aliro Consulting. All rights reserved.
+              </div>
+              <div class="sec-10__legal-links">
+                <a href="javascript:void(0)" class="sec-10__legal-link"
+                  >Privacy</a
+                >
+                <span class="sec-10__legal-separator"></span>
+                <a href="javascript:void(0)" class="sec-10__legal-link"
+                  >Terms</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 

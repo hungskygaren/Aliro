@@ -1,0 +1,408 @@
+/* ==========================================================================
+   Section 5: How We Work With You (Scoped Deliverable vs Retainer)
+   Figma Node: 6705:1910
+   ========================================================================== */
+
+.sec-thirdeye-5 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #1e55b3 0%,
+    #174495 25%,
+    #103277 50%,
+    #082159 75%,
+    #01103b 100%
+  ) !important;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.sec-thirdeye-5 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 75px 20px 25px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Header: Title
+   -------------------------------------------------------------------------- */
+.sec-thirdeye-5__header {
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-thirdeye-5__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* --------------------------------------------------------------------------
+   2-Column Engagement Options Container
+   -------------------------------------------------------------------------- */
+.sec-thirdeye-5__grid-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+}
+
+/* Connecting Arrow Line from Option 1 to Option 2 */
+.sec-thirdeye-5__timeline-line {
+  position: absolute;
+  top: 260px;
+  left: 28%;
+  right: 28%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #eaa936 0%,
+    #eaa936 60%,
+    rgba(159, 194, 238, 0.5) 100%
+  );
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.3s;
+}
+
+.sec-thirdeye-5__timeline-arrow {
+  position: absolute;
+  top: 253px;
+  left: 55%;
+  z-index: 2;
+  color: #eaa936;
+  animation: secThirdEye5Pulse 2s ease-in-out infinite;
+}
+
+.sec-thirdeye-5__timeline-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes secThirdEye5Pulse {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.sec-thirdeye-5__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Base Option Column */
+.sec-thirdeye-5__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 24px 20px 28px;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.sec-thirdeye-5__option:nth-child(1) {
+  transition-delay: 0.25s;
+}
+.sec-thirdeye-5__option:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+/* Option 1: Highlighted Gold Box */
+.sec-thirdeye-5__option--highlight {
+  background: radial-gradient(
+    ellipse at 50% 20%,
+    rgba(30, 85, 179, 0.65) 0%,
+    rgba(1, 16, 59, 0.9) 100%
+  );
+  border: 1px solid #eaa936;
+  box-shadow: 0 0 35px rgba(234, 169, 54, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.sec-thirdeye-5__option--highlight:hover {
+  box-shadow: 0 0 50px rgba(234, 169, 54, 0.55);
+  transform: translateY(-4px) !important;
+}
+
+/* Option 2: Default Ambient Glass Card */
+.sec-thirdeye-5__option--default {
+  background: rgba(1, 16, 59, 0.3);
+  border: 1px solid rgba(159, 194, 238, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.sec-thirdeye-5__option--default:hover {
+  border-color: rgba(159, 194, 238, 0.45);
+  transform: translateY(-4px) !important;
+}
+
+/* Visual Area */
+.sec-thirdeye-5__visual {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.sec-thirdeye-5__img {
+  max-width: 100%;
+  max-height: 190px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.sec-thirdeye-5__option:hover .sec-thirdeye-5__img {
+  transform: scale(1.05);
+}
+
+/* Step Badge */
+.sec-thirdeye-5__badge-wrapper {
+  position: relative;
+  z-index: 4;
+  margin-bottom: 12px;
+}
+
+.sec-thirdeye-5__badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sec-thirdeye-5__badge--gold {
+  background-color: #eaa936;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4), 0 4px 12px rgba(234, 169, 54, 0.4);
+}
+
+.sec-thirdeye-5__badge--blue {
+  background-color: var(--Highlight-Blue, #0431b1);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3), 0 4px 12px rgba(4, 49, 177, 0.4);
+}
+
+/* Typography */
+.sec-thirdeye-5__tag {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.sec-thirdeye-5__tag--gold {
+  color: #eaa936;
+}
+
+.sec-thirdeye-5__opt-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.3px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-thirdeye-5__opt-desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #ffffff;
+  margin: 0 0 18px 0;
+  max-width: 400px;
+  opacity: 0.9;
+}
+
+/* Button */
+.sec-thirdeye-5__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e09b21;
+  color: #ffffff;
+  font-family: Aptos, var(--font-brand);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(224, 155, 33, 0.35);
+  margin-top: auto;
+}
+
+.sec-thirdeye-5__btn:hover {
+  background-color: #c98514;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(224, 155, 33, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Swiper Active Slide Animation Triggers
+   -------------------------------------------------------------------------- */
+.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__header,
+.sec-thirdeye-5.slide-animated .sec-thirdeye-5__header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__timeline-line,
+.sec-thirdeye-5.slide-animated .sec-thirdeye-5__timeline-line {
+  transform: scaleX(1);
+}
+
+.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__option,
+.sec-thirdeye-5.slide-animated .sec-thirdeye-5__option {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout & Mobile Adaptation
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-thirdeye-5__title {
+    font-size: 30px;
+  }
+  .sec-thirdeye-5__grid {
+    gap: 30px;
+  }
+  .sec-thirdeye-5__visual {
+    height: 170px;
+  }
+  .sec-thirdeye-5__img {
+    max-height: 160px;
+  }
+  .sec-thirdeye-5__opt-title {
+    font-size: 19px;
+  }
+  .sec-thirdeye-5__opt-desc {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .sec-thirdeye-5__timeline-line {
+    top: 230px;
+  }
+  .sec-thirdeye-5__timeline-arrow {
+    top: 223px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-thirdeye-5 .flex-center-v {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .sec-thirdeye-5__timeline-line,
+  .sec-thirdeye-5__timeline-arrow {
+    display: none;
+  }
+
+  .sec-thirdeye-5__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sec-thirdeye-5__option {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-thirdeye-5 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 25px;
+  }
+
+  .sec-thirdeye-5__title {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 14px;
+  }
+
+  .sec-thirdeye-5__visual {
+    height: 140px;
+  }
+
+  .sec-thirdeye-5__img {
+    max-height: 130px;
+  }
+
+  .sec-thirdeye-5__opt-title {
+    font-size: 17px;
+  }
+
+  .sec-thirdeye-5__opt-desc {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

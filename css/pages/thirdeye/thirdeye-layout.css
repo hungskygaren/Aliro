@@ -1,0 +1,24 @@
+/* ==========================================================================
+   ThirdEye Service Page Layout & Modular Section Imports
+   ========================================================================== */
+
+/* Section 1: Hero */
+@import "./sec-1-thirdeye-hero.css";
+
+/* Section 2: Overview / What Is ThirdEye */
+@import "./sec-2-thirdeye-about.css";
+
+/* Section 3: Core Pillars / Framework */
+@import "./sec-3-thirdeye-pillars.css";
+
+/* Section 4: Process / How It Works */
+@import "./sec-4-thirdeye-process.css";
+
+/* Section 5: Architecture / Intelligence In Action */
+@import "./sec-5-thirdeye-architecture.css";
+
+/* Section 6: Deliverables / Outcomes */
+@import "./sec-6-thirdeye-outcomes.css";
+
+/* Section 7: Final Contact & Entity Details (Reused Footer) */
+@import "../home/sec-10-contact.css";

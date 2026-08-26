@@ -310,6 +310,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (
         activeSlide.classList.contains("sec-mockup-bg-dark") ||
         activeSlide.classList.contains("sec-about-bg-dark") ||
+        activeSlide.classList.contains("sec-phase0-bg-dark") ||
+        activeSlide.classList.contains("sec-thirdeye-bg-dark") ||
+        activeSlide.classList.contains("sec-market-bg-dark") ||
         activeSlide.classList.contains("sec-contact-form")
       ) {
         mainHeader.classList.add("light-theme");
@@ -317,6 +320,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       } else if (
         activeSlide.classList.contains("sec-mockup-bg-light") ||
         activeSlide.classList.contains("sec-about-bg-light") ||
+        activeSlide.classList.contains("sec-phase0-bg-light") ||
+        activeSlide.classList.contains("sec-thirdeye-bg-light") ||
+        activeSlide.classList.contains("sec-market-bg-light") ||
         activeSlide.classList.contains("sec-contact-mockup")
       ) {
         mainHeader.classList.remove("light-theme");

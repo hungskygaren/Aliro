@@ -1,0 +1,444 @@
+/* ==========================================================================
+   Section 1: Hero - Market Intelligence (Pillar 1 of 4)
+   Figma Node: 6701:2042
+   ========================================================================== */
+
+.sec-market-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: linear-gradient(
+    105.33deg,
+    #ffffff 31.47%,
+    #8eaad9 45.18%,
+    #2053a9 54.97%,
+    #01103b 70.64%
+  ) !important;
+  box-sizing: border-box;
+}
+
+/* Ambient Radial Glow on Right */
+.sec-market-1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 78% 50%,
+    rgba(30, 85, 179, 0.45) 0%,
+    rgba(23, 68, 149, 0.25) 35%,
+    rgba(1, 16, 59, 0) 75%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec-market-1 .flex-center-v {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 85px 20px 40px;
+}
+
+.sec-market-1__grid {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Strategic Typography & Breadcrumbs
+   -------------------------------------------------------------------------- */
+.sec-market-1__left {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 48%;
+  max-width: 550px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-market-1__eyebrow {
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-market-1__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 50px;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-market-1__subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.2px;
+}
+
+.sec-market-1__desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 25px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0 0 24px 0;
+  max-width: 480px;
+  opacity: 0.95;
+}
+
+/* 4iC Breadcrumb Navigation */
+.sec-market-1__breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin-bottom: 24px;
+}
+
+.sec-market-1__crumb {
+  font-family: Aptos, var(--font-brand);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.sec-market-1__crumb:hover {
+  color: var(--Highlight-Blue, #0431b1);
+}
+
+.sec-market-1__crumb--active {
+  color: var(--Highlight-Blue, #0431b1);
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--Highlight-Blue, #0431b1);
+}
+
+.sec-market-1__crumb-sep {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Midnight-Navy, #01103b);
+  opacity: 0.6;
+}
+
+.sec-market-1__crumb-sep svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* CTA Button */
+.sec-market-1__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Highlight-Blue, #0431b1);
+  color: #ffffff;
+  font-family: Aptos, var(--font-brand);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.3);
+}
+
+.sec-market-1__btn:hover {
+  background-color: #032488;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(4, 49, 177, 0.45);
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: 3D Holographic ASEAN Radar & Market Displays
+   -------------------------------------------------------------------------- */
+.sec-market-1__right {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  width: 52%;
+  max-width: 670px;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.25s;
+}
+
+.sec-market-1__img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 670px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-market-1__glow {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(34, 108, 180, 0.45) 0%,
+    rgba(1, 16, 59, 0) 100%
+  );
+  filter: blur(45px);
+  z-index: 1;
+  pointer-events: none;
+  animation: secMarket1Glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes secMarket1Glow {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.sec-market-1__img {
+  width: 100%;
+  max-width: 670px;
+  height: auto;
+  aspect-ratio: 670 / 563;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 15px 35px rgba(1, 16, 59, 0.35));
+  animation: secMarket1Float 7s ease-in-out infinite alternate;
+}
+
+@keyframes secMarket1Float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(0.2deg);
+  }
+  100% {
+    transform: translateY(4px) rotate(-0.2deg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Down Indicator
+   -------------------------------------------------------------------------- */
+.sec-market-1__scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--Light-Glow, #c5daf3);
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.sec-market-1__scroll:hover {
+  opacity: 1;
+  transform: translateX(-50%) translateY(3px);
+}
+
+.sec-market-1__scroll-text {
+  font-family: Aptos, var(--font-brand);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sec-market-1__scroll-icon {
+  width: 22px;
+  height: 22px;
+  animation: secMarket1Bounce 2s infinite;
+}
+
+@keyframes secMarket1Bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Swiper Active Slide Animation Triggers
+   -------------------------------------------------------------------------- */
+.sec-market-1.swiper-slide-active .sec-market-1__left,
+.sec-market-1.slide-animated .sec-market-1__left {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-market-1.swiper-slide-active .sec-market-1__right,
+.sec-market-1.slide-animated .sec-market-1__right {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout & Mobile Adaptation
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-market-1__eyebrow {
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .sec-market-1__title {
+    font-size: 38px;
+    line-height: 44px;
+  }
+  .sec-market-1__subtitle {
+    font-size: 19px;
+  }
+  .sec-market-1__desc {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .sec-market-1__crumb {
+    font-size: 13px;
+  }
+  .sec-market-1__right {
+    width: 50%;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-market-1 {
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #8eaad9 35%,
+      #2053a9 60%,
+      #01103b 100%
+    ) !important;
+  }
+
+  .sec-market-1 .flex-center-v {
+    align-items: flex-start;
+    padding-top: 85px;
+    padding-bottom: 60px;
+    overflow-y: auto;
+  }
+
+  .sec-market-1__grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: static;
+  }
+
+  .sec-market-1__left {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .sec-market-1__right {
+    position: static;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .sec-market-1__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-market-1 .flex-center-v {
+    padding-top: 75px;
+    padding-bottom: 25px;
+  }
+
+  .sec-market-1__eyebrow {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .sec-market-1__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .sec-market-1__subtitle {
+    font-size: 16px;
+  }
+
+  .sec-market-1__desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .sec-market-1__breadcrumb {
+    gap: 4px 6px;
+  }
+
+  .sec-market-1__crumb {
+    font-size: 12px;
+  }
+}

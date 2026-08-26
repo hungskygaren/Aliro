@@ -1,0 +1,374 @@
+/* ==========================================================================
+   Section 5: Why Start Here (Diagnostic Principles & 4 Value Props)
+   Figma Node: 6704:1858
+   ========================================================================== */
+
+.sec-phase0-5 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #ffffff !important;
+  box-sizing: border-box;
+  color: var(--Midnight-Navy, #01103b);
+}
+
+.sec-phase0-5 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 75px 20px 30px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Header: Title
+   -------------------------------------------------------------------------- */
+.sec-phase0-5__header {
+  text-align: center;
+  margin-bottom: 24px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-phase0-5__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* --------------------------------------------------------------------------
+   Main Stage: Center Checkmark Pedestal & 4 Surrounding Cards
+   -------------------------------------------------------------------------- */
+.sec-phase0-5__stage {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+/* Center Isometric Node Pedestal */
+.sec-phase0-5__center-wrapper {
+  position: absolute;
+  width: 232px;
+  height: 185px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.9);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+.sec-phase0-5__center-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 10px 20px rgba(1, 16, 59, 0.1));
+  animation: secPhase05Float 6s ease-in-out infinite alternate;
+}
+
+@keyframes secPhase05Float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4 Cards Container & Styling
+   -------------------------------------------------------------------------- */
+.sec-phase0-5__cards-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sec-phase0-5__card {
+  position: absolute;
+  width: 470px;
+  height: 185px;
+  background-color: #ffffff;
+  border: 1px solid rgba(126, 147, 168, 0.45);
+  box-sizing: border-box;
+  padding: 12px 20px 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(1, 16, 59, 0.05);
+  pointer-events: auto;
+  z-index: 4;
+  opacity: 0;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sec-phase0-5__card:hover {
+  border-color: var(--Secondary-Deep-Blue, #011b7f);
+  box-shadow: 0 14px 35px rgba(1, 27, 127, 0.12);
+  transform: translateY(-4px) !important;
+}
+
+/* Visual inside Card */
+.sec-phase0-5__card-visual {
+  width: 140px;
+  height: 155px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-phase0-5__card-img {
+  max-width: 100%;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.sec-phase0-5__card:hover .sec-phase0-5__card-img {
+  transform: scale(1.06);
+}
+
+/* Card Content: Title & Desc */
+.sec-phase0-5__card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.sec-phase0-5__card-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.2px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-phase0-5__card-desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Card Desktop Positions */
+.sec-phase0-5__card--top-left {
+  top: 0;
+  left: 0;
+  transform: translate(-30px, -20px);
+  transition-delay: 0.3s;
+}
+
+.sec-phase0-5__card--top-right {
+  top: 0;
+  right: 0;
+  transform: translate(30px, -20px);
+  transition-delay: 0.35s;
+}
+
+.sec-phase0-5__card--bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: translate(-30px, 20px);
+  transition-delay: 0.4s;
+}
+
+.sec-phase0-5__card--bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: translate(30px, 20px);
+  transition-delay: 0.45s;
+}
+
+/* --------------------------------------------------------------------------
+   Swiper Active Slide Animation Triggers
+   -------------------------------------------------------------------------- */
+.sec-phase0-5.swiper-slide-active .sec-phase0-5__header,
+.sec-phase0-5.slide-animated .sec-phase0-5__header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-phase0-5.swiper-slide-active .sec-phase0-5__center-wrapper,
+.sec-phase0-5.slide-animated .sec-phase0-5__center-wrapper {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sec-phase0-5.swiper-slide-active .sec-phase0-5__card,
+.sec-phase0-5.slide-animated .sec-phase0-5__card {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout & Mobile Adaptation
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-phase0-5__title {
+    font-size: 30px;
+  }
+  .sec-phase0-5__stage {
+    height: 420px;
+  }
+  .sec-phase0-5__card {
+    width: 440px;
+    height: 175px;
+    padding: 10px 16px;
+    gap: 12px;
+  }
+  .sec-phase0-5__card-visual {
+    width: 120px;
+    height: 135px;
+  }
+  .sec-phase0-5__card-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 6px;
+  }
+  .sec-phase0-5__card-desc {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .sec-phase0-5__center-wrapper {
+    width: 180px;
+    height: 145px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-phase0-5 .flex-center-v {
+    padding-top: 75px;
+    padding-bottom: 25px;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .sec-phase0-5__stage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+  }
+
+  .sec-phase0-5__center-wrapper {
+    position: static;
+    width: 160px;
+    height: 130px;
+    margin-bottom: 20px;
+  }
+
+  .sec-phase0-5__cards-container {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+
+  .sec-phase0-5__card {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-phase0-5 .flex-center-v {
+    padding-top: 65px;
+    padding-bottom: 20px;
+  }
+
+  .sec-phase0-5__title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .sec-phase0-5__center-wrapper {
+    width: 120px;
+    height: 100px;
+    margin-bottom: 14px;
+  }
+
+  .sec-phase0-5__cards-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sec-phase0-5__card {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .sec-phase0-5__card-visual {
+    width: 80px;
+    height: 90px;
+  }
+
+  .sec-phase0-5__card-img {
+    max-height: 85px;
+  }
+
+  .sec-phase0-5__card-title {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .sec-phase0-5__card-desc {
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
