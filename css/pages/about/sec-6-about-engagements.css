@@ -19,21 +19,26 @@
   box-sizing: border-box;
 }
 
-.sec-about-6 .container {
-  position: relative;
+.sec-about-6 .flex-center-v {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
-/* Left Column: Selected Engagements (Starts at top 139px / 720px = 19.31%) */
+/* Left Column: Selected Engagements (starts at 139px: 70px padding + 69px margin) */
 .sec-about-6__left {
-  position: absolute;
-  top: 19.31%;
-  left: 0;
+  position: relative;
   width: 540px;
   max-width: 540px;
+  margin-top: 69px;
+  display: flex;
+  flex-direction: column;
   z-index: 3;
   opacity: 0;
   transform: translateX(-30px);
@@ -77,11 +82,21 @@
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-about-6__item:nth-child(1) { transition-delay: 0.15s; }
-.sec-about-6__item:nth-child(2) { transition-delay: 0.25s; }
-.sec-about-6__item:nth-child(3) { transition-delay: 0.35s; }
-.sec-about-6__item:nth-child(4) { transition-delay: 0.45s; }
-.sec-about-6__item:nth-child(5) { transition-delay: 0.55s; }
+.sec-about-6__item:nth-child(1) {
+  transition-delay: 0.15s;
+}
+.sec-about-6__item:nth-child(2) {
+  transition-delay: 0.25s;
+}
+.sec-about-6__item:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.sec-about-6__item:nth-child(4) {
+  transition-delay: 0.45s;
+}
+.sec-about-6__item:nth-child(5) {
+  transition-delay: 0.55s;
+}
 
 .sec-about-6__icon-circle {
   width: 70px;
@@ -116,26 +131,30 @@
   max-width: 440px;
 }
 
-/* Right Column: Top 3D Graphic + Bottom 3 Stats */
+/* Right Column: Top 3D Graphic + Bottom 3 Stats (starts at 100px: 70px padding + 30px margin) */
 .sec-about-6__right {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
   width: 570px;
-  height: 100%;
+  max-width: 570px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   z-index: 3;
 }
 
-/* Top 3D Isometric Globe Graphic (top: 100px / 720px = 13.89%) */
+/* Top 3D Isometric Globe Graphic */
 .sec-about-6__graphic {
-  position: absolute;
-  top: 13.89%;
-  right: 0;
-  width: 570px;
-  height: 373px;
+  position: relative;
+  width: 100%;
+  max-width: 570px;
+  height: auto;
+  max-height: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 12px;
   opacity: 0;
   transform: translateX(30px);
   transition:
@@ -146,17 +165,16 @@
 
 .sec-about-6__graphic-img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 360px;
   object-fit: contain;
   display: block;
 }
 
-/* Bottom 3 Stats (top: 482px / 720px = 66.94%) */
+/* Bottom 3 Stats */
 .sec-about-6__stats {
-  position: absolute;
-  top: 66.94%;
-  right: 0;
-  width: 570px;
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -209,10 +227,14 @@
 /* Slide Entrance Animations */
 .sec-about-6.slide-animated .sec-about-6__left,
 .sec-about-6.slide-animated .sec-about-6__item,
-.sec-about-6.slide-animated .sec-about-6__graphic,
+.sec-about-6.slide-animated .sec-about-6__graphic {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .sec-about-6.slide-animated .sec-about-6__stats {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translateY(0);
 }
 
 .sec-about-6.visited .sec-about-6__left,
@@ -222,6 +244,39 @@
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
+}
+
+/* ==========================================================================
+   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   ========================================================================== */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-about-6 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 15px;
+  }
+
+  .sec-about-6__left {
+    margin-top: 35px;
+  }
+
+  .sec-about-6__right {
+    margin-top: 15px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-about-6 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-about-6__left {
+    margin-top: 15px;
+  }
+
+  .sec-about-6__right {
+    margin-top: 5px;
+  }
 }
 
 /* ==========================================================================

@@ -13,12 +13,15 @@
   height: 70px;
   max-height: 70px;
   z-index: 100;
-  padding: 0 40px;
+  padding: 0 14px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  background-color: #01103B; /* Bản Màu Đen - Figma Node 4512-5187 Specs */
-  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  background-color: #01103b; /* Bản Màu Đen - Figma Node 4512-5187 Specs */
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .navbar-container {
@@ -45,7 +48,9 @@
   max-height: 40px;
   display: block;
   object-fit: contain;
-  transition: filter 0.4s ease, opacity 0.4s ease;
+  transition:
+    filter 0.4s ease,
+    opacity 0.4s ease;
 }
 
 /* Navigation Links (Centered in viewport using Flexbox & 40px Gap) */
@@ -111,7 +116,10 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
   z-index: 200;
 }
 
@@ -144,7 +152,9 @@
   color: #141416 !important;
   text-decoration: none;
   background-color: #ffffff;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
   box-sizing: border-box;
   white-space: nowrap;
 }
@@ -177,7 +187,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #0431B1;
+  background-color: #0431b1;
   color: #ffffff;
   border-radius: 0;
   font-family: var(--font-brand);
@@ -201,16 +211,16 @@
 }
 
 .navbar-overlay.light-theme .nav-item {
-  color: #01103B;
+  color: #01103b;
 }
 
 .navbar-overlay.light-theme .nav-item:hover,
 .navbar-overlay.light-theme .nav-item.active {
-  color: #0431B1;
+  color: #0431b1;
 }
 
 .navbar-overlay.light-theme .nav-item:hover::after {
-  background-color: #0431B1;
+  background-color: #0431b1;
 }
 
 .navbar-overlay.light-theme .logo-img {
@@ -219,7 +229,7 @@
 }
 
 .navbar-overlay.light-theme .btn-conversation {
-  background-color: #0431B1;
+  background-color: #0431b1;
   color: #ffffff;
 }
 
@@ -277,7 +287,7 @@
   }
 
   .navbar-overlay.light-theme .hamburger-bar {
-    background-color: #01103B;
+    background-color: #01103b;
   }
 
   /* Off-canvas Navigation Drawer (Overlays Hamburger & Dots Nav) */
@@ -289,7 +299,7 @@
     max-width: 320px;
     height: 100vh;
     height: 100dvh;
-    background-color: #01103B;
+    background-color: #01103b;
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
     transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1002;
@@ -325,7 +335,7 @@
   }
 
   .navbar-overlay.light-theme .drawer-close {
-    color: #01103B;
+    color: #01103b;
   }
 
   /* Reset Desktop Nav Menu Layout inside Drawer */
@@ -449,14 +459,16 @@ body.no-scroll {
   overflow: hidden !important;
 }
 
-
-
 /* --------------------------------------------------------------------------
-   HTML & SVG Scroll Down Button (Section 1)
+   HTML & SVG Scroll Down Button (Shared Reusable Component)
    -------------------------------------------------------------------------- */
-.scroll-down-btn {
+.scroll-down-btn,
+.sec-about-1__scroll,
+.sec-phase0-1__scroll,
+.sec-thirdeye-1__scroll,
+.sec-market-1__scroll {
   position: absolute;
-  bottom: 3%;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
@@ -466,15 +478,31 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border-radius: 8px;
-  color: var(--Midnight-Navy, #01103B);
-  opacity: 0.5;
-  transition: opacity 0.3s ease, color 0.3s ease;
+  gap: 4px;
+  color: #c5daf3;
+  opacity: 0.7;
+  text-decoration: none;
+  transition:
+    opacity 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.scroll-down-text {
+.scroll-down-btn:hover,
+.sec-about-1__scroll:hover,
+.sec-phase0-1__scroll:hover,
+.sec-thirdeye-1__scroll:hover,
+.sec-market-1__scroll:hover {
+  opacity: 1 !important;
+  color: #ffffff !important;
+  transform: translateX(-50%) translateY(3px) !important;
+}
+
+.scroll-down-text,
+.sec-about-1__scroll-text,
+.sec-phase0-1__scroll-text,
+.sec-thirdeye-1__scroll-text,
+.sec-market-1__scroll-text {
   font-family: Aptos, var(--font-brand);
   font-size: 16px;
   font-weight: 700;
@@ -482,23 +510,29 @@ body.no-scroll {
   color: inherit;
   text-transform: uppercase;
   text-align: center;
-  font-feature-settings: 'liga' off, 'clig' off;
-  font-style: normal;
+  letter-spacing: 1px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
 }
 
-.scroll-down-icon {
-  animation: bounceDown 2s infinite;
-  transition: transform 0.3s ease;
+.scroll-down-icon,
+.sec-about-1__scroll-icon,
+.sec-phase0-1__scroll-icon,
+.sec-thirdeye-1__scroll-icon,
+.sec-market-1__scroll-icon {
+  width: 24px;
+  height: 24px;
+  color: inherit;
+  animation: bounceDown 2.2s infinite ease-in-out;
 }
 
-.scroll-down-icon path {
+.scroll-down-icon path,
+.sec-about-1__scroll-icon path,
+.sec-phase0-1__scroll-icon path,
+.sec-thirdeye-1__scroll-icon path,
+.sec-market-1__scroll-icon path {
   fill: currentColor;
-  transition: fill 0.3s ease;
-}
-
-.scroll-down-btn:hover {
-  opacity: 1;
-  color: #ffffff;
 }
 
 @keyframes bounceDown {

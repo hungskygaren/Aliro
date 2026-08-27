@@ -1,6 +1,6 @@
 /* ==========================================================================
    Section 5: Why Start Here (Diagnostic Principles & 4 Value Props)
-   Figma Node: 6704:1858
+   Figma Node: 6702:4901
    ========================================================================== */
 
 .sec-phase0-5 {
@@ -17,21 +17,23 @@
 .sec-phase0-5 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding: 75px 20px 30px;
+  padding-top: 70px;
+  padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* --------------------------------------------------------------------------
-   Header: Title
+   Header: Title (Figma top: 110px)
    -------------------------------------------------------------------------- */
 .sec-phase0-5__header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-top: 40px;
+  margin-bottom: 0;
   z-index: 4;
   opacity: 0;
   transform: translateY(-20px);
@@ -61,17 +63,21 @@
 .sec-phase0-5__stage {
   position: relative;
   width: 100%;
-  max-width: 1140px;
-  height: 450px;
+  max-width: 1170px;
+  height: 430px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
 }
 
-/* Center Isometric Node Pedestal */
+/* Center Isometric Node Pedestal (Figma: 232px x 185px) */
 .sec-phase0-5__center-wrapper {
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
   width: 232px;
   height: 185px;
   display: flex;
@@ -79,7 +85,6 @@
   align-items: center;
   z-index: 2;
   opacity: 0;
-  transform: scale(0.9);
   transition:
     opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
@@ -87,28 +92,15 @@
 }
 
 .sec-phase0-5__center-img {
-  width: 100%;
-  height: 100%;
+  width: 232px;
+  height: 185px;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 10px 20px rgba(1, 16, 59, 0.1));
-  animation: secPhase05Float 6s ease-in-out infinite alternate;
-}
-
-@keyframes secPhase05Float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(3px);
-  }
 }
 
 /* --------------------------------------------------------------------------
-   4 Cards Container & Styling
+   4 Cards Container & Styling (Figma: 471px x 190px, border #7e93a8 50% opacity)
    -------------------------------------------------------------------------- */
 .sec-phase0-5__cards-container {
   position: absolute;
@@ -120,36 +112,28 @@
 
 .sec-phase0-5__card {
   position: absolute;
-  width: 470px;
-  height: 185px;
+  width: 471px;
+  height: 190px;
   background-color: #ffffff;
-  border: 1px solid rgba(126, 147, 168, 0.45);
+  border: 1px solid rgba(126, 147, 168, 0.5);
   box-sizing: border-box;
-  padding: 12px 20px 12px 14px;
+  padding: 10px 16px 10px 10px;
   display: flex;
   align-items: center;
   gap: 16px;
-  box-shadow: 0 10px 30px rgba(1, 16, 59, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
   pointer-events: auto;
   z-index: 4;
   opacity: 0;
   transition:
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-phase0-5__card:hover {
-  border-color: var(--Secondary-Deep-Blue, #011b7f);
-  box-shadow: 0 14px 35px rgba(1, 27, 127, 0.12);
-  transform: translateY(-4px) !important;
-}
-
-/* Visual inside Card */
+/* Visual inside Card (Figma: 150px x 170px) */
 .sec-phase0-5__card-visual {
-  width: 140px;
-  height: 155px;
+  width: 150px;
+  height: 170px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -157,16 +141,11 @@
 }
 
 .sec-phase0-5__card-img {
+  width: 150px;
+  height: 170px;
   max-width: 100%;
-  max-height: 150px;
-  width: auto;
-  height: auto;
+  max-height: 100%;
   object-fit: contain;
-  transition: transform 0.4s ease;
-}
-
-.sec-phase0-5__card:hover .sec-phase0-5__card-img {
-  transform: scale(1.06);
 }
 
 /* Card Content: Title & Desc */
@@ -175,13 +154,14 @@
   flex-direction: column;
   justify-content: center;
   flex: 1;
+  max-width: 280px;
 }
 
 .sec-phase0-5__card-title {
   font-family: Aptos, var(--font-brand);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 32px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   margin: 0 0 8px 0;
@@ -193,15 +173,15 @@
 
 .sec-phase0-5__card-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 21px;
+  line-height: 22px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-/* Card Desktop Positions */
+/* Card Desktop Positions (Figma: 50px vertical gap, 230px horizontal gap) */
 .sec-phase0-5__card--top-left {
   top: 0;
   left: 0;
@@ -212,20 +192,24 @@
 .sec-phase0-5__card--top-right {
   top: 0;
   right: 0;
+  left: auto;
+  width: 470px;
   transform: translate(30px, -20px);
   transition-delay: 0.35s;
 }
 
 .sec-phase0-5__card--bottom-left {
-  bottom: 0;
+  top: 240px;
   left: 0;
   transform: translate(-30px, 20px);
   transition-delay: 0.4s;
 }
 
 .sec-phase0-5__card--bottom-right {
-  bottom: 0;
+  top: 240px;
   right: 0;
+  left: auto;
+  width: 470px;
   transform: translate(30px, 20px);
   transition-delay: 0.45s;
 }
@@ -242,13 +226,80 @@
 .sec-phase0-5.swiper-slide-active .sec-phase0-5__center-wrapper,
 .sec-phase0-5.slide-animated .sec-phase0-5__center-wrapper {
   opacity: 1;
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .sec-phase0-5.swiper-slide-active .sec-phase0-5__card,
 .sec-phase0-5.slide-animated .sec-phase0-5__card {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+/* Visited State */
+.sec-phase0-5.visited .sec-phase0-5__header {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.sec-phase0-5.visited .sec-phase0-5__center-wrapper {
+  opacity: 1 !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  transition: none !important;
+}
+
+.sec-phase0-5.visited .sec-phase0-5__card {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-phase0-5 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-phase0-5__header {
+    margin-top: 10px;
+  }
+
+  .sec-phase0-5__stage {
+    margin-top: 10px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-phase0-5 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
+  }
+
+  .sec-phase0-5__header {
+    margin-top: 4px;
+  }
+
+  .sec-phase0-5__title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .sec-phase0-5__stage {
+    margin-top: 4px;
+  }
+
+  .sec-phase0-5__card-title {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .sec-phase0-5__card-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 /* --------------------------------------------------------------------------

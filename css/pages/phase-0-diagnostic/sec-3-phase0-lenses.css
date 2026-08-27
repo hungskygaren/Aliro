@@ -1,6 +1,6 @@
 /* ==========================================================================
    Section 3: Four Lenses, One Read (One Integrated 4iC Diagnostic)
-   Figma Node: 6704:1857
+   Figma Node: 6702:4868
    ========================================================================== */
 
 .sec-phase0-3 {
@@ -24,23 +24,24 @@
 .sec-phase0-3 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 75px;
-  padding-bottom: 25px;
+  padding-top: 70px;
+  padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* --------------------------------------------------------------------------
-   Header: Title & Subtitle
+   Header: Title & Subtitle (Figma top: 113px & 165px)
    -------------------------------------------------------------------------- */
 .sec-phase0-3__header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 43px;
+  margin-bottom: 0;
   z-index: 4;
   opacity: 0;
   transform: translateY(-20px);
@@ -57,7 +58,7 @@
   line-height: 40px;
   color: #ffffff;
   text-transform: uppercase;
-  margin: 0 0 8px 0;
+  margin: 0 0 12px 0;
   letter-spacing: 0.5px;
   font-feature-settings:
     "liga" off,
@@ -78,30 +79,33 @@
 }
 
 /* --------------------------------------------------------------------------
-   Main Stage: Center Isometric Graphic & 4 Corner Cards
+   Main Stage: Center 569x411 Graphic & 4 Quadrant Cards (30px gap)
    -------------------------------------------------------------------------- */
 .sec-phase0-3__stage {
   position: relative;
   width: 100%;
   max-width: 1170px;
-  height: 460px;
+  height: 411px;
+  margin-top: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
 }
 
-/* Center Isometric Image with Ambient Glow */
+/* Center Isometric Image: 569px x 411px */
 .sec-phase0-3__center-wrapper {
   position: absolute;
-  width: 650px;
-  height: 440px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.92);
+  width: 569px;
+  height: 411px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
   opacity: 0;
-  transform: scale(0.92);
   transition:
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
@@ -120,45 +124,20 @@
   filter: blur(40px);
   z-index: 1;
   pointer-events: none;
-  animation: secPhase03GlowPulse 6s ease-in-out infinite alternate;
-}
-
-@keyframes secPhase03GlowPulse {
-  0% {
-    opacity: 0.6;
-    transform: scale(0.96);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1.06);
-  }
 }
 
 .sec-phase0-3__center-img {
-  width: 100%;
-  height: 100%;
+  width: 569px;
+  height: 411px;
   object-fit: contain;
   display: block;
   position: relative;
   z-index: 2;
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
-  animation: secPhase03Float 7s ease-in-out infinite alternate;
-}
-
-@keyframes secPhase03Float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-  100% {
-    transform: translateY(4px);
-  }
 }
 
 /* --------------------------------------------------------------------------
-   4 Quadrant Lens Cards
+   4 Quadrant Lens Cards (270px x 180px, exactly 30px gap to center image)
    -------------------------------------------------------------------------- */
 .sec-phase0-3__cards-container {
   position: absolute;
@@ -171,13 +150,13 @@
 .sec-phase0-3__card {
   position: absolute;
   width: 270px;
-  min-height: 180px;
+  height: 180px;
   background: rgba(1, 16, 59, 0.45);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid #4893dc;
   box-sizing: border-box;
-  padding: 16px 16px;
+  padding: 15px 9px 20px 13px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -187,17 +166,7 @@
   opacity: 0;
   transition:
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.3s ease,
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.sec-phase0-3__card:hover {
-  border-color: #8bbef5;
-  background: rgba(4, 49, 177, 0.4);
-  box-shadow: 0 12px 35px rgba(72, 147, 220, 0.35);
-  transform: translateY(-4px) !important;
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Card Header: Icon + Title */
@@ -205,7 +174,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .sec-phase0-3__icon-wrapper {
@@ -226,9 +195,9 @@
 
 .sec-phase0-3__card-title {
   font-family: Aptos, var(--font-brand);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 28px;
   color: #ffffff;
   text-transform: uppercase;
   margin: 0;
@@ -239,55 +208,57 @@
 }
 
 .sec-phase0-3__card-title--capacity {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 24px;
 }
 
-/* Card Subtitle & Description */
+/* Card Subtitle & Description (Figma 18px Bold Subtitle & 18px SemiBold Desc) */
 .sec-phase0-3__card-subtitle {
   font-family: Aptos, var(--font-brand);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 22px;
   color: #ffffff;
-  margin: 0 0 6px 0;
+  margin: 0 0 4px 0;
 }
 
 .sec-phase0-3__card-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 22px;
   color: #ffffff;
-  opacity: 0.88;
+  opacity: 0.9;
   margin: 0;
 }
 
-/* Card Absolute Positions in Desktop Stage */
+/* Card Exact Positions: 30px gap to center 569px image */
 .sec-phase0-3__card--top-left {
-  top: 10px;
+  top: 0;
   left: 0;
   transform: translate(-30px, -20px);
   transition-delay: 0.3s;
 }
 
 .sec-phase0-3__card--top-right {
-  top: 10px;
+  top: 0;
   right: 0;
+  left: auto;
   transform: translate(30px, -20px);
   transition-delay: 0.35s;
 }
 
 .sec-phase0-3__card--bottom-left {
-  bottom: 10px;
+  top: 230px;
   left: 0;
   transform: translate(-30px, 20px);
   transition-delay: 0.4s;
 }
 
 .sec-phase0-3__card--bottom-right {
-  bottom: 10px;
+  top: 230px;
   right: 0;
+  left: auto;
   transform: translate(30px, 20px);
   transition-delay: 0.45s;
 }
@@ -304,13 +275,96 @@
 .sec-phase0-3.swiper-slide-active .sec-phase0-3__center-wrapper,
 .sec-phase0-3.slide-animated .sec-phase0-3__center-wrapper {
   opacity: 1;
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .sec-phase0-3.swiper-slide-active .sec-phase0-3__card,
 .sec-phase0-3.slide-animated .sec-phase0-3__card {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+/* Visited State */
+.sec-phase0-3.visited .sec-phase0-3__header {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.sec-phase0-3.visited .sec-phase0-3__center-wrapper {
+  opacity: 1 !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  transition: none !important;
+}
+
+.sec-phase0-3.visited .sec-phase0-3__card {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-phase0-3 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-phase0-3__header {
+    margin-top: 10px;
+  }
+
+  .sec-phase0-3__stage {
+    margin-top: 4px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-phase0-3 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
+  }
+
+  .sec-phase0-3__header {
+    margin-top: 4px;
+  }
+
+  .sec-phase0-3__title {
+    font-size: 34px;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+
+  .sec-phase0-3__subtitle {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .sec-phase0-3__stage {
+    margin-top: 2px;
+  }
+
+  .sec-phase0-3__card-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .sec-phase0-3__card-title--capacity {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .sec-phase0-3__card-subtitle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .sec-phase0-3__card-desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 /* --------------------------------------------------------------------------

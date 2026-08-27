@@ -17,50 +17,54 @@
 .sec-phase0-2 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding: 85px 20px 40px;
+  padding-top: 70px;
+  padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* --------------------------------------------------------------------------
-   Top Banner & Subtitle Header
+   Top Banner & Subtitle Header (Figma top: 107px & 198px)
    -------------------------------------------------------------------------- */
 .sec-phase0-2__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 24px;
+  margin-top: 37px;
+  margin-bottom: 0;
+  z-index: 4;
 }
 
 .sec-phase0-2__banner {
   background-color: var(--Midnight-Navy, #01103b);
   width: 100%;
   max-width: 900px;
-  padding: 16px 24px;
+  height: 80px;
+  padding: 0 24px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 0;
   box-shadow: 0 8px 24px rgba(1, 16, 59, 0.12);
   opacity: 0;
   transform: translateY(-20px);
   transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.1s;
 }
 
 .sec-phase0-2__banner-title {
   font-family: Aptos, var(--font-brand);
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 40px;
   color: #ffffff;
   text-align: center;
   margin: 0;
@@ -83,29 +87,33 @@
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin: 11px 0 0 0;
   opacity: 0;
   transform: translateY(-10px);
   transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.2s;
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.15s;
 }
 
 /* --------------------------------------------------------------------------
-   4-Step Interactive Process Grid
+   4-Step Interactive Process Grid (Figma: 278px x 310px images, top: 225px)
    -------------------------------------------------------------------------- */
 .sec-phase0-2__grid-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1170px;
+  margin-top: -5px;
 }
 
 .sec-phase0-2__timeline-line {
   position: absolute;
-  top: 220px;
-  left: 12.5%;
-  right: 12.5%;
+  top: 305px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scaleX(0);
+  transform-origin: left center;
+  width: calc(100% - 278px);
+  max-width: 901px;
   height: 3px;
   background: linear-gradient(
     90deg,
@@ -114,10 +122,11 @@
     #0431b1 100%
   );
   z-index: 1;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.3s;
+  opacity: 0;
+  transition:
+    opacity 0.6s ease,
+    transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.15s;
 }
 
 .sec-phase0-2__grid {
@@ -134,62 +143,46 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  opacity: 0;
-  transform: translateY(35px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
-.sec-phase0-2__step:nth-child(1) {
-  transition-delay: 0.25s;
-}
-.sec-phase0-2__step:nth-child(2) {
-  transition-delay: 0.38s;
-}
-.sec-phase0-2__step:nth-child(3) {
-  transition-delay: 0.51s;
-}
-.sec-phase0-2__step:nth-child(4) {
-  transition-delay: 0.64s;
-}
-
-/* Step Illustration Area */
+/* Step Illustration Area: Figma 278px x 310px */
 .sec-phase0-2__step-visual {
-  width: 100%;
-  height: 195px;
+  width: 278px;
+  height: 310px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   position: relative;
+  opacity: 0;
+  transform: translateY(-16px) scale(0.92);
+  transition:
+    opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-phase0-2__step-img {
+  width: 278px;
+  height: 310px;
   max-width: 100%;
-  max-height: 190px;
-  width: auto;
-  height: auto;
+  max-height: 100%;
   object-fit: contain;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
   filter: drop-shadow(0 6px 12px rgba(1, 16, 59, 0.08));
 }
 
-.sec-phase0-2__step:hover .sec-phase0-2__step-img {
-  transform: translateY(-6px) scale(1.04);
-  filter: drop-shadow(0 12px 20px rgba(1, 16, 59, 0.16));
-}
-
-/* Step Number Badge */
+/* Step Number Badge (Figma: 50x50 at top: 505px) */
 .sec-phase0-2__badge-wrapper {
   position: relative;
   z-index: 3;
-  margin-bottom: 12px;
+  margin-top: -30px;
+  margin-bottom: 15px;
 }
 
 .sec-phase0-2__badge {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: var(--Midnight-Navy, #01103b);
   color: #ffffff;
@@ -197,38 +190,97 @@
   align-items: center;
   justify-content: center;
   font-family: Aptos, var(--font-brand);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   box-shadow: 0 0 0 4px #ffffff, 0 4px 10px rgba(1, 16, 59, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-phase0-2__step:hover .sec-phase0-2__badge {
-  transform: scale(1.1);
-  background-color: var(--Highlight-Blue, #0431b1);
-}
-
-/* Step Typography */
+/* Step Typography (Figma: 24px bold title, 18px semibold desc) */
 .sec-phase0-2__step-title {
   font-family: Aptos, var(--font-brand);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 28px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0 0 10px 0;
+  margin: 0 0 6px 0;
   letter-spacing: 0.5px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-phase0-2__step-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 22px;
+  line-height: normal;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  max-width: 250px;
-  opacity: 0.92;
+  max-width: 270px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Sequential Domino Staggered Delays (Matching About Sec 8)
+   ========================================================================== */
+/* Step 1 */
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(1) .sec-phase0-2__step-visual {
+  transition-delay: 0.2s;
+}
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(1) .sec-phase0-2__badge {
+  transition-delay: 0.32s;
+}
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(1) .sec-phase0-2__step-title,
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(1) .sec-phase0-2__step-desc {
+  transition-delay: 0.38s;
+}
+
+/* Step 2 */
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(2) .sec-phase0-2__step-visual {
+  transition-delay: 0.42s;
+}
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(2) .sec-phase0-2__badge {
+  transition-delay: 0.54s;
+}
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(2) .sec-phase0-2__step-title,
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(2) .sec-phase0-2__step-desc {
+  transition-delay: 0.6s;
+}
+
+/* Step 3 */
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(3) .sec-phase0-2__step-visual {
+  transition-delay: 0.64s;
+}
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(3) .sec-phase0-2__badge {
+  transition-delay: 0.76s;
+}
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(3) .sec-phase0-2__step-title,
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(3) .sec-phase0-2__step-desc {
+  transition-delay: 0.82s;
+}
+
+/* Step 4 */
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(4) .sec-phase0-2__step-visual {
+  transition-delay: 0.86s;
+}
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(4) .sec-phase0-2__badge {
+  transition-delay: 0.98s;
+}
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(4) .sec-phase0-2__step-title,
+.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(4) .sec-phase0-2__step-desc {
+  transition-delay: 1.04s;
 }
 
 /* --------------------------------------------------------------------------
@@ -248,37 +300,98 @@
 
 .sec-phase0-2.swiper-slide-active .sec-phase0-2__timeline-line,
 .sec-phase0-2.slide-animated .sec-phase0-2__timeline-line {
-  transform: scaleX(1);
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) scaleX(1);
 }
 
-.sec-phase0-2.swiper-slide-active .sec-phase0-2__step,
-.sec-phase0-2.slide-animated .sec-phase0-2__step {
+.sec-phase0-2.swiper-slide-active .sec-phase0-2__step-visual,
+.sec-phase0-2.slide-animated .sec-phase0-2__step-visual {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.sec-phase0-2.swiper-slide-active .sec-phase0-2__badge,
+.sec-phase0-2.slide-animated .sec-phase0-2__badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sec-phase0-2.swiper-slide-active .sec-phase0-2__step-title,
+.sec-phase0-2.slide-animated .sec-phase0-2__step-title,
+.sec-phase0-2.swiper-slide-active .sec-phase0-2__step-desc,
+.sec-phase0-2.slide-animated .sec-phase0-2__step-desc {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Visited State */
+.sec-phase0-2.visited .sec-phase0-2__banner,
+.sec-phase0-2.visited .sec-phase0-2__subtitle,
+.sec-phase0-2.visited .sec-phase0-2__timeline-line,
+.sec-phase0-2.visited .sec-phase0-2__step-visual,
+.sec-phase0-2.visited .sec-phase0-2__badge,
+.sec-phase0-2.visited .sec-phase0-2__step-title,
+.sec-phase0-2.visited .sec-phase0-2__step-desc {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.sec-phase0-2.visited .sec-phase0-2__timeline-line {
+  transform: translateX(-50%) translateY(-50%) scaleX(1) !important;
+}
+
 /* --------------------------------------------------------------------------
-   Responsive Layout & Mobile Adaptation
+   Short Desktop Screen Adaptations (<= 660px & <= 620px)
    -------------------------------------------------------------------------- */
-@media (max-width: 1200px) {
-  .sec-phase0-2__banner-title {
-    font-size: 28px;
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-phase0-2 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
   }
+
+  .sec-phase0-2__header {
+    margin-top: 10px;
+  }
+
   .sec-phase0-2__subtitle {
-    font-size: 20px;
+    margin-top: 4px;
   }
-  .sec-phase0-2__step-visual {
-    height: 170px;
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-phase0-2 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
   }
-  .sec-phase0-2__timeline-line {
-    top: 195px;
+
+  .sec-phase0-2__header {
+    margin-top: 4px;
   }
+
+  .sec-phase0-2__subtitle {
+    margin-top: 3px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .sec-phase0-2__banner-title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .sec-phase0-2__badge {
+    font-size: 22px;
+  }
+
   .sec-phase0-2__step-title {
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 26px;
   }
+
   .sec-phase0-2__step-desc {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 21px;
   }
 }
 

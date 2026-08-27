@@ -234,53 +234,139 @@
    ========================================================================== */
 
 /* Step 1 */
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(2) .sec-about-8__icon-wrap { transition-delay: 0.15s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(2) .sec-about-8__badge { transition-delay: 0.30s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(2) .sec-about-8__label { transition-delay: 0.35s; }
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(2)
+  .sec-about-8__icon-wrap {
+  transition-delay: 0.15s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(2)
+  .sec-about-8__badge {
+  transition-delay: 0.3s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(2)
+  .sec-about-8__label {
+  transition-delay: 0.35s;
+}
 
 /* Arrow 1 */
-.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(3) { transition-delay: 0.48s; }
+.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(3) {
+  transition-delay: 0.48s;
+}
 
 /* Step 2 */
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(4) .sec-about-8__icon-wrap { transition-delay: 0.60s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(4) .sec-about-8__badge { transition-delay: 0.75s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(4) .sec-about-8__label { transition-delay: 0.80s; }
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(4)
+  .sec-about-8__icon-wrap {
+  transition-delay: 0.6s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(4)
+  .sec-about-8__badge {
+  transition-delay: 0.75s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(4)
+  .sec-about-8__label {
+  transition-delay: 0.8s;
+}
 
 /* Arrow 2 */
-.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(5) { transition-delay: 0.93s; }
+.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(5) {
+  transition-delay: 0.93s;
+}
 
 /* Step 3 */
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(6) .sec-about-8__icon-wrap { transition-delay: 1.05s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(6) .sec-about-8__badge { transition-delay: 1.20s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(6) .sec-about-8__label { transition-delay: 1.25s; }
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(6)
+  .sec-about-8__icon-wrap {
+  transition-delay: 1.05s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(6)
+  .sec-about-8__badge {
+  transition-delay: 1.2s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(6)
+  .sec-about-8__label {
+  transition-delay: 1.25s;
+}
 
 /* Arrow 3 */
-.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(7) { transition-delay: 1.38s; }
+.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(7) {
+  transition-delay: 1.38s;
+}
 
 /* Step 4 */
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(8) .sec-about-8__icon-wrap { transition-delay: 1.50s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(8) .sec-about-8__badge { transition-delay: 1.65s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(8) .sec-about-8__label { transition-delay: 1.70s; }
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(8)
+  .sec-about-8__icon-wrap {
+  transition-delay: 1.5s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(8)
+  .sec-about-8__badge {
+  transition-delay: 1.65s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(8)
+  .sec-about-8__label {
+  transition-delay: 1.7s;
+}
 
 /* Arrow 4 */
-.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(9) { transition-delay: 1.83s; }
+.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(9) {
+  transition-delay: 1.83s;
+}
 
 /* Step 5 */
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(10) .sec-about-8__icon-wrap { transition-delay: 1.95s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(10) .sec-about-8__badge { transition-delay: 2.10s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(10) .sec-about-8__label { transition-delay: 2.15s; }
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(10)
+  .sec-about-8__icon-wrap {
+  transition-delay: 1.95s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(10)
+  .sec-about-8__badge {
+  transition-delay: 2.1s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(10)
+  .sec-about-8__label {
+  transition-delay: 2.15s;
+}
 
 /* Arrow 5 */
-.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(11) { transition-delay: 2.28s; }
+.sec-about-8.slide-animated .sec-about-8__arrow:nth-child(11) {
+  transition-delay: 2.28s;
+}
 
 /* Step 6 */
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(12) .sec-about-8__icon-wrap { transition-delay: 2.40s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(12) .sec-about-8__badge { transition-delay: 2.55s; }
-.sec-about-8.slide-animated .sec-about-8__step:nth-child(12) .sec-about-8__label { transition-delay: 2.60s; }
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(12)
+  .sec-about-8__icon-wrap {
+  transition-delay: 2.4s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(12)
+  .sec-about-8__badge {
+  transition-delay: 2.55s;
+}
+.sec-about-8.slide-animated
+  .sec-about-8__step:nth-child(12)
+  .sec-about-8__label {
+  transition-delay: 2.6s;
+}
 
 /* Divider & Quote Delays */
-.sec-about-8.slide-animated .sec-about-8__divider { transition-delay: 2.75s; }
-.sec-about-8.slide-animated .sec-about-8__quote { transition-delay: 2.85s; }
+.sec-about-8.slide-animated .sec-about-8__divider {
+  transition-delay: 2.75s;
+}
+.sec-about-8.slide-animated .sec-about-8__quote {
+  transition-delay: 2.85s;
+}
 
 /* Slide Animated Active States */
 .sec-about-8.slide-animated .sec-about-8__header {

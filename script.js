@@ -77,9 +77,15 @@ function highlightActiveNav() {
     activeKey = "about";
   } else if (currentPath.includes("contact")) {
     activeKey = "contact";
-  } else if (currentPath.includes("phase-0") || currentPath.includes("diagnostic")) {
+  } else if (
+    currentPath.includes("phase-0") ||
+    currentPath.includes("diagnostic")
+  ) {
     activeKey = "phase0";
-  } else if (currentPath.includes("thirdeye") || currentPath.includes("third-eye")) {
+  } else if (
+    currentPath.includes("thirdeye") ||
+    currentPath.includes("third-eye")
+  ) {
     activeKey = "thirdeye";
   } else if (currentPath.includes("services")) {
     activeKey = "phase0";
@@ -113,7 +119,9 @@ function highlightActiveNav() {
     );
     if (subItem) subItem.classList.add("active");
   } else if (isServices) {
-    const parentServices = document.querySelector('.nav-item[data-nav="services"]');
+    const parentServices = document.querySelector(
+      '.nav-item[data-nav="services"]',
+    );
     if (parentServices) parentServices.classList.add("active");
     const subItem = document.querySelector(
       `.nav-dropdown-item[data-nav="${activeKey}"]`,
@@ -341,9 +349,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             swiperInstance.slides &&
             swiperInstance.slides[swiperInstance.activeIndex]
           ) {
-            swiperInstance.slides[swiperInstance.activeIndex].classList.add(
-              "slide-animated",
-            );
+            const initialSlide =
+              swiperInstance.slides[swiperInstance.activeIndex];
+            initialSlide.classList.add("slide-animated");
+            triggerCounterAnimations(initialSlide);
           }
         });
       },
@@ -380,10 +389,68 @@ document.addEventListener("DOMContentLoaded", async () => {
         const currentSlide = this.slides[this.activeIndex];
         if (currentSlide) {
           currentSlide.classList.add("slide-animated");
+          triggerCounterAnimations(currentSlide);
         }
       },
     },
   });
+
+  // --------------------------------------------------------------------------
+  // Dynamic Number Counter Animation (e.g. 1 -> 10+, 1 -> 25+)
+  // --------------------------------------------------------------------------
+  function triggerCounterAnimations(container) {
+    if (!container) return;
+    const counterElements = container.querySelectorAll("[data-counter]");
+    if (!counterElements.length) return;
+
+    counterElements.forEach((el) => {
+      const target = parseInt(el.getAttribute("data-counter"), 10);
+      const suffix = el.getAttribute("data-suffix") || "";
+      const prefix = el.getAttribute("data-prefix") || "";
+      const start = parseInt(el.getAttribute("data-start"), 10) || 1;
+      const duration = parseInt(el.getAttribute("data-duration"), 10) || 1200;
+      const delay = parseInt(el.getAttribute("data-delay"), 10) || 300;
+
+      if (isNaN(target)) return;
+
+      // Set initial start value
+      el.textContent = `${prefix}${start}${suffix}`;
+
+      // Cancel previous ongoing animation if any
+      if (el._counterAnimId) {
+        cancelAnimationFrame(el._counterAnimId);
+      }
+      if (el._counterTimeoutId) {
+        clearTimeout(el._counterTimeoutId);
+      }
+
+      el._counterTimeoutId = setTimeout(() => {
+        let startTime = null;
+
+        function animate(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          // Gentle ease-out: keeps steady speed and reaches full target briskly
+          const easeOutProgress = 1 - Math.pow(1 - progress, 1.4);
+
+          const current = Math.floor(
+            start + (target - start) * easeOutProgress,
+          );
+
+          el.textContent = `${prefix}${current}${suffix}`;
+
+          if (progress < 1) {
+            el._counterAnimId = requestAnimationFrame(animate);
+          } else {
+            el.textContent = `${prefix}${target}${suffix}`;
+            el._counterAnimId = null;
+          }
+        }
+
+        el._counterAnimId = requestAnimationFrame(animate);
+      }, delay);
+    });
+  }
 
   // --------------------------------------------------------------------------
   // Header Theme Switcher (Sync Header text/icon color with Section background)
