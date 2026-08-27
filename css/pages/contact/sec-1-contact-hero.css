@@ -1,0 +1,385 @@
+/* ==========================================================================
+   Section 1: Hero - Contact Aliro / Let's Start With Your Reality
+   Figma Node: 6701:4898
+   ========================================================================== */
+
+.sec-contact-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    #1e55b3 0%,
+    #174495 25%,
+    #103377 50%,
+    #082159 75%,
+    #01103b 100%
+  ) !important;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.sec-contact-1 .flex-center-v {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 75px; /* Navbar compensation */
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   Grid Layout: 12 Columns
+   -------------------------------------------------------------------------- */
+.sec-contact-1__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 40px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Strategic Typography (Columns 1 to 7)
+   -------------------------------------------------------------------------- */
+.sec-contact-1__left {
+  grid-column: 1 / span 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+}
+
+.sec-contact-1__eyebrow {
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 10px 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-contact-1__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 48px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin: 0 0 20px 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+.sec-contact-1__subhead {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.3s;
+}
+
+.sec-contact-1__body {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.4s;
+}
+
+.sec-contact-1__body p {
+  margin: 0 0 12px 0;
+}
+
+.sec-contact-1__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: 3D Isometric Visual (Columns 8 to 12)
+   -------------------------------------------------------------------------- */
+.sec-contact-1__right {
+  grid-column: 8 / span 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.sec-contact-1__img-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 540px;
+}
+
+.sec-contact-1__glow {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(
+    circle,
+    rgba(41, 187, 255, 0.35) 0%,
+    rgba(1, 16, 59, 0) 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec-contact-1__img {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 20px 45px rgba(1, 16, 59, 0.6));
+  opacity: 0;
+  transform: scale(0.92) translateY(20px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.25s;
+  animation: contactHeroFloat 6s ease-in-out infinite alternate;
+}
+
+@keyframes contactHeroFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Down Indicator
+   -------------------------------------------------------------------------- */
+.sec-contact-1__scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #c5daf3;
+  opacity: 0.8;
+  text-decoration: none;
+  z-index: 10;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.sec-contact-1__scroll:hover {
+  opacity: 1;
+  transform: translateX(-50%) translateY(3px);
+  color: #ffffff;
+}
+
+.sec-contact-1__scroll-text {
+  font-family: Aptos, var(--font-brand);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sec-contact-1__scroll-icon {
+  width: 22px;
+  height: 22px;
+  animation: bounceDown 2s infinite ease-in-out;
+}
+
+@keyframes bounceDown {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Slide Animations (.slide-animated & .visited)
+   -------------------------------------------------------------------------- */
+.sec-contact-1.slide-animated .sec-contact-1__eyebrow,
+.sec-contact-1.visited .sec-contact-1__eyebrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-contact-1.slide-animated .sec-contact-1__title,
+.sec-contact-1.visited .sec-contact-1__title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-contact-1.slide-animated .sec-contact-1__subhead,
+.sec-contact-1.visited .sec-contact-1__subhead {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-contact-1.slide-animated .sec-contact-1__body,
+.sec-contact-1.visited .sec-contact-1__body {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-contact-1.slide-animated .sec-contact-1__img,
+.sec-contact-1.visited .sec-contact-1__img {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-contact-1 .flex-center-v {
+    padding-top: 70px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .sec-contact-1__title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .sec-contact-1__subhead {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .sec-contact-1__body {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .sec-contact-1__img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sec-contact-1 {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sec-contact-1 .flex-center-v {
+    padding: 85px 20px 40px;
+    height: auto;
+  }
+
+  .sec-contact-1__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .sec-contact-1__left {
+    width: 100%;
+    align-items: center;
+  }
+
+  .sec-contact-1__subhead,
+  .sec-contact-1__body {
+    max-width: 100%;
+  }
+
+  .sec-contact-1__right {
+    width: 100%;
+  }
+
+  .sec-contact-1__img {
+    max-width: 340px;
+  }
+
+  .sec-contact-1__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sec-contact-1__eyebrow {
+    font-size: 18px;
+  }
+
+  .sec-contact-1__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .sec-contact-1__subhead {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .sec-contact-1__body {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .sec-contact-1__img {
+    max-width: 260px;
+  }
+}

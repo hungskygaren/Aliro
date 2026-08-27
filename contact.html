@@ -9,7 +9,7 @@
     />
     <title>Contact Us | Aliro Consulting</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts Preconnect & Inter / Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,142 +23,364 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Stylesheets -->
+    <!-- Global Base Styles & Design Tokens -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/mockup-layout.css" />
+
+    <!-- Contact Modular Layout CSS -->
     <link rel="stylesheet" href="css/pages/contact/contact-layout.css" />
   </head>
-  <body class="page-mockup page-contact">
-    <!-- Top Navigation Header (Reusable Component) -->
+  <body class="page-contact">
+    <!-- Top Navigation Header (Reusable Component from components/header.html) -->
     <header class="navbar-overlay light-theme" id="mainHeader"></header>
 
     <!-- Swiper Fullscreen Container for Contact Page -->
     <main class="swiper main-swiper" id="scrollContainer">
       <div class="swiper-wrapper">
-        <!-- Section 1 (Image Mockup) -->
+        <!-- Section 1: Hero - Contact Aliro (Figma Node 6701:4898) -->
         <section
-          class="scroll-section swiper-slide sec-mockup sec-contact-mockup"
+          class="scroll-section swiper-slide sec-contact-1 sec-contact-bg-dark"
           id="section-contact-1"
           data-section-index="0"
         >
-          <img
-            src="assets/mock_contact/sec-1.png"
-            alt="Contact Us - Section 1"
-            class="mockup-img"
-            onerror="this.style.opacity = '0'"
-          />
+          <div class="container flex-center-v">
+            <div class="sec-contact-1__grid grid-12">
+              <!-- Left Column: Strategic Typography -->
+              <div class="sec-contact-1__left">
+                <!-- Eyebrow -->
+                <div class="sec-contact-1__eyebrow phrase">
+                  CONTACT ALIRO
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="sec-contact-1__title phrase">
+                  LET'S START WITH<br />YOUR REALITY
+                </h1>
+
+                <!-- Core Subhead -->
+                <div class="sec-contact-1__subhead phrase">
+                  Every Aliro engagement begins with a candid conversation about your situation and what would actually be useful.
+                </div>
+
+                <!-- Body Text -->
+                <div class="sec-contact-1__body phrase">
+                  <p>
+                    If you are evaluating market entry, managing a regulatory transition, planning a digital investment, or questioning whether your operational foundation can support your next growth move that conversation is worth thirty minutes.
+                  </p>
+                  <p>
+                    We keep the first meeting focused on your situation, not our services. If there is a fit, it will be obvious to both of us.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Right Column: 3D Isometric Discussion Room Visual -->
+              <div class="sec-contact-1__right">
+                <div class="sec-contact-1__img-wrapper">
+                  <div class="sec-contact-1__glow"></div>
+                  <img
+                    src="assets/contact/sec-1-visual.png"
+                    alt="Contact Aliro - Candid Strategic Discussion Visual"
+                    class="sec-contact-1__img phrase"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <a
+              href="#section-contact-2"
+              class="sec-contact-1__scroll"
+              id="scrollDownBtn"
+              aria-label="Scroll to Next Section"
+            >
+              <span class="sec-contact-1__scroll-text">scroll down</span>
+              <svg
+                class="sec-contact-1__scroll-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M7.41 14.59L12 19.17l4.59-4.58L18 16l-6 6-6-6 1.41-1.41z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
         </section>
 
+        <!-- Section 2: Contact Form - Start a Conversation (Figma Node 6701:4899) -->
         <section
-          class="scroll-section swiper-slide sec-contact-form"
+          class="scroll-section swiper-slide sec-contact-2 sec-contact-bg-light"
           id="section-contact-2"
           data-section-index="1"
         >
-          <div class="container">
-            <div class="sec-contact__wrapper">
-              <div class="sec-contact__left">
-                <h2 class="sec-contact__title">START A CONVERSATION</h2>
-                <form class="sec-contact__form" id="contactForm">
-                  <div class="sec-contact__row">
-                    <div class="sec-contact__field">
-                      <label class="sec-contact__label" for="fullName"
-                        >Full Name</label
-                      >
+          <div class="container flex-center-v">
+            <div class="sec-contact-2__grid grid-12">
+              <!-- Left Column: Form -->
+              <div class="sec-contact-2__left">
+                <h2 class="sec-contact-2__title phrase">
+                  START A CONVERSATION
+                </h2>
+
+                <form class="sec-contact-2__form phrase" id="contactForm">
+                  <!-- Row 1: Full Name & Work Email -->
+                  <div class="sec-contact-2__row">
+                    <div class="sec-contact-2__field">
+                      <label class="sec-contact-2__label" for="fullName">
+                        Full Name <span class="sec-contact-2__required">*</span>
+                      </label>
                       <input
                         type="text"
                         id="fullName"
                         name="fullName"
-                        class="sec-contact__input"
+                        class="sec-contact-2__input"
                         placeholder="Your full name"
                         required
                       />
                     </div>
-                    <div class="sec-contact__field">
-                      <label class="sec-contact__label" for="workEmail"
-                        >Work Email</label
-                      >
+
+                    <div class="sec-contact-2__field">
+                      <label class="sec-contact-2__label" for="workEmail">
+                        Work Email <span class="sec-contact-2__required">*</span>
+                      </label>
                       <input
                         type="email"
                         id="workEmail"
                         name="workEmail"
-                        class="sec-contact__input"
+                        class="sec-contact-2__input"
                         placeholder="E.g., name@yourcompany.com"
                         required
                       />
                     </div>
                   </div>
-                  <div class="sec-contact__field">
-                    <label class="sec-contact__label" for="organization"
-                      >Organization</label
-                    >
-                    <input
-                      type="text"
-                      id="organization"
-                      name="organization"
-                      class="sec-contact__input"
-                      placeholder="Your company or institution name"
-                    />
+
+                  <!-- Row 2: Organization & Job Title -->
+                  <div class="sec-contact-2__row">
+                    <div class="sec-contact-2__field">
+                      <label class="sec-contact-2__label" for="organization">
+                        Organization <span class="sec-contact-2__required">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="organization"
+                        name="organization"
+                        class="sec-contact-2__input"
+                        placeholder="Your company or institution name"
+                        required
+                      />
+                    </div>
+
+                    <div class="sec-contact-2__field">
+                      <label class="sec-contact-2__label" for="jobTitle">
+                        Job Title
+                      </label>
+                      <input
+                        type="text"
+                        id="jobTitle"
+                        name="jobTitle"
+                        class="sec-contact-2__input"
+                        placeholder="E.g., Chief Medical Officer, CEO"
+                      />
+                    </div>
                   </div>
-                  <div class="sec-contact__field">
-                    <label class="sec-contact__label" for="jobTitle"
-                      >Job Title</label
-                    >
-                    <input
-                      type="text"
-                      id="jobTitle"
-                      name="jobTitle"
-                      class="sec-contact__input"
-                      placeholder="E.g., Chief Medical Officer, CEO, Operations Director"
-                    />
+
+                  <!-- Row 3: Area of Interest & Market -->
+                  <div class="sec-contact-2__row">
+                    <div class="sec-contact-2__field">
+                      <label class="sec-contact-2__label" for="areaOfInterest">
+                        Area of Interest <span class="sec-contact-2__required">*</span>
+                      </label>
+                      <select
+                        id="areaOfInterest"
+                        name="areaOfInterest"
+                        class="sec-contact-2__select"
+                        required
+                      >
+                        <option value="" disabled selected>Select an area of interest</option>
+                        <option value="Market Intelligence">Market Intelligence</option>
+                        <option value="Operational Intelligence">Operational Intelligence</option>
+                        <option value="Digital Intelligence">Digital Intelligence</option>
+                        <option value="Capacity & Capability Intelligence">Capacity &amp; Capability Intelligence</option>
+                        <option value="Phase 0 Diagnostic">Phase 0 Diagnostic</option>
+                        <option value="ThirdEye">The Third Eye</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                      </select>
+                    </div>
+
+                    <div class="sec-contact-2__field">
+                      <label class="sec-contact-2__label" for="countryInterest">
+                        Country or Market of Interest
+                      </label>
+                      <input
+                        type="text"
+                        id="countryInterest"
+                        name="countryInterest"
+                        class="sec-contact-2__input"
+                        placeholder="E.g., Vietnam, Cambodia, ASEAN"
+                      />
+                    </div>
                   </div>
-                  <div class="sec-contact__field">
-                    <label class="sec-contact__label" for="situation"
-                      >Your Situation</label
-                    >
+
+                  <!-- Field: Evaluating details -->
+                  <div class="sec-contact-2__field">
+                    <label class="sec-contact-2__label" for="evaluating">
+                      What are you evaluating? <span class="sec-contact-2__required">*</span>
+                    </label>
                     <textarea
-                      id="situation"
-                      name="situation"
-                      class="sec-contact__textarea"
-                      rows="3"
-                      placeholder="Briefly share the strategic or operational challenge you are evaluating. We’ll keep our first conversation focused on your reality."
+                      id="evaluating"
+                      name="evaluating"
+                      class="sec-contact-2__textarea"
+                      placeholder="Briefly share the decision, challenge or opportunity you are evaluating. We will keep the first conversation focused on your reality."
+                      required
                     ></textarea>
                   </div>
-                  <button type="submit" class="sec-contact__btn-submit">
-                    Submit
-                  </button>
+
+                  <!-- Required note -->
+                  <div class="sec-contact-2__note">
+                    Fields marked <span class="sec-contact-2__required">*</span> are required.
+                  </div>
+
+                  <!-- Checkbox Consent -->
+                  <div class="sec-contact-2__checkbox-wrap">
+                    <input
+                      type="checkbox"
+                      id="consentPrivacy"
+                      name="consentPrivacy"
+                      class="sec-contact-2__checkbox"
+                      required
+                    />
+                    <label for="consentPrivacy" class="sec-contact-2__checkbox-label">
+                      I agree that Aliro Consulting may use the information provided to respond to my enquiry.
+                      Please see our <a href="privacy.html" class="sec-contact-2__link">Privacy Policy</a>.
+                    </label>
+                  </div>
+
+                  <!-- Actions Row -->
+                  <div class="sec-contact-2__actions">
+                    <button type="submit" class="sec-contact-2__btn-submit">
+                      Start a Conversation
+                    </button>
+
+                    <div class="sec-contact-2__direct">
+                      <span class="sec-contact-2__direct-label">Prefer email? Contact us directly at</span>
+                      <a href="mailto:info@aliroconsulting.com" class="sec-contact-2__direct-email">
+                        info@aliroconsulting.com
+                      </a>
+                    </div>
+                  </div>
                 </form>
               </div>
-              <div class="sec-contact__right">
-                <img
-                  src="assets/mock_contact/sec-2-right.png"
-                  class="sec-contact__img"
-                />
+
+              <!-- Right Column: 3D Isometric Visual -->
+              <div class="sec-contact-2__right">
+                <div class="sec-contact-2__img-wrapper">
+                  <div class="sec-contact-2__glow"></div>
+                  <img
+                    src="assets/contact/sec-2-visual.png"
+                    alt="Start a Conversation Visual"
+                    class="sec-contact-2__img phrase"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Section 3 (Image Mockup) -->
+        <!-- Section 3: Where We Operate (Figma Node 6701:4900) -->
         <section
-          class="scroll-section swiper-slide sec-mockup sec-contact-mockup"
+          class="scroll-section swiper-slide sec-contact-3 sec-contact-bg-light"
           id="section-contact-3"
           data-section-index="2"
         >
+          <!-- Background Blueprint Decor -->
           <img
-            src="assets/mock_contact/sec-3.png"
-            alt="Contact Us - Section 3"
-            class="mockup-img"
-            onerror="this.style.opacity = '0'"
+            src="assets/contact/sec-3-decor.png"
+            alt="Architectural Blueprint Background Decor"
+            class="sec-contact-3__decor"
+            loading="lazy"
           />
+
+          <div class="container flex-center-v">
+            <!-- Top Block: Title & Direct Contact -->
+            <div class="sec-contact-3__top phrase">
+              <h2 class="sec-contact-3__title">
+                WHERE WE OPERATE
+              </h2>
+              <div class="sec-contact-3__direct-label">
+                Prefer to contact us directly?
+              </div>
+              <a
+                href="mailto:info@aliroconsulting.com"
+                class="sec-contact-3__direct-email"
+              >
+                info@aliroconsulting.com
+              </a>
+            </div>
+
+            <!-- Central Entity Box (Dark Navy Box) -->
+            <div class="sec-contact-3__entity-box phrase">
+              <!-- Left: Hong Kong Entity -->
+              <div class="sec-contact-3__entity-item">
+                <img
+                  src="assets/contact/sec-3-hk.png"
+                  alt="Hong Kong Office Icon"
+                  class="sec-contact-3__icon"
+                />
+                <div class="sec-contact-3__entity-info">
+                  <span class="sec-contact-3__entity-tag">HONG KONG ENTITY</span>
+                  <strong class="sec-contact-3__entity-name">Aliro Consulting Ltd.</strong>
+                  <span class="sec-contact-3__entity-location">Hong Kong</span>
+                </div>
+              </div>
+
+              <!-- Vertical Divider -->
+              <div class="sec-contact-3__divider"></div>
+
+              <!-- Right: Vietnam Operations -->
+              <div class="sec-contact-3__entity-item">
+                <img
+                  src="assets/contact/sec-3-vn.png"
+                  alt="Vietnam Office Icon"
+                  class="sec-contact-3__icon"
+                />
+                <div class="sec-contact-3__entity-info">
+                  <span class="sec-contact-3__entity-tag">VIET NAM OPERATIONS</span>
+                  <strong class="sec-contact-3__entity-name">Aliro Consulting Vietnam Co., Ltd.</strong>
+                  <span class="sec-contact-3__entity-location">Ho Chi Minh City</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Strip: Copyright & Legal Links -->
+            <div class="sec-contact-3__bottom phrase">
+              <p class="sec-contact-3__copyright">
+                © 2026 Aliro Consulting. All rights reserved.
+              </p>
+              <div class="sec-contact-3__legal">
+                <a href="privacy.html" class="sec-contact-3__legal-link">Privacy</a>
+                <span class="sec-contact-3__legal-sep"></span>
+                <a href="terms.html" class="sec-contact-3__legal-link">Terms</a>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
 
+    <!-- Swiper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Application Script Engine -->
     <script src="script.js"></script>
 
+    <!-- Contact Form Handler Script -->
     <script>
       const contactForm = document.getElementById("contactForm");
 
@@ -167,17 +389,11 @@
           e.preventDefault();
 
           const formData = new FormData(contactForm);
-
-          console.log(formData);
-
-          for (let [key, value] of formData.entries()) {
-            console.log(`${key} : ${value}`);
-          }
-
           const dataObject = Object.fromEntries(formData);
-          console.log(dataObject);
-          const jsonPayload = JSON.stringify(dataObject, null, 2);
-          console.log(jsonPayload);
+          console.log("Contact Form Submission:", dataObject);
+
+          // Success feedback notification
+          alert("Thank you! Your inquiry has been sent successfully. We will get back to you shortly.");
           contactForm.reset();
         });
       }

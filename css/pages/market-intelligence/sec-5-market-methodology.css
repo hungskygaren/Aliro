@@ -1,9 +1,392 @@
-/* Section 5: Methodology - Market Intelligence */
+/* ==========================================================================
+   Section 5: Starts With -> Feeds Into (Direction into Execution)
+   Figma Node: 4860:2967
+   ========================================================================== */
+
 .sec-market-5 {
   position: relative;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    #1e55b3 0%,
+    #174495 25%,
+    #103277 50%,
+    #082159 75%,
+    #01103b 100%
+  ) !important;
   box-sizing: border-box;
+  color: #ffffff;
+}
+
+.sec-market-5 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 75px; /* Navbar height compensation */
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Top Stepper Indicator with Connecting Line
+   -------------------------------------------------------------------------- */
+.sec-market-5__stepper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 680px;
+  margin-bottom: 12px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(-15px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-market-5__step-line {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(41, 187, 255, 0.4) 0%,
+    rgba(41, 187, 255, 0.85) 50%,
+    rgba(41, 187, 255, 0.4) 100%
+  );
+  box-shadow: 0 0 10px rgba(41, 187, 255, 0.5);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.sec-market-5__step-node {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0431b1;
+  border: 2px solid #29bbff;
+  box-shadow:
+    0 0 14px rgba(41, 187, 255, 0.6),
+    inset 0 0 8px rgba(41, 187, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Two-Column Stage Layout (Columns & Middle Arrow)
+   -------------------------------------------------------------------------- */
+.sec-market-5__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+  z-index: 3;
+  margin-bottom: 20px;
+}
+
+/* Column Container */
+.sec-market-5__col {
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-market-5__col--left {
+  transition-delay: 0.15s;
+}
+
+.sec-market-5__col--right {
+  transition-delay: 0.35s;
+}
+
+/* Column Title */
+.sec-market-5__col-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Column Subtitle / Description */
+.sec-market-5__col-desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  min-height: 48px;
+}
+
+/* Link inside Subtitle */
+.sec-market-5__link {
+  color: #39c0ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  transition: color 0.25s ease;
+}
+
+.sec-market-5__link:hover {
+  color: #8ce1ff;
+}
+
+/* Image Box */
+.sec-market-5__img-box {
+  width: 100%;
+  max-width: 360px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sec-market-5__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 35px rgba(1, 16, 59, 0.6));
+  animation: visualGentlyHover 6s ease-in-out infinite alternate;
+}
+
+.sec-market-5__col--right .sec-market-5__img {
+  animation-delay: -3s;
+}
+
+@keyframes visualGentlyHover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Center Flow Arrow
+   -------------------------------------------------------------------------- */
+.sec-market-5__arrow-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: scale(0.8);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.25s;
+}
+
+.sec-market-5__arrow-icon {
+  width: 90px;
+  height: 36px;
+  filter: drop-shadow(0 0 12px rgba(41, 187, 255, 0.7));
+  animation: arrowGlowPulse 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes arrowGlowPulse {
+  0% {
+    transform: translateX(-4px);
+    filter: drop-shadow(0 0 8px rgba(41, 187, 255, 0.5));
+  }
+  100% {
+    transform: translateX(4px);
+    filter: drop-shadow(0 0 16px rgba(41, 187, 255, 0.9));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Bottom Anchor Tagline
+   -------------------------------------------------------------------------- */
+.sec-market-5__bottom {
+  text-align: center;
+  z-index: 4;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.45s;
+}
+
+.sec-market-5__bottom-text {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.sec-market-5__bottom-link {
+  color: #29bbff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.25s ease;
+}
+
+.sec-market-5__bottom-link:hover {
+  color: #8ce1ff;
+}
+
+/* --------------------------------------------------------------------------
+   Slide Animation Active State (.slide-animated & .visited)
+   -------------------------------------------------------------------------- */
+.sec-market-5.slide-animated .sec-market-5__stepper,
+.sec-market-5.visited .sec-market-5__stepper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-market-5.slide-animated .sec-market-5__col,
+.sec-market-5.visited .sec-market-5__col {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-market-5.slide-animated .sec-market-5__arrow-wrap,
+.sec-market-5.visited .sec-market-5__arrow-wrap {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sec-market-5.slide-animated .sec-market-5__bottom,
+.sec-market-5.visited .sec-market-5__bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-market-5 .flex-center-v {
+    padding-top: 70px;
+  }
+
+  .sec-market-5__col {
+    max-width: 360px;
+  }
+
+  .sec-market-5__col-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .sec-market-5__col-desc {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .sec-market-5__img-box {
+    max-width: 310px;
+    height: 260px;
+  }
+
+  .sec-market-5__bottom-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sec-market-5 {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sec-market-5 .flex-center-v {
+    padding: 85px 20px 40px;
+    height: auto;
+  }
+
+  .sec-market-5__stepper {
+    max-width: 320px;
+  }
+
+  .sec-market-5__stage {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sec-market-5__col {
+    max-width: 100%;
+  }
+
+  .sec-market-5__col-desc {
+    min-height: auto;
+  }
+
+  .sec-market-5__img-box {
+    max-width: 300px;
+    height: 220px;
+  }
+
+  .sec-market-5__arrow-wrap {
+    transform: rotate(90deg);
+    margin: 5px 0;
+  }
+
+  .sec-market-5.slide-animated .sec-market-5__arrow-wrap,
+  .sec-market-5.visited .sec-market-5__arrow-wrap {
+    transform: rotate(90deg) scale(1);
+  }
+
+  .sec-market-5__bottom-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec-market-5__col-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .sec-market-5__col-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .sec-market-5__bottom-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

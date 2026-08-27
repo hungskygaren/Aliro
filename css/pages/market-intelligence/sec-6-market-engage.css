@@ -1,9 +1,282 @@
-/* Section 6: When To Engage - Market Intelligence */
+/* ==========================================================================
+   Section 6: Aliro Perspective (Expansion Problems & Incomplete Market Read)
+   Figma Node: 4860:2968
+   ========================================================================== */
+
 .sec-market-6 {
   position: relative;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
+  background: linear-gradient(
+    105.86deg,
+    #ffffff 37.51%,
+    #8eaad9 49.74%,
+    #2053a9 58.47%,
+    #01103b 72.44%
+  ) !important;
   box-sizing: border-box;
+  color: var(--Midnight-Navy, #01103b);
+}
+
+.sec-market-6 .flex-center-v {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 75px; /* Navbar height compensation */
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Grid Layout: 12 Columns
+   -------------------------------------------------------------------------- */
+.sec-market-6__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 40px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Eyebrow + Bold Strategic Statement (Columns 1 to 7)
+   -------------------------------------------------------------------------- */
+.sec-market-6__left {
+  grid-column: 1 / span 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+}
+
+/* Eyebrow */
+.sec-market-6__eyebrow {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 20px 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+/* Bold Core Statement */
+.sec-market-6__statement {
+  font-family: Aptos, var(--font-brand);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0;
+  max-width: 680px;
+  letter-spacing: -0.2px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.25s;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: 3D Isometric Perspective Visual (Columns 8 to 12)
+   -------------------------------------------------------------------------- */
+.sec-market-6__right {
+  grid-column: 8 / span 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.sec-market-6__img-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.sec-market-6__glow {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(
+    circle,
+    rgba(4, 49, 177, 0.45) 0%,
+    rgba(1, 16, 59, 0) 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec-market-6__img {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 20px 40px rgba(1, 16, 59, 0.45));
+  opacity: 0;
+  transform: scale(0.92) translateY(20px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+  animation: perspectiveSubtleFloat 6s ease-in-out infinite alternate;
+}
+
+@keyframes perspectiveSubtleFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Slide In-view Animations (.slide-animated & .visited)
+   -------------------------------------------------------------------------- */
+.sec-market-6.slide-animated .sec-market-6__eyebrow,
+.sec-market-6.visited .sec-market-6__eyebrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sec-market-6.slide-animated .sec-market-6__statement,
+.sec-market-6.visited .sec-market-6__statement {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sec-market-6.slide-animated .sec-market-6__img,
+.sec-market-6.visited .sec-market-6__img {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-market-6 .flex-center-v {
+    padding-top: 70px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .sec-market-6__eyebrow {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .sec-market-6__statement {
+    font-size: 28px;
+    line-height: 40px;
+    max-width: 580px;
+  }
+
+  .sec-market-6__img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sec-market-6 {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #8eaad9 45%,
+      #2053a9 75%,
+      #01103b 100%
+    ) !important;
+  }
+
+  .sec-market-6 .flex-center-v {
+    padding: 85px 20px 40px;
+    height: auto;
+  }
+
+  .sec-market-6__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .sec-market-6__left {
+    width: 100%;
+    align-items: center;
+  }
+
+  .sec-market-6__eyebrow {
+    transform: translateY(-20px);
+  }
+
+  .sec-market-6__statement {
+    font-size: 26px;
+    line-height: 36px;
+    transform: translateY(20px);
+  }
+
+  .sec-market-6.slide-animated .sec-market-6__eyebrow,
+  .sec-market-6.visited .sec-market-6__eyebrow {
+    transform: translateY(0);
+  }
+
+  .sec-market-6.slide-animated .sec-market-6__statement,
+  .sec-market-6.visited .sec-market-6__statement {
+    transform: translateY(0);
+  }
+
+  .sec-market-6__right {
+    width: 100%;
+  }
+
+  .sec-market-6__img {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sec-market-6__eyebrow {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .sec-market-6__statement {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .sec-market-6__img {
+    max-width: 280px;
+  }
 }

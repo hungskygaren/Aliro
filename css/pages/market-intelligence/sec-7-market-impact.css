@@ -1,9 +1,342 @@
-/* Section 7: Impact - Market Intelligence */
+/* ==========================================================================
+   Section 7: Where It Enters (3 Entry Decision Cards & CTA)
+   Figma Node: 6701:4897
+   ========================================================================== */
+
 .sec-market-7 {
   position: relative;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
+  background-color: #ffffff !important;
   box-sizing: border-box;
+  color: var(--Midnight-Navy, #01103b);
+}
+
+.sec-market-7 .flex-center-v {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 75px; /* Navbar height compensation */
+  padding-bottom: 35px;
+  box-sizing: border-box;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Grid Layout: 12 Columns
+   -------------------------------------------------------------------------- */
+.sec-market-7__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 36px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: 3 Decision Cards (Columns 1 to 8)
+   -------------------------------------------------------------------------- */
+.sec-market-7__cards-wrap {
+  grid-column: 1 / span 8;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.sec-market-7__card {
+  background-color: #ffffff;
+  border: 1px solid rgba(126, 147, 168, 0.5);
+  border-radius: 4px;
+  padding: 16px 14px 20px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(1, 16, 59, 0.04);
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.sec-market-7__card:nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+.sec-market-7__card:nth-child(2) {
+  transition-delay: 0.25s;
+}
+
+.sec-market-7__card:nth-child(3) {
+  transition-delay: 0.35s;
+}
+
+.sec-market-7__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(1, 27, 127, 0.12);
+  border-color: var(--Primary-Highlight-Blue, #0431b1);
+}
+
+.sec-market-7__card-img-box {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.sec-market-7__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(1, 16, 59, 0.08));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-market-7__card:hover .sec-market-7__card-img {
+  transform: scale(1.04);
+}
+
+.sec-market-7__card-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0;
+  padding: 0 6px;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Copy & CTA Button (Columns 9 to 12)
+   -------------------------------------------------------------------------- */
+.sec-market-7__right {
+  grid-column: 9 / span 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 4;
+}
+
+.sec-market-7__eyebrow {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px 0;
+  opacity: 0;
+  transform: translateX(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+.sec-market-7__statement {
+  font-family: Aptos, var(--font-brand);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0 0 28px 0;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateX(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.3s;
+}
+
+.sec-market-7__cta-wrap {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.4s;
+}
+
+.sec-market-7__btn {
+  display: inline-block;
+  background-color: var(--Primary-Highlight-Blue, #0431b1);
+  color: #ffffff;
+  font-family: Aptos, var(--font-brand);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.25);
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.sec-market-7__btn:hover {
+  background-color: #02258c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(4, 49, 177, 0.35);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Slide In-view Animations (.slide-animated & .visited)
+   -------------------------------------------------------------------------- */
+.sec-market-7.slide-animated .sec-market-7__card,
+.sec-market-7.visited .sec-market-7__card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-market-7.slide-animated .sec-market-7__eyebrow,
+.sec-market-7.visited .sec-market-7__eyebrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sec-market-7.slide-animated .sec-market-7__statement,
+.sec-market-7.visited .sec-market-7__statement {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sec-market-7.slide-animated .sec-market-7__cta-wrap,
+.sec-market-7.visited .sec-market-7__cta-wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-market-7 .flex-center-v {
+    padding-top: 70px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .sec-market-7__card {
+    min-height: 330px;
+    padding: 12px 10px 16px;
+  }
+
+  .sec-market-7__card-img-box {
+    height: 200px;
+  }
+
+  .sec-market-7__card-title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .sec-market-7__eyebrow {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .sec-market-7__statement {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sec-market-7 {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sec-market-7 .flex-center-v {
+    padding: 85px 20px 40px;
+    height: auto;
+  }
+
+  .sec-market-7__grid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+
+  .sec-market-7__right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sec-market-7__eyebrow {
+    transform: translateY(-20px);
+  }
+
+  .sec-market-7__statement {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 580px;
+    transform: translateY(20px);
+  }
+
+  .sec-market-7.slide-animated .sec-market-7__eyebrow,
+  .sec-market-7.visited .sec-market-7__eyebrow {
+    transform: translateY(0);
+  }
+
+  .sec-market-7.slide-animated .sec-market-7__statement,
+  .sec-market-7.visited .sec-market-7__statement {
+    transform: translateY(0);
+  }
+
+  .sec-market-7__cards-wrap {
+    width: 100%;
+  }
+
+  .sec-market-7__card {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sec-market-7__cards-wrap {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sec-market-7__card {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .sec-market-7__card-img-box {
+    height: 180px;
+  }
+
+  .sec-market-7__eyebrow {
+    font-size: 18px;
+  }
+
+  .sec-market-7__statement {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
