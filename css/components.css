@@ -550,3 +550,23 @@ body.no-scroll {
     transform: translateY(3px);
   }
 }
+
+@media (max-height: 660px) {
+  .scroll-down-btn,
+  .sec-about-1__scroll,
+  .sec-phase0-1__scroll,
+  .sec-thirdeye-1__scroll,
+  .sec-market-1__scroll {
+    bottom: 10px;
+  }
+}
+
+@media (max-height: 620px) {
+  .scroll-down-btn,
+  .sec-about-1__scroll,
+  .sec-phase0-1__scroll,
+  .sec-thirdeye-1__scroll,
+  .sec-market-1__scroll {
+    bottom: 6px;
+  }
+}

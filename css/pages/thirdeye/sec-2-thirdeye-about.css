@@ -1,6 +1,6 @@
 /* ==========================================================================
    Section 2: Overview / 3-Step Engine (Gather -> Prioritize -> Interpret & Advise)
-   Figma Node: 6705:1908
+   Figma Node: 6703:4876
    ========================================================================== */
 
 .sec-thirdeye-2 {
@@ -17,21 +17,23 @@
 .sec-thirdeye-2 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding: 75px 20px 25px;
+  padding-top: 70px;
+  padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* --------------------------------------------------------------------------
-   Header: Title
+   Header: Title (Figma top: 99px)
    -------------------------------------------------------------------------- */
 .sec-thirdeye-2__header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-top: 29px;
+  margin-bottom: 0;
   z-index: 4;
   opacity: 0;
   transform: translateY(-20px);
@@ -45,7 +47,7 @@
   font-family: Aptos, var(--font-brand);
   font-size: 36px;
   font-weight: 700;
-  line-height: 42px;
+  line-height: 40px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   margin: 0;
@@ -56,41 +58,16 @@
 }
 
 /* --------------------------------------------------------------------------
-   3-Step Pipeline Container
+   3-Step Pipeline Container (Figma: 1170px grid, 3 columns x 370px, gap 30px)
    -------------------------------------------------------------------------- */
-.sec-thirdeye-2__pipeline-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1140px;
-}
-
-.sec-thirdeye-2__timeline-line {
-  position: absolute;
-  top: 290px;
-  left: 15%;
-  right: 15%;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    #226cb4 0%,
-    #226cb4 65%,
-    #e09b21 65%,
-    #e09b21 100%
-  );
-  z-index: 1;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.3s;
-}
-
-.sec-thirdeye-2__grid {
+.sec-thirdeye-2__pipeline {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  position: relative;
-  z-index: 2;
   width: 100%;
+  max-width: 1170px;
+  margin-top: 30px;
+  position: relative;
 }
 
 .sec-thirdeye-2__col {
@@ -98,79 +75,57 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  opacity: 0;
-  transform: translateY(35px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  max-width: 370px;
+  position: relative;
 }
 
-.sec-thirdeye-2__col:nth-child(1) {
-  transition-delay: 0.2s;
-}
-.sec-thirdeye-2__col:nth-child(2) {
-  transition-delay: 0.35s;
-}
-.sec-thirdeye-2__col:nth-child(3) {
-  transition-delay: 0.5s;
-}
-
-/* Square Card */
+/* Square Card: Exact Figma 280px x 280px (Centered in 370px col = 45px padding each side) */
 .sec-thirdeye-2__card {
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: 280px;
   background-color: #ffffff;
-  border: 1px solid rgba(34, 108, 180, 0.4);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(34, 108, 180, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-16px) scale(0.92);
   transition:
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.4s ease,
-    border-color 0.4s ease;
+    opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-thirdeye-2__card--highlight {
-  border-color: #e09b21;
-  box-shadow: 0 10px 40px rgba(224, 155, 33, 0.12);
-}
-
-.sec-thirdeye-2__col:hover .sec-thirdeye-2__card {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 45px rgba(1, 16, 59, 0.12);
-}
-
-.sec-thirdeye-2__card--highlight:hover {
-  box-shadow: 0 16px 45px rgba(224, 155, 33, 0.22) !important;
+  border: 1px solid #e09b21;
 }
 
 .sec-thirdeye-2__card-img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  transition: transform 0.4s ease;
 }
 
-.sec-thirdeye-2__col:hover .sec-thirdeye-2__card-img {
-  transform: scale(1.05);
-}
-
-/* Step Number Badge */
+/* Step Number Badge Wrapper (Height 50px, overlaps 16px onto bottom of card as in Figma) */
 .sec-thirdeye-2__badge-wrapper {
   position: relative;
-  z-index: 3;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -16px;
+  margin-bottom: 15px;
+  z-index: 4;
 }
 
 .sec-thirdeye-2__badge {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: var(--Midnight-Navy, #01103b);
   color: #ffffff;
@@ -178,59 +133,89 @@
   align-items: center;
   justify-content: center;
   font-family: Aptos, var(--font-brand);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  box-shadow: 0 0 0 3px #ffffff, 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 0 5px #ffffff, 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-thirdeye-2__badge--gold {
   background-color: #e09b21;
-  box-shadow: 0 0 0 3px #ffffff, 0 4px 10px rgba(224, 155, 33, 0.35);
 }
 
-.sec-thirdeye-2__col:hover .sec-thirdeye-2__badge {
-  transform: scale(1.1);
-}
-
-/* Arrow Separators between steps */
-.sec-thirdeye-2__arrow {
+/* ==========================================================================
+   Center-Anchored Connecting Line Segments & Arrows (Exact width: calc(100% + 30px) = 400px)
+   ========================================================================== */
+.sec-thirdeye-2__connector {
   position: absolute;
-  top: 275px;
-  z-index: 4;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 30px);
+  max-width: 400px;
+  height: 40px;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sec-thirdeye-2__connector-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+  transition:
+    opacity 0.35s ease,
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-thirdeye-2__connector--1-2 .sec-thirdeye-2__connector-line {
+  background-color: #226cb4;
+}
+
+.sec-thirdeye-2__connector--2-3 .sec-thirdeye-2__connector-line {
+  background: linear-gradient(
+    90deg,
+    #226cb4 0%,
+    #226cb4 50%,
+    #e09b21 50%,
+    #e09b21 100%
+  );
+}
+
+.sec-thirdeye-2__connector-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(-12px);
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: secThirdEye2Pulse 2s ease-in-out infinite;
+  z-index: 2;
+  opacity: 0;
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-thirdeye-2__arrow--1-2 {
-  left: calc(33.33% - 15px);
-  color: #226cb4;
+.sec-thirdeye-2__connector-arrow svg {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 
-.sec-thirdeye-2__arrow--2-3 {
-  left: calc(66.66% - 15px);
-  color: #e09b21;
-}
-
-.sec-thirdeye-2__arrow svg {
-  width: 30px;
-  height: 30px;
-}
-
-@keyframes secThirdEye2Pulse {
-  0%, 100% {
-    transform: translateX(0);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translateX(4px);
-    opacity: 1;
-  }
-}
-
-/* Step Typography */
+/* Step Typography (Figma: 24px bold title, 18px semibold desc, max-width 370px) */
 .sec-thirdeye-2__step-title {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
@@ -240,20 +225,80 @@
   text-transform: uppercase;
   margin: 0 0 8px 0;
   letter-spacing: 0.5px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-thirdeye-2__step-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 24px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  max-width: 340px;
-  opacity: 0.9;
+  width: 100%;
+  max-width: 370px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Sequential Domino Staggered Delays
+   ========================================================================== */
+/* Step 1 */
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__card {
+  transition-delay: 0.2s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__badge {
+  transition-delay: 0.28s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__connector-line {
+  transition-delay: 0.34s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__connector-arrow {
+  transition-delay: 0.42s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__step-title,
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__step-desc {
+  transition-delay: 0.34s;
+}
+
+/* Step 2 */
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__card {
+  transition-delay: 0.48s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__badge {
+  transition-delay: 0.56s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__connector-line {
+  transition-delay: 0.62s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__connector-arrow {
+  transition-delay: 0.7s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__step-title,
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__step-desc {
+  transition-delay: 0.62s;
+}
+
+/* Step 3 */
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(3) .sec-thirdeye-2__card {
+  transition-delay: 0.76s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(3) .sec-thirdeye-2__badge {
+  transition-delay: 0.84s;
+}
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(3) .sec-thirdeye-2__step-title,
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(3) .sec-thirdeye-2__step-desc {
+  transition-delay: 0.9s;
 }
 
 /* --------------------------------------------------------------------------
@@ -265,89 +310,203 @@
   transform: translateY(0);
 }
 
-.sec-thirdeye-2.swiper-slide-active .sec-thirdeye-2__timeline-line,
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__timeline-line {
-  transform: scaleX(1);
+.sec-thirdeye-2.swiper-slide-active .sec-thirdeye-2__card,
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
-.sec-thirdeye-2.swiper-slide-active .sec-thirdeye-2__col,
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col {
+.sec-thirdeye-2.swiper-slide-active .sec-thirdeye-2__badge,
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sec-thirdeye-2.swiper-slide-active .sec-thirdeye-2__connector-line,
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__connector-line {
+  opacity: 1;
+  transform: translateY(-50%) scaleX(1);
+}
+
+.sec-thirdeye-2.swiper-slide-active .sec-thirdeye-2__connector-arrow,
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__connector-arrow {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0);
+}
+
+.sec-thirdeye-2.swiper-slide-active .sec-thirdeye-2__step-title,
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__step-title,
+.sec-thirdeye-2.swiper-slide-active .sec-thirdeye-2__step-desc,
+.sec-thirdeye-2.slide-animated .sec-thirdeye-2__step-desc {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Visited State */
+.sec-thirdeye-2.visited .sec-thirdeye-2__header,
+.sec-thirdeye-2.visited .sec-thirdeye-2__card,
+.sec-thirdeye-2.visited .sec-thirdeye-2__badge,
+.sec-thirdeye-2.visited .sec-thirdeye-2__connector-arrow,
+.sec-thirdeye-2.visited .sec-thirdeye-2__step-title,
+.sec-thirdeye-2.visited .sec-thirdeye-2__step-desc {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.sec-thirdeye-2.visited .sec-thirdeye-2__connector-arrow {
+  transform: translate(-50%, -50%) translateX(0) !important;
+}
+
+.sec-thirdeye-2.visited .sec-thirdeye-2__connector-line {
+  opacity: 1 !important;
+  transform: translateY(-50%) scaleX(1) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 700px) and (min-width: 992px) {
+  .sec-thirdeye-2 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 15px;
+  }
+
+  .sec-thirdeye-2__header {
+    margin-top: 10px;
+  }
+
+  .sec-thirdeye-2__pipeline {
+    margin-top: 15px;
+  }
+}
+
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-thirdeye-2 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-thirdeye-2__header {
+    margin-top: 8px;
+  }
+
+  .sec-thirdeye-2__pipeline {
+    margin-top: 10px;
+  }
+
+  .sec-thirdeye-2__title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .sec-thirdeye-2__step-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .sec-thirdeye-2__step-desc {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .sec-thirdeye-2__badge {
+    font-size: 22px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-thirdeye-2 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
+  }
+
+  .sec-thirdeye-2__header {
+    margin-top: 4px;
+  }
+
+  .sec-thirdeye-2__pipeline {
+    margin-top: 4px;
+  }
+
+  .sec-thirdeye-2__title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .sec-thirdeye-2__step-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .sec-thirdeye-2__step-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .sec-thirdeye-2__badge {
+    font-size: 20px;
+  }
 }
 
 /* --------------------------------------------------------------------------
    Responsive Layout & Mobile Adaptation
    -------------------------------------------------------------------------- */
-@media (max-width: 1200px) {
-  .sec-thirdeye-2__title {
-    font-size: 30px;
-    line-height: 36px;
+@media (max-width: 1100px) {
+  .sec-thirdeye-2__pipeline {
+    gap: 20px;
+  }
+  .sec-thirdeye-2__col {
+    width: 100%;
+    flex: 1 1 0;
   }
   .sec-thirdeye-2__card {
-    width: 220px;
-    height: 220px;
-  }
-  .sec-thirdeye-2__timeline-line {
-    top: 250px;
-  }
-  .sec-thirdeye-2__arrow {
-    top: 235px;
-  }
-  .sec-thirdeye-2__step-title {
-    font-size: 20px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
   .sec-thirdeye-2__step-desc {
-    font-size: 14px;
-    line-height: 20px;
-    max-width: 300px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .sec-thirdeye-2__connector {
+    display: none;
   }
 }
 
 @media (max-width: 991px) {
   .sec-thirdeye-2 .flex-center-v {
-    padding-top: 80px;
-    padding-bottom: 40px;
-    justify-content: flex-start;
+    padding-top: 85px;
+    padding-bottom: 50px;
     overflow-y: auto;
+    justify-content: flex-start;
   }
 
-  .sec-thirdeye-2__timeline-line,
-  .sec-thirdeye-2__arrow {
-    display: none;
+  .sec-thirdeye-2__header {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
-  .sec-thirdeye-2__grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .sec-thirdeye-2__title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .sec-thirdeye-2__pipeline {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
   }
 
   .sec-thirdeye-2__col {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 18px;
-    text-align: left;
-    align-items: center;
+    max-width: 320px;
+    flex: 0 0 auto;
+    margin: 0 auto;
   }
 
   .sec-thirdeye-2__card {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 0;
-  }
-
-  .sec-thirdeye-2__col-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .sec-thirdeye-2__badge-wrapper {
-    margin-bottom: 8px;
-  }
-
-  .sec-thirdeye-2__step-desc {
-    max-width: 100%;
+    width: 240px;
+    height: 240px;
   }
 }
 
@@ -360,31 +519,15 @@
   .sec-thirdeye-2__title {
     font-size: 22px;
     line-height: 28px;
-    margin-bottom: 16px;
-  }
-
-  .sec-thirdeye-2__col {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .sec-thirdeye-2__card {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto;
-  }
-
-  .sec-thirdeye-2__col-content {
-    align-items: center;
   }
 
   .sec-thirdeye-2__step-title {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .sec-thirdeye-2__step-desc {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 21px;
   }
 }

@@ -1,6 +1,6 @@
 /* ==========================================================================
    Section 6: Who It's For (Target Sectors & Strategic Audience)
-   Figma Node: 6705:1911
+   Figma Node: 6704:4957
    ========================================================================== */
 
 .sec-thirdeye-6 {
@@ -19,48 +19,41 @@
   box-sizing: border-box;
 }
 
-/* Ambient Radial Glow on Right */
-.sec-thirdeye-6::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at 75% 50%,
-    rgba(30, 85, 179, 0.45) 0%,
-    rgba(23, 68, 149, 0.25) 35%,
-    rgba(1, 16, 59, 0) 75%
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-
 .sec-thirdeye-6 .flex-center-v {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
   position: relative;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px 40px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.sec-thirdeye-6__grid {
+/* Main 2-Column Stage (1170px container: 470px Left, 30px Gap, 670px Right) */
+.sec-thirdeye-6__stage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
+  max-width: 1170px;
+  gap: 30px;
   position: relative;
   z-index: 3;
 }
 
 /* --------------------------------------------------------------------------
-   Left Column: Audience List & Mission Statement
+   Left Column: Audience List & Mission Statement (470px)
    -------------------------------------------------------------------------- */
 .sec-thirdeye-6__left {
-  position: absolute;
-  top: 14%;
-  left: 0;
-  width: 48%;
-  max-width: 540px;
+  width: 470px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
   z-index: 4;
   opacity: 0;
   transform: translateY(30px);
@@ -77,7 +70,7 @@
   line-height: 50px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0 0 24px 0;
+  margin: 0 0 28px 0;
   letter-spacing: 0.5px;
   font-feature-settings:
     "liga" off,
@@ -87,7 +80,7 @@
 .sec-thirdeye-6__list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
   margin-bottom: 24px;
 }
 
@@ -116,17 +109,12 @@
 }
 
 .sec-thirdeye-6__icon-wrap {
-  width: 58px;
-  height: 58px;
+  width: 70px;
+  height: 70px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
-}
-
-.sec-thirdeye-6__item:hover .sec-thirdeye-6__icon-wrap {
-  transform: scale(1.1);
 }
 
 .sec-thirdeye-6__icon {
@@ -137,7 +125,7 @@
 
 .sec-thirdeye-6__item-text {
   font-family: Aptos, var(--font-brand);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   color: var(--Midnight-Navy, #01103b);
@@ -152,91 +140,48 @@
   font-family: Aptos, var(--font-brand);
   font-size: 20px;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 26px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  opacity: 0.9;
 }
 
 /* --------------------------------------------------------------------------
-   Right Column: 3D Isometric 4-Sector Network Art
+   Right Column: 3D Isometric Art (670px x 446px)
    -------------------------------------------------------------------------- */
 .sec-thirdeye-6__right {
-  position: absolute;
-  top: 14%;
-  right: 0;
-  width: 52%;
+  width: 670px;
   max-width: 670px;
+  height: 446px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   z-index: 3;
   opacity: 0;
-  transform: translateY(40px) scale(0.95);
+  transform: translateY(30px) scale(0.96);
   transition:
-    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.25s;
 }
 
 .sec-thirdeye-6__img-wrapper {
   position: relative;
   width: 100%;
-  max-width: 670px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.sec-thirdeye-6__glow {
-  position: absolute;
-  width: 110%;
-  height: 110%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(34, 108, 180, 0.45) 0%,
-    rgba(1, 16, 59, 0) 100%
-  );
-  filter: blur(45px);
-  z-index: 1;
-  pointer-events: none;
-  animation: secThirdEye6Glow 6s ease-in-out infinite alternate;
-}
-
-@keyframes secThirdEye6Glow {
-  0% {
-    opacity: 0.6;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1.08);
-  }
-}
-
 .sec-thirdeye-6__img {
   width: 100%;
+  height: 100%;
   max-width: 670px;
-  height: auto;
+  max-height: 446px;
   aspect-ratio: 670 / 446;
   object-fit: contain;
   display: block;
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(0 15px 35px rgba(1, 16, 59, 0.35));
-  animation: secThirdEye6Float 7s ease-in-out infinite alternate;
-}
-
-@keyframes secThirdEye6Float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-7px) rotate(0.3deg);
-  }
-  100% {
-    transform: translateY(4px) rotate(-0.3deg);
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -260,6 +205,72 @@
   transform: translateY(0) scale(1);
 }
 
+/* Visited State */
+.sec-thirdeye-6.visited .sec-thirdeye-6__left,
+.sec-thirdeye-6.visited .sec-thirdeye-6__item,
+.sec-thirdeye-6.visited .sec-thirdeye-6__right {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-thirdeye-6 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-thirdeye-6__title {
+    margin-bottom: 16px;
+  }
+
+  .sec-thirdeye-6__list {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-thirdeye-6 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
+  }
+
+  .sec-thirdeye-6__title {
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 10px;
+  }
+
+  .sec-thirdeye-6__list {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .sec-thirdeye-6__icon-wrap {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sec-thirdeye-6__item-text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .sec-thirdeye-6__subtitle {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .sec-thirdeye-6__right {
+    max-width: 600px;
+    height: 400px;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Responsive Layout & Mobile Adaptation
    -------------------------------------------------------------------------- */
@@ -270,12 +281,12 @@
     margin-bottom: 18px;
   }
   .sec-thirdeye-6__item-text {
-    font-size: 19px;
+    font-size: 20px;
     line-height: 24px;
   }
   .sec-thirdeye-6__icon-wrap {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
   }
   .sec-thirdeye-6__subtitle {
     font-size: 17px;
@@ -283,6 +294,7 @@
   .sec-thirdeye-6__right {
     width: 50%;
     max-width: 500px;
+    height: auto;
   }
 }
 
@@ -304,15 +316,12 @@
     overflow-y: auto;
   }
 
-  .sec-thirdeye-6__grid {
-    display: flex;
+  .sec-thirdeye-6__stage {
     flex-direction: column;
     height: auto;
-    position: static;
   }
 
   .sec-thirdeye-6__left {
-    position: static;
     width: 100%;
     max-width: 100%;
     margin-bottom: 24px;
@@ -320,9 +329,9 @@
   }
 
   .sec-thirdeye-6__right {
-    position: static;
     width: 100%;
     max-width: 460px;
+    height: auto;
     margin: 0 auto;
   }
 }
@@ -345,8 +354,8 @@
   }
 
   .sec-thirdeye-6__icon-wrap {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 
   .sec-thirdeye-6__subtitle {

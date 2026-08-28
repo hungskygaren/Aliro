@@ -38,9 +38,9 @@ async function loadSharedHeader() {
               <a href="market-intelligence.html" class="nav-item" data-nav="4ic" aria-haspopup="true" aria-expanded="false">4iC</a>
               <div class="nav-dropdown-menu" role="menu">
                 <a href="market-intelligence.html" class="nav-dropdown-item" data-nav="market" role="menuitem">Market Intelligence</a>
-                <a href="javascript:void(0)" class="nav-dropdown-item" data-nav="operational" role="menuitem">Operational Intelligence</a>
-                <a href="javascript:void(0)" class="nav-dropdown-item" data-nav="digital" role="menuitem">Digital Intelligence</a>
-                <a href="javascript:void(0)" class="nav-dropdown-item" data-nav="capacity" role="menuitem">Capacity Capability Intelligence</a>
+                <a href="operational-intelligence.html" class="nav-dropdown-item" data-nav="operational" role="menuitem">Operational Intelligence</a>
+                <a href="digital-intelligence.html" class="nav-dropdown-item" data-nav="digital" role="menuitem">Digital Intelligence</a>
+                <a href="capacity-capability-intelligence.html" class="nav-dropdown-item" data-nav="capacity" role="menuitem">Capacity Capability Intelligence</a>
               </div>
             </div>
             <div class="nav-dropdown-wrapper">

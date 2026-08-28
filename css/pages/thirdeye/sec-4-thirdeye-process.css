@@ -1,6 +1,6 @@
 /* ==========================================================================
    Section 4: What Makes The Third Eye Different (4 Unique Differentiators)
-   Figma Node: 6705:1909
+   Figma Node: 6704:4904
    ========================================================================== */
 
 .sec-thirdeye-4 {
@@ -17,21 +17,25 @@
 .sec-thirdeye-4 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding: 75px 20px 25px;
+  padding-top: 70px;
+  padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 /* --------------------------------------------------------------------------
-   Header: Title
+   Header: Title (Figma top: 111px)
    -------------------------------------------------------------------------- */
 .sec-thirdeye-4__header {
   text-align: center;
-  margin-bottom: 16px;
+  margin-top: 40px;
+  margin-bottom: 0;
   z-index: 4;
   opacity: 0;
   transform: translateY(-20px);
@@ -56,157 +60,85 @@
 }
 
 /* --------------------------------------------------------------------------
-   Main Stage: Center 4-Station Isometric Art & Surrounding Differentiators
+   Main Stage: Center 4-Station Isometric Art (571x510) & 4 Differentiators
    -------------------------------------------------------------------------- */
 .sec-thirdeye-4__stage {
   position: relative;
   width: 100%;
-  max-width: 1140px;
-  height: 490px;
+  max-width: 1170px;
+  height: 510px;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
 }
 
-/* Center Diagram Graphic */
+/* Center Diagram Graphic (Figma: 571px x 510px) */
 .sec-thirdeye-4__center-wrapper {
   position: relative;
-  width: 510px;
-  height: 460px;
+  width: 100%;
+  max-width: 571px;
+  height: 510px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
   opacity: 0;
-  transform: scale(0.92);
+  transform: scale(0.94);
   transition:
-    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.2s;
 }
 
 .sec-thirdeye-4__center-img {
   width: 100%;
   height: 100%;
+  max-width: 571px;
+  aspect-ratio: 571 / 510;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 10px 30px rgba(1, 16, 59, 0.08));
-  animation: secThirdEye4Float 6s ease-in-out infinite alternate;
-}
-
-@keyframes secThirdEye4Float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(3px);
-  }
+  position: relative;
+  z-index: 2;
 }
 
 /* --------------------------------------------------------------------------
-   4 Gold Connecting Flow Arrows (Clockwise Loop)
-   -------------------------------------------------------------------------- */
-.sec-thirdeye-4__arrows-container {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 3;
-}
-
-.sec-thirdeye-4__arrow-line {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  color: #e09b21;
-  opacity: 0.85;
-}
-
-.sec-thirdeye-4__arrow-line svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* Top Arrow (Left to Right) */
-.sec-thirdeye-4__arrow--top {
-  top: 60px;
-  left: 42%;
-  width: 160px;
-  height: 14px;
-}
-
-/* Right Arrow (Top to Bottom) */
-.sec-thirdeye-4__arrow--right {
-  top: 42%;
-  right: 27%;
-  width: 14px;
-  height: 130px;
-}
-
-/* Bottom Arrow (Right to Left) */
-.sec-thirdeye-4__arrow--bottom {
-  bottom: 50px;
-  right: 43%;
-  width: 150px;
-  height: 14px;
-}
-
-/* Left Arrow (Bottom to Top) */
-.sec-thirdeye-4__arrow--left {
-  top: 42%;
-  left: 27%;
-  width: 14px;
-  height: 130px;
-}
-
-/* --------------------------------------------------------------------------
-   4 Differentiator Feature Blocks
+   4 Differentiator Feature Blocks (3 Vertical Rows: Icon, Title, Description)
    -------------------------------------------------------------------------- */
 .sec-thirdeye-4__feature {
   position: absolute;
-  width: 320px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
   z-index: 4;
   opacity: 0;
   transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sec-thirdeye-4__feature-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-thirdeye-4__icon-wrap {
   position: relative;
-  width: 52px;
-  height: 52px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 12px;
 }
 
 .sec-thirdeye-4__icon {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.sec-thirdeye-4__feature:hover .sec-thirdeye-4__icon {
-  transform: scale(1.1);
 }
 
 .sec-thirdeye-4__badge {
   position: absolute;
   top: -4px;
-  right: -4px;
+  left: -4px;
   width: 22px;
   height: 22px;
   border-radius: 50%;
@@ -223,13 +155,13 @@
 
 .sec-thirdeye-4__feature-title {
   font-family: Aptos, var(--font-brand);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 28px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0;
-  letter-spacing: 0.2px;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -237,57 +169,52 @@
 
 .sec-thirdeye-4__feature-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 21px;
+  line-height: 22px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  opacity: 0.9;
 }
 
-/* Positions for 4 Features */
+/* Positions for 4 Features (Left: 0, Right: 0 => 30px gap to 571px center visual) */
 /* Feature 1: Top Left (Aligned Right) */
 .sec-thirdeye-4__feature--top-left {
   top: 15px;
-  left: 20px;
+  left: 0;
+  align-items: flex-end;
   text-align: right;
-  transform: translate(-30px, -20px);
-  transition-delay: 0.25s;
-}
-
-.sec-thirdeye-4__feature--top-left .sec-thirdeye-4__feature-header {
-  flex-direction: row-reverse;
+  transform: translate(-25px, -15px);
+  transition-delay: 0.35s;
 }
 
 /* Feature 2: Top Right (Aligned Left) */
 .sec-thirdeye-4__feature--top-right {
   top: 15px;
-  right: 20px;
+  right: 0;
+  align-items: flex-start;
   text-align: left;
-  transform: translate(30px, -20px);
-  transition-delay: 0.35s;
+  transform: translate(25px, -15px);
+  transition-delay: 0.5s;
 }
 
 /* Feature 3: Bottom Right (Aligned Left) */
 .sec-thirdeye-4__feature--bottom-right {
-  bottom: 25px;
-  right: 20px;
+  bottom: 15px;
+  right: 0;
+  align-items: flex-start;
   text-align: left;
-  transform: translate(30px, 20px);
-  transition-delay: 0.45s;
+  transform: translate(25px, 15px);
+  transition-delay: 0.65s;
 }
 
 /* Feature 4: Bottom Left (Aligned Right) */
 .sec-thirdeye-4__feature--bottom-left {
-  bottom: 25px;
-  left: 20px;
+  bottom: 15px;
+  left: 0;
+  align-items: flex-end;
   text-align: right;
-  transform: translate(-30px, 20px);
-  transition-delay: 0.55s;
-}
-
-.sec-thirdeye-4__feature--bottom-left .sec-thirdeye-4__feature-header {
-  flex-direction: row-reverse;
+  transform: translate(-25px, 15px);
+  transition-delay: 0.8s;
 }
 
 /* --------------------------------------------------------------------------
@@ -311,6 +238,69 @@
   transform: translate(0, 0);
 }
 
+/* Visited State */
+.sec-thirdeye-4.visited .sec-thirdeye-4__header,
+.sec-thirdeye-4.visited .sec-thirdeye-4__center-wrapper,
+.sec-thirdeye-4.visited .sec-thirdeye-4__feature {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-thirdeye-4 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-thirdeye-4__header {
+    margin-top: 10px;
+  }
+
+  .sec-thirdeye-4__stage {
+    margin-top: 10px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-thirdeye-4 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
+  }
+
+  .sec-thirdeye-4__header {
+    margin-top: 4px;
+  }
+
+  .sec-thirdeye-4__title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .sec-thirdeye-4__stage {
+    margin-top: 4px;
+    height: 485px;
+  }
+
+  .sec-thirdeye-4__center-wrapper {
+    max-width: 542px;
+    height: 485px;
+  }
+
+  .sec-thirdeye-4__feature-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .sec-thirdeye-4__feature-desc {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Responsive Layout & Mobile Adaptation
    -------------------------------------------------------------------------- */
@@ -322,31 +312,39 @@
     height: 440px;
   }
   .sec-thirdeye-4__center-wrapper {
-    width: 440px;
-    height: 400px;
+    max-width: 480px;
+    height: auto;
+    aspect-ratio: 571 / 510;
   }
   .sec-thirdeye-4__feature {
     width: 270px;
   }
   .sec-thirdeye-4__feature-title {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 24px;
   }
   .sec-thirdeye-4__feature-desc {
-    font-size: 14px;
-    line-height: 19px;
-  }
-  .sec-thirdeye-4__arrows-container {
-    display: none;
+    font-size: 15px;
+    line-height: 20px;
   }
 }
 
 @media (max-width: 991px) {
   .sec-thirdeye-4 .flex-center-v {
-    padding-top: 80px;
+    padding-top: 85px;
     padding-bottom: 40px;
     justify-content: flex-start;
     overflow-y: auto;
+  }
+
+  .sec-thirdeye-4__header {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .sec-thirdeye-4__title {
+    font-size: 26px;
+    line-height: 32px;
   }
 
   .sec-thirdeye-4__stage {
@@ -355,6 +353,7 @@
     flex-direction: column;
     align-items: center;
     position: static;
+    margin-top: 0;
   }
 
   .sec-thirdeye-4__center-wrapper {
@@ -363,14 +362,14 @@
     max-width: 420px;
     height: auto;
     aspect-ratio: 571 / 510;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
   .sec-thirdeye-4__feature {
     position: static;
     width: 100%;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     text-align: left !important;
     transform: translateY(20px);
   }
@@ -389,7 +388,6 @@
   .sec-thirdeye-4__title {
     font-size: 22px;
     line-height: 28px;
-    margin-bottom: 12px;
   }
 
   .sec-thirdeye-4__center-wrapper {
@@ -398,11 +396,89 @@
   }
 
   .sec-thirdeye-4__feature-title {
-    font-size: 17px;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   .sec-thirdeye-4__feature-desc {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-thirdeye-4 .flex-center-v {
+    padding-top: 85px;
+    padding-bottom: 40px;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .sec-thirdeye-4__header {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .sec-thirdeye-4__title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .sec-thirdeye-4__stage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    margin-top: 0;
+  }
+
+  .sec-thirdeye-4__center-wrapper {
+    position: static;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 571 / 510;
+    margin-bottom: 28px;
+  }
+
+  .sec-thirdeye-4__feature {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 24px;
+    text-align: left !important;
+    transform: translateY(20px);
+  }
+
+  .sec-thirdeye-4__feature-header {
+    flex-direction: row !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-thirdeye-4 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  .sec-thirdeye-4__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .sec-thirdeye-4__center-wrapper {
+    max-width: 300px;
+    margin-bottom: 18px;
+  }
+
+  .sec-thirdeye-4__feature-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .sec-thirdeye-4__feature-desc {
+    font-size: 14px;
+    line-height: 19px;
   }
 }

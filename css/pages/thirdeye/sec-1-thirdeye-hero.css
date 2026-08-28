@@ -1,6 +1,6 @@
 /* ==========================================================================
    Section 1: Hero - The Third Eye (Flagship Strategic Intelligence Service)
-   Figma Node: 6705:1907
+   Figma Node: 6703:2685
    ========================================================================== */
 
 .sec-thirdeye-1 {
@@ -19,55 +19,45 @@
   box-sizing: border-box;
 }
 
-/* Ambient Radial Glow on Right */
-.sec-thirdeye-1::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at 75% 50%,
-    rgba(30, 85, 179, 0.45) 0%,
-    rgba(23, 68, 149, 0.25) 35%,
-    rgba(1, 16, 59, 0) 75%
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-
 .sec-thirdeye-1 .flex-center-v {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 100%;
   position: relative;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px 40px;
+  padding-top: 70px;
+  padding-bottom: 20px;
 }
 
 .sec-thirdeye-1__grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
-  height: 100%;
+  max-width: 1170px;
   position: relative;
   z-index: 3;
 }
 
 /* --------------------------------------------------------------------------
-   Left Column: Strategic Typography & Value Proposition
+   Left Column: Strategic Typography (Figma top: 247px, 323px, 388px, 436px)
    -------------------------------------------------------------------------- */
 .sec-thirdeye-1__left {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  width: 48%;
-  max-width: 570px;
+  position: relative;
+  width: calc(500 / 1170 * 100%);
+  max-width: 500px;
+  margin-top: 177px;
   z-index: 4;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(35px);
   transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.1s;
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.15s;
 }
 
 .sec-thirdeye-1__tag {
@@ -78,7 +68,7 @@
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   margin-bottom: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -91,8 +81,8 @@
   line-height: 50px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0 0 14px 0;
-  letter-spacing: 0.5px;
+  margin: 0 0 15px 0;
+  letter-spacing: 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -114,95 +104,57 @@
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-weight: 600;
-  line-height: 26px;
+  line-height: 24px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
   max-width: 470px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
 }
 
 /* --------------------------------------------------------------------------
-   Right Column: Hologram Third Eye Scanning & ASEAN Radar Art
+   Right Column: 670x450 Scanning Graphic & ASEAN Slogan (Figma top: 123px, 583px)
    -------------------------------------------------------------------------- */
 .sec-thirdeye-1__right {
-  position: absolute;
-  top: 10%;
-  right: 0;
-  width: 52%;
+  position: relative;
+  width: calc(670 / 1170 * 100%);
   max-width: 670px;
+  margin-top: 53px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 3;
   opacity: 0;
-  transform: translateY(40px) scale(0.95);
+  transform: translateY(50px) scale(0.95);
   transition:
-    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.25s;
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.3s;
 }
 
 .sec-thirdeye-1__img-wrapper {
   position: relative;
   width: 100%;
   max-width: 670px;
+  aspect-ratio: 670 / 450;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.sec-thirdeye-1__glow {
-  position: absolute;
-  width: 115%;
-  height: 115%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(34, 108, 180, 0.45) 0%,
-    rgba(1, 16, 59, 0) 100%
-  );
-  filter: blur(45px);
-  z-index: 1;
-  pointer-events: none;
-  animation: secThirdEye1Glow 6s ease-in-out infinite alternate;
-}
-
-@keyframes secThirdEye1Glow {
-  0% {
-    opacity: 0.6;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1.08);
-  }
-}
-
 .sec-thirdeye-1__img {
   width: 100%;
-  max-width: 670px;
-  height: auto;
+  height: 100%;
   aspect-ratio: 670 / 450;
   object-fit: contain;
   display: block;
   position: relative;
   z-index: 2;
-  filter: drop-shadow(0 15px 35px rgba(1, 16, 59, 0.35));
-  animation: secThirdEye1Float 7s ease-in-out infinite alternate;
 }
 
-@keyframes secThirdEye1Float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(0.4deg);
-  }
-  100% {
-    transform: translateY(4px) rotate(-0.3deg);
-  }
-}
-
-/* Regional Badge / Subtitle below graphic */
+/* Regional Badge / Subtitle below graphic (Figma top: 583px) */
 .sec-thirdeye-1__badge {
   margin-top: 10px;
   font-family: Aptos, var(--font-brand);
@@ -218,58 +170,6 @@
 }
 
 /* --------------------------------------------------------------------------
-   Scroll Down Navigation Indicator
-   -------------------------------------------------------------------------- */
-.sec-thirdeye-1__scroll {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  text-decoration: none;
-  opacity: 0.8;
-  z-index: 10;
-  cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.sec-thirdeye-1__scroll:hover {
-  opacity: 1;
-  transform: translateX(-50%) translateY(3px);
-}
-
-.sec-thirdeye-1__scroll-text {
-  font-family: Aptos, var(--font-brand);
-  font-size: 16px;
-  font-weight: 700;
-  color: #c5daf3;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.sec-thirdeye-1__scroll-icon {
-  width: 24px;
-  height: 24px;
-  color: #c5daf3;
-  animation: secThirdEye1Bounce 2s ease-in-out infinite;
-}
-
-@keyframes secThirdEye1Bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(6px);
-  }
-  60% {
-    transform: translateY(3px);
-  }
-}
-
-/* --------------------------------------------------------------------------
    Swiper Active Slide Animation Triggers
    -------------------------------------------------------------------------- */
 .sec-thirdeye-1.swiper-slide-active .sec-thirdeye-1__left,
@@ -282,6 +182,75 @@
 .sec-thirdeye-1.slide-animated .sec-thirdeye-1__right {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+/* Visited State */
+.sec-thirdeye-1.visited .sec-thirdeye-1__left,
+.sec-thirdeye-1.visited .sec-thirdeye-1__right {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-thirdeye-1 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-thirdeye-1__left {
+    margin-top: 60px;
+  }
+
+  .sec-thirdeye-1__right {
+    margin-top: 15px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-thirdeye-1 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
+  }
+
+  .sec-thirdeye-1__left {
+    margin-top: 15px;
+  }
+
+  .sec-thirdeye-1__right {
+    margin-top: 4px;
+  }
+
+  .sec-thirdeye-1__tag {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .sec-thirdeye-1__title {
+    font-size: 42px;
+    line-height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .sec-thirdeye-1__catchphrase {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .sec-thirdeye-1__desc {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .sec-thirdeye-1__badge {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -304,11 +273,6 @@
   .sec-thirdeye-1__desc {
     font-size: 16px;
     line-height: 23px;
-  }
-  .sec-thirdeye-1__right {
-    top: 12%;
-    width: 50%;
-    max-width: 520px;
   }
   .sec-thirdeye-1__badge {
     font-size: 17px;
@@ -344,6 +308,7 @@
     position: static;
     width: 100%;
     max-width: 100%;
+    margin-top: 0;
     margin-bottom: 24px;
     text-align: left;
   }
@@ -358,10 +323,6 @@
     width: 100%;
     max-width: 480px;
     margin: 0 auto;
-  }
-
-  .sec-thirdeye-1__scroll {
-    bottom: 12px;
   }
 }
 

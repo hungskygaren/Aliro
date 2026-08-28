@@ -1,6 +1,6 @@
 /* ==========================================================================
    Section 2: Contact Form - Start a Conversation
-   Figma Node: 6701:4899
+   Figma Node: 6704:5022
    ========================================================================== */
 
 .sec-contact-2 {
@@ -25,31 +25,37 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding-top: 75px; /* Navbar compensation */
-  padding-bottom: 25px;
+  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   box-sizing: border-box;
-  max-width: 1340px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 /* --------------------------------------------------------------------------
-   Grid Layout: 12 Columns
+   Main 2-Column Stage (1170px Grid: 670px Left, 30px Gap, 467px Right)
    -------------------------------------------------------------------------- */
-.sec-contact-2__grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 36px;
+.sec-contact-2__stage {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
+  max-width: 1170px;
+  gap: 30px;
   position: relative;
   z-index: 3;
 }
 
 /* --------------------------------------------------------------------------
-   Left Column: Form Container (Columns 1 to 7)
+   Left Column: Form Container (670px)
    -------------------------------------------------------------------------- */
 .sec-contact-2__left {
-  grid-column: 1 / span 7;
+  width: 670px;
+  max-width: 670px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,41 +64,34 @@
 
 .sec-contact-2__title {
   font-family: Aptos, var(--font-brand);
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 44px;
+  line-height: 46px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   letter-spacing: -0.3px;
   margin: 0 0 16px 0;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   transition-delay: 0.1s;
 }
 
-/* Form Styling */
+/* Form Layout */
 .sec-contact-2__form {
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: 100%;
-  max-width: 680px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 670px;
   transition-delay: 0.2s;
 }
 
-/* Form Row (2 Columns) */
+/* 2-Column Row (320px + 30px Gap + 320px = 670px) */
 .sec-contact-2__row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 16px;
+  gap: 12px 30px;
   width: 100%;
 }
 
@@ -106,9 +105,9 @@
 
 .sec-contact-2__label {
   font-family: Aptos, var(--font-brand);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 18px;
+  line-height: normal;
   color: var(--Midnight-Navy, #01103b);
   margin-bottom: 4px;
 }
@@ -125,10 +124,11 @@
   width: 100%;
   background-color: #ffffff;
   border: 1px solid #dbdee2;
-  border-radius: 2px;
+  border-radius: 0px;
   padding: 8px 12px;
   font-family: Aptos, var(--font-brand);
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--Midnight-Navy, #01103b);
   outline: none;
   box-sizing: border-box;
@@ -140,38 +140,38 @@
 .sec-contact-2__input::placeholder,
 .sec-contact-2__textarea::placeholder {
   color: #7e93a8;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .sec-contact-2__input:focus,
 .sec-contact-2__select:focus,
 .sec-contact-2__textarea:focus {
   border-color: var(--Primary-Highlight-Blue, #0431b1);
-  box-shadow: 0 0 0 3px rgba(4, 49, 177, 0.12);
+  box-shadow: 0 0 0 2px rgba(4, 49, 177, 0.15);
 }
 
 .sec-contact-2__select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2301103B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z' fill='%2301103B'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 12px center;
+  background-position: right 10px center;
   padding-right: 32px;
   cursor: pointer;
 }
 
 .sec-contact-2__textarea {
   resize: vertical;
-  min-height: 65px;
-  line-height: 20px;
+  min-height: 70px;
+  line-height: 22px;
 }
 
 /* Helper note */
 .sec-contact-2__note {
   font-family: Aptos, var(--font-brand);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: #7e93a8;
-  margin: -2px 0 2px 0;
+  margin: 2px 0 4px 0;
 }
 
 /* Checkbox Consent */
@@ -183,8 +183,8 @@
 }
 
 .sec-contact-2__checkbox {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   margin-top: 2px;
   accent-color: var(--Primary-Highlight-Blue, #0431b1);
   cursor: pointer;
@@ -193,9 +193,9 @@
 
 .sec-contact-2__checkbox-label {
   font-family: Aptos, var(--font-brand);
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
   color: #141416;
   cursor: pointer;
 }
@@ -212,31 +212,33 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .sec-contact-2__btn-submit {
+  width: 203px;
+  height: 42px;
   background-color: var(--Primary-Highlight-Blue, #0431b1);
   color: #ffffff;
   border: none;
-  border-radius: 2px;
-  padding: 10px 22px;
+  border-radius: 0px;
+  padding: 10px 18px;
   font-family: Aptos, var(--font-brand);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition:
     background-color 0.25s ease,
-    transform 0.25s ease,
     box-shadow 0.25s ease;
   white-space: nowrap;
 }
 
 .sec-contact-2__btn-submit:hover {
   background-color: #02258c;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(4, 49, 177, 0.35);
+  box-shadow: 0 4px 12px rgba(4, 49, 177, 0.3);
 }
 
 .sec-contact-2__direct {
@@ -246,15 +248,15 @@
 
 .sec-contact-2__direct-label {
   font-family: Aptos, var(--font-brand);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--Midnight-Navy, #01103b);
-  line-height: 18px;
+  line-height: normal;
 }
 
 .sec-contact-2__direct-email {
   font-family: Aptos, var(--font-brand);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--Primary-Highlight-Blue, #0431b1);
   text-decoration: underline;
@@ -267,15 +269,24 @@
 }
 
 /* --------------------------------------------------------------------------
-   Right Column: 3D Isometric Visual (Columns 8 to 12)
+   Right Column: 3D Isometric Visual (467px x 374px)
    -------------------------------------------------------------------------- */
 .sec-contact-2__right {
-  grid-column: 8 / span 5;
+  width: 467px;
+  max-width: 467px;
+  height: 374px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 3;
+  opacity: 0;
+  transform: translateY(30px) scale(0.96);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.25s;
 }
 
 .sec-contact-2__img-wrapper {
@@ -284,105 +295,196 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 500px;
-}
-
-.sec-contact-2__glow {
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  background: radial-gradient(
-    circle,
-    rgba(4, 49, 177, 0.45) 0%,
-    rgba(1, 16, 59, 0) 70%
-  );
-  border-radius: 50%;
-  filter: blur(40px);
-  pointer-events: none;
-  z-index: 1;
+  height: 100%;
+  max-width: 467px;
+  max-height: 374px;
 }
 
 .sec-contact-2__img {
-  position: relative;
   width: 100%;
-  max-width: 470px;
-  height: auto;
+  height: 100%;
+  max-width: 467px;
+  max-height: 374px;
+  aspect-ratio: 467 / 374;
   object-fit: contain;
-  z-index: 2;
-  filter: drop-shadow(0 20px 40px rgba(1, 16, 59, 0.45));
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Sequential Domino Animation Engine
+   -------------------------------------------------------------------------- */
+.sec-contact-2 .phrase {
   opacity: 0;
-  transform: scale(0.92) translateY(20px);
+  transform: translateY(25px);
   transition:
-    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.25s;
-  animation: contactFormFloat 6s ease-in-out infinite alternate;
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes contactFormFloat {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-8px);
-  }
-}
-
-/* --------------------------------------------------------------------------
-   Slide In-view Animations (.slide-animated & .visited)
-   -------------------------------------------------------------------------- */
-.sec-contact-2.slide-animated .sec-contact-2__title,
-.sec-contact-2.visited .sec-contact-2__title {
+.sec-contact-2.swiper-slide-active .phrase,
+.sec-contact-2.slide-animated .phrase {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-contact-2.slide-animated .sec-contact-2__form,
-.sec-contact-2.visited .sec-contact-2__form {
+.sec-contact-2.swiper-slide-active .sec-contact-2__right,
+.sec-contact-2.slide-animated .sec-contact-2__right {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
-.sec-contact-2.slide-animated .sec-contact-2__img,
-.sec-contact-2.visited .sec-contact-2__img {
-  opacity: 1;
-  transform: scale(1) translateY(0);
+/* Visited Slide State (Instant display without re-animating) */
+.sec-contact-2.visited .phrase {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.sec-contact-2.visited .sec-contact-2__right {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* --------------------------------------------------------------------------
-   Responsive Breakpoints
+   Short Desktop Screen Adaptations (<= 700px, <= 660px, <= 620px)
    -------------------------------------------------------------------------- */
-@media (max-width: 1200px) {
+@media (max-height: 700px) and (min-width: 992px) {
   .sec-contact-2 .flex-center-v {
     padding-top: 70px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-bottom: 10px;
   }
 
   .sec-contact-2__title {
-    font-size: 32px;
-    line-height: 38px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .sec-contact-2__form {
-    gap: 10px;
+    gap: 8px;
   }
 
   .sec-contact-2__row {
-    gap: 10px 12px;
+    gap: 8px 24px;
   }
 
-  .sec-contact-2__img {
-    max-width: 380px;
+  .sec-contact-2__textarea {
+    min-height: 60px;
   }
 }
 
-@media (max-width: 992px) {
-  .sec-contact-2 {
+@media (max-height: 660px) and (min-width: 992px) {
+  /* Keep 100% font sizes & image dimensions - only reduce spacing */
+  .sec-contact-2__title {
+    margin-bottom: 8px;
+  }
+
+  .sec-contact-2__form {
+    gap: 6px;
+  }
+
+  .sec-contact-2__row {
+    gap: 6px 20px;
+  }
+
+  .sec-contact-2__textarea {
+    min-height: 52px;
+  }
+
+  .sec-contact-2__actions {
+    margin-top: 4px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  /* Subtle scale-down: max 5% shrink */
+  .sec-contact-2__title {
+    font-size: 34px;
+    line-height: 38px;
+    margin-bottom: 6px;
+  }
+
+  .sec-contact-2__label {
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+
+  .sec-contact-2__input,
+  .sec-contact-2__select,
+  .sec-contact-2__textarea {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+
+  .sec-contact-2__textarea {
+    min-height: 48px;
+  }
+
+  .sec-contact-2__note {
+    font-size: 14px;
+    margin: 1px 0 2px 0;
+  }
+
+  .sec-contact-2__checkbox-label {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .sec-contact-2__btn-submit {
+    font-size: 16px;
+    height: 38px;
+    width: 185px;
+  }
+
+  .sec-contact-2__direct-label {
+    font-size: 14px;
+  }
+
+  .sec-contact-2__direct-email {
+    font-size: 16px;
+  }
+
+  .sec-contact-2__right {
+    max-width: 420px;
+    height: 330px;
+  }
+
+  .sec-contact-2__img {
+    max-width: 420px;
+    max-height: 330px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints for Width (1200px, 991px, 576px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-contact-2__stage {
+    gap: 20px;
+  }
+
+  .sec-contact-2__left {
+    width: 58%;
+    max-width: 58%;
+  }
+
+  .sec-contact-2__right {
+    width: 40%;
+    max-width: 40%;
     height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
+  }
+
+  .sec-contact-2__title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .sec-contact-2__row {
+    gap: 10px 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-contact-2 {
     background: linear-gradient(
       180deg,
       #ffffff 0%,
@@ -393,18 +495,21 @@
   }
 
   .sec-contact-2 .flex-center-v {
-    padding: 85px 20px 40px;
-    height: auto;
+    padding-top: 85px;
+    padding-bottom: 40px;
+    overflow-y: auto;
+    align-items: flex-start;
   }
 
-  .sec-contact-2__grid {
-    display: flex;
+  .sec-contact-2__stage {
     flex-direction: column;
-    gap: 30px;
+    height: auto;
+    gap: 24px;
   }
 
   .sec-contact-2__left {
     width: 100%;
+    max-width: 100%;
   }
 
   .sec-contact-2__form {
@@ -419,17 +524,21 @@
 
   .sec-contact-2__right {
     width: 100%;
-  }
-
-  .sec-contact-2__img {
-    max-width: 340px;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 640px) {
+  .sec-contact-2 .flex-center-v {
+    padding-top: 75px;
+    padding-bottom: 25px;
+  }
+
   .sec-contact-2__title {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 28px;
+    line-height: 34px;
   }
 
   .sec-contact-2__row {
@@ -437,7 +546,11 @@
     gap: 10px;
   }
 
-  .sec-contact-2__img {
-    max-width: 260px;
+  .sec-contact-2__btn-submit {
+    width: 100%;
+  }
+
+  .sec-contact-2__right {
+    max-width: 280px;
   }
 }

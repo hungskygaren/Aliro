@@ -1,6 +1,6 @@
 /* ==========================================================================
    Section 5: How We Work With You (Scoped Deliverable vs Retainer)
-   Figma Node: 6705:1910
+   Figma Node: 6704:4944
    ========================================================================== */
 
 .sec-thirdeye-5 {
@@ -10,35 +10,48 @@
   height: 100vh;
   height: 100dvh;
   background: radial-gradient(
-    circle at 50% 50%,
+    50% 50% at 50% 50%,
     #1e55b3 0%,
-    #174495 25%,
-    #103277 50%,
-    #082159 75%,
     #01103b 100%
   ) !important;
   box-sizing: border-box;
   color: #ffffff;
 }
 
+/* Blueprint Pattern Overlay */
+.sec-thirdeye-5__blueprint {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .sec-thirdeye-5 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding: 75px 20px 25px;
+  padding-top: 70px;
+  padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 /* --------------------------------------------------------------------------
-   Header: Title
+   Header: Title (Figma top: 104px)
    -------------------------------------------------------------------------- */
 .sec-thirdeye-5__header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 34px;
+  margin-bottom: 0;
   z-index: 4;
   opacity: 0;
   transform: translateY(-20px);
@@ -63,65 +76,20 @@
 }
 
 /* --------------------------------------------------------------------------
-   2-Column Engagement Options Container
+   2-Column Engagement Options Container (Left: 100px from container, Gap: 30px)
    -------------------------------------------------------------------------- */
-.sec-thirdeye-5__grid-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1050px;
-}
-
-/* Connecting Arrow Line from Option 1 to Option 2 */
-.sec-thirdeye-5__timeline-line {
-  position: absolute;
-  top: 260px;
-  left: 28%;
-  right: 28%;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    #eaa936 0%,
-    #eaa936 60%,
-    rgba(159, 194, 238, 0.5) 100%
-  );
-  z-index: 1;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.3s;
-}
-
-.sec-thirdeye-5__timeline-arrow {
-  position: absolute;
-  top: 253px;
-  left: 55%;
-  z-index: 2;
-  color: #eaa936;
-  animation: secThirdEye5Pulse 2s ease-in-out infinite;
-}
-
-.sec-thirdeye-5__timeline-arrow svg {
-  width: 24px;
-  height: 24px;
-}
-
-@keyframes secThirdEye5Pulse {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(4px);
-  }
-}
-
 .sec-thirdeye-5__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1170px;
+  padding-left: 100px;
+  gap: 30px;
+  margin-top: 20px;
   position: relative;
   z-index: 3;
-  width: 100%;
-  align-items: stretch;
+  box-sizing: border-box;
 }
 
 /* Base Option Column */
@@ -129,120 +97,173 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
   position: relative;
   box-sizing: border-box;
-  padding: 24px 20px 28px;
-  border-radius: 12px;
+  width: 470px;
+  padding: 22px 20px 20px 20px;
+  border-radius: 0;
+  flex-shrink: 0;
   opacity: 0;
-  transform: translateY(35px);
+  transform: translateY(30px) scale(0.96);
   transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.4s ease,
-    border-color 0.4s ease;
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-thirdeye-5__option:nth-child(1) {
-  transition-delay: 0.25s;
-}
-.sec-thirdeye-5__option:nth-child(2) {
-  transition-delay: 0.4s;
-}
-
-/* Option 1: Highlighted Gold Box */
+/* Option 1: Highlighted Gold Box (470px x 490px) */
 .sec-thirdeye-5__option--highlight {
+  height: 490px;
   background: radial-gradient(
-    ellipse at 50% 20%,
+    ellipse at 50% 30%,
     rgba(30, 85, 179, 0.65) 0%,
-    rgba(1, 16, 59, 0.9) 100%
+    rgba(1, 16, 59, 0.95) 100%
   );
   border: 1px solid #eaa936;
-  box-shadow: 0 0 35px rgba(234, 169, 54, 0.35);
-  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 30px 0px rgba(234, 169, 54, 0.5);
+  transition-delay: 0.15s;
 }
 
-.sec-thirdeye-5__option--highlight:hover {
-  box-shadow: 0 0 50px rgba(234, 169, 54, 0.55);
-  transform: translateY(-4px) !important;
-}
-
-/* Option 2: Default Ambient Glass Card */
+/* Option 2: Default Retainer Column (Transparent, No Border) */
 .sec-thirdeye-5__option--default {
-  background: rgba(1, 16, 59, 0.3);
-  border: 1px solid rgba(159, 194, 238, 0.2);
-  backdrop-filter: blur(10px);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transition-delay: 0.75s;
 }
 
-.sec-thirdeye-5__option--default:hover {
-  border-color: rgba(159, 194, 238, 0.45);
-  transform: translateY(-4px) !important;
-}
-
-/* Visual Area */
+/* Visual Area (278px x 250px) */
 .sec-thirdeye-5__visual {
   width: 100%;
-  height: 200px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin: 0;
 }
 
 .sec-thirdeye-5__img {
-  max-width: 100%;
-  max-height: 190px;
-  width: auto;
-  height: auto;
+  width: 278px;
+  height: 250px;
+  max-width: 278px;
+  max-height: 250px;
   object-fit: contain;
-  transition: transform 0.4s ease;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  display: block;
 }
 
-.sec-thirdeye-5__option:hover .sec-thirdeye-5__img {
-  transform: scale(1.05);
-}
-
-/* Step Badge */
+/* Step Badge Wrapper (Dịch vào trên ảnh 44px) */
 .sec-thirdeye-5__badge-wrapper {
   position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -44px;
+  margin-bottom: 10px;
   z-index: 4;
-  margin-bottom: 12px;
 }
 
 .sec-thirdeye-5__badge {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Aptos, var(--font-brand);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-thirdeye-5__badge--gold {
-  background-color: #eaa936;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4), 0 4px 12px rgba(234, 169, 54, 0.4);
+/* Badge 1: fill #E09B21, no border */
+.sec-thirdeye-5__option--highlight .sec-thirdeye-5__badge {
+  background-color: #e09b21;
+  border: none;
+  box-shadow: none;
+  transition-delay: 0.3s;
 }
 
-.sec-thirdeye-5__badge--blue {
+/* Badge 2: fill #0431B1, border 1px solid #226CB4 */
+.sec-thirdeye-5__option--default .sec-thirdeye-5__badge {
   background-color: var(--Highlight-Blue, #0431b1);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3), 0 4px 12px rgba(4, 49, 177, 0.4);
+  border: 1px solid var(--Bright-Blue, #226cb4);
+  box-shadow: none;
+  transition-delay: 0.9s;
+}
+
+/* ==========================================================================
+   Center-Anchored Timeline Connecting Line (Width: 500px from Badge 1 to Badge 2)
+   ========================================================================== */
+.sec-thirdeye-5__connector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 30px;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Line 2: Remaining 165px (from 335px to 500px) => Light Blue #C5DAF3, 50% opacity, 4px height */
+.sec-thirdeye-5__connector-remaining {
+  position: absolute;
+  top: 50%;
+  left: 335px;
+  width: 165px;
+  height: 4px;
+  background-color: #c5daf3;
+  opacity: 0;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left center;
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.75s;
+}
+
+/* Line 1: Exact Figma SVG (337px x 30px) containing 335px gold line + arrow head */
+.sec-thirdeye-5__connector-gold {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 337px;
+  height: 30px;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+  transition:
+    opacity 0.35s ease,
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.45s;
+}
+
+.sec-thirdeye-5__connector-gold svg {
+  width: 337px;
+  height: 30px;
+  display: block;
 }
 
 /* Typography */
 .sec-thirdeye-5__tag {
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 24px;
   color: #ffffff;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
 
@@ -252,9 +273,9 @@
 
 .sec-thirdeye-5__opt-title {
   font-family: Aptos, var(--font-brand);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 28px;
   color: #ffffff;
   text-transform: uppercase;
   margin: 0 0 10px 0;
@@ -266,39 +287,40 @@
 
 .sec-thirdeye-5__opt-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 21px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
   color: #ffffff;
-  margin: 0 0 18px 0;
-  max-width: 400px;
-  opacity: 0.9;
+  margin: 0 auto 22px auto;
+  max-width: 430px;
+  text-align: center;
 }
 
-/* Button */
+/* Button: Figma 14px bold white */
 .sec-thirdeye-5__btn {
   display: inline-flex;
+  padding: 7px 16px 8px 16px;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  border-radius: 0;
   background-color: #e09b21;
   color: #ffffff;
   font-family: Aptos, var(--font-brand);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 8px 18px;
-  border-radius: 4px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(224, 155, 33, 0.35);
-  margin-top: auto;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  margin-top: 0;
 }
 
 .sec-thirdeye-5__btn:hover {
   background-color: #c98514;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(224, 155, 33, 0.5);
 }
 
 /* --------------------------------------------------------------------------
@@ -310,99 +332,174 @@
   transform: translateY(0);
 }
 
-.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__timeline-line,
-.sec-thirdeye-5.slide-animated .sec-thirdeye-5__timeline-line {
-  transform: scaleX(1);
-}
-
 .sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__option,
 .sec-thirdeye-5.slide-animated .sec-thirdeye-5__option {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+}
+
+.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__badge,
+.sec-thirdeye-5.slide-animated .sec-thirdeye-5__badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__connector-gold,
+.sec-thirdeye-5.slide-animated .sec-thirdeye-5__connector-gold {
+  opacity: 1;
+  transform: translateY(-50%) scaleX(1);
+}
+
+.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__connector-remaining,
+.sec-thirdeye-5.slide-animated .sec-thirdeye-5__connector-remaining {
+  opacity: 0.5;
+  transform: translateY(-50%) scaleX(1);
+}
+
+/* Visited State */
+.sec-thirdeye-5.visited .sec-thirdeye-5__header,
+.sec-thirdeye-5.visited .sec-thirdeye-5__option,
+.sec-thirdeye-5.visited .sec-thirdeye-5__badge {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.sec-thirdeye-5.visited .sec-thirdeye-5__connector-gold {
+  opacity: 1 !important;
+  transform: translateY(-50%) scaleX(1) !important;
+}
+
+.sec-thirdeye-5.visited .sec-thirdeye-5__connector-remaining {
+  opacity: 0.5 !important;
+  transform: translateY(-50%) scaleX(1) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-thirdeye-5 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-thirdeye-5__header {
+    margin-top: 10px;
+  }
+
+  .sec-thirdeye-5__grid {
+    margin-top: 10px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-thirdeye-5 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
+  }
+
+  .sec-thirdeye-5__header {
+    margin-top: 4px;
+  }
+
+  .sec-thirdeye-5__title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .sec-thirdeye-5__grid {
+    margin-top: 4px;
+    gap: 30px;
+  }
+
+  .sec-thirdeye-5__visual {
+    height: 230px;
+  }
+
+  .sec-thirdeye-5__img {
+    max-height: 230px;
+    width: auto;
+  }
+
+  .sec-thirdeye-5__option--highlight {
+    height: 465px;
+  }
+
+  .sec-thirdeye-5__opt-desc {
+    margin-bottom: 12px;
+  }
 }
 
 /* --------------------------------------------------------------------------
    Responsive Layout & Mobile Adaptation
    -------------------------------------------------------------------------- */
-@media (max-width: 1200px) {
-  .sec-thirdeye-5__title {
-    font-size: 30px;
-  }
+@media (max-width: 1050px) {
   .sec-thirdeye-5__grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    max-width: 900px;
   }
-  .sec-thirdeye-5__visual {
-    height: 170px;
+  .sec-thirdeye-5__option {
+    width: 100%;
+    height: auto;
   }
-  .sec-thirdeye-5__img {
-    max-height: 160px;
-  }
-  .sec-thirdeye-5__opt-title {
-    font-size: 19px;
-  }
-  .sec-thirdeye-5__opt-desc {
-    font-size: 14px;
-    line-height: 19px;
-  }
-  .sec-thirdeye-5__timeline-line {
-    top: 230px;
-  }
-  .sec-thirdeye-5__timeline-arrow {
-    top: 223px;
+  .sec-thirdeye-5__connector {
+    display: none;
   }
 }
 
 @media (max-width: 991px) {
   .sec-thirdeye-5 .flex-center-v {
-    padding-top: 80px;
+    padding-top: 85px;
     padding-bottom: 40px;
     justify-content: flex-start;
     overflow-y: auto;
   }
 
-  .sec-thirdeye-5__timeline-line,
-  .sec-thirdeye-5__timeline-arrow {
-    display: none;
+  .sec-thirdeye-5__header {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .sec-thirdeye-5__title {
+    font-size: 26px;
+    line-height: 32px;
   }
 
   .sec-thirdeye-5__grid {
     grid-template-columns: 1fr;
     gap: 24px;
+    max-width: 470px;
   }
 
   .sec-thirdeye-5__option {
-    max-width: 500px;
-    margin: 0 auto;
     width: 100%;
+    height: auto;
   }
 }
 
 @media (max-width: 576px) {
   .sec-thirdeye-5 .flex-center-v {
     padding-top: 70px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
 
   .sec-thirdeye-5__title {
     font-size: 22px;
     line-height: 28px;
-    margin-bottom: 14px;
   }
 
   .sec-thirdeye-5__visual {
     height: 140px;
   }
 
-  .sec-thirdeye-5__img {
-    max-height: 130px;
-  }
-
   .sec-thirdeye-5__opt-title {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .sec-thirdeye-5__opt-desc {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 20px;
   }
 }
