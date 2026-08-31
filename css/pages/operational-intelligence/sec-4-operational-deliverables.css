@@ -1,0 +1,387 @@
+/* ==========================================================================
+   Section 4: Services Under This Intelligence (6 Core Services & 3D Puzzle)
+   Figma Node: 5036:4680
+   ========================================================================== */
+
+.sec-operational-4 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: linear-gradient(
+    105.46deg,
+    #ffffff 36.39%,
+    #8eaad9 50.23%,
+    #2053a9 60.12%,
+    #01103b 75.93%
+  ) !important;
+  box-sizing: border-box;
+  color: var(--Midnight-Navy, #01103b);
+}
+
+.sec-operational-4 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Stage: 2-Column Flex Layout (1170px Standard)
+   -------------------------------------------------------------------------- */
+.sec-operational-4__stage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1170px;
+  gap: 20px;
+  margin-top: 15px; /* Cách thanh menu trên đúng 15px theo Figma */
+  margin-bottom: auto;
+  position: relative;
+  z-index: 3;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Title + 2x3 Services Grid (580px)
+   -------------------------------------------------------------------------- */
+.sec-operational-4__left {
+  width: 580px;
+  max-width: 580px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 4;
+}
+
+/* Section Title */
+.sec-operational-4__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin: 0 0 14px 0; /* Cách bên dưới 14px */
+  letter-spacing: 0px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  opacity: 0;
+  transform: translateY(-25px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+/* 2x3 Services Grid */
+.sec-operational-4__cards {
+  display: grid;
+  grid-template-columns: 280px 290px;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Individual Service Card (Padding: 10px 14px 15px 14px, Height auto theo nội dung) */
+.sec-operational-4__card {
+  background-color: #ffffff;
+  border: 1px solid rgba(126, 147, 168, 0.5);
+  border-radius: 0px;
+  padding: 10px 14px 15px 14px; /* Đã trừ 1px viền: 10px Top, 14px Right, 15px Bottom, 14px Left */
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  box-shadow: 0 4px 16px rgba(1, 16, 59, 0.04);
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-operational-4__card:nth-child(1) {
+  transition-delay: 0.16s;
+}
+.sec-operational-4__card:nth-child(2) {
+  transition-delay: 0.24s;
+}
+.sec-operational-4__card:nth-child(3) {
+  transition-delay: 0.32s;
+}
+.sec-operational-4__card:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.sec-operational-4__card:nth-child(5) {
+  transition-delay: 0.48s;
+}
+.sec-operational-4__card:nth-child(6) {
+  transition-delay: 0.56s;
+}
+
+/* Card Number */
+.sec-operational-4__card-num {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* Card Title */
+.sec-operational-4__card-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0 0 4px 0; /* Cách dưới 4px chuẩn Figma */
+  letter-spacing: 0px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* Card Description */
+.sec-operational-4__card-desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: 3D Isometric Puzzle Visual (570px x 570px)
+   -------------------------------------------------------------------------- */
+.sec-operational-4__right {
+  width: 570px;
+  max-width: 570px;
+  height: auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition:
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.28s;
+}
+
+.sec-operational-4__img-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sec-operational-4__img {
+  width: 100%;
+  height: auto;
+  max-height: 570px;
+  object-fit: contain;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Sequential Domino Animation Engine & Slide Active Triggers
+   -------------------------------------------------------------------------- */
+.sec-operational-4.slide-animated .sec-operational-4__title,
+.sec-operational-4.slide-animated .sec-operational-4__card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-operational-4.slide-animated .sec-operational-4__right {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Visited Slide State (Instant display without re-animating) */
+.sec-operational-4.visited .phrase,
+.sec-operational-4.visited .sec-operational-4__title,
+.sec-operational-4.visited .sec-operational-4__card,
+.sec-operational-4.visited .sec-operational-4__right {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 695px & <= 640px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 695px) and (min-width: 992px) {
+  .sec-operational-4 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-operational-4__stage {
+    margin-top: 8px;
+    gap: 15px;
+  }
+
+  .sec-operational-4__title {
+    font-size: 35px; /* Giảm 1px từ 36px */
+    line-height: 40px;
+    margin-bottom: 8px; /* Giảm margin-bottom */
+  }
+
+  .sec-operational-4__cards {
+    gap: 8px;
+  }
+
+  .sec-operational-4__card-num {
+    font-size: 19px; /* Giảm 1px từ 20px */
+    line-height: 23px;
+    margin-bottom: 2px;
+  }
+
+  .sec-operational-4__card-title {
+    font-size: 19px; /* Giảm 1px từ 20px */
+    line-height: 23px;
+    margin-bottom: 2px;
+  }
+
+  .sec-operational-4__card-desc {
+    font-size: 17px; /* Giảm 1px từ 18px */
+    line-height: 23px;
+  }
+}
+
+@media (max-height: 640px) and (min-width: 992px) {
+  .sec-operational-4 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 6px;
+  }
+
+  .sec-operational-4__stage {
+    margin-top: 6px;
+    gap: 15px;
+  }
+
+  .sec-operational-4__title {
+    font-size: 33px; /* Chỉ giảm nhẹ từ 35px */
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+
+  .sec-operational-4__cards {
+    gap: 8px;
+  }
+
+  .sec-operational-4__card {
+    padding: 8px 12px 12px 12px;
+    height: auto;
+  }
+
+  .sec-operational-4__card-num {
+    font-size: 18px; /* Giảm nhẹ về 18px */
+    line-height: 22px;
+    margin-bottom: 2px;
+  }
+
+  .sec-operational-4__card-title {
+    font-size: 18px; /* Giảm nhẹ về 18px */
+    line-height: 22px;
+    margin-bottom: 2px;
+  }
+
+  .sec-operational-4__card-desc {
+    font-size: 16px; /* Giảm nhẹ về 16px */
+    line-height: 21px;
+  }
+
+  .sec-operational-4__right {
+    max-width: 500px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-operational-4__stage {
+    gap: 20px;
+  }
+
+  .sec-operational-4__left {
+    width: 50%;
+  }
+
+  .sec-operational-4__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sec-operational-4__right {
+    width: 50%;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-operational-4 {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sec-operational-4 .flex-center-v {
+    padding-top: 85px;
+    padding-bottom: 40px;
+    height: auto;
+  }
+
+  .sec-operational-4__stage {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .sec-operational-4__left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sec-operational-4__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .sec-operational-4__right {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-operational-4__title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .sec-operational-4__cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

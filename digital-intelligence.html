@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Digital Intelligence - Aliro Consulting 4iC Framework."
+      content="Digital Intelligence - Aliro Consulting 4iC Framework. Architect technology stack, software systems, and data infrastructure."
     />
     <title>Digital Intelligence | Aliro Consulting</title>
 
@@ -23,59 +23,609 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Stylesheets -->
+    <!-- Core Stylesheets -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/mockup-layout.css" />
+
+    <!-- Page Specific Modular Stylesheet (Imports all 7 sections) -->
+    <link
+      rel="stylesheet"
+      href="css/pages/digital-intelligence/digital-intelligence-layout.css"
+    />
   </head>
-  <body class="page-mockup page-digital-intelligence">
+  <body class="page-digital-intelligence">
     <!-- Top Navigation Header (Reusable Component) -->
     <header class="navbar-overlay light-theme" id="mainHeader"></header>
 
-    <!-- Swiper Fullscreen Container for Digital Intelligence Mockup -->
+    <!-- Swiper Fullscreen Container for Digital Intelligence -->
     <main class="swiper main-swiper" id="scrollContainer">
       <div class="swiper-wrapper">
-        
-        <!-- Section 1 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-digital-1" data-section-index="0">
-          <img src="assets/mock_digital/sec-1.png" alt="Digital Intelligence - Section 1" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 1: Hero (Figma Node 6703:5021) -->
+        <section
+          class="scroll-section swiper-slide sec-digital-1 sec-digital-bg-dark"
+          id="section-digital-1"
+          data-section-index="0"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-digital-1__stage">
+              <!-- Left Column: Typography, Breadcrumb, CTA -->
+              <div class="sec-digital-1__left">
+                <!-- Eyebrow -->
+                <div class="sec-digital-1__eyebrow phrase">
+                  ALIRO'S FOUR INTELLIGENCE CONTINUUM<br />
+                  PILLAR 3 OF 4
+                </div>
+
+                <!-- Main Section Title -->
+                <h1 class="sec-digital-1__title phrase">
+                  DIGITAL<br />
+                  INTELLIGENCE
+                </h1>
+
+                <!-- Subtitle / Tagline -->
+                <div class="sec-digital-1__subtitle phrase">
+                  Accelerate HOW it is done.
+                </div>
+
+                <!-- Core Description -->
+                <p class="sec-digital-1__desc phrase">
+                  The systems read: whether your digital estate enables execution, compliance, and scale, or quietly holds them back. Digital serves the operation, never the other way around.
+                </p>
+
+                <!-- 4iC Breadcrumb Navigation -->
+                <nav class="sec-digital-1__breadcrumb phrase" aria-label="Intelligence Pillars Navigation">
+                  <a href="market-intelligence.html" class="sec-digital-1__crumb">
+                    MARKET
+                  </a>
+                  <span class="sec-digital-1__crumb-sep" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <a href="operational-intelligence.html" class="sec-digital-1__crumb">
+                    OPERATIONAL
+                  </a>
+                  <span class="sec-digital-1__crumb-sep" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="sec-digital-1__crumb sec-digital-1__crumb--active" aria-current="page">
+                    DIGITAL
+                  </span>
+                  <span class="sec-digital-1__crumb-sep" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <a href="capacity-capability-intelligence.html" class="sec-digital-1__crumb">
+                    CAPACITY &amp; CAPABILITY
+                  </a>
+                </nav>
+
+                <!-- CTA Action Button -->
+                <div class="sec-digital-1__cta-wrap phrase">
+                  <a href="contact.html" class="sec-digital-1__btn">
+                    Discuss your digital question
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: 3D Holographic Digital Architecture Graphic -->
+              <div class="sec-digital-1__right phrase">
+                <div class="sec-digital-1__img-wrapper">
+                  <img
+                    src="assets/digital-intelligence/sec-1-visual.png"
+                    alt="Digital Intelligence - 3D Holographic Digital Systems &amp; Process Architecture Stage"
+                    class="sec-digital-1__img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <a href="#section-digital-2" class="sec-digital-1__scroll phrase" aria-label="Scroll to next section">
+              <span class="sec-digital-1__scroll-text">SCROLL DOWN</span>
+              <span class="sec-digital-1__scroll-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 10L12 15L17 10M7 5L12 10L17 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
         </section>
 
-        <!-- Section 2 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-digital-2" data-section-index="1">
-          <img src="assets/mock_digital/sec-2.png" alt="Digital Intelligence - Section 2" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 2: Questions We Answer (Figma Node 6703:5036) -->
+        <section
+          class="scroll-section swiper-slide sec-digital-2 sec-digital-bg-light"
+          id="section-digital-2"
+          data-section-index="1"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-digital-2__header">
+              <h2 class="sec-digital-2__title phrase">
+                THE QUESTIONS WE ANSWER
+              </h2>
+            </div>
+            <div class="sec-digital-2__grid">
+              <!-- Card 1: What systems do we have -->
+              <div class="sec-digital-2__card phrase">
+                <div class="sec-digital-2__card-left">
+                  <div class="sec-digital-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-digital-2__card-question">
+                    What systems do we have, and how integrated are they?
+                  </h3>
+                  <a href="#section-digital-3" class="sec-digital-2__card-link">
+                    <span>Explore</span>
+                    <span class="sec-digital-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="sec-digital-2__card-right">
+                  <img
+                    src="assets/digital-intelligence/sec-2-systems.png"
+                    alt="What systems do we have Graphic"
+                    class="sec-digital-2__card-img"
+                  />
+                </div>
+              </div>
+
+              <!-- Card 2: Where are the gaps -->
+              <div class="sec-digital-2__card phrase">
+                <div class="sec-digital-2__card-left">
+                  <div class="sec-digital-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-digital-2__card-question">
+                    Where are the gaps?
+                  </h3>
+                  <a href="#section-digital-3" class="sec-digital-2__card-link">
+                    <span>Explore</span>
+                    <span class="sec-digital-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="sec-digital-2__card-right">
+                  <img
+                    src="assets/digital-intelligence/sec-2-gaps.png"
+                    alt="Where are the gaps Graphic"
+                    class="sec-digital-2__card-img"
+                  />
+                </div>
+              </div>
+
+              <!-- Card 3: Can digital accelerate our growth -->
+              <div class="sec-digital-2__card phrase">
+                <div class="sec-digital-2__card-left">
+                  <div class="sec-digital-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-digital-2__card-question">
+                    Can digital accelerate our growth?
+                  </h3>
+                  <a href="#section-digital-3" class="sec-digital-2__card-link">
+                    <span>Explore</span>
+                    <span class="sec-digital-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="sec-digital-2__card-right">
+                  <img
+                    src="assets/digital-intelligence/sec-2-accelerate.png"
+                    alt="Can digital accelerate our growth Graphic"
+                    class="sec-digital-2__card-img"
+                  />
+                </div>
+              </div>
+
+              <!-- Card 4: How good is our data, really -->
+              <div class="sec-digital-2__card phrase">
+                <div class="sec-digital-2__card-left">
+                  <div class="sec-digital-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-digital-2__card-question">
+                    How good is our data, really?
+                  </h3>
+                  <a href="#section-digital-3" class="sec-digital-2__card-link">
+                    <span>Explore</span>
+                    <span class="sec-digital-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="sec-digital-2__card-right">
+                  <img
+                    src="assets/digital-intelligence/sec-2-data.png"
+                    alt="How good is our data really Graphic"
+                    class="sec-digital-2__card-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 3 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-digital-3" data-section-index="2">
-          <img src="assets/mock_digital/sec-3.png" alt="Digital Intelligence - Section 3" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 3: What We Examine (Figma Node 5048:2221) -->
+        <section
+          class="scroll-section swiper-slide sec-digital-3 sec-digital-bg-dark"
+          id="section-digital-3"
+          data-section-index="2"
+        >
+          <!-- Blueprint Background Pattern Overlay -->
+          <img
+            src="assets/market-intelligence/sec-3-blueprint.png"
+            alt="What We Examine Blueprint Overlay"
+            class="sec-digital-3__blueprint"
+          />
+
+          <div class="container flex-center-v">
+            <!-- Header: Title & Subtitle -->
+            <div class="sec-digital-3__header">
+              <h2 class="sec-digital-3__title phrase">WHAT WE EXAMINE</h2>
+              <p class="sec-digital-3__subtitle phrase">
+                The anatomy of this intelligence
+              </p>
+            </div>
+
+            <!-- Main Stage: 882px x 520px Composite Strategic Graphic with Ambient Glow -->
+            <div class="sec-digital-3__diagram-wrapper phrase">
+              <div class="sec-digital-3__glow"></div>
+              <img
+                src="assets/digital-intelligence/sec-3-anatomy.png"
+                alt="What We Examine - The anatomy of Digital Intelligence with 6 Core Examination Areas"
+                class="sec-digital-3__diagram-img"
+              />
+            </div>
+          </div>
         </section>
 
-        <!-- Section 4 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-digital-4" data-section-index="3">
-          <img src="assets/mock_digital/sec-4.png" alt="Digital Intelligence - Section 4" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 4: Services Under This Intelligence (Figma Node 5048:2237) -->
+        <section
+          class="scroll-section swiper-slide sec-digital-4 sec-digital-bg-light"
+          id="section-digital-4"
+          data-section-index="3"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-digital-4__stage">
+              <!-- Left Column: Title + 2x3 Services Grid -->
+              <div class="sec-digital-4__left">
+                <h2 class="sec-digital-4__title phrase">
+                  SERVICES UNDER<br />THIS INTELLIGENCE
+                </h2>
+                <div class="sec-digital-4__cards">
+                  <!-- Service 01 -->
+                  <div class="sec-digital-4__card phrase">
+                    <div class="sec-digital-4__card-num">01</div>
+                    <h3 class="sec-digital-4__card-title">Systems &amp; workflow assessment</h3>
+                    <p class="sec-digital-4__card-desc">What you run, and what it quietly blocks.</p>
+                  </div>
+
+                  <!-- Service 02 -->
+                  <div class="sec-digital-4__card phrase">
+                    <div class="sec-digital-4__card-num">02</div>
+                    <h3 class="sec-digital-4__card-title">Data quality &amp; governance review</h3>
+                    <p class="sec-digital-4__card-desc">Whether your data can carry your decisions.</p>
+                  </div>
+
+                  <!-- Service 03 -->
+                  <div class="sec-digital-4__card phrase">
+                    <div class="sec-digital-4__card-num">03</div>
+                    <h3 class="sec-digital-4__card-title">Digital &amp; AI adoption roadmap</h3>
+                    <p class="sec-digital-4__card-desc">Where AI genuinely pays, sequenced and costed.</p>
+                  </div>
+
+                  <!-- Service 04 -->
+                  <div class="sec-digital-4__card phrase">
+                    <div class="sec-digital-4__card-num">04</div>
+                    <h3 class="sec-digital-4__card-title">Automation &amp; agentic AI pilots</h3>
+                    <p class="sec-digital-4__card-desc">Working pilots with Aliro's ecosystem partners.</p>
+                  </div>
+
+                  <!-- Service 05 -->
+                  <div class="sec-digital-4__card phrase">
+                    <div class="sec-digital-4__card-num">05</div>
+                    <h3 class="sec-digital-4__card-title">Digital-health compliance review</h3>
+                    <p class="sec-digital-4__card-desc">Platform and data posture against the applicable frameworks.</p>
+                  </div>
+
+                  <!-- Service 06 -->
+                  <div class="sec-digital-4__card phrase">
+                    <div class="sec-digital-4__card-num">06</div>
+                    <h3 class="sec-digital-4__card-title">Decision intelligence &amp; dashboards</h3>
+                    <p class="sec-digital-4__card-desc">System output turned into management insight.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: 3D Isometric Puzzle Graphic (570px x 570px) -->
+              <div class="sec-digital-4__right phrase">
+                <div class="sec-digital-4__img-wrapper">
+                  <img
+                    src="assets/digital-intelligence/sec-4-services.png"
+                    alt="Services Under Digital Intelligence - 3D Isometric Modular Architecture"
+                    class="sec-digital-4__img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 5 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-digital-5" data-section-index="4">
-          <img src="assets/mock_digital/sec-5.png" alt="Digital Intelligence - Section 5" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 5: Aliro Role & Specialist Partners (Figma Node 6703:5109) -->
+        <section
+          class="scroll-section swiper-slide sec-digital-5 sec-digital-bg-light"
+          id="section-digital-5"
+          data-section-index="4"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-digital-5__stage">
+              <!-- Left Column: 3D Holographic Visual Stage -->
+              <div class="sec-digital-5__left phrase">
+                <div class="sec-digital-5__img-wrapper">
+                  <img
+                    src="assets/digital-intelligence/sec-5-visual.png"
+                    alt="Aliro Role in Digital Intelligence - Governance, Roadmap and Ecosystem Partners"
+                    class="sec-digital-5__img"
+                  />
+                </div>
+              </div>
+
+              <!-- Right Column: Strategic Statement -->
+              <div class="sec-digital-5__right">
+                <h2 class="sec-digital-5__title phrase">
+                  Aliro leads the business case, prioritisation, governance, and vendor-neutral roadmap.
+                </h2>
+                <p class="sec-digital-5__desc phrase">
+                  Specialist partners deliver architecture engineering, security testing, and technical implementation.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 6 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-digital-6" data-section-index="5">
-          <img src="assets/mock_digital/sec-6.png" alt="Digital Intelligence - Section 6" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 6: Methodology / Builds On -> Feeds Into (Figma Node 5048:2122) -->
+        <section
+          class="scroll-section swiper-slide sec-digital-6 sec-digital-bg-dark"
+          id="section-digital-6"
+          data-section-index="5"
+        >
+          <div class="container flex-center-v">
+            <!-- Top Stepper Indicator with Connecting Line (1 -> 2) -->
+            <div class="sec-digital-6__stepper">
+              <div
+                class="sec-digital-6__step-node sec-digital-6__step-node--1 phrase"
+              >
+                1
+              </div>
+              <div class="sec-digital-6__step-line phrase"></div>
+              <div
+                class="sec-digital-6__step-node sec-digital-6__step-node--2 phrase"
+              >
+                2
+              </div>
+            </div>
+
+            <!-- Two-Column Architecture Stage -->
+            <div class="sec-digital-6__stage">
+              <!-- Left Column: BUILDS ON -->
+              <div class="sec-digital-6__col sec-digital-6__col--left">
+                <h2 class="sec-digital-6__col-title phrase">BUILDS ON</h2>
+                <p class="sec-digital-6__col-desc phrase">
+                  <a
+                    href="operational-intelligence.html"
+                    class="sec-digital-6__link"
+                    >Operational Intelligence</a
+                  >: a real operational need to serve.
+                </p>
+                <div class="sec-digital-6__img-box phrase">
+                  <!-- Ambient Spotlight Glow Anchored to Image Center -->
+                  <div class="sec-digital-6__glow"></div>
+                  <img
+                    src="assets/digital-intelligence/sec-6-left.png"
+                    alt="Builds On: Operational Intelligence Visual"
+                    class="sec-digital-6__img"
+                  />
+                </div>
+              </div>
+
+              <!-- Center Flow Arrow (230px wide, 15px gap to each image) -->
+              <div class="sec-digital-6__arrow-wrap phrase">
+                <svg
+                  class="sec-digital-6__arrow-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="230"
+                  height="40"
+                  viewBox="0 0 230 40"
+                  fill="none"
+                >
+                  <path
+                    d="M0 20L200 20"
+                    stroke="url(#paint0_linear_digital_6)"
+                    stroke-width="16"
+                  />
+                  <path
+                    d="M230 20L200 37.3205L200 2.67949L230 20Z"
+                    fill="#39C0FF"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_digital_6"
+                      x1="-4.37114e-08"
+                      y1="20.5"
+                      x2="200"
+                      y2="20.5"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#39C0FF" stop-opacity="0" />
+                      <stop offset="0.6" stop-color="#39C0FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <!-- Right Column: FEEDS INTO -->
+              <div class="sec-digital-6__col sec-digital-6__col--right">
+                <h2 class="sec-digital-6__col-title phrase">FEEDS INTO</h2>
+                <p class="sec-digital-6__col-desc phrase">
+                  <a
+                    href="capacity-capability-intelligence.html"
+                    class="sec-digital-6__link"
+                    >Capacity &amp; Capability</a
+                  >: people who sustain the digital change.
+                </p>
+                <div class="sec-digital-6__img-box phrase">
+                  <!-- Ambient Spotlight Glow Anchored to Image Center -->
+                  <div class="sec-digital-6__glow"></div>
+                  <img
+                    src="assets/digital-intelligence/sec-6-right.png"
+                    alt="Feeds Into: Capacity &amp; Capability Intelligence Visual"
+                    class="sec-digital-6__img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 7 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-digital-7" data-section-index="6">
-          <img src="assets/mock_digital/sec-7.png" alt="Digital Intelligence - Section 7" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 7: Aliro Perspective (Figma Node 5048:2117) -->
+        <section
+          class="scroll-section swiper-slide sec-digital-7 sec-digital-bg-light"
+          id="section-digital-7"
+          data-section-index="6"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-digital-7__stage">
+              <!-- Left Column: Eyebrow + Statement (670px) -->
+              <div class="sec-digital-7__left">
+                <div class="sec-digital-7__eyebrow phrase">
+                  ALIRO PERSPECTIVE
+                </div>
+                <h2 class="sec-digital-7__statement phrase">
+                  Digital reviews often focus on the technology inventory while overlooking workflow, data quality, governance, and adoption. That is where the value usually sits.
+                </h2>
+              </div>
+
+              <!-- Right Column: 3D Isometric Hologram Artwork (470px x 314px) -->
+              <div class="sec-digital-7__right phrase">
+                <div class="sec-digital-7__img-wrapper">
+                  <img
+                    src="assets/digital-intelligence/sec-7-visual.png"
+                    alt="Aliro Perspective - Digital Reviews, Workflows &amp; Data Quality Value"
+                    class="sec-digital-7__img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 8 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-digital-8" data-section-index="7">
-          <img src="assets/mock_digital/sec-8.png" alt="Digital Intelligence - Section 8" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 8: Where It Enters (Figma Node 6704:5112) -->
+        <section
+          class="scroll-section swiper-slide sec-digital-8 sec-digital-bg-light"
+          id="section-digital-8"
+          data-section-index="7"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-digital-8__stage">
+              <!-- Left Grid: 3 Focus Cards -->
+              <div class="sec-digital-8__cards-wrap">
+                <!-- Card 1 -->
+                <div class="sec-digital-8__card phrase">
+                  <div class="sec-digital-8__card-img-box">
+                    <img
+                      src="assets/digital-intelligence/sec-8-card-1.png"
+                      alt="Organisations facing platform or AI-adoption decisions"
+                      class="sec-digital-8__card-img"
+                    />
+                  </div>
+                  <h3 class="sec-digital-8__card-title">
+                    Organisations facing platform or<br />AI-adoption decisions
+                  </h3>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="sec-digital-8__card phrase">
+                  <div class="sec-digital-8__card-img-box">
+                    <img
+                      src="assets/digital-intelligence/sec-8-card-2.png"
+                      alt="Operators with data-visibility gaps"
+                      class="sec-digital-8__card-img"
+                    />
+                  </div>
+                  <h3 class="sec-digital-8__card-title">
+                    Operators with<br />data-visibility gaps
+                  </h3>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="sec-digital-8__card phrase">
+                  <div class="sec-digital-8__card-img-box">
+                    <img
+                      src="assets/digital-intelligence/sec-8-card-3.png"
+                      alt="Compliance-driven digital reviews"
+                      class="sec-digital-8__card-img"
+                    />
+                  </div>
+                  <h3 class="sec-digital-8__card-title">
+                    Compliance-driven digital reviews
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Right Column: Statement & CTA -->
+              <div class="sec-digital-8__right">
+                <div class="sec-digital-8__eyebrow phrase">
+                  WHERE IT ENTERS
+                </div>
+                <h2 class="sec-digital-8__statement phrase">
+                  Typically enters as a systems and data audit inside a wider engagement, or standalone where a platform, compliance, or AI-adoption decision is pending.
+                </h2>
+                <div class="sec-digital-8__cta-wrap phrase">
+                  <a
+                    href="contact.html"
+                    class="sec-digital-8__btn"
+                  >
+                    Discuss a Digital Intelligence Diagnostic
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
+        <!-- Section 9: Final Contact & Entity Details (Shared Reusable Footer Component) -->
+        <section
+          class="scroll-section swiper-slide sec-10 sec-digital-9 sec-digital-bg-light"
+          id="section-digital-9"
+          data-section-index="8"
+          data-shared-footer
+        ></section>
       </div>
     </main>
 

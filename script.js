@@ -466,6 +466,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeSlide.classList.contains("sec-phase0-bg-dark") ||
         activeSlide.classList.contains("sec-thirdeye-bg-dark") ||
         activeSlide.classList.contains("sec-market-bg-dark") ||
+        activeSlide.classList.contains("sec-operational-bg-dark") ||
+        activeSlide.classList.contains("sec-digital-bg-dark") ||
+        activeSlide.classList.contains("sec-capacity-bg-dark") ||
         activeSlide.classList.contains("sec-contact-bg-dark") ||
         activeSlide.classList.contains("sec-contact-form")
       ) {
@@ -477,6 +480,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeSlide.classList.contains("sec-phase0-bg-light") ||
         activeSlide.classList.contains("sec-thirdeye-bg-light") ||
         activeSlide.classList.contains("sec-market-bg-light") ||
+        activeSlide.classList.contains("sec-operational-bg-light") ||
+        activeSlide.classList.contains("sec-digital-bg-light") ||
+        activeSlide.classList.contains("sec-capacity-bg-light") ||
         activeSlide.classList.contains("sec-contact-bg-light") ||
         activeSlide.classList.contains("sec-contact-mockup")
       ) {

@@ -1,0 +1,261 @@
+/* ==========================================================================
+   Section 3: What We Examine (The Anatomy of Capacity & Capability Intelligence)
+   Figma Node: 5048:2352
+   ========================================================================== */
+
+.sec-capacity-3 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #1e55b3 0%,
+    #01103b 100%
+  ) !important;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+/* Blueprint Pattern Overlay */
+.sec-capacity-3__blueprint {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec-capacity-3 .flex-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Header: Title & Subtitle
+   -------------------------------------------------------------------------- */
+.sec-capacity-3__header {
+  text-align: center;
+  margin-top: 43px; /* 113px Top - 70px Navbar = 43px chuẩn Figma */
+  margin-bottom: 0;
+  z-index: 4;
+  transition-delay: 0.1s;
+}
+
+.sec-capacity-3__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  letter-spacing: 0px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-capacity-3__subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* --------------------------------------------------------------------------
+   Main Stage: 882px x 520px Composite Strategic Graphic with Ambient Glow
+   -------------------------------------------------------------------------- */
+.sec-capacity-3__diagram-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 882px;
+  height: 520px;
+  margin-top: -6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  transition-delay: 0.25s;
+}
+
+.sec-capacity-3__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 450px;
+  border-radius: 550px;
+  background: rgba(34, 108, 180, 0.8);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec-capacity-3__diagram-img {
+  width: 100%;
+  height: 100%;
+  max-width: 882px;
+  aspect-ratio: 882 / 520;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Sequential Domino Animation Engine
+   -------------------------------------------------------------------------- */
+.sec-capacity-3 .phrase {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-capacity-3__title.phrase {
+  transition-delay: 0.1s;
+}
+
+.sec-capacity-3__subtitle.phrase {
+  transition-delay: 0.2s;
+}
+
+.sec-capacity-3__diagram-wrapper.phrase {
+  transition-delay: 0.3s;
+}
+
+.sec-capacity-3.slide-animated .phrase,
+.sec-capacity-3.swiper-slide-active .phrase {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Visited Slide State (Instant display without re-animating) */
+.sec-capacity-3.visited .phrase {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-capacity-3__header {
+    margin-top: 10px;
+  }
+
+  .sec-capacity-3__diagram-wrapper {
+    margin-top: -4px;
+    max-width: 820px;
+    height: 483px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-capacity-3 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
+  }
+
+  .sec-capacity-3__header {
+    margin-top: 2px;
+  }
+
+  .sec-capacity-3__title {
+    font-size: 35px;
+    line-height: 38px;
+    margin-bottom: 2px;
+  }
+
+  .sec-capacity-3__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .sec-capacity-3__diagram-wrapper {
+    margin-top: -4px;
+    max-width: 814px;
+    height: 480px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-capacity-3__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .sec-capacity-3__subtitle {
+    font-size: 18px;
+  }
+
+  .sec-capacity-3__diagram-wrapper {
+    max-width: 760px;
+    height: 448px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-capacity-3 {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sec-capacity-3 .flex-center-v {
+    padding-top: 85px;
+    padding-bottom: 40px;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .sec-capacity-3__header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .sec-capacity-3__diagram-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 882 / 520;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-capacity-3__title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .sec-capacity-3__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

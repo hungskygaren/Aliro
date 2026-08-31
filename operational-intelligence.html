@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Operational Intelligence - Aliro Consulting 4iC Framework."
+      content="Operational Intelligence - Aliro Consulting 4iC Framework. Diagnose efficiency, capacity, workflows, and operational readiness."
     />
     <title>Operational Intelligence | Aliro Consulting</title>
 
@@ -23,59 +23,634 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Stylesheets -->
+    <!-- Core Stylesheets -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/mockup-layout.css" />
+
+    <!-- Page Specific Modular Stylesheet (Imports all 7 sections) -->
+    <link
+      rel="stylesheet"
+      href="css/pages/operational-intelligence/operational-intelligence-layout.css"
+    />
   </head>
-  <body class="page-mockup page-operational-intelligence">
+  <body class="page-operational-intelligence">
     <!-- Top Navigation Header (Reusable Component) -->
     <header class="navbar-overlay light-theme" id="mainHeader"></header>
 
-    <!-- Swiper Fullscreen Container for Operational Intelligence Mockup -->
+    <!-- Swiper Fullscreen Container for Operational Intelligence -->
     <main class="swiper main-swiper" id="scrollContainer">
       <div class="swiper-wrapper">
-        
-        <!-- Section 1 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-operational-1" data-section-index="0">
-          <img src="assets/mock_operational/sec-1.png" alt="Operational Intelligence - Section 1" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 1: Hero (Figma Node 6702:4896) -->
+        <section
+          class="scroll-section swiper-slide sec-operational-1 sec-operational-bg-dark"
+          id="section-operational-1"
+          data-section-index="0"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-operational-1__stage">
+              <!-- Left Column: Typography, Breadcrumb, and CTA -->
+              <div class="sec-operational-1__left">
+                <!-- Eyebrow Super Title -->
+                <div class="sec-operational-1__eyebrow phrase">
+                  ALIRO'S FOUR INTELLIGENCE CONTINUUM<br />
+                  PILLAR 2 OF 4
+                </div>
+
+                <!-- Main Section Title -->
+                <h1 class="sec-operational-1__title phrase">
+                  OPERATIONAL<br />
+                  INTELLIGENCE
+                </h1>
+
+                <!-- Subtitle / Tagline -->
+                <h2 class="sec-operational-1__subtitle phrase">
+                  Know HOW it gets done.
+                </h2>
+
+                <!-- Core Description -->
+                <p class="sec-operational-1__desc phrase">
+                  The internal-execution read: real cost structure, bottlenecks, process architecture, and readiness to scale or export. Direction is only worth what your operations can deliver.
+                </p>
+
+                <!-- 4iC Breadcrumb Navigation -->
+                <nav
+                  class="sec-operational-1__breadcrumb phrase"
+                  aria-label="4iC Continuum"
+                >
+                  <a
+                    href="market-intelligence.html"
+                    class="sec-operational-1__crumb"
+                  >
+                    MARKET
+                  </a>
+                  <span class="sec-operational-1__crumb-sep">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span
+                    class="sec-operational-1__crumb sec-operational-1__crumb--active"
+                  >
+                    OPERATIONAL
+                  </span>
+                  <span class="sec-operational-1__crumb-sep">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <a
+                    href="digital-intelligence.html"
+                    class="sec-operational-1__crumb"
+                  >
+                    DIGITAL
+                  </a>
+                  <span class="sec-operational-1__crumb-sep">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <a
+                    href="capacity-capability-intelligence.html"
+                    class="sec-operational-1__crumb"
+                  >
+                    CAPACITY &amp; CAPABILITY
+                  </a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="sec-operational-1__cta-wrap phrase">
+                  <a
+                    href="contact.html"
+                    class="sec-operational-1__btn"
+                  >
+                    Discuss your operational question
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Column: 3D Holographic Operations Stage -->
+              <div class="sec-operational-1__right">
+                <div class="sec-operational-1__img-wrapper">
+                  <div class="sec-operational-1__glow"></div>
+                  <img
+                    src="assets/operational-intelligence/sec-1-visual.png"
+                    alt="Operational Intelligence Process Architecture and Operations Stage"
+                    class="sec-operational-1__img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <a
+              href="#section-operational-2"
+              class="sec-operational-1__scroll phrase"
+              aria-label="Scroll to Section 2"
+            >
+              <span class="sec-operational-1__scroll-text">SCROLL DOWN</span>
+              <span class="sec-operational-1__scroll-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 10l5 5 5-5M7 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
         </section>
 
-        <!-- Section 2 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-operational-2" data-section-index="1">
-          <img src="assets/mock_operational/sec-2.png" alt="Operational Intelligence - Section 2" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 2: Questions We Answer (Figma Node 6702:4912) -->
+        <section
+          class="scroll-section swiper-slide sec-operational-2 sec-operational-bg-light"
+          id="section-operational-2"
+          data-section-index="1"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-operational-2__header">
+              <h2 class="sec-operational-2__title phrase">
+                THE QUESTIONS WE ANSWER
+              </h2>
+            </div>
+            <div class="sec-operational-2__grid">
+              <!-- Card 1: Efficiency -->
+              <a href="#section-operational-3" class="sec-operational-2__card phrase">
+                <div class="sec-operational-2__card-left">
+                  <div class="sec-operational-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-operational-2__card-question">
+                    How efficient are our operations, really?
+                  </h3>
+                  <div class="sec-operational-2__card-link">
+                    <span>Explore</span>
+                    <span class="sec-operational-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="sec-operational-2__card-right">
+                  <img
+                    src="assets/operational-intelligence/sec-2-efficiency.png"
+                    alt="Operational Efficiency Analysis Art"
+                    class="sec-operational-2__card-img"
+                  />
+                </div>
+              </a>
+
+              <!-- Card 2: Cost Structure -->
+              <a href="#section-operational-3" class="sec-operational-2__card phrase">
+                <div class="sec-operational-2__card-left">
+                  <div class="sec-operational-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-operational-2__card-question">
+                    What is our true cost structure?
+                  </h3>
+                  <div class="sec-operational-2__card-link">
+                    <span>Explore</span>
+                    <span class="sec-operational-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="sec-operational-2__card-right">
+                  <img
+                    src="assets/operational-intelligence/sec-2-cost.png"
+                    alt="Cost Structure Analysis Art"
+                    class="sec-operational-2__card-img"
+                  />
+                </div>
+              </a>
+
+              <!-- Card 3: Bottlenecks -->
+              <a href="#section-operational-3" class="sec-operational-2__card phrase">
+                <div class="sec-operational-2__card-left">
+                  <div class="sec-operational-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-operational-2__card-question">
+                    Where are the bottlenecks?
+                  </h3>
+                  <div class="sec-operational-2__card-link">
+                    <span>Explore</span>
+                    <span class="sec-operational-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="sec-operational-2__card-right">
+                  <img
+                    src="assets/operational-intelligence/sec-2-bottlenecks.png"
+                    alt="Bottleneck Analysis Art"
+                    class="sec-operational-2__card-img"
+                  />
+                </div>
+              </a>
+
+              <!-- Card 4: Export Readiness & Scaling -->
+              <a href="#section-operational-3" class="sec-operational-2__card phrase">
+                <div class="sec-operational-2__card-left">
+                  <div class="sec-operational-2__card-icon">
+                    <img
+                      src="assets/market-intelligence/sec-2-icon-question.svg"
+                      alt="Question Icon"
+                    />
+                  </div>
+                  <h3 class="sec-operational-2__card-question">
+                    Are we export-ready? Can we scale?
+                  </h3>
+                  <div class="sec-operational-2__card-link">
+                    <span>Explore</span>
+                    <span class="sec-operational-2__card-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="sec-operational-2__card-right">
+                  <img
+                    src="assets/operational-intelligence/sec-2-scale.png"
+                    alt="Export Ready and Scaling Art"
+                    class="sec-operational-2__card-img"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 3 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-operational-3" data-section-index="2">
-          <img src="assets/mock_operational/sec-3.png" alt="Operational Intelligence - Section 3" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 3: What We Examine (Figma Node 5036:4679) -->
+        <section
+          class="scroll-section swiper-slide sec-operational-3 sec-operational-bg-dark"
+          id="section-operational-3"
+          data-section-index="2"
+        >
+          <!-- Blueprint Background Pattern Overlay -->
+          <img
+            src="assets/market-intelligence/sec-3-blueprint.png"
+            alt="What We Examine Blueprint Overlay"
+            class="sec-operational-3__blueprint"
+          />
+
+          <div class="container flex-center-v">
+            <!-- Header: Title & Subtitle -->
+            <div class="sec-operational-3__header">
+              <h2 class="sec-operational-3__title phrase">WHAT WE EXAMINE</h2>
+              <p class="sec-operational-3__subtitle phrase">
+                The anatomy of this intelligence
+              </p>
+            </div>
+
+            <!-- Main Stage: 882px x 520px Composite Strategic Graphic with Ambient Glow -->
+            <div class="sec-operational-3__diagram-wrapper phrase">
+              <div class="sec-operational-3__glow"></div>
+              <img
+                src="assets/operational-intelligence/sec-3-anatomy.png"
+                alt="What We Examine - The anatomy of Operational Intelligence with 6 Core Examination Areas"
+                class="sec-operational-3__diagram-img"
+              />
+            </div>
+          </div>
         </section>
 
-        <!-- Section 4 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-operational-4" data-section-index="3">
-          <img src="assets/mock_operational/sec-4.png" alt="Operational Intelligence - Section 4" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 4: Services Under This Intelligence (Figma Node 5036:4680) -->
+        <section
+          class="scroll-section swiper-slide sec-operational-4 sec-operational-bg-light"
+          id="section-operational-4"
+          data-section-index="3"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-operational-4__stage">
+              <!-- Left Column: Title & 2x3 Services Grid (580px) -->
+              <div class="sec-operational-4__left">
+                <!-- Section Title -->
+                <h2 class="sec-operational-4__title phrase">
+                  SERVICES UNDER<br />
+                  THIS INTELLIGENCE
+                </h2>
+
+                <!-- 2-column x 3-row Service Cards Grid -->
+                <div class="sec-operational-4__cards">
+                  <!-- Service 01 -->
+                  <div class="sec-operational-4__card phrase">
+                    <div class="sec-operational-4__card-num">01</div>
+                    <h3 class="sec-operational-4__card-title">
+                      Operational readiness assessment
+                    </h3>
+                    <p class="sec-operational-4__card-desc">
+                      A baseline of efficiency, capacity, and scale-readiness.
+                    </p>
+                  </div>
+
+                  <!-- Service 02 -->
+                  <div class="sec-operational-4__card phrase">
+                    <div class="sec-operational-4__card-num">02</div>
+                    <h3 class="sec-operational-4__card-title">
+                      Cost structure &amp; bottleneck diagnostics
+                    </h3>
+                    <p class="sec-operational-4__card-desc">
+                      True costs, and the constraints setting your pace.
+                    </p>
+                  </div>
+
+                  <!-- Service 03 -->
+                  <div class="sec-operational-4__card phrase">
+                    <div class="sec-operational-4__card-num">03</div>
+                    <h3 class="sec-operational-4__card-title">
+                      Business process optimisation
+                    </h3>
+                    <p class="sec-operational-4__card-desc">
+                      Core workflows redesigned for throughput and control.
+                    </p>
+                  </div>
+
+                  <!-- Service 04 -->
+                  <div class="sec-operational-4__card phrase">
+                    <div class="sec-operational-4__card-num">04</div>
+                    <h3 class="sec-operational-4__card-title">
+                      Supply chain &amp; warehousing review
+                    </h3>
+                    <p class="sec-operational-4__card-desc">
+                      Flow, storage, and distribution readiness.
+                    </p>
+                  </div>
+
+                  <!-- Service 05 -->
+                  <div class="sec-operational-4__card phrase">
+                    <div class="sec-operational-4__card-num">05</div>
+                    <h3 class="sec-operational-4__card-title">
+                      Quality &amp; ISO readiness support
+                    </h3>
+                    <p class="sec-operational-4__card-desc">
+                      Gap assessment and roadmap, with independent certification bodies.
+                    </p>
+                  </div>
+
+                  <!-- Service 06 -->
+                  <div class="sec-operational-4__card phrase">
+                    <div class="sec-operational-4__card-num">06</div>
+                    <h3 class="sec-operational-4__card-title">
+                      Export &amp; scale readiness programme
+                    </h3>
+                    <p class="sec-operational-4__card-desc">
+                      What must be true before volume grows.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: 3D Isometric Puzzle Visual (570px x 570px) -->
+              <div class="sec-operational-4__right">
+                <div class="sec-operational-4__img-wrapper">
+                  <img
+                    src="assets/operational-intelligence/sec-4-services.png"
+                    alt="Operational Services Isometric Hexagonal Process Architecture Visual"
+                    class="sec-operational-4__img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 5 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-operational-5" data-section-index="4">
-          <img src="assets/mock_operational/sec-5.png" alt="Operational Intelligence - Section 5" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 5: Builds On -> Feeds Into (Figma Node 6702:5005) -->
+        <section
+          class="scroll-section swiper-slide sec-operational-5 sec-operational-bg-dark"
+          id="section-operational-5"
+          data-section-index="4"
+        >
+          <!-- Blueprint Background Pattern Overlay -->
+          <img
+            src="assets/market-intelligence/sec-3-blueprint.png"
+            alt="Operational Methodology Blueprint Overlay"
+            class="sec-operational-5__blueprint"
+          />
+
+          <div class="container flex-center-v">
+            <!-- Top Stepper Indicator with Connecting Line (1 -> 2) -->
+            <div class="sec-operational-5__stepper">
+              <div
+                class="sec-operational-5__step-node sec-operational-5__step-node--1 phrase"
+              >
+                1
+              </div>
+              <div class="sec-operational-5__step-line phrase"></div>
+              <div
+                class="sec-operational-5__step-node sec-operational-5__step-node--2 phrase"
+              >
+                2
+              </div>
+            </div>
+
+            <!-- Two-Column Architecture Stage -->
+            <div class="sec-operational-5__stage">
+              <!-- Left Column: BUILDS ON -->
+              <div class="sec-operational-5__col sec-operational-5__col--left">
+                <h2 class="sec-operational-5__col-title phrase">BUILDS ON</h2>
+                <p class="sec-operational-5__col-desc phrase">
+                  <a
+                    href="market-intelligence.html"
+                    class="sec-operational-5__link"
+                    >Market Intelligence</a
+                  >: a direction worth executing.
+                </p>
+                <div class="sec-operational-5__img-box phrase">
+                  <!-- Ambient Spotlight Glow Anchored to Image Center -->
+                  <div class="sec-operational-5__glow"></div>
+                  <img
+                    src="assets/operational-intelligence/sec-5-left.png"
+                    alt="Builds On: Market Intelligence Visual"
+                    class="sec-operational-5__img"
+                  />
+                </div>
+              </div>
+
+              <!-- Center Flow Arrow (230px wide, 15px gap to each image) -->
+              <div class="sec-operational-5__arrow-wrap phrase">
+                <svg
+                  class="sec-operational-5__arrow-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="230"
+                  height="40"
+                  viewBox="0 0 230 40"
+                  fill="none"
+                >
+                  <path
+                    d="M0 20L200 20"
+                    stroke="url(#paint0_linear_operational_5)"
+                    stroke-width="16"
+                  />
+                  <path
+                    d="M230 20L200 37.3205L200 2.67949L230 20Z"
+                    fill="#39C0FF"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_operational_5"
+                      x1="-4.37114e-08"
+                      y1="20.5"
+                      x2="200"
+                      y2="20.5"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#39C0FF" stop-opacity="0" />
+                      <stop offset="0.6" stop-color="#39C0FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <!-- Right Column: FEEDS INTO -->
+              <div class="sec-operational-5__col sec-operational-5__col--right">
+                <h2 class="sec-operational-5__col-title phrase">FEEDS INTO</h2>
+                <p class="sec-operational-5__col-desc phrase">
+                  <a
+                    href="digital-intelligence.html"
+                    class="sec-operational-5__link"
+                    >Digital Intelligence</a
+                  >: turning direction into execution.
+                </p>
+                <div class="sec-operational-5__img-box phrase">
+                  <!-- Ambient Spotlight Glow Anchored to Image Center -->
+                  <div class="sec-operational-5__glow"></div>
+                  <img
+                    src="assets/operational-intelligence/sec-5-right.png"
+                    alt="Feeds Into: Digital Intelligence Visual"
+                    class="sec-operational-5__img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 6 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-operational-6" data-section-index="5">
-          <img src="assets/mock_operational/sec-6.png" alt="Operational Intelligence - Section 6" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 6: Aliro Perspective (Figma Node 5029:4312) -->
+        <section
+          class="scroll-section swiper-slide sec-operational-6 sec-operational-bg-light"
+          id="section-operational-6"
+          data-section-index="5"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-operational-6__stage">
+              <!-- Left Column: Eyebrow + Strategic Statement (670px) -->
+              <div class="sec-operational-6__left">
+                <div class="sec-operational-6__eyebrow phrase">
+                  ALIRO PERSPECTIVE
+                </div>
+                <h2 class="sec-operational-6__statement phrase">
+                  A scale-up without a market-back rationale builds capacity toward no demand. We test the direction before we tune the engine.
+                </h2>
+              </div>
+
+              <!-- Right Column: 3D Isometric Perspective Visual (470px x 314px) -->
+              <div class="sec-operational-6__right phrase">
+                <div class="sec-operational-6__img-wrapper">
+                  <img
+                    src="assets/operational-intelligence/sec-6-visual.png"
+                    alt="Aliro Perspective - Operational Engine & Direction Visual"
+                    class="sec-operational-6__img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 7 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-operational-7" data-section-index="6">
-          <img src="assets/mock_operational/sec-7.png" alt="Operational Intelligence - Section 7" class="mockup-img" onerror="this.style.opacity='0'" />
+        <!-- Section 7: Where It Enters (Figma Node 6703:5020) -->
+        <section
+          class="scroll-section swiper-slide sec-operational-7 sec-operational-bg-light"
+          id="section-operational-7"
+          data-section-index="6"
+        >
+          <div class="container flex-center-v">
+            <div class="sec-operational-7__stage">
+              <!-- Left Column: 3 Decision Cards Grid (772px) -->
+              <div class="sec-operational-7__cards-wrap">
+                <!-- Card 1 -->
+                <div class="sec-operational-7__card phrase">
+                  <div class="sec-operational-7__card-img-box">
+                    <img
+                      src="assets/operational-intelligence/sec-7-card-1.png"
+                      alt="Manufacturers scaling or exporting Visual"
+                      class="sec-operational-7__card-img"
+                    />
+                  </div>
+                  <h3 class="sec-operational-7__card-title">
+                    Manufacturers scaling or exporting
+                  </h3>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="sec-operational-7__card phrase">
+                  <div class="sec-operational-7__card-img-box">
+                    <img
+                      src="assets/operational-intelligence/sec-7-card-2.png"
+                      alt="Hospitals and facilities under efficiency pressure Visual"
+                      class="sec-operational-7__card-img"
+                    />
+                  </div>
+                  <h3 class="sec-operational-7__card-title">
+                    Hospitals and facilities under efficiency pressure
+                  </h3>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="sec-operational-7__card phrase">
+                  <div class="sec-operational-7__card-img-box">
+                    <img
+                      src="assets/operational-intelligence/sec-7-card-3.png"
+                      alt="Operators preparing for growth or audit Visual"
+                      class="sec-operational-7__card-img"
+                    />
+                  </div>
+                  <h3 class="sec-operational-7__card-title">
+                    Operators preparing for growth or audit
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Right Column: Eyebrow + Strategic Statement + CTA Button (370px) -->
+              <div class="sec-operational-7__right">
+                <div class="sec-operational-7__eyebrow phrase">
+                  WHERE IT ENTERS
+                </div>
+                <h2 class="sec-operational-7__statement phrase">
+                  The natural entry point for operationally-led organisations: readiness assessments, cost and bottleneck diagnostics, facility and export reviews.
+                </h2>
+                <div class="sec-operational-7__cta-wrap phrase">
+                  <a
+                    href="contact.html"
+                    class="sec-operational-7__btn"
+                  >
+                    Discuss a Operational Intelligence Diagnostic
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Section 8 -->
-        <section class="scroll-section swiper-slide sec-mockup" id="section-operational-8" data-section-index="7">
-          <img src="assets/mock_operational/sec-8.png" alt="Operational Intelligence - Section 8" class="mockup-img" onerror="this.style.opacity='0'" />
-        </section>
-
+        <!-- Section 8: Final Contact & Entity Details (Shared Reusable Footer Component) -->
+        <section
+          class="scroll-section swiper-slide sec-10 sec-operational-8 sec-operational-bg-light"
+          id="section-operational-8"
+          data-section-index="7"
+          data-shared-footer
+        ></section>
       </div>
     </main>
 

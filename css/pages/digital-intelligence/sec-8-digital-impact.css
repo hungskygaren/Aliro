@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Section 8: Digital Intelligence - Where It Enters & Impact
+   ========================================================================== */
+
+.sec-digital-8 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #ffffff !important;
+  box-sizing: border-box;
+  color: var(--Midnight-Navy, #01103b);
+}
+
+.sec-digital-8 .flex-center-v {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sec-digital-8__stage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1170px;
+  gap: 28px;
+  position: relative;
+  z-index: 3;
+}
+
+.sec-digital-8__cards-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 244px);
+  gap: 20px;
+  width: fit-content;
+  flex-shrink: 0;
+}
+
+.sec-digital-8__card {
+  width: 244px;
+  height: 370px;
+  background-color: #ffffff;
+  border: 1px solid rgba(126, 147, 168, 0.5);
+  padding: 13px 12px 20px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-digital-8__card:nth-child(1) { transition-delay: 0.1s; }
+.sec-digital-8__card:nth-child(2) { transition-delay: 0.22s; }
+.sec-digital-8__card:nth-child(3) { transition-delay: 0.34s; }
+
+.sec-digital-8__card-img-box {
+  width: 220px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.sec-digital-8__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.sec-digital-8__card-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0;
+}
+
+.sec-digital-8__right {
+  width: 370px;
+  max-width: 370px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+}
+
+.sec-digital-8__eyebrow {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  letter-spacing: 0px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+.sec-digital-8__statement {
+  font-family: Aptos, var(--font-brand);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0 0 30px 0;
+  letter-spacing: 0px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.3s;
+}
+
+.sec-digital-8__cta-wrap {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.4s;
+}
+
+.sec-digital-8__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Highlight-Blue, #0431b1);
+  color: #ffffff;
+  font-family: Aptos, var(--font-brand);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.25);
+  width: fit-content;
+}
+
+.sec-digital-8__btn:hover {
+  background-color: #032488;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(4, 49, 177, 0.4);
+}
+
+.sec-digital-8.slide-animated .sec-digital-8__card,
+.sec-digital-8.slide-animated .sec-digital-8__eyebrow,
+.sec-digital-8.slide-animated .sec-digital-8__statement,
+.sec-digital-8.slide-animated .sec-digital-8__cta-wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-digital-8.visited * {
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.sec-digital-8.visited .sec-digital-8__card,
+.sec-digital-8.visited .sec-digital-8__eyebrow,
+.sec-digital-8.visited .sec-digital-8__statement,
+.sec-digital-8.visited .sec-digital-8__cta-wrap {
+  transform: none !important;
+}

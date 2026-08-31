@@ -1,0 +1,567 @@
+/* ==========================================================================
+   Section 1: Hero - Operational Intelligence (Pillar 2 of 4)
+   Figma Node: 6702:4896
+   ========================================================================== */
+
+.sec-operational-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #1e55b3 0%,
+    #174495 25%,
+    #103377 50%,
+    #082159 75%,
+    #01103b 100%
+  ) !important;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.sec-operational-1 .flex-center-v {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 3;
+}
+
+/* --------------------------------------------------------------------------
+   Stage: 2-Column Flex Layout (1170px Standard)
+   -------------------------------------------------------------------------- */
+.sec-operational-1__stage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  gap: 30px;
+  position: relative;
+  z-index: 3;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Strategic Typography & Breadcrumbs
+   -------------------------------------------------------------------------- */
+.sec-operational-1__left {
+  flex: 1;
+  max-width: 530px;
+  z-index: 4;
+}
+
+.sec-operational-1__eyebrow {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  letter-spacing: 0px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  transition-delay: 0.1s;
+}
+
+.sec-operational-1__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 18px 0;
+  letter-spacing: 0px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  transition-delay: 0.15s;
+}
+
+.sec-operational-1__subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: 0px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  transition-delay: 0.2s;
+}
+
+.sec-operational-1__desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  max-width: 470px;
+  transition-delay: 0.25s;
+}
+
+/* 4iC Breadcrumb Navigation */
+.sec-operational-1__breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  margin-bottom: 20px;
+  transition-delay: 0.3s;
+}
+
+.sec-operational-1__crumb {
+  font-family: Aptos, var(--font-brand);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.sec-operational-1__crumb:hover {
+  color: #39c0ff;
+}
+
+.sec-operational-1__crumb--active {
+  color: #ffffff;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+.sec-operational-1__crumb-sep {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0.75;
+}
+
+.sec-operational-1__crumb-sep svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* CTA Button */
+.sec-operational-1__cta-wrap {
+  transition-delay: 0.35s;
+}
+
+.sec-operational-1__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Highlight-Blue, #0431b1);
+  color: #ffffff;
+  font-family: Aptos, var(--font-brand);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7px 16px 8px 16px;
+  border-radius: 0px;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.25);
+}
+
+.sec-operational-1__btn:hover {
+  background-color: #03258c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(4, 49, 177, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: 3D Holographic Operations & Process Flow Stage (670px x 446px)
+   -------------------------------------------------------------------------- */
+.sec-operational-1__right {
+  width: 670px;
+  max-width: 670px;
+  height: auto;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.25s;
+}
+
+.sec-operational-1__img-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-operational-1__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 450px;
+  border-radius: 50%;
+  background: rgba(34, 108, 180, 0.7);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec-operational-1__img {
+  width: 100%;
+  height: auto;
+  max-height: 446px;
+  aspect-ratio: 670 / 446;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.sec-operational-1.slide-animated .sec-operational-1__right {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-operational-1.visited .sec-operational-1__right {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Down Indicator
+   -------------------------------------------------------------------------- */
+.sec-operational-1__scroll {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 5;
+  transition-delay: 0.4s;
+  transition: opacity 0.3s ease;
+}
+
+.sec-operational-1__scroll-text {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #c5daf3;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.sec-operational-1__scroll-icon {
+  width: 24px;
+  height: 24px;
+  color: #c5daf3;
+  opacity: 0.7;
+  animation: heroBounce 2s infinite ease-in-out;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.sec-operational-1__scroll:hover .sec-operational-1__scroll-text,
+.sec-operational-1__scroll:hover .sec-operational-1__scroll-icon {
+  opacity: 1;
+  color: #ffffff;
+}
+
+@keyframes heroBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Sequential Domino Animation Engine
+   -------------------------------------------------------------------------- */
+.sec-operational-1 .phrase {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-operational-1__scroll.phrase {
+  transform: translateX(-50%) translateY(15px);
+}
+
+.sec-operational-1.slide-animated .phrase {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-operational-1.slide-animated .sec-operational-1__scroll.phrase {
+  opacity: 0.8;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Visited Slide State */
+.sec-operational-1.visited .phrase {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.sec-operational-1.visited .sec-operational-1__scroll.phrase {
+  opacity: 0.7 !important;
+  transform: translateX(-50%) !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 700px) and (min-width: 992px) {
+  .sec-operational-1 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-operational-1__eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .sec-operational-1__title {
+    margin-bottom: 12px;
+  }
+
+  .sec-operational-1__subtitle {
+    margin-bottom: 10px;
+  }
+
+  .sec-operational-1__desc {
+    margin-bottom: 14px;
+  }
+
+  .sec-operational-1__breadcrumb {
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-operational-1 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .sec-operational-1__stage {
+    gap: 20px;
+  }
+
+  .sec-operational-1__eyebrow {
+    margin-bottom: 8px;
+  }
+
+  .sec-operational-1__title {
+    margin-bottom: 10px;
+  }
+
+  .sec-operational-1__subtitle {
+    margin-bottom: 8px;
+  }
+
+  .sec-operational-1__desc {
+    margin-bottom: 12px;
+  }
+
+  .sec-operational-1__breadcrumb {
+    margin-bottom: 12px;
+  }
+
+  .sec-operational-1__right {
+    max-width: 580px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 992px) {
+  .sec-operational-1 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 5px;
+  }
+
+  .sec-operational-1__eyebrow {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 6px;
+  }
+
+  .sec-operational-1__title {
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 8px;
+  }
+
+  .sec-operational-1__subtitle {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 6px;
+  }
+
+  .sec-operational-1__desc {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    max-width: 440px;
+  }
+
+  .sec-operational-1__breadcrumb {
+    margin-bottom: 10px;
+  }
+
+  .sec-operational-1__crumb {
+    font-size: 13px;
+  }
+
+  .sec-operational-1__right {
+    max-width: 540px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-operational-1 .flex-center-v {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sec-operational-1__left {
+    max-width: 480px;
+  }
+
+  .sec-operational-1__title {
+    font-size: 38px;
+    line-height: 44px;
+  }
+
+  .sec-operational-1__right {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sec-operational-1 {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sec-operational-1 .flex-center-v {
+    padding-top: 85px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+  }
+
+  .sec-operational-1__stage {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .sec-operational-1__left {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .sec-operational-1__desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sec-operational-1__breadcrumb {
+    justify-content: center;
+  }
+
+  .sec-operational-1__right {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .sec-operational-1__img {
+    max-height: 380px;
+  }
+
+  .sec-operational-1__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-operational-1__eyebrow {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .sec-operational-1__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .sec-operational-1__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .sec-operational-1__desc {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .sec-operational-1__crumb {
+    font-size: 12px;
+  }
+}
