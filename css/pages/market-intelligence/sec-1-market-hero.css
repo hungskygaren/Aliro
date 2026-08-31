@@ -228,7 +228,6 @@
   display: block;
 }
 
-.sec-market-1.swiper-slide-active .sec-market-1__right,
 .sec-market-1.slide-animated .sec-market-1__right {
   opacity: 1;
   transform: translateY(0);
@@ -316,13 +315,11 @@
   transform: translateX(-50%) translateY(15px);
 }
 
-.sec-market-1.swiper-slide-active .phrase,
 .sec-market-1.slide-animated .phrase {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-market-1.swiper-slide-active .sec-market-1__scroll.phrase,
 .sec-market-1.slide-animated .sec-market-1__scroll.phrase {
   opacity: 0.8;
   transform: translateX(-50%) translateY(0);

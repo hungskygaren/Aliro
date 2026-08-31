@@ -37,7 +37,6 @@
   margin-top: 15px;
   margin-bottom: 35px;
   z-index: 4;
-  transition-delay: 0.1s;
 }
 
 .sec-market-2__title {
@@ -52,6 +51,12 @@
   font-feature-settings:
     "liga" off,
     "clig" off;
+  opacity: 0;
+  transform: translateY(-25px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
 }
 
 /* --------------------------------------------------------------------------
@@ -83,23 +88,26 @@
   color: inherit;
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(1, 16, 59, 0.03);
+  opacity: 0;
+  transform: translateY(40px);
   transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
+    border-color 0.3s ease;
 }
 
 .sec-market-2__card:nth-child(1) {
-  transition-delay: 0.2s;
+  transition-delay: 0.16s;
 }
 .sec-market-2__card:nth-child(2) {
-  transition-delay: 0.3s;
+  transition-delay: 0.26s;
 }
 .sec-market-2__card:nth-child(3) {
-  transition-delay: 0.4s;
+  transition-delay: 0.36s;
 }
 .sec-market-2__card:nth-child(4) {
-  transition-delay: 0.5s;
+  transition-delay: 0.46s;
 }
 
 .sec-market-2__card:hover {
@@ -198,27 +206,28 @@
 }
 
 /* --------------------------------------------------------------------------
-   Sequential Domino Animation Engine
+   Sequential Domino Animation Engine & Slide Active Triggers
    -------------------------------------------------------------------------- */
-.sec-market-2 .phrase {
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+.sec-market-2.slide-animated .sec-market-2__title {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.sec-market-2.swiper-slide-active .phrase,
-.sec-market-2.slide-animated .phrase {
+.sec-market-2.slide-animated .sec-market-2__card {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Visited Slide State (Instant display without re-animating) */
-.sec-market-2.visited .phrase {
+.sec-market-2.visited * {
   opacity: 1 !important;
-  transform: none !important;
   transition: none !important;
+}
+
+.sec-market-2.visited .sec-market-2__title,
+.sec-market-2.visited .sec-market-2__card,
+.sec-market-2.visited .phrase {
+  transform: none !important;
 }
 
 /* --------------------------------------------------------------------------

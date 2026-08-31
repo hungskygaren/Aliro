@@ -128,13 +128,24 @@
    -------------------------------------------------------------------------- */
 .sec-market-3 .phrase {
   opacity: 0;
-  transform: translateY(25px);
+  transform: translateY(35px);
   transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-market-3.swiper-slide-active .phrase,
+.sec-market-3__title.phrase {
+  transition-delay: 0.1s;
+}
+
+.sec-market-3__subtitle.phrase {
+  transition-delay: 0.2s;
+}
+
+.sec-market-3__diagram-wrapper.phrase {
+  transition-delay: 0.3s;
+}
+
 .sec-market-3.slide-animated .phrase {
   opacity: 1;
   transform: translateY(0);
