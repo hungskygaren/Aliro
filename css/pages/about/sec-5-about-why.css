@@ -38,7 +38,7 @@
   position: relative;
   text-align: center;
   width: 100%;
-  margin-top: 52px;
+  margin-top: calc(52 / 720 * 100dvh);
   margin-bottom: 24px;
   z-index: 4;
   opacity: 0;
@@ -252,29 +252,15 @@
 }
 
 /* ==========================================================================
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 660px)
    ========================================================================== */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-about-5 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 15px;
+    justify-content: center;
   }
 
   .sec-about-5__header {
-    margin-top: 30px;
-    margin-bottom: 18px;
-  }
-}
-
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-about-5 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
-  }
-
-  .sec-about-5__header {
-    margin-top: 16px;
-    margin-bottom: 12px;
+    margin-top: 0;
   }
 }
 

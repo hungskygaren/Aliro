@@ -37,7 +37,7 @@
 /* Left Content Column */
 .sec-about-1__left {
   position: absolute;
-  top: 28.19%; /* 203px / 720px Figma frame height */
+  top: calc(203 / 720 * 100dvh); /* 203px / 720px Figma frame height */
   left: 0;
   width: 50%;
   max-width: 570px;
@@ -105,7 +105,7 @@
 /* Right Visual Column */
 .sec-about-1__right {
   position: absolute;
-  top: 22.08%; /* 159px / 720px Figma frame height */
+  top: calc(159 / 720 * 100dvh); /* 159px / 720px Figma frame height */
   right: 0;
   width: 50%;
   max-width: 570px;

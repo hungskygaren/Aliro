@@ -30,7 +30,7 @@
   max-width: 1170px;
   margin: 0 auto;
   position: relative;
-  padding-top: calc(126 / 720 * 100vh); /* 17.5vh = đúng 126px trong màn 720 */
+  padding-top: calc(126 / 720 * 100dvh); /* 17.5dvh = đúng 126px trong màn 720 */
   box-sizing: border-box;
 }
 
@@ -454,6 +454,16 @@
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-about-8 .container {
+    justify-content: center;
+    padding-top: 70px;
+  }
 }
 
 /* ==========================================================================

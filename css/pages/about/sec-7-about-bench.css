@@ -32,7 +32,7 @@
 /* Header Area: top 130px / 720px = 18.06% */
 .sec-about-7__header {
   position: absolute;
-  top: 15.06%;
+  top: calc(130 / 720 * 100dvh);
   left: 50%;
   transform: translate(-50%, -20px);
   text-align: center;
@@ -82,7 +82,7 @@
 /* Center Graphic: Full 1170x428 3D Command Platform with connecting brackets */
 .sec-about-7__center {
   position: absolute;
-  top: 35.28%;
+  top: calc(254 / 720 * 100dvh);
   left: 0;
   width: 100%;
   max-width: 1170px;
@@ -109,7 +109,7 @@
 /* Left & Right Advisor Columns (Top 196px / 720px = 27.22%) */
 .sec-about-7__advisor {
   position: absolute;
-  top: 27.22%; /* 196px / 720px */
+  top: calc(196 / 720 * 100dvh);
   width: 370px;
   display: flex;
   flex-direction: column;
