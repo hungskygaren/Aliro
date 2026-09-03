@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 1: Hero - Digital Intelligence (Pillar 3 of 4)
-   Figma Node: 6703:5021
-   ========================================================================== */
-
 .sec-digital-1 {
   position: relative;
   overflow: hidden;
@@ -29,16 +24,13 @@
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Stage: 2-Column Flex Layout (1170px Standard)
-   -------------------------------------------------------------------------- */
 .sec-digital-1__stage {
   display: flex;
   align-items: flex-start;
@@ -51,10 +43,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: Strategic Typography & Breadcrumbs
-   Figma: Top 168px - 70px Header = 98px
-   -------------------------------------------------------------------------- */
 .sec-digital-1__left {
   flex: 1;
   max-width: 530px;
@@ -117,7 +105,6 @@
   transition-delay: 0.25s;
 }
 
-/* 4iC Breadcrumb Navigation */
 .sec-digital-1__breadcrumb {
   display: flex;
   align-items: center;
@@ -165,7 +152,6 @@
   height: 100%;
 }
 
-/* CTA Button */
 .sec-digital-1__cta-wrap {
   transition-delay: 0.35s;
 }
@@ -190,10 +176,6 @@
   background-color: var(--color-primary-hover, #03258c);
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: 3D Holographic Digital Process Architecture (670px x 563px)
-   Figma: Top 90px - 70px Header = 20px
-   -------------------------------------------------------------------------- */
 .sec-digital-1__right {
   width: 670px;
   max-width: 670px;
@@ -239,9 +221,6 @@
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 700px) and (min-width: 992px) {
   .sec-digital-1 .flex-center-v {
     padding-top: 70px;
@@ -284,9 +263,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-digital-1__stage {
     gap: 20px;

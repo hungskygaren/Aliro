@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Sections 5, 6, 7, 8: Unified Deep Blue Background & Continuous Vertical Line
-   ========================================================================== */
 .sec-5,
 .sec-6,
 .sec-7,
@@ -37,11 +34,6 @@
   position: relative;
 }
 
-/* 2px Continuous Co-axial Vertical Lines aligned 100% with Section 4 */
-
-/* Section 5-8 Core Typography and Layout Specs */
-
-/* Section 5 Absolute Layout Specs (Positioned at Column 6 with 50% Y-centering) */
 .sec-5 .container {
   height: 100%;
   display: flex;
@@ -51,7 +43,7 @@
 
 .sec-5__content {
   position: absolute;
-  top: 24.0278dvh; /* 173px / 720px */
+  top: 24.0278dvh; 
   left: 0;
   z-index: 4;
   width: 41.667%;
@@ -65,7 +57,7 @@
 
 .sec-5__img-right {
   position: absolute;
-  top: 14.4444dvh; /* 104px / 720px */
+  top: 14.4444dvh; 
   left: calc(41.667% + 15px);
   right: 0;
   width: calc(58.333% - 15px);
@@ -113,8 +105,6 @@
 .sec-5__title .d-block {
   display: block !important;
 }
-
-/* Animations for Section 5 unified with 6, 7, 8 below */
 
 .sec-5__desc {
   color: var(--Midnight-Navy, #01103b);
@@ -180,7 +170,6 @@
   background-color: var(--color-primary-hover, #03258c);
 }
 
-/* Disable old phrase animations in Section 5 to let containers handle transition */
 .sec-5 .phrase {
   display: inline-block;
   opacity: 1;
@@ -188,11 +177,6 @@
   transition: none;
 }
 
-/* Section 5 Active Timeline Sequence removed to prevent delay - unified below */
-
-/* ==========================================================================
-   Section 7: Digital Intelligence Details (100% Synced with Section 5 Layout)
-   ========================================================================== */
 .sec-7__content {
   position: absolute;
   top: 23.8889dvh;
@@ -294,10 +278,9 @@
   background-color: var(--color-primary-hover, #03258c);
 }
 
-/* Section 7 Right Image (Fits neatly in Column 6-11 inside Container: 570px max-width) */
 .sec-7__img-right {
   position: absolute;
-  top: 15.8333dvh; /* 114px / 720px */
+  top: 15.8333dvh; 
   left: calc(41.667% + 15px);
   right: auto;
   width: calc(50% - 15px);
@@ -316,11 +299,10 @@
     transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Section 6 Luminous Glow Background Layer behind 670px Left Image */
 .sec-6 .container::after {
   content: "";
   position: absolute;
-  top: 18.75dvh; /* 135px / 720px */
+  top: 18.75dvh; 
   left: 0;
   width: calc(58.333% - 15px);
   max-width: 670px;
@@ -339,11 +321,10 @@
   opacity: 1;
 }
 
-/* Section 8 Luminous Glow Background Layer behind 570px Left Image */
 .sec-8 .container::after {
   content: "";
   position: absolute;
-  top: 18.1944dvh; /* 131px / 720px */
+  top: 18.1944dvh; 
   left: 0;
   width: calc(50% - 15px);
   max-width: 570px;
@@ -362,10 +343,9 @@
   opacity: 1;
 }
 
-/* Section 6 Left Image (Fits neatly in Column 1-7 inside Container: 670px x 535px max) */
 .sec-6__img-left {
   position: absolute;
-  top: 18.75dvh; /* 135px / 720px */
+  top: 18.75dvh; 
   left: 0;
   right: auto;
   width: calc(58.333% - 15px);
@@ -385,10 +365,9 @@
     transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Section 8 Left Image (Fits neatly in Column 1-6 inside Container: 570px x 456px max) */
 .sec-8__img-left {
   position: absolute;
-  top: 18.1944dvh; /* 131px / 720px */
+  top: 18.1944dvh; 
   left: 0;
   right: auto;
   width: calc(50% - 15px);
@@ -408,7 +387,6 @@
     transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Disable old phrase animations to let containers handle transition */
 .sec-6 .phrase,
 .sec-7 .phrase,
 .sec-8 .phrase {
@@ -418,10 +396,9 @@
   transition: none;
 }
 
-/* Section 7 Content Block (Left-Wing Layout: Starts offset to the right) */
 .sec-7__content {
   position: absolute;
-  top: 22.7778dvh; /* 164px / 720px */
+  top: 22.7778dvh; 
   left: 0;
   width: 41.667%;
   max-width: 470px;
@@ -433,15 +410,12 @@
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==========================================================================
-   Sections 6 & 8: Right-Wing Content Blocks (Symmetrical Z-Pattern: Starts offset to the left)
-   ========================================================================== */
 .sec-6__content {
   position: absolute;
-  top: 23.8889dvh; /* 172px / 720px */
-  left: calc(58.333% + 15px); /* Starts at Column 8 */
+  top: 23.8889dvh; 
+  left: calc(58.333% + 15px); 
   right: auto;
-  width: calc(41.667% - 15px); /* Spans 5 columns total */
+  width: calc(41.667% - 15px); 
   max-width: 470px;
   opacity: 0;
   transform: translateY(40px);
@@ -453,10 +427,10 @@
 
 .sec-8__content {
   position: absolute;
-  top: 20.5556dvh; /* 148px / 720px */
-  left: calc(50% + 15px); /* Starts at Column 7 */
+  top: 20.5556dvh; 
+  left: calc(50% + 15px); 
   right: auto;
-  width: calc(41.667% - 15px); /* Spans Columns 7-11 (5 columns total) */
+  width: calc(41.667% - 15px); 
   max-width: 470px;
   opacity: 0;
   transform: translateY(40px);
@@ -545,7 +519,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 133.333% */
+  line-height: 24px; 
   text-transform: uppercase;
   margin: 0 0 30px 0;
 }
@@ -608,7 +582,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 133.333% */
+  line-height: 24px; 
   text-transform: uppercase;
   margin: 0 0 30px 0;
 }
@@ -647,7 +621,6 @@
   background-color: var(--color-primary-hover, #03258c);
 }
 
-/* --- SECTION 6 ACTIVE TIMELINE SEQUENCE --- */
 .sec-5.slide-animated .sec-5__content,
 .sec-6.slide-animated .sec-6__content,
 .sec-7.slide-animated .sec-7__content,
@@ -682,13 +655,12 @@
   transition: none !important;
 }
 
-/* --- RETURN TO 4iC BUTTON (Sections 5-8) --- */
 .btn-return-4ic {
   position: absolute;
   top: auto;
   left: auto;
-  right: 4.2361vw; /* 61px / 1440px = 4.2361vw fluid scaling */
-  bottom: 5.5556dvh; /* 40px / 720px = 5.5556dvh fluid scaling */
+  right: 4.2361vw; 
+  bottom: 5.5556dvh; 
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -727,19 +699,16 @@
   flex-shrink: 0;
 }
 
-/* Sections 6 & 8 (Dark Background) */
 .sec-6 .btn-return-4ic,
 .sec-8 .btn-return-4ic {
   color: var(--Light-Glow, #c5daf3);
 }
 
-/* Sections 5 & 7 (Light Background) */
 .sec-5 .btn-return-4ic,
 .sec-7 .btn-return-4ic {
   color: var(--Mid-Blue-Gray, #7e93a8);
 }
 
-/* Instant White Hover for All Sections (No Animation/Delay) */
 .btn-return-4ic:hover,
 .sec-5 .btn-return-4ic:hover,
 .sec-6 .btn-return-4ic:hover,
@@ -749,7 +718,6 @@
   transition: none !important;
 }
 
-/* Active Timeline Sequence: Fade-in after vertical line finishes drawing (1.2s delay) */
 .sec-5.slide-animated .btn-return-4ic,
 .sec-6.slide-animated .btn-return-4ic,
 .sec-7.slide-animated .btn-return-4ic,
@@ -759,7 +727,6 @@
   transition-delay: 1.2s;
 }
 
-/* Visited State: Stay visible when scrolling back */
 .sec-5.visited .btn-return-4ic,
 .sec-6.visited .btn-return-4ic,
 .sec-7.visited .btn-return-4ic,
@@ -775,9 +742,6 @@
   display: block;
 }
 
-/* ==========================================================================
-   Sections 5, 6, 7, 8 Pillars Responsive Rules (<= 991px & <= 767px)
-   ========================================================================== */
 @media (max-width: 991px) {
   .sec-5,
   .sec-7 {
@@ -797,7 +761,6 @@
     display: inline;
   }
 
-  /* 1. Upper-Third Container Flexbox */
   .sec-5 .container,
   .sec-6 .container,
   .sec-7 .container,
@@ -814,7 +777,6 @@
     position: relative;
   }
 
-  /* 2. Text content centered */
   .sec-5__content,
   .sec-6__content,
   .sec-7__content,
@@ -833,7 +795,6 @@
     margin: 0;
   }
 
-  /* 3. Full-size large 3D Visual Graphics flowing 24px directly below content with entrance animation */
   .sec-5__img-right,
   .sec-6__img-left,
   .sec-7__img-right,
@@ -870,7 +831,6 @@
     transition-delay: 0.25s !important;
   }
 
-  /* 4. "Return to 4iC" Button Positioning & Contrast on Mobile (Bottom Right Corner with Dark Background) */
   .btn-return-4ic,
   .sec-5 .btn-return-4ic,
   .sec-6 .btn-return-4ic,
@@ -951,7 +911,6 @@
   }
 }
 
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-5__number,
   .sec-6__number,

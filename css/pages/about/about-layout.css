@@ -1,35 +1,21 @@
-/* ==========================================================================
-   About Us Page Layout & Modular Section Imports (Development Mode)
-   ========================================================================== */
-
-/* Section 1: About Hero */
 @import "./sec-1-about-hero.css";
 
-/* Section 2: Four Intelligence Continuum (4iC) */
 @import "./sec-2-about-continuum.css";
 
-/* Section 3: Regional Presence */
 @import "./sec-3-about-regional.css";
 
-/* Section 4: Strategic Intelligence & Advisory Services Matrix */
 @import "./sec-4-about-services.css";
 
-/* Section 5: Why Partner with Aliro? */
 @import "./sec-5-about-why.css";
 
-/* Section 6: Selected Engagements & Stats */
 @import "./sec-6-about-engagements.css";
 
-/* Section 7: The Senior Bench */
 @import "./sec-7-about-bench.css";
 
-/* Section 8: Connected Journey (6 Steps) */
 @import "./sec-8-about-journey.css";
 
-/* Section 9: Final Contact & Entity Details (Reused Footer from Home) */
 @import "../home/sec-10-contact.css";
 
-/* Placeholder content layout */
 .about-placeholder-content {
   display: flex;
   flex-direction: column;
@@ -69,16 +55,11 @@
   opacity: 0.9;
 }
 
-/* ==========================================================================
-   Custom Scrollbars for About Page (No arrow buttons, sleek & modern)
-   ========================================================================== */
-
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
-/* Remove 2 up/down arrow buttons completely */
 ::-webkit-scrollbar-button,
 ::-webkit-scrollbar-button:single-button,
 ::-webkit-scrollbar-button:vertical:start:decrement,
@@ -109,7 +90,6 @@
   background: transparent;
 }
 
-/* Dark Section 1 scrollbar adaptation */
 .sec-about-1::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.35);
 }

@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 2: About Us - The Four Intelligence Continuum (4iC)
-   Figma Node: 6701:1927
-   ========================================================================== */
-
 .sec-about-2 {
   position: relative;
   overflow: hidden;
@@ -25,9 +20,6 @@
   box-sizing: border-box;
 }
 
-/* Header Info
-   Figma: Top 108px - 70px Header = 38px
-   -------------------------------------------------------------------------- */
 .sec-about-2__header {
   text-align: center;
   margin-top: calc(38 / 720 * 100dvh);
@@ -67,19 +59,17 @@
     "clig" off;
 }
 
-/* Main Stage with Center Isometric & 4 Surrounding Quadrants */
 .sec-about-2__stage {
   position: relative;
   width: 100%;
   max-width: 1170px;
-  height: 460px; /* Exact 460px height matching the isometric diagram in Figma */
+  height: 460px; 
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
 }
 
-/* Center Isometric Image */
 .sec-about-2__center-img-wrapper {
   position: absolute;
   width: 690px;
@@ -103,7 +93,6 @@
   display: block;
 }
 
-/* Quadrants Cards Container */
 .sec-about-2__cards-container {
   position: absolute;
   inset: 0;
@@ -112,7 +101,6 @@
   pointer-events: none;
 }
 
-/* 4 Quadrant Cards */
 .sec-about-2__card {
   position: absolute;
   width: 270px;
@@ -121,7 +109,7 @@
   background-color: #ffffff;
   border: 1px solid rgba(126, 147, 168, 0.5);
   box-sizing: border-box;
-  padding: 15px 14px 16px 14px; /* Figma: top 16, right 15, bottom 17, left 15 (trừ 1px border) */
+  padding: 15px 14px 16px 14px; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -147,7 +135,6 @@
   color: var(--Secondary-Deep-Blue, #011b7f);
 }
 
-/* Card Top: Icon + Title */
 .sec-about-2__card-top {
   display: flex;
   align-items: center;
@@ -190,7 +177,6 @@
   line-height: 23px;
 }
 
-/* Card Description */
 .sec-about-2__card-desc {
   font-family: Aptos, var(--font-brand);
   font-size: 16px;
@@ -204,7 +190,6 @@
     "clig" off;
 }
 
-/* Card Arrow Icon */
 .sec-about-2__card-arrow {
   position: absolute;
   bottom: 16px;
@@ -226,7 +211,6 @@
   display: block;
 }
 
-/* Top-Left: Market Intelligence */
 .sec-about-2__card--top-left {
   top: 14px;
   left: 0;
@@ -234,7 +218,6 @@
   transition-delay: 0.3s;
 }
 
-/* Top-Right: Operational Intelligence */
 .sec-about-2__card--top-right {
   top: 14px;
   right: 0;
@@ -242,23 +225,20 @@
   transition-delay: 0.35s;
 }
 
-/* Bottom-Left: Capacity & Capability */
 .sec-about-2__card--bottom-left {
-  bottom: 16px; /* Exact 16px from bottom edge in Figma (652px image bottom - 636px card bottom) */
+  bottom: 16px; 
   left: 0;
   transform: translate(-30px, 20px);
   transition-delay: 0.4s;
 }
 
-/* Bottom-Right: Digital Intelligence */
 .sec-about-2__card--bottom-right {
-  bottom: 16px; /* Exact 16px from bottom edge in Figma */
+  bottom: 16px; 
   right: 0;
   transform: translate(30px, 20px);
   transition-delay: 0.45s;
 }
 
-/* Slide Entrance Animations */
 .sec-about-2.slide-animated .sec-about-2__header {
   opacity: 1;
   transform: translateY(0);
@@ -282,9 +262,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Short Desktop Screen Adaptations (<= 660px)
-   ========================================================================== */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-about-2 .flex-center-v {
     justify-content: center;
@@ -295,9 +272,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive Adaptations (Tablet & Mobile)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-about-2 {
     height: auto !important;

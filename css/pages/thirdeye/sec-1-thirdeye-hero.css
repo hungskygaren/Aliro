@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 1: Hero - The Third Eye (Flagship Strategic Intelligence Service)
-   Figma Node: 6703:2685
-   ========================================================================== */
-
 .sec-thirdeye-1 {
   position: relative;
   overflow: hidden;
@@ -43,9 +38,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: Strategic Typography (Figma top: 247px, 323px, 388px, 436px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-1__left {
   position: relative;
   width: calc(500 / 1170 * 100%);
@@ -113,9 +105,6 @@
     "clig" off;
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: 670x450 Scanning Graphic & ASEAN Slogan (Figma top: 123px, 583px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-1__right {
   position: relative;
   width: calc(670 / 1170 * 100%);
@@ -154,7 +143,6 @@
   z-index: 2;
 }
 
-/* Regional Badge / Subtitle below graphic (Figma top: 583px) */
 .sec-thirdeye-1__badge {
   margin-top: 10px;
   font-family: Aptos, var(--font-brand);
@@ -169,9 +157,6 @@
   z-index: 4;
 }
 
-/* --------------------------------------------------------------------------
-   Swiper Active Slide Animation Triggers
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-1.swiper-slide-active .sec-thirdeye-1__left,
 .sec-thirdeye-1.slide-animated .sec-thirdeye-1__left {
   opacity: 1;
@@ -184,7 +169,6 @@
   transform: translateY(0) scale(1);
 }
 
-/* Visited State */
 .sec-thirdeye-1.visited .sec-thirdeye-1__left,
 .sec-thirdeye-1.visited .sec-thirdeye-1__right {
   opacity: 1 !important;
@@ -192,9 +176,6 @@
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-thirdeye-1 .flex-center-v {
     align-items: center;
@@ -212,9 +193,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Layout & Mobile Adaptation
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-thirdeye-1__tag {
     font-size: 20px;

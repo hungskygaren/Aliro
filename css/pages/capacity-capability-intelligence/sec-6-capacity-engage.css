@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Section 6: Aliro Perspective (Capability Building & Strategic Direction)
-   Figma Node: 5048:2285
-   Design Pattern: Synchronized with Market & Operational Intelligence
-   ========================================================================== */
-
 .sec-capacity-6 {
   position: relative;
   overflow: hidden;
@@ -27,7 +21,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 70px; /* Navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -36,9 +30,6 @@
   margin: 0 auto;
 }
 
-/* --------------------------------------------------------------------------
-   Main Stage: 2-Column Balanced Layout (1170px Standard)
-   -------------------------------------------------------------------------- */
 .sec-capacity-6__stage {
   display: flex;
   align-items: flex-start;
@@ -50,10 +41,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: Eyebrow + Bold Strategic Statement (670px)
-   Figma: Top 272px - 70px Header = 202px
-   -------------------------------------------------------------------------- */
 .sec-capacity-6__left {
   width: 100%;
   max-width: 670px;
@@ -65,7 +52,6 @@
   z-index: 4;
 }
 
-/* Eyebrow - Slides in smoothly from the Left */
 .sec-capacity-6__eyebrow {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
@@ -74,7 +60,7 @@
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0px;
-  margin: 0 0 28px 0; /* 28px gap to statement */
+  margin: 0 0 28px 0; 
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -86,7 +72,6 @@
   transition-delay: 0.1s;
 }
 
-/* Bold Core Statement - Slides in smoothly from the Left following Eyebrow */
 .sec-capacity-6__statement {
   font-family: Aptos, var(--font-brand);
   font-size: 34px;
@@ -107,10 +92,6 @@
   transition-delay: 0.22s;
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: 3D Isometric Perspective Visual (470px x 370px)
-   Figma: Top 238px - 70px Header = 168px
-   -------------------------------------------------------------------------- */
 .sec-capacity-6__right {
   width: 470px;
   max-width: 470px;
@@ -138,9 +119,6 @@
   display: block;
 }
 
-/* --------------------------------------------------------------------------
-   Sequential Domino Animation Activation
-   -------------------------------------------------------------------------- */
 .sec-capacity-6.slide-animated .sec-capacity-6__eyebrow,
 .sec-capacity-6.swiper-slide-active .sec-capacity-6__eyebrow,
 .sec-capacity-6.slide-animated .sec-capacity-6__statement,
@@ -155,7 +133,6 @@
   transform: translateY(0);
 }
 
-/* Visited Slide State (Instant display without re-animating) */
 .sec-capacity-6.visited * {
   opacity: 1 !important;
   transition: none !important;
@@ -168,9 +145,6 @@
   transform: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-capacity-6__left {
     max-width: 580px;

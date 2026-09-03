@@ -1,30 +1,17 @@
-/* ==========================================================================
-   Digital Intelligence Page Layout & Modular Section Imports
-   ========================================================================== */
-
-/* Section 1: Hero - Digital Intelligence */
 @import "./sec-1-digital-hero.css";
 
-/* Section 2: Core Focus / Overview */
 @import "./sec-2-digital-focus.css";
 
-/* Section 3: Key Questions We Answer */
 @import "./sec-3-digital-questions.css";
 
-/* Section 4: Services Under This Intelligence */
 @import "./sec-4-digital-deliverables.css";
 
-/* Section 5: Aliro Role & Specialist Partners (White Section) */
 @import "./sec-5-digital-perspective.css";
 
-/* Section 6: Methodology / Builds On -> Feeds Into (Stepper Flow) */
 @import "./sec-6-digital-methodology.css";
 
-/* Section 7: Aliro Perspective */
 @import "./sec-7-digital-engage.css";
 
-/* Section 8: Where It Enters / Strategic Impact */
 @import "./sec-8-digital-impact.css";
 
-/* Section 9: Final Contact & Entity Details (Reused Footer) */
 @import "../home/sec-10-contact.css";

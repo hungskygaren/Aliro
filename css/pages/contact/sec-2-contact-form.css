@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 2: Contact Form - Start a Conversation
-   Figma Node: 6704:5022
-   ========================================================================== */
-
 .sec-contact-2 {
   position: relative;
   overflow: hidden;
@@ -26,7 +21,7 @@
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -36,9 +31,6 @@
   position: relative;
 }
 
-/* --------------------------------------------------------------------------
-   Main 2-Column Stage (1170px Grid: 670px Left, 30px Gap, 467px Right)
-   -------------------------------------------------------------------------- */
 .sec-contact-2__stage {
   display: flex;
   align-items: flex-start;
@@ -50,10 +42,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: Form Container (670px)
-   Figma: Top 103px - 70px Header = 33px
-   -------------------------------------------------------------------------- */
 .sec-contact-2__left {
   width: 670px;
   max-width: 670px;
@@ -80,7 +68,6 @@
   transition-delay: 0.1s;
 }
 
-/* Form Layout */
 .sec-contact-2__form {
   display: flex;
   flex-direction: column;
@@ -90,7 +77,6 @@
   transition-delay: 0.2s;
 }
 
-/* 2-Column Row (320px + 30px Gap + 320px = 670px) */
 .sec-contact-2__row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -98,7 +84,6 @@
   width: 100%;
 }
 
-/* Field Group */
 .sec-contact-2__field {
   display: flex;
   flex-direction: column;
@@ -120,7 +105,6 @@
   font-weight: 700;
 }
 
-/* Inputs, Select, Textarea */
 .sec-contact-2__input,
 .sec-contact-2__select,
 .sec-contact-2__textarea {
@@ -168,7 +152,6 @@
   line-height: 22px;
 }
 
-/* Helper note */
 .sec-contact-2__note {
   font-family: Aptos, var(--font-brand);
   font-size: 16px;
@@ -177,7 +160,6 @@
   margin: 2px 0 4px 0;
 }
 
-/* Checkbox Consent */
 .sec-contact-2__checkbox-wrap {
   display: flex;
   align-items: flex-start;
@@ -210,7 +192,6 @@
   text-underline-offset: 2px;
 }
 
-/* Actions Row: Submit Button & Direct Email Contact */
 .sec-contact-2__actions {
   display: flex;
   align-items: center;
@@ -271,10 +252,6 @@
   color: #02258c;
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: 3D Isometric Visual (467px x 374px)
-   Figma: Top 198px - 70px Header = 128px
-   -------------------------------------------------------------------------- */
 .sec-contact-2__right {
   width: 467px;
   max-width: 467px;
@@ -315,9 +292,6 @@
   display: block;
 }
 
-/* --------------------------------------------------------------------------
-   Sequential Domino Animation Engine
-   -------------------------------------------------------------------------- */
 .sec-contact-2 .phrase {
   opacity: 0;
   transform: translateY(25px);
@@ -338,7 +312,6 @@
   transform: translateY(0) scale(1);
 }
 
-/* Visited Slide State (Instant display without re-animating) */
 .sec-contact-2.visited .phrase {
   opacity: 1 !important;
   transform: none !important;
@@ -351,9 +324,6 @@
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-contact-2 .flex-center-v {
     justify-content: center;
@@ -369,9 +339,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Width (1200px, 991px, 576px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-contact-2__stage {
     gap: 20px;
@@ -447,9 +414,6 @@
   }
 }
 
-/* ==========================================================================
-   Section 2 Contact Form Mobile Rules (Standard <= 767px & Tall >= 780px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-contact-2 .flex-center-v {
     padding-top: 72px;
@@ -492,13 +456,11 @@
     gap: 8px;
   }
 
-  /* Hàng 1 & 2: 2 cột gọn gàng (Họ tên / Email, Công ty / Chức vụ) */
   .sec-contact-2__row {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px 10px;
   }
 
-  /* Hàng 3: Bung Full-Width 100% cho Area of Interest & Country */
   .sec-contact-2__row:nth-of-type(3) {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -512,7 +474,7 @@
   .sec-contact-2__input,
   .sec-contact-2__select,
   .sec-contact-2__textarea {
-    font-size: 16px !important; /* Chống auto-zoom iOS Safari */
+    font-size: 16px !important; 
     padding: 6px 10px;
     height: 38px;
     border-radius: 0;
@@ -548,7 +510,6 @@
     flex-shrink: 0;
   }
 
-  /* Chữ sáng trắng nổi bật trên nền gradient xanh navy tối */
   .sec-contact-2__checkbox-label {
     font-size: 12.5px;
     line-height: 17px;
@@ -596,13 +557,11 @@
     color: #ffffff !important;
   }
 
-  /* Ẩn hoàn toàn ảnh 3D để nhường 100% không gian thoáng cho Form */
   .sec-contact-2__right {
     display: none !important;
   }
 }
 
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-contact-2 .flex-center-v {
     justify-content: center !important;
@@ -620,7 +579,6 @@
     gap: 9px;
   }
 
-  /* Trên màn hình dài (Pro Max / Plus): bung Full-Width 1 cột toàn bộ để tận dụng chiều cao và gõ chữ thoải mái */
   .sec-contact-2__row {
     grid-template-columns: 1fr;
     gap: 9px;
@@ -666,4 +624,3 @@
     display: none !important;
   }
 }
-

@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Section 7: Where It Enters (3 Entry Decision Cards & Strategy CTA)
-   Figma Node: 6704:5234
-   Design Pattern: Synchronized with Market & Operational Intelligence
-   ========================================================================== */
-
 .sec-capacity-7 {
   position: relative;
   overflow: hidden;
@@ -21,7 +15,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 70px; /* Navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -30,9 +24,6 @@
   margin: 0 auto;
 }
 
-/* --------------------------------------------------------------------------
-   Main Stage: 2-Column Balanced Layout (1170px Standard)
-   -------------------------------------------------------------------------- */
 .sec-capacity-7__stage {
   display: flex;
   align-items: flex-start;
@@ -44,10 +35,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: 3 Decision Cards Grid (244px x 3 = 772px width)
-   Figma: Top 208px - 70px Header = 138px
-   -------------------------------------------------------------------------- */
 .sec-capacity-7__cards-wrap {
   display: grid;
   grid-template-columns: repeat(3, 244px);
@@ -57,7 +44,6 @@
   flex-shrink: 0;
 }
 
-/* Decision Card Box */
 .sec-capacity-7__card {
   width: 244px;
   height: 370px;
@@ -90,7 +76,6 @@
   transition-delay: 0.34s;
 }
 
-/* Card Visual Box (220px x 240px) */
 .sec-capacity-7__card-img-box {
   width: 220px;
   height: 240px;
@@ -109,7 +94,6 @@
   filter: none !important;
 }
 
-/* Card Title (22px, line-height 24px) */
 .sec-capacity-7__card-title {
   font-family: Aptos, var(--font-brand);
   font-size: 22px;
@@ -123,10 +107,6 @@
     "clig" off;
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: Eyebrow + Strategic Statement + CTA Button (370px)
-   Figma: Top 248px - 70px Header = 178px
-   -------------------------------------------------------------------------- */
 .sec-capacity-7__right {
   width: 370px;
   max-width: 370px;
@@ -139,7 +119,6 @@
   z-index: 4;
 }
 
-/* Eyebrow */
 .sec-capacity-7__eyebrow {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
@@ -160,7 +139,6 @@
   transition-delay: 0.15s;
 }
 
-/* Statement (30px, line-height 38px) */
 .sec-capacity-7__statement {
   font-family: Aptos, var(--font-brand);
   font-size: 30px;
@@ -180,7 +158,6 @@
   transition-delay: 0.28s;
 }
 
-/* CTA Wrapper & Button */
 .sec-capacity-7__cta-wrap {
   display: flex;
 }
@@ -222,9 +199,6 @@
   color: #ffffff;
 }
 
-/* --------------------------------------------------------------------------
-   Sequential Domino Animation Activation
-   -------------------------------------------------------------------------- */
 .sec-capacity-7.slide-animated .sec-capacity-7__card {
   opacity: 1;
   transform: translateY(0);
@@ -237,7 +211,6 @@
   transform: translateX(0);
 }
 
-/* Visited Slide State (Instant display without re-animating) */
 .sec-capacity-7.visited * {
   opacity: 1 !important;
   transition: none !important;
@@ -251,9 +224,6 @@
   transform: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-capacity-7__cards-wrap {
     grid-template-columns: repeat(3, 200px);

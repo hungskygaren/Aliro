@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Section 6: Aliro Perspective (Expansion Problems & Incomplete Market Read)
-   Figma Node: 4860:2968
-   Design Pattern: Synchronized with index.html#section-2 (Smooth Cinematic Flow)
-   ========================================================================== */
-
 .sec-market-6 {
   position: relative;
   overflow: hidden;
@@ -27,16 +21,13 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 70px; /* Navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* --------------------------------------------------------------------------
-   Main Stage: 2-Column Balanced Layout (1170px Standard)
-   -------------------------------------------------------------------------- */
 .sec-market-6__stage {
   display: flex;
   align-items: flex-start;
@@ -48,10 +39,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: Eyebrow + Bold Strategic Statement (670px)
-   Figma: Top 272px - 70px Header = 202px
-   -------------------------------------------------------------------------- */
 .sec-market-6__left {
   width: 100%;
   max-width: 670px;
@@ -63,7 +50,6 @@
   z-index: 4;
 }
 
-/* Eyebrow - Slides in smoothly from the Left */
 .sec-market-6__eyebrow {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
@@ -72,7 +58,7 @@
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0px;
-  margin: 0 0 28px 0; /* 28px gap to statement */
+  margin: 0 0 28px 0; 
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -84,7 +70,6 @@
   transition-delay: 0.1s;
 }
 
-/* Bold Core Statement - Slides in smoothly from the Left following Eyebrow */
 .sec-market-6__statement {
   font-family: Aptos, var(--font-brand);
   font-size: 36px;
@@ -105,10 +90,6 @@
   transition-delay: 0.22s;
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: 3D Isometric Perspective Visual (470px x 314px)
-   Figma: Top 238px - 70px Header = 168px
-   -------------------------------------------------------------------------- */
 .sec-market-6__right {
   width: 470px;
   max-width: 470px;
@@ -146,9 +127,6 @@
   filter: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Active Slide Cinematic Trigger (.slide-animated)
-   -------------------------------------------------------------------------- */
 .sec-market-6.slide-animated .sec-market-6__eyebrow,
 .sec-market-6.slide-animated .sec-market-6__statement {
   opacity: 1;
@@ -160,7 +138,6 @@
   transform: translateY(0) scale(1);
 }
 
-/* Visited Slide State (Instant display without re-animating) */
 .sec-market-6.visited * {
   opacity: 1 !important;
   transition: none !important;
@@ -173,9 +150,6 @@
   transform: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-market-6 .flex-center-v {
     justify-content: center;
@@ -191,9 +165,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Mobile & Tablet
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-market-6 .flex-center-v {
     padding-left: 24px;

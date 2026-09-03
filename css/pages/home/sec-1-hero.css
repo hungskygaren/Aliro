@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Section 1: Hero Section (Design Screen 1440px | Grid 1170px | BG #C5DAF3)
-   ========================================================================== */
 .sec-hero {
   position: relative;
   background: radial-gradient(
@@ -20,7 +17,6 @@
   box-sizing: border-box;
 }
 
-/* Two side-layered cliff graphics (Left: 550x468 | Right: 564x465) */
 .sec-hero__cliff {
   position: absolute;
   background-repeat: no-repeat;
@@ -31,11 +27,11 @@
 
 .sec-hero__cliff--left {
   left: 0;
-  bottom: 6.8056%; /* 49px / 720px = 6.8056% */
+  bottom: 6.8056%; 
   background-image: url("../../../assets/hero-bg-left.webp");
   background-position: left bottom;
-  width: 38.1944%; /* 550px / 1440px */
-  height: 65%; /* 468px / 720px */
+  width: 38.1944%; 
+  height: 65%; 
   max-width: 550px;
   max-height: 468px;
   aspect-ratio: 550 / 468;
@@ -43,11 +39,11 @@
 
 .sec-hero__cliff--right {
   right: 0;
-  bottom: 6.9444%; /* 50px / 720px = 6.9444% */
+  bottom: 6.9444%; 
   background-image: url("../../../assets/hero-bg-right.webp");
   background-position: right bottom;
-  width: 39.1667%; /* 564px / 1440px */
-  height: 64.5833%; /* 465px / 720px */
+  width: 39.1667%; 
+  height: 64.5833%; 
   max-width: 564px;
   max-height: 465px;
   aspect-ratio: 564 / 465;
@@ -65,7 +61,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 20.5556dvh; /* 148px / 720px = 20.5556dvh height */
+  padding-top: 20.5556dvh; 
   padding-bottom: 0;
   margin-top: 0;
   margin-bottom: auto;
@@ -76,7 +72,6 @@
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Section 1 Typography Specs */
 .sec-hero__sub-top {
   font-family: var(--font-brand);
   font-size: 30px;
@@ -147,15 +142,12 @@
   margin-right: auto;
 }
 
-/* Desktop Line Breaks via span.line-desktop */
 .sec-hero__title .line-desktop,
 .sec-hero__sub-bottom .line-desktop,
 .sec-hero__desc .line-desktop {
   display: block;
 }
 
-/* Action Button "Start a Conversation" Specs:
-   display: inline-flex; padding: 10px 18px; flex-direction: column; align-items: center; gap: 10px; background: #0431B1; */
 .btn-hero-cta {
   display: inline-flex !important;
   width: fit-content !important;
@@ -176,13 +168,9 @@
   white-space: nowrap;
   text-transform: none;
   text-decoration: none;
-  margin-top: 24px !important; /* Distance from description text above */
+  margin-top: 24px !important; 
 }
 
-/* --------------------------------------------------------------------------
-   Section 1 Entrance Staggered Animation Sequence (Slowing Down Pace)
-   -------------------------------------------------------------------------- */
-/* Initial State: Hidden & Offset elements */
 .sec-hero .sec-hero__bg {
   opacity: 0;
   transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
@@ -209,7 +197,6 @@
     transform 2.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Triggered State: Activated when Section 1 is Active (.slide-animated) */
 .sec-hero.slide-animated .sec-hero__bg {
   opacity: 1;
 }
@@ -219,7 +206,6 @@
   transform: translateY(0);
 }
 
-/* Scroll Down Button Entrance */
 .sec-hero .scroll-down-btn {
   opacity: 0;
   transform: translateX(-50%) translateY(20px);
@@ -233,14 +219,12 @@
   transform: translateX(-50%) translateY(0);
 }
 
-/* Side cliffs: Start immediately when slide active */
 .sec-hero.slide-animated .sec-hero__cliff--left,
 .sec-hero.slide-animated .sec-hero__cliff--right {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* --- VISITED STATE: Lock in completed state (No re-animation) --- */
 .sec-hero.visited .sec-hero__bg,
 .sec-hero.visited .sec-hero__cliff--left,
 .sec-hero.visited .sec-hero__cliff--right,
@@ -269,11 +253,8 @@
   transform: translateX(-50%) translateY(0) !important;
 }
 
-/* ==========================================================================
-   Section 1 Hero Desktop-First Responsive Rules (<= 991px & <= 767px)
-   ========================================================================== */
 @media (max-width: 991px) {
-  /* Convert Desktop line breaks to inline text on Tablet and Mobile */
+  
   .sec-hero__title .line-desktop,
   .sec-hero__sub-bottom .line-desktop,
   .sec-hero__desc .line-desktop {
@@ -322,7 +303,6 @@
     max-width: 100%;
   }
 
-  /* Scale down cliff graphics so they don't collide with text */
   .sec-hero__cliff--left {
     width: 38%;
     max-width: 300px;
@@ -368,13 +348,11 @@
     margin-top: 10px;
   }
 
-  /* Hide Desktop background cliffs on mobile */
   .sec-hero__cliff--left,
   .sec-hero__cliff--right {
     display: none !important;
   }
 
-  /* Mobile dedicated graphic block flowing directly 24px below content block like Section 2 & 3 */
   .sec-hero__img-mobile {
     display: flex !important;
     flex-direction: row;
@@ -418,7 +396,6 @@
     font-size: 15px !important;
   }
 
-  /* Mobile Scroll Down Button size reduction */
   .sec-hero .scroll-down-text {
     font-size: 12px;
   }
@@ -439,7 +416,6 @@
   }
 }
 
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-hero__sub-top {
     font-size: 18px;

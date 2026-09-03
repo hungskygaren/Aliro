@@ -1,12 +1,5 @@
-/* ==========================================================================
-   Contact Page Layout & Modular Section Imports
-   ========================================================================== */
-
-/* Section 1: Hero - Contact Aliro / Let's Start With Your Reality */
 @import "./sec-1-contact-hero.css";
 
-/* Section 2: Contact Form - Start a Conversation */
 @import "./sec-2-contact-form.css";
 
-/* Section 3: Where We Operate - Entity Information */
 @import "./sec-3-contact-operate.css";

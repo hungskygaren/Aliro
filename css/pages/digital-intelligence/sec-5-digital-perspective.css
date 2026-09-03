@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 5: Aliro Role & Specialist Partners (Digital Perspective)
-   Figma Node: 6703:5109
-   ========================================================================== */
-
 .sec-digital-5 {
   position: relative;
   overflow: hidden;
@@ -24,17 +19,13 @@
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Stage: 2-Column Flex Layout (1170px Standard)
-   Figma: Top ~205px - 70px Header = 135px
-   -------------------------------------------------------------------------- */
 .sec-digital-5__stage {
   display: flex;
   align-items: center;
@@ -50,9 +41,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: 3D Holographic Visual Stage (570px x 380px)
-   -------------------------------------------------------------------------- */
 .sec-digital-5__left {
   width: 570px;
   max-width: 570px;
@@ -81,9 +69,6 @@
   display: block;
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: Typography (570px)
-   -------------------------------------------------------------------------- */
 .sec-digital-5__right {
   width: 570px;
   max-width: 570px;
@@ -122,9 +107,6 @@
   transition-delay: 0.25s;
 }
 
-/* --------------------------------------------------------------------------
-   Sequential Domino Animation Engine
-   -------------------------------------------------------------------------- */
 .sec-digital-5 .phrase {
   opacity: 0;
   transform: translateY(30px);
@@ -150,7 +132,6 @@
   transform: translateY(0);
 }
 
-/* Visited Slide State */
 .sec-digital-5.visited * {
   opacity: 1 !important;
   transition: none !important;
@@ -163,9 +144,6 @@
   transform: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 700px) and (min-width: 992px) {
   .sec-digital-5 .flex-center-v {
     padding-top: 70px;
@@ -177,9 +155,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-digital-5__stage {
     gap: 20px;

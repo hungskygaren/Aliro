@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Section 7: Where It Enters (3 Entry Decision Cards & Strategy CTA)
-   Figma Node: 6703:5020
-   Design Pattern: Synchronized 100% with sec-7-market-impact.css
-   ========================================================================== */
-
 .sec-operational-7 {
   position: relative;
   overflow: hidden;
@@ -21,16 +15,13 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 70px; /* Navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* --------------------------------------------------------------------------
-   Main Stage: 2-Column Balanced Layout (1170px Standard)
-   -------------------------------------------------------------------------- */
 .sec-operational-7__stage {
   display: flex;
   align-items: flex-start;
@@ -42,10 +33,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: 3 Decision Cards Grid (244px x 3 = 772px width)
-   Figma: Top 208px - 70px Header = 138px
-   -------------------------------------------------------------------------- */
 .sec-operational-7__cards-wrap {
   display: grid;
   grid-template-columns: repeat(3, 244px);
@@ -55,7 +42,6 @@
   flex-shrink: 0;
 }
 
-/* Decision Card Box */
 .sec-operational-7__card {
   width: 244px;
   height: 370px;
@@ -88,7 +74,6 @@
   transition-delay: 0.34s;
 }
 
-/* Card Visual Box (220px x 240px chuẩn Figma) */
 .sec-operational-7__card-img-box {
   width: 220px;
   height: 240px;
@@ -107,7 +92,6 @@
   filter: none !important;
 }
 
-/* Card Title (22px, line-height 24px) */
 .sec-operational-7__card-title {
   font-family: Aptos, var(--font-brand);
   font-size: 22px;
@@ -121,10 +105,6 @@
     "clig" off;
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: Eyebrow + Strategic Statement + CTA Button (370px)
-   Figma: Top 248px - 70px Header = 178px
-   -------------------------------------------------------------------------- */
 .sec-operational-7__right {
   width: 370px;
   max-width: 370px;
@@ -137,7 +117,6 @@
   z-index: 4;
 }
 
-/* Eyebrow */
 .sec-operational-7__eyebrow {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
@@ -158,7 +137,6 @@
   transition-delay: 0.22s;
 }
 
-/* Strategic Statement (29px, line-height 38px) */
 .sec-operational-7__statement {
   font-family: Aptos, var(--font-brand);
   font-size: 29px;
@@ -179,7 +157,6 @@
   transition-delay: 0.34s;
 }
 
-/* CTA Wrapper */
 .sec-operational-7__cta-wrap {
   display: flex;
   opacity: 0;
@@ -190,7 +167,6 @@
   transition-delay: 0.46s;
 }
 
-/* CTA Button */
 .sec-operational-7__btn {
   display: inline-flex !important;
   width: fit-content !important;
@@ -221,9 +197,6 @@
   color: #ffffff;
 }
 
-/* --------------------------------------------------------------------------
-   Active Slide Cinematic Trigger (.slide-animated)
-   -------------------------------------------------------------------------- */
 .sec-operational-7.slide-animated .sec-operational-7__card {
   opacity: 1;
   transform: translateY(0);
@@ -240,7 +213,6 @@
   transform: translateY(0);
 }
 
-/* Visited Slide State (Instant display without re-animating) */
 .sec-operational-7.visited .phrase,
 .sec-operational-7.visited .sec-operational-7__card,
 .sec-operational-7.visited .sec-operational-7__eyebrow,

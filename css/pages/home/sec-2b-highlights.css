@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Section 2b: Key Highlights (4 Pillars)
-   ========================================================================== */
 .sec-2b {
   position: relative;
   overflow: hidden;
@@ -25,7 +22,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 44.0278dvh; /* 317px / 720px = 44.0278% Figma standard */
+  padding-top: 44.0278dvh; 
   box-sizing: border-box;
 }
 
@@ -44,7 +41,7 @@
 }
 
 .sec-2b__col {
-  padding: 19px 16px; /* 19px top & bottom spacing from border lines */
+  padding: 19px 16px; 
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -63,7 +60,6 @@
   padding-right: 0;
 }
 
-/* Vertical Divider Lines between columns — centered in the 32px gap between content */
 .sec-2b__col:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -78,7 +74,7 @@
 .sec-2b__icon-wrapper {
   width: 100px;
   height: 100px;
-  margin-bottom: 20px; /* cách dưới 20px */
+  margin-bottom: 20px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +97,7 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28px; /* 140% */
+  line-height: 28px; 
   text-transform: uppercase;
   margin: 0 0 10px 0;
   min-height: 56px;
@@ -125,7 +121,6 @@
   max-width: 270px;
 }
 
-/* Entrance Animations when Section 2b is Active */
 .sec-2b .sec-2b__col {
   opacity: 0;
   transform: translateY(30px);
@@ -161,9 +156,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive Adaptations (Tablet, Mobile & Low-Height Screens)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-2b {
     height: 100vh;
@@ -312,7 +304,6 @@
   }
 }
 
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-2b__grid {
     gap: 58px 16px;

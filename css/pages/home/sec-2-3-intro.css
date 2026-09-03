@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Section 2: Architect Transformation Layout & Typography Specs
-   ========================================================================== */
 .sec-architect {
   position: relative;
   overflow: hidden;
@@ -9,11 +6,10 @@
 .sec-architect .container {
   position: relative;
   height: 100%;
-  padding-top: 23.0555dvh; /* 166px / 720px = 23.0555dvh height */
+  padding-top: 23.0555dvh; 
   box-sizing: border-box;
 }
 
-/* Layer 3: Left Text Content (Occupies 6 columns = 50% width) */
 .sec-architect__content {
   position: relative;
   z-index: 3;
@@ -26,7 +22,7 @@
   font-family: var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 24px; /* 100% */
+  line-height: 24px; 
   color: #011b7f;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -40,7 +36,7 @@
   font-family: var(--font-brand);
   font-size: 44px;
   font-weight: 700;
-  line-height: 50px; /* 113.636% */
+  line-height: 50px; 
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   letter-spacing: 0;
@@ -55,7 +51,7 @@
   font-family: var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px; /* 116.667% */
+  line-height: 28px; 
   color: #011b7f;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -114,13 +110,12 @@
   background-color: var(--color-primary-hover, #03258c);
 }
 
-/* Layer 2: Right Image inside 1170px Container (Absolute position underneath text) */
 .sec-architect__img {
   position: absolute;
   right: 0;
   top: 50%;
   z-index: 2;
-  width: 57.26%; /* 670px / 1170px */
+  width: 57.26%; 
   max-width: 670px;
   height: auto;
   object-fit: contain;
@@ -133,18 +128,14 @@
     transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --------------------------------------------------------------------------
-   Section 2 Entrance Animation Sequence (Text Slides in from Right)
-   -------------------------------------------------------------------------- */
 .sec-architect__content {
   opacity: 0;
-  transform: translateX(40px); /* Initial state: Slide in from the RIGHT */
+  transform: translateX(40px); 
   transition:
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Active State Triggered by Swiper Slide Change */
 .sec-architect.slide-animated .sec-architect__content {
   opacity: 1;
   transform: translateX(0);
@@ -155,13 +146,11 @@
   white-space: nowrap;
 }
 
-/* Isometric Visual Graphic */
 .sec-architect.slide-animated .sec-architect__img {
   opacity: 1;
   transform: translateY(-50%);
 }
 
-/* Responsive Overrides for Section 2 */
 @media (max-width: 991px) {
   .sec-architect .container {
     flex-direction: column;
@@ -194,9 +183,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Section 3: System Framework Layout & Typography Specs (Mirror Layout)
-   -------------------------------------------------------------------------- */
 .sec-framework {
   position: relative;
   overflow: hidden;
@@ -212,7 +198,6 @@
   box-sizing: border-box;
 }
 
-/* Layer 2: Left Image (Occupies 5 columns: Cols 1-5) */
 .sec-framework__img {
   position: relative;
   grid-column: 1 / span 5;
@@ -230,7 +215,6 @@
     transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Layer 3: Right Text Content (Occupies 7 columns: Cols 6-12) */
 .sec-framework__content {
   position: relative;
   z-index: 3;
@@ -243,7 +227,7 @@
   font-family: var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px; /* 116.667% */
+  line-height: 28px; 
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0;
@@ -258,7 +242,7 @@
   font-family: var(--font-brand);
   font-size: 44px;
   font-weight: 700;
-  line-height: 50px; /* 113.636% */
+  line-height: 50px; 
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   letter-spacing: 0;
@@ -273,7 +257,7 @@
   font-family: var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px; /* 116.667% */
+  line-height: 28px; 
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0;
@@ -301,18 +285,14 @@
   white-space: nowrap;
 }
 
-/* --------------------------------------------------------------------------
-   Section 3 Entrance Animation Sequence (Text Slides in from Right)
-   -------------------------------------------------------------------------- */
 .sec-framework__content {
   opacity: 0;
-  transform: translateX(40px); /* Initial state: Slide in from the RIGHT */
+  transform: translateX(40px); 
   transition:
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Active State Triggered by Swiper Slide Change */
 .sec-framework.slide-animated .sec-framework__content {
   opacity: 1;
   transform: translateX(0);
@@ -328,7 +308,6 @@
   transform: translateY(0);
 }
 
-/* Responsive Overrides for Section 3 */
 @media (max-width: 991px) {
   .sec-framework .container {
     flex-direction: column;
@@ -367,7 +346,6 @@
   }
 }
 
-/* --- VISITED STATE: Lock in completed state (No re-animation) --- */
 .sec-architect.visited .sec-architect__content,
 .sec-framework.visited .sec-framework__content {
   opacity: 1 !important;
@@ -396,9 +374,6 @@
   }
 }
 
-/* ==========================================================================
-   Section 2 Architect & Section 3 Framework Mobile Background Layer Rules (<= 991px & <= 767px)
-   ========================================================================== */
 .sec-architect__title .line-desktop,
 .sec-architect__sub-bottom .line-desktop,
 .sec-architect__desc .line-desktop,
@@ -414,7 +389,6 @@
     display: inline;
   }
 
-  /* Centered flow container for Section 2 & 3 */
   .sec-architect .container,
   .sec-framework .container {
     display: flex;
@@ -430,7 +404,6 @@
     gap: 0;
   }
 
-  /* Text content centered */
   .sec-architect__content,
   .sec-framework__content {
     position: relative;
@@ -464,7 +437,6 @@
     margin-inline: auto;
   }
 
-  /* Full-size large image flowing 24px directly below content block with entrance glide animation */
   .sec-architect__img,
   .sec-framework__img {
     position: relative !important;
@@ -558,7 +530,6 @@
   }
 }
 
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-architect__sub-top,
   .sec-framework__sub-top {

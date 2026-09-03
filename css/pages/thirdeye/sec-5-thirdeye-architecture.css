@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 5: How We Work With You (Scoped Deliverable vs Retainer)
-   Figma Node: 6704:4944
-   ========================================================================== */
-
 .sec-thirdeye-5 {
   position: relative;
   overflow: hidden;
@@ -18,7 +13,6 @@
   color: #ffffff;
 }
 
-/* Blueprint Pattern Overlay */
 .sec-thirdeye-5__blueprint {
   position: absolute;
   inset: 0;
@@ -45,9 +39,6 @@
   z-index: 2;
 }
 
-/* --------------------------------------------------------------------------
-   Header: Title (Figma top: 104px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-5__header {
   text-align: center;
   margin-top: calc(34 / 720 * 100dvh);
@@ -75,9 +66,6 @@
     "clig" off;
 }
 
-/* --------------------------------------------------------------------------
-   2-Column Engagement Options Container (Left: 100px from container, Gap: 30px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-5__grid {
   display: flex;
   justify-content: flex-start;
@@ -92,7 +80,6 @@
   box-sizing: border-box;
 }
 
-/* Base Option Column */
 .sec-thirdeye-5__option {
   display: flex;
   flex-direction: column;
@@ -112,7 +99,6 @@
     transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Option 1: Highlighted Gold Box (470px x 490px) */
 .sec-thirdeye-5__option--highlight {
   height: 490px;
   background: radial-gradient(
@@ -125,7 +111,6 @@
   transition-delay: 0.15s;
 }
 
-/* Option 2: Default Retainer Column (Transparent, No Border) */
 .sec-thirdeye-5__option--default {
   background: transparent;
   border: none;
@@ -133,7 +118,6 @@
   transition-delay: 0.75s;
 }
 
-/* Visual Area (278px x 250px) */
 .sec-thirdeye-5__visual {
   width: 100%;
   height: 250px;
@@ -152,7 +136,6 @@
   display: block;
 }
 
-/* Step Badge Wrapper (Dịch vào trên ảnh 44px) */
 .sec-thirdeye-5__badge-wrapper {
   position: relative;
   width: 100%;
@@ -186,7 +169,6 @@
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Badge 1: fill #E09B21, no border */
 .sec-thirdeye-5__option--highlight .sec-thirdeye-5__badge {
   background-color: #e09b21;
   border: none;
@@ -194,7 +176,6 @@
   transition-delay: 0.3s;
 }
 
-/* Badge 2: fill #0431B1, border 1px solid #226CB4 */
 .sec-thirdeye-5__option--default .sec-thirdeye-5__badge {
   background-color: var(--Highlight-Blue, #0431b1);
   border: 1px solid var(--Bright-Blue, #226cb4);
@@ -202,9 +183,6 @@
   transition-delay: 0.9s;
 }
 
-/* ==========================================================================
-   Center-Anchored Timeline Connecting Line (Width: 500px from Badge 1 to Badge 2)
-   ========================================================================== */
 .sec-thirdeye-5__connector {
   position: absolute;
   top: 50%;
@@ -216,7 +194,6 @@
   pointer-events: none;
 }
 
-/* Line 2: Remaining 165px (from 335px to 500px) => Light Blue #C5DAF3, 50% opacity, 4px height */
 .sec-thirdeye-5__connector-remaining {
   position: absolute;
   top: 50%;
@@ -233,7 +210,6 @@
   transition-delay: 0.75s;
 }
 
-/* Line 1: Exact Figma SVG (337px x 30px) containing 335px gold line + arrow head */
 .sec-thirdeye-5__connector-gold {
   position: absolute;
   top: 50%;
@@ -255,7 +231,6 @@
   display: block;
 }
 
-/* Typography */
 .sec-thirdeye-5__tag {
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
@@ -296,7 +271,6 @@
   text-align: center;
 }
 
-/* Button: Figma 14px bold white */
 .sec-thirdeye-5__btn {
   display: inline-flex;
   padding: 7px 16px 8px 16px;
@@ -323,9 +297,6 @@
   transform: translateY(-2px);
 }
 
-/* --------------------------------------------------------------------------
-   Swiper Active Slide Animation Triggers
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__header,
 .sec-thirdeye-5.slide-animated .sec-thirdeye-5__header {
   opacity: 1;
@@ -356,7 +327,6 @@
   transform: translateY(-50%) scaleX(1);
 }
 
-/* Visited State */
 .sec-thirdeye-5.visited .sec-thirdeye-5__header,
 .sec-thirdeye-5.visited .sec-thirdeye-5__option,
 .sec-thirdeye-5.visited .sec-thirdeye-5__badge {
@@ -375,9 +345,6 @@
   transform: translateY(-50%) scaleX(1) !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-thirdeye-5 .flex-center-v {
     padding-top: 70px;
@@ -431,9 +398,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Layout & Mobile Adaptation
-   -------------------------------------------------------------------------- */
 @media (max-width: 1050px) {
   .sec-thirdeye-5__grid {
     grid-template-columns: repeat(2, 1fr);

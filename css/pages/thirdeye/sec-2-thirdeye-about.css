@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 2: Overview / 3-Step Engine (Gather -> Prioritize -> Interpret & Advise)
-   Figma Node: 6703:4876
-   ========================================================================== */
-
 .sec-thirdeye-2 {
   position: relative;
   overflow: hidden;
@@ -27,9 +22,6 @@
   margin: 0 auto;
 }
 
-/* --------------------------------------------------------------------------
-   Header: Title (Figma top: 99px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-2__header {
   text-align: center;
   margin-top: calc(29 / 720 * 100dvh);
@@ -57,9 +49,6 @@
     "clig" off;
 }
 
-/* --------------------------------------------------------------------------
-   3-Step Pipeline Container (Figma: 1170px grid, 3 columns x 370px, gap 30px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-2__pipeline {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -80,7 +69,6 @@
   position: relative;
 }
 
-/* Square Card: Exact Figma 280px x 280px (Centered in 370px col = 45px padding each side) */
 .sec-thirdeye-2__card {
   width: 280px;
   height: 280px;
@@ -109,7 +97,6 @@
   object-fit: contain;
 }
 
-/* Step Number Badge Wrapper (Height 50px, overlaps 16px onto bottom of card as in Figma) */
 .sec-thirdeye-2__badge-wrapper {
   position: relative;
   width: 100%;
@@ -148,9 +135,6 @@
   background-color: #e09b21;
 }
 
-/* ==========================================================================
-   Center-Anchored Connecting Line Segments & Arrows (Exact width: calc(100% + 30px) = 400px)
-   ========================================================================== */
 .sec-thirdeye-2__connector {
   position: absolute;
   top: 50%;
@@ -214,7 +198,6 @@
   display: block;
 }
 
-/* Step Typography (Figma: 24px bold title, 18px semibold desc, max-width 370px) */
 .sec-thirdeye-2__step-title {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
@@ -249,10 +232,6 @@
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==========================================================================
-   Sequential Domino Staggered Delays
-   ========================================================================== */
-/* Step 1 */
 .sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__card {
   transition-delay: 0.2s;
 }
@@ -270,7 +249,6 @@
   transition-delay: 0.34s;
 }
 
-/* Step 2 */
 .sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__card {
   transition-delay: 0.48s;
 }
@@ -288,7 +266,6 @@
   transition-delay: 0.62s;
 }
 
-/* Step 3 */
 .sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(3) .sec-thirdeye-2__card {
   transition-delay: 0.76s;
 }
@@ -300,9 +277,6 @@
   transition-delay: 0.9s;
 }
 
-/* --------------------------------------------------------------------------
-   Swiper Active Slide Animation Triggers
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-2.swiper-slide-active .sec-thirdeye-2__header,
 .sec-thirdeye-2.slide-animated .sec-thirdeye-2__header {
   opacity: 1;
@@ -341,7 +315,6 @@
   transform: translateY(0);
 }
 
-/* Visited State */
 .sec-thirdeye-2.visited .sec-thirdeye-2__header,
 .sec-thirdeye-2.visited .sec-thirdeye-2__card,
 .sec-thirdeye-2.visited .sec-thirdeye-2__badge,
@@ -362,9 +335,6 @@
   transform: translateY(-50%) scaleX(1) !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 700px) and (min-width: 992px) {
   .sec-thirdeye-2 .flex-center-v {
     padding-top: 70px;
@@ -452,9 +422,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Layout & Mobile Adaptation
-   -------------------------------------------------------------------------- */
 @media (max-width: 1100px) {
   .sec-thirdeye-2__pipeline {
     gap: 20px;

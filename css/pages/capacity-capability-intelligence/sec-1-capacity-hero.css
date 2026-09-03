@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 1: Hero - Capacity & Capability Intelligence (Pillar 4 of 4)
-   Figma Node: 6704:5113
-   ========================================================================== */
-
 .sec-capacity-1 {
   position: relative;
   overflow: hidden;
@@ -31,16 +26,13 @@
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Stage: 2-Column Flex Layout (1170px Standard)
-   -------------------------------------------------------------------------- */
 .sec-capacity-1__stage {
   display: flex;
   align-items: flex-start;
@@ -53,10 +45,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: Strategic Typography & Breadcrumbs
-   Figma: Top 168px - 70px Header = 98px
-   -------------------------------------------------------------------------- */
 .sec-capacity-1__left {
   flex: 1;
   max-width: 530px;
@@ -119,7 +107,6 @@
   transition-delay: 0.25s;
 }
 
-/* 4iC Breadcrumb Navigation */
 .sec-capacity-1__breadcrumb {
   display: flex;
   align-items: center;
@@ -167,7 +154,6 @@
   height: 100%;
 }
 
-/* CTA Action Button */
 .sec-capacity-1__cta-wrap {
   transition-delay: 0.35s;
 }
@@ -192,10 +178,6 @@
   background-color: var(--color-primary-hover, #03258c);
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: 3D Holographic People & Ecosystem Stage (670px x 446px)
-   Figma: Top 90px - 70px Header = 20px
-   -------------------------------------------------------------------------- */
 .sec-capacity-1__right {
   width: 670px;
   max-width: 670px;
@@ -258,9 +240,6 @@
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Sequential Domino Animation Engine
-   -------------------------------------------------------------------------- */
 .sec-capacity-1 .phrase {
   opacity: 0;
   transform: translateY(25px);
@@ -274,16 +253,12 @@
   transform: translateY(0);
 }
 
-/* Visited Slide State (Instant display without re-animating) */
 .sec-capacity-1.visited .phrase {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-capacity-1 .flex-center-v {
     justify-content: center;
@@ -299,9 +274,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Width (1200px, 991px, 576px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-capacity-1__stage {
     gap: 20px;

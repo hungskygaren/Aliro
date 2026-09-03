@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 5: Starts With -> Feeds Into (Direction into Execution)
-   Figma Node: 4860:2967
-   ========================================================================== */
-
 .sec-market-5 {
   position: relative;
   overflow: hidden;
@@ -18,10 +13,6 @@
   color: #ffffff;
 }
 
-/* --------------------------------------------------------------------------
-   Dual Ambient Spotlight Glows (Anchored 100% to Image Center)
-   Figma Ellipse 18 & Ellipse 19 (570px x 400px, Blur 100px)
-   -------------------------------------------------------------------------- */
 .sec-market-5__glow {
   position: absolute;
   top: 54%;
@@ -42,7 +33,7 @@
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 25px;
   padding-left: 15px;
   padding-right: 15px;
@@ -53,19 +44,15 @@
   z-index: 2;
 }
 
-/* --------------------------------------------------------------------------
-   Top Stepper Indicator with Connecting Line (1 -> 2)
-   Figma: Top 102px - 70px Header = 32px
-   -------------------------------------------------------------------------- */
 .sec-market-5__stepper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 641px; /* 601px khoảng cách giữa 2 tâm node + 40px đường kính */
-  margin-top: calc(32 / 720 * 100dvh); /* 32px / 720px = 4.4444dvh */
-  margin-bottom: 10px; /* 152px - 142px = 10px chuẩn Figma */
+  max-width: 641px; 
+  margin-top: calc(32 / 720 * 100dvh); 
+  margin-bottom: 10px; 
   z-index: 4;
 }
 
@@ -117,9 +104,6 @@
   transition-delay: 0.32s;
 }
 
-/* --------------------------------------------------------------------------
-   Two-Column Stage Layout (340px - 260px gap - 340px)
-   -------------------------------------------------------------------------- */
 .sec-market-5__stage {
   display: flex;
   align-items: flex-start;
@@ -132,7 +116,6 @@
   margin-bottom: 0;
 }
 
-/* Column Container (Khóa thẳng trục tâm tuyệt đối với Node 1 và 2) */
 .sec-market-5__col {
   width: 340px;
   max-width: 340px;
@@ -143,7 +126,6 @@
   text-align: center;
 }
 
-/* Column Title */
 .sec-market-5__col-title {
   position: relative;
   z-index: 10;
@@ -153,7 +135,7 @@
   line-height: 40px;
   color: #ffffff;
   text-transform: uppercase;
-  margin: 0 0 8px 0; /* 8px tới subtitle */
+  margin: 0 0 8px 0; 
   letter-spacing: 0px;
   text-align: center;
   font-feature-settings:
@@ -174,7 +156,6 @@
   transition-delay: 0.52s;
 }
 
-/* Column Subtitle / Description */
 .sec-market-5__col-desc {
   position: relative;
   z-index: 10;
@@ -183,7 +164,7 @@
   font-weight: 600;
   line-height: 24px;
   color: #ffffff;
-  margin: 0 0 18px 0; /* Tăng khoảng cách dưới lên 18px tạo độ thở thoáng */
+  margin: 0 0 18px 0; 
   white-space: nowrap;
   width: max-content;
   text-align: center;
@@ -202,7 +183,6 @@
   transition-delay: 0.6s;
 }
 
-/* Link inside Subtitle */
 .sec-market-5__link {
   position: relative;
   z-index: 10;
@@ -218,7 +198,6 @@
   color: #8ce1ff;
 }
 
-/* Image Box (340px x 380px chuẩn đồ họa không khoảng đệm thừa) */
 .sec-market-5__img-box {
   width: 340px;
   max-width: 340px;
@@ -258,12 +237,9 @@
   z-index: 5;
 }
 
-/* --------------------------------------------------------------------------
-   Center Flow Arrow (230px wide, 15px gap to each image, centered with diagrams)
-   -------------------------------------------------------------------------- */
 .sec-market-5__arrow-wrap {
   width: 230px;
-  margin: 260px 15px 0 15px; /* Cách mỗi ảnh 15px, căn chính giữa tâm dọc của 2 ảnh */
+  margin: 260px 15px 0 15px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,14 +259,10 @@
   display: block;
 }
 
-/* --------------------------------------------------------------------------
-   Bottom Anchor Tagline
-   Figma: 23px bên dưới ảnh diagram
-   -------------------------------------------------------------------------- */
 .sec-market-5__bottom {
   text-align: center;
   z-index: 4;
-  margin-top: 27px; /* Cách ảnh 27px tạo khoảng cách hài hòa */
+  margin-top: 27px; 
   margin-bottom: auto;
   opacity: 0;
   transform: translateY(20px);
@@ -323,9 +295,6 @@
   color: #8ce1ff;
 }
 
-/* --------------------------------------------------------------------------
-   Sequential Domino Animation Engine & Slide Active Triggers
-   -------------------------------------------------------------------------- */
 .sec-market-5.slide-animated .sec-market-5__step-node {
   opacity: 1;
   transform: scale(1);
@@ -361,7 +330,6 @@
   transform: translateY(0);
 }
 
-/* Visited Slide State (Instant display without re-animating) */
 .sec-market-5.visited * {
   opacity: 1 !important;
   transition: none !important;
@@ -385,9 +353,6 @@
   transform: translate(-50%, -50%) !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-market-5 .flex-center-v {
     justify-content: center;
@@ -418,7 +383,7 @@
 
   .sec-market-5__bottom {
     margin-top: 10px;
-    margin-bottom: 0; /* Gỡ bỏ margin-bottom: auto để justify-content: center hoạt động chuẩn */
+    margin-bottom: 0; 
   }
 
   .sec-market-5__bottom-text {
@@ -427,9 +392,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-market-5__col-title {
     font-size: 32px;

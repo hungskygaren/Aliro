@@ -1,11 +1,3 @@
-/**
- * Aliro Consulting - Full-Screen Vertical Swiper Engine & Reusable Navigation
- * Loads standalone components/header.html for clean, decoupled architecture.
- */
-
-// ----------------------------------------------------------------------------
-// 1. Standalone Header Component Loader
-// ----------------------------------------------------------------------------
 async function loadSharedHeader() {
   const mainHeader = document.getElementById("mainHeader");
   if (!mainHeader) return;
@@ -21,10 +13,8 @@ async function loadSharedHeader() {
     console.error("Error loading components/header.html:", err);
   }
 
-  // Auto-highlight active navigation item based on current URL path
   highlightActiveNav();
 
-  // Attach all mobile drawer toggle & click events
   bindNavEvents();
 }
 
@@ -132,7 +122,6 @@ function bindNavEvents() {
     navBackdrop.addEventListener("click", closeMobileMenu);
   }
 
-  // Prevent click navigation on hover-only parent items
   const nonClickableItems = document.querySelectorAll(
     '.nav-item--dropdown, .nav-item[data-nav="4ic"]',
   );
@@ -151,9 +140,6 @@ function bindNavEvents() {
   });
 }
 
-// ----------------------------------------------------------------------------
-// 2. Standalone Footer Component Loader
-// ----------------------------------------------------------------------------
 async function loadSharedFooter() {
   const footerTargets = document.querySelectorAll(
     "[data-shared-footer], #sharedFooter, .shared-footer-container",
@@ -175,27 +161,21 @@ async function loadSharedFooter() {
   }
 }
 
-// ----------------------------------------------------------------------------
-// 3. Swiper Initialization & Interactive Engine
-// ----------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", async () => {
-  // Load standalone header and footer components
+
   await Promise.all([loadSharedHeader(), loadSharedFooter()]);
 
-  // Reset any native scroll offset the browser applied from hash anchors before Swiper takes over
   const swiperEl = document.querySelector(".main-swiper");
   const wrapperEl = document.querySelector(".swiper-wrapper");
   if (swiperEl) swiperEl.scrollTop = 0;
   if (wrapperEl) wrapperEl.scrollTop = 0;
   window.scrollTo(0, 0);
 
-  // DOM Element Selectors
   const mainHeader = document.getElementById("mainHeader");
   const scrollDownBtn = document.getElementById("scrollDownBtn");
   const continuumNodes = document.querySelectorAll(".sec-continuum__node");
   const return4icBtns = document.querySelectorAll(".btn-return-4ic");
 
-  // Collect section IDs dynamically in exact slide order from DOM
   const domSlides = Array.from(
     document.querySelectorAll(".main-swiper .swiper-slide"),
   );
@@ -203,23 +183,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     (slide, idx) => slide.id || `section-${idx + 1}`,
   );
 
-  // Section Background Colors for Global Morphing
   const sectionColors = [
-    "#C5DAF3", // Section 1 (0) - Light Glow Blue
-    "#ffffff", // Section 2 (1) - White Architect
-    "#0E6CC7", // Section 2b (2) - Dark Radial Highlights
-    "#ffffff", // Section 3 (3) - White Framework
-    "#1F6CA0", // Section 4 (4) - Dark Blue Orbit
-    "#ffffff", // Section 5 (5) - White Pillar 1
-    "#01103B", // Section 6 (6) - Dark Blue Pillar 2
-    "#ffffff", // Section 7 (7) - White Pillar 3
-    "#01103B", // Section 8 (8) - Dark Blue Pillar 4
-    "#ffffff", // Section 9 (9) - Linear Gradient with White Left
-    "#ffffff", // Section 9b (10) - White Advisory
-    "#f7f9fc", // Section 10 (11) - White/Light Contact
+    "#C5DAF3",
+    "#ffffff",
+    "#0E6CC7",
+    "#ffffff",
+    "#1F6CA0",
+    "#ffffff",
+    "#01103B",
+    "#ffffff",
+    "#01103B",
+    "#ffffff",
+    "#ffffff",
+    "#f7f9fc",
   ];
 
-  // Parse hash to slide index helper
   function hashToSlideIndex(hash) {
     if (!hash) return 0;
     const id = hash.replace("#", "");
@@ -227,7 +205,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     return idx === -1 ? 0 : idx;
   }
 
-  // Read initial target from URL Hash, fallback to 0 (Section 1)
   const initialTargetIndex = hashToSlideIndex(window.location.hash);
 
   const swiper = new Swiper(".main-swiper", {
@@ -303,9 +280,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     },
   });
 
-  // --------------------------------------------------------------------------
-  // Dynamic Number Counter Animation (e.g. 1 -> 10+, 1 -> 25+)
-  // --------------------------------------------------------------------------
   function triggerCounterAnimations(container) {
     if (!container) return;
     const counterElements = container.querySelectorAll("[data-counter]");
@@ -321,10 +295,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       if (isNaN(target)) return;
 
-      // Set initial start value
       el.textContent = `${prefix}${start}${suffix}`;
 
-      // Cancel previous ongoing animation if any
       if (el._counterAnimId) {
         cancelAnimationFrame(el._counterAnimId);
       }
@@ -338,7 +310,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         function animate(timestamp) {
           if (!startTime) startTime = timestamp;
           const progress = Math.min((timestamp - startTime) / duration, 1);
-          // Gentle ease-out: keeps steady speed and reaches full target briskly
+
           const easeOutProgress = 1 - Math.pow(1 - progress, 1.4);
 
           const current = Math.floor(
@@ -360,9 +332,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // Header Theme Switcher (Sync Header text/icon color with Section background)
-  // --------------------------------------------------------------------------
   function updateHeaderTheme(index) {
     if (!mainHeader) return;
 
@@ -396,7 +365,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
-    // Default Home Page Theme: Sections with white/light backgrounds -> dark header (remove .light-theme)
     const isLightBg = [1, 3, 5, 7, 9, 10, 11].includes(index);
     mainHeader.classList.toggle("light-theme", !isLightBg);
   }
@@ -406,7 +374,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     swiper.slideTo(targetIndex, 750);
   }
 
-  // Hero Scroll Down Button
   if (scrollDownBtn) {
     scrollDownBtn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -445,7 +412,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-  // Handle URL hash changes typed directly into the address bar
   window.addEventListener("hashchange", () => {
     const targetIdx = hashToSlideIndex(window.location.hash);
     if (targetIdx !== swiper.activeIndex) {
@@ -458,7 +424,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  // Section 4 Satellite Node Buttons Click Handler
   continuumNodes.forEach((node) => {
     node.addEventListener("click", (e) => {
       e.preventDefault();
@@ -469,7 +434,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-  // Return to 4iC Button Click Handler (Sections 5, 6, 7, 8)
   return4icBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -478,7 +442,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-  // Stop Swiper section slide change ONLY when wheeling over .sec-9b__card-body
   document.addEventListener(
     "wheel",
     (e) => {
@@ -489,7 +452,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     { capture: true },
   );
 
-  // Section 9b Advisory Cards Click Handler (Navigates to data-href on card click)
   const sec9bCards = document.querySelectorAll(".sec-9b__card[data-href]");
   sec9bCards.forEach((card) => {
     card.addEventListener("click", (e) => {

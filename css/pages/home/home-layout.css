@@ -1,8 +1,3 @@
-/* ==========================================================================
-   3. SECTIONS - Modular Section Imports & Shared Background Colors
-   ========================================================================== */
-
-/* Modular Section Imports (MUST be first - CSS spec requirement) */
 @import "./sec-1-hero.css";
 @import "./sec-2-3-intro.css";
 @import "./sec-2b-highlights.css";
@@ -12,7 +7,6 @@
 @import "./sec-9b-advisory.css";
 @import "./sec-10-contact.css";
 
-/* Slide Background Colors & Dynamic Transition Specs */
 .sec-hero {
   background: radial-gradient(50% 50% at 50% 50%, #1E55B3 20%, #01103B 100%);
   transition: background 0.15s cubic-bezier(0.16, 1, 0.3, 1);
@@ -51,15 +45,13 @@
   transition: background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Inner Content Container Wrapper inside Sections */
 .section-content {
   width: 100%;
   align-items: center;
   position: relative;
-  z-index: 2; /* Ensures content stays above background */
+  z-index: 2; 
 }
 
-/* Morph Overlay for seamless background transition */
 .morph-overlay {
   position: absolute;
   inset: 0;

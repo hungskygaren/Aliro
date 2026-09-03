@@ -1,13 +1,9 @@
-/* ==========================================================================
-   Section 10: Background #F7F9FC & Decorative Pattern
-   ========================================================================== */
 .sec-10 {
   position: relative;
   overflow: hidden;
   background-color: #ffffff !important;
 }
 
-/* Background Decor Image (Bottom: 0, Right: 0, fills section height) */
 .sec-10__decor {
   position: absolute;
   bottom: 0;
@@ -20,14 +16,13 @@
   z-index: 1;
 }
 
-/* SECTION 10 CONTENT LAYOUT & TYPOGRAPHY (FIGMA NODE 4243:2522) */
 .sec-10 .flex-center-v {
   display: flex;
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 80px; /* Safe minimum padding-top to prevent top navbar (70px) from covering "LET'S START" */
-  padding-bottom: 60px; /* Leave space for bottom copyright footer */
+  padding-top: 80px; 
+  padding-bottom: 60px; 
   box-sizing: border-box;
 }
 
@@ -55,7 +50,7 @@
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   margin-bottom: 16px;
-  line-height: 24px; /* 100% */
+  line-height: 24px; 
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -184,9 +179,6 @@
   background-color: #03258c;
 }
 
-/* --------------------------------------------------------------------------
-   ThirdEye Page Footer Overrides & Regional Tagline
-   -------------------------------------------------------------------------- */
 .sec-10__title--thirdeye,
 .sec-10__sub-desc--thirdeye,
 .sec-10__tagline {
@@ -226,9 +218,6 @@
   text-transform: uppercase;
 }
 
-/* --------------------------------------------------------------------------
-   Market Intelligence Page Footer Override (.sec-market-8)
-   -------------------------------------------------------------------------- */
 .sec-10__desc--market {
   display: none !important;
 }
@@ -246,7 +235,6 @@
   margin-bottom: 0;
 }
 
-/* Short Desktop Screen Adaptations (<= 660px) for Market Footer */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-market-8 .flex-center-v {
     padding-bottom: 30px;
@@ -284,8 +272,8 @@
 
 .sec-10__card {
   position: relative;
-  background-color: #01103b; /* Dark Midnight Navy background visible from Figma */
-  padding: 36px 35px 36px 25px; /* Figma 5701:764 exact padding specs */
+  background-color: #01103b; 
+  padding: 36px 35px 36px 25px; 
   width: 470px;
   max-width: 100%;
   height: 330px;
@@ -294,41 +282,40 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  clip-path: inset(50% 0 50% 0); /* Closed vertically */
-  opacity: 0; /* Starts invisible */
+  clip-path: inset(50% 0 50% 0); 
+  opacity: 0; 
   transition:
     opacity 0.6s ease-out 0.1s,
-    clip-path 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s; /* Phase 1: Card opens vertically from 0.1s to 1.1s */
+    clip-path 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s; 
 }
 
-/* Phase 2: Starts after card has finished opening */
 .sec-10__divider {
   height: 1px;
   background-color: #7e93a8;
-  opacity: 0; /* Initially 100% invisible! */
-  margin: 38px 0 34px 0; /* Figma y=323 to y=361 is 38px top, y=361 to y=395 is 34px bottom */
+  opacity: 0; 
+  margin: 38px 0 34px 0; 
   width: 100%;
-  transform: scaleX(0); /* 0px left point */
-  transform-origin: left center; /* Draws from left to right! */
+  transform: scaleX(0); 
+  transform-origin: left center; 
   transition:
     opacity 0.3s ease 0.8s,
-    transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s; /* Phase 2: Line draws from 0.8s to 1.8s */
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s; 
 }
 
 .sec-10.slide-animated .sec-10__divider {
   opacity: 0.5;
-  transform: scaleX(1); /* Draws horizontally from left to right */
+  transform: scaleX(1); 
 }
 
 .sec-10.slide-animated .sec-10__card {
   opacity: 1;
-  clip-path: inset(0 0 0 0); /* Opens frame vertically up & down */
+  clip-path: inset(0 0 0 0); 
 }
 
 .sec-10__entity-item {
   display: flex;
   align-items: center;
-  gap: 23px; /* Figma 5701:764: 25px card left offset + 80px icon width + 23px gap = 128px text offset */
+  gap: 23px; 
 }
 
 .sec-10__icon {
@@ -384,7 +371,7 @@
 
 .sec-10__bottom {
   position: absolute;
-  bottom: 30px; /* Figma specs: 30px from bottom */
+  bottom: 30px; 
   left: 0;
   right: 0;
   display: flex;
@@ -439,7 +426,6 @@
   text-decoration: underline;
 }
 
-/* Section 10 Left Column Entrance Animation (Right-to-Left Slide In) */
 .sec-10__left .phrase {
   display: inline-block;
 }
@@ -449,7 +435,6 @@
   transform: translateX(0);
 }
 
-/* Section 10 Right Column & Copyright Entrance Animation */
 .sec-10__card-content .phrase,
 .sec-10__bottom {
   opacity: 0;
@@ -477,7 +462,6 @@
   transition-delay: 1.3s;
 }
 
-/* --- VISITED STATE: Lock in completed state (No re-animation) --- */
 .sec-10.visited .sec-10__divider {
   opacity: 0.5 !important;
   transform: scaleX(1) !important;
@@ -508,9 +492,6 @@
   animation: none !important;
 }
 
-/* ==========================================================================
-   Section 10: Final Contact & Entity Details Responsive Rules (<= 991px & <= 767px)
-   ========================================================================== */
 @media (max-width: 991px) {
   .sec-10__decor {
     height: 60% !important;
@@ -588,7 +569,6 @@
     margin: 0 auto !important;
   }
 
-  /* Compact Card Box styling on Mobile */
   .sec-10__card {
     height: auto !important;
     min-height: auto !important;
@@ -735,7 +715,6 @@
   }
 }
 
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-10__grid {
     gap: 22px !important;

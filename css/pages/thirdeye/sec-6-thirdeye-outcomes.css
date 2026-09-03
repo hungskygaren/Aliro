@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 6: Who It's For (Target Sectors & Strategic Audience)
-   Figma Node: 6704:4957
-   ========================================================================== */
-
 .sec-thirdeye-6 {
   position: relative;
   overflow: hidden;
@@ -34,7 +29,6 @@
   padding-right: 15px;
 }
 
-/* Main 2-Column Stage (1170px container: 470px Left, 30px Gap, 670px Right) */
 .sec-thirdeye-6__stage {
   display: flex;
   align-items: center;
@@ -46,9 +40,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column: Audience List & Mission Statement (470px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-6__left {
   width: 470px;
   flex-shrink: 0;
@@ -145,9 +136,6 @@
   margin: 0;
 }
 
-/* --------------------------------------------------------------------------
-   Right Column: 3D Isometric Art (670px x 446px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-6__right {
   width: 670px;
   max-width: 670px;
@@ -184,9 +172,6 @@
   display: block;
 }
 
-/* --------------------------------------------------------------------------
-   Swiper Active Slide Animation Triggers
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-6.swiper-slide-active .sec-thirdeye-6__left,
 .sec-thirdeye-6.slide-animated .sec-thirdeye-6__left {
   opacity: 1;
@@ -205,7 +190,6 @@
   transform: translateY(0) scale(1);
 }
 
-/* Visited State */
 .sec-thirdeye-6.visited .sec-thirdeye-6__left,
 .sec-thirdeye-6.visited .sec-thirdeye-6__item,
 .sec-thirdeye-6.visited .sec-thirdeye-6__right {
@@ -214,9 +198,6 @@
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-thirdeye-6 .flex-center-v {
     padding-top: 70px;
@@ -271,9 +252,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Layout & Mobile Adaptation
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-thirdeye-6__title {
     font-size: 36px;

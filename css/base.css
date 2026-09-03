@@ -1,8 +1,3 @@
-/* ==========================================================================
-   1. BASE SYSTEM - Variables, Reset, Swiper Engine & Professional Flexbox Helpers
-   ========================================================================== */
-
-/* Self-hosted Aptos Font (Microsoft) — Weights 300 through 900 */
 @font-face {
   font-family: "Aptos";
   src: url("../assets/fonts/Aptos-Light.ttf") format("truetype");
@@ -77,12 +72,11 @@
   --color-text-dark: #123e6b;
   --bg-dark: #071729;
 
-  --container-width: 1170px; /* Figma 12-Column Grid Max-Width Standard */
-  --grid-gutter: 30px; /* Figma 30px Gutter Standard */
-  --header-offset: 129px; /* Precise Figma measurement from top edge to top of background grid */
+  --container-width: 1170px; 
+  --grid-gutter: 30px; 
+  --header-offset: 129px; 
 }
 
-/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -100,7 +94,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Swiper Vertical Slider Container */
 .main-swiper,
 .scroll-container {
   width: 100vw;
@@ -111,12 +104,10 @@ body {
   z-index: 1;
 }
 
-/* Override Swiper inline pointer-events lock during mousewheel transitions */
 .main-swiper .swiper-wrapper {
   pointer-events: auto !important;
 }
 
-/* Fullscreen Section Base */
 .scroll-section,
 .swiper-slide {
   width: 100vw;
@@ -129,19 +120,15 @@ body {
   overflow: hidden;
 }
 
-/* ==========================================================================
-   Macro Layout System - Standard 1170px Container & 30px Gutter Grid
-   ========================================================================== */
 .container {
   width: 100%;
   max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px; /* Safe padding for mobile/tablet screen sizes */
+  padding-left: 24px; 
   padding-right: 24px;
 }
 
-/* Remove container padding on desktop screens (>= 1170px) to match Figma 1170px grid exactly */
 @media (min-width: 1170px) {
   .container {
     padding-left: 0;
@@ -149,7 +136,6 @@ body {
   }
 }
 
-/* Mobile container safe padding (8px) */
 @media (max-width: 767px) {
   .container {
     padding-left: 8px !important;
@@ -164,7 +150,6 @@ body {
   column-gap: var(--grid-gutter);
 }
 
-/* Column Grid Fractions (30px Gutter Math) */
 .col {
   flex: 1 0 0%;
 }
@@ -175,17 +160,16 @@ body {
 .col-6 {
   flex: 0 0 calc(50% - 15px);
   width: calc(50% - 15px);
-} /* (30px * 1) / 2 = 15px */
+} 
 .col-4 {
   flex: 0 0 calc(33.333% - 20px);
   width: calc(33.333% - 20px);
-} /* (30px * 2) / 3 = 20px */
+} 
 .col-3 {
   flex: 0 0 calc(25% - 22.5px);
   width: calc(25% - 22.5px);
-} /* (30px * 3) / 4 = 22.5px */
+} 
 
-/* CSS Grid 12-Column Layout System Utilities */
 .grid-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -227,9 +211,6 @@ body {
   grid-column-start: 8;
 }
 
-/* ==========================================================================
-   Micro Layout Utilities - Flexbox & Pixel Gap Helpers
-   ========================================================================== */
 .d-flex {
   display: flex;
 }
@@ -243,7 +224,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Alignment Helpers */
 .items-center {
   align-items: center;
 }
@@ -263,7 +243,6 @@ body {
   justify-content: flex-end;
 }
 
-/* Flexible Pixel Gaps (Measured directly from Figma) */
 .gap-4 {
   gap: 4px;
 }

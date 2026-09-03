@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 3: What We Examine (The Anatomy of Operational Intelligence)
-   Figma Node: 5036:4679
-   ========================================================================== */
-
 .sec-operational-3 {
   position: relative;
   overflow: hidden;
@@ -18,7 +13,6 @@
   color: #ffffff;
 }
 
-/* Blueprint Pattern Overlay */
 .sec-operational-3__blueprint {
   position: absolute;
   inset: 0;
@@ -36,7 +30,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 70px; /* Standard 70px navbar compensation */
+  padding-top: 70px; 
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -47,10 +41,6 @@
   z-index: 2;
 }
 
-/* --------------------------------------------------------------------------
-   Header: Title & Subtitle
-   Figma: Top 113px - 70px Navbar = 43px
-   -------------------------------------------------------------------------- */
 .sec-operational-3__header {
   text-align: center;
   margin-top: calc(43 / 720 * 100dvh);
@@ -83,9 +73,6 @@
   opacity: 0.9;
 }
 
-/* --------------------------------------------------------------------------
-   Main Stage: 882px x 520px Composite Strategic Graphic with Ambient Glow
-   -------------------------------------------------------------------------- */
 .sec-operational-3__diagram-wrapper {
   position: relative;
   width: 100%;
@@ -124,9 +111,6 @@
   z-index: 2;
 }
 
-/* --------------------------------------------------------------------------
-   Sequential Domino Animation Engine
-   -------------------------------------------------------------------------- */
 .sec-operational-3 .phrase {
   opacity: 0;
   transform: translateY(35px);
@@ -152,16 +136,12 @@
   transform: translateY(0);
 }
 
-/* Visited Slide State (Instant display without re-animating) */
 .sec-operational-3.visited .phrase {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-operational-3__header {
     margin-top: 10px;
@@ -202,9 +182,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-operational-3__title {
     font-size: 32px;

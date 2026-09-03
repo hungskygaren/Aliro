@@ -1,12 +1,5 @@
-/* ==========================================================================
-   Aliro Consulting - Pragmatic 3-File CSS Architecture Entry
-   ========================================================================== */
-
-/* 1. Base System: Reset, Fonts, Variables & Fullscreen Swiper Engine */
 @import "./css/base.css";
 
-/* 2. Global Components: Header Navbar, Side Dash Lines Navigation & Buttons */
 @import "./css/components.css";
 
-/* 3. Page Sections: Background Colors & Section Containers */
 @import "./css/pages/home/home-layout.css";

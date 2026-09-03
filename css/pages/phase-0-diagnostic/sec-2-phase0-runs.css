@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 2: How It Runs (4 Steps Timeline & Fixed Scope Banner)
-   Figma Node: 4900:3473
-   ========================================================================== */
-
 .sec-phase0-2 {
   position: relative;
   overflow: hidden;
@@ -27,9 +22,6 @@
   margin: 0 auto;
 }
 
-/* --------------------------------------------------------------------------
-   Top Banner & Subtitle Header (Figma top: 107px & 198px)
-   -------------------------------------------------------------------------- */
 .sec-phase0-2__header {
   display: flex;
   flex-direction: column;
@@ -96,9 +88,6 @@
   transition-delay: 0.15s;
 }
 
-/* --------------------------------------------------------------------------
-   4-Step Interactive Process Grid (Figma: 278px x 310px images, top: 225px)
-   -------------------------------------------------------------------------- */
 .sec-phase0-2__grid-wrapper {
   position: relative;
   width: 100%;
@@ -141,7 +130,6 @@
   position: relative;
 }
 
-/* Step Illustration Area: Figma 278px x 310px */
 .sec-phase0-2__step-visual {
   width: 278px;
   height: 310px;
@@ -167,7 +155,6 @@
   filter: drop-shadow(0 6px 12px rgba(1, 16, 59, 0.08));
 }
 
-/* Step Number Badge (Figma: 50x50 at top: 505px) */
 .sec-phase0-2__badge-wrapper {
   position: relative;
   z-index: 3;
@@ -195,7 +182,6 @@
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Step Typography (Figma: 24px bold title, 18px semibold desc) */
 .sec-phase0-2__step-title {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
@@ -227,10 +213,6 @@
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==========================================================================
-   Sequential Domino Staggered Delays (Matching About Sec 8)
-   ========================================================================== */
-/* Step 1 */
 .sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(1) .sec-phase0-2__step-visual {
   transition-delay: 0.2s;
 }
@@ -242,7 +224,6 @@
   transition-delay: 0.38s;
 }
 
-/* Step 2 */
 .sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(2) .sec-phase0-2__step-visual {
   transition-delay: 0.42s;
 }
@@ -254,7 +235,6 @@
   transition-delay: 0.6s;
 }
 
-/* Step 3 */
 .sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(3) .sec-phase0-2__step-visual {
   transition-delay: 0.64s;
 }
@@ -266,7 +246,6 @@
   transition-delay: 0.82s;
 }
 
-/* Step 4 */
 .sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(4) .sec-phase0-2__step-visual {
   transition-delay: 0.86s;
 }
@@ -278,9 +257,6 @@
   transition-delay: 1.04s;
 }
 
-/* --------------------------------------------------------------------------
-   Swiper Active Slide Animation Triggers
-   -------------------------------------------------------------------------- */
 .sec-phase0-2.swiper-slide-active .sec-phase0-2__banner,
 .sec-phase0-2.slide-animated .sec-phase0-2__banner {
   opacity: 1;
@@ -319,7 +295,6 @@
   transform: translateY(0);
 }
 
-/* Visited State */
 .sec-phase0-2.visited .sec-phase0-2__banner,
 .sec-phase0-2.visited .sec-phase0-2__subtitle,
 .sec-phase0-2.visited .sec-phase0-2__timeline-line,
@@ -336,9 +311,6 @@
   transform: translateX(-50%) translateY(-50%) scaleX(1) !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-phase0-2 .flex-center-v {
     padding-top: 70px;

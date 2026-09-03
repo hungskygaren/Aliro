@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 3: About Us - Regional Presence (Rooted in Viet Nam. Built for ASEAN.)
-   Figma Node: 6701:4158
-   ========================================================================== */
-
 .sec-about-3 {
   position: relative;
   overflow: hidden;
@@ -32,7 +27,6 @@
   box-sizing: border-box;
 }
 
-/* Main Top Row: Left Text (5/12) + Right Map (7/12) */
 .sec-about-3__main {
   width: 100%;
   position: relative;
@@ -45,9 +39,6 @@
   z-index: 3;
 }
 
-/* Left Column: 5/12 Grid (~41.67%)
-   Figma: Top 218px - 70px Header = 148px
-   -------------------------------------------------------------------------- */
 .sec-about-3__left {
   width: 41.67%;
   max-width: 470px;
@@ -100,9 +91,6 @@
     "clig" off;
 }
 
-/* Right Column: 7/12 Grid (~58.33%)
-   Figma: Top 107px - 70px Header = 37px
-   -------------------------------------------------------------------------- */
 .sec-about-3__right {
   width: 58.33%;
   max-width: 670px;
@@ -144,9 +132,6 @@
   z-index: 2;
 }
 
-/* ==========================================================================
-   Bottom Area: Country Flags Timeline + Note
-   ========================================================================== */
 .sec-about-3__bottom {
   width: 100%;
   max-width: 1170px;
@@ -164,28 +149,26 @@
   transition-delay: 0.35s;
 }
 
-/* Left Timeline Track (vừa khít 103px padding + 730px line, không bị kéo dãn) */
 .sec-about-3__timeline {
   display: flex;
   flex: 0 0 auto;
   position: relative;
-  padding-left: 103px; /* Figma: 203px - 135px (68px) + 35px (nửa width cờ VN 70px) = 103px */
+  padding-left: 103px; 
   box-sizing: border-box;
 }
 
 .sec-about-3__flags-track {
   position: relative;
-  width: 730px; /* Exact 730px width matching Figma */
+  width: 730px; 
   flex-shrink: 0;
-  height: 125px; /* Fixed container height to support absolute positioning of nodes */
+  height: 125px; 
 }
 
-/* Horizontal connecting line (stroke: #4893DC, stroke-width: 2px, length: 730px) */
 .sec-about-3__timeline-line {
   position: absolute;
-  bottom: 33px; /* Vertical center on the 8px dot */
+  bottom: 33px; 
   left: 0;
-  width: 730px; /* Exact 730px line length */
+  width: 730px; 
   height: 2px;
   background: #4893dc;
   z-index: 1;
@@ -213,21 +196,19 @@
   z-index: 2;
 }
 
-/* 7 Node positions (Exact 120px grid column intervals matching Figma 12-col grid) */
-.sec-about-3__country-item:nth-child(2) { left: 0px; }       /* 1. Viet Nam (0px / 0%) */
-.sec-about-3__country-item:nth-child(3) { left: 120px; }     /* 2. Indonesia (120px / 16.44%) */
-.sec-about-3__country-item:nth-child(4) { left: 240px; }     /* 3. Philippines (240px / 32.88%) */
-.sec-about-3__country-item:nth-child(5) { left: 360px; }     /* 4. Thailand (360px / 49.32%) */
-.sec-about-3__country-item:nth-child(6) { left: 480px; }     /* 5. Singapore (480px / 65.75%) */
-.sec-about-3__country-item:nth-child(7) { left: 600px; }     /* 6. Malaysia (600px / 82.19% - exact 598-600px from VN) */
-.sec-about-3__country-item:nth-child(8) {                    /* 7. + More (luôn căn phải) */
+.sec-about-3__country-item:nth-child(2) { left: 0px; }       
+.sec-about-3__country-item:nth-child(3) { left: 120px; }     
+.sec-about-3__country-item:nth-child(4) { left: 240px; }     
+.sec-about-3__country-item:nth-child(5) { left: 360px; }     
+.sec-about-3__country-item:nth-child(6) { left: 480px; }     
+.sec-about-3__country-item:nth-child(7) { left: 600px; }     
+.sec-about-3__country-item:nth-child(8) {                    
   left: auto;
   right: 0;
   transform: none;
   align-items: flex-end;
 }
 
-/* Regular Flags: 40px x 40px */
 .sec-about-3__flag-circle {
   width: 40px;
   height: 40px;
@@ -248,11 +229,10 @@
   transform: scale(1.12);
 }
 
-/* Featured Viet Nam Flag: 70px x 70px (No border) */
 .sec-about-3__country-item--featured .sec-about-3__flag-circle {
   width: 70px;
   height: 70px;
-  margin-bottom: 14px; /* 14px distance to dot */
+  margin-bottom: 14px; 
   box-shadow: 0 4px 18px rgba(218, 37, 28, 0.5);
   border: none;
 }
@@ -264,13 +244,12 @@
   display: block;
 }
 
-/* Timeline Dot: width: 8px, height: 8px, fill: #4893DC */
 .sec-about-3__timeline-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #4893dc;
-  margin-bottom: 10px; /* 10px distance to country name */
+  margin-bottom: 10px; 
   box-shadow: 0 0 6px rgba(72, 147, 220, 0.8);
   z-index: 2;
 }
@@ -304,16 +283,14 @@
   text-align: right;
 }
 
-/* Vertical Divider (66px, exact 30px gap to line and note) */
 .sec-about-3__divider {
   width: 1px;
   height: 66px;
   background: rgba(255, 255, 255, 0.25);
-  margin: 0 30px 10px 30px; /* Exact 30px from line end (966px -> 996px) and 30px to note (996px -> 1026px) */
+  margin: 0 30px 10px 30px; 
   flex-shrink: 0;
 }
 
-/* Additional Note on Right (210px) */
 .sec-about-3__note {
   width: 210px;
   flex-shrink: 0;
@@ -330,7 +307,6 @@
   opacity: 0.95;
 }
 
-/* Slide Entrance Animations */
 .sec-about-3.slide-animated .sec-about-3__left,
 .sec-about-3.slide-animated .sec-about-3__right,
 .sec-about-3.slide-animated .sec-about-3__bottom {
@@ -346,9 +322,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Short Desktop Screen Adaptations (<= 660px)
-   ========================================================================== */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-about-3__main {
     align-items: center;
@@ -360,9 +333,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive Adaptations (Tablet & Mobile)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-about-3 {
     height: auto !important;

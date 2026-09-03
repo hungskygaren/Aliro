@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 4: What Makes The Third Eye Different (4 Unique Differentiators)
-   Figma Node: 6704:4904
-   ========================================================================== */
-
 .sec-thirdeye-4 {
   position: relative;
   overflow: hidden;
@@ -29,9 +24,6 @@
   z-index: 2;
 }
 
-/* --------------------------------------------------------------------------
-   Header: Title (Figma top: 111px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-4__header {
   text-align: center;
   margin-top: calc(40 / 720 * 100dvh);
@@ -59,9 +51,6 @@
     "clig" off;
 }
 
-/* --------------------------------------------------------------------------
-   Main Stage: Center 4-Station Isometric Art (571x510) & 4 Differentiators
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-4__stage {
   position: relative;
   width: 100%;
@@ -74,7 +63,6 @@
   z-index: 3;
 }
 
-/* Center Diagram Graphic (Figma: 571px x 510px) */
 .sec-thirdeye-4__center-wrapper {
   position: relative;
   width: 100%;
@@ -103,9 +91,6 @@
   z-index: 2;
 }
 
-/* --------------------------------------------------------------------------
-   4 Differentiator Feature Blocks (3 Vertical Rows: Icon, Title, Description)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-4__feature {
   position: absolute;
   width: 270px;
@@ -176,8 +161,6 @@
   margin: 0;
 }
 
-/* Positions for 4 Features (Left: 0, Right: 0 => 30px gap to 571px center visual) */
-/* Feature 1: Top Left (Aligned Right) */
 .sec-thirdeye-4__feature--top-left {
   top: 15px;
   left: 0;
@@ -187,7 +170,6 @@
   transition-delay: 0.35s;
 }
 
-/* Feature 2: Top Right (Aligned Left) */
 .sec-thirdeye-4__feature--top-right {
   top: 15px;
   right: 0;
@@ -197,7 +179,6 @@
   transition-delay: 0.5s;
 }
 
-/* Feature 3: Bottom Right (Aligned Left) */
 .sec-thirdeye-4__feature--bottom-right {
   bottom: 15px;
   right: 0;
@@ -207,7 +188,6 @@
   transition-delay: 0.65s;
 }
 
-/* Feature 4: Bottom Left (Aligned Right) */
 .sec-thirdeye-4__feature--bottom-left {
   bottom: 15px;
   left: 0;
@@ -217,9 +197,6 @@
   transition-delay: 0.8s;
 }
 
-/* --------------------------------------------------------------------------
-   Swiper Active Slide Animation Triggers
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-4.swiper-slide-active .sec-thirdeye-4__header,
 .sec-thirdeye-4.slide-animated .sec-thirdeye-4__header {
   opacity: 1;
@@ -238,7 +215,6 @@
   transform: translate(0, 0);
 }
 
-/* Visited State */
 .sec-thirdeye-4.visited .sec-thirdeye-4__header,
 .sec-thirdeye-4.visited .sec-thirdeye-4__center-wrapper,
 .sec-thirdeye-4.visited .sec-thirdeye-4__feature {
@@ -247,9 +223,6 @@
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-thirdeye-4 .flex-center-v {
     padding-top: 70px;
@@ -301,9 +274,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Layout & Mobile Adaptation
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-thirdeye-4__title {
     font-size: 30px;

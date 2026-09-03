@@ -1,27 +1,15 @@
-/* ==========================================================================
-   Operational Intelligence Page Layout & Modular Section Imports
-   ========================================================================== */
-
-/* Section 1: Hero - Operational Intelligence */
 @import "./sec-1-operational-hero.css";
 
-/* Section 2: Core Focus / Overview */
 @import "./sec-2-operational-focus.css";
 
-/* Section 3: Key Questions We Answer */
 @import "./sec-3-operational-questions.css";
 
-/* Section 4: Four Deliverables / Core Pillars */
 @import "./sec-4-operational-deliverables.css";
 
-/* Section 5: Methodology / How We Do It */
 @import "./sec-5-operational-methodology.css";
 
-/* Section 6: When To Engage */
 @import "./sec-6-operational-engage.css";
 
-/* Section 7: Case in Point / Strategic Impact */
 @import "./sec-7-operational-impact.css";
 
-/* Section 8: Final Contact & Entity Details (Reused Footer) */
 @import "../home/sec-10-contact.css";

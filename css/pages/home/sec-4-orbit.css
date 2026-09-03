@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Section 4: The Four Intelligence Continuum 4iC
-   ========================================================================== */
 .sec-continuum {
   position: relative;
   overflow: hidden;
@@ -20,27 +17,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 70px; /* Offset fixed header menu */
+  padding-top: 70px; 
   box-sizing: border-box;
   position: relative;
 }
 
-/* Orbit & Grid Central Wrapper (440px x 440px Figma Standard) */
-/* === CODE CŨ (Absolute positioning theo % dvh) ===
-.sec-continuum__orbit-wrap {
-  position: absolute;
-  top: 28.333dvh;
-  left: 50%;
-  width: 440px;
-  height: 440px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(-50%) scale(var(--orbit-scale, 1));
-  transform-origin: top center;
-}
-================================================= */
-/* === CODE MỚI (Relative Flexbox căn giữa tự nhiên mọi màn hình) === */
 .sec-continuum__orbit-wrap {
   position: relative;
   width: 440px;
@@ -52,7 +33,6 @@
   transform-origin: center center;
 }
 
-/* 550x550 Luminous Glow Background Layer behind 440px Orbit ring */
 .sec-continuum__glow-bg {
   position: absolute;
   left: 50%;
@@ -74,7 +54,6 @@
   opacity: 1;
 }
 
-/* 1. Central Concept Image (301px x 262px Figma Standard) */
 .sec-continuum__center-img {
   position: absolute;
   left: 50%;
@@ -91,7 +70,6 @@
     transform 2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Center Subtitle Text inside Orbit Ring */
 .sec-continuum__center-text {
   position: absolute;
   left: 50%;
@@ -109,7 +87,6 @@
   text-transform: none;
 }
 
-/* 2. Central Orbit Ring SVG (440px x 440px Figma Standard) */
 .sec-continuum__orbit-ring {
   position: absolute;
   left: 0;
@@ -132,19 +109,6 @@
   opacity: 1 !important;
 }
 
-/* 3. Top Title Text Block (Flexbox relative flow above Orbit Ring) */
-/* === CODE CŨ (Absolute positioning theo % dvh) ===
-.sec-continuum__top-text {
-  position: absolute;
-  left: 50%;
-  top: 13.75dvh;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 10;
-  white-space: nowrap;
-}
-================================================= */
-/* === CODE MỚI (Relative Flexbox căn giữa tự nhiên mọi màn hình) === */
 .sec-continuum__top-text {
   position: relative;
   text-align: center;
@@ -183,14 +147,13 @@
   text-transform: none;
 }
 
-/* 3.1 Bottom Subtitle Text Block (Below Orbit Ring, 42px offset) */
 .sec-continuum__bottom-text {
   position: absolute;
   left: 50%;
-  bottom: calc(50% - 210px); /* 42px inside from bottom edge of 504px circle */
+  bottom: calc(50% - 210px); 
   transform: translateX(-50%);
   text-align: center;
-  z-index: 10; /* Topmost layer to stay above connector lines */
+  z-index: 10; 
   width: 360px;
   font-family: Aptos, var(--font-family);
   font-size: 16px;
@@ -201,7 +164,6 @@
   font-style: normal;
 }
 
-/* 4. Satellite Nodes (Interactive Buttons - 130px Circle Anchor) */
 .sec-continuum__node {
   position: absolute;
   width: 130px;
@@ -214,7 +176,6 @@
   white-space: nowrap;
 }
 
-/* Precise 130px Node Offsets from 440px Orbit Ring Bounding Box */
 .node-top-left {
   top: -11.77px;
   left: -12.85px;
@@ -243,7 +204,6 @@
   transform: none;
 }
 
-/* Node Circle Interactive Button (160px x 160px Figma Standard) */
 .node-circle-btn {
   position: relative;
   width: 100%;
@@ -262,7 +222,7 @@
   opacity: 0;
   transform: translateY(12px) scale(0.88);
   will-change: transform, opacity;
-  /* Keep hover feedback independent from the staggered opacity reveal. */
+  
   transition:
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
@@ -271,15 +231,12 @@
     box-shadow 0.3s ease;
 }
 
-/* Subtle Soft Glow Hover State */
 .sec-continuum__node:hover .node-circle-btn,
 .node-circle-btn:hover {
   border-color: #ffffff !important;
   box-shadow: 0 0 16px rgba(197, 218, 243, 0.4) !important;
   filter: none !important;
 }
-
-/* Node Circle Image inside Button */
 
 .node-circle-btn img {
   display: block;
@@ -292,14 +249,13 @@
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Node Text Typography (Positioned Side-by-Side without skewing Circle Center) */
 .node-text {
   display: flex;
   flex-direction: column;
   gap: 1px;
   user-select: none;
   opacity: 0;
-  z-index: 5; /* Ensure text renders on top of circle button */
+  z-index: 5; 
   transition:
     opacity 0.6s ease-out,
     transform 1s cubic-bezier(0.25, 1, 0.5, 1);
@@ -370,17 +326,16 @@
   font-style: normal;
 }
 
-/* 5. Bottom Vertical Connector Line (2px Thin Border Alignment) */
 .sec-continuum__connector-line {
   position: absolute;
   bottom: 0;
-  left: 50%; /* Center perfectly along page axis */
+  left: 50%; 
   transform: translateX(-50%) scaleY(0);
   transform-origin: top center;
   width: 2px;
   height: calc(
     50% - var(--connector-offset, 255px)
-  ); /* Exactly 7px away from bottom arrow tail */
+  ); 
   background-color: #4f8f9d;
   z-index: 2;
   opacity: 0;
@@ -389,14 +344,13 @@
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* 6. Satellite Connector Lines & Dots Overlay */
 .sec-continuum__connector-svg {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 5; /* above interactive nodes (z-index: 4) to let dots sit on top of borders */
+  z-index: 5; 
   pointer-events: none;
 }
 
@@ -419,9 +373,6 @@
     transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* --------------------------------------------------------------------------
-   Section 4 Entrance Animation Sequence (Synced with Swiper Slide Active)
-   -------------------------------------------------------------------------- */
 .sec-continuum .phrase {
   display: inline-block;
   opacity: 0;
@@ -431,7 +382,6 @@
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Disable phrase animation for node text to let container handle the translation */
 .sec-continuum .node-text .phrase {
   display: inline-block;
   opacity: inherit;
@@ -439,7 +389,6 @@
   transition: none;
 }
 
-/* Active Entrance Animations */
 .sec-continuum.slide-animated .sec-continuum__center-img {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
@@ -459,7 +408,6 @@
   transition-delay: 0.2s;
 }
 
-/* --- NODE 1 (Start: 0.3s) --- */
 .sec-continuum.slide-animated .node-top-left .node-circle-btn {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -475,7 +423,6 @@
   transition-delay: 0.3s;
 }
 
-/* --- NODE 2 (Start: 0.7s) --- */
 .sec-continuum.slide-animated .node-top-right .node-circle-btn {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -491,7 +438,6 @@
   transition-delay: 0.7s;
 }
 
-/* --- NODE 3 (Start: 1.1s) --- */
 .sec-continuum.slide-animated .node-bottom-right .node-circle-btn {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -507,7 +453,6 @@
   transition-delay: 1.1s;
 }
 
-/* --- NODE 4 (Start: 1.5s) --- */
 .sec-continuum.slide-animated .node-bottom-left .node-circle-btn {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -523,7 +468,6 @@
   transition-delay: 1.5s;
 }
 
-/* --- CONNECTOR LINES & DOTS (Start: 2.3s after Node 4 finishes appearing) --- */
 .sec-continuum.slide-animated .sec-continuum__connector-line {
   opacity: 1;
   transform: translateX(-50%) scaleY(1);
@@ -548,14 +492,12 @@
   transition-delay: 2.3s;
 }
 
-/* --- CENTER TEXT (Start: 3.1s LAST after 4 Connector lines shoot out) --- */
 .sec-continuum.slide-animated .sec-continuum__center-text .phrase {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 3.1s;
 }
 
-/* --- VISITED STATE: Lock in completed state (No re-animation) --- */
 .sec-continuum.visited .sec-continuum__center-img {
   transform: translate(-50%, -50%) scale(1) !important;
   opacity: 1 !important;
@@ -619,10 +561,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Section 4 Responsive Scaling & Adjustments
-   ========================================================================== */
-/* Height Breakpoints for Desktop/Tablet Full-Screen Viewports */
 @media (max-height: 719px) and (min-width: 992px) {
   .sec-continuum {
     --orbit-scale: 0.82;
@@ -641,9 +579,6 @@
   }
 }
 
-/* ==========================================================================
-   Section 4 Orbit System Desktop-First Responsive Rules (<= 991px & <= 767px)
-   ========================================================================== */
 @media (max-width: 991px) {
   .sec-continuum {
     --orbit-scale: 0.88;
@@ -727,13 +662,11 @@
     margin-bottom: 15px !important;
   }
 
-  /* Node absolute anchor preservation */
   .sec-continuum__node {
     position: absolute !important;
     display: block !important;
   }
 
-  /* Common node text base styling & transform reset for animation/visited states */
   .sec-continuum.slide-animated .node-text,
   .sec-continuum.visited .node-text,
   .sec-continuum__node .node-text {
@@ -748,7 +681,6 @@
     gap: 2px !important;
   }
 
-  /* 1. NODE 01 & 04 (Left Column): Right-aligned text starting at 50% center axis */
   .node-top-left .node-text,
   .node-bottom-left .node-text {
     right: 8% !important;
@@ -757,7 +689,6 @@
     align-items: flex-end !important;
   }
 
-  /* 2. NODE 02 & 03 (Right Column): Left-aligned text starting at 50% center axis */
   .node-top-right .node-text,
   .node-bottom-right .node-text {
     left: 8% !important;
@@ -766,7 +697,6 @@
     align-items: flex-start !important;
   }
 
-  /* 3. TOP NODES (01 & 02): Anchored above top circle edge */
   .node-top-left .node-text,
   .node-top-right .node-text {
     bottom: 100% !important;
@@ -775,7 +705,6 @@
     height: auto !important;
   }
 
-  /* 4. BOTTOM NODES (03 & 04): Anchored below bottom circle edge */
   .node-bottom-left .node-text,
   .node-bottom-right .node-text {
     top: 100% !important;
@@ -784,7 +713,6 @@
     height: auto !important;
   }
 
-  /* Text Font Size & Spacing Adjustments for Mobile */
   .node-num {
     font-size: 20px !important;
     line-height: 24px !important;
@@ -813,7 +741,6 @@
   }
 }
 
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-continuum {
     --orbit-scale: 0.8 !important;

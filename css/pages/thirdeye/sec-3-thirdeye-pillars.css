@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 3: Seven Intelligence Domains (Weighted To Your Priorities)
-   Figma Node: 4955:2004
-   ========================================================================== */
-
 .sec-thirdeye-3 {
   position: relative;
   overflow: hidden;
@@ -18,7 +13,6 @@
   color: #ffffff;
 }
 
-/* Blueprint Pattern Overlay */
 .sec-thirdeye-3__blueprint {
   position: absolute;
   inset: 0;
@@ -45,12 +39,9 @@
   z-index: 2;
 }
 
-/* --------------------------------------------------------------------------
-   Header: Title (Figma top: 110px, width: 570px)
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-3__header {
   text-align: center;
-  margin-top: 5.5556dvh; /* 40px / 720px */
+  margin-top: 5.5556dvh; 
   margin-bottom: 0;
   z-index: 4;
   opacity: 0;
@@ -76,9 +67,6 @@
     "clig" off;
 }
 
-/* --------------------------------------------------------------------------
-   Main Stage: 905px x 445px Composite Strategic Dome & 7 Domains Graphic
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-3__diagram-wrapper {
   position: relative;
   width: 100%;
@@ -123,9 +111,6 @@
   z-index: 2;
 }
 
-/* --------------------------------------------------------------------------
-   Swiper Active Slide Animation Triggers
-   -------------------------------------------------------------------------- */
 .sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__header,
 .sec-thirdeye-3.slide-animated .sec-thirdeye-3__header {
   opacity: 1;
@@ -138,7 +123,6 @@
   transform: translateY(0) scale(1);
 }
 
-/* Visited State */
 .sec-thirdeye-3.visited .sec-thirdeye-3__header,
 .sec-thirdeye-3.visited .sec-thirdeye-3__diagram-wrapper {
   opacity: 1 !important;
@@ -146,9 +130,6 @@
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-thirdeye-3 .flex-center-v {
     justify-content: center;
@@ -167,10 +148,6 @@
   }
 }
 
-
-/* --------------------------------------------------------------------------
-   Responsive Layout & Mobile Adaptation
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-thirdeye-3__title {
     font-size: 30px;

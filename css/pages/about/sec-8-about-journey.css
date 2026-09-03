@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 8: About Us - From First Market Read to Sustained Execution
-   Figma Node: 6701:4313
-   ========================================================================== */
-
 .sec-about-8 {
   position: relative;
   overflow: hidden;
@@ -30,11 +25,10 @@
   max-width: 1170px;
   margin: 0 auto;
   position: relative;
-  padding-top: calc(126 / 720 * 100dvh); /* 17.5dvh = đúng 126px trong màn 720 */
+  padding-top: calc(126 / 720 * 100dvh); 
   box-sizing: border-box;
 }
 
-/* Header Area */
 .sec-about-8__header {
   position: relative;
   text-align: center;
@@ -73,11 +67,10 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28px; /* 116.667% */
+  line-height: 28px; 
   margin: 0;
 }
 
-/* Main 6-Step Journey Track */
 .sec-about-8__track {
   position: relative;
   width: 100%;
@@ -87,7 +80,6 @@
   z-index: 3;
 }
 
-/* Horizontal Connecting Timeline Line (1000px, 4px height, white 0.3 opacity) */
 .sec-about-8__track-line {
   position: absolute;
   top: 158px;
@@ -106,7 +98,6 @@
   transition-delay: 0.1s;
 }
 
-/* Step Item */
 .sec-about-8__step {
   width: 170px;
   flex-shrink: 0;
@@ -118,7 +109,6 @@
   z-index: 2;
 }
 
-/* 120px Circle Icon */
 .sec-about-8__icon-wrap {
   width: 120px;
   height: 120px;
@@ -148,7 +138,6 @@
   display: block;
 }
 
-/* Arrow separator between steps */
 .sec-about-8__arrow {
   display: flex;
   align-items: center;
@@ -164,7 +153,6 @@
     transform 0.35s ease;
 }
 
-/* Number Badge 40x40 (No border, sits directly on top of the line) */
 .sec-about-8__badge {
   width: 40px;
   height: 40px;
@@ -188,7 +176,6 @@
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Step Label */
 .sec-about-8__label {
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
@@ -208,14 +195,13 @@
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Bottom Divider & Quote */
 .sec-about-8__divider {
   position: relative;
   width: 100%;
   height: 1px;
   background: rgba(197, 218, 243, 0.3);
   z-index: 3;
-  margin-top: 40px; /* Luôn cách khối trên đúng 40px */
+  margin-top: 40px; 
   opacity: 0;
   transition: opacity 0.6s ease;
 }
@@ -243,11 +229,6 @@
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==========================================================================
-   Sequential Chain Entrance Delays (Icon -> Badge + Label -> Arrow -> Next)
-   ========================================================================== */
-
-/* Step 1 */
 .sec-about-8.slide-animated
   .sec-about-8__step:nth-child(2)
   .sec-about-8__icon-wrap {
@@ -264,12 +245,10 @@
   transition-delay: 0.35s;
 }
 
-/* Arrow 1 */
 .sec-about-8.slide-animated .sec-about-8__arrow:nth-child(3) {
   transition-delay: 0.48s;
 }
 
-/* Step 2 */
 .sec-about-8.slide-animated
   .sec-about-8__step:nth-child(4)
   .sec-about-8__icon-wrap {
@@ -286,12 +265,10 @@
   transition-delay: 0.8s;
 }
 
-/* Arrow 2 */
 .sec-about-8.slide-animated .sec-about-8__arrow:nth-child(5) {
   transition-delay: 0.93s;
 }
 
-/* Step 3 */
 .sec-about-8.slide-animated
   .sec-about-8__step:nth-child(6)
   .sec-about-8__icon-wrap {
@@ -308,12 +285,10 @@
   transition-delay: 1.25s;
 }
 
-/* Arrow 3 */
 .sec-about-8.slide-animated .sec-about-8__arrow:nth-child(7) {
   transition-delay: 1.38s;
 }
 
-/* Step 4 */
 .sec-about-8.slide-animated
   .sec-about-8__step:nth-child(8)
   .sec-about-8__icon-wrap {
@@ -330,12 +305,10 @@
   transition-delay: 1.7s;
 }
 
-/* Arrow 4 */
 .sec-about-8.slide-animated .sec-about-8__arrow:nth-child(9) {
   transition-delay: 1.83s;
 }
 
-/* Step 5 */
 .sec-about-8.slide-animated
   .sec-about-8__step:nth-child(10)
   .sec-about-8__icon-wrap {
@@ -352,12 +325,10 @@
   transition-delay: 2.15s;
 }
 
-/* Arrow 5 */
 .sec-about-8.slide-animated .sec-about-8__arrow:nth-child(11) {
   transition-delay: 2.28s;
 }
 
-/* Step 6 */
 .sec-about-8.slide-animated
   .sec-about-8__step:nth-child(12)
   .sec-about-8__icon-wrap {
@@ -374,7 +345,6 @@
   transition-delay: 2.6s;
 }
 
-/* Divider & Quote Delays */
 .sec-about-8.slide-animated .sec-about-8__divider {
   transition-delay: 0.8s;
 }
@@ -382,7 +352,6 @@
   transition-delay: 1s;
 }
 
-/* Slide Animated Active States */
 .sec-about-8.slide-animated .sec-about-8__header {
   opacity: 1;
   transform: translateY(0);
@@ -422,7 +391,6 @@
   transform: translateY(0);
 }
 
-/* Visited States */
 .sec-about-8.visited .sec-about-8__header,
 .sec-about-8.visited .sec-about-8__icon-wrap,
 .sec-about-8.visited .sec-about-8__badge,
@@ -456,9 +424,6 @@
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px)
-   -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-about-8 .container {
     justify-content: center;
@@ -466,9 +431,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive Adaptations (Tablet & Mobile)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-about-8 {
     height: auto !important;

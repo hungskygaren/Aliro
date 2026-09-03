@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Section 9b: Three Advisory Pathways (How We Help)
-   ========================================================================== */
 .sec-9b {
   position: relative;
   overflow: hidden;
@@ -21,8 +18,8 @@
 .sec-9b__wrapper {
   width: 100%;
   position: absolute;
-  top: 12.9167dvh; /* Exactly 93px at 720px height (93/720 = 12.9167%) */
-  bottom: 5.1389dvh; /* Exactly 37px at 720px height (37/720 = 5.1389%) */
+  top: 12.9167dvh; 
+  bottom: 5.1389dvh; 
   left: 0;
   right: 0;
   display: flex;
@@ -33,7 +30,7 @@
 
 .sec-9b__header {
   text-align: center;
-  margin-bottom: 24px; /* cách dưới 24px mới đến danh sách card */
+  margin-bottom: 24px; 
 }
 
 .sec-9b__tag {
@@ -45,10 +42,10 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28px; /* 116.667% */
+  line-height: 28px; 
   text-transform: uppercase;
   letter-spacing: 0px;
-  margin-bottom: 10px; /* cách dưới 10px */
+  margin-bottom: 10px; 
 }
 
 .sec-9b__title {
@@ -63,7 +60,7 @@
   line-height: normal;
   text-transform: uppercase;
   letter-spacing: 0px;
-  margin-bottom: 10px; /* cách dưới 10px */
+  margin-bottom: 10px; 
 }
 
 .sec-9b__desc {
@@ -79,7 +76,6 @@
   margin: 0;
 }
 
-/* Cards Layout (Proportional 370x390 Specs matching Figma Node 5705:1056) */
 .sec-9b__cards {
   display: flex;
   flex-direction: row;
@@ -139,7 +135,7 @@
   justify-content: flex-start;
   margin-bottom: 8px;
   overflow-y: auto;
-  overflow-y: overlay; /* Scrollbar nổi đè lên trên, KHÔNG chiếm pixel width nào */
+  overflow-y: overlay; 
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
   transition: scrollbar-color 0.3s ease;
@@ -228,7 +224,6 @@
   fill: currentColor;
 }
 
-/* Entrance Animations */
 .sec-9b .phrase {
   opacity: 0;
   transform: translateY(30px);
@@ -267,9 +262,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive Adaptations (Mobile: Native Horizontal Scroll / Swipe Layout)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-9b__cards {
     gap: 20px;
@@ -346,7 +338,6 @@
     margin-bottom: 16px;
   }
 
-  /* Horizontal Scroll Container with Touch Scroll-Snap */
   .sec-9b__cards {
     display: flex !important;
     flex-direction: row !important;
@@ -361,21 +352,19 @@
     padding-inline: 16px !important;
     padding-bottom: 10px !important;
     box-sizing: border-box !important;
-    scrollbar-width: none !important; /* Firefox */
+    scrollbar-width: none !important; 
   }
 
   .sec-9b__cards::-webkit-scrollbar {
-    display: none !important; /* Chrome/Safari */
+    display: none !important; 
   }
 
-  /* Right-side scroll spacer so padding-right works at the end of scroll track */
   .sec-9b__cards::after {
     content: "" !important;
     flex: 0 0 16px !important;
     pointer-events: none !important;
   }
 
-  /* Mobile Horizontal Card (Card 1 occupies 85% width, 15% peeks cleanly) */
   .sec-9b__card {
     flex: 0 0 85% !important;
     width: 85% !important;
@@ -451,7 +440,6 @@
   }
 }
 
-/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
 @media (max-width: 768px) and (min-height: 780px) {
   .sec-9b__tag {
     font-size: 18px;
