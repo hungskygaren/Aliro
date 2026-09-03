@@ -50,7 +50,7 @@
    -------------------------------------------------------------------------- */
 .sec-thirdeye-3__header {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 5.5556dvh; /* 40px / 720px */
   margin-bottom: 0;
   z-index: 4;
   opacity: 0;
@@ -147,46 +147,26 @@
 }
 
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 660px)
    -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-thirdeye-3 .flex-center-v {
+    justify-content: center;
     padding-top: 70px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   .sec-thirdeye-3__header {
-    margin-top: 10px;
+    margin-top: 0;
   }
 
   .sec-thirdeye-3__diagram-wrapper {
     margin-top: 10px;
-    max-width: 860px;
-    height: 423px;
+    max-width: calc(905px * 0.95);
+    height: auto;
   }
 }
 
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-thirdeye-3 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 5px;
-  }
-
-  .sec-thirdeye-3__header {
-    margin-top: 4px;
-  }
-
-  .sec-thirdeye-3__title {
-    font-size: 34px;
-    line-height: 38px;
-  }
-
-  .sec-thirdeye-3__diagram-wrapper {
-    margin-top: 4px;
-    max-width: 815px;
-    height: 400px;
-  }
-}
 
 /* --------------------------------------------------------------------------
    Responsive Layout & Mobile Adaptation

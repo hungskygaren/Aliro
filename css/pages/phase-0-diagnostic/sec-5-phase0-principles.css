@@ -9,7 +9,7 @@
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  background-color: #ffffff !important;
+  background: var(--White, #ffffff) !important;
   box-sizing: border-box;
   color: var(--Midnight-Navy, #01103b);
 }
@@ -32,7 +32,7 @@
    -------------------------------------------------------------------------- */
 .sec-phase0-5__header {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 5.5556dvh; /* 40px / 720px standard height */
   margin-bottom: 0;
   z-index: 4;
   opacity: 0;
@@ -96,7 +96,6 @@
   height: 185px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 10px 20px rgba(1, 16, 59, 0.1));
 }
 
 /* --------------------------------------------------------------------------
@@ -114,14 +113,13 @@
   position: absolute;
   width: 471px;
   height: 190px;
-  background-color: #ffffff;
+  background: var(--White, #ffffff);
   border: 1px solid rgba(126, 147, 168, 0.5);
   box-sizing: border-box;
   padding: 10px 16px 10px 10px;
   display: flex;
   align-items: center;
   gap: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
   pointer-events: auto;
   z-index: 4;
   opacity: 0;
@@ -178,7 +176,6 @@
   line-height: 22px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  opacity: 0.95;
 }
 
 /* Card Desktop Positions (Figma: 50px vertical gap, 230px horizontal gap) */
@@ -255,50 +252,11 @@
 }
 
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 620px)
    -------------------------------------------------------------------------- */
-@media (max-height: 660px) and (min-width: 992px) {
-  .sec-phase0-5 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
-  }
-
-  .sec-phase0-5__header {
-    margin-top: 10px;
-  }
-
-  .sec-phase0-5__stage {
-    margin-top: 10px;
-  }
-}
-
 @media (max-height: 620px) and (min-width: 992px) {
-  .sec-phase0-5 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 5px;
-  }
-
   .sec-phase0-5__header {
-    margin-top: 4px;
-  }
-
-  .sec-phase0-5__title {
-    font-size: 34px;
-    line-height: 38px;
-  }
-
-  .sec-phase0-5__stage {
-    margin-top: 4px;
-  }
-
-  .sec-phase0-5__card-title {
-    font-size: 26px;
-    line-height: 30px;
-  }
-
-  .sec-phase0-5__card-desc {
-    font-size: 14px;
-    line-height: 20px;
+    margin-top: 3dvh;
   }
 }
 

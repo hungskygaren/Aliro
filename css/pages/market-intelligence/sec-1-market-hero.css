@@ -179,17 +179,7 @@
   padding: 8px 16px;
   border-radius: 2px;
   text-decoration: none;
-  transition:
-    background-color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.25);
-}
-
-.sec-market-1__btn:hover {
-  background-color: #032488;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(4, 49, 177, 0.4);
+  cursor: pointer;
 }
 
 /* --------------------------------------------------------------------------
@@ -239,7 +229,6 @@
   transition: none !important;
 }
 
-
 /* --------------------------------------------------------------------------
    Sequential Domino Animation Engine
    -------------------------------------------------------------------------- */
@@ -251,12 +240,10 @@
     transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
 .sec-market-1.slide-animated .phrase {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* Visited Slide State (Instant display without re-animating) */
 .sec-market-1.visited .phrase {
@@ -266,75 +253,6 @@
 }
 
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
-@media (max-height: 660px) and (min-width: 992px) {
-  /* Keep 100% font sizes & image dimensions - only reduce spacing */
-  .sec-market-1__eyebrow {
-    margin-bottom: 6px;
-  }
-
-  .sec-market-1__title {
-    margin-bottom: 8px;
-  }
-
-  .sec-market-1__subtitle {
-    margin-bottom: 6px;
-  }
-
-  .sec-market-1__desc {
-    margin-bottom: 10px;
-  }
-
-  .sec-market-1__breadcrumb {
-    margin-bottom: 10px;
-  }
-
-  .sec-market-1__right {
-    max-width: 630px;
-  }
-
-}
-
-@media (max-height: 620px) and (min-width: 992px) {
-  /* Subtle scale-down: max 5% shrink */
-  .sec-market-1__eyebrow {
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 4px;
-  }
-
-  .sec-market-1__title {
-    font-size: 41px;
-    line-height: 46px;
-    margin-bottom: 6px;
-  }
-
-  .sec-market-1__subtitle {
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 4px;
-  }
-
-  .sec-market-1__desc {
-    font-size: 17px;
-    line-height: 23px;
-    margin-bottom: 8px;
-  }
-
-  .sec-market-1__breadcrumb {
-    margin-bottom: 8px;
-  }
-
-  .sec-market-1__crumb {
-    font-size: 14px;
-  }
-
-  .sec-market-1__right {
-    max-width: 590px;
-  }
-}
 
 /* --------------------------------------------------------------------------
    Responsive Breakpoints for Width (1200px, 991px, 576px)

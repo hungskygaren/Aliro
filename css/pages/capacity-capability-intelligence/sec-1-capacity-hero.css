@@ -73,11 +73,6 @@
   font-feature-settings:
     "liga" off,
     "clig" off;
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.1s;
 }
 
@@ -93,11 +88,6 @@
   font-feature-settings:
     "liga" off,
     "clig" off;
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.15s;
 }
 
@@ -112,11 +102,6 @@
   font-feature-settings:
     "liga" off,
     "clig" off;
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.2s;
 }
 
@@ -128,11 +113,6 @@
   color: #ffffff;
   margin: 0 0 20px 0;
   max-width: 470px;
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.25s;
 }
 
@@ -143,11 +123,6 @@
   flex-wrap: wrap;
   gap: 4px 6px;
   margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.3s;
 }
 
@@ -172,7 +147,6 @@
   color: #ffffff;
   padding-bottom: 2px;
   border-bottom: 2px solid #ffffff;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
 }
 
 .sec-capacity-1__crumb-sep {
@@ -192,11 +166,6 @@
 
 /* CTA Action Button */
 .sec-capacity-1__cta-wrap {
-  opacity: 0;
-  transform: translateY(25px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.35s;
 }
 
@@ -212,26 +181,21 @@
   padding: 8px 16px;
   border-radius: 2px;
   text-decoration: none;
-  transition:
-    background-color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.25);
+  cursor: pointer;
+  transition: background-color 0.25s ease;
 }
 
 .sec-capacity-1__btn:hover {
-  background-color: #032488;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(4, 49, 177, 0.4);
+  background-color: var(--color-primary-hover, #03258c);
 }
 
 /* --------------------------------------------------------------------------
-   Right Column: 3D Isometric People & Capability Architecture (670px x 446px)
+   Right Column: 3D Holographic People & Ecosystem Stage (670px x 446px)
    -------------------------------------------------------------------------- */
 .sec-capacity-1__right {
   width: 670px;
   max-width: 670px;
-  height: 446px;
+  height: auto;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -247,8 +211,7 @@
 
 .sec-capacity-1__img-wrapper {
   position: relative;
-  width: 670px;
-  height: 446px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,161 +222,76 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
-  height: 320px;
+  width: 550px;
+  height: 450px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(57, 192, 255, 0.35) 0%,
-    rgba(4, 49, 177, 0.15) 60%,
-    transparent 80%
-  );
-  filter: blur(45px);
+  background: rgba(34, 108, 180, 0.7);
+  filter: blur(90px);
   pointer-events: none;
   z-index: 1;
 }
 
 .sec-capacity-1__img {
-  position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 446px;
+  aspect-ratio: 670 / 446;
   object-fit: contain;
   display: block;
+  position: relative;
   z-index: 2;
 }
 
-/* --------------------------------------------------------------------------
-   Sequential Domino Animation Activation
-   -------------------------------------------------------------------------- */
-.sec-capacity-1.slide-animated .phrase,
-.sec-capacity-1.swiper-slide-active .phrase,
-.sec-capacity-1.slide-animated .sec-capacity-1__right,
-.sec-capacity-1.swiper-slide-active .sec-capacity-1__right {
+.sec-capacity-1.slide-animated .sec-capacity-1__right {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-capacity-1.visited .phrase,
 .sec-capacity-1.visited .sec-capacity-1__right {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
 }
 
-
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
+   Sequential Domino Animation Engine
    -------------------------------------------------------------------------- */
-@media (max-height: 700px) and (min-width: 992px) {
-  .sec-capacity-1 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
-  }
-
-  .sec-capacity-1__eyebrow {
-    margin-bottom: 10px;
-  }
-
-  .sec-capacity-1__title {
-    margin-bottom: 10px;
-  }
-
-  .sec-capacity-1__subtitle {
-    margin-bottom: 10px;
-  }
-
-  .sec-capacity-1__desc {
-    margin-bottom: 14px;
-  }
-
-  .sec-capacity-1__breadcrumb {
-    margin-bottom: 14px;
-  }
-
+.sec-capacity-1 .phrase {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
-  .sec-capacity-1__stage {
-    gap: 20px;
-  }
-
-  .sec-capacity-1__eyebrow {
-    margin-bottom: 6px;
-  }
-
-  .sec-capacity-1__title {
-    margin-bottom: 8px;
-  }
-
-  .sec-capacity-1__subtitle {
-    margin-bottom: 6px;
-  }
-
-  .sec-capacity-1__desc {
-    margin-bottom: 10px;
-  }
-
-  .sec-capacity-1__breadcrumb {
-    margin-bottom: 10px;
-  }
+.sec-capacity-1.slide-animated .phrase {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-capacity-1__title {
-    font-size: 40px;
-    line-height: 46px;
-    margin-bottom: 6px;
-  }
-
-  .sec-capacity-1__eyebrow {
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 4px;
-  }
-
-  .sec-capacity-1__subtitle {
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 4px;
-  }
-
-  .sec-capacity-1__desc {
-    font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 8px;
-  }
-
-  .sec-capacity-1__right {
-    max-width: 580px;
-    height: 386px;
-  }
-
-  .sec-capacity-1__img-wrapper {
-    width: 580px;
-    height: 386px;
-  }
+/* Visited Slide State (Instant display without re-animating) */
+.sec-capacity-1.visited .phrase {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* --------------------------------------------------------------------------
-   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
+   Responsive Breakpoints for Width (1200px, 991px, 576px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-capacity-1__stage {
     gap: 20px;
   }
 
-  .sec-capacity-1__left {
-    max-width: 480px;
+  .sec-capacity-1__title {
+    font-size: 38px;
+    line-height: 44px;
   }
 
   .sec-capacity-1__right {
+    width: 50%;
     max-width: 540px;
-    height: 360px;
-  }
-
-  .sec-capacity-1__img-wrapper {
-    width: 540px;
-    height: 360px;
   }
 }
 
@@ -425,41 +303,24 @@
   }
 
   .sec-capacity-1 .flex-center-v {
-    padding-top: 90px;
-    padding-bottom: 60px;
+    padding-top: 85px;
+    padding-bottom: 40px;
     height: auto;
   }
 
   .sec-capacity-1__stage {
-    flex-direction: column-reverse;
-    text-align: center;
+    flex-direction: column;
+    text-align: left;
     gap: 30px;
   }
 
   .sec-capacity-1__left {
     max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sec-capacity-1__desc {
-    max-width: 580px;
-  }
-
-  .sec-capacity-1__breadcrumb {
-    justify-content: center;
   }
 
   .sec-capacity-1__right {
-    max-width: 480px;
     width: 100%;
-    height: auto;
-  }
-
-  .sec-capacity-1__img-wrapper {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
   }
 
   .sec-capacity-1 .scroll-down-btn {
@@ -486,6 +347,10 @@
   .sec-capacity-1__desc {
     font-size: 15px;
     line-height: 22px;
+  }
+
+  .sec-capacity-1__breadcrumb {
+    gap: 4px;
   }
 
   .sec-capacity-1__crumb {

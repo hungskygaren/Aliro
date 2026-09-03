@@ -148,12 +148,11 @@
 /* Card Description */
 .sec-capacity-4__card-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 23px;
+  line-height: 24px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  letter-spacing: 0px;
 }
 
 /* --------------------------------------------------------------------------
@@ -162,62 +161,68 @@
 .sec-capacity-4__right {
   width: 570px;
   max-width: 570px;
-  height: 570px;
+  height: auto;
   flex-shrink: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 3;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(50px) scale(0.95);
   transition:
-    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.25s;
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.28s;
 }
 
 .sec-capacity-4__img-wrapper {
   position: relative;
-  width: 570px;
-  height: 570px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .sec-capacity-4__img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 570px;
   object-fit: contain;
   display: block;
 }
 
 /* --------------------------------------------------------------------------
-   Sequential Domino Animation Activation
+   Sequential Domino Animation Engine & Slide Active Triggers
    -------------------------------------------------------------------------- */
 .sec-capacity-4.slide-animated .sec-capacity-4__title,
-.sec-capacity-4.swiper-slide-active .sec-capacity-4__title,
-.sec-capacity-4.slide-animated .sec-capacity-4__card,
-.sec-capacity-4.swiper-slide-active .sec-capacity-4__card,
-.sec-capacity-4.slide-animated .sec-capacity-4__right,
-.sec-capacity-4.swiper-slide-active .sec-capacity-4__right {
+.sec-capacity-4.slide-animated .sec-capacity-4__card {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-capacity-4.visited .sec-capacity-4__title,
-.sec-capacity-4.visited .sec-capacity-4__card,
-.sec-capacity-4.visited .sec-capacity-4__right {
+.sec-capacity-4.slide-animated .sec-capacity-4__right {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Visited Slide State (Instant display without re-animating) */
+.sec-capacity-4.visited * {
   opacity: 1 !important;
-  transform: none !important;
   transition: none !important;
 }
 
+.sec-capacity-4.visited .sec-capacity-4__title,
+.sec-capacity-4.visited .sec-capacity-4__card,
+.sec-capacity-4.visited .sec-capacity-4__right,
+.sec-capacity-4.visited .phrase {
+  transform: none !important;
+}
+
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 695px & <= 640px)
    -------------------------------------------------------------------------- */
-@media (max-height: 700px) and (min-width: 992px) {
+@media (max-height: 695px) and (min-width: 992px) {
   .sec-capacity-4 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 10px;
@@ -225,12 +230,52 @@
 
   .sec-capacity-4__stage {
     margin-top: 8px;
+    gap: 15px;
   }
 
   .sec-capacity-4__title {
-    font-size: 32px;
-    line-height: 36px;
-    margin-bottom: 10px;
+    font-size: 35px; /* Giảm 1px từ 36px */
+    line-height: 40px;
+    margin-bottom: 8px; /* Giảm margin-bottom */
+  }
+
+  .sec-capacity-4__cards {
+    gap: 8px;
+  }
+
+  .sec-capacity-4__card-num {
+    font-size: 19px; /* Giảm 1px từ 20px */
+    line-height: 23px;
+    margin-bottom: 2px;
+  }
+
+  .sec-capacity-4__card-title {
+    font-size: 19px; /* Giảm 1px từ 20px */
+    line-height: 23px;
+    margin-bottom: 2px;
+  }
+
+  .sec-capacity-4__card-desc {
+    font-size: 17px; /* Giảm 1px từ 18px */
+    line-height: 23px;
+  }
+}
+
+@media (max-height: 640px) and (min-width: 992px) {
+  .sec-capacity-4 .flex-center-v {
+    padding-top: 70px;
+    padding-bottom: 6px;
+  }
+
+  .sec-capacity-4__stage {
+    margin-top: 6px;
+    gap: 15px;
+  }
+
+  .sec-capacity-4__title {
+    font-size: 33px; /* Chỉ giảm nhẹ từ 35px */
+    line-height: 38px;
+    margin-bottom: 8px;
   }
 
   .sec-capacity-4__cards {
@@ -238,117 +283,29 @@
   }
 
   .sec-capacity-4__card {
-    padding: 8px 12px 10px 12px;
+    padding: 8px 12px 12px 12px;
+    height: auto;
   }
 
   .sec-capacity-4__card-num {
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 18px; /* Giảm nhẹ về 18px */
+    line-height: 22px;
     margin-bottom: 2px;
   }
 
   .sec-capacity-4__card-title {
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 18px; /* Giảm nhẹ về 18px */
+    line-height: 22px;
     margin-bottom: 2px;
   }
 
   .sec-capacity-4__card-desc {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px; /* Giảm nhẹ về 16px */
+    line-height: 21px;
   }
 
-  .sec-capacity-4__right,
-  .sec-capacity-4__img-wrapper {
-    width: 480px;
-    height: 480px;
-  }
-}
-
-@media (max-height: 660px) and (min-width: 992px) {
-  .sec-capacity-4__stage {
-    margin-top: 4px;
-    gap: 15px;
-  }
-
-  .sec-capacity-4__title {
-    font-size: 30px;
-    line-height: 34px;
-    margin-bottom: 6px;
-  }
-
-  .sec-capacity-4__cards {
-    grid-template-columns: 260px 270px;
-    gap: 6px;
-  }
-
-  .sec-capacity-4__card {
-    padding: 6px 10px 8px 10px;
-  }
-
-  .sec-capacity-4__card-num {
-    font-size: 16px;
-    line-height: 18px;
-    margin-bottom: 2px;
-  }
-
-  .sec-capacity-4__card-title {
-    font-size: 16px;
-    line-height: 18px;
-    margin-bottom: 2px;
-  }
-
-  .sec-capacity-4__card-desc {
-    font-size: 13.5px;
-    line-height: 17px;
-  }
-
-  .sec-capacity-4__right,
-  .sec-capacity-4__img-wrapper {
-    width: 440px;
-    height: 440px;
-  }
-}
-
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-capacity-4__stage {
-    margin-top: 2px;
-  }
-
-  .sec-capacity-4__title {
-    font-size: 28px;
-    line-height: 32px;
-    margin-bottom: 4px;
-  }
-
-  .sec-capacity-4__cards {
-    grid-template-columns: 250px 260px;
-    gap: 5px;
-  }
-
-  .sec-capacity-4__card {
-    padding: 5px 8px 6px 8px;
-  }
-
-  .sec-capacity-4__card-num {
-    font-size: 15px;
-    line-height: 16px;
-  }
-
-  .sec-capacity-4__card-title {
-    font-size: 15px;
-    line-height: 16px;
-  }
-
-  .sec-capacity-4__card-desc {
-    font-size: 12.5px;
-    line-height: 16px;
-  }
-
-  .sec-capacity-4__right,
-  .sec-capacity-4__img-wrapper {
-    width: 410px;
-    height: 410px;
+  .sec-capacity-4__right {
+    max-width: 500px;
   }
 }
 
@@ -357,21 +314,20 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-capacity-4__stage {
-    gap: 15px;
+    gap: 20px;
   }
 
   .sec-capacity-4__left {
-    width: 520px;
+    width: 50%;
   }
 
   .sec-capacity-4__cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .sec-capacity-4__right,
-  .sec-capacity-4__img-wrapper {
-    width: 440px;
-    height: 440px;
+  .sec-capacity-4__right {
+    width: 50%;
+    max-width: 480px;
   }
 }
 
@@ -383,47 +339,40 @@
   }
 
   .sec-capacity-4 .flex-center-v {
-    padding-top: 90px;
-    padding-bottom: 60px;
+    padding-top: 85px;
+    padding-bottom: 40px;
     height: auto;
   }
 
   .sec-capacity-4__stage {
     flex-direction: column;
-    align-items: center;
     gap: 30px;
   }
 
   .sec-capacity-4__left {
     width: 100%;
-    max-width: 580px;
+    max-width: 100%;
   }
 
   .sec-capacity-4__cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
-  .sec-capacity-4__right,
-  .sec-capacity-4__img-wrapper {
+  .sec-capacity-4__right {
     width: 100%;
-    max-width: 440px;
-    height: auto;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 576px) {
   .sec-capacity-4__title {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 32px;
   }
 
-  .sec-capacity-4__card-title {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .sec-capacity-4__card-desc {
-    font-size: 14px;
-    line-height: 20px;
+  .sec-capacity-4__cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }

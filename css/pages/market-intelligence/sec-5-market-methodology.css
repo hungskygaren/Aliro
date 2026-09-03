@@ -64,7 +64,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 641px; /* 601px khoảng cách giữa 2 tâm node + 40px đường kính */
-  margin-top: 32px; /* 102px - 70px = 32px chuẩn Figma */
+  margin-top: calc(32 / 720 * 100dvh); /* 32px / 720px = 4.4444dvh */
   margin-bottom: 10px; /* 152px - 142px = 10px chuẩn Figma */
   z-index: 4;
 }
@@ -268,7 +268,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  z-index: 4;
+  z-index: 10;
   opacity: 0;
   transform: translateX(-25px);
   transition:
@@ -281,12 +281,6 @@
   width: 230px;
   height: 40px;
   display: block;
-  filter: drop-shadow(0 0 12px rgba(57, 192, 255, 0.35));
-  transition: filter 0.3s ease;
-}
-
-.sec-market-5__arrow-wrap:hover .sec-market-5__arrow-icon {
-  filter: drop-shadow(0 0 20px rgba(57, 192, 255, 0.7));
 }
 
 /* --------------------------------------------------------------------------
@@ -392,17 +386,18 @@
 }
 
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 660px)
    -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-market-5 .flex-center-v {
+    justify-content: center;
     padding-top: 70px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 
   .sec-market-5__stepper {
-    margin-top: 10px;
-    margin-bottom: 4px;
+    margin-top: 0;
+    margin-bottom: 6px;
   }
 
   .sec-market-5__col-title {
@@ -413,72 +408,22 @@
 
   .sec-market-5__col-desc {
     font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 6px;
-  }
-
-  .sec-market-5__img-box {
-    max-width: 300px;
-    height: 330px;
+    line-height: 20px;
+    margin-bottom: 8px;
   }
 
   .sec-market-5__arrow-wrap {
-    width: 200px;
-    margin: 213px 10px 0 10px;
+    margin-top: 242px;
   }
 
   .sec-market-5__bottom {
-    margin-top: 8px;
-    margin-bottom: 4px;
+    margin-top: 10px;
+    margin-bottom: 0; /* Gỡ bỏ margin-bottom: auto để justify-content: center hoạt động chuẩn */
   }
 
   .sec-market-5__bottom-text {
     font-size: 18px;
     line-height: 24px;
-  }
-}
-
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-market-5 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 5px;
-  }
-
-  .sec-market-5__stepper {
-    margin-top: 4px;
-    margin-bottom: 2px;
-  }
-
-  .sec-market-5__col-title {
-    font-size: 28px;
-    line-height: 32px;
-    margin-bottom: 2px;
-  }
-
-  .sec-market-5__col-desc {
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 4px;
-  }
-
-  .sec-market-5__img-box {
-    max-width: 270px;
-    height: 290px;
-  }
-
-  .sec-market-5__arrow-wrap {
-    width: 180px;
-    margin: 183px 8px 0 8px;
-  }
-
-  .sec-market-5__bottom {
-    margin-top: 4px;
-    margin-bottom: 2px;
-  }
-
-  .sec-market-5__bottom-text {
-    font-size: 16px;
-    line-height: 22px;
   }
 }
 

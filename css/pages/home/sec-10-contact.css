@@ -184,6 +184,95 @@
   background-color: #03258c;
 }
 
+/* --------------------------------------------------------------------------
+   ThirdEye Page Footer Overrides & Regional Tagline
+   -------------------------------------------------------------------------- */
+.sec-10__title--thirdeye,
+.sec-10__sub-desc--thirdeye,
+.sec-10__tagline {
+  display: none;
+}
+
+.sec-thirdeye-7 .sec-10__tag,
+.sec-thirdeye-7 .sec-10__title--default,
+.sec-thirdeye-7 .sec-10__sub-desc--default {
+  display: none !important;
+}
+
+.sec-thirdeye-7 .sec-10__title {
+  margin-bottom: 10px;
+}
+
+.sec-thirdeye-7 .sec-10__title--thirdeye {
+  display: inline;
+}
+
+.sec-thirdeye-7 .sec-10__sub-desc--thirdeye {
+  display: inline;
+}
+
+.sec-thirdeye-7 .sec-10__tagline {
+  display: block;
+  margin-top: 26px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Market Intelligence Page Footer Override (.sec-market-8)
+   -------------------------------------------------------------------------- */
+.sec-10__desc--market {
+  display: none !important;
+}
+
+.sec-10__desc p:nth-child(2) {
+  margin-bottom: 0;
+}
+
+.sec-market-8 .sec-10__desc p:nth-child(2) {
+  margin-bottom: 16px;
+}
+
+.sec-market-8 .sec-10__desc--market {
+  display: block !important;
+  margin-bottom: 0;
+}
+
+/* Short Desktop Screen Adaptations (<= 660px) for Market Footer */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-market-8 .flex-center-v {
+    padding-bottom: 30px;
+  }
+
+  .sec-market-8 .sec-10__tag {
+    margin-bottom: 8px;
+  }
+
+  .sec-market-8 .sec-10__title {
+    margin-bottom: 8px;
+  }
+
+  .sec-market-8 .sec-10__desc p {
+    margin-bottom: 8px;
+  }
+
+  .sec-market-8 .sec-10__desc {
+    margin-bottom: 8px;
+  }
+
+  .sec-market-8 .sec-10__email {
+    margin-bottom: 10px;
+  }
+}
+
 .sec-10__right {
   width: 100%;
   height: 100%;
@@ -602,6 +691,17 @@
     font-size: 14px;
     height: auto;
     margin-inline: auto;
+  }
+
+  .sec-thirdeye-7 .sec-10__tagline {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .sec-market-8 .sec-10__desc p:nth-child(2) {
+    margin-bottom: 8px;
   }
 
   .sec-10__card {

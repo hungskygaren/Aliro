@@ -74,7 +74,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 641px;
-  margin-top: 32px;
+  margin-top: calc(32 / 720 * 100dvh); /* 32px / 720px = 4.4444dvh */
   margin-bottom: 10px;
   z-index: 4;
 }
@@ -278,7 +278,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  z-index: 4;
+  z-index: 10;
   opacity: 0;
   transform: translateX(-25px);
   transition:
@@ -291,12 +291,6 @@
   width: 230px;
   height: 40px;
   display: block;
-  filter: drop-shadow(0 0 12px rgba(57, 192, 255, 0.35));
-  transition: filter 0.3s ease;
-}
-
-.sec-digital-6__arrow-wrap:hover .sec-digital-6__arrow-icon {
-  filter: drop-shadow(0 0 20px rgba(57, 192, 255, 0.7));
 }
 
 /* --------------------------------------------------------------------------
@@ -338,12 +332,12 @@
   transition: none !important;
 }
 
-.sec-digital-6.visited .phrase,
 .sec-digital-6.visited .sec-digital-6__step-node,
 .sec-digital-6.visited .sec-digital-6__col-title,
 .sec-digital-6.visited .sec-digital-6__col-desc,
 .sec-digital-6.visited .sec-digital-6__img-box,
-.sec-digital-6.visited .sec-digital-6__arrow-wrap {
+.sec-digital-6.visited .sec-digital-6__arrow-wrap,
+.sec-digital-6.visited .phrase {
   transform: none !important;
 }
 
@@ -356,25 +350,34 @@
 }
 
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 660px)
    -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-digital-6 .flex-center-v {
+    justify-content: center;
     padding-top: 70px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 
   .sec-digital-6__stepper {
-    margin-top: 12px;
+    margin-top: 0;
     margin-bottom: 6px;
   }
 
   .sec-digital-6__col-title {
+    font-size: 32px;
+    line-height: 36px;
     margin-bottom: 4px;
   }
 
   .sec-digital-6__col-desc {
-    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  .sec-digital-6__arrow-wrap {
+    margin-top: 242px;
   }
 }
 
@@ -382,30 +385,13 @@
    Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
-  .sec-digital-6__stepper {
-    max-width: 560px;
+  .sec-digital-6__col-title {
+    font-size: 32px;
   }
 
-  .sec-digital-6__stage {
-    gap: 0;
-  }
-
-  .sec-digital-6__col {
-    width: 300px;
-  }
-
-  .sec-digital-6__img-box {
-    width: 300px;
-    height: 340px;
-  }
-
-  .sec-digital-6__arrow-wrap {
-    width: 180px;
-    margin: 230px 10px 0 10px;
-  }
-
-  .sec-digital-6__arrow-icon {
-    width: 180px;
+  .sec-digital-6__col-desc {
+    font-size: 16px;
+    white-space: normal;
   }
 }
 
@@ -420,7 +406,6 @@
     padding-top: 85px;
     padding-bottom: 40px;
     height: auto;
-    justify-content: flex-start;
   }
 
   .sec-digital-6__stepper {
@@ -428,45 +413,35 @@
   }
 
   .sec-digital-6__stage {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
   }
 
   .sec-digital-6__col {
     width: 100%;
-    max-width: 380px;
+    max-width: 100%;
   }
 
   .sec-digital-6__col-desc {
     white-space: normal;
-    width: 100%;
   }
 
   .sec-digital-6__arrow-wrap {
-    margin: 10px 0;
+    position: static;
     transform: rotate(90deg);
-  }
-
-  .sec-digital-6__img-box {
-    width: 100%;
-    max-width: 340px;
-    height: 340px;
+    margin: 10px auto;
   }
 }
 
 @media (max-width: 576px) {
   .sec-digital-6__col-title {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 32px;
   }
 
   .sec-digital-6__col-desc {
     font-size: 15px;
-    line-height: 20px;
-  }
-
-  .sec-digital-6__img-box {
-    height: 280px;
   }
 }

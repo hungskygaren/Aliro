@@ -76,7 +76,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 641px; /* 601px khoảng cách giữa 2 tâm node + 40px đường kính */
-  margin-top: 32px; /* 102px - 70px = 32px chuẩn Figma */
+  margin-top: calc(32 / 720 * 100dvh); /* 32px / 720px = 4.4444dvh */
   margin-bottom: 10px; /* 152px - 142px = 10px chuẩn Figma */
   z-index: 4;
 }
@@ -280,7 +280,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  z-index: 4;
+  z-index: 10;
   opacity: 0;
   transform: translateX(-25px);
   transition:
@@ -293,12 +293,6 @@
   width: 230px;
   height: 40px;
   display: block;
-  filter: drop-shadow(0 0 12px rgba(57, 192, 255, 0.35));
-  transition: filter 0.3s ease;
-}
-
-.sec-operational-5__arrow-wrap:hover .sec-operational-5__arrow-icon {
-  filter: drop-shadow(0 0 20px rgba(57, 192, 255, 0.7));
 }
 
 /* --------------------------------------------------------------------------
@@ -334,22 +328,23 @@
   transform: translateX(0);
 }
 
-/* Visited Slide State */
-.sec-operational-5.visited .phrase,
+/* Visited Slide State (Instant display without re-animating) */
+.sec-operational-5.visited * {
+  opacity: 1 !important;
+  transition: none !important;
+}
+
 .sec-operational-5.visited .sec-operational-5__step-node,
 .sec-operational-5.visited .sec-operational-5__col-title,
 .sec-operational-5.visited .sec-operational-5__col-desc,
 .sec-operational-5.visited .sec-operational-5__img-box,
-.sec-operational-5.visited .sec-operational-5__arrow-wrap {
-  opacity: 1 !important;
+.sec-operational-5.visited .sec-operational-5__arrow-wrap,
+.sec-operational-5.visited .phrase {
   transform: none !important;
-  transition: none !important;
 }
 
 .sec-operational-5.visited .sec-operational-5__step-line {
-  opacity: 1 !important;
   transform: translateY(-50%) scaleX(1) !important;
-  transition: none !important;
 }
 
 .sec-operational-5.visited .sec-operational-5__glow {
@@ -357,25 +352,34 @@
 }
 
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 660px)
    -------------------------------------------------------------------------- */
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-operational-5 .flex-center-v {
+    justify-content: center;
     padding-top: 70px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 
   .sec-operational-5__stepper {
-    margin-top: 12px;
+    margin-top: 0;
     margin-bottom: 6px;
   }
 
   .sec-operational-5__col-title {
+    font-size: 32px;
+    line-height: 36px;
     margin-bottom: 4px;
   }
 
   .sec-operational-5__col-desc {
-    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  .sec-operational-5__arrow-wrap {
+    margin-top: 242px;
   }
 }
 
@@ -383,30 +387,13 @@
    Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
-  .sec-operational-5__stepper {
-    max-width: 560px;
+  .sec-operational-5__col-title {
+    font-size: 32px;
   }
 
-  .sec-operational-5__stage {
-    gap: 0;
-  }
-
-  .sec-operational-5__col {
-    width: 300px;
-  }
-
-  .sec-operational-5__img-box {
-    width: 300px;
-    height: 340px;
-  }
-
-  .sec-operational-5__arrow-wrap {
-    width: 180px;
-    margin: 230px 10px 0 10px;
-  }
-
-  .sec-operational-5__arrow-icon {
-    width: 180px;
+  .sec-operational-5__col-desc {
+    font-size: 16px;
+    white-space: normal;
   }
 }
 
@@ -421,7 +408,6 @@
     padding-top: 85px;
     padding-bottom: 40px;
     height: auto;
-    justify-content: flex-start;
   }
 
   .sec-operational-5__stepper {
@@ -429,45 +415,35 @@
   }
 
   .sec-operational-5__stage {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
   }
 
   .sec-operational-5__col {
     width: 100%;
-    max-width: 380px;
+    max-width: 100%;
   }
 
   .sec-operational-5__col-desc {
     white-space: normal;
-    width: 100%;
   }
 
   .sec-operational-5__arrow-wrap {
-    margin: 10px 0;
+    position: static;
     transform: rotate(90deg);
-  }
-
-  .sec-operational-5__img-box {
-    width: 100%;
-    max-width: 340px;
-    height: 340px;
+    margin: 10px auto;
   }
 }
 
 @media (max-width: 576px) {
   .sec-operational-5__col-title {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 32px;
   }
 
   .sec-operational-5__col-desc {
     font-size: 15px;
-    line-height: 20px;
-  }
-
-  .sec-operational-5__img-box {
-    height: 280px;
   }
 }

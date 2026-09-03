@@ -67,7 +67,6 @@
 
 /* --------------------------------------------------------------------------
    Top Stepper Indicator with Connecting Line (1 -> 2)
-   Figma: Top 102px - 70px Header = 32px
    -------------------------------------------------------------------------- */
 .sec-capacity-5__stepper {
   position: relative;
@@ -75,9 +74,9 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 641px; /* 601px khoảng cách giữa 2 tâm node + 40px đường kính */
-  margin-top: 32px; /* 102px - 70px = 32px chuẩn Figma */
-  margin-bottom: 10px; /* 152px - 142px = 10px chuẩn Figma */
+  max-width: 641px;
+  margin-top: calc(32 / 720 * 100dvh); /* 32px / 720px = 4.4444dvh */
+  margin-bottom: 10px;
   z-index: 4;
 }
 
@@ -157,88 +156,133 @@
   z-index: 3;
 }
 
-/* Column Main Title: BUILDS ON / FEEDS INTO */
+/* Column Title */
 .sec-capacity-5__col-title {
+  position: relative;
+  z-index: 10;
   font-family: Aptos, var(--font-brand);
   font-size: 36px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 42px;
   color: #ffffff;
   text-transform: uppercase;
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
   letter-spacing: 0px;
   font-feature-settings:
     "liga" off,
     "clig" off;
-  transition-delay: 0.15s;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Column Subtitle Description (Underlined Link & Normal Text) */
+.sec-capacity-5__col--left .sec-capacity-5__col-title {
+  transition-delay: 0.22s;
+}
+
+.sec-capacity-5__col--right .sec-capacity-5__col-title {
+  transition-delay: 0.52s;
+}
+
+/* Column Subtitle / Description */
 .sec-capacity-5__col-desc {
+  position: relative;
+  z-index: 10;
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
   color: #ffffff;
-  margin: 0 0 24px 0;
-  letter-spacing: 0px;
-  width: max-content;
-  max-width: 520px;
-  text-align: center;
-  position: relative;
-  z-index: 10;
-  transition-delay: 0.22s;
+  margin: 0 0 16px 0;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.sec-capacity-5__col--left .sec-capacity-5__col-desc {
+  transition-delay: 0.3s;
+}
+
+.sec-capacity-5__col--right .sec-capacity-5__col-desc {
+  transition-delay: 0.6s;
+}
+
+/* Link inside Subtitle */
 .sec-capacity-5__link {
-  color: #39c0ff;
+  position: relative;
+  z-index: 10;
   font-family: Aptos, var(--font-brand);
+  font-size: inherit;
   font-weight: 700;
+  color: #39c0ff;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
   transition: color 0.25s ease;
 }
 
 .sec-capacity-5__link:hover {
-  color: #ffffff;
+  color: #8ce1ff;
 }
 
-/* Graphic Container Box (340px x 390px chuẩn Figma) */
+/* Image Box (340px x 380px) */
 .sec-capacity-5__img-box {
-  position: relative;
   width: 340px;
-  height: 390px;
+  max-width: 340px;
+  height: 380px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition-delay: 0.3s;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30px) scale(0.96);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-capacity-5__col--left .sec-capacity-5__img-box {
+  transition-delay: 0.38s;
+}
+
+.sec-capacity-5__col--right .sec-capacity-5__img-box {
+  transition-delay: 0.68s;
+}
+
+.sec-capacity-5__img-box:hover {
+  transform: translateY(-4px) scale(1.02);
 }
 
 .sec-capacity-5__img {
-  position: relative;
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
+  position: relative;
   z-index: 2;
-  filter: drop-shadow(0 15px 35px rgba(1, 16, 59, 0.4));
 }
 
 /* --------------------------------------------------------------------------
-   Center Gradient Flow Arrow (230px x 40px SVG with 15px gap to each image)
+   Center Flow Arrow (230px wide, 15px gap to each image)
    -------------------------------------------------------------------------- */
 .sec-capacity-5__arrow-wrap {
-  width: 260px;
-  height: 40px;
-  flex-shrink: 0;
+  width: 230px;
+  margin: 260px 15px 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 245px; /* Căn chỉnh thẳng hàng giữa 2 ảnh */
-  position: relative;
-  z-index: 4;
-  transition-delay: 0.4s;
+  flex-shrink: 0;
+  z-index: 10;
+  opacity: 0;
+  transform: translateX(-25px);
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.46s;
 }
 
 .sec-capacity-5__arrow-icon {
@@ -248,54 +292,73 @@
 }
 
 /* --------------------------------------------------------------------------
-   Sequential Domino Animation Activation
+   Sequential Domino Animation Engine & Slide Active Triggers
    -------------------------------------------------------------------------- */
-.sec-capacity-5 .phrase {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sec-capacity-5.slide-animated .sec-capacity-5__step-line,
-.sec-capacity-5.swiper-slide-active .sec-capacity-5__step-line {
-  opacity: 1;
-  transform: translateY(-50%) scaleX(1);
-}
-
-.sec-capacity-5.slide-animated .sec-capacity-5__step-node,
-.sec-capacity-5.swiper-slide-active .sec-capacity-5__step-node {
+.sec-capacity-5.slide-animated .sec-capacity-5__step-node {
   opacity: 1;
   transform: scale(1);
 }
 
-.sec-capacity-5.slide-animated .phrase,
-.sec-capacity-5.swiper-slide-active .phrase {
+.sec-capacity-5.slide-animated .sec-capacity-5__step-line {
+  opacity: 1;
+  transform: translateY(-50%) scaleX(1);
+}
+
+.sec-capacity-5.slide-animated .sec-capacity-5__col-title {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Visited State */
-.sec-capacity-5.visited .sec-capacity-5__step-line,
-.sec-capacity-5.visited .sec-capacity-5__step-node,
-.sec-capacity-5.visited .phrase {
+.sec-capacity-5.slide-animated .sec-capacity-5__col-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-capacity-5.slide-animated .sec-capacity-5__img-box {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.sec-capacity-5.slide-animated .sec-capacity-5__arrow-wrap {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Visited Slide State (Instant display without re-animating) */
+.sec-capacity-5.visited * {
   opacity: 1 !important;
-  transform: none !important;
   transition: none !important;
 }
 
+.sec-capacity-5.visited .sec-capacity-5__step-node,
+.sec-capacity-5.visited .sec-capacity-5__col-title,
+.sec-capacity-5.visited .sec-capacity-5__col-desc,
+.sec-capacity-5.visited .sec-capacity-5__img-box,
+.sec-capacity-5.visited .sec-capacity-5__arrow-wrap,
+.sec-capacity-5.visited .phrase {
+  transform: none !important;
+}
+
+.sec-capacity-5.visited .sec-capacity-5__step-line {
+  transform: translateY(-50%) scaleX(1) !important;
+}
+
+.sec-capacity-5.visited .sec-capacity-5__glow {
+  transform: translate(-50%, -50%) !important;
+}
+
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 660px)
    -------------------------------------------------------------------------- */
-@media (max-height: 700px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 992px) {
   .sec-capacity-5 .flex-center-v {
+    justify-content: center;
     padding-top: 70px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 
   .sec-capacity-5__stepper {
-    margin-top: 15px;
+    margin-top: 0;
     margin-bottom: 6px;
   }
 
@@ -308,84 +371,11 @@
   .sec-capacity-5__col-desc {
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 12px;
-  }
-
-  .sec-capacity-5__img-box {
-    width: 300px;
-    height: 340px;
-  }
-
-  .sec-capacity-5__arrow-wrap {
-    width: 220px;
-    margin-top: 200px;
-  }
-}
-
-@media (max-height: 660px) and (min-width: 992px) {
-  .sec-capacity-5__stepper {
-    margin-top: 8px;
-    margin-bottom: 4px;
-  }
-
-  .sec-capacity-5__col-title {
-    font-size: 30px;
-    line-height: 34px;
-    margin-bottom: 2px;
-  }
-
-  .sec-capacity-5__col-desc {
-    font-size: 15px;
-    line-height: 19px;
     margin-bottom: 8px;
   }
 
-  .sec-capacity-5__img-box {
-    width: 280px;
-    height: 310px;
-  }
-
   .sec-capacity-5__arrow-wrap {
-    width: 200px;
-    margin-top: 180px;
-  }
-}
-
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-capacity-5__stepper {
-    margin-top: 4px;
-    margin-bottom: 2px;
-  }
-
-  .sec-capacity-5__step-node {
-    width: 34px;
-    height: 34px;
-    font-size: 20px;
-  }
-
-  .sec-capacity-5__col-title {
-    font-size: 28px;
-    line-height: 32px;
-  }
-
-  .sec-capacity-5__col-desc {
-    font-size: 14px;
-    line-height: 18px;
-    margin-bottom: 6px;
-  }
-
-  .sec-capacity-5__img-box {
-    width: 260px;
-    height: 290px;
-  }
-
-  .sec-capacity-5__arrow-wrap {
-    width: 180px;
-    margin-top: 160px;
-  }
-
-  .sec-capacity-5__arrow-icon {
-    width: 180px;
+    margin-top: 242px;
   }
 }
 
@@ -393,25 +383,13 @@
    Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
-  .sec-capacity-5__stage {
-    max-width: 960px;
+  .sec-capacity-5__col-title {
+    font-size: 32px;
   }
 
-  .sec-capacity-5__col {
-    width: 300px;
-  }
-
-  .sec-capacity-5__img-box {
-    width: 300px;
-    height: 340px;
-  }
-
-  .sec-capacity-5__arrow-wrap {
-    width: 200px;
-  }
-
-  .sec-capacity-5__arrow-icon {
-    width: 180px;
+  .sec-capacity-5__col-desc {
+    font-size: 16px;
+    white-space: normal;
   }
 }
 
@@ -423,8 +401,8 @@
   }
 
   .sec-capacity-5 .flex-center-v {
-    padding-top: 90px;
-    padding-bottom: 60px;
+    padding-top: 85px;
+    padding-bottom: 40px;
     height: auto;
   }
 
@@ -433,42 +411,35 @@
   }
 
   .sec-capacity-5__stage {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
   }
 
   .sec-capacity-5__col {
     width: 100%;
-    max-width: 440px;
-  }
-
-  .sec-capacity-5__col-desc {
-    width: 100%;
     max-width: 100%;
   }
 
-  .sec-capacity-5__img-box {
-    width: 100%;
-    max-width: 340px;
-    height: auto;
-    aspect-ratio: 340 / 390;
+  .sec-capacity-5__col-desc {
+    white-space: normal;
   }
 
   .sec-capacity-5__arrow-wrap {
-    margin-top: 0;
+    position: static;
     transform: rotate(90deg);
+    margin: 10px auto;
   }
 }
 
 @media (max-width: 576px) {
   .sec-capacity-5__col-title {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 32px;
   }
 
   .sec-capacity-5__col-desc {
     font-size: 15px;
-    line-height: 20px;
   }
 }

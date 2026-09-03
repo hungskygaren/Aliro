@@ -22,23 +22,27 @@
 }
 
 .sec-about-8 .container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   height: 100%;
   max-width: 1170px;
   margin: 0 auto;
+  position: relative;
+  padding-top: calc(126 / 720 * 100vh); /* 17.5vh = đúng 126px trong màn 720 */
   box-sizing: border-box;
 }
 
 /* Header Area */
 .sec-about-8__header {
-  position: absolute;
-  top: 14.5%;
-  left: 50%;
-  transform: translate(-50%, -20px);
+  position: relative;
   text-align: center;
   width: 100%;
   z-index: 4;
   opacity: 0;
+  transform: translateY(-20px);
+  margin-bottom: 49px;
   transition:
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -60,19 +64,22 @@
 }
 
 .sec-about-8__subtitle {
+  color: var(--White, #fff);
+  text-align: center;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 28px;
-  color: #ffffff;
+  line-height: 28px; /* 116.667% */
   margin: 0;
 }
 
 /* Main 6-Step Journey Track */
 .sec-about-8__track {
-  position: absolute;
-  top: 42%;
-  left: 0;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -102,6 +109,7 @@
 /* Step Item */
 .sec-about-8__step {
   width: 170px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,6 +158,7 @@
   transform: translateX(-10px);
   height: 120px;
   z-index: 2;
+  flex-shrink: 1;
   transition:
     opacity 0.35s ease,
     transform 0.35s ease;
@@ -183,12 +192,15 @@
 .sec-about-8__label {
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
+  font-style: normal;
   font-weight: 700;
   line-height: 22px;
   color: #ffffff;
+  text-align: center;
   text-transform: uppercase;
+  font-feature-settings: "liga" off, "clig" off;
+  width: 100%;
   margin: 0;
-  letter-spacing: 0.5px;
   opacity: 0;
   transform: translateY(12px);
   transition:
@@ -198,30 +210,32 @@
 
 /* Bottom Divider & Quote */
 .sec-about-8__divider {
-  position: absolute;
-  top: 80.83%;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 1px;
   background: rgba(197, 218, 243, 0.3);
   z-index: 3;
+  margin-top: 40px; /* Luôn cách khối trên đúng 40px */
   opacity: 0;
   transition: opacity 0.6s ease;
 }
 
 .sec-about-8__quote {
-  position: absolute;
-  top: 85.55%;
-  left: 50%;
-  transform: translate(-50%, 20px);
+  position: relative;
+  transform: translateY(20px);
+  color: var(--White, #fff);
+  text-align: center;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 20px;
+  font-style: normal;
   font-weight: 700;
   line-height: normal;
-  color: #ffffff;
-  text-align: center;
   white-space: nowrap;
-  margin: 0;
+  margin-top: 24px;
+  margin-bottom: 0;
   z-index: 3;
   opacity: 0;
   transition:
@@ -362,16 +376,16 @@
 
 /* Divider & Quote Delays */
 .sec-about-8.slide-animated .sec-about-8__divider {
-  transition-delay: 2.75s;
+  transition-delay: 0.8s;
 }
 .sec-about-8.slide-animated .sec-about-8__quote {
-  transition-delay: 2.85s;
+  transition-delay: 1s;
 }
 
 /* Slide Animated Active States */
 .sec-about-8.slide-animated .sec-about-8__header {
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: translateY(0);
 }
 
 .sec-about-8.slide-animated .sec-about-8__track-line {
@@ -405,7 +419,7 @@
 
 .sec-about-8.slide-animated .sec-about-8__quote {
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: translateY(0);
 }
 
 /* Visited States */
@@ -420,7 +434,8 @@
 }
 
 .sec-about-8.visited .sec-about-8__header {
-  transform: translate(-50%, 0) !important;
+  transform: none !important;
+  opacity: 1 !important;
 }
 
 .sec-about-8.visited .sec-about-8__track-line {
@@ -437,7 +452,7 @@
 
 .sec-about-8.visited .sec-about-8__quote {
   opacity: 1 !important;
-  transform: translate(-50%, 0) !important;
+  transform: none !important;
   transition: none !important;
 }
 
@@ -501,7 +516,13 @@
 
   .sec-about-8__divider {
     position: static !important;
-    margin: 20px 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 1px !important;
+    opacity: 1 !important;
+    margin: 40px 0 20px 0 !important;
+    background: rgba(197, 218, 243, 0.4) !important;
+    transition: none !important;
   }
 
   .sec-about-8__quote {

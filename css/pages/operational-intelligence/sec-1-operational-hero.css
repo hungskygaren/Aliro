@@ -147,7 +147,6 @@
   color: #ffffff;
   padding-bottom: 2px;
   border-bottom: 2px solid #ffffff;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
 }
 
 .sec-operational-1__crumb-sep {
@@ -179,20 +178,15 @@
   font-family: Aptos, var(--font-brand);
   font-size: 14px;
   font-weight: 700;
-  padding: 7px 16px 8px 16px;
-  border-radius: 0px;
+  padding: 8px 16px;
+  border-radius: 2px;
   text-decoration: none;
-  transition:
-    background-color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.25);
+  cursor: pointer;
+  transition: background-color 0.25s ease;
 }
 
 .sec-operational-1__btn:hover {
-  background-color: #03258c;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(4, 49, 177, 0.4);
+  background-color: var(--color-primary-hover, #03258c);
 }
 
 /* --------------------------------------------------------------------------
@@ -259,7 +253,6 @@
   transition: none !important;
 }
 
-
 /* --------------------------------------------------------------------------
    Sequential Domino Animation Engine
    -------------------------------------------------------------------------- */
@@ -271,14 +264,12 @@
     transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
 .sec-operational-1.slide-animated .phrase {
   opacity: 1;
   transform: translateY(0);
 }
 
-
-/* Visited Slide State */
+/* Visited Slide State (Instant display without re-animating) */
 .sec-operational-1.visited .phrase {
   opacity: 1 !important;
   transform: none !important;
@@ -287,125 +278,11 @@
 
 
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
-@media (max-height: 700px) and (min-width: 992px) {
-  .sec-operational-1 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
-  }
-
-  .sec-operational-1__eyebrow {
-    margin-bottom: 10px;
-  }
-
-  .sec-operational-1__title {
-    margin-bottom: 12px;
-  }
-
-  .sec-operational-1__subtitle {
-    margin-bottom: 10px;
-  }
-
-  .sec-operational-1__desc {
-    margin-bottom: 14px;
-  }
-
-  .sec-operational-1__breadcrumb {
-    margin-bottom: 14px;
-  }
-}
-
-@media (max-height: 660px) and (min-width: 992px) {
-  .sec-operational-1 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
-  }
-
-  .sec-operational-1__stage {
-    gap: 20px;
-  }
-
-  .sec-operational-1__eyebrow {
-    margin-bottom: 8px;
-  }
-
-  .sec-operational-1__title {
-    margin-bottom: 10px;
-  }
-
-  .sec-operational-1__subtitle {
-    margin-bottom: 8px;
-  }
-
-  .sec-operational-1__desc {
-    margin-bottom: 12px;
-  }
-
-  .sec-operational-1__breadcrumb {
-    margin-bottom: 12px;
-  }
-
-  .sec-operational-1__right {
-    max-width: 580px;
-  }
-}
-
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-operational-1 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 5px;
-  }
-
-  .sec-operational-1__eyebrow {
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 6px;
-  }
-
-  .sec-operational-1__title {
-    font-size: 40px;
-    line-height: 46px;
-    margin-bottom: 8px;
-  }
-
-  .sec-operational-1__subtitle {
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 6px;
-  }
-
-  .sec-operational-1__desc {
-    font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 10px;
-    max-width: 440px;
-  }
-
-  .sec-operational-1__breadcrumb {
-    margin-bottom: 10px;
-  }
-
-  .sec-operational-1__crumb {
-    font-size: 13px;
-  }
-
-  .sec-operational-1__right {
-    max-width: 540px;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
+   Responsive Breakpoints for Width (1200px, 991px, 576px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
-  .sec-operational-1 .flex-center-v {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .sec-operational-1__left {
-    max-width: 480px;
+  .sec-operational-1__stage {
+    gap: 20px;
   }
 
   .sec-operational-1__title {
@@ -414,7 +291,8 @@
   }
 
   .sec-operational-1__right {
-    max-width: 560px;
+    width: 50%;
+    max-width: 540px;
   }
 }
 
@@ -427,40 +305,23 @@
 
   .sec-operational-1 .flex-center-v {
     padding-top: 85px;
-    padding-bottom: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-bottom: 40px;
     height: auto;
   }
 
   .sec-operational-1__stage {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    text-align: left;
     gap: 30px;
   }
 
   .sec-operational-1__left {
     max-width: 100%;
-    align-items: center;
-  }
-
-  .sec-operational-1__desc {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .sec-operational-1__breadcrumb {
-    justify-content: center;
   }
 
   .sec-operational-1__right {
-    max-width: 100%;
     width: 100%;
-  }
-
-  .sec-operational-1__img {
-    max-height: 380px;
+    max-width: 100%;
   }
 
   .sec-operational-1 .scroll-down-btn {
@@ -480,13 +341,17 @@
   }
 
   .sec-operational-1__subtitle {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   .sec-operational-1__desc {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
+  }
+
+  .sec-operational-1__breadcrumb {
+    gap: 4px;
   }
 
   .sec-operational-1__crumb {

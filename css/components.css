@@ -532,7 +532,6 @@ body.no-scroll {
 .scroll-down-icon svg,
 .scroll-down-icon path {
   fill: currentColor;
-  stroke: currentColor;
 }
 
 @keyframes bounceDown {

@@ -86,15 +86,13 @@
   box-sizing: border-box;
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
   box-shadow: 0 4px 20px rgba(1, 16, 59, 0.03);
   opacity: 0;
   transform: translateY(40px);
   transition:
     opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
     transform 1s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+    box-shadow 0.3s ease;
 }
 
 .sec-operational-2__card:nth-child(1) { transition-delay: 0.16s; }
@@ -104,7 +102,6 @@
 
 .sec-operational-2__card:hover {
   transform: translateY(-3px);
-  border-color: var(--Highlight-Blue, #0431b1);
   box-shadow: 0 10px 28px rgba(1, 16, 59, 0.08);
 }
 
@@ -155,6 +152,7 @@
   font-weight: 700;
   color: var(--Highlight-Blue, #0431b1);
   text-decoration: none;
+  cursor: pointer;
   transition:
     gap 0.25s ease,
     color 0.25s ease;
@@ -171,16 +169,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s ease;
 }
 
 .sec-operational-2__card-arrow svg {
   width: 100%;
   height: 100%;
-}
-
-.sec-operational-2__card:hover .sec-operational-2__card-arrow {
-  transform: translateX(4px);
 }
 
 /* Right Illustration within Card */
@@ -200,11 +193,6 @@
   height: 100%;
   object-fit: contain;
   display: block;
-  transition: transform 0.4s ease;
-}
-
-.sec-operational-2__card:hover .sec-operational-2__card-img {
-  transform: scale(1.05);
 }
 
 /* --------------------------------------------------------------------------
@@ -217,40 +205,50 @@
 }
 
 /* Visited State */
-.sec-operational-2.visited .phrase,
-.sec-operational-2.visited .sec-operational-2__title,
-.sec-operational-2.visited .sec-operational-2__card {
+.sec-operational-2.visited * {
   opacity: 1 !important;
-  transform: none !important;
   transition: none !important;
 }
 
-/* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
-   -------------------------------------------------------------------------- */
-@media (max-height: 700px) and (min-width: 992px) {
-  .sec-operational-2 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
-  }
+.sec-operational-2.visited .phrase,
+.sec-operational-2.visited .sec-operational-2__title,
+.sec-operational-2.visited .sec-operational-2__card {
+  transform: none !important;
+}
 
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  /* Keep 100% font sizes - reduce padding & gaps */
   .sec-operational-2__header {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 16px;
   }
 
   .sec-operational-2__grid {
-    gap: 20px;
+    gap: 18px;
   }
 
   .sec-operational-2__card {
-    height: 200px;
-    padding: 16px;
+    height: 205px;
+    padding: 16px 20px;
   }
 
   .sec-operational-2__card-question {
-    font-size: 26px;
+    font-size: 27px;
     line-height: 32px;
+    margin-bottom: 6px;
+  }
+
+  .sec-operational-2__card-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 4px;
+  }
+
+  .sec-operational-2__card-link {
+    font-size: 20px;
   }
 
   .sec-operational-2__card-right {
@@ -259,24 +257,25 @@
   }
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
-  .sec-operational-2 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
-  }
-
-  .sec-operational-2__header {
-    margin-top: 8px;
-    margin-bottom: 14px;
+/* --------------------------------------------------------------------------
+   Responsive Layout for Screen Widths (1200px, 991px, 576px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .sec-operational-2__title {
+    font-size: 32px;
+    line-height: 38px;
   }
 
   .sec-operational-2__grid {
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .sec-operational-2__card {
-    height: 190px;
-    padding: 14px 18px;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    padding: 18px 18px;
   }
 
   .sec-operational-2__card-question {
@@ -284,79 +283,9 @@
     line-height: 30px;
   }
 
-  .sec-operational-2__card-icon {
-    width: 34px;
-    height: 34px;
-    margin-bottom: 4px;
-  }
-
-  .sec-operational-2__card-link {
-    font-size: 19px;
-  }
-
   .sec-operational-2__card-right {
-    width: 160px;
-    height: 140px;
-  }
-}
-
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-operational-2 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 5px;
-  }
-
-  .sec-operational-2__header {
-    margin-top: 4px;
-    margin-bottom: 10px;
-  }
-
-  .sec-operational-2__title {
-    font-size: 32px;
-    line-height: 36px;
-  }
-
-  .sec-operational-2__grid {
-    gap: 12px;
-  }
-
-  .sec-operational-2__card {
-    height: 180px;
-    padding: 12px 16px;
-  }
-
-  .sec-operational-2__card-question {
-    font-size: 22px;
-    line-height: 28px;
-  }
-
-  .sec-operational-2__card-icon {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 2px;
-  }
-
-  .sec-operational-2__card-link {
-    font-size: 17px;
-  }
-
-  .sec-operational-2__card-right {
-    width: 145px;
-    height: 130px;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
-   -------------------------------------------------------------------------- */
-@media (max-width: 1200px) {
-  .sec-operational-2__grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
-  }
-
-  .sec-operational-2__card {
-    width: 100%;
+    width: 150px;
+    height: 135px;
   }
 }
 
@@ -369,35 +298,35 @@
 
   .sec-operational-2 .flex-center-v {
     padding-top: 85px;
-    padding-bottom: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-bottom: 40px;
     height: auto;
+    justify-content: flex-start;
   }
 
   .sec-operational-2__grid {
     grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 570px;
+    max-width: 600px;
   }
 
   .sec-operational-2__card {
     width: 100%;
+    height: auto;
+    min-height: 180px;
   }
 }
 
 @media (max-width: 576px) {
   .sec-operational-2__title {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 26px;
+    line-height: 32px;
   }
 
   .sec-operational-2__card {
-    height: auto;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
-    padding: 20px;
-    gap: 15px;
+    padding: 18px 16px;
+    gap: 16px;
   }
 
   .sec-operational-2__card-left {
@@ -405,13 +334,13 @@
   }
 
   .sec-operational-2__card-question {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   .sec-operational-2__card-right {
     width: 100%;
-    height: 140px;
-    justify-content: center;
+    height: 120px;
+    justify-content: flex-start;
   }
 }

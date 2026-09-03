@@ -9,7 +9,7 @@
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  background-color: #ffffff !important;
+  background: var(--White, #ffffff) !important;
   box-sizing: border-box;
   color: var(--Midnight-Navy, #01103b);
 }
@@ -84,9 +84,8 @@
 .sec-thirdeye-2__card {
   width: 280px;
   height: 280px;
-  background-color: #ffffff;
+  background: var(--White, #ffffff);
   border: 1px solid rgba(34, 108, 180, 0.5);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   padding: 12px;
   display: flex;
@@ -135,7 +134,7 @@
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  box-shadow: 0 0 0 5px #ffffff, 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: none;
   position: relative;
   z-index: 3;
   opacity: 0;
@@ -440,8 +439,12 @@
   }
 
   .sec-thirdeye-2__step-desc {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .sec-thirdeye-2__badge-wrapper {
+    margin-bottom: 5px;
   }
 
   .sec-thirdeye-2__badge {
