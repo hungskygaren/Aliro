@@ -201,7 +201,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-phase0-1__grid {
     align-items: center;
   }
@@ -242,7 +242,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-phase0-1 {
     background: linear-gradient(
       180deg,

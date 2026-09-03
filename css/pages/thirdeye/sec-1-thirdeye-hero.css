@@ -176,7 +176,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-thirdeye-1 .flex-center-v {
     align-items: center;
     padding-top: 70px;
@@ -216,7 +216,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-thirdeye-1 {
     background: linear-gradient(
       180deg,

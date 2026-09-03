@@ -24,7 +24,7 @@
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 70px; 
+  padding-top: 70px;
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -221,7 +221,7 @@
   transition: none !important;
 }
 
-@media (max-height: 700px) and (min-width: 992px) {
+@media (max-height: 700px) and (min-width: 1025px) {
   .sec-digital-1 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 10px;
@@ -248,7 +248,7 @@
   }
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-1 .flex-center-v {
     justify-content: center;
   }
@@ -277,7 +277,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-digital-1 {
     height: auto;
     min-height: 100vh;

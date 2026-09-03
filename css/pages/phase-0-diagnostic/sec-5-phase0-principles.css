@@ -24,7 +24,7 @@
 
 .sec-phase0-5__header {
   text-align: center;
-  margin-top: 5.5556dvh; 
+  margin-top: 5.5556dvh;
   margin-bottom: 0;
   z-index: 4;
   opacity: 0;
@@ -229,7 +229,7 @@
   transition: none !important;
 }
 
-@media (max-height: 620px) and (min-width: 992px) {
+@media (max-height: 620px) and (min-width: 1025px) {
   .sec-phase0-5__header {
     margin-top: 3dvh;
   }
@@ -267,7 +267,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-phase0-5 .flex-center-v {
     padding-top: 75px;
     padding-bottom: 25px;

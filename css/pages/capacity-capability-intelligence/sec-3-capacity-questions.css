@@ -30,7 +30,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 70px; 
+  padding-top: 70px;
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -143,7 +143,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-capacity-3__header {
     margin-top: 10px;
   }
@@ -155,7 +155,7 @@
   }
 }
 
-@media (max-height: 620px) and (min-width: 992px) {
+@media (max-height: 620px) and (min-width: 1025px) {
   .sec-capacity-3 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 5px;
@@ -199,7 +199,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-capacity-3 {
     height: auto;
     min-height: 100vh;

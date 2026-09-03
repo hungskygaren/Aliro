@@ -43,7 +43,7 @@
 
 .sec-5__content {
   position: absolute;
-  top: 24.0278dvh; 
+  top: 24.0278dvh;
   left: 0;
   z-index: 4;
   width: 41.667%;
@@ -57,7 +57,7 @@
 
 .sec-5__img-right {
   position: absolute;
-  top: 14.4444dvh; 
+  top: 14.4444dvh;
   left: calc(41.667% + 15px);
   right: 0;
   width: calc(58.333% - 15px);
@@ -280,7 +280,7 @@
 
 .sec-7__img-right {
   position: absolute;
-  top: 15.8333dvh; 
+  top: 15.8333dvh;
   left: calc(41.667% + 15px);
   right: auto;
   width: calc(50% - 15px);
@@ -302,7 +302,7 @@
 .sec-6 .container::after {
   content: "";
   position: absolute;
-  top: 18.75dvh; 
+  top: 18.75dvh;
   left: 0;
   width: calc(58.333% - 15px);
   max-width: 670px;
@@ -324,7 +324,7 @@
 .sec-8 .container::after {
   content: "";
   position: absolute;
-  top: 18.1944dvh; 
+  top: 18.1944dvh;
   left: 0;
   width: calc(50% - 15px);
   max-width: 570px;
@@ -345,7 +345,7 @@
 
 .sec-6__img-left {
   position: absolute;
-  top: 18.75dvh; 
+  top: 18.75dvh;
   left: 0;
   right: auto;
   width: calc(58.333% - 15px);
@@ -367,7 +367,7 @@
 
 .sec-8__img-left {
   position: absolute;
-  top: 18.1944dvh; 
+  top: 18.1944dvh;
   left: 0;
   right: auto;
   width: calc(50% - 15px);
@@ -398,7 +398,7 @@
 
 .sec-7__content {
   position: absolute;
-  top: 22.7778dvh; 
+  top: 22.7778dvh;
   left: 0;
   width: 41.667%;
   max-width: 470px;
@@ -412,10 +412,10 @@
 
 .sec-6__content {
   position: absolute;
-  top: 23.8889dvh; 
-  left: calc(58.333% + 15px); 
+  top: 23.8889dvh;
+  left: calc(58.333% + 15px);
   right: auto;
-  width: calc(41.667% - 15px); 
+  width: calc(41.667% - 15px);
   max-width: 470px;
   opacity: 0;
   transform: translateY(40px);
@@ -427,10 +427,10 @@
 
 .sec-8__content {
   position: absolute;
-  top: 20.5556dvh; 
-  left: calc(50% + 15px); 
+  top: 20.5556dvh;
+  left: calc(50% + 15px);
   right: auto;
-  width: calc(41.667% - 15px); 
+  width: calc(41.667% - 15px);
   max-width: 470px;
   opacity: 0;
   transform: translateY(40px);
@@ -519,7 +519,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; 
+  line-height: 24px;
   text-transform: uppercase;
   margin: 0 0 30px 0;
 }
@@ -582,7 +582,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; 
+  line-height: 24px;
   text-transform: uppercase;
   margin: 0 0 30px 0;
 }
@@ -659,8 +659,8 @@
   position: absolute;
   top: auto;
   left: auto;
-  right: 4.2361vw; 
-  bottom: 5.5556dvh; 
+  right: 4.2361vw;
+  bottom: 5.5556dvh;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -742,7 +742,7 @@
   display: block;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-5,
   .sec-7 {
     background: linear-gradient(

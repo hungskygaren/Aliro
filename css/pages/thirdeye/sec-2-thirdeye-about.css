@@ -232,48 +232,80 @@
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__card {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(1)
+  .sec-thirdeye-2__card {
   transition-delay: 0.2s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__badge {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(1)
+  .sec-thirdeye-2__badge {
   transition-delay: 0.28s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__connector-line {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(1)
+  .sec-thirdeye-2__connector-line {
   transition-delay: 0.34s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__connector-arrow {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(1)
+  .sec-thirdeye-2__connector-arrow {
   transition-delay: 0.42s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__step-title,
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(1) .sec-thirdeye-2__step-desc {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(1)
+  .sec-thirdeye-2__step-title,
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(1)
+  .sec-thirdeye-2__step-desc {
   transition-delay: 0.34s;
 }
 
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__card {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(2)
+  .sec-thirdeye-2__card {
   transition-delay: 0.48s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__badge {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(2)
+  .sec-thirdeye-2__badge {
   transition-delay: 0.56s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__connector-line {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(2)
+  .sec-thirdeye-2__connector-line {
   transition-delay: 0.62s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__connector-arrow {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(2)
+  .sec-thirdeye-2__connector-arrow {
   transition-delay: 0.7s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__step-title,
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(2) .sec-thirdeye-2__step-desc {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(2)
+  .sec-thirdeye-2__step-title,
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(2)
+  .sec-thirdeye-2__step-desc {
   transition-delay: 0.62s;
 }
 
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(3) .sec-thirdeye-2__card {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(3)
+  .sec-thirdeye-2__card {
   transition-delay: 0.76s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(3) .sec-thirdeye-2__badge {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(3)
+  .sec-thirdeye-2__badge {
   transition-delay: 0.84s;
 }
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(3) .sec-thirdeye-2__step-title,
-.sec-thirdeye-2.slide-animated .sec-thirdeye-2__col:nth-child(3) .sec-thirdeye-2__step-desc {
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(3)
+  .sec-thirdeye-2__step-title,
+.sec-thirdeye-2.slide-animated
+  .sec-thirdeye-2__col:nth-child(3)
+  .sec-thirdeye-2__step-desc {
   transition-delay: 0.9s;
 }
 
@@ -335,7 +367,7 @@
   transform: translateY(-50%) scaleX(1) !important;
 }
 
-@media (max-height: 700px) and (min-width: 992px) {
+@media (max-height: 700px) and (min-width: 1025px) {
   .sec-thirdeye-2 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 15px;
@@ -350,7 +382,7 @@
   }
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-thirdeye-2 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 10px;
@@ -384,7 +416,7 @@
   }
 }
 
-@media (max-height: 620px) and (min-width: 992px) {
+@media (max-height: 620px) and (min-width: 1025px) {
   .sec-thirdeye-2 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 5px;
@@ -444,7 +476,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-thirdeye-2 .flex-center-v {
     padding-top: 85px;
     padding-bottom: 50px;

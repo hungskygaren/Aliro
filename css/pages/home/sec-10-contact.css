@@ -21,8 +21,8 @@
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 80px; 
-  padding-bottom: 60px; 
+  padding-top: 80px;
+  padding-bottom: 60px;
   box-sizing: border-box;
 }
 
@@ -50,7 +50,7 @@
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   margin-bottom: 16px;
-  line-height: 24px; 
+  line-height: 24px;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -235,7 +235,7 @@
   margin-bottom: 0;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-market-8 .flex-center-v {
     padding-bottom: 30px;
   }
@@ -272,8 +272,8 @@
 
 .sec-10__card {
   position: relative;
-  background-color: #01103b; 
-  padding: 36px 35px 36px 25px; 
+  background-color: #01103b;
+  padding: 36px 35px 36px 25px;
   width: 470px;
   max-width: 100%;
   height: 330px;
@@ -282,40 +282,40 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  clip-path: inset(50% 0 50% 0); 
-  opacity: 0; 
+  clip-path: inset(50% 0 50% 0);
+  opacity: 0;
   transition:
     opacity 0.6s ease-out 0.1s,
-    clip-path 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s; 
+    clip-path 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
 }
 
 .sec-10__divider {
   height: 1px;
   background-color: #7e93a8;
-  opacity: 0; 
-  margin: 38px 0 34px 0; 
+  opacity: 0;
+  margin: 38px 0 34px 0;
   width: 100%;
-  transform: scaleX(0); 
-  transform-origin: left center; 
+  transform: scaleX(0);
+  transform-origin: left center;
   transition:
     opacity 0.3s ease 0.8s,
-    transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s; 
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s;
 }
 
 .sec-10.slide-animated .sec-10__divider {
   opacity: 0.5;
-  transform: scaleX(1); 
+  transform: scaleX(1);
 }
 
 .sec-10.slide-animated .sec-10__card {
   opacity: 1;
-  clip-path: inset(0 0 0 0); 
+  clip-path: inset(0 0 0 0);
 }
 
 .sec-10__entity-item {
   display: flex;
   align-items: center;
-  gap: 23px; 
+  gap: 23px;
 }
 
 .sec-10__icon {
@@ -371,7 +371,7 @@
 
 .sec-10__bottom {
   position: absolute;
-  bottom: 30px; 
+  bottom: 30px;
   left: 0;
   right: 0;
   display: flex;
@@ -492,7 +492,7 @@
   animation: none !important;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-10__decor {
     height: 60% !important;
   }
@@ -561,7 +561,7 @@
 
   .sec-10__right {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 480px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -575,8 +575,8 @@
     clip-path: none !important;
     opacity: 1 !important;
     width: 100% !important;
-    max-width: 100% !important;
-    padding: 16px 20px !important;
+    max-width: 480px !important;
+    padding: 18px 24px !important;
     border-radius: 0 !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;

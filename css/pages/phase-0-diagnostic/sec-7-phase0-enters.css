@@ -130,7 +130,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-phase0-7 .flex-center-v {
     align-items: center;
   }
@@ -157,7 +157,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-phase0-7 .flex-center-v {
     padding-top: 80px;
     padding-bottom: 40px;

@@ -223,7 +223,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-thirdeye-4 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 10px;
@@ -238,7 +238,7 @@
   }
 }
 
-@media (max-height: 620px) and (min-width: 992px) {
+@media (max-height: 620px) and (min-width: 1025px) {
   .sec-thirdeye-4 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 5px;
@@ -299,7 +299,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-thirdeye-4 .flex-center-v {
     padding-top: 85px;
     padding-bottom: 40px;
@@ -376,7 +376,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-thirdeye-4 .flex-center-v {
     padding-top: 85px;
     padding-bottom: 40px;

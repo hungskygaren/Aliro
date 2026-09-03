@@ -265,6 +265,9 @@
 @media (max-width: 1024px) {
   .sec-9b__cards {
     gap: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
   }
 
   .sec-9b__card {

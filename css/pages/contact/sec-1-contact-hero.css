@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  padding-top: 70px; 
+  padding-top: 70px;
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -200,7 +200,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-contact-1 .flex-center-v {
     justify-content: center;
   }
@@ -253,7 +253,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-contact-1 {
     background: radial-gradient(
       50% 50% at 50% 50%,
@@ -270,7 +270,7 @@
     min-height: 100dvh;
     height: auto !important;
     padding-top: 85px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     box-sizing: border-box;
     text-align: center;
     position: relative;
@@ -281,15 +281,16 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 90%;
-    gap: 16px;
+    max-width: 680px;
+    gap: 20px;
     text-align: center;
   }
 
   .sec-contact-1__left {
     width: 100%;
-    max-width: 100%;
+    max-width: 640px;
     margin-top: 0;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,36 +298,34 @@
   }
 
   .sec-contact-1__eyebrow {
-    font-size: 20px;
-    line-height: 26px;
-    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
   }
 
   .sec-contact-1__title {
     font-size: 36px;
     line-height: 42px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .sec-contact-1__subhead {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 26px;
-    margin-bottom: 14px;
-    max-width: 90%;
+    margin-bottom: 12px;
   }
 
   .sec-contact-1__body {
     font-size: 16px;
     line-height: 24px;
-    max-width: 90%;
   }
 
   .sec-contact-1__right {
     position: relative !important;
     width: 100% !important;
-    max-width: 440px !important;
+    max-width: 420px !important;
     height: auto !important;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     margin-inline: auto !important;
     order: 2 !important;
     z-index: 2 !important;
@@ -346,8 +345,8 @@
 
   .sec-contact-1__glow {
     width: 100%;
-    max-width: 440px;
-    height: 300px;
+    max-width: 420px;
+    height: 280px;
     filter: blur(60px);
   }
 

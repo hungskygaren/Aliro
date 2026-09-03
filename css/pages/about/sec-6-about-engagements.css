@@ -236,7 +236,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-about-6 .flex-center-v {
     align-items: center;
   }
@@ -269,7 +269,7 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 40px !important;
+    gap: 30px !important;
   }
 
   .sec-about-6__left,
@@ -278,30 +278,16 @@
     width: 100% !important;
     max-width: 600px !important;
     height: auto !important;
-    transform: none !important;
-    opacity: 1 !important;
+    margin-top: 0 !important;
   }
 
   .sec-about-6__graphic {
-    position: static !important;
-    width: 100% !important;
-    height: auto !important;
-    max-width: 480px !important;
-    margin: 0 auto 30px !important;
-    transform: none !important;
-    opacity: 1 !important;
-  }
-
-  .sec-about-6__graphic-img {
-    height: auto !important;
-    max-height: 300px !important;
+    display: none !important;
   }
 
   .sec-about-6__stats {
     position: static !important;
     width: 100% !important;
-    transform: none !important;
-    opacity: 1 !important;
   }
 
   .sec-about-6__stat-number {
@@ -315,23 +301,113 @@
 
   .sec-about-6__item {
     position: static !important;
-    transform: none !important;
-    opacity: 1 !important;
     height: auto !important;
     max-height: none !important;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .sec-about-6 .container {
     padding-top: 75px !important;
-    padding-bottom: 30px !important;
+    padding-bottom: 20px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    justify-content: center !important;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    gap: 16px !important;
+  }
+
+  .sec-about-6__left {
+    max-width: 380px !important;
+    margin: 0 auto !important;
   }
 
   .sec-about-6__title {
     font-size: 24px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     text-align: center;
+  }
+
+  .sec-about-6__list {
+    gap: 12px !important;
+  }
+
+  .sec-about-6__item {
+    gap: 14px !important;
+    min-height: auto !important;
+  }
+
+  .sec-about-6__icon-circle {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .sec-about-6__icon-img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .sec-about-6__item-text {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
+
+  .sec-about-6__right {
+    max-width: 380px !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-about-6__graphic {
+    display: none !important;
+  }
+
+  .sec-about-6__stats {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+  }
+
+  .sec-about-6__stat-item {
+    width: auto !important;
+    flex: 1 !important;
+  }
+
+  .sec-about-6__stat-divider {
+    height: 64px !important;
+    margin-top: 6px !important;
+  }
+
+  .sec-about-6__stat-number {
+    font-size: 40px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-about-6__stat-label {
+    font-size: 12px !important;
+    line-height: 15px !important;
+  }
+}
+
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-about-6 .container {
+    padding-top: 85px !important;
+    padding-bottom: 25px !important;
+    gap: 22px !important;
+  }
+
+  .sec-about-6__left {
+    max-width: 400px !important;
+  }
+
+  .sec-about-6__title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .sec-about-6__list {
+    gap: 14px !important;
   }
 
   .sec-about-6__icon-circle {
@@ -345,26 +421,25 @@
   }
 
   .sec-about-6__item-text {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 16.5px !important;
+    line-height: 22px !important;
   }
 
-  .sec-about-6__stats {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 24px !important;
+  .sec-about-6__right {
+    max-width: 400px !important;
   }
 
   .sec-about-6__stat-divider {
-    display: none !important;
+    height: 72px !important;
   }
 
   .sec-about-6__stat-number {
-    font-size: 48px !important;
+    font-size: 46px !important;
     margin-bottom: 6px !important;
   }
 
   .sec-about-6__stat-label {
-    font-size: 14px !important;
+    font-size: 13.5px !important;
+    line-height: 17px !important;
   }
 }

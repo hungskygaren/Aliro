@@ -41,7 +41,7 @@
 
 .sec-thirdeye-3__header {
   text-align: center;
-  margin-top: 5.5556dvh; 
+  margin-top: 5.5556dvh;
   margin-bottom: 0;
   z-index: 4;
   opacity: 0;
@@ -130,7 +130,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-thirdeye-3 .flex-center-v {
     justify-content: center;
     padding-top: 70px;
@@ -160,7 +160,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-thirdeye-3 .flex-center-v {
     padding-top: 85px;
     padding-bottom: 40px;

@@ -6,7 +6,7 @@
 .sec-architect .container {
   position: relative;
   height: 100%;
-  padding-top: 23.0555dvh; 
+  padding-top: 23.0555dvh;
   box-sizing: border-box;
 }
 
@@ -22,7 +22,7 @@
   font-family: var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 24px; 
+  line-height: 24px;
   color: #011b7f;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -36,7 +36,7 @@
   font-family: var(--font-brand);
   font-size: 44px;
   font-weight: 700;
-  line-height: 50px; 
+  line-height: 50px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   letter-spacing: 0;
@@ -51,7 +51,7 @@
   font-family: var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px; 
+  line-height: 28px;
   color: #011b7f;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -115,7 +115,7 @@
   right: 0;
   top: 50%;
   z-index: 2;
-  width: 57.26%; 
+  width: 57.26%;
   max-width: 670px;
   height: auto;
   object-fit: contain;
@@ -130,7 +130,7 @@
 
 .sec-architect__content {
   opacity: 0;
-  transform: translateX(40px); 
+  transform: translateX(40px);
   transition:
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
@@ -151,7 +151,7 @@
   transform: translateY(-50%);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-architect .container {
     flex-direction: column;
     justify-content: center;
@@ -227,7 +227,7 @@
   font-family: var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px; 
+  line-height: 28px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0;
@@ -242,7 +242,7 @@
   font-family: var(--font-brand);
   font-size: 44px;
   font-weight: 700;
-  line-height: 50px; 
+  line-height: 50px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   letter-spacing: 0;
@@ -257,7 +257,7 @@
   font-family: var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px; 
+  line-height: 28px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0;
@@ -287,7 +287,7 @@
 
 .sec-framework__content {
   opacity: 0;
-  transform: translateX(40px); 
+  transform: translateX(40px);
   transition:
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
@@ -308,7 +308,7 @@
   transform: translateY(0);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-framework .container {
     flex-direction: column;
     justify-content: center;
@@ -368,7 +368,7 @@
   animation: none !important;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-framework.visited .sec-framework__img {
     transform: none !important;
   }
@@ -381,7 +381,7 @@
   display: block;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-architect__title .line-desktop,
   .sec-architect__sub-bottom .line-desktop,
   .sec-architect__desc .line-desktop,

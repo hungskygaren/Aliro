@@ -104,7 +104,7 @@
   width: calc(100% - 278px);
   max-width: 901px;
   height: 4px;
-  background: #C5DAF3;
+  background: #c5daf3;
   z-index: 1;
   opacity: 0;
   transition:
@@ -213,47 +213,79 @@
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(1) .sec-phase0-2__step-visual {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(1)
+  .sec-phase0-2__step-visual {
   transition-delay: 0.2s;
 }
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(1) .sec-phase0-2__badge {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(1)
+  .sec-phase0-2__badge {
   transition-delay: 0.32s;
 }
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(1) .sec-phase0-2__step-title,
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(1) .sec-phase0-2__step-desc {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(1)
+  .sec-phase0-2__step-title,
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(1)
+  .sec-phase0-2__step-desc {
   transition-delay: 0.38s;
 }
 
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(2) .sec-phase0-2__step-visual {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(2)
+  .sec-phase0-2__step-visual {
   transition-delay: 0.42s;
 }
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(2) .sec-phase0-2__badge {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(2)
+  .sec-phase0-2__badge {
   transition-delay: 0.54s;
 }
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(2) .sec-phase0-2__step-title,
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(2) .sec-phase0-2__step-desc {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(2)
+  .sec-phase0-2__step-title,
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(2)
+  .sec-phase0-2__step-desc {
   transition-delay: 0.6s;
 }
 
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(3) .sec-phase0-2__step-visual {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(3)
+  .sec-phase0-2__step-visual {
   transition-delay: 0.64s;
 }
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(3) .sec-phase0-2__badge {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(3)
+  .sec-phase0-2__badge {
   transition-delay: 0.76s;
 }
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(3) .sec-phase0-2__step-title,
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(3) .sec-phase0-2__step-desc {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(3)
+  .sec-phase0-2__step-title,
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(3)
+  .sec-phase0-2__step-desc {
   transition-delay: 0.82s;
 }
 
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(4) .sec-phase0-2__step-visual {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(4)
+  .sec-phase0-2__step-visual {
   transition-delay: 0.86s;
 }
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(4) .sec-phase0-2__badge {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(4)
+  .sec-phase0-2__badge {
   transition-delay: 0.98s;
 }
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(4) .sec-phase0-2__step-title,
-.sec-phase0-2.slide-animated .sec-phase0-2__step:nth-child(4) .sec-phase0-2__step-desc {
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(4)
+  .sec-phase0-2__step-title,
+.sec-phase0-2.slide-animated
+  .sec-phase0-2__step:nth-child(4)
+  .sec-phase0-2__step-desc {
   transition-delay: 1.04s;
 }
 
@@ -311,7 +343,7 @@
   transform: translateX(-50%) translateY(-50%) scaleX(1) !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-phase0-2 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 10px;
@@ -326,7 +358,7 @@
   }
 }
 
-@media (max-height: 620px) and (min-width: 992px) {
+@media (max-height: 620px) and (min-width: 1025px) {
   .sec-phase0-2 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 5px;
@@ -362,7 +394,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-phase0-2 .flex-center-v {
     padding: 75px 16px 30px;
     justify-content: flex-start;

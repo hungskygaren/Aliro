@@ -15,7 +15,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 70px; 
+  padding-top: 70px;
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -210,8 +210,7 @@
   transform: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
-  
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-market-2__header {
     margin-top: 8px;
     margin-bottom: 16px;
@@ -277,7 +276,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-market-2 {
     height: auto;
     min-height: 100vh;

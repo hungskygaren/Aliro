@@ -137,11 +137,21 @@
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-about-5__item:nth-child(1) { transition-delay: 0.15s; }
-.sec-about-5__item:nth-child(2) { transition-delay: 0.25s; }
-.sec-about-5__item:nth-child(3) { transition-delay: 0.35s; }
-.sec-about-5__item:nth-child(4) { transition-delay: 0.45s; }
-.sec-about-5__item:nth-child(5) { transition-delay: 0.55s; }
+.sec-about-5__item:nth-child(1) {
+  transition-delay: 0.15s;
+}
+.sec-about-5__item:nth-child(2) {
+  transition-delay: 0.25s;
+}
+.sec-about-5__item:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.sec-about-5__item:nth-child(4) {
+  transition-delay: 0.45s;
+}
+.sec-about-5__item:nth-child(5) {
+  transition-delay: 0.55s;
+}
 
 .sec-about-5__item:hover {
   transform: translateX(6px);
@@ -158,7 +168,9 @@
   background: transparent;
   border: 1.5px solid transparent;
   box-sizing: border-box;
-  transition: border-color 0.25s ease, filter 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    filter 0.25s ease;
 }
 
 .sec-about-5__item:hover .sec-about-5__icon-circle {
@@ -239,7 +251,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-about-5 .flex-center-v {
     justify-content: center;
   }
@@ -265,8 +277,7 @@
 
   .sec-about-5__header {
     position: static !important;
-    transform: none !important;
-    opacity: 1 !important;
+    margin-top: 0 !important;
     margin-bottom: 24px;
   }
 
@@ -279,7 +290,8 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 30px !important;
+    justify-content: center !important;
+    gap: 10px !important;
     height: auto !important;
   }
 
@@ -288,8 +300,6 @@
     width: 100% !important;
     max-width: 420px !important;
     height: auto !important;
-    transform: none !important;
-    opacity: 1 !important;
     justify-content: center !important;
   }
 
@@ -304,47 +314,117 @@
     width: 100% !important;
     max-width: 600px !important;
     height: auto !important;
+    justify-content: center !important;
   }
 
   .sec-about-5__item {
     position: static !important;
-    transform: none !important;
-    opacity: 1 !important;
     height: auto !important;
     max-height: none !important;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .sec-about-5 .container {
     padding-top: 75px !important;
-    padding-bottom: 25px !important;
+    padding-bottom: 20px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    justify-content: center !important;
+    min-height: 100dvh;
+    box-sizing: border-box;
+  }
+
+  .sec-about-5__header {
+    margin-bottom: 14px !important;
   }
 
   .sec-about-5__title {
     font-size: 22px;
   }
 
+  .sec-about-5__main {
+    gap: 0 !important;
+  }
+
+  .sec-about-5__left {
+    display: none !important;
+  }
+
+  .sec-about-5__right {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    gap: 10px !important;
+  }
+
+  .sec-about-5__item {
+    gap: 12px !important;
+    min-height: auto !important;
+  }
+
   .sec-about-5__icon-circle {
-    width: 54px !important;
-    height: 54px !important;
+    width: 44px !important;
+    height: 44px !important;
   }
 
   .sec-about-5__icon-img {
-    width: 54px !important;
-    height: 54px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .sec-about-5__item-title {
+    font-size: 15px !important;
+    line-height: 19px !important;
+  }
+
+  .sec-about-5__item-desc {
+    font-size: 12.5px !important;
+    line-height: 17px !important;
+  }
+
+  .sec-about-5__item-arrow svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-about-5 .container {
+    padding-top: 85px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .sec-about-5__header {
+    margin-bottom: 20px !important;
+  }
+
+  .sec-about-5__title {
+    font-size: 26px;
+  }
+
+  .sec-about-5__right {
+    max-width: 400px !important;
+    gap: 14px !important;
+  }
+
+  .sec-about-5__icon-circle {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .sec-about-5__icon-img {
+    width: 50px !important;
+    height: 50px !important;
   }
 
   .sec-about-5__item-title {
     font-size: 17px !important;
+    line-height: 22px !important;
   }
 
   .sec-about-5__item-desc {
     font-size: 14px !important;
     line-height: 20px !important;
-  }
-
-  .sec-about-5__item {
-    gap: 14px !important;
   }
 }

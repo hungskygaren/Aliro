@@ -281,7 +281,7 @@
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-phase0-3 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 10px;
@@ -296,7 +296,7 @@
   }
 }
 
-@media (max-height: 620px) and (min-width: 992px) {
+@media (max-height: 620px) and (min-width: 1025px) {
   .sec-phase0-3 .flex-center-v {
     padding-top: 70px;
     padding-bottom: 5px;
@@ -374,7 +374,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sec-phase0-3 .flex-center-v {
     padding-top: 75px;
     padding-bottom: 30px;
