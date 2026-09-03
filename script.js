@@ -14,52 +14,11 @@ async function loadSharedHeader() {
     const res = await fetch("components/header.html");
     if (res.ok) {
       mainHeader.innerHTML = await res.text();
+    } else {
+      console.error("Failed to load components/header.html, status:", res.status);
     }
   } catch (err) {
-    // Fallback for file:// protocol direct browser open where AJAX fetch is blocked
-    console.info(
-      "Using local header template fallback for direct file:// access.",
-    );
-    mainHeader.innerHTML = `
-      <div class="navbar-container">
-        <a href="index.html#section-1" class="logo-brand" aria-label="Aliro Consulting Home">
-          <img src="assets/logo.webp" alt="Aliro Consulting Logo" class="logo-img" />
-        </a>
-        <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-        </button>
-        <div class="nav-drawer" id="navDrawer">
-          <button class="drawer-close" id="drawerClose" aria-label="Close navigation menu">&times;</button>
-          <nav class="nav-menu" id="navMenu">
-            <a href="index.html#section-1" class="nav-item" data-nav="home">Home</a>
-            <div class="nav-dropdown-wrapper">
-              <a href="market-intelligence.html" class="nav-item" data-nav="4ic" aria-haspopup="true" aria-expanded="false">4iC</a>
-              <div class="nav-dropdown-menu" role="menu">
-                <a href="market-intelligence.html" class="nav-dropdown-item" data-nav="market" role="menuitem">Market Intelligence</a>
-                <a href="operational-intelligence.html" class="nav-dropdown-item" data-nav="operational" role="menuitem">Operational Intelligence</a>
-                <a href="digital-intelligence.html" class="nav-dropdown-item" data-nav="digital" role="menuitem">Digital Intelligence</a>
-                <a href="capacity-capability-intelligence.html" class="nav-dropdown-item" data-nav="capacity" role="menuitem">Capacity Capability Intelligence</a>
-              </div>
-            </div>
-            <div class="nav-dropdown-wrapper">
-              <a href="phase-0-diagnostic.html" class="nav-item" data-nav="services" aria-haspopup="true" aria-expanded="false">Services</a>
-              <div class="nav-dropdown-menu" role="menu">
-                <a href="phase-0-diagnostic.html" class="nav-dropdown-item" data-nav="phase0" role="menuitem">Phase 0 Diagnostic</a>
-                <a href="thirdeye.html" class="nav-dropdown-item" data-nav="thirdeye" role="menuitem">ThirdEye</a>
-              </div>
-            </div>
-            <a href="about.html" class="nav-item" data-nav="about">About Us</a>
-            <a href="contact.html" class="nav-item" data-nav="contact">Contact</a>
-          </nav>
-          <div class="nav-actions">
-            <a href="contact.html" class="btn-conversation">Start a Conversation</a>
-          </div>
-        </div>
-        <div class="nav-backdrop" id="navBackdrop"></div>
-      </div>
-    `;
+    console.error("Error loading components/header.html:", err);
   }
 
   // Auto-highlight active navigation item based on current URL path
@@ -190,80 +149,18 @@ async function loadSharedFooter() {
   );
   if (!footerTargets.length) return;
 
-  let footerHTML = "";
   try {
     const res = await fetch("components/footer.html");
     if (res.ok) {
-      footerHTML = await res.text();
+      const footerHTML = await res.text();
+      footerTargets.forEach((target) => {
+        target.innerHTML = footerHTML;
+      });
+    } else {
+      console.error("Failed to load components/footer.html, status:", res.status);
     }
   } catch (err) {
-    // Fallback for file:// protocol direct browser open where AJAX fetch is blocked
-    console.info(
-      "Using local footer template fallback for direct file:// access.",
-    );
-    footerHTML = `
-      <img
-        src="assets/sec-10-decor.webp"
-        alt="Aliro Blueprint Lines Decoration Background"
-        class="sec-10__decor"
-        loading="lazy"
-        decoding="async"
-      />
-      <div class="container flex-center-v h-100">
-        <div class="sec-10__grid grid-12">
-          <div class="sec-10__left col-start-1 col-span-6">
-            <div class="sec-10__tag phrase">LET'S START WITH YOUR REALITY</div>
-            <h2 class="sec-10__title phrase">EVERY TRANSFORMATION BEGINS WITH ONE CONVERSATION.</h2>
-            <p class="sec-10__sub-desc phrase">Better outcomes. Stronger organisations. Healthier communities.</p>
-            <div class="sec-10__desc">
-              <p class="phrase">Every Aliro engagement begins with a candid conversation about your situation and what would actually be useful.</p>
-              <p class="phrase">We keep the first meeting focused on your situation—not our services. <span class="sec-10__desc-highlight">When there is a strong fit, we will define the right next step together.</span></p>
-            </div>
-            <a href="mailto:info@aliroconsulting.com" class="sec-10__email phrase">info@aliroconsulting.com</a>
-            <div class="sec-10__btn-wrapper">
-              <a href="mailto:info@aliroconsulting.com" class="btn btn-primary sec-10__btn phrase">Start a Conversation</a>
-            </div>
-          </div>
-          <div class="sec-10__right col-start-8 col-span-5">
-            <div class="sec-10__card">
-              <div class="sec-10__card-content">
-                <div class="sec-10__entity-item phrase d-flex align-center">
-                  <img src="assets/icon-building-hongkong.svg" class="sec-10__icon" alt="Hong Kong Office Building Icon" />
-                  <div class="sec-10__entity-info">
-                    <div class="sec-10__label">HONG KONG ENTITY</div>
-                    <div class="sec-10__company">Aliro Consulting Ltd.</div>
-                    <div class="sec-10__location">Hong Kong</div>
-                  </div>
-                </div>
-                <div class="sec-10__divider"></div>
-                <div class="sec-10__entity-item phrase d-flex align-center">
-                  <img src="assets/icon-building-vietnam.svg" class="sec-10__icon" alt="Vietnam Office Building Icon" />
-                  <div class="sec-10__entity-info">
-                    <div class="sec-10__label">VIET NAM OPERATIONS</div>
-                    <div class="sec-10__company">Aliro Consulting Vietnam Co., Ltd.</div>
-                    <div class="sec-10__location">Ho Chi Minh City</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="sec-10__bottom phrase">
-          <div class="sec-10__copyright-text">© 2026 Aliro Consulting. All rights reserved.</div>
-          <div class="sec-10__legal-links">
-            <a href="javascript:void(0)" class="sec-10__legal-link">Privacy</a>
-            <span class="sec-10__legal-separator"></span>
-            <a href="javascript:void(0)" class="sec-10__legal-link">Terms</a>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  if (footerHTML) {
-    footerTargets.forEach((target) => {
-      target.innerHTML = footerHTML;
-    });
+    console.error("Error loading components/footer.html:", err);
   }
 }
 
@@ -461,7 +358,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const activeSlide = domSlides[index];
     if (activeSlide) {
       if (
-        activeSlide.classList.contains("sec-mockup-bg-dark") ||
         activeSlide.classList.contains("sec-about-bg-dark") ||
         activeSlide.classList.contains("sec-phase0-bg-dark") ||
         activeSlide.classList.contains("sec-thirdeye-bg-dark") ||
@@ -475,7 +371,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         mainHeader.classList.add("light-theme");
         return;
       } else if (
-        activeSlide.classList.contains("sec-mockup-bg-light") ||
         activeSlide.classList.contains("sec-about-bg-light") ||
         activeSlide.classList.contains("sec-phase0-bg-light") ||
         activeSlide.classList.contains("sec-thirdeye-bg-light") ||
@@ -483,8 +378,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeSlide.classList.contains("sec-operational-bg-light") ||
         activeSlide.classList.contains("sec-digital-bg-light") ||
         activeSlide.classList.contains("sec-capacity-bg-light") ||
-        activeSlide.classList.contains("sec-contact-bg-light") ||
-        activeSlide.classList.contains("sec-contact-mockup")
+        activeSlide.classList.contains("sec-contact-bg-light")
       ) {
         mainHeader.classList.remove("light-theme");
         return;
@@ -514,8 +408,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     !document.body.classList.contains("page-phase-0") &&
     !document.body.classList.contains("page-thirdeye") &&
     !document.body.classList.contains("page-market-intelligence") &&
-    !document.body.classList.contains("page-contact") &&
-    !document.body.classList.contains("page-mockup");
+    !document.body.classList.contains("page-contact");
 
   const allNavLinks = document.querySelectorAll('a[href*="#"]');
   allNavLinks.forEach((link) => {

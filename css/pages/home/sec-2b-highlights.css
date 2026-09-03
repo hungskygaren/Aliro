@@ -23,8 +23,10 @@
   height: 100%;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 44.0278dvh; /* 317px / 720px = 44.0278% Figma standard */
+  box-sizing: border-box;
 }
 
 .sec-2b__wrapper {
@@ -42,7 +44,7 @@
 }
 
 .sec-2b__col {
-  padding: 0 16px;
+  padding: 19px 16px; /* 19px top & bottom spacing from border lines */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -171,6 +173,8 @@
 
   .sec-2b .container {
     height: 100%;
+    align-items: center;
+    padding-top: 0;
   }
 
   .sec-2b__grid {
@@ -181,7 +185,7 @@
   .sec-2b__col,
   .sec-2b__col:first-child,
   .sec-2b__col:last-child {
-    padding: 0 10px !important;
+    padding: 19px 10px !important;
   }
 
   .sec-2b__col:not(:last-child)::after {
@@ -233,7 +237,7 @@
   .sec-2b__col,
   .sec-2b__col:first-child,
   .sec-2b__col:last-child {
-    padding: 0 8px !important;
+    padding: 19px 8px !important;
   }
 
   .sec-2b__col:nth-child(odd)::after {
@@ -280,7 +284,7 @@
   .sec-2b__col,
   .sec-2b__col:first-child,
   .sec-2b__col:last-child {
-    padding: 0 4px !important;
+    padding: 19px 4px !important;
   }
 
   .sec-2b__col:nth-child(odd)::after {

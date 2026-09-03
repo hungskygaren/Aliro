@@ -219,9 +219,8 @@
   transform: translateY(0);
 }
 
-/* Scroll Down Button (Appears immediately with content) */
+/* Scroll Down Button Entrance */
 .sec-hero .scroll-down-btn {
-  color: #ffffff !important;
   opacity: 0;
   transform: translateX(-50%) translateY(20px);
   transition:
@@ -230,12 +229,8 @@
 }
 
 .sec-hero.slide-animated .scroll-down-btn {
-  opacity: 0.5;
+  opacity: 0.8 !important;
   transform: translateX(-50%) translateY(0);
-}
-
-.sec-hero .scroll-down-btn:hover {
-  opacity: 1 !important;
 }
 
 /* Side cliffs: Start immediately when slide active */
@@ -256,7 +251,7 @@
 }
 
 .sec-hero.visited .scroll-down-btn {
-  opacity: 0.5 !important;
+  opacity: 0.8 !important;
   transition: none !important;
   animation: none !important;
 }

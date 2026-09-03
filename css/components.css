@@ -461,12 +461,9 @@ body.no-scroll {
 
 /* --------------------------------------------------------------------------
    HTML & SVG Scroll Down Button (Shared Reusable Component)
+   Unified style across all pages: White, 80% opacity, 100% on hover
    -------------------------------------------------------------------------- */
-.scroll-down-btn,
-.sec-about-1__scroll,
-.sec-phase0-1__scroll,
-.sec-thirdeye-1__scroll,
-.sec-market-1__scroll {
+.scroll-down-btn {
   position: absolute;
   bottom: 24px;
   left: 50%;
@@ -479,8 +476,8 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  color: #c5daf3;
-  opacity: 0.7;
+  color: #ffffff !important;
+  opacity: 0.8 !important;
   text-decoration: none;
   transition:
     opacity 0.25s ease,
@@ -488,51 +485,54 @@ body.no-scroll {
     transform 0.25s ease;
 }
 
-.scroll-down-btn:hover,
-.sec-about-1__scroll:hover,
-.sec-phase0-1__scroll:hover,
-.sec-thirdeye-1__scroll:hover,
-.sec-market-1__scroll:hover {
+.scroll-down-btn:hover {
   opacity: 1 !important;
   color: #ffffff !important;
   transform: translateX(-50%) translateY(3px) !important;
 }
 
-.scroll-down-text,
-.sec-about-1__scroll-text,
-.sec-phase0-1__scroll-text,
-.sec-thirdeye-1__scroll-text,
-.sec-market-1__scroll-text {
+.scroll-down-text {
   font-family: Aptos, var(--font-brand);
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
-  color: inherit;
+  color: #ffffff !important;
+  opacity: 0.8 !important;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  transition: opacity 0.25s ease, color 0.25s ease;
 }
 
-.scroll-down-icon,
-.sec-about-1__scroll-icon,
-.sec-phase0-1__scroll-icon,
-.sec-thirdeye-1__scroll-icon,
-.sec-market-1__scroll-icon {
+.scroll-down-btn:hover .scroll-down-text {
+  opacity: 1 !important;
+  color: #ffffff !important;
+}
+
+.scroll-down-icon {
   width: 24px;
   height: 24px;
-  color: inherit;
+  color: #ffffff !important;
+  opacity: 0.8 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   animation: bounceDown 2.2s infinite ease-in-out;
+  transition: opacity 0.25s ease, color 0.25s ease;
 }
 
-.scroll-down-icon path,
-.sec-about-1__scroll-icon path,
-.sec-phase0-1__scroll-icon path,
-.sec-thirdeye-1__scroll-icon path,
-.sec-market-1__scroll-icon path {
+.scroll-down-btn:hover .scroll-down-icon {
+  opacity: 1 !important;
+  color: #ffffff !important;
+}
+
+.scroll-down-icon svg,
+.scroll-down-icon path {
   fill: currentColor;
+  stroke: currentColor;
 }
 
 @keyframes bounceDown {
@@ -552,21 +552,13 @@ body.no-scroll {
 }
 
 @media (max-height: 660px) {
-  .scroll-down-btn,
-  .sec-about-1__scroll,
-  .sec-phase0-1__scroll,
-  .sec-thirdeye-1__scroll,
-  .sec-market-1__scroll {
+  .scroll-down-btn {
     bottom: 10px;
   }
 }
 
 @media (max-height: 620px) {
-  .scroll-down-btn,
-  .sec-about-1__scroll,
-  .sec-phase0-1__scroll,
-  .sec-thirdeye-1__scroll,
-  .sec-market-1__scroll {
+  .scroll-down-btn {
     bottom: 6px;
   }
 }

@@ -331,7 +331,7 @@
     margin: 0 auto;
   }
 
-  .sec-phase0-1__scroll {
+  .sec-phase0-1 .scroll-down-btn {
     bottom: 16px;
   }
 }
@@ -370,7 +370,7 @@
     font-size: 14px;
   }
 
-  .sec-phase0-1__scroll {
+  .sec-phase0-1 .scroll-down-btn {
     display: none;
   }
 }

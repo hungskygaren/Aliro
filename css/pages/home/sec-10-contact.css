@@ -129,13 +129,19 @@
 .sec-10__email {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
+  font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 28px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: none;
   display: inline-block;
   margin: 0 0 27px 0;
-  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 10%;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
   font-feature-settings:
     "liga" off,
     "clig" off;
