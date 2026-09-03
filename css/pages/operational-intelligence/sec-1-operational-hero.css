@@ -194,13 +194,13 @@
 
 /* --------------------------------------------------------------------------
    Right Column: 3D Holographic Operations & Process Flow Stage (670px x 446px)
-   Figma: Top 90px - 70px Header = 20px
+   Figma: Top 160px - 70px Header = 90px
    -------------------------------------------------------------------------- */
 .sec-operational-1__right {
   width: 670px;
   max-width: 670px;
   height: auto;
-  margin-top: calc(20 / 720 * 100dvh);
+  margin-top: calc(90 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   justify-content: center;

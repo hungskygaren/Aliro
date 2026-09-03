@@ -21,19 +21,22 @@
 .sec-about-4 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 75px;
+  padding-top: 70px;
   padding-bottom: 25px;
   box-sizing: border-box;
   z-index: 2;
 }
 
-/* Header Area */
+/* Header Area
+   Figma: Top 92px - 70px Header = 22px
+   -------------------------------------------------------------------------- */
 .sec-about-4__header {
   text-align: center;
+  margin-top: calc(22 / 720 * 100dvh);
   margin-bottom: 20px;
   z-index: 4;
   opacity: 0;
@@ -267,6 +270,19 @@ span.sec-about-4__service-arrow {
 }
 
 /* ==========================================================================
+   Short Desktop Screen Adaptations (<= 660px)
+   ========================================================================== */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-about-4 .flex-center-v {
+    justify-content: center;
+  }
+
+  .sec-about-4__header {
+    margin-top: 0;
+  }
+}
+
+/* ==========================================================================
    Responsive Adaptations (Tablet & Mobile)
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -285,6 +301,7 @@ span.sec-about-4__service-arrow {
   }
 
   .sec-about-4__header {
+    margin-top: 0;
     transform: none !important;
     opacity: 1 !important;
     margin-bottom: 16px;

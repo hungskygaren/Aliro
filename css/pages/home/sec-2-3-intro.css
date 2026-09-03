@@ -9,7 +9,7 @@
 .sec-architect .container {
   position: relative;
   height: 100%;
-  padding-top: 23.0555vh; /* 166px / 720px = 23.0555% height */
+  padding-top: 23.0555dvh; /* 166px / 720px = 23.0555dvh height */
   box-sizing: border-box;
 }
 

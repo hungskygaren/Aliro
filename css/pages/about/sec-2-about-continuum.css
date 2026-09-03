@@ -16,7 +16,7 @@
 .sec-about-2 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
   position: relative;
@@ -25,9 +25,12 @@
   box-sizing: border-box;
 }
 
-/* Header Info */
+/* Header Info
+   Figma: Top 108px - 70px Header = 38px
+   -------------------------------------------------------------------------- */
 .sec-about-2__header {
   text-align: center;
+  margin-top: calc(38 / 720 * 100dvh);
   margin-bottom: 20px;
   z-index: 4;
   opacity: 0;
@@ -280,22 +283,15 @@
 }
 
 /* ==========================================================================
-   Short Desktop Screen Adaptations (<= 620px)
+   Short Desktop Screen Adaptations (<= 660px)
    ========================================================================== */
-@media (max-height: 620px) and (min-width: 992px) {
+@media (max-height: 660px) and (min-width: 992px) {
   .sec-about-2 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
+    justify-content: center;
   }
 
-  .sec-about-2__tag {
-    font-size: 17px;
-    line-height: 23px;
-  }
-
-  .sec-about-2__title {
-    font-size: 35px;
-    line-height: 31px;
+  .sec-about-2__header {
+    margin-top: 0;
   }
 }
 
@@ -315,6 +311,10 @@
     min-height: 100%;
     padding-top: 85px !important;
     padding-bottom: 30px !important;
+  }
+
+  .sec-about-2__header {
+    margin-top: 0;
   }
 
   .sec-about-2__stage {
