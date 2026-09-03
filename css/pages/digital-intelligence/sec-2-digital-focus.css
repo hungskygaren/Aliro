@@ -17,7 +17,7 @@
 .sec-digital-2 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
   padding-top: 70px; /* Standard 70px navbar compensation */
@@ -30,12 +30,12 @@
 }
 
 /* --------------------------------------------------------------------------
-   Header: Title
+   Header: Title (Figma: Top 106px - 70px Header = 36px)
    -------------------------------------------------------------------------- */
 .sec-digital-2__header {
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 35px;
+  margin-top: calc(36 / 720 * 100dvh);
+  margin-bottom: calc(35 / 720 * 100dvh);
   z-index: 4;
 }
 

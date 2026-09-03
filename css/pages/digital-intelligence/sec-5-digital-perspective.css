@@ -16,8 +16,9 @@
 
 .sec-digital-5 .flex-center-v {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
   height: 100%;
   position: relative;
   box-sizing: border-box;
@@ -32,6 +33,7 @@
 
 /* --------------------------------------------------------------------------
    Stage: 2-Column Flex Layout (1170px Standard)
+   Figma: Top ~205px - 70px Header = 135px
    -------------------------------------------------------------------------- */
 .sec-digital-5__stage {
   display: flex;
@@ -39,7 +41,10 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1170px;
-  margin: 0 auto;
+  margin-top: calc(135 / 720 * 100dvh);
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
   gap: 30px;
   position: relative;
   z-index: 3;
@@ -217,6 +222,7 @@
     flex-direction: column;
     text-align: center;
     gap: 30px;
+    margin-top: 0;
   }
 
   .sec-digital-5__left {

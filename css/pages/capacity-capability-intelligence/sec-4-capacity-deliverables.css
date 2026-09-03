@@ -45,7 +45,7 @@
   width: 100%;
   max-width: 1170px;
   gap: 20px;
-  margin-top: 15px; /* Cách thanh menu trên đúng 15px theo Figma */
+  margin-top: calc(15 / 720 * 100dvh); /* Figma: Top 85px - 70px Navbar = 15px */
   margin-bottom: auto;
   position: relative;
   z-index: 3;

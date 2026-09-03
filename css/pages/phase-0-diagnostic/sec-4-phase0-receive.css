@@ -39,7 +39,7 @@
    -------------------------------------------------------------------------- */
 .sec-phase0-4__header {
   text-align: center;
-  margin-top: 40px;
+  margin-top: calc(40 / 720 * 100dvh);
   margin-bottom: 0;
   z-index: 4;
   opacity: 0;

@@ -23,8 +23,9 @@
 
 .sec-capacity-6 .flex-center-v {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
   height: 100%;
   padding-top: 70px; /* Navbar compensation */
   padding-bottom: 20px;
@@ -40,7 +41,7 @@
    -------------------------------------------------------------------------- */
 .sec-capacity-6__stage {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   max-width: 1170px;
@@ -51,10 +52,12 @@
 
 /* --------------------------------------------------------------------------
    Left Column: Eyebrow + Bold Strategic Statement (670px)
+   Figma: Top 272px - 70px Header = 202px
    -------------------------------------------------------------------------- */
 .sec-capacity-6__left {
   width: 100%;
   max-width: 670px;
+  margin-top: calc(202 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -106,12 +109,14 @@
 
 /* --------------------------------------------------------------------------
    Right Column: 3D Isometric Perspective Visual (470px x 370px)
+   Figma: Top 238px - 70px Header = 168px
    -------------------------------------------------------------------------- */
 .sec-capacity-6__right {
   width: 470px;
   max-width: 470px;
   height: auto;
   aspect-ratio: 470 / 370;
+  margin-top: calc(168 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -204,6 +209,7 @@
   .sec-capacity-6__left {
     max-width: 100%;
     align-items: center;
+    margin-top: 0;
   }
 
   .sec-capacity-6__eyebrow {
@@ -219,6 +225,7 @@
     width: 100%;
     max-width: 380px;
     height: auto;
+    margin-top: 0;
   }
 }
 

@@ -32,7 +32,7 @@
    -------------------------------------------------------------------------- */
 .sec-thirdeye-2__header {
   text-align: center;
-  margin-top: 29px;
+  margin-top: calc(29 / 720 * 100dvh);
   margin-bottom: 0;
   z-index: 4;
   opacity: 0;

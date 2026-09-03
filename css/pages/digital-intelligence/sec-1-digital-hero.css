@@ -21,8 +21,9 @@
 
 .sec-digital-1 .flex-center-v {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   position: relative;
   box-sizing: border-box;
@@ -40,7 +41,7 @@
    -------------------------------------------------------------------------- */
 .sec-digital-1__stage {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   max-width: 1170px;
@@ -52,10 +53,12 @@
 
 /* --------------------------------------------------------------------------
    Left Column: Strategic Typography & Breadcrumbs
+   Figma: Top 168px - 70px Header = 98px
    -------------------------------------------------------------------------- */
 .sec-digital-1__left {
   flex: 1;
   max-width: 530px;
+  margin-top: calc(98 / 720 * 100dvh);
   z-index: 4;
 }
 
@@ -179,26 +182,23 @@
   padding: 8px 16px;
   border-radius: 2px;
   text-decoration: none;
-  transition:
-    background-color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.25);
+  cursor: pointer;
+  transition: background-color 0.25s ease;
 }
 
 .sec-digital-1__btn:hover {
-  background-color: #032488;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(4, 49, 177, 0.4);
+  background-color: var(--color-primary-hover, #03258c);
 }
 
 /* --------------------------------------------------------------------------
    Right Column: 3D Holographic Digital Process Architecture (670px x 563px)
+   Figma: Top 90px - 70px Header = 20px
    -------------------------------------------------------------------------- */
 .sec-digital-1__right {
   width: 670px;
   max-width: 670px;
   height: 563px;
+  margin-top: calc(20 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -269,6 +269,21 @@
   }
 }
 
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-digital-1 .flex-center-v {
+    justify-content: center;
+  }
+
+  .sec-digital-1__stage {
+    align-items: center;
+  }
+
+  .sec-digital-1__left,
+  .sec-digital-1__right {
+    margin-top: 0;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Responsive Breakpoints for Screen Widths (1200px, 991px, 576px)
    -------------------------------------------------------------------------- */
@@ -307,6 +322,7 @@
 
   .sec-digital-1__left {
     max-width: 100%;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -323,6 +339,7 @@
   .sec-digital-1__right {
     max-width: 480px;
     width: 100%;
+    margin-top: 0;
   }
 
   .sec-digital-1 .scroll-down-btn {

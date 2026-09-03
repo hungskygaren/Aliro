@@ -21,8 +21,9 @@
 
 .sec-market-1 .flex-center-v {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   position: relative;
   box-sizing: border-box;
@@ -40,7 +41,7 @@
    -------------------------------------------------------------------------- */
 .sec-market-1__stage {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   max-width: 1170px;
@@ -52,10 +53,12 @@
 
 /* --------------------------------------------------------------------------
    Left Column: Strategic Typography & Breadcrumbs
+   Figma: Top 168px - 70px Header = 98px
    -------------------------------------------------------------------------- */
 .sec-market-1__left {
   flex: 1;
   max-width: 530px;
+  margin-top: calc(98 / 720 * 100dvh);
   z-index: 4;
 }
 
@@ -184,11 +187,13 @@
 
 /* --------------------------------------------------------------------------
    Right Column: 3D Holographic ASEAN Radar & Market Displays (670px x 563px)
+   Figma: Top 90px - 70px Header = 20px
    -------------------------------------------------------------------------- */
 .sec-market-1__right {
   width: 670px;
   max-width: 670px;
   height: auto;
+  margin-top: calc(20 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -252,7 +257,23 @@
   transition: none !important;
 }
 
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-market-1 .flex-center-v {
+    justify-content: center;
+  }
 
+  .sec-market-1__stage {
+    align-items: center;
+  }
+
+  .sec-market-1__left,
+  .sec-market-1__right {
+    margin-top: 0;
+  }
+}
 
 /* --------------------------------------------------------------------------
    Responsive Breakpoints for Width (1200px, 991px, 576px)
@@ -294,11 +315,13 @@
 
   .sec-market-1__left {
     max-width: 100%;
+    margin-top: 0;
   }
 
   .sec-market-1__right {
     width: 100%;
     max-width: 100%;
+    margin-top: 0;
   }
 
   .sec-market-1 .scroll-down-btn {

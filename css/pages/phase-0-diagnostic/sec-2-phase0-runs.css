@@ -35,7 +35,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 37px;
+  margin-top: calc(37 / 720 * 100dvh);
   margin-bottom: 0;
   z-index: 4;
 }

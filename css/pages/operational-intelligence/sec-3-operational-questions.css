@@ -49,10 +49,11 @@
 
 /* --------------------------------------------------------------------------
    Header: Title & Subtitle
+   Figma: Top 113px - 70px Navbar = 43px
    -------------------------------------------------------------------------- */
 .sec-operational-3__header {
   text-align: center;
-  margin-top: 43px; /* 113px Top - 70px Navbar = 43px chuẩn Figma */
+  margin-top: calc(43 / 720 * 100dvh);
   margin-bottom: 0;
   z-index: 4;
   transition-delay: 0.1s;

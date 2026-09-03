@@ -132,8 +132,19 @@ function bindNavEvents() {
     navBackdrop.addEventListener("click", closeMobileMenu);
   }
 
+  // Prevent click navigation on hover-only parent items
+  const nonClickableItems = document.querySelectorAll(
+    '.nav-item--dropdown, .nav-item[data-nav="4ic"]',
+  );
+  nonClickableItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  });
+
   const drawerLinks = document.querySelectorAll(
-    ".nav-drawer .nav-item, .nav-drawer .nav-dropdown-item, .nav-drawer .btn-conversation",
+    ".nav-drawer .nav-item:not(.nav-item--dropdown), .nav-drawer .nav-dropdown-item, .nav-drawer .btn-conversation",
   );
   drawerLinks.forEach((link) => {
     link.addEventListener("click", closeMobileMenu);
@@ -477,4 +488,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     },
     { capture: true },
   );
+
+  // Section 9b Advisory Cards Click Handler (Navigates to data-href on card click)
+  const sec9bCards = document.querySelectorAll(".sec-9b__card[data-href]");
+  sec9bCards.forEach((card) => {
+    card.addEventListener("click", (e) => {
+      if (e.target.closest(".sec-9b__card-btn")) return;
+      const href = card.getAttribute("data-href");
+      if (href) {
+        window.location.href = href;
+      }
+    });
+  });
 });
