@@ -185,7 +185,6 @@
   z-index: 2;
 }
 
-
 /* --------------------------------------------------------------------------
    Sequential Domino Animation Engine
    -------------------------------------------------------------------------- */
@@ -196,7 +195,6 @@
     opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 
 .sec-contact-1.swiper-slide-active .phrase,
 .sec-contact-1.slide-animated .phrase {
@@ -209,7 +207,6 @@
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-
 
 /* Visited Slide State (Instant display without re-animating) */
 .sec-contact-1.visited .phrase {
@@ -286,38 +283,93 @@
 @media (max-width: 991px) {
   .sec-contact-1 {
     background: radial-gradient(
-      ellipse at 50% 30%,
+      50% 50% at 50% 50%,
       #1e55b3 0%,
       #01103b 100%
     ) !important;
   }
 
   .sec-contact-1 .flex-center-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    height: auto !important;
     padding-top: 85px;
-    padding-bottom: 40px;
-    overflow-y: auto;
-    align-items: flex-start;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
   }
 
   .sec-contact-1__stage {
+    display: flex;
     flex-direction: column;
-    height: auto;
-    gap: 24px;
-    text-align: left;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+    gap: 16px;
+    text-align: center;
   }
 
   .sec-contact-1__left {
     width: 100%;
     max-width: 100%;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
+  .sec-contact-1__eyebrow {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .sec-contact-1__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 16px;
+  }
+
+  .sec-contact-1__subhead {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    max-width: 90%;
+  }
+
+  .sec-contact-1__body {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 90%;
+  }
+
+  /* 3D Visual flows below text with entrance animation */
   .sec-contact-1__right {
-    width: 100%;
-    max-width: 440px;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 0;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    height: auto !important;
+    margin-top: 20px !important;
+    margin-inline: auto !important;
+    order: 2 !important;
+    z-index: 2 !important;
+    opacity: 0 !important;
+    transform: translateY(60px) !important;
+    transition:
+      opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .sec-contact-1.slide-animated .sec-contact-1__right,
+  .sec-contact-1.visited .sec-contact-1__right {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition-delay: 0.25s !important;
   }
 
   .sec-contact-1__glow {
@@ -332,42 +384,109 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .sec-contact-1 .flex-center-v {
-    padding-top: 75px;
+    padding-top: 90px;
     padding-bottom: 25px;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .sec-contact-1__stage {
+    max-width: 100%;
+    gap: 12px;
   }
 
   .sec-contact-1__eyebrow {
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .sec-contact-1__title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+
+  .sec-contact-1__subhead {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+
+  .sec-contact-1__body {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 100%;
+  }
+
+  .sec-contact-1__body p {
+    margin-bottom: 8px;
+  }
+
+  .sec-contact-1__right {
+    max-width: 300px !important;
+    margin-top: 16px !important;
+  }
+
+  .sec-contact-1__glow {
+    width: 280px;
+    height: 210px;
+    filter: blur(40px);
+  }
+}
+
+/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-contact-1 .flex-center-v {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+
+  .sec-contact-1__stage {
+    gap: 16px;
+  }
+
+  .sec-contact-1__eyebrow {
+    font-size: 17px;
     line-height: 22px;
     margin-bottom: 10px;
   }
 
   .sec-contact-1__title {
-    font-size: 28px;
-    line-height: 34px;
-    margin-bottom: 12px;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 14px;
   }
 
   .sec-contact-1__subhead {
-    font-size: 17px;
-    line-height: 22px;
-    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 14px;
   }
 
   .sec-contact-1__body {
-    font-size: 15px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .sec-contact-1__body p {
+    margin-bottom: 10px;
   }
 
   .sec-contact-1__right {
-    max-width: 320px;
+    max-width: 380px !important;
+    margin-top: 22px !important;
   }
 
   .sec-contact-1__glow {
-    width: 320px;
-    height: 240px;
-    filter: blur(45px);
+    width: 360px;
+    height: 260px;
+    filter: blur(50px);
   }
 }
+

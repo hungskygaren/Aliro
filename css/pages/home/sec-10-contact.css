@@ -190,7 +190,7 @@
 .sec-10__title--thirdeye,
 .sec-10__sub-desc--thirdeye,
 .sec-10__tagline {
-  display: none;
+  display: none !important;
 }
 
 .sec-thirdeye-7 .sec-10__tag,
@@ -212,7 +212,7 @@
 }
 
 .sec-thirdeye-7 .sec-10__tagline {
-  display: block;
+  display: block !important;
   margin-top: 26px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   font-feature-settings:

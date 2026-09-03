@@ -402,10 +402,10 @@
   .sec-contact-2 {
     background: linear-gradient(
       180deg,
-      #ffffff 0%,
-      #8eaad9 45%,
-      #2053a9 75%,
-      #01103b 100%
+      #ffffff 42.27%,
+      #8eaad9 53.61%,
+      #2053a9 61.71%,
+      #01103b 74.67%
     ) !important;
   }
 
@@ -447,8 +447,165 @@
   }
 }
 
-@media (max-width: 640px) {
+/* ==========================================================================
+   Section 2 Contact Form Mobile Rules (Standard <= 767px & Tall >= 780px)
+   ========================================================================== */
+@media (max-width: 767px) {
   .sec-contact-2 .flex-center-v {
+    padding-top: 72px;
+    padding-bottom: 16px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100dvh;
+    height: auto !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sec-contact-2__stage {
+    width: 100%;
+    max-width: 100%;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec-contact-2__left {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .sec-contact-2__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .sec-contact-2__form {
+    width: 100%;
+    max-width: 100%;
+    gap: 8px;
+  }
+
+  /* Hàng 1 & 2: 2 cột gọn gàng (Họ tên / Email, Công ty / Chức vụ) */
+  .sec-contact-2__row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 10px;
+  }
+
+  /* Hàng 3: Bung Full-Width 100% cho Area of Interest & Country */
+  .sec-contact-2__row:nth-of-type(3) {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .sec-contact-2__label {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .sec-contact-2__input,
+  .sec-contact-2__select,
+  .sec-contact-2__textarea {
+    font-size: 16px !important; /* Chống auto-zoom iOS Safari */
+    padding: 6px 10px;
+    height: 38px;
+    border-radius: 0;
+  }
+
+  .sec-contact-2__select {
+    padding-right: 32px;
+  }
+
+  .sec-contact-2__textarea {
+    min-height: 72px;
+    height: 72px;
+    padding: 6px 10px;
+    line-height: 20px;
+  }
+
+  .sec-contact-2__note {
+    font-size: 12px;
+    margin: 2px 0 3px 0;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .sec-contact-2__checkbox-wrap {
+    gap: 8px;
+    margin: 3px 0;
+    align-items: flex-start;
+  }
+
+  .sec-contact-2__checkbox {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  /* Chữ sáng trắng nổi bật trên nền gradient xanh navy tối */
+  .sec-contact-2__checkbox-label {
+    font-size: 12.5px;
+    line-height: 17px;
+    color: #ffffff !important;
+  }
+
+  .sec-contact-2__link {
+    color: var(--Light-Glow, #c5daf3) !important;
+  }
+
+  .sec-contact-2__actions {
+    margin-top: 10px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sec-contact-2__btn-submit {
+    width: 100%;
+    max-width: 260px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .sec-contact-2__direct {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .sec-contact-2__direct-label {
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .sec-contact-2__direct-email {
+    font-size: 14.5px;
+    color: #ffffff !important;
+  }
+
+  /* Ẩn hoàn toàn ảnh 3D để nhường 100% không gian thoáng cho Form */
+  .sec-contact-2__right {
+    display: none !important;
+  }
+}
+
+/* Tall Mobile Screens (iPhone 14/15/16 Pro Max, Plus, Galaxy Ultra: height >= 780px) */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-contact-2 .flex-center-v {
+    justify-content: center !important;
     padding-top: 75px;
     padding-bottom: 25px;
   }
@@ -456,18 +613,57 @@
   .sec-contact-2__title {
     font-size: 28px;
     line-height: 34px;
+    margin-bottom: 16px;
   }
 
+  .sec-contact-2__form {
+    gap: 9px;
+  }
+
+  /* Trên màn hình dài (Pro Max / Plus): bung Full-Width 1 cột toàn bộ để tận dụng chiều cao và gõ chữ thoải mái */
   .sec-contact-2__row {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 9px;
+  }
+
+  .sec-contact-2__label {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .sec-contact-2__input,
+  .sec-contact-2__select {
+    height: 42px;
+    padding: 8px 10px;
+  }
+
+  .sec-contact-2__textarea {
+    min-height: 78px;
+    height: 78px;
+    line-height: 22px;
+  }
+
+  .sec-contact-2__checkbox-label {
+    font-size: 13.5px;
+    line-height: 19px;
   }
 
   .sec-contact-2__btn-submit {
-    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    max-width: 280px;
+  }
+
+  .sec-contact-2__direct-label {
+    font-size: 13px;
+  }
+
+  .sec-contact-2__direct-email {
+    font-size: 15px;
   }
 
   .sec-contact-2__right {
-    max-width: 280px;
+    display: none !important;
   }
 }
+
