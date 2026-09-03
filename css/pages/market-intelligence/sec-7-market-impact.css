@@ -255,85 +255,20 @@
 }
 
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 660px)
    -------------------------------------------------------------------------- */
-@media (max-height: 700px) and (min-width: 992px) {
-  .sec-market-7 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
-  }
-
-  .sec-market-7__eyebrow {
-    margin-bottom: 14px;
-  }
-
-  .sec-market-7__statement {
-    margin-bottom: 18px;
-  }
-}
-
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-market-7 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
+    justify-content: center;
   }
 
   .sec-market-7__stage {
-    gap: 20px;
+    align-items: center;
   }
 
-  .sec-market-7__cards-wrap {
-    gap: 15px;
-  }
-
-  .sec-market-7__eyebrow {
-    margin-bottom: 10px;
-  }
-
-  .sec-market-7__statement {
-    margin-bottom: 14px;
-  }
-}
-
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-market-7 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 5px;
-  }
-
-  .sec-market-7__cards-wrap {
-    grid-template-columns: repeat(3, 220px);
-    gap: 12px;
-  }
-
-  .sec-market-7__card {
-    width: 220px;
-    height: 335px;
-    padding: 10px 8px 14px 8px;
-  }
-
-  .sec-market-7__card-img-box {
-    width: 200px;
-    height: 245px;
-    margin-bottom: 8px;
-  }
-
-  .sec-market-7__card-title {
-    font-size: 20px;
-    line-height: 22px;
-  }
-
-  .sec-market-7__eyebrow {
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 8px;
-  }
-
-  .sec-market-7__statement {
-    font-size: 26px;
-    line-height: 34px;
-    margin-bottom: 12px;
-    max-width: 340px;
+  .sec-market-7__cards-wrap,
+  .sec-market-7__right {
+    margin-top: 0;
   }
 }
 

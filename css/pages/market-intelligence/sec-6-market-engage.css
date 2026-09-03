@@ -174,54 +174,20 @@
 }
 
 /* --------------------------------------------------------------------------
-   Short Desktop Screen Adaptations (<= 700px, <= 660px & <= 620px)
+   Short Desktop Screen Adaptations (<= 660px)
    -------------------------------------------------------------------------- */
-@media (max-height: 700px) and (min-width: 992px) {
-  .sec-market-6 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
-  }
-
-  .sec-market-6__eyebrow {
-    margin-bottom: 18px;
-  }
-}
-
 @media (max-height: 660px) and (min-width: 992px) {
   .sec-market-6 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
+    justify-content: center;
   }
 
   .sec-market-6__stage {
-    gap: 20px;
+    align-items: center;
   }
 
-  .sec-market-6__eyebrow {
-    margin-bottom: 14px;
-  }
-}
-
-@media (max-height: 620px) and (min-width: 992px) {
-  .sec-market-6 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 5px;
-  }
-
-  .sec-market-6__eyebrow {
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 10px;
-  }
-
-  .sec-market-6__statement {
-    font-size: 32px;
-    line-height: 42px;
-    max-width: 620px;
-  }
-
+  .sec-market-6__left,
   .sec-market-6__right {
-    max-width: 420px;
+    margin-top: 0;
   }
 }
 

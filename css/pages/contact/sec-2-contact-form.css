@@ -22,8 +22,9 @@
 
 .sec-contact-2 .flex-center-v {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   padding-top: 70px; /* Standard 70px navbar compensation */
   padding-bottom: 20px;
@@ -40,7 +41,7 @@
    -------------------------------------------------------------------------- */
 .sec-contact-2__stage {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   max-width: 1170px;
@@ -51,10 +52,12 @@
 
 /* --------------------------------------------------------------------------
    Left Column: Form Container (670px)
+   Figma: Top 103px - 70px Header = 33px
    -------------------------------------------------------------------------- */
 .sec-contact-2__left {
   width: 670px;
   max-width: 670px;
+  margin-top: calc(33 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -270,11 +273,13 @@
 
 /* --------------------------------------------------------------------------
    Right Column: 3D Isometric Visual (467px x 374px)
+   Figma: Top 198px - 70px Header = 128px
    -------------------------------------------------------------------------- */
 .sec-contact-2__right {
   width: 467px;
   max-width: 467px;
   height: 374px;
+  margin-top: calc(128 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -346,6 +351,23 @@
   transition: none !important;
 }
 
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-contact-2 .flex-center-v {
+    justify-content: center;
+  }
+
+  .sec-contact-2__stage {
+    align-items: center;
+  }
+
+  .sec-contact-2__left,
+  .sec-contact-2__right {
+    margin-top: 0;
+  }
+}
 
 /* --------------------------------------------------------------------------
    Responsive Breakpoints for Width (1200px, 991px, 576px)
@@ -403,6 +425,7 @@
   .sec-contact-2__left {
     width: 100%;
     max-width: 100%;
+    margin-top: 0;
   }
 
   .sec-contact-2__form {
@@ -420,6 +443,7 @@
     max-width: 400px;
     height: auto;
     margin: 0 auto;
+    margin-top: 0;
   }
 }
 

@@ -20,8 +20,9 @@
 
 .sec-contact-1 .flex-center-v {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   padding-top: 70px; /* Standard 70px navbar compensation */
   padding-bottom: 20px;
@@ -38,7 +39,7 @@
    -------------------------------------------------------------------------- */
 .sec-contact-1__stage {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   max-width: 1170px;
@@ -49,10 +50,12 @@
 
 /* --------------------------------------------------------------------------
    Left Column: Strategic Typography (570px)
+   Figma: Top 159px - 70px Header = 89px
    -------------------------------------------------------------------------- */
 .sec-contact-1__left {
   width: 570px;
   max-width: 570px;
+  margin-top: calc(89 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -123,11 +126,13 @@
 
 /* --------------------------------------------------------------------------
    Right Column: 3D Isometric Discussion Room Visual & Ambient Light Glow
+   Figma: Top 141px - 70px Header = 71px
    -------------------------------------------------------------------------- */
 .sec-contact-1__right {
   width: 570px;
   max-width: 570px;
   height: 456px;
+  margin-top: calc(71 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -219,7 +224,23 @@
   transition: none !important;
 }
 
+/* --------------------------------------------------------------------------
+   Short Desktop Screen Adaptations (<= 660px)
+   -------------------------------------------------------------------------- */
+@media (max-height: 660px) and (min-width: 992px) {
+  .sec-contact-1 .flex-center-v {
+    justify-content: center;
+  }
 
+  .sec-contact-1__stage {
+    align-items: center;
+  }
+
+  .sec-contact-1__left,
+  .sec-contact-1__right {
+    margin-top: 0;
+  }
+}
 
 /* --------------------------------------------------------------------------
    Responsive Breakpoints for Width (1200px, 991px, 576px)
@@ -288,6 +309,7 @@
   .sec-contact-1__left {
     width: 100%;
     max-width: 100%;
+    margin-top: 0;
   }
 
   .sec-contact-1__right {
@@ -295,6 +317,7 @@
     max-width: 440px;
     height: auto;
     margin: 0 auto;
+    margin-top: 0;
   }
 
   .sec-contact-1__glow {
