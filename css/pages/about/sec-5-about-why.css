@@ -98,6 +98,10 @@
   pointer-events: none;
 }
 
+.sec-about-5__left picture {
+  display: contents;
+}
+
 .sec-about-5__graphic-img {
   width: 500px;
   height: 480px;
@@ -291,30 +295,39 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 10px !important;
-    height: auto !important;
-  }
-
-  .sec-about-5__left {
-    position: static !important;
-    width: 100% !important;
-    max-width: 420px !important;
-    height: auto !important;
-    justify-content: center !important;
-  }
-
-  .sec-about-5__graphic-img {
-    width: 100% !important;
-    max-width: 420px !important;
+    gap: 20px !important;
     height: auto !important;
   }
 
   .sec-about-5__right {
+    order: 1 !important;
     position: static !important;
     width: 100% !important;
     max-width: 600px !important;
     height: auto !important;
     justify-content: center !important;
+  }
+
+  .sec-about-5__left {
+    order: 2 !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .sec-about-5__graphic-img {
+    width: 100% !important;
+    max-width: 440px !important;
+    aspect-ratio: 1 / 1 !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
   }
 
   .sec-about-5__item {
@@ -326,32 +339,34 @@
 
 @media (max-width: 767px) {
   .sec-about-5 .container {
-    padding-top: 75px !important;
-    padding-bottom: 20px !important;
+    padding-top: 72px !important;
+    padding-bottom: 16px !important;
     padding-left: 14px !important;
     padding-right: 14px !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     min-height: 100dvh;
     box-sizing: border-box;
   }
 
   .sec-about-5__header {
-    margin-bottom: 14px !important;
+    margin-bottom: 12px !important;
   }
 
   .sec-about-5__title {
     font-size: 22px;
+    line-height: 27px;
   }
 
   .sec-about-5__main {
-    gap: 0 !important;
-  }
-
-  .sec-about-5__left {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1px !important;
+    width: 100% !important;
   }
 
   .sec-about-5__right {
+    order: 1 !important;
     width: 100% !important;
     max-width: 380px !important;
     margin: 0 auto !important;
@@ -387,25 +402,77 @@
     width: 14px !important;
     height: 14px !important;
   }
+
+  .sec-about-5__left {
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    margin: 4px auto 0 auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .sec-about-5__glow {
+    width: 120% !important;
+    height: 120% !important;
+    filter: blur(35px) !important;
+  }
+
+  .sec-about-5__graphic-img {
+    width: 100% !important;
+    max-width: 300px !important;
+    aspect-ratio: 4 / 3 !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+  }
 }
 
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-about-5 .container {
-    padding-top: 85px !important;
-    padding-bottom: 25px !important;
+    padding-top: 80px !important;
+    padding-bottom: 20px !important;
+    justify-content: center !important;
   }
 
   .sec-about-5__header {
-    margin-bottom: 20px !important;
+    margin-bottom: 16px !important;
   }
 
   .sec-about-5__title {
     font-size: 26px;
+    line-height: 32px;
+  }
+
+  .sec-about-5__main {
+    gap: 14px !important;
   }
 
   .sec-about-5__right {
     max-width: 400px !important;
+    gap: 12px !important;
+  }
+
+  .sec-about-5__item {
     gap: 14px !important;
+  }
+
+  .sec-about-5__left {
+    max-width: 350px !important;
+    margin-top: 10px !important;
+  }
+
+  .sec-about-5__graphic-img {
+    width: 100% !important;
+    max-width: 350px !important;
+    aspect-ratio: 1 / 1 !important;
+    height: auto !important;
   }
 
   .sec-about-5__icon-circle {
