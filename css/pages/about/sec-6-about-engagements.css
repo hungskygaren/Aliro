@@ -341,7 +341,8 @@
   }
 
   .sec-about-6__title {
-    font-size: 24px;
+    font-size: 26px;
+    line-height: 32px;
     margin-bottom: 14px;
     text-align: center;
   }
@@ -356,18 +357,18 @@
   }
 
   .sec-about-6__icon-circle {
-    width: 44px !important;
-    height: 44px !important;
+    width: 54px !important;
+    height: 54px !important;
   }
 
   .sec-about-6__icon-img {
-    width: 44px !important;
-    height: 44px !important;
+    width: 54px !important;
+    height: 54px !important;
   }
 
   .sec-about-6__item-text {
-    font-size: 15px !important;
-    line-height: 20px !important;
+    font-size: 16.5px !important;
+    line-height: 22px !important;
   }
 
   .sec-about-6__right {
@@ -392,13 +393,13 @@
   }
 
   .sec-about-6__stat-number {
-    font-size: 40px !important;
+    font-size: 46px !important;
     margin-bottom: 4px !important;
   }
 
   .sec-about-6__stat-label {
-    font-size: 12px !important;
-    line-height: 15px !important;
+    font-size: 13.5px !important;
+    line-height: 17px !important;
   }
 }
 
@@ -414,7 +415,8 @@
   }
 
   .sec-about-6__title {
-    font-size: 28px;
+    font-size: 30px;
+    line-height: 36px;
     margin-bottom: 16px;
   }
 
@@ -423,18 +425,18 @@
   }
 
   .sec-about-6__icon-circle {
-    width: 50px !important;
-    height: 50px !important;
+    width: 62px !important;
+    height: 62px !important;
   }
 
   .sec-about-6__icon-img {
-    width: 50px !important;
-    height: 50px !important;
+    width: 62px !important;
+    height: 62px !important;
   }
 
   .sec-about-6__item-text {
-    font-size: 16.5px !important;
-    line-height: 22px !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
   }
 
   .sec-about-6__right {
@@ -442,12 +444,12 @@
   }
 
   .sec-about-6__stat-number {
-    font-size: 46px !important;
+    font-size: 52px !important;
     margin-bottom: 6px !important;
   }
 
   .sec-about-6__stat-label {
-    font-size: 13.5px !important;
-    line-height: 17px !important;
+    font-size: 15px !important;
+    line-height: 19px !important;
   }
 }

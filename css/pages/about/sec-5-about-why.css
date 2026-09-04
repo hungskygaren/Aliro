@@ -343,7 +343,7 @@
     padding-bottom: 16px !important;
     padding-left: 14px !important;
     padding-right: 14px !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
     min-height: 100dvh;
     box-sizing: border-box;
   }
@@ -434,7 +434,7 @@
   }
 }
 
-@media (max-width: 767px) and (min-height: 780px) {
+@media (max-width: 767px) and (min-height: 850px) {
   .sec-about-5 .container {
     padding-top: 80px !important;
     padding-bottom: 20px !important;
