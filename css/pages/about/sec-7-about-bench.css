@@ -158,6 +158,14 @@
   display: block;
 }
 
+.sec-about-7__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
 .sec-about-7__name {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
@@ -250,30 +258,36 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 24px !important;
+    justify-content: center !important;
+    gap: 32px !important;
   }
 
   .sec-about-7__header {
     position: static !important;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     text-align: center;
+  }
+
+  .sec-about-7__tag {
+    color: #ffffff !important;
   }
 
   .sec-about-7__title {
     font-size: 28px;
     line-height: 34px;
+    color: #ffffff !important;
   }
 
   .sec-about-7__stage {
     position: static !important;
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 30px !important;
+    align-items: center !important;
+    gap: 32px !important;
     height: auto !important;
     width: 100% !important;
-    max-width: 760px !important;
+    max-width: 720px !important;
   }
 
   .sec-about-7__center {
@@ -282,36 +296,73 @@
 
   .sec-about-7__advisor {
     position: static !important;
-    width: 50% !important;
-    max-width: 360px !important;
+    width: 100% !important;
+    max-width: 700px !important;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
-    text-align: center !important;
+    text-align: left !important;
+    gap: 28px !important;
+    margin: 0 auto !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   .sec-about-7__avatar-wrap {
-    width: 140px !important;
-    height: 140px !important;
+    width: 175px !important;
+    height: 175px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    border: 2px solid #00e5ff !important;
+    box-shadow: 0 0 22px rgba(0, 229, 255, 0.5) !important;
+  }
+
+  .sec-about-7__info {
+    flex: 1 !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 6px !important;
   }
 
   .sec-about-7__name {
-    font-size: 20px !important;
-    line-height: 24px !important;
-    margin: 0 0 6px 0 !important;
+    font-size: 22px !important;
+    line-height: 28px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
     white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-align: left !important;
   }
 
   .sec-about-7__role {
-    font-size: 15px !important;
-    line-height: 20px !important;
-    margin: 0 0 8px 0 !important;
+    font-size: 17px !important;
+    line-height: 22px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
     white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-align: left !important;
   }
 
   .sec-about-7__bio {
-    font-size: 14px !important;
-    line-height: 20px !important;
+    font-size: 15px !important;
+    line-height: 22px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    opacity: 0.9 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
   }
 }
 
@@ -327,24 +378,26 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 10px !important;
+    gap: 16px !important;
   }
 
   .sec-about-7__header {
     position: static !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 6px !important;
     text-align: center !important;
   }
 
   .sec-about-7__tag {
     font-size: 13.5px !important;
     line-height: 17px !important;
+    color: #ffffff !important;
     margin-bottom: 3px !important;
   }
 
   .sec-about-7__title {
     font-size: 21px !important;
     line-height: 26px !important;
+    color: #ffffff !important;
     text-align: center !important;
   }
 
@@ -353,9 +406,9 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 12px !important;
+    gap: 16px !important;
     width: 100% !important;
-    max-width: 380px !important;
+    max-width: 440px !important;
     margin: 0 auto !important;
     height: auto !important;
   }
@@ -367,54 +420,80 @@
   .sec-about-7__advisor {
     position: static !important;
     width: 100% !important;
-    max-width: 360px !important;
+    max-width: 100% !important;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
-    text-align: center !important;
+    text-align: left !important;
+    gap: 14px !important;
     margin: 0 auto !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   .sec-about-7__avatar-wrap {
-    width: 135px !important;
-    height: 135px !important;
-    margin: 0 auto 10px auto !important;
+    width: 130px !important;
+    height: 130px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
     border: 1.5px solid #00e5ff !important;
     box-shadow: 0 0 18px rgba(0, 229, 255, 0.45) !important;
   }
 
+  .sec-about-7__info {
+    flex: 1 !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 4px !important;
+  }
+
   .sec-about-7__name {
-    font-size: 16px !important;
-    line-height: 20px !important;
-    margin: 0 0 2px 0 !important;
+    font-size: 18px !important;
+    line-height: 23px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
     white-space: normal !important;
-    text-align: center !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-align: left !important;
   }
 
   .sec-about-7__role {
-    font-size: 13px !important;
-    line-height: 16px !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
+    font-weight: 600 !important;
     color: #ffffff !important;
-    margin: 0 0 4px 0 !important;
+    margin: 0 !important;
     white-space: normal !important;
-    text-align: center !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-align: left !important;
   }
 
   .sec-about-7__bio {
-    font-size: 12px !important;
-    line-height: 16px !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
     opacity: 0.9 !important;
     margin: 0 !important;
-    max-width: 350px !important;
-    text-align: center !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-align: left !important;
   }
 }
 
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-about-7 .container {
-    padding-top: 85px !important;
+    padding-top: 80px !important;
     padding-bottom: 25px !important;
-    gap: 16px !important;
+    gap: 20px !important;
   }
 
   .sec-about-7__header {
@@ -424,34 +503,61 @@
   .sec-about-7__title {
     font-size: 25px !important;
     line-height: 31px !important;
+    color: #ffffff !important;
   }
 
   .sec-about-7__stage {
+    gap: 22px !important;
+    max-width: 450px !important;
+  }
+
+  .sec-about-7__advisor {
     gap: 18px !important;
-    max-width: 400px !important;
+    max-width: 100% !important;
   }
 
   .sec-about-7__avatar-wrap {
-    width: 155px !important;
-    height: 155px !important;
-    margin: 0 auto 12px auto !important;
+    width: 145px !important;
+    height: 145px !important;
+    margin: 0 !important;
+  }
+
+  .sec-about-7__info {
+    gap: 5px !important;
   }
 
   .sec-about-7__name {
-    font-size: 18px !important;
-    line-height: 22px !important;
-    margin: 0 0 3px 0 !important;
+    font-size: 20px !important;
+    line-height: 25px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
   }
 
   .sec-about-7__role {
-    font-size: 14px !important;
-    line-height: 18px !important;
-    margin: 0 0 5px 0 !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
   }
 
   .sec-about-7__bio {
-    font-size: 13px !important;
-    line-height: 18px !important;
-    max-width: 380px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    opacity: 0.9 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
   }
 }
