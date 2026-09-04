@@ -43,6 +43,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
+  border-radius: 0;
   box-shadow: 0 8px 24px rgba(1, 16, 59, 0.12);
   opacity: 0;
   transform: translateY(-20px);
@@ -289,39 +290,32 @@
   transition-delay: 1.04s;
 }
 
-.sec-phase0-2.swiper-slide-active .sec-phase0-2__banner,
 .sec-phase0-2.slide-animated .sec-phase0-2__banner {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-phase0-2.swiper-slide-active .sec-phase0-2__subtitle,
 .sec-phase0-2.slide-animated .sec-phase0-2__subtitle {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-phase0-2.swiper-slide-active .sec-phase0-2__timeline-line,
 .sec-phase0-2.slide-animated .sec-phase0-2__timeline-line {
   opacity: 1;
   transform: translateX(-50%) translateY(-50%) scaleX(1);
 }
 
-.sec-phase0-2.swiper-slide-active .sec-phase0-2__step-visual,
 .sec-phase0-2.slide-animated .sec-phase0-2__step-visual {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-.sec-phase0-2.swiper-slide-active .sec-phase0-2__badge,
 .sec-phase0-2.slide-animated .sec-phase0-2__badge {
   opacity: 1;
   transform: scale(1);
 }
 
-.sec-phase0-2.swiper-slide-active .sec-phase0-2__step-title,
 .sec-phase0-2.slide-animated .sec-phase0-2__step-title,
-.sec-phase0-2.swiper-slide-active .sec-phase0-2__step-desc,
 .sec-phase0-2.slide-animated .sec-phase0-2__step-desc {
   opacity: 1;
   transform: translateY(0);
@@ -394,105 +388,364 @@
   }
 }
 
+/* ==========================================================================
+   Responsive: Tablet Portrait / 2x2 Grid Pivot (<=1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
+  .sec-phase0-2 {
+    height: auto !important;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .sec-phase0-2 .flex-center-v {
-    padding: 75px 16px 30px;
-    justify-content: flex-start;
-    overflow-y: auto;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    min-height: 100dvh;
+    height: auto !important;
+    padding-top: 85px !important;
+    padding-bottom: 35px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
+    text-align: center !important;
+  }
+
+  .sec-phase0-2__header {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    max-width: 680px !important;
   }
 
   .sec-phase0-2__banner {
-    max-width: 100%;
-    padding: 12px 16px;
+    width: 100% !important;
+    max-width: 680px !important;
+    height: auto !important;
+    min-height: 60px !important;
+    padding: 12px 20px !important;
+    border-radius: 0 !important;
   }
 
   .sec-phase0-2__banner-title {
-    font-size: 22px;
+    font-size: 24px !important;
+    line-height: 30px !important;
   }
 
   .sec-phase0-2__subtitle {
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 18px !important;
+    line-height: 24px !important;
+    margin: 10px 0 20px 0 !important;
   }
 
   .sec-phase0-2__timeline-line {
-    display: none;
+    display: none !important;
+  }
+
+  .sec-phase0-2__grid-wrapper {
+    position: static !important;
+    width: 100% !important;
+    max-width: 680px !important;
+    margin-top: 0 !important;
   }
 
   .sec-phase0-2__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 16px;
-  }
-
-  .sec-phase0-2__step-visual {
-    height: 130px;
-  }
-
-  .sec-phase0-2__step-img {
-    max-height: 125px;
-  }
-
-  .sec-phase0-2__badge {
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-  }
-
-  .sec-phase0-2__step-title {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 6px;
-  }
-
-  .sec-phase0-2__step-desc {
-    font-size: 14px;
-    line-height: 18px;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .sec-phase0-2 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 20px;
-  }
-
-  .sec-phase0-2__banner-title {
-    font-size: 17px;
-    line-height: 1.3;
-  }
-
-  .sec-phase0-2__subtitle {
-    font-size: 16px;
-  }
-
-  .sec-phase0-2__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px 24px !important;
+    width: 100% !important;
+    max-width: 680px !important;
+    margin: 0 auto !important;
+    justify-items: center !important;
+    align-items: start !important;
   }
 
   .sec-phase0-2__step {
-    display: grid;
-    grid-template-columns: 80px 40px 1fr;
-    align-items: center;
-    text-align: left;
-    gap: 12px;
+    position: static !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
   }
 
   .sec-phase0-2__step-visual {
-    height: 80px;
-    margin-bottom: 0;
+    width: 100% !important;
+    max-width: 220px !important;
+    height: 160px !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .sec-phase0-2__step-img {
-    max-height: 75px;
+    width: 100% !important;
+    max-height: 155px !important;
+    object-fit: contain !important;
   }
 
   .sec-phase0-2__badge-wrapper {
-    margin-bottom: 0;
+    margin-top: -20px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .sec-phase0-2__badge {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 18px !important;
+  }
+
+  .sec-phase0-2__step-title {
+    font-size: 19px !important;
+    line-height: 24px !important;
+    margin-bottom: 6px !important;
   }
 
   .sec-phase0-2__step-desc {
+    font-size: 14.5px !important;
+    line-height: 20px !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Standard (<=767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-phase0-2 .flex-center-v {
+    padding-top: 75px !important;
+    padding-bottom: 25px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    justify-content: flex-start !important;
+    min-height: 100dvh;
+    height: auto !important;
+    box-sizing: border-box;
+  }
+
+  .sec-phase0-2__header {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .sec-phase0-2__banner {
+    width: 100% !important;
+    max-width: 380px !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 10px 14px !important;
+    border-radius: 0 !important;
+  }
+
+  .sec-phase0-2__banner-title {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    text-align: center !important;
+  }
+
+  .sec-phase0-2__banner-highlight {
     display: block;
+    margin-top: 2px;
+  }
+
+  .sec-phase0-2__subtitle {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin: 8px 0 14px 0 !important;
+    text-align: center !important;
+  }
+
+  .sec-phase0-2__timeline-line {
+    display: none !important;
+  }
+
+  .sec-phase0-2__grid-wrapper {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-phase0-2__grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px 12px !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    justify-items: center !important;
+    align-items: start !important;
+  }
+
+  .sec-phase0-2__step {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 180px !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-phase0-2__step-visual {
+    width: 100% !important;
+    max-width: 130px !important;
+    height: 95px !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .sec-phase0-2__step-img {
+    width: 100% !important;
+    max-height: 90px !important;
+    object-fit: contain !important;
+  }
+
+  .sec-phase0-2__badge-wrapper {
+    margin-top: -14px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-phase0-2__badge {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+  }
+
+  .sec-phase0-2__step-title {
+    font-size: 14.5px !important;
+    line-height: 19px !important;
+    margin-bottom: 4px !important;
+    letter-spacing: 0.3px;
+  }
+
+  .sec-phase0-2__step-desc {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    max-width: 170px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Short Mobile Screens (<=700px height on mobile)
+   ========================================================================== */
+@media (max-height: 700px) and (max-width: 767px) {
+  .sec-phase0-2 .flex-center-v {
+    padding-top: 68px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .sec-phase0-2__banner {
+    padding: 8px 12px !important;
+  }
+
+  .sec-phase0-2__banner-title {
+    font-size: 14.5px !important;
+    line-height: 19px !important;
+  }
+
+  .sec-phase0-2__subtitle {
+    font-size: 13px !important;
+    line-height: 16px !important;
+    margin: 6px 0 10px 0 !important;
+  }
+
+  .sec-phase0-2__grid {
+    gap: 10px 8px !important;
+  }
+
+  .sec-phase0-2__step-visual {
+    height: 75px !important;
+    max-width: 110px !important;
+  }
+
+  .sec-phase0-2__step-img {
+    max-height: 70px !important;
+  }
+
+  .sec-phase0-2__badge-wrapper {
+    margin-top: -12px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-phase0-2__badge {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 12px !important;
+  }
+
+  .sec-phase0-2__step-title {
+    font-size: 13.5px !important;
+    line-height: 17px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-phase0-2__step-desc {
+    font-size: 11px !important;
+    line-height: 14px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (<=767px width & >=780px height)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-phase0-2 .flex-center-v {
+    padding-top: 85px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .sec-phase0-2__banner-title {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+
+  .sec-phase0-2__subtitle {
+    font-size: 15px !important;
+    line-height: 20px !important;
+    margin: 10px 0 18px 0 !important;
+  }
+
+  .sec-phase0-2__grid {
+    gap: 22px 14px !important;
+    max-width: 400px !important;
+  }
+
+  .sec-phase0-2__step-visual {
+    height: 115px !important;
+    max-width: 150px !important;
+  }
+
+  .sec-phase0-2__step-img {
+    max-height: 110px !important;
+  }
+
+  .sec-phase0-2__badge {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 15px !important;
+  }
+
+  .sec-phase0-2__step-title {
+    font-size: 16px !important;
+    line-height: 21px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-phase0-2__step-desc {
+    font-size: 12.5px !important;
+    line-height: 17px !important;
+    max-width: 185px !important;
   }
 }

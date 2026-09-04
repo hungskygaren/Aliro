@@ -65,6 +65,19 @@
     "clig" off;
 }
 
+.sec-about-4__desc {
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 10px auto 0 auto;
+  text-align: center;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
 .sec-about-4__matrix-wrapper {
   width: 100%;
   max-width: 1170px;
@@ -300,6 +313,12 @@ span.sec-about-4__service-arrow {
     line-height: 32px;
   }
 
+  .sec-about-4__desc {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+  }
+
   .sec-about-4__matrix-wrapper {
     overflow-x: auto !important;
     overflow-y: auto !important;
@@ -340,6 +359,13 @@ span.sec-about-4__service-arrow {
   .sec-about-4__title {
     font-size: 21px;
     line-height: 26px;
+    text-align: center !important;
+  }
+
+  .sec-about-4__desc {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 6px;
     text-align: center !important;
   }
 

@@ -76,6 +76,7 @@
   line-height: 50px; 
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
+  letter-spacing: -0.5px;
   margin: 0 0 18px 0; 
   max-width: 570px;
   font-feature-settings:
@@ -87,7 +88,7 @@
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
   font-weight: 700;
-  line-height: 28px; 
+  line-height: 30px; 
   color: var(--Secondary-Deep-Blue, #011b7f);
   margin-bottom: 20px;
   font-feature-settings:
@@ -96,6 +97,7 @@
 }
 
 .sec-about-1__desc {
+  display: none;
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-weight: 600;
