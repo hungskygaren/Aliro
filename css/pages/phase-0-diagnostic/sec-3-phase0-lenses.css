@@ -206,12 +206,15 @@
 }
 
 .sec-phase0-3__card-desc {
+  color: var(--White, #ffffff);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: Aptos, var(--font-brand);
-  font-size: 18px;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 600;
-  line-height: 22px;
-  color: #ffffff;
-  opacity: 0.9;
+  line-height: normal;
   margin: 0;
 }
 
