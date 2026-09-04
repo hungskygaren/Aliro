@@ -142,17 +142,22 @@
 }
 
 .sec-market-4__card-desc {
-  font-family: Aptos, var(--font-brand);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
   color: var(--Midnight-Navy, #01103b);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  /* Body text 2 */
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   margin: 0;
 }
 
 .sec-market-4__card-highlight {
   font-family: Aptos, var(--font-brand);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--Primary-Highlight-Blue, #0431b1);
 }
@@ -248,12 +253,12 @@
   }
 
   .sec-market-4__card-desc {
-    font-size: 17px;
-    line-height: 23px;
+    font-size: 15px;
+    line-height: normal;
   }
 
   .sec-market-4__card-highlight {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 
@@ -296,12 +301,12 @@
   }
 
   .sec-market-4__card-desc {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: normal;
   }
 
   .sec-market-4__card-highlight {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .sec-market-4__right {

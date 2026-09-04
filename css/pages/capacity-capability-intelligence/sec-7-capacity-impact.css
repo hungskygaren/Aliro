@@ -140,16 +140,17 @@
 }
 
 .sec-capacity-7__statement {
-  font-family: Aptos, var(--font-brand);
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 38px;
   color: var(--Midnight-Navy, #01103b);
-  margin: 0 0 35px 0;
-  letter-spacing: 0px;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0 0 35px 0;
+  letter-spacing: 0px;
   opacity: 0;
   transform: translateX(35px);
   transition:
@@ -226,13 +227,13 @@
 
 @media (max-width: 1200px) {
   .sec-capacity-7__cards-wrap {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 250px);
     gap: 12px;
   }
 
   .sec-capacity-7__card {
-    width: 200px;
-    height: 320px;
+    width: 250px;
+    height: 350px;
   }
 
   .sec-capacity-7__card-img-box {
@@ -250,7 +251,7 @@
   }
 
   .sec-capacity-7__statement {
-    font-size: 26px;
+    font-size: 21px;
     line-height: 34px;
   }
 }

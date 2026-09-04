@@ -44,8 +44,8 @@
 }
 
 .sec-digital-4__left {
-  width: 580px;
-  max-width: 580px;
+  width: 590px;
+  max-width: 590px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,8 @@
 
 .sec-digital-4__cards {
   display: grid;
-  grid-template-columns: 280px 290px;
+  grid-template-columns: repeat(2, 290px);
+  grid-template-rows: 155px 165px 150px;
   gap: 10px;
   width: 100%;
 }
@@ -86,7 +87,7 @@
   border-radius: 0px;
   padding: 10px 14px 15px 14px;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -129,24 +130,30 @@
 }
 
 .sec-digital-4__card-title {
-  font-family: Aptos, var(--font-brand);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
   color: var(--Midnight-Navy, #01103b);
-  margin: 0 0 4px 0;
-  letter-spacing: 0px;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 4px 0;
+  letter-spacing: 0px;
 }
 
 .sec-digital-4__card-desc {
-  font-family: Aptos, var(--font-brand);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
   color: var(--Midnight-Navy, #01103b);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  /* Body text 2 */
+  font-family: Aptos, var(--font-brand);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   margin: 0;
 }
 
@@ -223,6 +230,7 @@
 
   .sec-digital-4__cards {
     gap: 8px;
+    grid-template-rows: auto;
   }
 
   .sec-digital-4__card-num {
@@ -232,14 +240,14 @@
   }
 
   .sec-digital-4__card-title {
-    font-size: 19px;
-    line-height: 23px;
+    font-size: 17px;
+    line-height: 22px;
     margin-bottom: 2px;
   }
 
   .sec-digital-4__card-desc {
-    font-size: 17px;
-    line-height: 23px;
+    font-size: 15px;
+    line-height: normal;
   }
 }
 
@@ -262,6 +270,7 @@
 
   .sec-digital-4__cards {
     gap: 8px;
+    grid-template-rows: auto;
   }
 
   .sec-digital-4__card {
@@ -276,14 +285,14 @@
   }
 
   .sec-digital-4__card-title {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 20px;
     margin-bottom: 2px;
   }
 
   .sec-digital-4__card-desc {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: normal;
   }
 
   .sec-digital-4__right {

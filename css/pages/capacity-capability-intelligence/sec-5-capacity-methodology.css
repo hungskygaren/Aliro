@@ -177,7 +177,9 @@
   line-height: 24px;
   color: #ffffff;
   margin: 0 0 16px 0;
-  white-space: nowrap;
+  width: max-content;
+  max-width: 371px;
+  text-align: center;
   opacity: 0;
   transform: translateY(20px);
   transition:

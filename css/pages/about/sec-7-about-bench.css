@@ -253,7 +253,7 @@
 
   .sec-about-7 .container {
     height: auto !important;
-    padding-top: 85px !important;
+    padding-top: 5px !important;
     padding-bottom: 40px !important;
     display: flex !important;
     flex-direction: column !important;

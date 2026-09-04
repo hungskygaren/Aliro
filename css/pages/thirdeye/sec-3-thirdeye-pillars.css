@@ -33,7 +33,7 @@
   padding-top: 70px;
   padding-bottom: 20px;
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -70,9 +70,11 @@
 .sec-thirdeye-3__diagram-wrapper {
   position: relative;
   width: 100%;
-  max-width: 905px;
-  height: 445px;
+  max-width: 997px;
+  height: 466px;
   margin-top: 20px;
+  align-self: flex-start;
+  margin-left: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,8 +105,8 @@
 .sec-thirdeye-3__diagram-img {
   width: 100%;
   height: 100%;
-  max-width: 905px;
-  aspect-ratio: 905 / 445;
+  max-width: 997px;
+  aspect-ratio: 997 / 466;
   object-fit: contain;
   display: block;
   position: relative;
@@ -143,8 +145,9 @@
 
   .sec-thirdeye-3__diagram-wrapper {
     margin-top: 10px;
-    max-width: calc(905px * 0.95);
+    max-width: calc(997px * 0.95);
     height: auto;
+    aspect-ratio: 997 / 466;
   }
 }
 
@@ -156,7 +159,9 @@
   .sec-thirdeye-3__diagram-wrapper {
     max-width: 800px;
     height: auto;
-    aspect-ratio: 905 / 445;
+    aspect-ratio: 997 / 466;
+    align-self: center;
+    margin-left: 0;
   }
 }
 
@@ -182,7 +187,9 @@
     width: 100%;
     max-width: 600px;
     height: auto;
-    aspect-ratio: 905 / 445;
+    aspect-ratio: 997 / 466;
+    align-self: center;
+    margin-left: 0;
   }
 }
 
@@ -199,6 +206,6 @@
 
   .sec-thirdeye-3__diagram-wrapper {
     max-width: 100%;
-    aspect-ratio: 905 / 445;
+    aspect-ratio: 997 / 466;
   }
 }

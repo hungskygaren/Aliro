@@ -94,16 +94,17 @@
 }
 
 .sec-phase0-1__desc {
-  font-family: Aptos, var(--font-brand);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 25px;
   color: var(--Midnight-Navy, #01103b);
-  margin: 0 0 28px 0;
-  max-width: 470px;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0 0 28px 0;
+  max-width: 470px;
 }
 
 .sec-phase0-1__btn-wrapper {
