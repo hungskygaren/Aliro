@@ -267,89 +267,320 @@
   }
 }
 
+/* ==========================================================================
+   Responsive: Tablet Portrait / 2x2 Grid Pivot (<=1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-phase0-5 .flex-center-v {
-    padding-top: 75px;
-    padding-bottom: 25px;
-    justify-content: flex-start;
-    overflow-y: auto;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding-top: 85px !important;
+    padding-bottom: 30px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
+    text-align: center !important;
   }
 
-  .sec-phase0-5__stage {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: static;
-  }
-
-  .sec-phase0-5__center-wrapper {
-    position: static;
-    width: 160px;
-    height: 130px;
-    margin-bottom: 20px;
-  }
-
-  .sec-phase0-5__cards-container {
-    position: static;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    width: 100%;
-  }
-
-  .sec-phase0-5__card {
-    position: static;
-    width: 100%;
-    height: auto;
-    min-height: 150px;
-    transform: translateY(20px);
-  }
-}
-
-@media (max-width: 576px) {
-  .sec-phase0-5 .flex-center-v {
-    padding-top: 65px;
-    padding-bottom: 20px;
+  .sec-phase0-5__header {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 680px !important;
   }
 
   .sec-phase0-5__title {
-    font-size: 22px;
-    margin-bottom: 12px;
+    font-size: 28px !important;
+    line-height: 34px !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .sec-phase0-5__stage {
+    position: relative !important;
+    height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 680px !important;
+    margin: 0 auto !important;
   }
 
   .sec-phase0-5__center-wrapper {
-    width: 120px;
-    height: 100px;
-    margin-bottom: 14px;
+    display: none !important;
   }
 
   .sec-phase0-5__cards-container {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    position: static !important;
+    inset: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px 20px !important;
+    width: 100% !important;
+    max-width: 680px !important;
+    margin: 0 auto !important;
+    height: auto !important;
+    pointer-events: auto !important;
   }
 
   .sec-phase0-5__card {
-    padding: 12px 14px;
-    gap: 12px;
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 140px !important;
+    border-radius: 0 !important;
+    padding: 14px 16px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 14px !important;
+    box-sizing: border-box !important;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .sec-phase0-5.slide-animated .sec-phase0-5__card,
+  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  .sec-phase0-5.slide-animated .sec-phase0-5__card--top-left,
+  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card--top-left {
+    transition-delay: 0.12s;
+  }
+  .sec-phase0-5.slide-animated .sec-phase0-5__card--top-right,
+  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card--top-right {
+    transition-delay: 0.19s;
+  }
+  .sec-phase0-5.slide-animated .sec-phase0-5__card--bottom-left,
+  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card--bottom-left {
+    transition-delay: 0.26s;
+  }
+  .sec-phase0-5.slide-animated .sec-phase0-5__card--bottom-right,
+  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card--bottom-right {
+    transition-delay: 0.33s;
+  }
+
+  .sec-phase0-5.visited .sec-phase0-5__card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
   .sec-phase0-5__card-visual {
-    width: 80px;
-    height: 90px;
+    width: 90px !important;
+    height: 105px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .sec-phase0-5__card-img {
-    max-height: 85px;
+    width: 100% !important;
+    max-height: 100px !important;
+    object-fit: contain !important;
+  }
+
+  .sec-phase0-5__card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    flex: 1 !important;
+    max-width: 100% !important;
+    text-align: left !important;
   }
 
   .sec-phase0-5__card-title {
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 17px !important;
+    line-height: 22px !important;
+    margin: 0 0 5px 0 !important;
+    text-align: left !important;
   }
 
   .sec-phase0-5__card-desc {
-    font-size: 13px;
-    line-height: 17px;
+    font-size: 13.5px !important;
+    line-height: 18px !important;
+    text-align: left !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Standard (<=767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-phase0-5 .flex-center-v {
+    padding-top: 68px !important;
+    padding-bottom: 16px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    box-sizing: border-box;
+    text-align: center !important;
+  }
+
+  .sec-phase0-5__header {
+    width: 100% !important;
+    max-width: 440px !important;
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
+    text-align: center !important;
+  }
+
+  .sec-phase0-5__title {
+    font-size: 22px !important;
+    line-height: 28px !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .sec-phase0-5__stage {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .sec-phase0-5__center-wrapper {
+    display: none !important;
+  }
+
+  .sec-phase0-5__cards-container {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px 12px !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-phase0-5__card {
+    padding: 12px 10px 14px 10px !important;
+    min-height: 145px !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(126, 147, 168, 0.5) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+    box-shadow: 0 4px 14px rgba(1, 16, 59, 0.05) !important;
+  }
+
+  .sec-phase0-5__card-visual {
+    width: 100% !important;
+    max-width: 75px !important;
+    height: 55px !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .sec-phase0-5__card-img {
+    width: 100% !important;
+    max-height: 52px !important;
+    object-fit: contain !important;
+  }
+
+  .sec-phase0-5__card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .sec-phase0-5__card-title {
+    font-size: 13.5px !important;
+    line-height: 17px !important;
+    margin: 0 0 4px 0 !important;
+    letter-spacing: 0.2px !important;
+    text-align: center !important;
+  }
+
+  .sec-phase0-5__card-desc {
+    font-size: 11.5px !important;
+    line-height: 15px !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (<=767px width & >=780px height)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-phase0-5 .flex-center-v {
+    padding-top: 85px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .sec-phase0-5__header {
+    margin-bottom: 20px !important;
+    max-width: 460px !important;
+  }
+
+  .sec-phase0-5__title {
+    font-size: 26px !important;
+    line-height: 32px !important;
+  }
+
+  .sec-phase0-5__cards-container {
+    gap: 16px 16px !important;
+    max-width: 460px !important;
+  }
+
+  .sec-phase0-5__card {
+    padding: 16px 14px 18px 14px !important;
+    min-height: 175px !important;
+    gap: 10px !important;
+  }
+
+  .sec-phase0-5__card-visual {
+    max-width: 95px !important;
+    height: 75px !important;
+  }
+
+  .sec-phase0-5__card-img {
+    max-height: 72px !important;
+  }
+
+  .sec-phase0-5__card-title {
+    font-size: 15px !important;
+    line-height: 19px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-phase0-5__card-desc {
+    font-size: 13px !important;
+    line-height: 17.5px !important;
   }
 }

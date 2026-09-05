@@ -207,7 +207,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const initialTargetIndex = hashToSlideIndex(window.location.hash);
 
-  const swiper = new Swiper(".main-swiper", {
+  let swiper = null;
+  if (swiperEl) {
+    swiper = new Swiper(".main-swiper", {
     direction: "vertical",
     initialSlide: initialTargetIndex,
     slidesPerView: 1,
@@ -293,6 +295,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       },
     },
   });
+  }
 
   function triggerCounterAnimations(container) {
     if (!container) return;
@@ -390,6 +393,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function smartSlideTo(targetIndex) {
+    if (!swiper) return;
     if (targetIndex < 0 || targetIndex >= sectionIds.length) return;
     swiper.slideTo(targetIndex, 750);
   }
@@ -406,7 +410,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     !document.body.classList.contains("page-phase-0") &&
     !document.body.classList.contains("page-thirdeye") &&
     !document.body.classList.contains("page-market-intelligence") &&
-    !document.body.classList.contains("page-contact");
+    !document.body.classList.contains("page-contact") &&
+    !document.body.classList.contains("page-privacy-terms");
 
   const allNavLinks = document.querySelectorAll('a[href*="#"]');
   allNavLinks.forEach((link) => {
@@ -414,14 +419,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       const href = link.getAttribute("href");
       if (!href) return;
 
-      if (href.startsWith("#")) {
+      if (swiper && href.startsWith("#")) {
         const hash = href.replace("#", "");
         const targetIdx = sectionIds.indexOf(hash);
         if (targetIdx !== -1) {
           e.preventDefault();
           smartSlideTo(targetIdx);
         }
-      } else if (href.startsWith("index.html#") && isHomePage) {
+      } else if (swiper && href.startsWith("index.html#") && isHomePage) {
         const hash = href.replace("index.html#", "");
         const targetIdx = sectionIds.indexOf(hash);
         if (targetIdx !== -1) {
@@ -433,6 +438,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   window.addEventListener("hashchange", () => {
+    if (!swiper) return;
     const targetIdx = hashToSlideIndex(window.location.hash);
     if (targetIdx !== swiper.activeIndex) {
       const wrapper = document.querySelector(".swiper-wrapper");

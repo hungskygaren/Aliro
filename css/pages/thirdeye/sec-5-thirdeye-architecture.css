@@ -447,72 +447,286 @@
   }
 }
 
-@media (max-width: 1050px) {
-  .sec-thirdeye-5__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 900px;
-  }
-  .sec-thirdeye-5__option {
-    width: 100%;
-    height: auto;
-  }
-  .sec-thirdeye-5__connector {
-    display: none;
-  }
-}
-
+/* ==========================================================================
+   Responsive: Tablet (<=1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-thirdeye-5 .flex-center-v {
-    padding-top: 85px;
-    padding-bottom: 40px;
-    justify-content: flex-start;
-    overflow-y: auto;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    padding-top: 75px !important;
+    padding-bottom: 25px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .sec-thirdeye-5__header {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
   }
 
   .sec-thirdeye-5__title {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 28px !important;
+    line-height: 34px !important;
   }
 
   .sec-thirdeye-5__grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 470px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 760px !important;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
   }
 
   .sec-thirdeye-5__option {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .sec-thirdeye-5 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 20px;
-  }
-
-  .sec-thirdeye-5__title {
-    font-size: 22px;
-    line-height: 28px;
+    width: calc(50% - 10px) !important;
+    max-width: 360px !important;
+    padding: 16px 14px !important;
+    flex-shrink: 0 !important;
   }
 
   .sec-thirdeye-5__visual {
-    height: 140px;
+    height: 140px !important;
+  }
+
+  .sec-thirdeye-5__img {
+    max-height: 130px !important;
+    width: auto !important;
+  }
+
+  .sec-thirdeye-5__badge-wrapper {
+    height: 34px !important;
+    margin-top: -24px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .sec-thirdeye-5__badge {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 16px !important;
+  }
+
+  .sec-thirdeye-5__connector {
+    display: none !important;
+  }
+
+  .sec-thirdeye-5__tag {
+    font-size: 13px !important;
+    line-height: 16px !important;
+    margin-bottom: 6px !important;
   }
 
   .sec-thirdeye-5__opt-title {
-    font-size: 20px;
+    font-size: 17px !important;
+    line-height: 21px !important;
+    margin-bottom: 6px !important;
   }
 
   .sec-thirdeye-5__opt-desc {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 13px !important;
+    line-height: 17px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .sec-thirdeye-5__btn {
+    padding: 6px 14px !important;
+    font-size: 11px !important;
+  }
+
+  .sec-thirdeye-5__glow {
+    width: 450px !important;
+    height: 450px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Standard (<=767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-thirdeye-5 .flex-center-v {
+    padding-top: 68px !important;
+    padding-bottom: 16px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .sec-thirdeye-5__header {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .sec-thirdeye-5__title {
+    font-size: 18px !important;
+    line-height: 23px !important;
+    text-align: center !important;
+  }
+
+  .sec-thirdeye-5__grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 350px !important;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .sec-thirdeye-5__option {
+    width: 100% !important;
+    max-width: 350px !important;
+    padding: 8px 12px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .sec-thirdeye-5__visual {
+    height: 52px !important;
+  }
+
+  .sec-thirdeye-5__img {
+    max-height: 50px !important;
+    width: auto !important;
+  }
+
+  .sec-thirdeye-5__badge-wrapper {
+    height: 22px !important;
+    margin-top: -11px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-thirdeye-5__badge {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 11px !important;
+  }
+
+  .sec-thirdeye-5__connector {
+    display: none !important;
+  }
+
+  .sec-thirdeye-5__tag {
+    font-size: 10.5px !important;
+    line-height: 13px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-thirdeye-5__opt-title {
+    font-size: 12px !important;
+    line-height: 15px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-thirdeye-5__opt-desc {
+    font-size: 10.5px !important;
+    line-height: 14px !important;
+    margin-bottom: 6px !important;
+    max-width: 100% !important;
+  }
+
+  .sec-thirdeye-5__btn {
+    padding: 5px 10px !important;
+    font-size: 10px !important;
+    line-height: 13px !important;
+  }
+
+  .sec-thirdeye-5__glow {
+    width: 260px !important;
+    height: 260px !important;
+    filter: blur(60px) !important;
+    opacity: 0.6 !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (<=767px width & >=780px height)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-thirdeye-5 .flex-center-v {
+    padding-top: 80px !important;
+    padding-bottom: 24px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .sec-thirdeye-5__header {
+    margin-bottom: 16px !important;
+  }
+
+  .sec-thirdeye-5__title {
+    font-size: 20px !important;
+    line-height: 25px !important;
+  }
+
+  .sec-thirdeye-5__grid {
+    gap: 14px !important;
+    max-width: 380px !important;
+  }
+
+  .sec-thirdeye-5__option {
+    max-width: 380px !important;
+    padding: 10px 14px !important;
+  }
+
+  .sec-thirdeye-5__visual {
+    height: 65px !important;
+  }
+
+  .sec-thirdeye-5__img {
+    max-height: 62px !important;
+  }
+
+  .sec-thirdeye-5__badge-wrapper {
+    height: 24px !important;
+    margin-top: -12px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-thirdeye-5__badge {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 12px !important;
+  }
+
+  .sec-thirdeye-5__tag {
+    font-size: 11px !important;
+    line-height: 14px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-thirdeye-5__opt-title {
+    font-size: 13px !important;
+    line-height: 16px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-thirdeye-5__opt-desc {
+    font-size: 11px !important;
+    line-height: 15px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .sec-thirdeye-5__btn {
+    padding: 6px 12px !important;
+    font-size: 10.5px !important;
+  }
+
+  .sec-thirdeye-5__glow {
+    width: 300px !important;
+    height: 300px !important;
   }
 }

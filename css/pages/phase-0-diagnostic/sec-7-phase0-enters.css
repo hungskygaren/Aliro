@@ -157,64 +157,157 @@
   }
 }
 
+/* ==========================================================================
+   Responsive: Tablet Portrait / Stacked Layout (<=1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-phase0-7 .flex-center-v {
-    padding-top: 80px;
-    padding-bottom: 40px;
-    justify-content: flex-start;
-    overflow-y: auto;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    padding-top: 80px !important;
+    padding-bottom: 30px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
   }
 
   .sec-phase0-7__grid {
-    display: flex;
-    flex-direction: column-reverse;
-    height: auto;
-    position: static;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    gap: 24px !important;
   }
 
   .sec-phase0-7__right {
-    position: static;
-    width: 100%;
-    max-width: 100%;
-    margin-top: 0;
-    margin-bottom: 24px;
-    text-align: left;
-  }
-
-  .sec-phase0-7__text {
-    font-size: 22px;
-    line-height: 30px;
-    max-width: 100%;
-  }
-
-  .sec-phase0-7__left {
-    position: static;
-    width: 100%;
-    max-width: 480px;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .sec-phase0-7 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 25px;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    text-align: left !important;
   }
 
   .sec-phase0-7__tag {
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 12px;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    margin-bottom: 14px !important;
   }
 
   .sec-phase0-7__text {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 22px !important;
+    line-height: 30px !important;
+    max-width: 100% !important;
   }
 
   .sec-phase0-7__left {
-    max-width: 320px;
+    position: static !important;
+    width: 100% !important;
+    max-width: 460px !important;
+    margin-top: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .sec-phase0-7__img {
+    max-width: 460px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Standard (<=767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-phase0-7 .flex-center-v {
+    padding-top: 68px !important;
+    padding-bottom: 16px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .sec-phase0-7__grid {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    gap: 20px !important;
+  }
+
+  .sec-phase0-7__right {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+  }
+
+  .sec-phase0-7__tag {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin-bottom: 10px !important;
+    letter-spacing: 0.4px !important;
+  }
+
+  .sec-phase0-7__text {
+    font-size: 18px !important;
+    line-height: 25px !important;
+    max-width: 100% !important;
+  }
+
+  .sec-phase0-7__left {
+    position: static !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin-top: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .sec-phase0-7__img {
+    max-width: 340px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Tall Phones (>=780px height + <=767px width)
+   ========================================================================== */
+@media (min-height: 780px) and (max-width: 767px) {
+  .sec-phase0-7__grid {
+    gap: 28px !important;
+  }
+
+  .sec-phase0-7__tag {
+    font-size: 17px !important;
+    line-height: 22px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .sec-phase0-7__text {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+
+  .sec-phase0-7__left {
+    max-width: 360px !important;
+  }
+
+  .sec-phase0-7__img {
+    max-width: 360px !important;
   }
 }

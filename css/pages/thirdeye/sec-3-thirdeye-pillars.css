@@ -113,6 +113,11 @@
   z-index: 2;
 }
 
+.sec-thirdeye-3__diagram-img--mobile,
+.sec-thirdeye-3__domains {
+  display: none;
+}
+
 .sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__header,
 .sec-thirdeye-3.slide-animated .sec-thirdeye-3__header {
   opacity: 1;
@@ -125,8 +130,15 @@
   transform: translateY(0) scale(1);
 }
 
+.sec-thirdeye-3.swiper-slide-active .sec-thirdeye-3__domains,
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__domains {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .sec-thirdeye-3.visited .sec-thirdeye-3__header,
-.sec-thirdeye-3.visited .sec-thirdeye-3__diagram-wrapper {
+.sec-thirdeye-3.visited .sec-thirdeye-3__diagram-wrapper,
+.sec-thirdeye-3.visited .sec-thirdeye-3__domains {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
@@ -165,47 +177,244 @@
   }
 }
 
+/* ==========================================================================
+   Responsive: Tablet (<=1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-thirdeye-3 .flex-center-v {
-    padding-top: 85px;
-    padding-bottom: 40px;
-    justify-content: flex-start;
-    overflow-y: auto;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    padding-top: 75px !important;
+    padding-bottom: 25px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .sec-thirdeye-3__header {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
   }
 
   .sec-thirdeye-3__title {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 28px !important;
+    line-height: 34px !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
   }
 
   .sec-thirdeye-3__diagram-wrapper {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    aspect-ratio: 997 / 466;
-    align-self: center;
-    margin-left: 0;
+    width: 100% !important;
+    max-width: 680px !important;
+    height: auto !important;
+    aspect-ratio: 997 / 466 !important;
+    align-self: center !important;
+    margin-left: 0 !important;
+    margin-top: 10px !important;
+  }
+
+  .sec-thirdeye-3__glow {
+    width: 400px !important;
+    height: 400px !important;
   }
 }
 
-@media (max-width: 576px) {
+/* ==========================================================================
+   Responsive: Mobile Standard (<=767px)
+   ========================================================================== */
+@media (max-width: 767px) {
   .sec-thirdeye-3 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 20px;
+    padding-top: 68px !important;
+    padding-bottom: 20px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .sec-thirdeye-3__header {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
   }
 
   .sec-thirdeye-3__title {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 18px !important;
+    line-height: 23px !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .sec-thirdeye-3__diagram-img--desktop {
+    display: none !important;
+  }
+
+  .sec-thirdeye-3__diagram-img--mobile {
+    display: block !important;
+    width: 100% !important;
+    max-width: 290px !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    margin: 0 auto !important;
+    filter: drop-shadow(0 0 18px rgba(34, 108, 180, 0.5)) !important;
   }
 
   .sec-thirdeye-3__diagram-wrapper {
-    max-width: 100%;
-    aspect-ratio: 997 / 466;
+    width: 100% !important;
+    max-width: 290px !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    align-self: center !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .sec-thirdeye-3__glow {
+    width: 240px !important;
+    height: 240px !important;
+    filter: blur(55px) !important;
+    opacity: 0.6 !important;
+  }
+
+  .sec-thirdeye-3__domains {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px 8px !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    z-index: 4 !important;
+  }
+
+  .sec-thirdeye-3__domain-chip {
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    padding: 6px 10px !important;
+    background: rgba(30, 85, 179, 0.2) !important;
+    border: 1px solid rgba(142, 170, 217, 0.35) !important;
+    border-radius: 6px !important;
+    backdrop-filter: blur(8px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .sec-thirdeye-3__domain-chip--full {
+    grid-column: 1 / -1 !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 3px !important;
+    padding: 7px 11px !important;
+    background: rgba(234, 169, 54, 0.12) !important;
+    border-color: rgba(234, 169, 54, 0.45) !important;
+  }
+
+  .sec-thirdeye-3__domain-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    width: 100% !important;
+  }
+
+  .sec-thirdeye-3__domain-dot {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    background-color: #5ea4f8 !important;
+    box-shadow: 0 0 6px #5ea4f8 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .sec-thirdeye-3__domain-dot--gold {
+    background-color: #eaa936 !important;
+    box-shadow: 0 0 6px #eaa936 !important;
+  }
+
+  .sec-thirdeye-3__domain-name {
+    font-family: Aptos, var(--font-brand) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 14px !important;
+    color: #ffffff !important;
+    letter-spacing: 0.4px !important;
+  }
+
+  .sec-thirdeye-3__domain-name--gold {
+    color: #eaa936 !important;
+  }
+
+  .sec-thirdeye-3__domain-desc {
+    font-family: Aptos, var(--font-brand) !important;
+    font-size: 10.5px !important;
+    line-height: 14px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (<=767px width & >=780px height)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-thirdeye-3 .flex-center-v {
+    padding-top: 80px !important;
+    padding-bottom: 28px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .sec-thirdeye-3__header {
+    margin-bottom: 16px !important;
+  }
+
+  .sec-thirdeye-3__title {
+    font-size: 20px !important;
+    line-height: 25px !important;
+    max-width: 350px !important;
+  }
+
+  .sec-thirdeye-3__diagram-img--mobile {
+    max-width: 330px !important;
+  }
+
+  .sec-thirdeye-3__diagram-wrapper {
+    max-width: 330px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .sec-thirdeye-3__domains {
+    gap: 7px 10px !important;
+    max-width: 410px !important;
+  }
+
+  .sec-thirdeye-3__domain-chip {
+    padding: 7px 11px !important;
+  }
+
+  .sec-thirdeye-3__domain-chip--full {
+    padding: 8px 12px !important;
+  }
+
+  .sec-thirdeye-3__domain-name {
+    font-size: 12px !important;
+  }
+
+  .sec-thirdeye-3__domain-desc {
+    font-size: 11px !important;
+    line-height: 15px !important;
+  }
+
+  .sec-thirdeye-3__glow {
+    width: 270px !important;
+    height: 270px !important;
   }
 }

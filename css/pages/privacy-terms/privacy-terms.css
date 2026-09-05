@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Privacy Notice & Website Terms of Use Page Styles
+   Figma Node: 5122-2762 (10-Privacy-Terms)
+   ========================================================================== */
+
+@import "../home/sec-10-contact.css";
+
+/* --- Page & Scroll Container Overrides --- */
+html:has(body.page-privacy-terms),
+body.page-privacy-terms {
+  width: 100%;
+  height: auto !important;
+  min-height: 100vh;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  background-color: #ffffff !important;
+  color: var(--Midnight-Navy, #01103b);
+  scroll-behavior: smooth;
+}
+
+/* Header adjustments for static page */
+body.page-privacy-terms .navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #01103b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Hero & Title Section --- */
+.sec-pt-main {
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 145px; /* Offset to match Figma top: 145px */
+  padding-bottom: 80px;
+}
+
+.sec-pt__hero {
+  text-align: center;
+  margin-bottom: 56px; /* Gap between Title bottom (245px) and Content top (301px) in Figma */
+  padding: 0;
+}
+
+.sec-pt__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 50px;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin: 0 auto;
+  max-width: 970px;
+  letter-spacing: -0.5px;
+}
+
+/* --- Content Wrapper (Exact 970px width on desktop matching Figma) --- */
+.sec-pt__container {
+  width: 970px;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* --- Intro Text --- */
+.sec-pt__intro {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.65;
+  color: var(--Midnight-Navy, #01103b);
+  margin-bottom: 28px;
+}
+
+.sec-pt__intro p {
+  margin-bottom: 16px;
+}
+
+.sec-pt__intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Sections --- */
+.sec-pt__section {
+  margin-bottom: 32px;
+  scroll-margin-top: 95px; /* Offset for sticky header when jumping to anchor */
+}
+
+.sec-pt__heading {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  margin-bottom: 14px;
+  letter-spacing: -0.2px;
+}
+
+.sec-pt__body {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.65;
+  color: var(--Midnight-Navy, #01103b);
+}
+
+.sec-pt__body p {
+  margin-bottom: 14px;
+}
+
+.sec-pt__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+.sec-pt__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 16px 0;
+}
+
+.sec-pt__list-item {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+.sec-pt__list-item::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  color: var(--Midnight-Navy, #01103b);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Links */
+.sec-pt__link {
+  color: var(--Highlight-Blue, #0431b1);
+  text-decoration: underline;
+  text-underline-position: from-font;
+  transition: color 0.2s ease;
+  word-break: break-word;
+}
+
+.sec-pt__link:hover {
+  color: #022384;
+}
+
+
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 1024px) {
+  .sec-pt__hero {
+    padding: 0 24px;
+  }
+
+  .sec-pt__container {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .sec-pt__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .sec-pt__heading {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .sec-pt__intro,
+  .sec-pt__body {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .sec-pt-main {
+    padding-top: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-pt-main {
+    padding-top: 95px;
+    padding-bottom: 40px;
+  }
+
+  .sec-pt__hero {
+    padding: 0 18px;
+  }
+
+  .sec-pt__title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .sec-pt__container {
+    width: 100%;
+    padding: 0 18px;
+  }
+
+  .sec-pt__heading {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .sec-pt__intro,
+  .sec-pt__body {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .sec-pt__section {
+    margin-bottom: 24px;
+    scroll-margin-top: 80px;
+  }
+
+  .sec-pt__list-item {
+    padding-left: 20px;
+  }
+}
