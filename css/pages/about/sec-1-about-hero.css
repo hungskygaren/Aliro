@@ -71,9 +71,10 @@
 
 .sec-about-1__title {
   font-family: Aptos, var(--font-brand);
-  font-size: 44px;
+  font-size: 42px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 50px; 
+  line-height: normal;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   letter-spacing: -0.5px;
@@ -87,8 +88,9 @@
 .sec-about-1__catchphrase {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 30px; 
+  line-height: 28px; 
   color: var(--Secondary-Deep-Blue, #011b7f);
   margin-bottom: 20px;
   font-feature-settings:

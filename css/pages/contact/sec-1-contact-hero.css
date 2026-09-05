@@ -353,8 +353,8 @@
 
 @media (max-width: 767px) {
   .sec-contact-1 .flex-center-v {
-    padding-top: 85px;
-    padding-bottom: 75px;
+    padding-top: 75px;
+    padding-bottom: 40px;
     padding-left: 8px !important;
     padding-right: 8px !important;
   }
@@ -416,39 +416,10 @@
   }
 }
 
-@media (max-height: 700px) and (max-width: 767px) {
-  .sec-contact-1 .flex-center-v {
-    padding-top: 72px;
-    padding-bottom: 45px;
-  }
-
-  .sec-contact-1__title {
-    font-size: 24px;
-    line-height: 28px;
-    margin-bottom: 8px;
-  }
-
-  .sec-contact-1__subhead {
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 8px;
-  }
-
-  .sec-contact-1__body {
-    font-size: 13px;
-    line-height: 18px;
-  }
-
-  .sec-contact-1__right {
-    max-width: 200px !important;
-    margin-top: 8px !important;
-  }
-}
-
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-contact-1 .flex-center-v {
-    padding-top: 100px;
-    padding-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 
   .sec-contact-1__stage {
@@ -483,13 +454,13 @@
   }
 
   .sec-contact-1__right {
-    max-width: 380px !important;
-    margin-top: 22px !important;
+    max-width: 340px !important;
+    margin-top: 18px !important;
   }
 
   .sec-contact-1__glow {
-    width: 360px;
-    height: 260px;
+    width: 320px;
+    height: 230px;
     filter: blur(50px);
   }
 }

@@ -20,15 +20,15 @@
   height: 100%;
   position: relative;
   padding-top: 70px;
-  padding-bottom: 25px;
+  padding-bottom: 8px;
   box-sizing: border-box;
   z-index: 2;
 }
 
 .sec-about-4__header {
   text-align: center;
-  margin-top: calc(22 / 720 * 100dvh);
-  margin-bottom: 20px;
+  margin-top: calc(9 / 720 * 100dvh);
+  margin-bottom: 9px;
   z-index: 4;
   opacity: 0;
   transform: translateY(-20px);
@@ -71,7 +71,7 @@
   font-weight: 500;
   line-height: 24px;
   color: var(--Midnight-Navy, #01103b);
-  margin: 10px auto 0 auto;
+  margin: 6px auto 0 auto;
   text-align: center;
   font-feature-settings:
     "liga" off,
@@ -90,7 +90,7 @@
   transition-delay: 0.2s;
   border-radius: 0;
   overflow-y: auto;
-  max-height: calc(100dvh - 220px);
+  max-height: calc(100dvh - 240px);
   padding-right: 4px;
   box-sizing: border-box;
   background: #ffffff;

@@ -257,7 +257,21 @@ document.addEventListener("DOMContentLoaded", async () => {
           });
 
           if (this.slides[this.previousIndex]) {
-            this.slides[this.previousIndex].classList.add("visited");
+            const prevSlide = this.slides[this.previousIndex];
+            prevSlide.classList.add("visited");
+
+            prevSlide.querySelectorAll("[data-counter]").forEach((el) => {
+              if (el._counterTimeoutId) clearTimeout(el._counterTimeoutId);
+              if (el._counterAnimId) cancelAnimationFrame(el._counterAnimId);
+              const target = el.getAttribute("data-counter");
+              const suffix = el.getAttribute("data-suffix") || "";
+              const prefix = el.getAttribute("data-prefix") || "";
+              if (target) {
+                el.textContent = `${prefix}${target}${suffix}`;
+                el._counterDone = true;
+                el.setAttribute("data-counter-done", "true");
+              }
+            });
           }
         }
       },
@@ -286,6 +300,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!counterElements.length) return;
 
     counterElements.forEach((el) => {
+      if (el._counterDone || el.getAttribute("data-counter-done") === "true") {
+        return;
+      }
+
       const target = parseInt(el.getAttribute("data-counter"), 10);
       const suffix = el.getAttribute("data-suffix") || "";
       const prefix = el.getAttribute("data-prefix") || "";
@@ -324,6 +342,8 @@ document.addEventListener("DOMContentLoaded", async () => {
           } else {
             el.textContent = `${prefix}${target}${suffix}`;
             el._counterAnimId = null;
+            el._counterDone = true;
+            el.setAttribute("data-counter-done", "true");
           }
         }
 

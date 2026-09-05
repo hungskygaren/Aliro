@@ -15,9 +15,8 @@
 }
 
 .sec-about-6 .flex-center-v {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: var(--grid-gutter, 30px);
+  display: flex;
+  justify-content: space-between;
   align-items: flex-start;
   height: 100%;
   position: relative;
@@ -27,10 +26,10 @@
 }
 
 .sec-about-6__left {
-  grid-column: 1 / 6;
+  width: 41.667%;
+  max-width: 41.667%;
+  flex: 0 0 41.667%;
   position: relative;
-  width: 100%;
-  max-width: 100%;
   margin-top: calc(69 / 720 * 100dvh);
   display: flex;
   flex-direction: column;
@@ -119,18 +118,22 @@
 .sec-about-6__item-text {
   font-family: Aptos, var(--font-brand);
   font-size: 20px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 24px;
-  color: #01103b;
+  line-height: normal;
+  color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  max-width: 440px;
+  max-width: 370px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
 }
 
 .sec-about-6__right {
-  grid-column: 7 / 13;
+  width: 50%;
+  max-width: 50%;
+  flex: 0 0 50%;
   position: relative;
-  width: 100%;
-  max-width: 100%;
   margin-top: calc(30 / 720 * 100dvh);
   display: flex;
   flex-direction: column;
