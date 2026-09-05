@@ -378,18 +378,18 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 16px !important;
+    gap: 40px !important;
   }
 
   .sec-about-7__header {
     position: static !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 20px !important;
     text-align: center !important;
   }
 
   .sec-about-7__tag {
-    font-size: 13.5px !important;
-    line-height: 17px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
     color: #ffffff !important;
     margin-bottom: 3px !important;
   }
@@ -406,7 +406,7 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 16px !important;
+    gap: 48px !important;
     width: 100% !important;
     max-width: 440px !important;
     margin: 0 auto !important;
@@ -493,7 +493,7 @@
   .sec-about-7 .container {
     padding-top: 80px !important;
     padding-bottom: 25px !important;
-    gap: 20px !important;
+    gap: 44px !important;
   }
 
   .sec-about-7__header {
@@ -507,7 +507,7 @@
   }
 
   .sec-about-7__stage {
-    gap: 22px !important;
+    gap: 52px !important;
     max-width: 450px !important;
   }
 

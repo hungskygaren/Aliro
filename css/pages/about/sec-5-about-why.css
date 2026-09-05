@@ -62,7 +62,7 @@
   width: 100%;
   max-width: 1170px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   z-index: 3;
 }
@@ -118,8 +118,8 @@
   max-width: 670px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
+  margin-top: 45px;
+  gap: 30px;
   z-index: 3;
 }
 
