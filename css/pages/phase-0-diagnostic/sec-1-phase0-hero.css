@@ -183,13 +183,11 @@
   z-index: 2;
 }
 
-.sec-phase0-1.swiper-slide-active .sec-phase0-1__left,
 .sec-phase0-1.slide-animated .sec-phase0-1__left {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-phase0-1.swiper-slide-active .sec-phase0-1__right,
 .sec-phase0-1.slide-animated .sec-phase0-1__right {
   opacity: 1;
   transform: translateY(0) scale(1);

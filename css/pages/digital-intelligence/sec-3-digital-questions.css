@@ -5,8 +5,11 @@
   height: 100vh;
   height: 100dvh;
   background: radial-gradient(
-    50% 50% at 50% 50%,
+    circle at 50% 50%,
     #1e55b3 0%,
+    #174495 25%,
+    #103277 50%,
+    #082159 75%,
     #01103b 100%
   ) !important;
   box-sizing: border-box;
@@ -46,7 +49,6 @@
   margin-top: calc(43 / 720 * 100dvh);
   margin-bottom: 0;
   z-index: 4;
-  transition-delay: 0.1s;
 }
 
 .sec-digital-3__title {
@@ -83,7 +85,6 @@
   justify-content: center;
   align-items: center;
   z-index: 3;
-  transition-delay: 0.25s;
 }
 
 .sec-digital-3__glow {
@@ -111,29 +112,41 @@
   z-index: 2;
 }
 
+/* ==========================================================================
+   Animation: Entrance on Slide Transition End (.slide-animated)
+   ========================================================================== */
 .sec-digital-3 .phrase {
   opacity: 0;
-  transform: translateY(35px);
+  transform: translateY(28px);
   transition:
-    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-digital-3__title.phrase {
-  transition-delay: 0.1s;
+  transition-delay: 0.10s;
 }
 
 .sec-digital-3__subtitle.phrase {
-  transition-delay: 0.2s;
+  transition-delay: 0.22s;
 }
 
 .sec-digital-3__diagram-wrapper.phrase {
-  transition-delay: 0.3s;
+  transform: translateY(32px) scale(0.96);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.36s;
 }
 
 .sec-digital-3.slide-animated .phrase {
   opacity: 1;
   transform: translateY(0);
+}
+
+.sec-digital-3.slide-animated .sec-digital-3__diagram-wrapper.phrase {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .sec-digital-3.visited .phrase {
@@ -142,6 +155,9 @@
   transition: none !important;
 }
 
+/* ==========================================================================
+   Responsive: Short Desktop (Height <= 660px)
+   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-3__header {
     margin-top: 10px;
@@ -182,6 +198,9 @@
   }
 }
 
+/* ==========================================================================
+   Responsive: Small Desktop / Laptop (Width <= 1200px)
+   ========================================================================== */
 @media (max-width: 1200px) {
   .sec-digital-3__title {
     font-size: 32px;
@@ -198,45 +217,141 @@
   }
 }
 
+/* ==========================================================================
+   Responsive: Tablet Portrait (Width <= 1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-digital-3 {
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
   }
 
   .sec-digital-3 .flex-center-v {
-    padding-top: 85px;
-    padding-bottom: 40px;
-    height: auto;
-    justify-content: flex-start;
+    padding-top: 75px !important;
+    padding-bottom: 25px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    height: 100% !important;
+    justify-content: center !important;
   }
 
   .sec-digital-3__header {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
   }
 
-  .sec-digital-3__diagram-wrapper {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 972 / 520;
-  }
-}
-
-@media (max-width: 576px) {
   .sec-digital-3__title {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 28px !important;
+    line-height: 34px !important;
+    margin-bottom: 6px !important;
   }
 
   .sec-digital-3__subtitle {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 18px !important;
+    line-height: 24px !important;
   }
 
   .sec-digital-3__diagram-wrapper {
-    aspect-ratio: 972 / 520;
+    width: 100% !important;
+    max-width: 680px !important;
+    height: auto !important;
+    aspect-ratio: 972 / 520 !important;
+    margin-top: 0 !important;
+  }
+
+  .sec-digital-3__glow {
+    width: 440px !important;
+    height: 340px !important;
+    filter: blur(75px) !important;
+    opacity: 0.75 !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Standard (Width <= 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-digital-3 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  .sec-digital-3 .flex-center-v {
+    padding-top: 70px !important;
+    padding-bottom: 20px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    justify-content: center !important;
+  }
+
+  .sec-digital-3__header {
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .sec-digital-3__title {
+    font-size: 22px !important;
+    line-height: 27px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-digital-3__subtitle {
+    font-size: 14.5px !important;
+    line-height: 20px !important;
+    opacity: 0.88 !important;
+  }
+
+  .sec-digital-3__diagram-wrapper {
+    width: 100% !important;
+    max-width: 380px !important;
+    height: auto !important;
+    aspect-ratio: 972 / 520 !important;
+    margin-top: 0 !important;
+  }
+
+  .sec-digital-3__glow {
+    width: 260px !important;
+    height: 200px !important;
+    filter: blur(55px) !important;
+    opacity: 0.7 !important;
+  }
+}
+
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-digital-3 .flex-center-v {
+    padding-top: 80px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .sec-digital-3__header {
+    margin-bottom: 18px !important;
+  }
+
+  .sec-digital-3__title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-digital-3__subtitle {
+    font-size: 15.5px !important;
+    line-height: 22px !important;
+  }
+
+  .sec-digital-3__diagram-wrapper {
+    max-width: 390px !important;
+  }
+
+  .sec-digital-3__glow {
+    width: 290px !important;
+    height: 220px !important;
+    filter: blur(60px) !important;
+    opacity: 0.75 !important;
   }
 }

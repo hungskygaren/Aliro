@@ -299,31 +299,26 @@
   transform: translateY(-2px);
 }
 
-.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__header,
 .sec-thirdeye-5.slide-animated .sec-thirdeye-5__header {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__option,
 .sec-thirdeye-5.slide-animated .sec-thirdeye-5__option {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__badge,
 .sec-thirdeye-5.slide-animated .sec-thirdeye-5__badge {
   opacity: 1;
   transform: scale(1);
 }
 
-.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__connector-gold,
 .sec-thirdeye-5.slide-animated .sec-thirdeye-5__connector-gold {
   opacity: 1;
   transform: translateY(-50%) scaleX(1);
 }
 
-.sec-thirdeye-5.swiper-slide-active .sec-thirdeye-5__connector-remaining,
 .sec-thirdeye-5.slide-animated .sec-thirdeye-5__connector-remaining {
   opacity: 0.5;
   transform: translateY(-50%) scaleX(1);

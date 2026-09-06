@@ -1,10 +1,14 @@
+/* ==========================================================================
+   Section 5: Digital Intelligence - Perspective (Aliro Role & Partners)
+   ========================================================================== */
+
 .sec-digital-5 {
   position: relative;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  background-color: #ffffff !important;
+  background: var(--White, #ffffff) !important;
   box-sizing: border-box;
   color: var(--Midnight-Navy, #01103b);
 }
@@ -12,7 +16,7 @@
 .sec-digital-5 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 100%;
   position: relative;
@@ -21,8 +25,8 @@
   margin: 0 auto;
   padding-top: 70px;
   padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   z-index: 3;
 }
 
@@ -32,20 +36,15 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1170px;
-  margin-top: calc(135 / 720 * 100dvh);
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 30px;
+  margin: 0 auto;
+  gap: 40px;
   position: relative;
   z-index: 3;
 }
 
 .sec-digital-5__left {
-  width: 570px;
+  width: 50%;
   max-width: 570px;
-  height: 380px;
-  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,12 +53,12 @@
 
 .sec-digital-5__img-wrapper {
   position: relative;
-  width: 570px;
-  height: 380px;
+  width: 100%;
+  max-width: 570px;
+  aspect-ratio: 1536 / 1024;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .sec-digital-5__img {
@@ -70,9 +69,8 @@
 }
 
 .sec-digital-5__right {
-  width: 570px;
+  width: 50%;
   max-width: 570px;
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,50 +79,50 @@
 
 .sec-digital-5__title {
   font-family: Aptos, var(--font-brand);
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
-  line-height: 44px;
+  line-height: 48px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0 0 20px 0;
-  letter-spacing: 0px;
+  letter-spacing: -0.3px;
   font-feature-settings:
     "liga" off,
     "clig" off;
-  transition-delay: 0.15s;
 }
 
 .sec-digital-5__desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 30px;
   color: var(--Midnight-Navy, #01103b);
+  opacity: 0.85;
   margin: 0;
   letter-spacing: 0px;
   font-feature-settings:
     "liga" off,
     "clig" off;
-  transition-delay: 0.25s;
 }
 
+/* --- Entrance Animation --- */
 .sec-digital-5 .phrase {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(28px);
   transition:
-    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-digital-5__left.phrase {
-  transition-delay: 0.1s;
+  transition-delay: 0.12s;
 }
 
 .sec-digital-5__title.phrase {
-  transition-delay: 0.2s;
+  transition-delay: 0.22s;
 }
 
 .sec-digital-5__desc.phrase {
-  transition-delay: 0.3s;
+  transition-delay: 0.32s;
 }
 
 .sec-digital-5.slide-animated .phrase {
@@ -144,82 +142,269 @@
   transform: none !important;
 }
 
-@media (max-height: 700px) and (min-width: 1025px) {
+/* ==========================================================================
+   Responsive: Short Desktop (Height <= 695px)
+   ========================================================================== */
+@media (max-height: 695px) and (min-width: 1025px) {
   .sec-digital-5 .flex-center-v {
-    padding-top: 70px;
-    padding-bottom: 10px;
+    padding-top: 65px;
+    padding-bottom: 12px;
+  }
+
+  .sec-digital-5__stage {
+    gap: 28px;
+  }
+
+  .sec-digital-5__left {
+    max-width: 480px;
   }
 
   .sec-digital-5__title {
-    margin-bottom: 14px;
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 12px;
+  }
+
+  .sec-digital-5__desc {
+    font-size: 16px;
+    line-height: 23px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-height: 640px) and (min-width: 1025px) {
+  .sec-digital-5 .flex-center-v {
+    padding-top: 60px;
+    padding-bottom: 8px;
+  }
+
   .sec-digital-5__stage {
     gap: 20px;
   }
 
   .sec-digital-5__left {
-    width: 50%;
-    height: auto;
-  }
-
-  .sec-digital-5__img-wrapper {
-    width: 100%;
-    height: auto;
-  }
-
-  .sec-digital-5__right {
-    width: 50%;
+    max-width: 420px;
   }
 
   .sec-digital-5__title {
-    font-size: 32px;
-    line-height: 38px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .sec-digital-5 {
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
-  }
-
-  .sec-digital-5 .flex-center-v {
-    padding-top: 90px;
-    padding-bottom: 60px;
-    height: auto;
-  }
-
-  .sec-digital-5__stage {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-    margin-top: 0;
-  }
-
-  .sec-digital-5__left {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .sec-digital-5__right {
-    width: 100%;
-    max-width: 580px;
-    align-items: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .sec-digital-5__title {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 25px;
+    line-height: 31px;
+    margin-bottom: 10px;
   }
 
   .sec-digital-5__desc {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Small Desktop / Laptop (1025px <= Width <= 1200px)
+   ========================================================================== */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .sec-digital-5__stage {
+    gap: 30px;
+  }
+
+  .sec-digital-5__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 16px;
+  }
+
+  .sec-digital-5__desc {
+    font-size: 17px;
+    line-height: 25px;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Tablet Portrait & Landscape (768px <= Width <= 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .sec-digital-5 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  .sec-digital-5 .flex-center-v {
+    padding-top: 75px !important;
+    padding-bottom: 25px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    height: 100% !important;
+    justify-content: center !important;
+  }
+
+  .sec-digital-5__stage {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 24px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 960px !important;
+  }
+
+  .sec-digital-5__left {
+    width: 48% !important;
+    max-width: 440px !important;
+  }
+
+  .sec-digital-5__img-wrapper {
+    max-width: 440px !important;
+    aspect-ratio: 1536 / 1024 !important;
+  }
+
+  .sec-digital-5__right {
+    width: 48% !important;
+    max-width: 460px !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  .sec-digital-5__title {
+    font-size: 30px !important;
+    line-height: 38px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .sec-digital-5__desc {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Standard (Width <= 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-digital-5 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  .sec-digital-5 .flex-center-v {
+    padding-top: 70px !important;
+    padding-bottom: 16px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    justify-content: center !important;
+    height: 100% !important;
+  }
+
+  .sec-digital-5__stage {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    gap: 18px !important;
+    text-align: center !important;
+  }
+
+  /* Text on top */
+  .sec-digital-5__right {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .sec-digital-5__title {
+    font-size: 26px !important;
+    line-height: 33px !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+  }
+
+  .sec-digital-5__desc {
+    font-size: 16.5px !important;
+    line-height: 24px !important;
+    text-align: center !important;
+    max-width: 420px !important;
+  }
+
+  /* Image below */
+  .sec-digital-5__left {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 350px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .sec-digital-5__img-wrapper {
+    width: 100% !important;
+    max-width: 350px !important;
+    aspect-ratio: 1536 / 1024 !important;
+  }
+
+  .sec-digital-5__img {
+    max-height: 235px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* Entrance animation top to bottom */
+  .sec-digital-5__title.phrase {
+    transition-delay: 0.12s !important;
+  }
+
+  .sec-digital-5__desc.phrase {
+    transition-delay: 0.22s !important;
+  }
+
+  .sec-digital-5__left.phrase {
+    transition-delay: 0.32s !important;
+  }
+}
+
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-digital-5 .flex-center-v {
+    padding-top: 80px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .sec-digital-5__stage {
+    gap: 24px !important;
+  }
+
+  .sec-digital-5__right {
+    max-width: 450px !important;
+  }
+
+  .sec-digital-5__title {
+    font-size: 28px !important;
+    line-height: 36px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .sec-digital-5__desc {
+    font-size: 18px !important;
+    line-height: 26px !important;
+    max-width: 420px !important;
+  }
+
+  .sec-digital-5__left {
+    max-width: 380px !important;
+  }
+
+  .sec-digital-5__img-wrapper {
+    max-width: 380px !important;
+  }
+
+  .sec-digital-5__img {
+    max-height: 255px !important;
   }
 }

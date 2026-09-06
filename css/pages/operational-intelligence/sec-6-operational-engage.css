@@ -146,3 +146,270 @@
   transform: none !important;
   transition: none !important;
 }
+
+/* ==========================================================================
+   Responsive: Short Desktop (Height <= 695px & Width >= 1025px)
+   ========================================================================== */
+@media (max-height: 695px) and (min-width: 1025px) {
+  .sec-operational-6 .flex-center-v {
+    justify-content: center !important;
+    padding-top: 65px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .sec-operational-6__stage {
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .sec-operational-6__left,
+  .sec-operational-6__right {
+    margin-top: 0 !important;
+  }
+
+  .sec-operational-6__eyebrow {
+    font-size: 20px !important;
+    line-height: 24px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .sec-operational-6__statement {
+    font-size: 28px !important;
+    line-height: 38px !important;
+    max-width: 580px !important;
+  }
+
+  .sec-operational-6__right {
+    max-width: 390px !important;
+  }
+
+  .sec-operational-6__img-wrapper {
+    max-width: 390px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Laptop / Small Desktop (Width <= 1200px)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .sec-operational-6 .flex-center-v {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .sec-operational-6__left {
+    max-width: 560px;
+  }
+
+  .sec-operational-6__statement {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .sec-operational-6__right {
+    max-width: 420px;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Tablet (768px <= Width <= 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .sec-operational-6 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+    background: linear-gradient(
+      180deg,
+      #ffffff 25%,
+      #8eaad9 48%,
+      #2053a9 70%,
+      #01103b 100%
+    ) !important;
+  }
+
+  .sec-operational-6 .flex-center-v {
+    padding-top: 75px !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .sec-operational-6__stage {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 24px !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-operational-6__left {
+    width: 52% !important;
+    max-width: 480px !important;
+    margin-top: 0 !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .sec-operational-6__eyebrow {
+    font-size: 20px !important;
+    line-height: 24px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .sec-operational-6__statement {
+    font-size: 26px !important;
+    line-height: 35px !important;
+    max-width: 100% !important;
+  }
+
+  .sec-operational-6__right {
+    width: 45% !important;
+    max-width: 380px !important;
+    margin-top: 0 !important;
+  }
+
+  .sec-operational-6__img-wrapper {
+    max-width: 380px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Standard (Width <= 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-operational-6 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+    background: linear-gradient(
+      180deg,
+      #ffffff 30%,
+      #8eaad9 52%,
+      #2053a9 72%,
+      #01103b 100%
+    ) !important;
+  }
+
+  .sec-operational-6 .flex-center-v {
+    padding-top: 68px !important;
+    padding-bottom: 18px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .sec-operational-6__stage {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 390px !important;
+    gap: 16px !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-operational-6__left {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .sec-operational-6__eyebrow {
+    font-size: 15px !important;
+    line-height: 19px !important;
+    font-weight: 700 !important;
+    color: var(--Secondary-Deep-Blue, #011b7f) !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+  }
+
+  .sec-operational-6__statement {
+    font-size: 20px !important;
+    line-height: 27px !important;
+    font-weight: 700 !important;
+    color: var(--Midnight-Navy, #01103b) !important;
+    text-align: center !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .sec-operational-6__right {
+    width: 100% !important;
+    max-width: 330px !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .sec-operational-6__img-wrapper {
+    width: 100% !important;
+    max-width: 330px !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .sec-operational-6__img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 230px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-operational-6 .flex-center-v {
+    padding-top: 80px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .sec-operational-6__stage {
+    gap: 22px !important;
+    max-width: 420px !important;
+  }
+
+  .sec-operational-6__eyebrow {
+    font-size: 16px !important;
+    line-height: 21px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .sec-operational-6__statement {
+    font-size: 23px !important;
+    line-height: 31px !important;
+  }
+
+  .sec-operational-6__right {
+    max-width: 370px !important;
+  }
+
+  .sec-operational-6__img-wrapper {
+    max-width: 370px !important;
+  }
+
+  .sec-operational-6__img {
+    max-height: 270px !important;
+  }
+}

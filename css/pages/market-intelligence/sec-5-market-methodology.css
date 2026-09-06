@@ -295,7 +295,29 @@
   color: #8ce1ff;
 }
 
+.sec-market-5__badge {
+  display: none;
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-market-5__col--left .sec-market-5__badge {
+  transition-delay: 0.15s;
+}
+
+.sec-market-5__col--right .sec-market-5__badge {
+  transition-delay: 0.4s;
+}
+
 .sec-market-5.slide-animated .sec-market-5__step-node {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sec-market-5.slide-animated .sec-market-5__badge {
   opacity: 1;
   transform: scale(1);
 }
@@ -353,32 +375,59 @@
   transform: translate(-50%, -50%) !important;
 }
 
-@media (max-height: 660px) and (min-width: 1025px) {
+/* ==========================================================================
+   Responsive: Short Desktop (Height <= 695px & Width >= 1025px)
+   ========================================================================== */
+@media (max-height: 695px) and (min-width: 1025px) {
   .sec-market-5 .flex-center-v {
     justify-content: center;
-    padding-top: 70px;
-    padding-bottom: 0;
+    padding-top: 65px;
+    padding-bottom: 10px;
   }
 
   .sec-market-5__stepper {
     margin-top: 0;
     margin-bottom: 6px;
+    max-width: 560px;
+  }
+
+  .sec-market-5__step-node {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+
+  .sec-market-5__col {
+    width: 290px;
+    max-width: 290px;
   }
 
   .sec-market-5__col-title {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 32px;
     margin-bottom: 4px;
   }
 
   .sec-market-5__col-desc {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
     margin-bottom: 8px;
   }
 
+  .sec-market-5__img-box {
+    width: 290px;
+    max-width: 290px;
+    height: 290px;
+  }
+
   .sec-market-5__arrow-wrap {
-    margin-top: 242px;
+    width: 160px;
+    margin: 200px 10px 0 10px;
+  }
+
+  .sec-market-5__arrow-icon {
+    width: 160px;
+    height: 30px;
   }
 
   .sec-market-5__bottom {
@@ -387,82 +436,422 @@
   }
 
   .sec-market-5__bottom-text {
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .sec-market-5__col-title {
-    font-size: 32px;
-  }
-
-  .sec-market-5__col-desc {
     font-size: 16px;
-    white-space: normal;
-  }
-
-  .sec-market-5__bottom-text {
-    font-size: 18px;
-    white-space: normal;
+    line-height: 22px;
   }
 }
 
-@media (max-width: 1024px) {
-  .sec-market-5 {
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
-  }
-
+@media (max-height: 640px) and (min-width: 1025px) {
   .sec-market-5 .flex-center-v {
-    padding-top: 85px;
-    padding-bottom: 40px;
-    height: auto;
+    padding-top: 60px;
+    padding-bottom: 6px;
   }
 
   .sec-market-5__stepper {
-    display: none;
+    max-width: 500px;
+    margin-bottom: 4px;
   }
 
-  .sec-market-5__stage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+  .sec-market-5__step-node {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
   }
 
   .sec-market-5__col {
-    width: 100%;
-    max-width: 100%;
+    width: 250px;
+    max-width: 250px;
+  }
+
+  .sec-market-5__col-title {
+    font-size: 24px;
+    line-height: 28px;
   }
 
   .sec-market-5__col-desc {
-    white-space: normal;
+    font-size: 13.5px;
+    line-height: 18px;
+    margin-bottom: 6px;
+  }
+
+  .sec-market-5__img-box {
+    width: 250px;
+    max-width: 250px;
+    height: 240px;
   }
 
   .sec-market-5__arrow-wrap {
-    position: static;
-    transform: rotate(90deg);
-    margin: 10px auto;
+    width: 130px;
+    margin: 160px 8px 0 8px;
+  }
+
+  .sec-market-5__arrow-icon {
+    width: 130px;
+    height: 24px;
   }
 
   .sec-market-5__bottom-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Small Desktop / Laptop (1025px <= Width <= 1200px)
+   ========================================================================== */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .sec-market-5__stepper {
+    max-width: 580px;
+  }
+
+  .sec-market-5__col {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  .sec-market-5__col-title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .sec-market-5__col-desc {
+    font-size: 16px;
+    line-height: 22px;
+    white-space: normal;
+  }
+
+  .sec-market-5__img-box {
+    width: 300px;
+    max-width: 300px;
+    height: 320px;
+  }
+
+  .sec-market-5__arrow-wrap {
+    width: 170px;
+    margin: 220px 10px 0 10px;
+  }
+
+  .sec-market-5__arrow-icon {
+    width: 170px;
+    height: 32px;
+  }
+
+  .sec-market-5__bottom-text {
+    font-size: 18px;
     white-space: normal;
   }
 }
 
-@media (max-width: 576px) {
+/* ==========================================================================
+   Responsive: Tablet Portrait & Landscape (768px <= Width <= 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .sec-market-5 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+
+  .sec-market-5 .flex-center-v {
+    padding-top: 75px !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    height: 100% !important;
+    justify-content: center !important;
+  }
+
+  .sec-market-5__glow {
+    width: 440px !important;
+    height: 320px !important;
+    filter: blur(75px) !important;
+  }
+
+  .sec-market-5__stepper {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 0 auto 10px auto !important;
+  }
+
+  .sec-market-5__step-node {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 18px !important;
+  }
+
+  .sec-market-5__step-line {
+    height: 2px !important;
+    left: 16px !important;
+    right: 16px !important;
+  }
+
+  .sec-market-5__stage {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 880px !important;
+    gap: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-market-5__col {
+    width: 280px !important;
+    max-width: 280px !important;
+    flex-shrink: 0 !important;
+  }
+
   .sec-market-5__col-title {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 24px !important;
+    line-height: 28px !important;
+    margin-bottom: 6px !important;
   }
 
   .sec-market-5__col-desc {
-    font-size: 15px;
+    font-size: 14px !important;
+    line-height: 19px !important;
+    white-space: normal !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+
+  .sec-market-5__img-box {
+    width: 260px !important;
+    max-width: 260px !important;
+    height: 260px !important;
+  }
+
+  .sec-market-5__arrow-wrap {
+    display: flex !important;
+    width: 110px !important;
+    margin: 180px 10px 0 10px !important;
+    transform: none !important;
+  }
+
+  .sec-market-5__arrow-icon {
+    width: 110px !important;
+    height: 26px !important;
+  }
+
+  .sec-market-5__bottom {
+    margin-top: 14px !important;
+    margin-bottom: 0 !important;
   }
 
   .sec-market-5__bottom-text {
-    font-size: 16px;
+    font-size: 15px !important;
+    line-height: 21px !important;
+    white-space: normal !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Standard (Width <= 767px)
+   Modeled on Section-ThirdEye-5: 1 on top, 2 below, arrow removed, node preserved
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-market-5 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #1e55b3 10%,
+      #01103b 20%
+    ) !important;
+  }
+
+  .sec-market-5 .flex-center-v {
+    padding-top: 68px !important;
+    padding-bottom: 16px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .sec-market-5__glow {
+    display: block !important;
+    width: 320px !important;
+    height: 280px !important;
+    filter: blur(70px) !important;
+    opacity: 0.65 !important;
+  }
+
+  /* Drop top stepper & horizontal arrow */
+  .sec-market-5__stepper {
+    display: none !important;
+  }
+
+  .sec-market-5__arrow-wrap {
+    display: none !important;
+  }
+
+  /* Vertical stack: 1 on top, 2 below */
+  .sec-market-5__stage {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 390px !important;
+    gap: 12px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Vibrant card infused with #1e55b3 royal blue illumination */
+  .sec-market-5__col {
+    width: 100% !important;
+    max-width: 390px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    background: radial-gradient(
+      circle at 50% 18%,
+      rgba(30, 85, 179, 0.85) 0%,
+      rgba(15, 50, 125, 0.88) 55%,
+      rgba(1, 16, 59, 0.94) 100%
+    ) !important;
+    border: 1.5px solid rgba(57, 192, 255, 0.5) !important;
+    border-radius: 16px !important;
+    padding: 12px 16px !important;
+    box-sizing: border-box !important;
+    box-shadow:
+      0 10px 30px rgba(1, 16, 59, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25),
+      0 0 24px rgba(30, 85, 179, 0.35) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+  }
+
+  /* Preserved node badge - Bold, prominent, matching desktop step-node */
+  .sec-market-5__badge {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    background: var(--Highlight-Blue, #0431b1) !important;
+    border: 1.5px solid var(--Bright-Blue, #226cb4) !important;
+    color: #ffffff !important;
+    font-family: Aptos, var(--font-brand) !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    margin-bottom: 6px !important;
+    box-shadow: 0 0 16px rgba(4, 49, 177, 0.6) !important;
+  }
+
+  .sec-market-5__col-title {
+    font-size: 20px !important;
+    line-height: 24px !important;
+    font-weight: 700 !important;
+    margin-bottom: 4px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .sec-market-5__col-desc {
+    font-size: 13.5px !important;
+    line-height: 18px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    white-space: normal !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin-bottom: 8px !important;
+    min-height: auto !important;
+  }
+
+  .sec-market-5__img-box {
+    width: 100% !important;
+    max-width: 200px !important;
+    height: 135px !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-market-5__img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .sec-market-5__bottom {
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .sec-market-5__bottom-text {
+    font-size: 13px !important;
+    line-height: 17px !important;
+    white-space: normal !important;
+  }
+}
+
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-market-5 .flex-center-v {
+    padding-top: 76px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .sec-market-5__stage {
+    gap: 16px !important;
+    max-width: 410px !important;
+  }
+
+  .sec-market-5__col {
+    max-width: 410px !important;
+    padding: 16px 20px !important;
+    border-radius: 16px !important;
+  }
+
+  .sec-market-5__badge {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    font-size: 25px !important;
+    margin-bottom: 8px !important;
+    box-shadow: 0 0 20px rgba(4, 49, 177, 0.7) !important;
+  }
+
+  .sec-market-5__col-title {
+    font-size: 22px !important;
+    line-height: 26px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-market-5__col-desc {
+    font-size: 14.5px !important;
+    line-height: 20px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .sec-market-5__img-box {
+    height: 160px !important;
+    max-width: 230px !important;
+  }
+
+  .sec-market-5__bottom {
+    margin-top: 12px !important;
+  }
+
+  .sec-market-5__bottom-text {
+    font-size: 14px !important;
+    line-height: 19px !important;
   }
 }

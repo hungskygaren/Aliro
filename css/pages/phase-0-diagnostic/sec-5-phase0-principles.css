@@ -193,19 +193,16 @@
   transition-delay: 0.45s;
 }
 
-.sec-phase0-5.swiper-slide-active .sec-phase0-5__header,
 .sec-phase0-5.slide-animated .sec-phase0-5__header {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-phase0-5.swiper-slide-active .sec-phase0-5__center-wrapper,
 .sec-phase0-5.slide-animated .sec-phase0-5__center-wrapper {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
 
-.sec-phase0-5.swiper-slide-active .sec-phase0-5__card,
 .sec-phase0-5.slide-animated .sec-phase0-5__card {
   opacity: 1;
   transform: translate(0, 0);
@@ -352,26 +349,21 @@
       transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .sec-phase0-5.slide-animated .sec-phase0-5__card,
-  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card {
+  .sec-phase0-5.slide-animated .sec-phase0-5__card {
     opacity: 1 !important;
     transform: translateY(0) !important;
   }
 
-  .sec-phase0-5.slide-animated .sec-phase0-5__card--top-left,
-  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card--top-left {
+  .sec-phase0-5.slide-animated .sec-phase0-5__card--top-left {
     transition-delay: 0.12s;
   }
-  .sec-phase0-5.slide-animated .sec-phase0-5__card--top-right,
-  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card--top-right {
+  .sec-phase0-5.slide-animated .sec-phase0-5__card--top-right {
     transition-delay: 0.19s;
   }
-  .sec-phase0-5.slide-animated .sec-phase0-5__card--bottom-left,
-  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card--bottom-left {
+  .sec-phase0-5.slide-animated .sec-phase0-5__card--bottom-left {
     transition-delay: 0.26s;
   }
-  .sec-phase0-5.slide-animated .sec-phase0-5__card--bottom-right,
-  .sec-phase0-5.swiper-slide-active .sec-phase0-5__card--bottom-right {
+  .sec-phase0-5.slide-animated .sec-phase0-5__card--bottom-right {
     transition-delay: 0.33s;
   }
 

@@ -157,13 +157,11 @@
   z-index: 4;
 }
 
-.sec-thirdeye-1.swiper-slide-active .sec-thirdeye-1__left,
 .sec-thirdeye-1.slide-animated .sec-thirdeye-1__left {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-thirdeye-1.swiper-slide-active .sec-thirdeye-1__right,
 .sec-thirdeye-1.slide-animated .sec-thirdeye-1__right {
   opacity: 1;
   transform: translateY(0) scale(1);

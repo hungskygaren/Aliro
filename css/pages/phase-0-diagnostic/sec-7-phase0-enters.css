@@ -111,13 +111,11 @@
     "clig" off;
 }
 
-.sec-phase0-7.swiper-slide-active .sec-phase0-7__left,
 .sec-phase0-7.slide-animated .sec-phase0-7__left {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-.sec-phase0-7.swiper-slide-active .sec-phase0-7__right,
 .sec-phase0-7.slide-animated .sec-phase0-7__right {
   opacity: 1;
   transform: translateY(0);

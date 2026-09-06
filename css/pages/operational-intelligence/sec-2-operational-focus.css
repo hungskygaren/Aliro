@@ -79,27 +79,29 @@
   opacity: 0;
   transform: translateY(40px);
   transition:
-    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.3s ease;
 }
 
 .sec-operational-2__card:nth-child(1) {
-  transition-delay: 0.16s;
+  transition-delay: 0.2s;
 }
 .sec-operational-2__card:nth-child(2) {
-  transition-delay: 0.26s;
-}
-.sec-operational-2__card:nth-child(3) {
   transition-delay: 0.36s;
 }
+.sec-operational-2__card:nth-child(3) {
+  transition-delay: 0.52s;
+}
 .sec-operational-2__card:nth-child(4) {
-  transition-delay: 0.46s;
+  transition-delay: 0.68s;
 }
 
-.sec-operational-2__card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(1, 16, 59, 0.08);
+@media (hover: hover) {
+  .sec-operational-2__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(1, 16, 59, 0.08);
+  }
 }
 
 .sec-operational-2__card-left {
@@ -190,7 +192,11 @@
   display: block;
 }
 
-.sec-operational-2.slide-animated .sec-operational-2__title,
+.sec-operational-2.slide-animated .sec-operational-2__title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .sec-operational-2.slide-animated .sec-operational-2__card {
   opacity: 1;
   transform: translateY(0);
@@ -204,47 +210,78 @@
 .sec-operational-2.visited .phrase,
 .sec-operational-2.visited .sec-operational-2__title,
 .sec-operational-2.visited .sec-operational-2__card {
+  opacity: 1 !important;
   transform: none !important;
+  transition: none !important;
 }
 
+/* ==========================================================================
+   Responsive: Short Desktop (Height <= 660px, Width >= 1025px)
+   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
+  .sec-operational-2 .flex-center-v {
+    padding-top: 65px;
+    padding-bottom: 15px;
+    justify-content: center;
+  }
+
   .sec-operational-2__header {
-    margin-top: 8px;
-    margin-bottom: 16px;
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+
+  .sec-operational-2__title {
+    font-size: 28px;
+    line-height: 34px;
   }
 
   .sec-operational-2__grid {
-    gap: 18px;
+    gap: 16px;
+    max-width: 1120px;
   }
 
   .sec-operational-2__card {
-    height: 205px;
-    padding: 16px 20px;
+    height: 190px;
+    padding: 14px 18px;
   }
 
   .sec-operational-2__card-question {
-    font-size: 27px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 30px;
     margin-bottom: 6px;
   }
 
   .sec-operational-2__card-icon {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     margin-bottom: 4px;
   }
 
   .sec-operational-2__card-link {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .sec-operational-2__card-right {
-    width: 170px;
-    height: 150px;
+    width: 160px;
+    height: 140px;
   }
 }
 
+/* ==========================================================================
+   Responsive: Compact Desktop / Landscape Tablet (<=1200px)
+   ========================================================================== */
 @media (max-width: 1200px) {
+  .sec-operational-2 .flex-center-v {
+    padding-top: 75px;
+    padding-bottom: 20px;
+    justify-content: center;
+  }
+
+  .sec-operational-2__header {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
   .sec-operational-2__title {
     font-size: 32px;
     line-height: 38px;
@@ -253,13 +290,13 @@
   .sec-operational-2__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    max-width: 1020px;
   }
 
   .sec-operational-2__card {
     width: 100%;
-    height: auto;
-    min-height: 200px;
-    padding: 18px 18px;
+    height: 205px;
+    padding: 16px 20px;
   }
 
   .sec-operational-2__card-question {
@@ -268,63 +305,251 @@
   }
 
   .sec-operational-2__card-right {
-    width: 150px;
-    height: 135px;
+    width: 160px;
+    height: 140px;
   }
 }
 
+/* ==========================================================================
+   Responsive: Tablet Portrait (768px - 1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-operational-2 {
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
   }
 
   .sec-operational-2 .flex-center-v {
-    padding-top: 85px;
-    padding-bottom: 40px;
-    height: auto;
-    justify-content: flex-start;
+    padding-top: 85px !important;
+    padding-bottom: 30px !important;
+    height: 100% !important;
+    justify-content: center !important;
+  }
+
+  .sec-operational-2__header {
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .sec-operational-2__title {
+    font-size: 28px !important;
+    line-height: 34px !important;
   }
 
   .sec-operational-2__grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 600px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+    max-width: 780px !important;
+    width: 100% !important;
   }
 
   .sec-operational-2__card {
-    width: 100%;
-    height: auto;
-    min-height: 180px;
-  }
-}
-
-@media (max-width: 576px) {
-  .sec-operational-2__title {
-    font-size: 26px;
-    line-height: 32px;
-  }
-
-  .sec-operational-2__card {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    padding: 18px 16px;
-    gap: 16px;
+    width: 100% !important;
+    height: 180px !important;
+    padding: 16px 18px !important;
+    display: flex !important;
+    flex-direction: row !important;
   }
 
   .sec-operational-2__card-left {
-    width: 100%;
+    width: auto !important;
+    flex: 1 !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding-right: 12px !important;
+  }
+
+  .sec-operational-2__card-icon {
+    width: 32px !important;
+    height: 32px !important;
+    margin-bottom: 4px !important;
   }
 
   .sec-operational-2__card-question {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 20px !important;
+    line-height: 26px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-operational-2__card-link {
+    font-size: 17px !important;
   }
 
   .sec-operational-2__card-right {
-    width: 100%;
-    height: 120px;
-    justify-content: flex-start;
+    width: 135px !important;
+    height: 125px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Standard (<=767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-operational-2 {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .sec-operational-2 .flex-center-v {
+    padding-top: 65px !important;
+    padding-bottom: 18px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    justify-content: center !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .sec-operational-2__header {
+    width: 100% !important;
+    max-width: 440px !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+  }
+
+  .sec-operational-2__title {
+    font-size: 21px !important;
+    line-height: 26px !important;
+    text-align: center !important;
+  }
+
+  .sec-operational-2__grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 9px !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-operational-2__card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: 106px !important;
+    min-height: 102px !important;
+    padding: 11px 15px !important;
+    box-sizing: border-box !important;
+    border: 1px solid rgba(126, 147, 168, 0.45) !important;
+    box-shadow: 0 3px 12px rgba(1, 16, 59, 0.04) !important;
+  }
+
+  .sec-operational-2__card-left {
+    width: auto !important;
+    flex: 1 !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding-right: 14px !important;
+  }
+
+  .sec-operational-2__card-icon {
+    width: 22px !important;
+    height: 22px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-operational-2__card-question {
+    font-size: 14.5px !important;
+    line-height: 18.5px !important;
+    margin: 0 0 4px 0 !important;
+    font-weight: 700 !important;
+    color: var(--Midnight-Navy, #01103b) !important;
+  }
+
+  .sec-operational-2__card-link {
+    font-size: 13px !important;
+    gap: 4px !important;
+    margin-top: auto !important;
+  }
+
+  .sec-operational-2__card-arrow {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .sec-operational-2__card-right {
+    width: 85px !important;
+    height: 78px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .sec-operational-2__card-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+}
+
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (<=767px width & >=780px height)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-operational-2 .flex-center-v {
+    padding-top: 75px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .sec-operational-2__header {
+    margin-bottom: 18px !important;
+  }
+
+  .sec-operational-2__title {
+    font-size: 24px !important;
+    line-height: 29px !important;
+  }
+
+  .sec-operational-2__grid {
+    gap: 13px !important;
+    max-width: 460px !important;
+  }
+
+  .sec-operational-2__card {
+    height: 118px !important;
+    min-height: 115px !important;
+    padding: 12px 16px !important;
+  }
+
+  .sec-operational-2__card-icon {
+    width: 26px !important;
+    height: 26px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-operational-2__card-question {
+    font-size: 16px !important;
+    line-height: 21px !important;
+  }
+
+  .sec-operational-2__card-link {
+    font-size: 14px !important;
+    gap: 5px !important;
+  }
+
+  .sec-operational-2__card-arrow {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .sec-operational-2__card-right {
+    width: 100px !important;
+    height: 92px !important;
   }
 }

@@ -130,17 +130,17 @@
 }
 
 .sec-digital-4__card-title {
-  color: var(--Midnight-Navy, #01103b);
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+  color: var(--Midnight-Navy, #01103b);
   margin: 0 0 4px 0;
   letter-spacing: 0px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
 }
 
 .sec-digital-4__card-desc {
@@ -148,7 +148,6 @@
   font-feature-settings:
     "liga" off,
     "clig" off;
-  /* Body text 2 */
   font-family: Aptos, var(--font-brand);
   font-size: 16px;
   font-style: normal;
@@ -191,6 +190,9 @@
   display: block;
 }
 
+/* ==========================================================================
+   Animation: Entrance on Slide Transition End (.slide-animated)
+   ========================================================================== */
 .sec-digital-4.slide-animated .sec-digital-4__title,
 .sec-digital-4.slide-animated .sec-digital-4__card {
   opacity: 1;
@@ -202,15 +204,21 @@
   transform: translateY(0) scale(1);
 }
 
-.sec-digital-4.visited .phrase,
-.sec-digital-4.visited .sec-digital-4__title,
-.sec-digital-4.visited .sec-digital-4__card,
-.sec-digital-4.visited .sec-digital-4__right {
+.sec-digital-4.visited * {
   opacity: 1 !important;
-  transform: none !important;
   transition: none !important;
 }
 
+.sec-digital-4.visited .sec-digital-4__title,
+.sec-digital-4.visited .sec-digital-4__card,
+.sec-digital-4.visited .sec-digital-4__right,
+.sec-digital-4.visited .phrase {
+  transform: none !important;
+}
+
+/* ==========================================================================
+   Responsive: Short Desktop (Height <= 695px)
+   ========================================================================== */
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-digital-4 .flex-center-v {
     padding-top: 70px;
@@ -286,7 +294,7 @@
 
   .sec-digital-4__card-title {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 21px;
     margin-bottom: 2px;
   }
 
@@ -300,67 +308,277 @@
   }
 }
 
-@media (max-width: 1200px) {
+/* ==========================================================================
+   Responsive: Small Desktop / Laptop (Width <= 1200px)
+   ========================================================================== */
+@media (max-width: 1200px) and (min-width: 1025px) {
   .sec-digital-4__stage {
     gap: 20px;
   }
 
   .sec-digital-4__left {
-    width: 50%;
+    width: 52%;
   }
 
   .sec-digital-4__cards {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
 
   .sec-digital-4__right {
-    width: 50%;
+    width: 48%;
     max-width: 480px;
   }
 }
 
-@media (max-width: 1024px) {
+/* ==========================================================================
+   Responsive: Tablet Portrait & Landscape (768px <= Width <= 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-digital-4 {
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+    background: linear-gradient(
+      180deg,
+      #ffffff 25%,
+      #8eaad9 48%,
+      #2053a9 70%,
+      #01103b 100%
+    ) !important;
   }
 
   .sec-digital-4 .flex-center-v {
-    padding-top: 85px;
-    padding-bottom: 40px;
-    height: auto;
+    padding-top: 75px !important;
+    padding-bottom: 25px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    height: 100% !important;
+    justify-content: center !important;
   }
 
   .sec-digital-4__stage {
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 960px !important;
   }
 
   .sec-digital-4__left {
-    width: 100%;
-    max-width: 100%;
+    width: 58% !important;
+    max-width: 560px !important;
+    flex-shrink: 1 !important;
+  }
+
+  .sec-digital-4__title {
+    font-size: 26px !important;
+    line-height: 32px !important;
+    margin-bottom: 10px !important;
   }
 
   .sec-digital-4__cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: auto !important;
+    gap: 8px !important;
+  }
+
+  .sec-digital-4__card {
+    padding: 8px 10px 10px 10px !important;
+    box-shadow: 0 3px 12px rgba(1, 16, 59, 0.04) !important;
+    height: auto !important;
+  }
+
+  .sec-digital-4__card-num {
+    font-size: 15px !important;
+    line-height: 18px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-digital-4__card-title {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-digital-4__card-desc {
+    font-size: 12px !important;
+    line-height: 16px !important;
   }
 
   .sec-digital-4__right {
-    width: 100%;
-    max-width: 100%;
+    width: 38% !important;
+    max-width: 340px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .sec-digital-4__img {
+    max-height: 380px !important;
+    width: 100% !important;
+    object-fit: contain !important;
   }
 }
 
-@media (max-width: 576px) {
+/* ==========================================================================
+   Responsive: Mobile Standard (Width <= 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .sec-digital-4 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+    background: linear-gradient(
+      180deg,
+      #ffffff 30%,
+      #8eaad9 52%,
+      #2053a9 72%,
+      #01103b 100%
+    ) !important;
+  }
+
+  .sec-digital-4 .flex-center-v {
+    padding-top: 70px !important;
+    padding-bottom: 12px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    justify-content: center !important;
+    height: 100% !important;
+  }
+
+  .sec-digital-4__stage {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    gap: 8px !important;
+  }
+
+  .sec-digital-4__left {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
   .sec-digital-4__title {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 19px !important;
+    line-height: 23px !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
   }
 
   .sec-digital-4__cards {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: auto !important;
+    gap: 6px 8px !important;
+    width: 100% !important;
+  }
+
+  .sec-digital-4__card {
+    padding: 6px 8px 8px 8px !important;
+    height: auto !important;
+    min-height: 86px !important;
+    box-shadow: 0 2px 8px rgba(1, 16, 59, 0.04) !important;
+  }
+
+  .sec-digital-4__card-num {
+    font-size: 12.5px !important;
+    line-height: 15px !important;
+    margin-bottom: 1px !important;
+  }
+
+  .sec-digital-4__card-title {
+    font-size: 11.5px !important;
+    line-height: 14px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-digital-4__card-desc {
+    font-size: 9.5px !important;
+    line-height: 12.5px !important;
+  }
+
+  .sec-digital-4__right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 250px !important;
+    margin: 0 auto !important;
+  }
+
+  .sec-digital-4__img-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .sec-digital-4__img {
+    max-height: 250px !important;
+    width: 250px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+}
+
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-digital-4 .flex-center-v {
+    padding-top: 78px !important;
+    padding-bottom: 18px !important;
+  }
+
+  .sec-digital-4__stage {
+    gap: 12px !important;
+  }
+
+  .sec-digital-4__title {
+    font-size: 21px !important;
+    line-height: 26px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .sec-digital-4__cards {
+    gap: 8px 10px !important;
+  }
+
+  .sec-digital-4__card {
+    padding: 8px 10px 10px 10px !important;
+    min-height: 96px !important;
+  }
+
+  .sec-digital-4__card-num {
+    font-size: 13.5px !important;
+    line-height: 16px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-digital-4__card-title {
+    font-size: 12px !important;
+    line-height: 15px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-digital-4__card-desc {
+    font-size: 10.5px !important;
+    line-height: 13.5px !important;
+  }
+
+  .sec-digital-4__right {
+    max-width: 280px !important;
+  }
+
+  .sec-digital-4__img {
+    max-height: 280px !important;
+    width: 280px !important;
   }
 }
