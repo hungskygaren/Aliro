@@ -216,16 +216,17 @@
    Responsive: Tablet (768px <= Width <= 1024px)
    ========================================================================== */
 @media (max-width: 1024px) {
+  #section-digital-7,
   .sec-digital-7 {
     height: 100vh !important;
     height: 100dvh !important;
     overflow: hidden !important;
     background: linear-gradient(
-      180deg,
-      #ffffff 25%,
-      #8eaad9 48%,
-      #2053a9 70%,
-      #01103b 100%
+      165.54deg,
+      #ffffff 42%,
+      #8eaad9 49%,
+      #2053a9 59%,
+      #01103b 72%
     ) !important;
   }
 
@@ -285,16 +286,17 @@
    Responsive: Mobile Standard (Width <= 767px)
    ========================================================================== */
 @media (max-width: 767px) {
+  #section-digital-7,
   .sec-digital-7 {
     height: 100vh !important;
     height: 100dvh !important;
     overflow: hidden !important;
     background: linear-gradient(
-      180deg,
-      #ffffff 30%,
-      #8eaad9 52%,
-      #2053a9 72%,
-      #01103b 100%
+      165.54deg,
+      #ffffff 42%,
+      #8eaad9 49%,
+      #2053a9 59%,
+      #01103b 72%
     ) !important;
   }
 

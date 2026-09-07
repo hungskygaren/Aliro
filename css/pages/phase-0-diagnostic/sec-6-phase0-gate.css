@@ -217,13 +217,14 @@
    Responsive: Tablet Portrait / Stacked Layout (<=1024px)
    ========================================================================== */
 @media (max-width: 1024px) {
+  #section-phase0-6,
   .sec-phase0-6 {
     background: linear-gradient(
       165.54deg,
-      #ffffff 47%,
-      #8eaad9 58%,
-      #2053a9 67%,
-      #01103b 82%
+      #ffffff 42%,
+      #8eaad9 49%,
+      #2053a9 59%,
+      #01103b 72%
     ) !important;
   }
 
@@ -315,13 +316,14 @@
    Responsive: Mobile Standard (<=767px)
    ========================================================================== */
 @media (max-width: 767px) {
+  #section-phase0-6,
   .sec-phase0-6 {
     background: linear-gradient(
       165.54deg,
-      #ffffff 47%,
-      #8eaad9 58%,
-      #2053a9 67%,
-      #01103b 82%
+      #ffffff 42%,
+      #8eaad9 49%,
+      #2053a9 59%,
+      #01103b 72%
     ) !important;
   }
 

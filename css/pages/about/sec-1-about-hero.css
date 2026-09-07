@@ -459,26 +459,7 @@
   }
 }
 
-@media (max-height: 700px) and (max-width: 767px) {
-  .sec-about-1 .flex-center-v {
-    padding-top: 70px !important;
-    padding-bottom: 65px !important;
-  }
 
-  .sec-about-1__right,
-  .sec-about-1__img-wrapper {
-    max-width: 320px !important;
-  }
-
-  .sec-about-1__img {
-    width: 100% !important;
-    max-width: 320px !important;
-    height: auto !important;
-    max-height: none !important;
-    aspect-ratio: 570 / 380 !important;
-    object-fit: contain !important;
-  }
-}
 
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-about-1 .flex-center-v {

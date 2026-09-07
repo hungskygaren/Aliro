@@ -112,6 +112,10 @@
   z-index: 2;
 }
 
+.sec-digital-3__mobile-grid {
+  display: none;
+}
+
 /* ==========================================================================
    Animation: Entrance on Slide Transition End (.slide-animated)
    ========================================================================== */
@@ -138,6 +142,13 @@
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.36s;
 }
+
+.sec-digital-3__mobile-card:nth-child(1).phrase { transition-delay: 0.12s; }
+.sec-digital-3__mobile-card:nth-child(2).phrase { transition-delay: 0.18s; }
+.sec-digital-3__mobile-card:nth-child(3).phrase { transition-delay: 0.24s; }
+.sec-digital-3__mobile-card:nth-child(4).phrase { transition-delay: 0.30s; }
+.sec-digital-3__mobile-card:nth-child(5).phrase { transition-delay: 0.36s; }
+.sec-digital-3__mobile-card:nth-child(6).phrase { transition-delay: 0.42s; }
 
 .sec-digital-3.slide-animated .phrase {
   opacity: 1;
@@ -279,79 +290,99 @@
   }
 
   .sec-digital-3 .flex-center-v {
-    padding-top: 70px !important;
-    padding-bottom: 20px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-top: 66px !important;
+    padding-bottom: 16px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
     justify-content: center !important;
+    align-items: center !important;
   }
 
   .sec-digital-3__header {
     margin-top: 0 !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-digital-3__title {
-    font-size: 22px !important;
-    line-height: 27px !important;
-    margin-bottom: 4px !important;
+    font-size: 21px !important;
+    line-height: 25px !important;
+    margin-bottom: 2px !important;
   }
 
   .sec-digital-3__subtitle {
-    font-size: 14.5px !important;
-    line-height: 20px !important;
+    font-size: 13.5px !important;
+    line-height: 17px !important;
     opacity: 0.88 !important;
   }
 
+  /* Hide desktop single diagram */
   .sec-digital-3__diagram-wrapper {
+    display: none !important;
+  }
+
+  /* Show 2 columns x 3 rows grid without card boxes */
+  .sec-digital-3__mobile-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px 14px !important;
     width: 100% !important;
     max-width: 380px !important;
-    height: auto !important;
-    aspect-ratio: 972 / 520 !important;
-    margin-top: 0 !important;
+    margin: 0 auto !important;
+    z-index: 3;
+    position: relative;
   }
 
-  .sec-digital-3__glow {
-    width: 260px !important;
-    height: 200px !important;
-    filter: blur(55px) !important;
-    opacity: 0.7 !important;
-  }
-}
-
-
-/* ==========================================================================
-   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
-   ========================================================================== */
-@media (max-width: 767px) and (min-height: 780px) {
-  .sec-digital-3 .flex-center-v {
-    padding-top: 80px !important;
-    padding-bottom: 28px !important;
-  }
-
-  .sec-digital-3__header {
-    margin-bottom: 18px !important;
+  .sec-digital-3__mobile-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    transition:
+      opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.25s ease !important;
   }
 
-  .sec-digital-3__title {
-    font-size: 24px !important;
-    line-height: 30px !important;
+  .sec-digital-3__mobile-card:hover {
+    transform: translateY(-3px) !important;
+  }
+
+  .sec-digital-3__mobile-img-box {
+    width: 120px !important;
+    height: 120px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     margin-bottom: 6px !important;
   }
 
-  .sec-digital-3__subtitle {
-    font-size: 15.5px !important;
-    line-height: 22px !important;
+  .sec-digital-3__mobile-img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    object-fit: contain !important;
+    display: block !important;
+    filter: drop-shadow(0 8px 18px rgba(41, 187, 255, 0.4)) !important;
   }
 
-  .sec-digital-3__diagram-wrapper {
-    max-width: 390px !important;
-  }
-
-  .sec-digital-3__glow {
-    width: 290px !important;
-    height: 220px !important;
-    filter: blur(60px) !important;
-    opacity: 0.75 !important;
+  .sec-digital-3__mobile-card-title {
+    font-family: Aptos, var(--font-brand) !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    line-height: 17px !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    letter-spacing: 0.2px !important;
+    text-align: center !important;
   }
 }
+
+
