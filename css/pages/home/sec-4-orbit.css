@@ -17,7 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 70px;
+  padding-top: var(--section-pt);
   box-sizing: border-box;
   position: relative;
 }
@@ -589,7 +589,7 @@
     justify-content: center;
     align-items: center;
     height: 100dvh;
-    padding-top: 85px;
+    padding-top: var(--section-pt);
     padding-bottom: 20px;
   }
 
@@ -634,7 +634,7 @@
   }
 
   .sec-continuum .container {
-    padding-top: 70px;
+    padding-top: var(--section-pt);
     padding-bottom: 20px;
   }
 

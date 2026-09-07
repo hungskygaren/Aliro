@@ -72,9 +72,29 @@
   --color-text-dark: #123e6b;
   --bg-dark: #071729;
 
-  --container-width: 1170px; 
-  --grid-gutter: 30px; 
-  --header-offset: 129px; 
+  --container-width: 1170px;
+  --grid-gutter: 30px;
+  --header-height: 70px;
+  --header-offset: 70px;
+  --section-pt: 70px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 60px;
+    --header-offset: 60px;
+    --section-pt: 30px;
+  }
+
+  .sec-10,
+  .sec-contact-3,
+  .sec-contact-1,
+  .sec-about-5,
+  .sec-market-4,
+  .sec-capacity-2,
+  [data-shared-footer] {
+    --section-pt: 60px;
+  }
 }
 
 * {
@@ -125,8 +145,12 @@ body {
   max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px; 
+  padding-left: 24px;
   padding-right: 24px;
+}
+
+.flex-center-v {
+  padding-top: var(--section-pt);
 }
 
 @media (min-width: 1170px) {
@@ -160,15 +184,15 @@ body {
 .col-6 {
   flex: 0 0 calc(50% - 15px);
   width: calc(50% - 15px);
-} 
+}
 .col-4 {
   flex: 0 0 calc(33.333% - 20px);
   width: calc(33.333% - 20px);
-} 
+}
 .col-3 {
   flex: 0 0 calc(25% - 22.5px);
   width: calc(25% - 22.5px);
-} 
+}
 
 .grid-12 {
   display: grid;

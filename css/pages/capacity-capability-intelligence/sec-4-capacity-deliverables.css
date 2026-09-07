@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  padding-top: 70px;
+  padding-top: var(--section-pt);
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -62,6 +62,7 @@
   text-transform: uppercase;
   margin: 0 0 14px 0;
   letter-spacing: 0px;
+  max-width: 440px;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -219,7 +220,7 @@
    ========================================================================== */
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-capacity-4 .flex-center-v {
-    padding-top: 70px;
+    padding-top: var(--section-pt);
     padding-bottom: 10px;
   }
 
@@ -258,7 +259,7 @@
 
 @media (max-height: 640px) and (min-width: 1025px) {
   .sec-capacity-4 .flex-center-v {
-    padding-top: 70px;
+    padding-top: var(--section-pt);
     padding-bottom: 6px;
   }
 
@@ -344,7 +345,7 @@
   }
 
   .sec-capacity-4 .flex-center-v {
-    padding-top: 75px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -369,8 +370,8 @@
   }
 
   .sec-capacity-4__title {
-    font-size: 26px !important;
-    line-height: 32px !important;
+    font-size: 28px !important;
+    line-height: 34px !important;
     margin-bottom: 10px !important;
   }
 
@@ -386,20 +387,24 @@
   }
 
   .sec-capacity-4__card-num {
-    font-size: 15px !important;
-    line-height: 18px !important;
+    font-size: 16px !important;
+    line-height: 19px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-capacity-4__card-title {
-    font-size: 14px !important;
-    line-height: 18px !important;
+    font-size: 15px !important;
+    line-height: 19px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-capacity-4__card-desc {
-    font-size: 12px !important;
-    line-height: 16px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+
+  .sec-capacity-4__card-highlight {
+    font-size: 14px !important;
   }
 
   .sec-capacity-4__right {
@@ -424,7 +429,8 @@
   .sec-capacity-4 {
     height: 100vh !important;
     height: 100dvh !important;
-    overflow: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
     background: linear-gradient(
       180deg,
       #ffffff 30%,
@@ -435,10 +441,10 @@
   }
 
   .sec-capacity-4 .flex-center-v {
-    padding-top: 70px !important;
-    padding-bottom: 14px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 0px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
     justify-content: center !important;
     height: 100% !important;
   }
@@ -449,7 +455,7 @@
     width: 100% !important;
     max-width: 440px !important;
     margin: 0 auto !important;
-    gap: 10px !important;
+    gap: 6px !important;
   }
 
   .sec-capacity-4__left {
@@ -458,10 +464,11 @@
   }
 
   .sec-capacity-4__title {
-    font-size: 19px !important;
-    line-height: 23px !important;
-    margin-bottom: 8px !important;
+    font-size: 22px !important;
+    line-height: 27px !important;
+    margin-bottom: 6px !important;
     text-align: center !important;
+    max-width: 100% !important;
   }
 
   .sec-capacity-4__cards {
@@ -473,27 +480,35 @@
   }
 
   .sec-capacity-4__card {
-    padding: 6px 8px 8px 8px !important;
+    padding: 7px 9px 8px 9px !important;
     height: auto !important;
-    min-height: 86px !important;
+    min-height: 0 !important;
     box-shadow: 0 2px 8px rgba(1, 16, 59, 0.04) !important;
   }
 
   .sec-capacity-4__card-num {
-    font-size: 12.5px !important;
-    line-height: 15px !important;
-    margin-bottom: 1px !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+    font-weight: 700 !important;
+    margin-bottom: 2px !important;
+    color: var(--Highlight-Blue, #0431b1) !important;
   }
 
   .sec-capacity-4__card-title {
-    font-size: 11.5px !important;
-    line-height: 14px !important;
+    font-size: 13.5px !important;
+    line-height: 17px !important;
+    font-weight: 700 !important;
     margin-bottom: 2px !important;
   }
 
   .sec-capacity-4__card-desc {
-    font-size: 9.5px !important;
-    line-height: 12.5px !important;
+    font-size: 13px !important;
+    line-height: 16.5px !important;
+  }
+
+  .sec-capacity-4__card-highlight {
+    font-size: 13px !important;
+    font-weight: 700 !important;
   }
 
   .sec-capacity-4__right {
@@ -501,8 +516,8 @@
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
-    max-width: 250px !important;
-    margin: 0 auto !important;
+    max-width: 140px !important;
+    margin: 3px auto 0 auto !important;
   }
 
   .sec-capacity-4__img-wrapper {
@@ -513,32 +528,32 @@
   }
 
   .sec-capacity-4__img {
-    max-height: 250px !important;
-    width: 250px !important;
+    max-height: 105px !important;
+    width: 140px !important;
     max-width: 100% !important;
     object-fit: contain !important;
     display: block !important;
   }
 }
 
-
 /* ==========================================================================
    Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
    ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-capacity-4 .flex-center-v {
-    padding-top: 78px !important;
-    padding-bottom: 20px !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 15px !important;
   }
 
   .sec-capacity-4__stage {
-    gap: 14px !important;
+    gap: 8px !important;
+    max-width: 460px !important;
   }
 
   .sec-capacity-4__title {
-    font-size: 22px !important;
-    line-height: 27px !important;
-    margin-bottom: 10px !important;
+    font-size: 25px !important;
+    line-height: 31px !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-capacity-4__cards {
@@ -546,33 +561,38 @@
   }
 
   .sec-capacity-4__card {
-    padding: 6px 8px 8px 8px !important;
-    min-height: 88px !important;
+    padding: 9px 12px !important;
+    min-height: 0 !important;
   }
 
   .sec-capacity-4__card-num {
-    font-size: 13.5px !important;
-    line-height: 16.5px !important;
-    margin-bottom: 1px !important;
+    font-size: 16px !important;
+    line-height: 19px !important;
+    margin-bottom: 2px !important;
   }
 
   .sec-capacity-4__card-title {
-    font-size: 12.5px !important;
-    line-height: 15.5px !important;
+    font-size: 15px !important;
+    line-height: 19px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-capacity-4__card-desc {
-    font-size: 11px !important;
-    line-height: 14px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+
+  .sec-capacity-4__card-highlight {
+    font-size: 14px !important;
   }
 
   .sec-capacity-4__right {
-    max-width: 280px !important;
+    max-width: 180px !important;
+    margin-top: 6px !important;
   }
 
   .sec-capacity-4__img {
-    max-height: 280px !important;
-    width: 280px !important;
+    max-height: 140px !important;
+    width: 180px !important;
   }
 }

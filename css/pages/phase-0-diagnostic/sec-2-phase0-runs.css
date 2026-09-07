@@ -15,7 +15,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 70px;
+  padding-top: var(--section-pt);
   padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
@@ -339,7 +339,7 @@
 
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-phase0-2 .flex-center-v {
-    padding-top: 70px;
+    padding-top: var(--section-pt);
     padding-bottom: 10px;
   }
 
@@ -354,7 +354,7 @@
 
 @media (max-height: 620px) and (min-width: 1025px) {
   .sec-phase0-2 .flex-center-v {
-    padding-top: 70px;
+    padding-top: var(--section-pt);
     padding-bottom: 5px;
   }
 
@@ -398,7 +398,7 @@
     justify-content: flex-start !important;
     align-items: center !important;
     height: 100% !important;
-    padding-top: 85px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 35px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -511,7 +511,7 @@
    ========================================================================== */
 @media (max-width: 767px) {
   .sec-phase0-2 .flex-center-v {
-    padding-top: 68px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 16px !important;
     padding-left: 12px !important;
     padding-right: 12px !important;
@@ -633,7 +633,7 @@
    ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-phase0-2 .flex-center-v {
-    padding-top: 85px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 30px !important;
   }
 

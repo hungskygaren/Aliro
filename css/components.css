@@ -169,20 +169,8 @@
   color: #0431b1 !important;
 }
 
-.nav-dropdown-item--disabled,
-.nav-dropdown-item--disabled:hover,
-.nav-dropdown-item--disabled:active {
-  cursor: default !important;
-  opacity: 0.55;
-  background-color: transparent !important;
-  color: #7b8394 !important;
-}
-
-.navbar-overlay.light-theme .nav-dropdown-item--disabled,
-.navbar-overlay.light-theme .nav-dropdown-item--disabled:hover,
-.navbar-overlay.light-theme .nav-dropdown-item--disabled:active {
-  color: #8c95a8 !important;
-  background-color: transparent !important;
+.nav-dropdown-item--disabled {
+  cursor: default;
 }
 
 .navbar-overlay.light-theme .nav-dropdown-menu {
@@ -369,11 +357,25 @@
     font-size: 18px;
     padding: 8px 0;
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none !important;
+    text-decoration: none !important;
   }
 
   .navbar-overlay.light-theme .nav-item {
-    border-bottom: 1px solid rgba(1, 16, 59, 0.08);
+    border-bottom: none !important;
+  }
+
+  .nav-drawer .nav-item::after,
+  .nav-drawer .nav-item:hover::after,
+  .nav-drawer .nav-item.active::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .nav-drawer a,
+  .nav-drawer .nav-item,
+  .nav-drawer .nav-dropdown-item {
+    text-decoration: none !important;
   }
 
   .nav-dropdown-wrapper {
@@ -454,23 +456,8 @@
     white-space: normal;
   }
 
-  .nav-dropdown-item--disabled,
-  .nav-dropdown-item--disabled:hover,
-  .nav-dropdown-item--disabled:active {
-    color: rgba(255, 255, 255, 0.4) !important;
-    background-color: transparent !important;
-    cursor: default !important;
-  }
-
   .navbar-overlay.light-theme .nav-dropdown-item {
     color: rgba(1, 16, 59, 0.7) !important;
-  }
-
-  .navbar-overlay.light-theme .nav-dropdown-item--disabled,
-  .navbar-overlay.light-theme .nav-dropdown-item--disabled:hover,
-  .navbar-overlay.light-theme .nav-dropdown-item--disabled:active {
-    color: rgba(1, 16, 59, 0.4) !important;
-    background-color: transparent !important;
   }
 
   .nav-dropdown-item:hover,

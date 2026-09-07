@@ -23,7 +23,7 @@
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 70px;
+  padding-top: var(--section-pt);
   padding-bottom: 20px;
   box-sizing: border-box;
 }
@@ -125,11 +125,11 @@
 
 .sec-about-5__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
-  height: 70px;
+  height: auto;
   min-height: 70px;
-  max-height: 70px;
+  max-height: none;
   text-decoration: none;
   color: #ffffff;
   padding: 0;
@@ -172,6 +172,7 @@
   background: transparent;
   border: 1.5px solid transparent;
   box-sizing: border-box;
+  margin-top: 2px;
   transition:
     border-color 0.25s ease,
     filter 0.25s ease;
@@ -194,7 +195,7 @@
   max-width: 570px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .sec-about-5__item-header {
@@ -279,7 +280,7 @@
 
   .sec-about-5 .container {
     height: auto !important;
-    padding-top: 85px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 35px !important;
   }
 
@@ -394,8 +395,8 @@
 
 @media (max-width: 767px) {
   .sec-about-5 .container {
-    padding-top: 72px !important;
-    padding-bottom: 16px !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 0px !important;
     padding-left: 14px !important;
     padding-right: 14px !important;
     justify-content: center !important;
@@ -423,39 +424,50 @@
   .sec-about-5__right {
     order: 1 !important;
     width: 100% !important;
-    max-width: 380px !important;
+    max-width: 420px !important;
     margin: 0 auto !important;
-    gap: 10px !important;
+    gap: 12px !important;
   }
 
   .sec-about-5__item {
-    gap: 12px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
     min-height: auto !important;
   }
 
   .sec-about-5__icon-circle {
-    width: 44px !important;
-    height: 44px !important;
+    width: 52px !important;
+    height: 52px !important;
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
   }
 
   .sec-about-5__icon-img {
-    width: 44px !important;
-    height: 44px !important;
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .sec-about-5__content {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
   }
 
   .sec-about-5__item-title {
-    font-size: 15px !important;
-    line-height: 19px !important;
+    font-size: 16px !important;
+    line-height: 21px !important;
   }
 
   .sec-about-5__item-desc {
-    font-size: 12.5px !important;
-    line-height: 17px !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
   }
 
   .sec-about-5__item-arrow svg {
-    width: 14px !important;
-    height: 14px !important;
+    width: 15px !important;
+    height: 15px !important;
   }
 
   .sec-about-5__left {
@@ -487,9 +499,9 @@
   }
 }
 
-@media (max-width: 767px) and (min-height: 850px) {
+@media (max-width: 767px) and (min-height: 780px) {
   .sec-about-5 .container {
-    padding-top: 80px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 20px !important;
     justify-content: center !important;
   }
@@ -508,34 +520,44 @@
   }
 
   .sec-about-5__right {
-    max-width: 400px !important;
-    gap: 12px !important;
-  }
-
-  .sec-about-5__item {
+    max-width: 420px !important;
     gap: 14px !important;
   }
 
+  .sec-about-5__item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
   .sec-about-5__left {
-    max-width: 350px !important;
+    max-width: 330px !important;
     margin-top: 10px !important;
   }
 
   .sec-about-5__graphic-img {
     width: 100% !important;
-    max-width: 350px !important;
+    max-width: 330px !important;
     aspect-ratio: 1 / 1 !important;
     height: auto !important;
   }
 
   .sec-about-5__icon-circle {
-    width: 50px !important;
-    height: 50px !important;
+    width: 56px !important;
+    height: 56px !important;
+    margin-top: 2px !important;
   }
 
   .sec-about-5__icon-img {
-    width: 50px !important;
-    height: 50px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .sec-about-5__content {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
   }
 
   .sec-about-5__item-title {
@@ -544,7 +566,7 @@
   }
 
   .sec-about-5__item-desc {
-    font-size: 14px !important;
+    font-size: 14.5px !important;
     line-height: 20px !important;
   }
 }

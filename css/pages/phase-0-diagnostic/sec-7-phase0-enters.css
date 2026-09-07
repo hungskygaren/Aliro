@@ -19,7 +19,7 @@
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: var(--section-pt);
   padding-bottom: 20px;
 }
 
@@ -165,7 +165,7 @@
     justify-content: center !important;
     align-items: center !important;
     height: 100% !important;
-    padding-top: 80px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 30px !important;
     padding-left: 24px !important;
     padding-right: 24px !important;
@@ -228,7 +228,7 @@
   }
 
   .sec-phase0-7 .flex-center-v {
-    padding-top: 68px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 16px !important;
     padding-left: 14px !important;
     padding-right: 14px !important;

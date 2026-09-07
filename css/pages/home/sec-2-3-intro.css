@@ -6,7 +6,7 @@
 .sec-architect .container {
   position: relative;
   height: 100%;
-  padding-top: 23.0555dvh;
+  padding-top: var(--section-pt);
   box-sizing: border-box;
 }
 
@@ -115,8 +115,8 @@
   right: 0;
   top: 50%;
   z-index: 2;
-  width: 57.26%;
-  max-width: 670px;
+  width: 52%;
+  max-width: 600px;
   height: auto;
   object-fit: contain;
   object-position: right center;
@@ -155,7 +155,7 @@
   .sec-architect .container {
     flex-direction: column;
     justify-content: center;
-    padding-top: var(--header-offset);
+    padding-top: var(--section-pt);
   }
 
   .sec-architect__content {
@@ -203,7 +203,7 @@
   grid-column: 1 / span 5;
   z-index: 2;
   width: 100%;
-  max-width: 520px;
+  max-width: 480px;
   height: auto;
   object-fit: contain;
   object-position: left center;
@@ -312,7 +312,7 @@
   .sec-framework .container {
     flex-direction: column;
     justify-content: center;
-    padding-top: var(--header-offset);
+    padding-top: var(--section-pt);
   }
 
   .sec-framework__content {
@@ -333,7 +333,7 @@
   .sec-framework__img {
     position: relative;
     width: 90%;
-    max-width: 480px;
+    max-width: 340px;
     margin: 0 auto;
     left: auto;
     top: auto;
@@ -398,10 +398,14 @@
     min-height: 100dvh;
     height: auto !important;
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 30px;
+    padding-top: var(--section-pt);
     box-sizing: border-box;
     gap: 0;
+  }
+
+  .sec-architect .container,
+  .sec-framework .container {
+    padding-bottom: 0 !important;
   }
 
   .sec-architect__content,
@@ -460,8 +464,13 @@
       transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
+  .sec-architect__img,
   .sec-framework__img {
-    left: 30px !important;
+    max-width: 340px !important;
+  }
+
+  .sec-framework__img {
+    left: 20px !important;
   }
 
   .sec-architect.slide-animated .sec-architect__img,
@@ -477,8 +486,8 @@
 @media (max-width: 767px) {
   .sec-architect .container,
   .sec-framework .container {
-    padding-top: 100px;
-    padding-bottom: 30px;
+    padding-top: var(--section-pt);
+    padding-bottom: 0 !important;
   }
 
   .sec-architect__sub-top,
@@ -524,9 +533,13 @@
 
   .sec-architect__img,
   .sec-framework__img {
-    max-width: 400px !important;
-    width: 100% !important;
-    margin-top: 20px !important;
+    max-width: 290px !important;
+    width: 90% !important;
+    margin-top: 14px !important;
+  }
+
+  .sec-framework__img {
+    left: 20px !important;
   }
 }
 
@@ -567,8 +580,12 @@
 
   .sec-architect__img,
   .sec-framework__img {
-    max-width: 500px !important;
-    max-height: 380px !important;
-    margin-top: 24px !important;
+    max-width: 330px !important;
+    max-height: 260px !important;
+    margin-top: 16px !important;
+  }
+
+  .sec-framework__img {
+    left: 22px !important;
   }
 }

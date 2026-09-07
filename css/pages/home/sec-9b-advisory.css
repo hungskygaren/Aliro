@@ -297,7 +297,7 @@
     align-items: center;
     min-height: 100dvh;
     height: auto !important;
-    padding-top: 75px;
+    padding-top: var(--section-pt);
     padding-bottom: 30px;
     box-sizing: border-box;
     position: relative;

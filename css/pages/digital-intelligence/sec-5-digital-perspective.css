@@ -23,7 +23,7 @@
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: var(--section-pt);
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -147,7 +147,7 @@
    ========================================================================== */
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-digital-5 .flex-center-v {
-    padding-top: 65px;
+    padding-top: var(--section-pt);
     padding-bottom: 12px;
   }
 
@@ -173,7 +173,7 @@
 
 @media (max-height: 640px) and (min-width: 1025px) {
   .sec-digital-5 .flex-center-v {
-    padding-top: 60px;
+    padding-top: var(--section-pt);
     padding-bottom: 8px;
   }
 
@@ -228,7 +228,7 @@
   }
 
   .sec-digital-5 .flex-center-v {
-    padding-top: 75px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
     padding-left: 24px !important;
     padding-right: 24px !important;
@@ -282,14 +282,15 @@
   .sec-digital-5 {
     height: 100vh !important;
     height: 100dvh !important;
-    overflow: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sec-digital-5 .flex-center-v {
-    padding-top: 70px !important;
-    padding-bottom: 16px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 0px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
     justify-content: center !important;
     height: 100% !important;
   }
@@ -318,7 +319,7 @@
 
   .sec-digital-5__title {
     font-size: 26px !important;
-    line-height: 33px !important;
+    line-height: 34px !important;
     margin-bottom: 12px !important;
     text-align: center !important;
   }
@@ -366,18 +367,17 @@
   }
 }
 
-
 /* ==========================================================================
    Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
    ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-digital-5 .flex-center-v {
-    padding-top: 80px !important;
-    padding-bottom: 24px !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 20px !important;
   }
 
   .sec-digital-5__stage {
-    gap: 24px !important;
+    gap: 22px !important;
   }
 
   .sec-digital-5__right {
@@ -385,15 +385,15 @@
   }
 
   .sec-digital-5__title {
-    font-size: 28px !important;
-    line-height: 36px !important;
+    font-size: 30px !important;
+    line-height: 38px !important;
     margin-bottom: 14px !important;
   }
 
   .sec-digital-5__desc {
     font-size: 18px !important;
     line-height: 26px !important;
-    max-width: 420px !important;
+    max-width: 440px !important;
   }
 
   .sec-digital-5__left {
@@ -405,6 +405,6 @@
   }
 
   .sec-digital-5__img {
-    max-height: 255px !important;
+    max-height: 260px !important;
   }
 }

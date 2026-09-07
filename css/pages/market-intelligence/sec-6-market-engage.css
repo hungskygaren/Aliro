@@ -21,7 +21,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: 70px;
+  padding-top: var(--section-pt);
   padding-bottom: 20px;
   box-sizing: border-box;
   max-width: 1200px;
@@ -156,7 +156,7 @@
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-market-6 .flex-center-v {
     justify-content: center !important;
-    padding-top: 65px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 15px !important;
   }
 
@@ -233,7 +233,7 @@
   }
 
   .sec-market-6 .flex-center-v {
-    padding-top: 75px !important;
+    padding-top: var(--section-pt) !important;
     padding-bottom: 20px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -262,25 +262,25 @@
   }
 
   .sec-market-6__eyebrow {
-    font-size: 20px !important;
-    line-height: 24px !important;
+    font-size: 22px !important;
+    line-height: 26px !important;
     margin-bottom: 14px !important;
   }
 
   .sec-market-6__statement {
-    font-size: 26px !important;
-    line-height: 35px !important;
+    font-size: 30px !important;
+    line-height: 40px !important;
     max-width: 100% !important;
   }
 
   .sec-market-6__right {
     width: 45% !important;
-    max-width: 380px !important;
+    max-width: 400px !important;
     margin-top: 0 !important;
   }
 
   .sec-market-6__img-wrapper {
-    max-width: 380px !important;
+    max-width: 400px !important;
   }
 }
 
@@ -303,8 +303,8 @@
   }
 
   .sec-market-6 .flex-center-v {
-    padding-top: 68px !important;
-    padding-bottom: 18px !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 0px !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
     justify-content: center !important;
@@ -319,8 +319,8 @@
     justify-content: center !important;
     text-align: center !important;
     width: 100% !important;
-    max-width: 390px !important;
-    gap: 16px !important;
+    max-width: 440px !important;
+    gap: 14px !important;
     margin: 0 auto !important;
   }
 
@@ -335,8 +335,8 @@
   }
 
   .sec-market-6__eyebrow {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
     font-weight: 700 !important;
     color: var(--Secondary-Deep-Blue, #011b7f) !important;
     letter-spacing: 0.5px !important;
@@ -345,8 +345,8 @@
   }
 
   .sec-market-6__statement {
-    font-size: 24px !important;
-    line-height: 31px !important;
+    font-size: 26px !important;
+    line-height: 34px !important;
     font-weight: 700 !important;
     color: var(--Midnight-Navy, #01103b) !important;
     text-align: center !important;
@@ -356,7 +356,7 @@
 
   .sec-market-6__right {
     width: 100% !important;
-    max-width: 330px !important;
+    max-width: 350px !important;
     margin-top: 0 !important;
     display: flex !important;
     align-items: center !important;
@@ -365,7 +365,7 @@
 
   .sec-market-6__img-wrapper {
     width: 100% !important;
-    max-width: 330px !important;
+    max-width: 350px !important;
     height: auto !important;
     display: flex !important;
     align-items: center !important;
@@ -375,7 +375,7 @@
   .sec-market-6__img {
     width: 100% !important;
     height: auto !important;
-    max-height: 230px !important;
+    max-height: 220px !important;
     object-fit: contain !important;
     display: block !important;
   }
@@ -386,35 +386,59 @@
    ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-market-6 .flex-center-v {
-    padding-top: 80px !important;
-    padding-bottom: 25px !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 15px !important;
   }
 
   .sec-market-6__stage {
-    gap: 22px !important;
-    max-width: 420px !important;
+    gap: 20px !important;
+    max-width: 460px !important;
   }
 
   .sec-market-6__eyebrow {
-    font-size: 17px !important;
-    line-height: 22px !important;
+    font-size: 19px !important;
+    line-height: 24px !important;
     margin-bottom: 10px !important;
   }
 
   .sec-market-6__statement {
-    font-size: 26px !important;
-    line-height: 34px !important;
+    font-size: 29px !important;
+    line-height: 38px !important;
   }
 
   .sec-market-6__right {
-    max-width: 370px !important;
+    max-width: 390px !important;
   }
 
   .sec-market-6__img-wrapper {
-    max-width: 370px !important;
+    max-width: 390px !important;
   }
 
   .sec-market-6__img {
     max-height: 270px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Short Mobile (<=640px height & <=767px width)
+   ========================================================================== */
+@media (max-height: 640px) and (max-width: 767px) {
+  .sec-market-6__stage {
+    gap: 10px !important;
+  }
+
+  .sec-market-6__eyebrow {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-market-6__statement {
+    font-size: 23px !important;
+    line-height: 30px !important;
+  }
+
+  .sec-market-6__img {
+    max-height: 180px !important;
   }
 }

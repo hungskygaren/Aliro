@@ -21,7 +21,7 @@
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: 80px;
+  padding-top: var(--section-pt);
   padding-bottom: 60px;
   box-sizing: border-box;
 }
@@ -493,6 +493,10 @@
 }
 
 @media (max-width: 1024px) {
+  .sec-10 {
+    --section-pt: 60px;
+  }
+
   .sec-10__decor {
     height: 60% !important;
   }
@@ -505,8 +509,8 @@
     align-items: center !important;
     min-height: 100dvh;
     height: auto !important;
-    padding-top: 85px !important;
-    padding-bottom: 24px !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 4px !important;
     box-sizing: border-box;
     position: relative;
     text-align: center !important;
@@ -575,7 +579,7 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 0 auto !important;
+    margin: 10px auto !important;
   }
 
   .sec-10__card {
@@ -636,13 +640,17 @@
       transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .sec-10.slide-animated .sec-10__card-content .sec-10__entity-item:nth-child(1) {
+  .sec-10.slide-animated
+    .sec-10__card-content
+    .sec-10__entity-item:nth-child(1) {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.55s;
   }
 
-  .sec-10.slide-animated .sec-10__card-content .sec-10__entity-item:nth-child(3) {
+  .sec-10.slide-animated
+    .sec-10__card-content
+    .sec-10__entity-item:nth-child(3) {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.7s;
@@ -660,7 +668,7 @@
     gap: 8px !important;
     width: 100% !important;
     text-align: center !important;
-    margin-top: 8px !important;
+    margin-top: 2px !important;
     padding-top: 0 !important;
     opacity: 0;
     transform: translateY(14px);
@@ -692,8 +700,15 @@
 }
 
 @media (max-width: 767px) {
+  .sec-10__grid,
+  .sec-10__grid.grid-12 {
+    gap: 0px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
   .sec-10__tag {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
     margin-bottom: 6px;
   }
@@ -701,29 +716,34 @@
   .sec-10__title {
     font-size: 20px;
     line-height: 26px;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
   }
 
   .sec-10__sub-desc {
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 12px;
+    margin-bottom: 2px;
+  }
+
+  .sec-10__desc {
+    margin: 0 0 1px 0 !important;
+    padding: 0 !important;
   }
 
   .sec-10__desc p {
     font-size: 15px;
     line-height: 20px;
-    margin-bottom: 8px;
+    margin-bottom: 4px !important;
   }
 
   .sec-10__desc .sec-10__desc-highlight {
-    margin-top: 5px;
+    margin-top: 4px;
   }
 
   .sec-10__email {
     font-size: 21px;
     line-height: 26px;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 
   .sec-10__btn {
@@ -737,33 +757,70 @@
   .sec-thirdeye-7 .sec-10__tagline {
     font-size: 16px;
     line-height: 20px;
-    margin-top: 16px;
+    margin-top: 14px;
     text-align: center;
   }
 
+  .sec-market-8 .sec-10__sub-desc {
+    font-size: 15px !important;
+    line-height: 20px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-market-8 .sec-10__desc p {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin-bottom: 3px !important;
+  }
+
   .sec-market-8 .sec-10__desc p:nth-child(2) {
-    margin-bottom: 8px;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-market-8 .sec-10__desc--market {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .sec-market-8 .sec-10__email {
+    font-size: 19px !important;
+    line-height: 24px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-market-8 .sec-10__right {
+    margin: 6px auto !important;
+  }
+
+  .sec-market-8 .sec-10__card {
+    padding: 10px 14px !important;
+  }
+
+  .sec-market-8 .sec-10__divider {
+    margin: 8px 0 !important;
   }
 
   .sec-10__card {
-    padding: 14px 16px !important;
+    padding: 12px 14px !important;
     border-radius: 0 !important;
   }
 
   .sec-10__label {
-    font-size: 11px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-10__company {
-    font-size: 13px !important;
-    line-height: 17px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-10__location {
-    font-size: 11px !important;
-    line-height: 15px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
   }
 
   .sec-10__copyright-text {
@@ -826,7 +883,7 @@
   }
 
   .sec-10__label {
-    font-size: 13px !important;
+    font-size: 14px !important;
     margin-bottom: 4px !important;
   }
 
@@ -851,5 +908,16 @@
 
   .sec-10__legal-link {
     font-size: 14px;
+  }
+
+  .sec-market-8 .sec-10__desc p {
+    font-size: 15px !important;
+    line-height: 20px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-market-8 .sec-10__desc--market {
+    font-size: 15px !important;
+    line-height: 20px !important;
   }
 }
