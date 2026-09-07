@@ -531,8 +531,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         btn = document.createElement("button");
         btn.className = "scroll-down-btn";
         btn.setAttribute("aria-label", `Scroll to section ${idx + 2}`);
+        const isHome = document.body.classList.contains("page-home");
         btn.innerHTML = `
-          <span class="scroll-down-text">SCROLL DOWN</span>
+          ${!isHome ? '<span class="scroll-down-text">SCROLL DOWN</span>' : ""}
           <span class="scroll-down-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 6.41L16.59 5L12 9.58L7.41 5L6 6.41L12 12.41L18 6.41Z" fill="currentColor"/>
