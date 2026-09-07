@@ -489,17 +489,19 @@ body.no-scroll {
    ========================================================================== */
 .scroll-down-btn {
   position: absolute;
-  bottom: 24px;
+  bottom: 0 !important;
   left: 50%;
   transform: translateX(-50%) translateY(20px);
   z-index: 20;
   background: transparent;
   border: none;
+  padding: 0;
+  margin: 0;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   color: #ffffff;
   opacity: 0;
   pointer-events: none;
@@ -519,7 +521,7 @@ body.no-scroll {
 
 .scroll-section.slide-animated .scroll-down-btn:hover {
   opacity: 1;
-  transform: translateX(-50%) translateY(3px);
+  transform: translateX(-50%) translateY(0);
 }
 
 .scroll-down-text {
@@ -557,7 +559,7 @@ body.no-scroll {
   fill: currentColor;
 }
 
-/* Dark text / deep blue for light background slides */
+/* Dark text / Midnight Navy for light background slides (#01103B, opacity 50%) */
 .scroll-down-btn--dark-text,
 .scroll-section.sec-services-bg-light .scroll-down-btn,
 .scroll-section.sec-about-bg-light .scroll-down-btn,
@@ -568,9 +570,24 @@ body.no-scroll {
 .scroll-section.sec-digital-bg-light .scroll-down-btn,
 .scroll-section.sec-capacity-bg-light .scroll-down-btn,
 .scroll-section.sec-contact-bg-light .scroll-down-btn {
-  color: var(--Secondary-Deep-Blue, #011b7f);
+  color: #01103b;
 }
 
+/* 50% opacity when active on light background slides */
+.scroll-section.slide-animated .scroll-down-btn--dark-text,
+.scroll-section.slide-animated.sec-services-bg-light .scroll-down-btn,
+.scroll-section.slide-animated.sec-about-bg-light .scroll-down-btn,
+.scroll-section.slide-animated.sec-phase0-bg-light .scroll-down-btn,
+.scroll-section.slide-animated.sec-thirdeye-bg-light .scroll-down-btn,
+.scroll-section.slide-animated.sec-market-bg-light .scroll-down-btn,
+.scroll-section.slide-animated.sec-operational-bg-light .scroll-down-btn,
+.scroll-section.slide-animated.sec-digital-bg-light .scroll-down-btn,
+.scroll-section.slide-animated.sec-capacity-bg-light .scroll-down-btn,
+.scroll-section.slide-animated.sec-contact-bg-light .scroll-down-btn {
+  opacity: 0.5;
+}
+
+/* 100% opacity on hover for light background slides */
 .scroll-down-btn--dark-text:hover,
 .scroll-section.sec-services-bg-light .scroll-down-btn:hover,
 .scroll-section.sec-about-bg-light .scroll-down-btn:hover,
@@ -581,7 +598,8 @@ body.no-scroll {
 .scroll-section.sec-digital-bg-light .scroll-down-btn:hover,
 .scroll-section.sec-capacity-bg-light .scroll-down-btn:hover,
 .scroll-section.sec-contact-bg-light .scroll-down-btn:hover {
-  color: var(--Midnight-Navy, #01103b);
+  color: #01103b;
+  opacity: 1 !important;
 }
 
 @keyframes bounceDown {
@@ -611,4 +629,3 @@ body.no-scroll {
     bottom: 6px;
   }
 }
-

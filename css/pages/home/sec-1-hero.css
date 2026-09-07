@@ -402,7 +402,7 @@
   }
 
   .sec-hero .scroll-down-btn {
-    bottom: 1.5%;
+    bottom: 0 !important;
   }
 }
 
