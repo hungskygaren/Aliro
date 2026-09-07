@@ -268,9 +268,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet Portrait (<=1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-market-1 {
     background: linear-gradient(
@@ -418,9 +415,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-market-1 {
     background: linear-gradient(
@@ -589,9 +583,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (<=767px width & >=780px height)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-market-1 .flex-center-v {
     padding-top: var(--section-pt) !important;

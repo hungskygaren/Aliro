@@ -264,9 +264,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet Portrait / 2x2 Grid Pivot (<=1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-phase0-5 .flex-center-v {
     display: flex !important;
@@ -411,9 +408,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-phase0-5 {
     overflow-y: auto !important;
@@ -422,15 +416,15 @@
 
   .sec-phase0-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 16px !important;
+    padding-bottom: 0px !important;
     padding-left: 12px !important;
     padding-right: 12px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    height: 100% !important;
-    min-height: 100% !important;
+    height: auto !important;
+    min-height: 100dvh !important;
     box-sizing: border-box;
     text-align: center !important;
   }
@@ -439,13 +433,13 @@
     width: 100% !important;
     max-width: 440px !important;
     margin-top: 0 !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 12px !important;
     text-align: center !important;
   }
 
   .sec-phase0-5__title {
-    font-size: 24px !important;
-    line-height: 30px !important;
+    font-size: 26px !important;
+    line-height: 32px !important;
     text-align: center !important;
     margin: 0 !important;
   }
@@ -476,7 +470,7 @@
 
   .sec-phase0-5__card {
     padding: 12px 10px 14px 10px !important;
-    min-height: 155px !important;
+    min-height: 160px !important;
     border-radius: 0 !important;
     background: #ffffff !important;
     border: 1px solid rgba(126, 147, 168, 0.5) !important;
@@ -516,24 +510,21 @@
   }
 
   .sec-phase0-5__card-title {
-    font-size: 15px !important;
-    line-height: 19px !important;
+    font-size: 16.5px !important;
+    line-height: 20px !important;
     margin: 0 0 4px 0 !important;
     letter-spacing: 0.2px !important;
     text-align: center !important;
   }
 
   .sec-phase0-5__card-desc {
-    font-size: 13px !important;
-    line-height: 17.5px !important;
+    font-size: 13.5px !important;
+    line-height: 18px !important;
     text-align: center !important;
     margin: 0 !important;
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (<=767px width & >=780px height)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-phase0-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -546,8 +537,8 @@
   }
 
   .sec-phase0-5__title {
-    font-size: 28px !important;
-    line-height: 34px !important;
+    font-size: 29px !important;
+    line-height: 35px !important;
   }
 
   .sec-phase0-5__cards-container {
@@ -571,13 +562,13 @@
   }
 
   .sec-phase0-5__card-title {
-    font-size: 16.5px !important;
-    line-height: 21px !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
     margin-bottom: 6px !important;
   }
 
   .sec-phase0-5__card-desc {
-    font-size: 14.5px !important;
-    line-height: 19.5px !important;
+    font-size: 15px !important;
+    line-height: 20.5px !important;
   }
 }

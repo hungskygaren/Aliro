@@ -196,9 +196,6 @@
   display: block;
 }
 
-/* ==========================================================================
-   Animation: Entrance on Slide Transition End (.slide-animated)
-   ========================================================================== */
 .sec-operational-4.slide-animated .sec-operational-4__title,
 .sec-operational-4.slide-animated .sec-operational-4__card {
   opacity: 1;
@@ -222,9 +219,6 @@
   transform: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Desktop (Height <= 695px)
-   ========================================================================== */
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-operational-4 .flex-center-v {
     padding-top: var(--section-pt);
@@ -320,9 +314,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Small Desktop / Laptop (Width <= 1200px)
-   ========================================================================== */
 @media (max-width: 1200px) and (min-width: 1025px) {
   .sec-operational-4__stage {
     gap: 20px;
@@ -342,9 +333,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet Portrait & Landscape (768px <= Width <= 1024px)
-   ========================================================================== */
 @media (max-width: 1024px) and (min-width: 768px) {
   .sec-operational-4 {
     height: 100vh !important;
@@ -437,9 +425,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (Width <= 767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-operational-4 {
     height: 100vh !important;
@@ -551,9 +536,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-operational-4 .flex-center-v {
     padding-top: var(--section-pt) !important;

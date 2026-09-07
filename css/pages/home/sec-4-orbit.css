@@ -681,7 +681,7 @@
 
   .node-top-left .node-text,
   .node-bottom-left .node-text {
-    right: 8% !important;
+    right: 0% !important;
     left: auto !important;
     text-align: right !important;
     align-items: flex-end !important;

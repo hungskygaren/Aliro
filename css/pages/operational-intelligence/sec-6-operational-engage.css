@@ -58,7 +58,7 @@
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0px;
-  margin: 0 0 28px 0; 
+  margin: 0 0 28px 0;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -147,9 +147,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Desktop (Height <= 695px & Width >= 1025px)
-   ========================================================================== */
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-operational-6 .flex-center-v {
     justify-content: center !important;
@@ -188,9 +185,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Laptop / Small Desktop (Width <= 1200px)
-   ========================================================================== */
 @media (max-width: 1200px) {
   .sec-operational-6 .flex-center-v {
     padding-left: 24px;
@@ -211,9 +205,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet (768px <= Width <= 1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   #section-operational-6,
   .sec-operational-6 {
@@ -281,9 +272,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (Width <= 767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-operational-6 {
     height: 100vh !important;
@@ -377,9 +365,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-operational-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -415,9 +400,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Short Mobile (<=640px height & <=767px width)
-   ========================================================================== */
 @media (max-height: 640px) and (max-width: 767px) {
   .sec-operational-6__stage {
     gap: 10px !important;

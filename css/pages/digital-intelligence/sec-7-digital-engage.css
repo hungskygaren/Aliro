@@ -148,9 +148,6 @@
   transform: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Desktop (Height <= 695px & Width >= 1025px)
-   ========================================================================== */
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-digital-7 .flex-center-v {
     justify-content: center !important;
@@ -189,9 +186,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Laptop / Small Desktop (Width <= 1200px)
-   ========================================================================== */
 @media (max-width: 1200px) {
   .sec-digital-7 .flex-center-v {
     padding-left: 24px;
@@ -212,9 +206,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet (768px <= Width <= 1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   #section-digital-7,
   .sec-digital-7 {
@@ -282,9 +273,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (Width <= 767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   #section-digital-7,
   .sec-digital-7 {
@@ -379,9 +367,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-digital-7 .flex-center-v {
     padding-top: var(--section-pt) !important;

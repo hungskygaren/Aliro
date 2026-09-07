@@ -282,9 +282,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Laptop / Short Screens (<=660px height)
-   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-phase0-3 .flex-center-v {
     padding-top: var(--section-pt);
@@ -433,9 +430,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Compact Desktop / Landscape Tablet (<=1200px)
-   ========================================================================== */
 @media (max-width: 1200px) {
   .sec-phase0-3__title {
     font-size: 32px;
@@ -493,9 +487,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet Portrait / Stacked & 2x2 Grid Pivot (<=1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-phase0-3 .flex-center-v {
     display: flex !important;
@@ -696,9 +687,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-phase0-3 {
     overflow-y: auto !important;
@@ -707,39 +695,40 @@
 
   .sec-phase0-3 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 16px !important;
+    padding-bottom: 0px !important;
     padding-left: 12px !important;
     padding-right: 12px !important;
     justify-content: center !important;
-    height: 100% !important;
-    min-height: 100% !important;
+    align-items: center !important;
+    height: auto !important;
+    min-height: 100dvh !important;
     box-sizing: border-box;
   }
 
   .sec-phase0-3__header {
     width: 100% !important;
-    max-width: 380px !important;
+    max-width: 400px !important;
     margin-bottom: 12px !important;
     text-align: center !important;
   }
 
   .sec-phase0-3__title {
-    font-size: 24px !important;
-    line-height: 29px !important;
-    margin-bottom: 3px !important;
+    font-size: 26px !important;
+    line-height: 32px !important;
+    margin-bottom: 4px !important;
     text-align: center !important;
   }
 
   .sec-phase0-3__subtitle {
-    font-size: 14.5px !important;
-    line-height: 19px !important;
+    font-size: 16px !important;
+    line-height: 21px !important;
     text-align: center !important;
   }
 
   .sec-phase0-3__stage {
     gap: 10px !important;
     width: 100% !important;
-    max-width: 380px !important;
+    max-width: 400px !important;
     margin: 0 auto !important;
     display: flex !important;
     flex-direction: column !important;
@@ -751,12 +740,12 @@
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px 12px !important;
     width: 100% !important;
-    max-width: 380px !important;
+    max-width: 400px !important;
     margin: 0 auto !important;
   }
 
   .sec-phase0-3__card {
-    padding: 8px 10px 9px 10px !important;
+    padding: 9px 10px 10px 10px !important;
     min-height: auto !important;
     border-radius: 0 !important;
     background: rgba(1, 16, 59, 0.6) !important;
@@ -781,35 +770,35 @@
 
   .sec-phase0-3__icon-wrapper,
   .sec-phase0-3__icon {
-    width: 28px !important;
-    height: 28px !important;
+    width: 32px !important;
+    height: 32px !important;
     flex-shrink: 0 !important;
   }
 
   .sec-phase0-3__card-title {
-    font-size: 15px !important;
-    line-height: 18px !important;
+    font-size: 16.5px !important;
+    line-height: 20px !important;
     letter-spacing: 0.3px !important;
     text-align: left !important;
     margin: 0 !important;
   }
 
   .sec-phase0-3__card-title--capacity {
-    font-size: 12px !important;
-    line-height: 15px !important;
+    font-size: 13.5px !important;
+    line-height: 16.5px !important;
   }
 
   .sec-phase0-3__card-subtitle {
-    font-size: 13px !important;
-    line-height: 16.5px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
     margin-bottom: 3px !important;
     text-align: left !important;
     width: 100% !important;
   }
 
   .sec-phase0-3__card-desc {
-    font-size: 12.5px !important;
-    line-height: 16px !important;
+    font-size: 13.5px !important;
+    line-height: 17.5px !important;
     text-align: left !important;
     width: 100% !important;
     margin: 0 !important;
@@ -826,7 +815,7 @@
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
-    max-width: 240px !important;
+    max-width: 155px !important;
     height: auto !important;
     aspect-ratio: 569 / 411 !important;
     margin: 2px auto 0 auto !important;
@@ -837,15 +826,16 @@
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-    width: 240px !important;
-    height: 240px !important;
-    border-radius: 240px !important;
-    filter: blur(45px) !important;
+    width: 155px !important;
+    height: 155px !important;
+    border-radius: 155px !important;
+    filter: blur(35px) !important;
   }
 
   .sec-phase0-3__center-img {
     width: 100% !important;
-    max-width: 240px !important;
+    max-width: 155px !important;
+    max-height: 112px !important;
     height: auto !important;
     object-fit: contain !important;
     margin: 0 auto !important;
@@ -867,9 +857,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (<=767px width & >=780px height)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-phase0-3 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -882,14 +869,14 @@
   }
 
   .sec-phase0-3__title {
-    font-size: 26px !important;
-    line-height: 32px !important;
+    font-size: 28px !important;
+    line-height: 34px !important;
     margin-bottom: 5px !important;
   }
 
   .sec-phase0-3__subtitle {
-    font-size: 16.5px !important;
-    line-height: 22px !important;
+    font-size: 17.5px !important;
+    line-height: 23px !important;
   }
 
   .sec-phase0-3__stage {
@@ -918,47 +905,48 @@
 
   .sec-phase0-3__icon-wrapper,
   .sec-phase0-3__icon {
-    width: 34px !important;
-    height: 34px !important;
+    width: 36px !important;
+    height: 36px !important;
   }
 
   .sec-phase0-3__card-title {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
     text-align: left !important;
   }
 
   .sec-phase0-3__card-title--capacity {
-    font-size: 13px !important;
-    line-height: 16px !important;
+    font-size: 14.5px !important;
+    line-height: 18px !important;
   }
 
   .sec-phase0-3__card-subtitle {
-    font-size: 14px !important;
-    line-height: 18px !important;
+    font-size: 15px !important;
+    line-height: 19px !important;
     margin-bottom: 3px !important;
     text-align: left !important;
   }
 
   .sec-phase0-3__card-desc {
-    font-size: 13.5px !important;
-    line-height: 18px !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
     text-align: left !important;
   }
 
   .sec-phase0-3__center-wrapper {
-    max-width: 300px !important;
+    max-width: 185px !important;
     margin: 4px auto 0 auto !important;
   }
 
   .sec-phase0-3__glow {
-    width: 280px !important;
-    height: 280px !important;
-    border-radius: 280px !important;
-    filter: blur(55px) !important;
+    width: 185px !important;
+    height: 185px !important;
+    border-radius: 185px !important;
+    filter: blur(40px) !important;
   }
 
   .sec-phase0-3__center-img {
-    max-width: 300px !important;
+    max-width: 185px !important;
+    max-height: 134px !important;
   }
 }

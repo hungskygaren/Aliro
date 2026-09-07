@@ -181,13 +181,15 @@
 
 .sec-10__title--thirdeye,
 .sec-10__sub-desc--thirdeye,
-.sec-10__tagline {
+.sec-10__tagline,
+.sec-10__btn--thirdeye {
   display: none !important;
 }
 
 .sec-thirdeye-7 .sec-10__tag,
 .sec-thirdeye-7 .sec-10__title--default,
-.sec-thirdeye-7 .sec-10__sub-desc--default {
+.sec-thirdeye-7 .sec-10__sub-desc--default,
+.sec-thirdeye-7 .sec-10__btn--default {
   display: none !important;
 }
 
@@ -196,11 +198,15 @@
 }
 
 .sec-thirdeye-7 .sec-10__title--thirdeye {
-  display: inline;
+  display: inline !important;
 }
 
 .sec-thirdeye-7 .sec-10__sub-desc--thirdeye {
-  display: inline;
+  display: inline !important;
+}
+
+.sec-thirdeye-7 .sec-10__btn--thirdeye {
+  display: inline-flex !important;
 }
 
 .sec-thirdeye-7 .sec-10__tagline {

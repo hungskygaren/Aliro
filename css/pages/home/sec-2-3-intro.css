@@ -546,46 +546,46 @@
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-architect__sub-top,
   .sec-framework__sub-top {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 26px;
     margin-bottom: 10px;
   }
 
   .sec-architect__title,
   .sec-framework__title {
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 33px;
+    line-height: 40px;
     margin-bottom: 16px;
   }
 
   .sec-architect__sub-bottom,
   .sec-framework__sub-bottom {
-    font-size: 19px;
-    line-height: 26px;
+    font-size: 21px;
+    line-height: 28px;
     margin-bottom: 18px;
   }
 
   .sec-architect__desc,
   .sec-framework__desc {
-    font-size: 16px;
-    line-height: 23px;
+    font-size: 17.5px;
+    line-height: 25px;
     margin-bottom: 22px;
   }
 
   .sec-architect__btn,
   .sec-framework__btn {
-    padding: 10px 24px;
-    font-size: 16px;
+    padding: 11px 26px;
+    font-size: 17px;
   }
 
   .sec-architect__img,
   .sec-framework__img {
-    max-width: 330px !important;
-    max-height: 260px !important;
+    max-width: 350px !important;
+    max-height: 280px !important;
     margin-top: 16px !important;
   }
 
   .sec-framework__img {
-    left: 22px !important;
+    left: 28px !important;
   }
 }

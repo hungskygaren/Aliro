@@ -115,11 +115,6 @@
   display: none;
 }
 
-
-/* ==========================================================================
-   Animation: Entrance on Slide Transition End (.slide-animated)
-   ========================================================================== */
-/* Safety initial state: strictly hidden before slide animation */
 .sec-market-3:not(.slide-animated):not(.visited) .phrase,
 .sec-market-3:not(.slide-animated):not(.visited) .sec-market-3__title,
 .sec-market-3:not(.slide-animated):not(.visited) .sec-market-3__subtitle,
@@ -157,7 +152,6 @@
   transition-delay: 0.32s;
 }
 
-/* Staggered cascading entrance for mobile cards */
 .sec-market-3__mobile-card.phrase {
   opacity: 0;
   transform: translateY(24px) scale(0.92);
@@ -198,9 +192,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Desktop (Height <= 660px)
-   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-market-3__header {
     margin-top: 10px;
@@ -241,9 +232,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Small Desktop / Laptop (Width <= 1200px)
-   ========================================================================== */
 @media (max-width: 1200px) {
   .sec-market-3__title {
     font-size: 32px;
@@ -260,9 +248,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet Portrait (Width <= 1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-market-3 {
     height: 100vh !important;
@@ -311,9 +296,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (Width <= 767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-market-3 {
     height: 100vh !important;
@@ -350,12 +332,10 @@
     color: rgba(255, 255, 255, 0.88) !important;
   }
 
-  /* Hide desktop single diagram */
   .sec-market-3__diagram-wrapper {
     display: none !important;
   }
 
-  /* Show 2 columns x 3 rows grid without card boxes */
   .sec-market-3__mobile-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
@@ -422,9 +402,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (<=767px width & >=780px height)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-market-3 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -470,8 +447,3 @@
     line-height: 22px !important;
   }
 }
-
-
-
-
-

@@ -513,9 +513,6 @@ body.no-scroll {
   overflow: hidden !important;
 }
 
-/* ==========================================================================
-   Scroll Down Button Styles (In-Slide, Re-animating on each section)
-   ========================================================================== */
 .scroll-down-btn {
   position: absolute;
   bottom: 0 !important;
@@ -541,7 +538,6 @@ body.no-scroll {
     color 0.25s ease;
 }
 
-/* Re-animate whenever slide becomes active */
 .scroll-section.slide-animated .scroll-down-btn {
   opacity: 0.85;
   pointer-events: auto;
@@ -588,7 +584,6 @@ body.no-scroll {
   fill: currentColor;
 }
 
-/* Dark text / Midnight Navy for light background slides (#01103B, opacity 50%) */
 .scroll-down-btn--dark-text,
 .scroll-section.sec-services-bg-light .scroll-down-btn,
 .scroll-section.sec-about-bg-light .scroll-down-btn,
@@ -602,7 +597,6 @@ body.no-scroll {
   color: #01103b;
 }
 
-/* 50% opacity when active on light background slides */
 .scroll-section.slide-animated .scroll-down-btn--dark-text,
 .scroll-section.slide-animated.sec-services-bg-light .scroll-down-btn,
 .scroll-section.slide-animated.sec-about-bg-light .scroll-down-btn,
@@ -616,7 +610,6 @@ body.no-scroll {
   opacity: 0.5;
 }
 
-/* 100% opacity on hover for light background slides */
 .scroll-down-btn--dark-text:hover,
 .scroll-section.sec-services-bg-light .scroll-down-btn:hover,
 .scroll-section.sec-about-bg-light .scroll-down-btn:hover,
@@ -659,18 +652,11 @@ body.no-scroll {
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Scroll Down Button Rules
-   - Desktop: Shows on all pages and all sections (except footer)
-   - Mobile (<=1024px): Shows on the first slide (Hero / Section 1) of every route,
-     hidden on subsequent sections
-   ========================================================================== */
 @media (max-width: 1024px) {
   .scroll-down-btn {
     display: none !important;
   }
 
-  /* Re-enable for the first slide of every route */
   .swiper-slide:first-child .scroll-down-btn,
   .sec-hero .scroll-down-btn,
   .sec-about-1 .scroll-down-btn,

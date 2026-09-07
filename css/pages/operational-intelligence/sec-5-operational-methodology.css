@@ -344,9 +344,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Desktop (Height <= 695px & Width >= 1025px)
-   ========================================================================== */
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-operational-5 .flex-center-v {
     justify-content: center;
@@ -450,9 +447,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Small Desktop / Laptop (1025px <= Width <= 1200px)
-   ========================================================================== */
 @media (max-width: 1200px) and (min-width: 1025px) {
   .sec-operational-5__stepper {
     max-width: 580px;
@@ -491,9 +485,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet Portrait & Landscape (768px <= Width <= 1024px)
-   ========================================================================== */
 @media (max-width: 1024px) and (min-width: 768px) {
   .sec-operational-5 {
     height: 100vh !important;
@@ -585,12 +576,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (Width <= 767px)
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   Modeled on Section-Market-5: Horizontal Cards with Text on Left, Image on Right
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-operational-5 {
     height: 100vh !important;
@@ -618,7 +603,6 @@
     display: none !important;
   }
 
-  /* Drop top stepper & horizontal arrow */
   .sec-operational-5__stepper {
     display: none !important;
   }
@@ -627,7 +611,6 @@
     display: none !important;
   }
 
-  /* Vertical stack: Card 1 on top, Card 2 below */
   .sec-operational-5__stage {
     display: flex !important;
     flex-direction: column !important;
@@ -639,7 +622,6 @@
     margin: 0 auto !important;
   }
 
-  /* Horizontal card: Text on Left, Image on Right */
   .sec-operational-5__col {
     width: 100% !important;
     max-width: 520px !important;
@@ -671,7 +653,6 @@
     -webkit-backdrop-filter: blur(16px) !important;
   }
 
-  /* Step Badge (1 & 2) */
   .sec-operational-5__badge {
     grid-area: badge !important;
     display: flex !important;
@@ -734,7 +715,6 @@
     font-weight: 700 !important;
   }
 
-  /* Right-side Blueprint Image Visual */
   .sec-operational-5__img-box {
     grid-area: img !important;
     grid-row: 1 / -1 !important;
@@ -779,9 +759,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (Width <= 767px & Height >= 780px)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-operational-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -837,9 +814,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Ultra-Short Mobile (<=620px height & <=767px width)
-   ========================================================================== */
 @media (max-height: 620px) and (max-width: 767px) {
   .sec-operational-5 .flex-center-v {
     padding-top: var(--section-pt) !important;

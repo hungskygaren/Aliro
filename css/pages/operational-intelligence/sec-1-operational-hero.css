@@ -292,9 +292,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet Portrait (<=1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-operational-1 .flex-center-v {
     display: flex !important;
@@ -439,9 +436,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-operational-1 {
     overflow-y: auto !important;
@@ -611,9 +605,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (<=767px width & >=780px height)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-operational-1 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -685,5 +676,3 @@
     max-height: 250px !important;
   }
 }
-
-

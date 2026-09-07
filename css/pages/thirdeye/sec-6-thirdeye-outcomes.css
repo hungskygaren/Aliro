@@ -274,9 +274,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet (<=1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-thirdeye-6 {
     background: linear-gradient(
@@ -380,12 +377,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   ========================================================================== */
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-thirdeye-6 {
     overflow-y: auto !important;
@@ -401,13 +392,13 @@
 
   .sec-thirdeye-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 18px !important;
+    padding-bottom: 0px !important;
     padding-left: 18px !important;
     padding-right: 18px !important;
     justify-content: center !important;
     align-items: center !important;
-    height: 100% !important;
-    min-height: 100% !important;
+    height: auto !important;
+    min-height: 100dvh !important;
   }
 
   .sec-thirdeye-6__stage {
@@ -430,8 +421,8 @@
   }
 
   .sec-thirdeye-6__title {
-    font-size: 28px !important;
-    line-height: 34px !important;
+    font-size: 30px !important;
+    line-height: 36px !important;
     margin-bottom: 13px !important;
   }
 
@@ -447,21 +438,21 @@
   }
 
   .sec-thirdeye-6__icon-wrap {
-    width: 48px !important;
-    height: 48px !important;
+    width: 50px !important;
+    height: 50px !important;
     flex-shrink: 0 !important;
   }
 
   .sec-thirdeye-6__item-text {
-    font-size: 16.5px !important;
-    line-height: 21px !important;
+    font-size: 17.5px !important;
+    line-height: 22.5px !important;
     font-weight: 700 !important;
     max-width: 100% !important;
   }
 
   .sec-thirdeye-6__subtitle {
-    font-size: 15px !important;
-    line-height: 21px !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
     color: #01103b !important;
     font-weight: 600 !important;
     margin: 0 !important;
@@ -498,9 +489,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Short Viewports (<=767px width & <=560px height)
-   ========================================================================== */
 @media (max-width: 767px) and (max-height: 560px) {
   .sec-thirdeye-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -548,13 +536,10 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (<=767px width & >=780px height)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-thirdeye-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 26px !important;
+    padding-bottom: 25px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
@@ -565,8 +550,8 @@
   }
 
   .sec-thirdeye-6__title {
-    font-size: 32px !important;
-    line-height: 38px !important;
+    font-size: 34px !important;
+    line-height: 40px !important;
     margin-bottom: 18px !important;
   }
 
@@ -580,18 +565,18 @@
   }
 
   .sec-thirdeye-6__icon-wrap {
-    width: 54px !important;
-    height: 54px !important;
+    width: 56px !important;
+    height: 56px !important;
   }
 
   .sec-thirdeye-6__item-text {
-    font-size: 18px !important;
-    line-height: 23px !important;
+    font-size: 19px !important;
+    line-height: 24px !important;
   }
 
   .sec-thirdeye-6__subtitle {
-    font-size: 16.5px !important;
-    line-height: 23px !important;
+    font-size: 17.5px !important;
+    line-height: 24px !important;
   }
 
   .sec-thirdeye-6__right,

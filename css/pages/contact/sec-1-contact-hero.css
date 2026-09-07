@@ -49,9 +49,6 @@
   z-index: 3;
 }
 
-/* --------------------------------------------------------------------------
-   Left Column (570px wide in 1440 canvas)
-   -------------------------------------------------------------------------- */
 .sec-contact-1__left {
   width: 570px;
   max-width: 570px;
@@ -124,9 +121,6 @@
   margin-bottom: 0;
 }
 
-/* --------------------------------------------------------------------------
-   Right Column Card (570px wide x 530px high, top 110px in 720 canvas)
-   -------------------------------------------------------------------------- */
 .sec-contact-1__right {
   width: 570px;
   max-width: 570px;
@@ -151,7 +145,6 @@
   transition-delay: 0.25s;
 }
 
-/* Form Styles Inside Section 1 Card */
 .sec-contact-1 .sec-contact-2__title {
   font-family: Aptos, var(--font-brand);
   font-size: 32px;
@@ -369,7 +362,6 @@
   color: #02258c;
 }
 
-/* Scroll Down Button styling for Section Contact 1 (Dark Background) */
 .scroll-section.sec-contact-bg-dark .scroll-down-btn,
 .sec-contact-1 .scroll-down-btn {
   color: #c5daf3;
@@ -598,7 +590,6 @@
     margin: auto 0;
   }
 
-  /* Hide the text content column on responsive/mobile - only show form */
   .sec-contact-1__left {
     display: none !important;
   }

@@ -274,31 +274,31 @@
 
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-9__tag {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 14px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 4px;
   }
 
   .sec-9__title {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 31px;
+    line-height: 38px;
     margin-bottom: 16px;
   }
 
   .sec-9__desc {
-    font-size: 17px;
-    line-height: 24px;
+    font-size: 18.5px;
+    line-height: 26px;
     margin-bottom: 24px;
   }
 
   .sec-9__btn {
-    padding: 10px 24px;
-    font-size: 16px;
+    padding: 11px 26px;
+    font-size: 17px;
   }
 
   .sec-9__right,
   .sec-9__img {
-    max-width: 310px !important;
-    max-height: 240px !important;
+    max-width: 330px !important;
+    max-height: 260px !important;
   }
 }

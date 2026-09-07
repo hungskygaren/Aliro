@@ -195,7 +195,6 @@ function bindNavEvents() {
 
       const isCurrentlyOpen = wrapper.classList.contains("is-open");
 
-      // Accordion: close other dropdowns in nav drawer
       document
         .querySelectorAll(".nav-drawer .nav-dropdown-wrapper")
         .forEach((other) => {
@@ -378,12 +377,6 @@ document.addEventListener("DOMContentLoaded", async () => {
           history.replaceState(null, "", `#${targetId}`);
 
           if (this.slides) {
-            this.slides.forEach((slide, idx) => {
-              if (idx !== this.activeIndex) {
-                slide.classList.remove("slide-animated");
-              }
-            });
-
             if (this.slides[this.previousIndex]) {
               const prevSlide = this.slides[this.previousIndex];
               prevSlide.classList.add("visited");
@@ -401,27 +394,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                 }
               });
             }
-
-            const currentSlide = this.slides[this.activeIndex];
-            if (currentSlide) {
-              currentSlide.classList.remove("visited");
-              currentSlide.classList.add("slide-animated");
-            }
           }
         },
 
         slideChangeTransitionEnd: function () {
           if (!this.slides) return;
 
-          this.slides.forEach((slide, idx) => {
-            if (idx !== this.activeIndex) {
-              slide.classList.remove("slide-animated");
-            }
-          });
-
           const currentSlide = this.slides[this.activeIndex];
-          if (currentSlide) {
-            currentSlide.classList.remove("visited");
+          if (currentSlide && !currentSlide.classList.contains("slide-animated")) {
             currentSlide.classList.add("slide-animated");
             triggerCounterAnimations(currentSlide);
           }

@@ -1,11 +1,5 @@
-/* ==========================================================================
-   Privacy Notice & Website Terms of Use Page Styles
-   Figma Node: 5122-2762 (10-Privacy-Terms)
-   ========================================================================== */
-
 @import "../home/sec-10-contact.css";
 
-/* --- Page & Scroll Container Overrides --- */
 html:has(body.page-privacy-terms),
 body.page-privacy-terms {
   width: 100%;
@@ -18,7 +12,6 @@ body.page-privacy-terms {
   scroll-behavior: smooth;
 }
 
-/* Header adjustments for static page */
 body.page-privacy-terms .navbar-overlay {
   position: fixed;
   top: 0;
@@ -29,17 +22,21 @@ body.page-privacy-terms .navbar-overlay {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* --- Hero & Title Section --- */
+body.page-privacy-terms .sec-10 .flex-center-v,
+body.page-privacy-terms .sec-10 .container {
+  padding-top: 10px !important;
+}
+
 .sec-pt-main {
   width: 100%;
   background-color: #ffffff;
-  padding-top: 145px; /* Offset to match Figma top: 145px */
-  padding-bottom: 80px;
+  padding-top: 145px;
+  padding-bottom: 10px;
 }
 
 .sec-pt__hero {
   text-align: center;
-  margin-bottom: 56px; /* Gap between Title bottom (245px) and Content top (301px) in Figma */
+  margin-bottom: 56px;
   padding: 0;
 }
 
@@ -55,7 +52,6 @@ body.page-privacy-terms .navbar-overlay {
   letter-spacing: -0.5px;
 }
 
-/* --- Content Wrapper (Exact 970px width on desktop matching Figma) --- */
 .sec-pt__container {
   width: 970px;
   max-width: 100%;
@@ -63,7 +59,6 @@ body.page-privacy-terms .navbar-overlay {
   box-sizing: border-box;
 }
 
-/* --- Intro Text --- */
 .sec-pt__intro {
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
@@ -81,10 +76,9 @@ body.page-privacy-terms .navbar-overlay {
   margin-bottom: 0;
 }
 
-/* --- Sections --- */
 .sec-pt__section {
   margin-bottom: 32px;
-  scroll-margin-top: 95px; /* Offset for sticky header when jumping to anchor */
+  scroll-margin-top: 95px;
 }
 
 .sec-pt__heading {
@@ -113,7 +107,6 @@ body.page-privacy-terms .navbar-overlay {
   margin-bottom: 0;
 }
 
-/* Lists */
 .sec-pt__list {
   list-style: none;
   padding-left: 0;
@@ -137,7 +130,6 @@ body.page-privacy-terms .navbar-overlay {
   font-weight: 700;
 }
 
-/* Links */
 .sec-pt__link {
   color: var(--Highlight-Blue, #0431b1);
   text-decoration: underline;
@@ -150,7 +142,6 @@ body.page-privacy-terms .navbar-overlay {
   color: #022384;
 }
 
-/* --- Responsive Breakpoints --- */
 @media (max-width: 1024px) {
   .sec-pt__hero {
     padding: 0 24px;
@@ -185,7 +176,7 @@ body.page-privacy-terms .navbar-overlay {
 @media (max-width: 768px) {
   .sec-pt-main {
     padding-top: 95px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
   }
 
   .sec-pt__hero {

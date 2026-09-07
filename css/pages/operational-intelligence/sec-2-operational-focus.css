@@ -215,9 +215,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Desktop (Height <= 660px, Width >= 1025px)
-   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-operational-2 .flex-center-v {
     padding-top: var(--section-pt);
@@ -267,9 +264,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Compact Desktop / Landscape Tablet (<=1200px)
-   ========================================================================== */
 @media (max-width: 1200px) {
   .sec-operational-2 .flex-center-v {
     padding-top: var(--section-pt);
@@ -310,9 +304,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet Portrait (768px - 1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-operational-2 {
     height: 100vh;
@@ -390,9 +381,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-operational-2 {
     height: auto !important;
@@ -502,9 +490,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (<=767px width & >=780px height)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-operational-2 .flex-center-v {
     padding-top: var(--section-pt) !important;

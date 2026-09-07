@@ -445,43 +445,43 @@
 
 @media (max-width: 768px) and (min-height: 780px) {
   .sec-9b__tag {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 24px;
     margin-bottom: 6px;
   }
 
   .sec-9b__title {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 29px;
+    line-height: 35px;
     margin-bottom: 6px;
   }
 
   .sec-9b__desc {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 18.5px;
+    line-height: 24px;
     margin-bottom: 20px;
   }
 
   .sec-9b__card {
-    flex: 0 0 310px !important;
-    max-width: 310px !important;
-    min-height: 340px !important;
-    padding: 18px !important;
+    flex: 0 0 320px !important;
+    max-width: 320px !important;
+    min-height: 350px !important;
+    padding: 20px !important;
   }
 
   .sec-9b__card-title {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 18.5px;
+    line-height: 24px;
     margin-bottom: 8px;
   }
 
   .sec-9b__card-desc {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 15.5px;
+    line-height: 22px;
   }
 
   .sec-9b__card-btn {
-    font-size: 14px;
+    font-size: 15.5px;
     padding-top: 12px;
   }
 }

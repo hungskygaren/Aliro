@@ -241,9 +241,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet Portrait / Single Column Pivot (<=1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-phase0-1 {
     background: linear-gradient(
@@ -384,21 +381,23 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   ========================================================================== */
 @media (max-width: 767px) {
+  .sec-phase0-1 {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .sec-phase0-1 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 35px !important;
+    padding-bottom: 0px !important;
     padding-left: 14px !important;
     padding-right: 14px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    height: 100% !important;
-    min-height: 100% !important;
+    height: auto !important;
+    min-height: 100dvh !important;
     box-sizing: border-box;
     text-align: center !important;
   }
@@ -427,33 +426,33 @@
   }
 
   .sec-phase0-1__tag {
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 6px;
+    font-size: 16.5px !important;
+    line-height: 22px !important;
+    margin-bottom: 8px !important;
     text-align: center !important;
   }
 
   .sec-phase0-1__title {
-    font-size: 28px;
-    line-height: 34px;
-    margin-bottom: 8px;
+    font-size: 30px !important;
+    line-height: 36px !important;
+    margin-bottom: 8px !important;
     text-align: center !important;
     max-width: 100% !important;
   }
 
   .sec-phase0-1__catchphrase {
-    font-size: 16.5px;
-    line-height: 22px;
-    margin-bottom: 8px;
+    font-size: 18px !important;
+    line-height: 24px !important;
+    margin-bottom: 8px !important;
     text-align: center !important;
   }
 
   .sec-phase0-1__desc {
-    font-size: 15px;
-    line-height: 21px;
-    max-width: 360px !important;
+    font-size: 15.5px !important;
+    line-height: 22px !important;
+    max-width: 380px !important;
     text-align: center !important;
-    margin: 0 auto 14px auto !important;
+    margin: 0 auto 16px auto !important;
   }
 
   .sec-phase0-1__btn-wrapper {
@@ -464,8 +463,9 @@
   }
 
   .sec-phase0-1__btn {
-    padding: 9px 22px !important;
-    font-size: 15px !important;
+    padding: 10px 24px !important;
+    font-size: 15.5px !important;
+    border-radius: 0 !important;
     width: fit-content !important;
     margin-inline: auto !important;
   }
@@ -473,7 +473,7 @@
   .sec-phase0-1__right {
     width: 100% !important;
     max-width: 100% !important;
-    margin-top: 20px !important;
+    margin-top: 18px !important;
     margin-inline: auto !important;
     display: flex !important;
     flex-direction: column !important;
@@ -483,7 +483,7 @@
 
   .sec-phase0-1__img-wrapper {
     width: 100% !important;
-    max-width: 300px !important;
+    max-width: 320px !important;
     margin-inline: auto !important;
     display: flex !important;
     justify-content: center !important;
@@ -501,8 +501,8 @@
 
   .sec-phase0-1__img {
     width: 100% !important;
-    max-width: 300px !important;
-    max-height: 200px !important;
+    max-width: 320px !important;
+    max-height: 210px !important;
     height: auto !important;
     aspect-ratio: 670 / 447 !important;
     object-fit: contain !important;
@@ -520,14 +520,10 @@
   }
 }
 
-
-/* ==========================================================================
-   Responsive: Modern Tall Phones (<=767px width & >=780px height)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-phase0-1 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 75px !important;
+    padding-bottom: 25px !important;
   }
 
   .sec-phase0-1__grid {
@@ -535,39 +531,40 @@
   }
 
   .sec-phase0-1__tag {
-    font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 10px;
+    font-size: 18px !important;
+    line-height: 24px !important;
+    margin-bottom: 10px !important;
   }
 
   .sec-phase0-1__title {
-    font-size: 32px;
-    line-height: 38px;
-    margin-bottom: 12px;
+    font-size: 33px !important;
+    line-height: 39px !important;
+    margin-bottom: 12px !important;
   }
 
   .sec-phase0-1__catchphrase {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 12px;
+    font-size: 20px !important;
+    line-height: 26px !important;
+    margin-bottom: 12px !important;
   }
 
   .sec-phase0-1__desc {
-    font-size: 16px;
-    line-height: 23px;
-    max-width: 400px !important;
+    font-size: 16.5px !important;
+    line-height: 24px !important;
+    max-width: 410px !important;
     margin-bottom: 18px !important;
   }
 
   .sec-phase0-1__btn {
     padding: 11px 24px !important;
     font-size: 16.5px !important;
+    border-radius: 0 !important;
   }
 
   .sec-phase0-1__right {
     width: 100% !important;
     max-width: 100% !important;
-    margin-top: 40px !important;
+    margin-top: 36px !important;
   }
 
   .sec-phase0-1__img-wrapper {

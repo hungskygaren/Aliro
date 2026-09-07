@@ -119,7 +119,6 @@
   display: none;
 }
 
-/* Safety initial state: strictly hidden before slide animation */
 .sec-thirdeye-3:not(.slide-animated):not(.visited) .phrase,
 .sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__header,
 .sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__diagram-wrapper,
@@ -133,7 +132,6 @@
   transform: translateY(24px) scale(0.92) !important;
 }
 
-/* Staggered cascading entrance for mobile cards */
 .sec-thirdeye-3__mobile-card.phrase {
   opacity: 0;
   transform: translateY(24px) scale(0.92);
@@ -215,9 +213,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet (<=1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-thirdeye-3 .flex-center-v {
     display: flex !important;
@@ -263,9 +258,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile Standard (<=767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-thirdeye-3 {
     height: 100vh !important;
@@ -276,41 +268,39 @@
 
   .sec-thirdeye-3 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 0px !important;
     padding-left: 12px !important;
     padding-right: 12px !important;
     justify-content: center !important;
     align-items: center !important;
-    height: 100% !important;
-    min-height: 100% !important;
+    height: auto !important;
+    min-height: 100dvh !important;
   }
 
   .sec-thirdeye-3__header {
     margin-top: 0 !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-thirdeye-3__title {
-    font-size: 18.5px !important;
-    line-height: 23px !important;
-    max-width: 360px !important;
+    font-size: 22px !important;
+    line-height: 27px !important;
+    max-width: 380px !important;
     margin: 0 auto !important;
     text-align: center !important;
   }
 
-  /* Hide desktop diagrams & old domain chips */
   .sec-thirdeye-3__diagram-wrapper,
   .sec-thirdeye-3__domains {
     display: none !important;
   }
 
-  /* Show 2-column mobile grid for the 7 domains */
   .sec-thirdeye-3__mobile-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 5px 12px !important;
+    gap: 6px 12px !important;
     width: 100% !important;
-    max-width: 360px !important;
+    max-width: 370px !important;
     margin: 0 auto !important;
     z-index: 3;
     position: relative;
@@ -341,13 +331,13 @@
   .sec-thirdeye-3__mobile-card--span2 {
     grid-column: span 2 !important;
     width: 100% !important;
-    max-width: 340px !important;
+    max-width: 350px !important;
     margin: 0 auto !important;
   }
 
   .sec-thirdeye-3__mobile-img-box {
-    width: 82px !important;
-    height: 82px !important;
+    width: 86px !important;
+    height: 86px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -355,10 +345,10 @@
   }
 
   .sec-thirdeye-3__mobile-img {
-    width: 82px !important;
-    height: 82px !important;
-    max-width: 82px !important;
-    max-height: 82px !important;
+    width: 86px !important;
+    height: 86px !important;
+    max-width: 86px !important;
+    max-height: 86px !important;
     object-fit: contain !important;
     display: block !important;
     filter: drop-shadow(0 5px 14px rgba(41, 187, 255, 0.38)) !important;
@@ -368,9 +358,9 @@
 
   .sec-thirdeye-3__mobile-card-title {
     font-family: Aptos, var(--font-brand) !important;
-    font-size: 15px !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
-    line-height: 19px !important;
+    line-height: 20px !important;
     color: #ffffff !important;
     margin: 0 !important;
     letter-spacing: 0.2px !important;
@@ -379,23 +369,20 @@
 
   .sec-thirdeye-3__mobile-card-desc {
     font-family: Aptos, var(--font-brand) !important;
-    font-size: 13.5px !important;
-    line-height: 18px !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
     font-weight: 400 !important;
     color: rgba(255, 255, 255, 0.88) !important;
     text-align: center !important;
     margin: 3px auto 0 auto !important;
-    max-width: 330px !important;
+    max-width: 340px !important;
   }
 }
 
-/* ==========================================================================
-   Responsive: Modern Tall Phones (<=767px width & >=780px height)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-thirdeye-3 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 24px !important;
+    padding-bottom: 25px !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
@@ -405,8 +392,8 @@
   }
 
   .sec-thirdeye-3__title {
-    font-size: 24px !important;
-    line-height: 30px !important;
+    font-size: 26px !important;
+    line-height: 32px !important;
     max-width: 400px !important;
   }
 
@@ -433,16 +420,14 @@
   }
 
   .sec-thirdeye-3__mobile-card-title {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 17.5px !important;
+    line-height: 22px !important;
   }
 
   .sec-thirdeye-3__mobile-card-desc {
-    font-size: 14px !important;
-    line-height: 19px !important;
+    font-size: 15px !important;
+    line-height: 20.5px !important;
     max-width: 360px !important;
     margin-top: 4px !important;
   }
 }
-
-

@@ -9,7 +9,6 @@
     />
     <title>Aliro Consulting</title>
 
-    <!-- Google Fonts: Load Inter and Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,16 +16,13 @@
       rel="stylesheet"
     />
 
-    <!-- Swiper CSS CDN -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Preload Hero Background Images for instant animation -->
     <link
       rel="preload"
       href="assets/hero-bg-left.webp"
@@ -55,33 +51,28 @@
     />
   </head>
   <body>
-    <!-- Top Navigation Header (Reusable Component) -->
+
     <header class="navbar-overlay light-theme" id="mainHeader"></header>
 
-
-
-    <!-- Swiper Fullscreen Container -->
     <main class="swiper main-swiper" id="scrollContainer">
       <div class="swiper-wrapper">
-        <!-- Section 1 (Hero Section) -->
+
         <section
           class="scroll-section swiper-slide sec-hero"
           id="section-1"
           data-section-index="0"
         >
-          <!-- Hero Left & Right Side Shapes -->
+
           <div class="sec-hero__cliff sec-hero__cliff--left"></div>
           <div class="sec-hero__cliff sec-hero__cliff--right"></div>
 
-          <!-- Hero Main Content Container (Centered 1170px) -->
           <div class="container flex-center-v">
             <div class="sec-hero__content d-flex flex-col items-center">
-              <!-- Top Subtitle -->
+
               <p class="sec-hero__sub-top">
                 <span class="phrase">THE GAP BETWEEN</span>
               </p>
 
-              <!-- Main Title 64px (1 Single Phrase Chunk) -->
               <h1 class="sec-hero__title">
                 <span class="line-desktop">STRATEGIC AMBITION</span>
                 <span class="line-desktop">AND OPERATIONAL REALITY</span>
@@ -97,13 +88,11 @@
                 Aliro Consulting is a senior-led healthcare strategic intelligence and transformation advisory firm, working on the ground across Southeast Asia with investors, operators and ministries of health.
               </p>
 
-              <!-- Hero Action CTA Button -->
               <a href="contact.html" class="btn-conversation btn-hero-cta"
                 >Start a Conversation</a
               >
             </div>
 
-            <!-- Mobile Dedicated Graphic Block (Flowing directly below content like Section 2 & 3) -->
             <div class="sec-hero__img-mobile">
               <img
                 src="assets/hero-mb-bg-left.webp"
@@ -118,7 +107,6 @@
             </div>
           </div>
 
-          <!-- Scroll Down Action Button -->
           <button
             class="scroll-down-btn"
             id="scrollDownBtn"
@@ -145,7 +133,6 @@
           </button>
         </section>
 
-        <!-- Section 2: Architect Transformation -->
         <section
           class="scroll-section swiper-slide sec-2 sec-architect"
           id="section-2"
@@ -177,7 +164,6 @@
               >
             </div>
 
-            <!-- Right Column: Isometric Visual Graphic (53.47vw / 770px) -->
             <img
               src="assets/sec-2-right.webp"
               alt="Aliro Architectural Transformation Layers"
@@ -186,7 +172,6 @@
           </div>
         </section>
 
-        <!-- Section 2b: Key Highlights / Four Pillars -->
         <section
           class="scroll-section swiper-slide sec-2b"
           id="section-2b"
@@ -195,7 +180,7 @@
           <div class="container height-100 flex-center-v">
             <div class="sec-2b__wrapper">
               <div class="sec-2b__grid">
-                <!-- Column 1: 25+ Years Experience -->
+
                 <div class="sec-2b__col phrase">
                   <div class="sec-2b__icon-wrapper">
                     <img src="assets/sec-2b-icon-1.webp" alt="25+ Years of Experience" class="sec-2b__icon" />
@@ -206,7 +191,6 @@
                   </p>
                 </div>
 
-                <!-- Column 2: 11 ASEAN Member States -->
                 <div class="sec-2b__col phrase">
                   <div class="sec-2b__icon-wrapper">
                     <img src="assets/sec-2b-icon-2.webp" alt="11 ASEAN Member States" class="sec-2b__icon" />
@@ -217,7 +201,6 @@
                   </p>
                 </div>
 
-                <!-- Column 3: Trusted by Leading Organisations -->
                 <div class="sec-2b__col phrase">
                   <div class="sec-2b__icon-wrapper">
                     <img src="assets/sec-2b-icon-3.webp" alt="Trusted by Leading Organisations" class="sec-2b__icon" />
@@ -228,7 +211,6 @@
                   </p>
                 </div>
 
-                <!-- Column 4: Two Operating Entities -->
                 <div class="sec-2b__col phrase">
                   <div class="sec-2b__icon-wrapper">
                     <img src="assets/sec-2b-icon-4.webp" alt="Two Operating Entities" class="sec-2b__icon" />
@@ -243,14 +225,13 @@
           </div>
         </section>
 
-        <!-- Section 3: System Framework -->
         <section
           class="scroll-section swiper-slide sec-3 sec-framework"
           id="section-3"
           data-section-index="3"
         >
           <div class="container">
-            <!-- Left Column: Isometric Visual Graphic (Direct Image Grid Bleed Anchored to Column 6) -->
+
             <img
               src="assets/sec-3-left.webp"
               alt="Aliro System Transformation Architecture"
@@ -287,14 +268,13 @@
           </div>
         </section>
 
-        <!-- Section 4: The Four Intelligence Continuum 4iC -->
         <section
           class="scroll-section swiper-slide sec-4 sec-continuum"
           id="section-4"
           data-section-index="4"
         >
           <div class="container relative flex-center">
-            <!-- Top Text Block (Above and Outside Orbit system) -->
+
             <div class="sec-continuum__top-text">
               <p class="sec-continuum__tag">
                 <span class="phrase">OUR TRANSFORMATION ARCHITECTURE</span>
@@ -307,10 +287,9 @@
             </div>
 
             <div class="sec-continuum__orbit-wrap">
-              <!-- 550x550 Luminous Glow Background #226CB4 Blur(100px) -->
+
               <div class="sec-continuum__glow-bg"></div>
 
-              <!-- Central Concept Image sec-4-center.webp -->
               <img
                 src="assets/sec-4-center.webp"
                 alt="Aliro Central Concept"
@@ -318,14 +297,12 @@
                 decoding="async"
               />
 
-              <!-- Center Text inside Orbit Ring -->
               <div class="sec-continuum__center-text">
                 <span class="phrase"
                   >Four Intelligence Dimensions<br />One Integrated<br />Transformation Architecture</span
                 >
               </div>
 
-              <!-- Outer Orbit SVG Ring with Arrows -->
               <svg
                 class="sec-continuum__orbit-ring"
                 width="440"
@@ -384,7 +361,6 @@
                 />
               </svg>
 
-              <!-- Connector Lines Overlay -->
               <svg
                 class="sec-continuum__connector-svg"
                 width="440"
@@ -506,7 +482,6 @@
                 />
               </svg>
 
-              <!-- Node 01 (Top-Left): Market Intelligence -->
               <div
                 class="sec-continuum__node node-top-left"
                 data-slide-target="5"
@@ -527,7 +502,6 @@
                 </button>
               </div>
 
-              <!-- Node 02 (Top-Right): Operational Intelligence -->
               <div
                 class="sec-continuum__node node-top-right"
                 data-slide-target="6"
@@ -550,7 +524,6 @@
                 </div>
               </div>
 
-              <!-- Node 03 (Bottom-Right): Digital Intelligence -->
               <div
                 class="sec-continuum__node node-bottom-right"
                 data-slide-target="7"
@@ -571,7 +544,6 @@
                 </div>
               </div>
 
-              <!-- Node 04 (Bottom-Left): Capacity & Capability -->
               <div
                 class="sec-continuum__node node-bottom-left"
                 data-slide-target="8"
@@ -597,7 +569,6 @@
           </div>
         </section>
 
-        <!-- Section 5: Market Intelligence Details -->
         <section
           class="scroll-section swiper-slide sec-5"
           id="section-5"
@@ -635,7 +606,6 @@
           </button>
           <div class="container relative">
 
-            <!-- Left Content Block -->
             <div class="sec-5__content d-flex flex-col">
               <div class="sec-5__number">01</div>
               <h2 class="sec-5__title">
@@ -662,7 +632,6 @@
               </div>
             </div>
 
-            <!-- Right Visual Bleed Image (Positioned Absolute at Column 6 with 50% Y-centering) -->
             <img
               src="assets/sec-5-visual.webp"
               class="sec-5__img-right"
@@ -672,7 +641,6 @@
           </div>
         </section>
 
-        <!-- Section 6: Operational Intelligence Details -->
         <section
           class="scroll-section swiper-slide sec-6"
           id="section-6"
@@ -709,7 +677,7 @@
             </svg>
           </button>
           <div class="container">
-            <!-- Content Block -->
+
             <div class="sec-6__content d-flex flex-col">
               <div class="sec-6__number">02</div>
               <h2 class="sec-6__title">
@@ -745,7 +713,6 @@
           </div>
         </section>
 
-        <!-- Section 7: Digital Intelligence Details -->
         <section
           class="scroll-section swiper-slide sec-7"
           id="section-7"
@@ -783,7 +750,6 @@
           </button>
           <div class="container">
 
-            <!-- Content Block -->
             <div class="sec-7__content d-flex flex-col">
               <div class="sec-7__number">03</div>
               <h2 class="sec-7__title">
@@ -810,7 +776,6 @@
               </div>
             </div>
 
-            <!-- Right Image (Full Bleed to 100vw Screen Edge) -->
             <img
               src="assets/sec-7-visual.webp"
               class="sec-7__img-right"
@@ -820,7 +785,6 @@
           </div>
         </section>
 
-        <!-- Section 8: Capacity & Capability Details -->
         <section
           class="scroll-section swiper-slide sec-8"
           id="section-8"
@@ -857,7 +821,7 @@
             </svg>
           </button>
           <div class="container">
-            <!-- Content Block -->
+
             <div class="sec-8__content d-flex flex-col">
               <div class="sec-8__number">04</div>
               <h2 class="sec-8__title">
@@ -894,7 +858,6 @@
           </div>
         </section>
 
-        <!-- Section 9: The Completed Architecture -->
         <section
           class="scroll-section swiper-slide sec-9"
           id="section-9"
@@ -902,7 +865,7 @@
         >
           <div class="container flex-center-v">
             <div class="sec-9__grid grid-12">
-              <!-- Left Column: Text Content -->
+
               <div class="sec-9__left col-start-1 col-span-5">
                 <div class="sec-9__tag">
                   <span class="phrase">THE COMPLETED ARCHITECTURE</span>
@@ -925,7 +888,6 @@
                 </div>
               </div>
 
-              <!-- Right Column: Visual Image -->
               <div class="sec-9__right col-start-6 col-span-7">
                 <img
                   src="assets/sec-9-right.webp"
@@ -938,7 +900,6 @@
           </div>
         </section>
 
-        <!-- Section 9b: Three Advisory Pathways (How We Help) -->
         <section
           class="scroll-section swiper-slide sec-9b"
           id="section-9b"
@@ -957,7 +918,7 @@
               </div>
 
               <div class="sec-9b__cards">
-                <!-- Card 1: Strategic and Market Intelligence -->
+
                 <div class="sec-9b__card phrase" data-href="4ic/market-intelligence.html">
                   <div class="sec-9b__card-img-wrapper">
                     <img src="assets/sec-9b-card-1.webp" alt="Strategic &amp; Market Intelligence" class="sec-9b__card-img" decoding="async" />
@@ -976,7 +937,6 @@
                   </a>
                 </div>
 
-                <!-- Card 2: Transformation Advisory -->
                 <div class="sec-9b__card phrase" data-href="4ic/operational-intelligence.html#section-operational-3">
                   <div class="sec-9b__card-img-wrapper">
                     <img src="assets/sec-9b-card-2.webp" alt="Transformation Advisory" class="sec-9b__card-img" />
@@ -995,7 +955,6 @@
                   </a>
                 </div>
 
-                <!-- Card 3: Digital and Capability Advisory -->
                 <div class="sec-9b__card phrase" data-href="4ic/digital-intelligence.html">
                   <div class="sec-9b__card-img-wrapper">
                     <img src="assets/sec-9b-card-3.webp" alt="Digital &amp; Capability Advisory" class="sec-9b__card-img" />
@@ -1018,7 +977,6 @@
           </div>
         </section>
 
-        <!-- Section 10: Final Contact & Entity Details (Shared Reusable Footer Component) -->
         <section
           class="scroll-section swiper-slide sec-10"
           id="section-10"
@@ -1026,12 +984,11 @@
           data-shared-footer
         ></section>
       </div>
-      <!-- /.swiper-wrapper -->
+
     </main>
 
-    <!-- Swiper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Main Script -->
+
     <script src="script.js"></script>
   </body>
 </html>
