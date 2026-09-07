@@ -70,9 +70,8 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 26px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
-  opacity: 0.9;
 }
 
 .sec-market-3__diagram-wrapper {
@@ -120,20 +119,34 @@
 /* ==========================================================================
    Animation: Entrance on Slide Transition End (.slide-animated)
    ========================================================================== */
+/* Safety initial state: strictly hidden before slide animation */
+.sec-market-3:not(.slide-animated):not(.visited) .phrase,
+.sec-market-3:not(.slide-animated):not(.visited) .sec-market-3__title,
+.sec-market-3:not(.slide-animated):not(.visited) .sec-market-3__subtitle,
+.sec-market-3:not(.slide-animated):not(.visited) .sec-market-3__diagram-wrapper,
+.sec-market-3:not(.slide-animated):not(.visited) .sec-market-3__mobile-card {
+  opacity: 0 !important;
+  transform: translateY(24px) !important;
+}
+
+.sec-market-3:not(.slide-animated):not(.visited) .sec-market-3__mobile-card {
+  transform: translateY(24px) scale(0.92) !important;
+}
+
 .sec-market-3 .phrase {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(24px);
   transition:
-    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sec-market-3__title.phrase {
-  transition-delay: 0.10s;
+  transition-delay: 0.08s;
 }
 
 .sec-market-3__subtitle.phrase {
-  transition-delay: 0.22s;
+  transition-delay: 0.18s;
 }
 
 .sec-market-3__diagram-wrapper.phrase {
@@ -141,16 +154,27 @@
   transition:
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.36s;
+  transition-delay: 0.32s;
 }
 
-.sec-market-3__mobile-card:nth-child(1).phrase { transition-delay: 0.12s; }
-.sec-market-3__mobile-card:nth-child(2).phrase { transition-delay: 0.18s; }
-.sec-market-3__mobile-card:nth-child(3).phrase { transition-delay: 0.24s; }
-.sec-market-3__mobile-card:nth-child(4).phrase { transition-delay: 0.30s; }
-.sec-market-3__mobile-card:nth-child(5).phrase { transition-delay: 0.36s; }
-.sec-market-3__mobile-card:nth-child(6).phrase { transition-delay: 0.42s; }
+/* Staggered cascading entrance for mobile cards */
+.sec-market-3__mobile-card.phrase {
+  opacity: 0;
+  transform: translateY(24px) scale(0.92);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
+.sec-market-3__mobile-card:nth-child(1).phrase { transition-delay: 0.26s; }
+.sec-market-3__mobile-card:nth-child(2).phrase { transition-delay: 0.32s; }
+.sec-market-3__mobile-card:nth-child(3).phrase { transition-delay: 0.38s; }
+.sec-market-3__mobile-card:nth-child(4).phrase { transition-delay: 0.44s; }
+.sec-market-3__mobile-card:nth-child(5).phrase { transition-delay: 0.50s; }
+.sec-market-3__mobile-card:nth-child(6).phrase { transition-delay: 0.56s; }
 
 .sec-market-3.slide-animated .phrase {
   opacity: 1;
@@ -162,7 +186,13 @@
   transform: translateY(0) scale(1);
 }
 
-.sec-market-3.visited .phrase {
+.sec-market-3.slide-animated .sec-market-3__mobile-card.phrase {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.sec-market-3.visited .phrase,
+.sec-market-3.visited .sec-market-3__mobile-card {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
@@ -288,7 +318,8 @@
   .sec-market-3 {
     height: 100vh !important;
     height: 100dvh !important;
-    overflow: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sec-market-3 .flex-center-v {
@@ -298,6 +329,8 @@
     padding-right: 14px !important;
     justify-content: center !important;
     align-items: center !important;
+    height: 100% !important;
+    min-height: 100% !important;
   }
 
   .sec-market-3__header {
@@ -306,15 +339,15 @@
   }
 
   .sec-market-3__title {
-    font-size: 21px !important;
-    line-height: 25px !important;
+    font-size: 22px !important;
+    line-height: 26px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-market-3__subtitle {
-    font-size: 13.5px !important;
-    line-height: 17px !important;
-    opacity: 0.88 !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    color: rgba(255, 255, 255, 0.88) !important;
   }
 
   /* Hide desktop single diagram */
@@ -326,9 +359,9 @@
   .sec-market-3__mobile-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px 14px !important;
+    gap: 8px 12px !important;
     width: 100% !important;
-    max-width: 380px !important;
+    max-width: 360px !important;
     margin: 0 auto !important;
     z-index: 3;
     position: relative;
@@ -347,43 +380,94 @@
     -webkit-backdrop-filter: none !important;
     padding: 0 !important;
     box-sizing: border-box !important;
-    transition:
-      opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.25s ease !important;
   }
 
-  .sec-market-3__mobile-card:hover {
-    transform: translateY(-3px) !important;
+  @media (hover: hover) and (pointer: fine) {
+    .sec-market-3__mobile-card:hover {
+      transform: translateY(-3px) scale(1.02) !important;
+      transition: transform 0.25s ease !important;
+    }
   }
 
   .sec-market-3__mobile-img-box {
-    width: 120px !important;
-    height: 120px !important;
+    width: 95px !important;
+    height: 95px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 4px !important;
   }
 
   .sec-market-3__mobile-img {
-    width: 120px !important;
-    height: 120px !important;
-    max-width: 120px !important;
-    max-height: 120px !important;
+    width: 95px !important;
+    height: 95px !important;
+    max-width: 95px !important;
+    max-height: 95px !important;
     object-fit: contain !important;
     display: block !important;
-    filter: drop-shadow(0 8px 18px rgba(41, 187, 255, 0.4)) !important;
+    filter: drop-shadow(0 6px 16px rgba(41, 187, 255, 0.4)) !important;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .sec-market-3__mobile-card-title {
     font-family: Aptos, var(--font-brand) !important;
-    font-size: 13.5px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
-    line-height: 17px !important;
+    line-height: 18px !important;
     color: #ffffff !important;
     margin: 0 !important;
     letter-spacing: 0.2px !important;
     text-align: center !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (<=767px width & >=780px height)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-market-3 .flex-center-v {
+    padding-top: 78px !important;
+    padding-bottom: 24px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .sec-market-3__header {
+    margin-bottom: 12px !important;
+  }
+
+  .sec-market-3__title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+
+  .sec-market-3__subtitle {
+    font-size: 15px !important;
+    line-height: 19px !important;
+  }
+
+  .sec-market-3__mobile-grid {
+    gap: 12px 16px !important;
+    max-width: 380px !important;
+  }
+
+  .sec-market-3__mobile-img-box {
+    width: 110px !important;
+    height: 110px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-market-3__mobile-img {
+    width: 110px !important;
+    height: 110px !important;
+    max-width: 110px !important;
+    max-height: 110px !important;
+  }
+
+  .sec-market-3__mobile-card-title {
+    font-size: 15px !important;
+    line-height: 19px !important;
   }
 }
 

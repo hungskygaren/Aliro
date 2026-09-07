@@ -464,7 +464,7 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 16px !important;
+    gap: 0 !important;
     width: 100% !important;
     max-width: 420px !important;
     margin: 0 auto !important;
@@ -547,7 +547,7 @@
     width: 100% !important;
     max-width: 340px !important;
     height: auto !important;
-    margin-top: 18px !important;
+    margin-top: 4px !important;
     margin-inline: auto !important;
     display: flex !important;
     flex-direction: column !important;
@@ -592,7 +592,7 @@
   }
 
   .sec-digital-1__stage {
-    gap: 20px !important;
+    gap: 6px !important;
     max-width: 440px !important;
   }
 
@@ -637,7 +637,7 @@
 
   .sec-digital-1__right {
     max-width: 390px !important;
-    margin-top: 22px !important;
+    margin-top: 6px !important;
   }
 
   .sec-digital-1__img-wrapper {

@@ -569,6 +569,11 @@
    Responsive: Mobile Standard (<=767px)
    ========================================================================== */
 @media (max-width: 767px) {
+  .sec-phase0-4 {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .sec-phase0-4 .flex-center-v {
     padding-top: 68px !important;
     padding-bottom: 16px !important;
@@ -593,8 +598,8 @@
   }
 
   .sec-phase0-4__title {
-    font-size: 22px !important;
-    line-height: 28px !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
     text-align: center !important;
     margin: 0 !important;
   }
@@ -652,16 +657,16 @@
   }
 
   .sec-phase0-4__badge {
-    width: 28px !important;
-    height: 28px !important;
-    font-size: 13.5px !important;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 14.5px !important;
     font-weight: 700 !important;
   }
 
   .sec-phase0-4__item-title {
-    font-size: 13.5px !important;
-    line-height: 17px !important;
-    min-height: 34px !important;
+    font-size: 15px !important;
+    line-height: 19px !important;
+    min-height: 38px !important;
     margin-bottom: 3px !important;
     letter-spacing: 0.3px !important;
     justify-content: center !important;
@@ -669,9 +674,9 @@
   }
 
   .sec-phase0-4__item-desc {
-    font-size: 11.5px !important;
-    line-height: 15px !important;
-    max-width: 170px !important;
+    font-size: 13px !important;
+    line-height: 17px !important;
+    max-width: 180px !important;
     margin: 0 auto !important;
   }
 
@@ -685,15 +690,15 @@
   }
 
   .sec-phase0-4__outcome-tag {
-    font-size: 11px !important;
-    line-height: 15px !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
     color: #8eaad9 !important;
     letter-spacing: 0.5px !important;
   }
 
   .sec-phase0-4__outcome-text {
-    font-size: 13.5px !important;
-    line-height: 18px !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
   }
 }
 
@@ -712,8 +717,8 @@
   }
 
   .sec-phase0-4__title {
-    font-size: 26px !important;
-    line-height: 32px !important;
+    font-size: 28px !important;
+    line-height: 34px !important;
   }
 
   .sec-phase0-4__grid-wrapper,
@@ -745,22 +750,22 @@
   }
 
   .sec-phase0-4__badge {
-    width: 32px !important;
-    height: 32px !important;
-    font-size: 15px !important;
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 16px !important;
   }
 
   .sec-phase0-4__item-title {
-    font-size: 15px !important;
-    line-height: 19px !important;
-    min-height: 38px !important;
+    font-size: 16.5px !important;
+    line-height: 21px !important;
+    min-height: 42px !important;
     margin-bottom: 4px !important;
   }
 
   .sec-phase0-4__item-desc {
-    font-size: 13px !important;
-    line-height: 17.5px !important;
-    max-width: 195px !important;
+    font-size: 14.5px !important;
+    line-height: 19.5px !important;
+    max-width: 210px !important;
   }
 
   .sec-phase0-4__outcome {
@@ -769,12 +774,12 @@
   }
 
   .sec-phase0-4__outcome-tag {
-    font-size: 12px !important;
-    line-height: 16px !important;
+    font-size: 13px !important;
+    line-height: 17px !important;
   }
 
   .sec-phase0-4__outcome-text {
-    font-size: 15px !important;
-    line-height: 20px !important;
+    font-size: 17px !important;
+    line-height: 23px !important;
   }
 }

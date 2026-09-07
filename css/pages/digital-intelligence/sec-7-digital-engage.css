@@ -333,8 +333,8 @@
   }
 
   .sec-digital-7__eyebrow {
-    font-size: 15px !important;
-    line-height: 19px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
     font-weight: 700 !important;
     color: var(--Secondary-Deep-Blue, #011b7f) !important;
     letter-spacing: 0.5px !important;
@@ -343,8 +343,8 @@
   }
 
   .sec-digital-7__statement {
-    font-size: 20px !important;
-    line-height: 27px !important;
+    font-size: 24px !important;
+    line-height: 31px !important;
     font-weight: 700 !important;
     color: var(--Midnight-Navy, #01103b) !important;
     text-align: center !important;
@@ -394,14 +394,14 @@
   }
 
   .sec-digital-7__eyebrow {
-    font-size: 16px !important;
-    line-height: 21px !important;
+    font-size: 17px !important;
+    line-height: 22px !important;
     margin-bottom: 10px !important;
   }
 
   .sec-digital-7__statement {
-    font-size: 23px !important;
-    line-height: 31px !important;
+    font-size: 26px !important;
+    line-height: 34px !important;
   }
 
   .sec-digital-7__right {

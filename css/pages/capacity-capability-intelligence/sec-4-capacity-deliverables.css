@@ -536,8 +536,8 @@
   }
 
   .sec-capacity-4__title {
-    font-size: 21px !important;
-    line-height: 26px !important;
+    font-size: 22px !important;
+    line-height: 27px !important;
     margin-bottom: 10px !important;
   }
 
@@ -546,25 +546,25 @@
   }
 
   .sec-capacity-4__card {
-    padding: 8px 10px 10px 10px !important;
-    min-height: 98px !important;
+    padding: 6px 8px 8px 8px !important;
+    min-height: 88px !important;
   }
 
   .sec-capacity-4__card-num {
     font-size: 13.5px !important;
-    line-height: 16px !important;
-    margin-bottom: 2px !important;
+    line-height: 16.5px !important;
+    margin-bottom: 1px !important;
   }
 
   .sec-capacity-4__card-title {
-    font-size: 12px !important;
-    line-height: 15px !important;
+    font-size: 12.5px !important;
+    line-height: 15.5px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-capacity-4__card-desc {
-    font-size: 10.5px !important;
-    line-height: 13.5px !important;
+    font-size: 11px !important;
+    line-height: 14px !important;
   }
 
   .sec-capacity-4__right {

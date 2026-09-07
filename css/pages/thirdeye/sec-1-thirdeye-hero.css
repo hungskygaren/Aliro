@@ -311,6 +311,8 @@
    ========================================================================== */
 @media (max-width: 767px) {
   .sec-thirdeye-1 {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
     background: linear-gradient(
       165.54deg,
       #ffffff 47%,
@@ -340,27 +342,27 @@
   }
 
   .sec-thirdeye-1__tag {
-    font-size: 15px !important;
-    line-height: 19px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
     margin-bottom: 6px !important;
     letter-spacing: 0.3px !important;
   }
 
   .sec-thirdeye-1__title {
-    font-size: 28px !important;
-    line-height: 33px !important;
+    font-size: 30px !important;
+    line-height: 35px !important;
     margin-bottom: 6px !important;
   }
 
   .sec-thirdeye-1__catchphrase {
-    font-size: 17px !important;
-    line-height: 21px !important;
+    font-size: 18px !important;
+    line-height: 23px !important;
     margin-bottom: 8px !important;
   }
 
   .sec-thirdeye-1__desc {
-    font-size: 15px !important;
-    line-height: 21px !important;
+    font-size: 15.5px !important;
+    line-height: 22px !important;
   }
 
   .sec-thirdeye-1__right {
@@ -372,8 +374,8 @@
   }
 
   .sec-thirdeye-1__badge {
-    font-size: 15px !important;
-    line-height: 20px !important;
+    font-size: 15.5px !important;
+    line-height: 21px !important;
     margin-top: 8px !important;
   }
 }
@@ -395,26 +397,26 @@
   }
 
   .sec-thirdeye-1__tag {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 17.5px !important;
+    line-height: 22px !important;
     margin-bottom: 8px !important;
   }
 
   .sec-thirdeye-1__title {
-    font-size: 30px !important;
-    line-height: 36px !important;
+    font-size: 34px !important;
+    line-height: 40px !important;
     margin-bottom: 8px !important;
   }
 
   .sec-thirdeye-1__catchphrase {
-    font-size: 18px !important;
-    line-height: 23px !important;
+    font-size: 20px !important;
+    line-height: 25px !important;
     margin-bottom: 10px !important;
   }
 
   .sec-thirdeye-1__desc {
-    font-size: 15.5px !important;
-    line-height: 22px !important;
+    font-size: 16.5px !important;
+    line-height: 24px !important;
   }
 
   .sec-thirdeye-1__right,
@@ -423,8 +425,8 @@
   }
 
   .sec-thirdeye-1__badge {
-    font-size: 16px !important;
-    line-height: 21px !important;
+    font-size: 17px !important;
+    line-height: 22px !important;
     margin-top: 8px !important;
   }
 }

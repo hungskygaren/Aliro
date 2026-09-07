@@ -1,11 +1,45 @@
+function getBasePath() {
+  const path = window.location.pathname.replace(/\\/g, "/");
+  if (path.includes("/4ic/") || path.includes("/services/")) {
+    return "../";
+  }
+  return "";
+}
+
 async function loadSharedHeader() {
   const mainHeader = document.getElementById("mainHeader");
   if (!mainHeader) return;
 
+  const basePath = getBasePath();
+
   try {
-    const res = await fetch("components/header.html");
+    const res = await fetch(basePath + "components/header.html");
     if (res.ok) {
-      mainHeader.innerHTML = await res.text();
+      let html = await res.text();
+      if (basePath) {
+        const temp = document.createElement("div");
+        temp.innerHTML = html;
+        temp.querySelectorAll("a[href]").forEach((link) => {
+          const href = link.getAttribute("href");
+          if (
+            href &&
+            !href.startsWith("http") &&
+            !href.startsWith("#") &&
+            !href.startsWith("javascript:") &&
+            !href.startsWith("mailto:")
+          ) {
+            link.setAttribute("href", basePath + href);
+          }
+        });
+        temp.querySelectorAll("img[src]").forEach((img) => {
+          const src = img.getAttribute("src");
+          if (src && !src.startsWith("http") && !src.startsWith("data:")) {
+            img.setAttribute("src", basePath + src);
+          }
+        });
+        html = temp.innerHTML;
+      }
+      mainHeader.innerHTML = html;
     } else {
       console.error("Failed to load components/header.html, status:", res.status);
     }
@@ -19,7 +53,7 @@ async function loadSharedHeader() {
 }
 
 function highlightActiveNav() {
-  const currentPath = window.location.pathname.toLowerCase();
+  const currentPath = window.location.pathname.toLowerCase().replace(/\\/g, "/");
   let activeKey = "home";
 
   if (currentPath.includes("about")) {
@@ -36,8 +70,13 @@ function highlightActiveNav() {
     currentPath.includes("third-eye")
   ) {
     activeKey = "thirdeye";
-  } else if (currentPath.includes("services")) {
-    activeKey = "phase0";
+  } else if (
+    currentPath.includes("services/overview") ||
+    currentPath.includes("overview") ||
+    currentPath.endsWith("/services/") ||
+    currentPath.endsWith("/services/index.html")
+  ) {
+    activeKey = "services-overview";
   } else if (currentPath.includes("market-intelligence")) {
     activeKey = "market";
   } else if (currentPath.includes("operational-intelligence")) {
@@ -54,7 +93,7 @@ function highlightActiveNav() {
   const is4iC = ["market", "operational", "digital", "capacity"].includes(
     activeKey,
   );
-  const isServices = ["phase0", "thirdeye"].includes(activeKey);
+  const isServices = ["services-overview", "phase0", "thirdeye"].includes(activeKey);
 
   document
     .querySelectorAll(".nav-menu .nav-item, .nav-menu .nav-dropdown-item")
@@ -136,7 +175,22 @@ function bindNavEvents() {
     ".nav-drawer .nav-item:not(.nav-item--dropdown), .nav-drawer .nav-dropdown-item, .nav-drawer .btn-conversation",
   );
   drawerLinks.forEach((link) => {
-    link.addEventListener("click", closeMobileMenu);
+    link.addEventListener("click", (e) => {
+      if (link.classList.contains("nav-dropdown-item--disabled")) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
+      closeMobileMenu();
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    const disabled = e.target.closest(".nav-dropdown-item--disabled");
+    if (disabled) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
   });
 }
 
@@ -146,10 +200,35 @@ async function loadSharedFooter() {
   );
   if (!footerTargets.length) return;
 
+  const basePath = getBasePath();
+
   try {
-    const res = await fetch("components/footer.html");
+    const res = await fetch(basePath + "components/footer.html");
     if (res.ok) {
-      const footerHTML = await res.text();
+      let footerHTML = await res.text();
+      if (basePath) {
+        const temp = document.createElement("div");
+        temp.innerHTML = footerHTML;
+        temp.querySelectorAll("a[href]").forEach((link) => {
+          const href = link.getAttribute("href");
+          if (
+            href &&
+            !href.startsWith("http") &&
+            !href.startsWith("#") &&
+            !href.startsWith("javascript:") &&
+            !href.startsWith("mailto:")
+          ) {
+            link.setAttribute("href", basePath + href);
+          }
+        });
+        temp.querySelectorAll("img[src]").forEach((img) => {
+          const src = img.getAttribute("src");
+          if (src && !src.startsWith("http") && !src.startsWith("data:")) {
+            img.setAttribute("src", basePath + src);
+          }
+        });
+        footerHTML = temp.innerHTML;
+      }
       footerTargets.forEach((target) => {
         target.innerHTML = footerHTML;
       });
@@ -369,6 +448,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeSlide.classList.contains("sec-digital-bg-dark") ||
         activeSlide.classList.contains("sec-capacity-bg-dark") ||
         activeSlide.classList.contains("sec-contact-bg-dark") ||
+        activeSlide.classList.contains("sec-services-bg-dark") ||
         activeSlide.classList.contains("sec-contact-form")
       ) {
         mainHeader.classList.add("light-theme");
@@ -381,7 +461,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeSlide.classList.contains("sec-operational-bg-light") ||
         activeSlide.classList.contains("sec-digital-bg-light") ||
         activeSlide.classList.contains("sec-capacity-bg-light") ||
-        activeSlide.classList.contains("sec-contact-bg-light")
+        activeSlide.classList.contains("sec-contact-bg-light") ||
+        activeSlide.classList.contains("sec-services-bg-light")
       ) {
         mainHeader.classList.remove("light-theme");
         return;
@@ -408,10 +489,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   const isHomePage =
     !document.body.classList.contains("page-about") &&
     !document.body.classList.contains("page-phase-0") &&
+    !document.body.classList.contains("page-phase-0-diagnostic") &&
     !document.body.classList.contains("page-thirdeye") &&
     !document.body.classList.contains("page-market-intelligence") &&
+    !document.body.classList.contains("page-operational-intelligence") &&
+    !document.body.classList.contains("page-digital-intelligence") &&
+    !document.body.classList.contains("page-capacity-capability-intelligence") &&
     !document.body.classList.contains("page-contact") &&
-    !document.body.classList.contains("page-privacy-terms");
+    !document.body.classList.contains("page-privacy-terms") &&
+    !document.body.classList.contains("page-services-overview");
 
   const allNavLinks = document.querySelectorAll('a[href*="#"]');
   allNavLinks.forEach((link) => {

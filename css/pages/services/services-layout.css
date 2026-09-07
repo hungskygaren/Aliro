@@ -1,0 +1,460 @@
+/* ==========================================================================
+   Services Overview Page Styles
+   Aliro Consulting
+   ========================================================================== */
+
+@import "../about/sec-4-about-services.css";
+
+/* --- Base Slide & Section Styles --- */
+.page-services-overview .main-swiper {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.page-services-overview .scroll-section {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+}
+
+/* Background Themes */
+.sec-services-bg-light {
+  background-color: #ffffff !important;
+  color: var(--Midnight-Navy, #01103b);
+}
+
+.sec-services-bg-dark {
+  background-color: #01103b !important;
+  color: #ffffff;
+}
+
+.sec-services-bg-soft {
+  background-color: #f7f9fd !important;
+  color: var(--Midnight-Navy, #01103b);
+}
+
+/* --- Section 1: Hero --- */
+.sec-services-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-services-1 .container {
+  padding-top: calc(var(--header-offset, 120px) + 20px);
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sec-services-1__tag {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--Highlight-Blue, #0431b1);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sec-services-1__title {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  max-width: 950px;
+}
+
+.sec-services-1__subtitle {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: #123e6b;
+  margin-bottom: 16px;
+}
+
+.sec-services-1__desc {
+  font-family: var(--font-family, "Inter", sans-serif);
+  font-size: 17px;
+  line-height: 1.65;
+  color: #435266;
+  max-width: 780px;
+  margin: 0 auto 36px auto;
+}
+
+.sec-services-1__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sec-services-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.sec-services-btn--primary {
+  background-color: var(--Highlight-Blue, #0431b1);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(4, 49, 177, 0.25);
+}
+
+.sec-services-btn--primary:hover {
+  background-color: #03258c;
+  transform: translateY(-2px);
+}
+
+.sec-services-btn--outline {
+  border: 1.5px solid #01103b;
+  color: #01103b;
+  background-color: transparent;
+}
+
+.sec-services-btn--outline:hover {
+  background-color: #01103b;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* --- Section 2: Core Offerings --- */
+.sec-services-2 {
+  display: flex;
+  align-items: center;
+}
+
+.sec-services-2 .container {
+  padding-top: calc(var(--header-offset, 120px) + 10px);
+  padding-bottom: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sec-services-2__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.sec-services-2__tag {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #72b3ff;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sec-services-2__title {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sec-services-2__desc {
+  font-family: var(--font-family, "Inter", sans-serif);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #bed5ef;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.sec-services-2__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(197, 218, 243, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.service-card__badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  background: rgba(4, 49, 177, 0.35);
+  border: 1px solid rgba(114, 179, 255, 0.4);
+  color: #9eccff;
+}
+
+.service-card__badge--coming-soon {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #cbd5e1;
+}
+
+.service-card__title {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.service-card__desc {
+  font-family: var(--font-family, "Inter", sans-serif);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.service-card__points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.service-card__point {
+  font-family: var(--font-family, "Inter", sans-serif);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.service-card__point::before {
+  content: "•";
+  color: #72b3ff;
+  font-weight: bold;
+}
+
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: #72b3ff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.service-card__link:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.service-card__link--disabled {
+  color: #64748b;
+  cursor: default;
+}
+
+.service-card__link--disabled:hover {
+  color: #64748b;
+  transform: none;
+}
+
+/* --- Section 3: 4iC Continuum Integration --- */
+.sec-services-3 {
+  display: flex;
+  align-items: center;
+}
+
+.sec-services-3 .container {
+  padding-top: calc(var(--header-offset, 120px) + 10px);
+  padding-bottom: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sec-services-3__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.sec-services-3__tag {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--Highlight-Blue, #0431b1);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sec-services-3__title {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sec-services-3__desc {
+  font-family: var(--font-family, "Inter", sans-serif);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #435266;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.sec-services-3__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.fouric-pillar-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.fouric-pillar-card:hover {
+  border-color: var(--Highlight-Blue, #0431b1);
+  box-shadow: 0 10px 25px rgba(4, 49, 177, 0.1);
+  transform: translateY(-4px);
+}
+
+.fouric-pillar-card__icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+}
+
+.fouric-pillar-card__title {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--Midnight-Navy, #01103b);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.fouric-pillar-card__desc {
+  font-family: var(--font-family, "Inter", sans-serif);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #556987;
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+.fouric-pillar-card__arrow {
+  font-family: var(--font-brand, "Aptos", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--Highlight-Blue, #0431b1);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* --- Section 4: Matrix Overrides --- */
+.page-services-overview .sec-about-4 {
+  background-color: #f7f9fd !important;
+}
+
+.page-services-overview .sec-about-4 .flex-center-v {
+  padding-top: calc(var(--header-offset, 120px) + 10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .sec-services-1__title {
+    font-size: 38px;
+  }
+  .sec-services-2__title,
+  .sec-services-3__title {
+    font-size: 28px;
+  }
+  .sec-services-2__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .sec-services-3__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .page-services-overview .scroll-section {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto !important;
+    padding-bottom: 40px;
+  }
+  .page-services-overview .main-swiper {
+    height: auto !important;
+    overflow-y: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-services-1__title {
+    font-size: 28px;
+  }
+  .sec-services-1__subtitle {
+    font-size: 18px;
+  }
+  .sec-services-3__grid {
+    grid-template-columns: 1fr;
+  }
+}

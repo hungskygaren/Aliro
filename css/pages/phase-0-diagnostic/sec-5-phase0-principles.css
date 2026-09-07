@@ -405,8 +405,8 @@
   }
 
   .sec-phase0-5__card-desc {
-    font-size: 13.5px !important;
-    line-height: 18px !important;
+    font-size: 14px !important;
+    line-height: 19px !important;
     text-align: left !important;
   }
 }
@@ -415,6 +415,11 @@
    Responsive: Mobile Standard (<=767px)
    ========================================================================== */
 @media (max-width: 767px) {
+  .sec-phase0-5 {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .sec-phase0-5 .flex-center-v {
     padding-top: 68px !important;
     padding-bottom: 16px !important;
@@ -439,8 +444,8 @@
   }
 
   .sec-phase0-5__title {
-    font-size: 22px !important;
-    line-height: 28px !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
     text-align: center !important;
     margin: 0 !important;
   }
@@ -471,7 +476,7 @@
 
   .sec-phase0-5__card {
     padding: 12px 10px 14px 10px !important;
-    min-height: 145px !important;
+    min-height: 155px !important;
     border-radius: 0 !important;
     background: #ffffff !important;
     border: 1px solid rgba(126, 147, 168, 0.5) !important;
@@ -511,16 +516,16 @@
   }
 
   .sec-phase0-5__card-title {
-    font-size: 13.5px !important;
-    line-height: 17px !important;
+    font-size: 15px !important;
+    line-height: 19px !important;
     margin: 0 0 4px 0 !important;
     letter-spacing: 0.2px !important;
     text-align: center !important;
   }
 
   .sec-phase0-5__card-desc {
-    font-size: 11.5px !important;
-    line-height: 15px !important;
+    font-size: 13px !important;
+    line-height: 17.5px !important;
     text-align: center !important;
     margin: 0 !important;
   }
@@ -541,8 +546,8 @@
   }
 
   .sec-phase0-5__title {
-    font-size: 26px !important;
-    line-height: 32px !important;
+    font-size: 28px !important;
+    line-height: 34px !important;
   }
 
   .sec-phase0-5__cards-container {
@@ -552,7 +557,7 @@
 
   .sec-phase0-5__card {
     padding: 16px 14px 18px 14px !important;
-    min-height: 175px !important;
+    min-height: 185px !important;
     gap: 10px !important;
   }
 
@@ -566,13 +571,13 @@
   }
 
   .sec-phase0-5__card-title {
-    font-size: 15px !important;
-    line-height: 19px !important;
+    font-size: 16.5px !important;
+    line-height: 21px !important;
     margin-bottom: 6px !important;
   }
 
   .sec-phase0-5__card-desc {
-    font-size: 13px !important;
-    line-height: 17.5px !important;
+    font-size: 14.5px !important;
+    line-height: 19.5px !important;
   }
 }

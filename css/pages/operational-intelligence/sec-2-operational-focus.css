@@ -418,8 +418,8 @@
   }
 
   .sec-operational-2__title {
-    font-size: 21px !important;
-    line-height: 26px !important;
+    font-size: 24px !important;
+    line-height: 29px !important;
     text-align: center !important;
   }
 
@@ -463,15 +463,15 @@
   }
 
   .sec-operational-2__card-question {
-    font-size: 14.5px !important;
-    line-height: 18.5px !important;
+    font-size: 15.5px !important;
+    line-height: 20px !important;
     margin: 0 0 4px 0 !important;
     font-weight: 700 !important;
     color: var(--Midnight-Navy, #01103b) !important;
   }
 
   .sec-operational-2__card-link {
-    font-size: 13px !important;
+    font-size: 14px !important;
     gap: 4px !important;
     margin-top: auto !important;
   }
@@ -512,8 +512,8 @@
   }
 
   .sec-operational-2__title {
-    font-size: 24px !important;
-    line-height: 29px !important;
+    font-size: 26px !important;
+    line-height: 32px !important;
   }
 
   .sec-operational-2__grid {
@@ -534,12 +534,12 @@
   }
 
   .sec-operational-2__card-question {
-    font-size: 16px !important;
-    line-height: 21px !important;
+    font-size: 17px !important;
+    line-height: 22px !important;
   }
 
   .sec-operational-2__card-link {
-    font-size: 14px !important;
+    font-size: 15px !important;
     gap: 5px !important;
   }
 

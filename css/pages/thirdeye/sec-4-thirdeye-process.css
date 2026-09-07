@@ -400,6 +400,11 @@
    Responsive: Mobile Standard (<=767px)
    ========================================================================== */
 @media (max-width: 767px) {
+  .sec-thirdeye-4 {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .sec-thirdeye-4 .flex-center-v {
     padding-top: 68px !important;
     padding-bottom: 20px !important;
@@ -408,7 +413,7 @@
     justify-content: center !important;
     align-items: center !important;
     height: 100% !important;
-    overflow: hidden !important;
+    min-height: 100% !important;
   }
 
   .sec-thirdeye-4__header {
@@ -418,10 +423,10 @@
   }
 
   .sec-thirdeye-4__title {
-    font-size: 20px !important;
-    line-height: 25px !important;
+    font-size: 23px !important;
+    line-height: 29px !important;
     text-align: center !important;
-    max-width: 360px !important;
+    max-width: 380px !important;
     margin: 0 auto !important;
   }
 
@@ -472,9 +477,9 @@
   }
 
   .sec-thirdeye-4__badge {
-    width: 22px !important;
-    height: 22px !important;
-    font-size: 12px !important;
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 13.5px !important;
     top: -4px !important;
     left: -4px !important;
   }
@@ -482,8 +487,8 @@
   .sec-thirdeye-4__feature-title {
     grid-column: 2 !important;
     grid-row: 1 !important;
-    font-size: 14.5px !important;
-    line-height: 18.5px !important;
+    font-size: 15.5px !important;
+    line-height: 20px !important;
     margin: 0 !important;
     letter-spacing: 0.3px !important;
     font-weight: 700 !important;
@@ -494,8 +499,8 @@
     grid-column: 2 !important;
     grid-row: 2 !important;
     display: block !important;
-    font-size: 12px !important;
-    line-height: 16px !important;
+    font-size: 13.5px !important;
+    line-height: 18px !important;
     color: #3b4b68 !important;
     margin: 0 !important;
     text-align: left !important;
@@ -518,9 +523,9 @@
   }
 
   .sec-thirdeye-4__title {
-    font-size: 22px !important;
-    line-height: 27px !important;
-    max-width: 390px !important;
+    font-size: 26px !important;
+    line-height: 32px !important;
+    max-width: 420px !important;
   }
 
   .sec-thirdeye-4__stage {
@@ -544,18 +549,18 @@
   }
 
   .sec-thirdeye-4__badge {
-    width: 24px !important;
-    height: 24px !important;
-    font-size: 13px !important;
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 14.5px !important;
   }
 
   .sec-thirdeye-4__feature-title {
-    font-size: 15.5px !important;
-    line-height: 19.5px !important;
+    font-size: 17px !important;
+    line-height: 22px !important;
   }
 
   .sec-thirdeye-4__feature-desc {
-    font-size: 12.5px !important;
-    line-height: 17px !important;
+    font-size: 14.5px !important;
+    line-height: 19.5px !important;
   }
 }

@@ -45,11 +45,11 @@
   margin-bottom: 0;
   z-index: 4;
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateY(24px);
   transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.1s;
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.08s;
 }
 
 .sec-thirdeye-3__title {
@@ -119,13 +119,39 @@
   display: none;
 }
 
-.sec-thirdeye-3__mobile-card:nth-child(1).phrase { transition-delay: 0.10s; }
-.sec-thirdeye-3__mobile-card:nth-child(2).phrase { transition-delay: 0.16s; }
-.sec-thirdeye-3__mobile-card:nth-child(3).phrase { transition-delay: 0.22s; }
-.sec-thirdeye-3__mobile-card:nth-child(4).phrase { transition-delay: 0.28s; }
-.sec-thirdeye-3__mobile-card:nth-child(5).phrase { transition-delay: 0.34s; }
-.sec-thirdeye-3__mobile-card:nth-child(6).phrase { transition-delay: 0.40s; }
-.sec-thirdeye-3__mobile-card:nth-child(7).phrase { transition-delay: 0.46s; }
+/* Safety initial state: strictly hidden before slide animation */
+.sec-thirdeye-3:not(.slide-animated):not(.visited) .phrase,
+.sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__header,
+.sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__diagram-wrapper,
+.sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__domains,
+.sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__mobile-card {
+  opacity: 0 !important;
+  transform: translateY(24px) !important;
+}
+
+.sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__mobile-card {
+  transform: translateY(24px) scale(0.92) !important;
+}
+
+/* Staggered cascading entrance for mobile cards */
+.sec-thirdeye-3__mobile-card.phrase {
+  opacity: 0;
+  transform: translateY(24px) scale(0.92);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-thirdeye-3__mobile-card:nth-child(1).phrase { transition-delay: 0.22s; }
+.sec-thirdeye-3__mobile-card:nth-child(2).phrase { transition-delay: 0.28s; }
+.sec-thirdeye-3__mobile-card:nth-child(3).phrase { transition-delay: 0.34s; }
+.sec-thirdeye-3__mobile-card:nth-child(4).phrase { transition-delay: 0.40s; }
+.sec-thirdeye-3__mobile-card:nth-child(5).phrase { transition-delay: 0.46s; }
+.sec-thirdeye-3__mobile-card:nth-child(6).phrase { transition-delay: 0.52s; }
+.sec-thirdeye-3__mobile-card:nth-child(7).phrase { transition-delay: 0.58s; }
 
 .sec-thirdeye-3.slide-animated .sec-thirdeye-3__header {
   opacity: 1;
@@ -142,15 +168,15 @@
   transform: translateY(0);
 }
 
-.sec-thirdeye-3.slide-animated .sec-thirdeye-3__mobile-card {
+.sec-thirdeye-3.slide-animated .sec-thirdeye-3__mobile-card.phrase {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .sec-thirdeye-3.visited .sec-thirdeye-3__header,
 .sec-thirdeye-3.visited .sec-thirdeye-3__diagram-wrapper,
 .sec-thirdeye-3.visited .sec-thirdeye-3__domains,
-.sec-thirdeye-3.visited .sec-thirdeye-3__mobile-card {
+.sec-thirdeye-3.visited .sec-thirdeye-3__mobile-card.phrase {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
@@ -244,18 +270,19 @@
   .sec-thirdeye-3 {
     height: 100vh !important;
     height: 100dvh !important;
-    overflow: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sec-thirdeye-3 .flex-center-v {
-    padding-top: 64px !important;
-    padding-bottom: 14px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
+    padding-top: 58px !important;
+    padding-bottom: 10px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
     justify-content: center !important;
     align-items: center !important;
     height: 100% !important;
-    overflow: hidden !important;
+    min-height: 100% !important;
   }
 
   .sec-thirdeye-3__header {
@@ -264,9 +291,9 @@
   }
 
   .sec-thirdeye-3__title {
-    font-size: 17px !important;
-    line-height: 21px !important;
-    max-width: 320px !important;
+    font-size: 18.5px !important;
+    line-height: 23px !important;
+    max-width: 360px !important;
     margin: 0 auto !important;
     text-align: center !important;
   }
@@ -281,7 +308,7 @@
   .sec-thirdeye-3__mobile-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 6px 12px !important;
+    gap: 5px 12px !important;
     width: 100% !important;
     max-width: 360px !important;
     margin: 0 auto !important;
@@ -302,49 +329,119 @@
     -webkit-backdrop-filter: none !important;
     padding: 0 !important;
     box-sizing: border-box !important;
-    transition:
-      opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.25s ease !important;
   }
 
-  .sec-thirdeye-3__mobile-card:hover {
-    transform: translateY(-2px) !important;
+  @media (hover: hover) and (pointer: fine) {
+    .sec-thirdeye-3__mobile-card:hover {
+      transform: translateY(-3px) scale(1.02) !important;
+      transition: transform 0.25s ease !important;
+    }
   }
 
   .sec-thirdeye-3__mobile-card--span2 {
     grid-column: span 2 !important;
-    max-width: 190px !important;
+    width: 100% !important;
+    max-width: 340px !important;
     margin: 0 auto !important;
   }
 
   .sec-thirdeye-3__mobile-img-box {
-    width: 120px !important;
-    height: 120px !important;
+    width: 82px !important;
+    height: 82px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 2px !important;
   }
 
   .sec-thirdeye-3__mobile-img {
-    width: 120px !important;
-    height: 120px !important;
-    max-width: 120px !important;
-    max-height: 120px !important;
+    width: 82px !important;
+    height: 82px !important;
+    max-width: 82px !important;
+    max-height: 82px !important;
     object-fit: contain !important;
     display: block !important;
-    filter: drop-shadow(0 6px 16px rgba(41, 187, 255, 0.4)) !important;
+    filter: drop-shadow(0 5px 14px rgba(41, 187, 255, 0.38)) !important;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .sec-thirdeye-3__mobile-card-title {
     font-family: Aptos, var(--font-brand) !important;
-    font-size: 12.5px !important;
+    font-size: 15px !important;
     font-weight: 700 !important;
-    line-height: 15px !important;
+    line-height: 19px !important;
     color: #ffffff !important;
     margin: 0 !important;
     letter-spacing: 0.2px !important;
     text-align: center !important;
+  }
+
+  .sec-thirdeye-3__mobile-card-desc {
+    font-family: Aptos, var(--font-brand) !important;
+    font-size: 13.5px !important;
+    line-height: 18px !important;
+    font-weight: 400 !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+    text-align: center !important;
+    margin: 3px auto 0 auto !important;
+    max-width: 330px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Modern Tall Phones (<=767px width & >=780px height)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-thirdeye-3 .flex-center-v {
+    padding-top: 78px !important;
+    padding-bottom: 24px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .sec-thirdeye-3__header {
+    margin-bottom: 12px !important;
+  }
+
+  .sec-thirdeye-3__title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+    max-width: 400px !important;
+  }
+
+  .sec-thirdeye-3__mobile-grid {
+    gap: 10px 16px !important;
+    max-width: 380px !important;
+  }
+
+  .sec-thirdeye-3__mobile-card--span2 {
+    max-width: 360px !important;
+  }
+
+  .sec-thirdeye-3__mobile-img-box {
+    width: 110px !important;
+    height: 110px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-thirdeye-3__mobile-img {
+    width: 110px !important;
+    height: 110px !important;
+    max-width: 110px !important;
+    max-height: 110px !important;
+  }
+
+  .sec-thirdeye-3__mobile-card-title {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+
+  .sec-thirdeye-3__mobile-card-desc {
+    font-size: 14px !important;
+    line-height: 19px !important;
+    max-width: 360px !important;
+    margin-top: 4px !important;
   }
 }
 

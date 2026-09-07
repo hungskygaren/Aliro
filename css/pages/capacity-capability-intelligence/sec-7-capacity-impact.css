@@ -475,8 +475,8 @@
 
   .sec-capacity-7__eyebrow {
     order: 1 !important;
-    font-size: 15px !important;
-    line-height: 19px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
     font-weight: 700 !important;
     color: var(--Secondary-Deep-Blue, #011b7f) !important;
     letter-spacing: 0.5px !important;
@@ -487,8 +487,8 @@
 
   .sec-capacity-7__statement {
     order: 2 !important;
-    font-size: 16px !important;
-    line-height: 22px !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
     font-weight: 700 !important;
     color: var(--Midnight-Navy, #01103b) !important;
     text-align: center !important;
@@ -541,8 +541,8 @@
   }
 
   .sec-capacity-7__card-title {
-    font-size: 11.5px !important;
-    line-height: 15px !important;
+    font-size: 13px !important;
+    line-height: 16.5px !important;
     font-weight: 700 !important;
     color: var(--Midnight-Navy, #01103b) !important;
     text-align: center !important;
@@ -560,7 +560,7 @@
   .sec-capacity-7__btn {
     height: 36px !important;
     padding: 8px 18px !important;
-    font-size: 13.5px !important;
+    font-size: 14.5px !important;
     font-weight: 700 !important;
     background: var(--Highlight-Blue, #0431b1) !important;
     color: #ffffff !important;
@@ -583,14 +583,14 @@
   }
 
   .sec-capacity-7__eyebrow {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 17px !important;
+    line-height: 21px !important;
     margin-bottom: 8px !important;
   }
 
   .sec-capacity-7__statement {
-    font-size: 18px !important;
-    line-height: 25px !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
     margin-bottom: 18px !important;
     max-width: 410px !important;
   }
@@ -616,13 +616,13 @@
   }
 
   .sec-capacity-7__card-title {
-    font-size: 13px !important;
-    line-height: 17px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
   }
 
   .sec-capacity-7__btn {
     height: 40px !important;
     padding: 10px 24px !important;
-    font-size: 14.5px !important;
+    font-size: 15.5px !important;
   }
 }

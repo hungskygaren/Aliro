@@ -147,7 +147,7 @@
 }
 
 .sec-contact-2__textarea {
-  resize: vertical;
+  resize: none;
   min-height: 70px;
   line-height: 22px;
 }

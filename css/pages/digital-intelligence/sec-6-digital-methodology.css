@@ -602,10 +602,10 @@
   }
 
   .sec-digital-6 .flex-center-v {
-    padding-top: 68px !important;
-    padding-bottom: 16px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
+    padding-top: 58px !important;
+    padding-bottom: 10px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
     justify-content: center !important;
     align-items: center !important;
     height: 100% !important;
@@ -635,15 +635,15 @@
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
-    max-width: 390px !important;
-    gap: 12px !important;
+    max-width: 360px !important;
+    gap: 16px !important;
     margin: 0 auto !important;
   }
 
   /* Vibrant card infused with #1e55b3 royal blue illumination */
   .sec-digital-6__col {
     width: 100% !important;
-    max-width: 390px !important;
+    max-width: 360px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -655,8 +655,8 @@
       rgba(1, 16, 59, 0.94) 100%
     ) !important;
     border: 1.5px solid rgba(57, 192, 255, 0.5) !important;
-    border-radius: 16px !important;
-    padding: 12px 16px !important;
+    border-radius: 12px !important;
+    padding: 8px 12px !important;
     box-sizing: border-box !important;
     box-shadow:
       0 10px 30px rgba(1, 16, 59, 0.55),
@@ -672,49 +672,49 @@
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    width: 42px !important;
-    height: 42px !important;
-    min-width: 42px !important;
-    min-height: 42px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
     aspect-ratio: 1 / 1 !important;
     border-radius: 50% !important;
     background: var(--Highlight-Blue, #0431b1) !important;
     border: 1.5px solid var(--Bright-Blue, #226cb4) !important;
     color: #ffffff !important;
     font-family: Aptos, var(--font-brand) !important;
-    font-size: 24px !important;
+    font-size: 18px !important;
     font-weight: 700 !important;
     line-height: 1 !important;
     opacity: 1 !important;
     transform: none !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 3px !important;
     box-shadow: 0 0 16px rgba(4, 49, 177, 0.6) !important;
   }
 
   .sec-digital-6__col-title {
-    font-size: 20px !important;
-    line-height: 24px !important;
+    font-size: 17px !important;
+    line-height: 21px !important;
     font-weight: 700 !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 2px !important;
     letter-spacing: 0.5px !important;
   }
 
   .sec-digital-6__col-desc {
-    font-size: 13.5px !important;
-    line-height: 18px !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
     font-weight: 600 !important;
     color: #ffffff !important;
     white-space: normal !important;
     width: 100% !important;
-    max-width: 360px !important;
-    margin-bottom: 8px !important;
+    max-width: 340px !important;
+    margin-bottom: 5px !important;
     min-height: auto !important;
   }
 
   .sec-digital-6__img-box {
     width: 100% !important;
-    max-width: 200px !important;
-    height: 135px !important;
+    max-width: 150px !important;
+    height: 95px !important;
     margin: 0 auto !important;
   }
 

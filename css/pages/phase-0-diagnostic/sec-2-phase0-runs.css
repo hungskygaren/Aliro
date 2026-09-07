@@ -537,8 +537,8 @@
   }
 
   .sec-phase0-2__banner-title {
-    font-size: 16px !important;
-    line-height: 21px !important;
+    font-size: 18px !important;
+    line-height: 23px !important;
     text-align: center !important;
   }
 
@@ -548,8 +548,8 @@
   }
 
   .sec-phase0-2__subtitle {
-    font-size: 13.5px !important;
-    line-height: 18px !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
     margin: 6px 0 10px 0 !important;
     text-align: center !important;
   }
@@ -607,23 +607,23 @@
   }
 
   .sec-phase0-2__badge {
-    width: 28px !important;
-    height: 28px !important;
-    font-size: 13.5px !important;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 14.5px !important;
     font-weight: 700 !important;
   }
 
   .sec-phase0-2__step-title {
-    font-size: 14.5px !important;
-    line-height: 18px !important;
-    margin-bottom: 3px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin-bottom: 4px !important;
     letter-spacing: 0.3px;
   }
 
   .sec-phase0-2__step-desc {
-    font-size: 12px !important;
-    line-height: 15.5px !important;
-    max-width: 170px !important;
+    font-size: 13.5px !important;
+    line-height: 18px !important;
+    max-width: 180px !important;
     margin: 0 auto !important;
   }
 }
@@ -645,13 +645,13 @@
   }
 
   .sec-phase0-2__banner-title {
-    font-size: 19px !important;
-    line-height: 25px !important;
+    font-size: 21px !important;
+    line-height: 27px !important;
   }
 
   .sec-phase0-2__subtitle {
-    font-size: 16.5px !important;
-    line-height: 22px !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
     margin: 12px 0 20px 0 !important;
   }
 
@@ -673,20 +673,20 @@
   }
 
   .sec-phase0-2__badge {
-    width: 34px !important;
-    height: 34px !important;
-    font-size: 16px !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 17px !important;
   }
 
   .sec-phase0-2__step-title {
-    font-size: 17.5px !important;
-    line-height: 23px !important;
+    font-size: 19.5px !important;
+    line-height: 25px !important;
     margin-bottom: 6px !important;
   }
 
   .sec-phase0-2__step-desc {
-    font-size: 14px !important;
-    line-height: 19px !important;
-    max-width: 205px !important;
+    font-size: 15.5px !important;
+    line-height: 21px !important;
+    max-width: 220px !important;
   }
 }
