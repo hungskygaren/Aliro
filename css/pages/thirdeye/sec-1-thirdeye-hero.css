@@ -302,7 +302,7 @@
   }
 
   .sec-thirdeye-1 .scroll-down-btn {
-    display: none !important;
+    display: flex !important;
   }
 }
 
@@ -324,7 +324,7 @@
 
   .sec-thirdeye-1 .flex-center-v {
     padding-top: 68px !important;
-    padding-bottom: 16px !important;
+    padding-bottom: 42px !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
     justify-content: center !important;
@@ -378,6 +378,27 @@
     line-height: 21px !important;
     margin-top: 8px !important;
   }
+
+  .sec-thirdeye-1 .scroll-down-btn {
+    display: flex !important;
+    color: #ffffff !important;
+    bottom: 6px !important;
+  }
+
+  .sec-thirdeye-1.slide-animated .scroll-down-btn {
+    opacity: 0.8 !important;
+  }
+
+  .sec-thirdeye-1 .scroll-down-text {
+    font-size: 11.5px !important;
+    color: #ffffff !important;
+  }
+
+  .sec-thirdeye-1 .scroll-down-icon {
+    width: 18px !important;
+    height: 18px !important;
+    color: #ffffff !important;
+  }
 }
 
 /* ==========================================================================
@@ -386,7 +407,7 @@
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-thirdeye-1 .flex-center-v {
     padding-top: 80px !important;
-    padding-bottom: 24px !important;
+    padding-bottom: 45px !important;
     padding-left: 18px !important;
     padding-right: 18px !important;
   }

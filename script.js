@@ -41,7 +41,10 @@ async function loadSharedHeader() {
       }
       mainHeader.innerHTML = html;
     } else {
-      console.error("Failed to load components/header.html, status:", res.status);
+      console.error(
+        "Failed to load components/header.html, status:",
+        res.status,
+      );
     }
   } catch (err) {
     console.error("Error loading components/header.html:", err);
@@ -53,7 +56,9 @@ async function loadSharedHeader() {
 }
 
 function highlightActiveNav() {
-  const currentPath = window.location.pathname.toLowerCase().replace(/\\/g, "/");
+  const currentPath = window.location.pathname
+    .toLowerCase()
+    .replace(/\\/g, "/");
   let activeKey = "home";
 
   if (currentPath.includes("about")) {
@@ -93,7 +98,9 @@ function highlightActiveNav() {
   const is4iC = ["market", "operational", "digital", "capacity"].includes(
     activeKey,
   );
-  const isServices = ["services-overview", "phase0", "thirdeye"].includes(activeKey);
+  const isServices = ["services-overview", "phase0", "thirdeye"].includes(
+    activeKey,
+  );
 
   document
     .querySelectorAll(".nav-menu .nav-item, .nav-menu .nav-dropdown-item")
@@ -101,7 +108,14 @@ function highlightActiveNav() {
 
   if (is4iC) {
     const parent4iC = document.querySelector('.nav-item[data-nav="4ic"]');
-    if (parent4iC) parent4iC.classList.add("active");
+    if (parent4iC) {
+      parent4iC.classList.add("active");
+      const wrapper = parent4iC.closest(".nav-dropdown-wrapper");
+      if (wrapper) {
+        wrapper.classList.add("is-open");
+        parent4iC.setAttribute("aria-expanded", "true");
+      }
+    }
     const subItem = document.querySelector(
       `.nav-dropdown-item[data-nav="${activeKey}"]`,
     );
@@ -110,7 +124,14 @@ function highlightActiveNav() {
     const parentServices = document.querySelector(
       '.nav-item[data-nav="services"]',
     );
-    if (parentServices) parentServices.classList.add("active");
+    if (parentServices) {
+      parentServices.classList.add("active");
+      const wrapper = parentServices.closest(".nav-dropdown-wrapper");
+      if (wrapper) {
+        wrapper.classList.add("is-open");
+        parentServices.setAttribute("aria-expanded", "true");
+      }
+    }
     const subItem = document.querySelector(
       `.nav-dropdown-item[data-nav="${activeKey}"]`,
     );
@@ -161,13 +182,37 @@ function bindNavEvents() {
     navBackdrop.addEventListener("click", closeMobileMenu);
   }
 
-  const nonClickableItems = document.querySelectorAll(
+  const dropdownToggles = document.querySelectorAll(
     '.nav-item--dropdown, .nav-item[data-nav="4ic"]',
   );
-  nonClickableItems.forEach((item) => {
+  dropdownToggles.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
+
+      const wrapper = item.closest(".nav-dropdown-wrapper");
+      if (!wrapper) return;
+
+      const isCurrentlyOpen = wrapper.classList.contains("is-open");
+
+      // Accordion: close other dropdowns in nav drawer
+      document
+        .querySelectorAll(".nav-drawer .nav-dropdown-wrapper")
+        .forEach((other) => {
+          if (other !== wrapper) {
+            other.classList.remove("is-open");
+            const otherBtn = other.querySelector(".nav-item--dropdown");
+            if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+          }
+        });
+
+      if (isCurrentlyOpen) {
+        wrapper.classList.remove("is-open");
+        item.setAttribute("aria-expanded", "false");
+      } else {
+        wrapper.classList.add("is-open");
+        item.setAttribute("aria-expanded", "true");
+      }
     });
   });
 
@@ -233,7 +278,10 @@ async function loadSharedFooter() {
         target.innerHTML = footerHTML;
       });
     } else {
-      console.error("Failed to load components/footer.html, status:", res.status);
+      console.error(
+        "Failed to load components/footer.html, status:",
+        res.status,
+      );
     }
   } catch (err) {
     console.error("Error loading components/footer.html:", err);
@@ -241,7 +289,6 @@ async function loadSharedFooter() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-
   await Promise.all([loadSharedHeader(), loadSharedFooter()]);
 
   const swiperEl = document.querySelector(".main-swiper");
@@ -289,98 +336,98 @@ document.addEventListener("DOMContentLoaded", async () => {
   let swiper = null;
   if (swiperEl) {
     swiper = new Swiper(".main-swiper", {
-    direction: "vertical",
-    initialSlide: initialTargetIndex,
-    slidesPerView: 1,
-    speed: 750,
-    effect: "slide",
-    autoHeight: false,
-    mousewheel: {
-      enabled: true,
-      releaseOnEdges: false,
-      thresholdDelta: 20,
-    },
-    keyboard: {
-      enabled: true,
-    },
-    grabCursor: false,
-    touchThreshold: 5,
-    on: {
-      init: function () {
-        const swiperInstance = this;
-        updateHeaderTheme(swiperInstance.activeIndex);
-
-        requestAnimationFrame(() => {
-          if (
-            swiperInstance.slides &&
-            swiperInstance.slides[swiperInstance.activeIndex]
-          ) {
-            const initialSlide =
-              swiperInstance.slides[swiperInstance.activeIndex];
-            initialSlide.classList.add("slide-animated");
-            triggerCounterAnimations(initialSlide);
-          }
-        });
+      direction: "vertical",
+      initialSlide: initialTargetIndex,
+      slidesPerView: 1,
+      speed: 750,
+      effect: "slide",
+      autoHeight: false,
+      mousewheel: {
+        enabled: true,
+        releaseOnEdges: false,
+        thresholdDelta: 20,
       },
+      keyboard: {
+        enabled: true,
+      },
+      grabCursor: false,
+      touchThreshold: 5,
+      on: {
+        init: function () {
+          const swiperInstance = this;
+          updateHeaderTheme(swiperInstance.activeIndex);
 
-      slideChange: function () {
-        updateHeaderTheme(this.activeIndex);
+          requestAnimationFrame(() => {
+            if (
+              swiperInstance.slides &&
+              swiperInstance.slides[swiperInstance.activeIndex]
+            ) {
+              const initialSlide =
+                swiperInstance.slides[swiperInstance.activeIndex];
+              initialSlide.classList.add("slide-animated");
+              triggerCounterAnimations(initialSlide);
+            }
+          });
+        },
 
-        const targetId =
-          sectionIds[this.activeIndex] || `section-${this.activeIndex + 1}`;
-        history.replaceState(null, "", `#${targetId}`);
+        slideChange: function () {
+          updateHeaderTheme(this.activeIndex);
 
-        if (this.slides) {
+          const targetId =
+            sectionIds[this.activeIndex] || `section-${this.activeIndex + 1}`;
+          history.replaceState(null, "", `#${targetId}`);
+
+          if (this.slides) {
+            this.slides.forEach((slide, idx) => {
+              if (idx !== this.activeIndex) {
+                slide.classList.remove("slide-animated");
+              }
+            });
+
+            if (this.slides[this.previousIndex]) {
+              const prevSlide = this.slides[this.previousIndex];
+              prevSlide.classList.add("visited");
+
+              prevSlide.querySelectorAll("[data-counter]").forEach((el) => {
+                if (el._counterTimeoutId) clearTimeout(el._counterTimeoutId);
+                if (el._counterAnimId) cancelAnimationFrame(el._counterAnimId);
+                const target = el.getAttribute("data-counter");
+                const suffix = el.getAttribute("data-suffix") || "";
+                const prefix = el.getAttribute("data-prefix") || "";
+                if (target) {
+                  el.textContent = `${prefix}${target}${suffix}`;
+                  el._counterDone = true;
+                  el.setAttribute("data-counter-done", "true");
+                }
+              });
+            }
+
+            const currentSlide = this.slides[this.activeIndex];
+            if (currentSlide) {
+              currentSlide.classList.remove("visited");
+              currentSlide.classList.add("slide-animated");
+            }
+          }
+        },
+
+        slideChangeTransitionEnd: function () {
+          if (!this.slides) return;
+
           this.slides.forEach((slide, idx) => {
             if (idx !== this.activeIndex) {
               slide.classList.remove("slide-animated");
             }
           });
 
-          if (this.slides[this.previousIndex]) {
-            const prevSlide = this.slides[this.previousIndex];
-            prevSlide.classList.add("visited");
-
-            prevSlide.querySelectorAll("[data-counter]").forEach((el) => {
-              if (el._counterTimeoutId) clearTimeout(el._counterTimeoutId);
-              if (el._counterAnimId) cancelAnimationFrame(el._counterAnimId);
-              const target = el.getAttribute("data-counter");
-              const suffix = el.getAttribute("data-suffix") || "";
-              const prefix = el.getAttribute("data-prefix") || "";
-              if (target) {
-                el.textContent = `${prefix}${target}${suffix}`;
-                el._counterDone = true;
-                el.setAttribute("data-counter-done", "true");
-              }
-            });
-          }
-
           const currentSlide = this.slides[this.activeIndex];
           if (currentSlide) {
             currentSlide.classList.remove("visited");
             currentSlide.classList.add("slide-animated");
+            triggerCounterAnimations(currentSlide);
           }
-        }
+        },
       },
-
-      slideChangeTransitionEnd: function () {
-        if (!this.slides) return;
-
-        this.slides.forEach((slide, idx) => {
-          if (idx !== this.activeIndex) {
-            slide.classList.remove("slide-animated");
-          }
-        });
-
-        const currentSlide = this.slides[this.activeIndex];
-        if (currentSlide) {
-          currentSlide.classList.remove("visited");
-          currentSlide.classList.add("slide-animated");
-          triggerCounterAnimations(currentSlide);
-        }
-      },
-    },
-  });
+    });
 
     setupScrollDownButtons();
   }
@@ -545,7 +592,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     !document.body.classList.contains("page-market-intelligence") &&
     !document.body.classList.contains("page-operational-intelligence") &&
     !document.body.classList.contains("page-digital-intelligence") &&
-    !document.body.classList.contains("page-capacity-capability-intelligence") &&
+    !document.body.classList.contains(
+      "page-capacity-capability-intelligence",
+    ) &&
     !document.body.classList.contains("page-contact") &&
     !document.body.classList.contains("page-privacy-terms") &&
     !document.body.classList.contains("page-services-overview");

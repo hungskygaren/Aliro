@@ -95,6 +95,10 @@
   cursor: default;
 }
 
+.dropdown-arrow {
+  display: none;
+}
+
 .nav-dropdown-wrapper {
   position: relative;
   display: inline-flex;
@@ -319,6 +323,8 @@
     padding: 70px 24px 30px;
     box-sizing: border-box;
     justify-content: space-between;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .navbar-overlay.light-theme .nav-drawer {
@@ -380,19 +386,55 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+  }
+
+  .dropdown-arrow {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    transform: rotate(45deg);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+
+  .navbar-overlay.light-theme .dropdown-arrow {
+    border-color: rgba(1, 16, 59, 0.7);
+  }
+
+  .nav-dropdown-wrapper.is-open .dropdown-arrow {
+    transform: rotate(-135deg);
   }
 
   .nav-dropdown-menu {
     position: static;
     transform: none !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
     width: 100%;
     box-shadow: none !important;
     background: transparent !important;
-    padding: 4px 0 8px 16px;
     margin: 0;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    pointer-events: none;
+    padding: 0 0 0 14px;
+    transition:
+      max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.25s ease,
+      padding 0.35s ease,
+      visibility 0.35s;
+  }
+
+  .nav-dropdown-wrapper.is-open .nav-dropdown-menu {
+    max-height: 350px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    padding: 6px 0 8px 14px;
   }
 
   .nav-dropdown-menu::before {
@@ -611,21 +653,69 @@ body.no-scroll {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(6px);
+    transform: translateY(3px);
   }
   60% {
-    transform: translateY(3px);
+    transform: translateY(1.5px);
   }
 }
 
 @media (max-height: 660px) {
   .scroll-down-btn {
-    bottom: 10px;
+    bottom: 0 !important;
   }
 }
 
 @media (max-height: 620px) {
   .scroll-down-btn {
-    bottom: 6px;
+    bottom: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Mobile Scroll Down Button Rules
+   - Desktop: Shows on all pages and all sections (except footer)
+   - Mobile (<=1024px): Shows on the first slide (Hero / Section 1) of every route,
+     hidden on subsequent sections
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .scroll-down-btn {
+    display: none !important;
+  }
+
+  /* Re-enable for the first slide of every route */
+  .swiper-slide:first-child .scroll-down-btn,
+  .sec-hero .scroll-down-btn,
+  .sec-about-1 .scroll-down-btn,
+  .sec-contact-1 .scroll-down-btn,
+  .sec-about-4 .scroll-down-btn,
+  .sec-phase0-1 .scroll-down-btn,
+  .sec-thirdeye-1 .scroll-down-btn,
+  .sec-digital-1 .scroll-down-btn,
+  .sec-market-1 .scroll-down-btn,
+  .sec-operational-1 .scroll-down-btn,
+  .sec-capacity-1 .scroll-down-btn {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .scroll-down-btn {
+    bottom: 6px !important;
+  }
+
+  .scroll-down-text {
+    font-size: 11.5px !important;
+    letter-spacing: 0.8px !important;
+  }
+
+  .scroll-down-icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .scroll-down-icon svg {
+    width: 18px !important;
+    height: 18px !important;
   }
 }

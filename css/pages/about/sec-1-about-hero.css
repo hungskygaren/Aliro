@@ -449,6 +449,11 @@
     display: block !important;
   }
 
+  .sec-about-1 .scroll-down-btn {
+    display: flex !important;
+    bottom: 6px !important;
+  }
+
   .sec-about-1 .scroll-down-text {
     font-size: 12px;
   }
