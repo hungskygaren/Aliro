@@ -546,17 +546,24 @@
     justify-content: center !important;
     width: 100% !important;
     margin-top: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
   }
 
   .sec-operational-7__btn {
-    height: 42px !important;
-    padding: 10px 24px !important;
-    font-size: 15.5px !important;
+    height: auto !important;
+    min-height: 40px !important;
+    padding: 10px 20px !important;
+    font-size: 14.5px !important;
     font-weight: 700 !important;
     background: var(--Highlight-Blue, #0431b1) !important;
     color: #ffffff !important;
     border-radius: 0px !important;
     box-shadow: 0 3px 10px rgba(4, 49, 177, 0.3) !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
   }
 }
 
@@ -613,9 +620,10 @@
   }
 
   .sec-operational-7__btn {
-    height: 46px !important;
-    padding: 12px 28px !important;
-    font-size: 16.5px !important;
+    height: auto !important;
+    min-height: 44px !important;
+    padding: 10px 24px !important;
+    font-size: 15.5px !important;
     border-radius: 0px !important;
   }
 }

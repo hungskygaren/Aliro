@@ -236,11 +236,7 @@
   transition: none !important;
 }
 
-.sec-digital-1.visited * {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
-}
+
 
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-1 .flex-center-v {

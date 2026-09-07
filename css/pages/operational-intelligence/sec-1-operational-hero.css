@@ -255,11 +255,7 @@
   transition: none !important;
 }
 
-.sec-operational-1.visited * {
-  opacity: 1 !important;
-  transform: none !important;
-  transition: none !important;
-}
+
 
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-operational-1 .flex-center-v {
