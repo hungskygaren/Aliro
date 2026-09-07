@@ -484,11 +484,14 @@ body.no-scroll {
   overflow: hidden !important;
 }
 
+/* ==========================================================================
+   Scroll Down Button Styles (In-Slide, Re-animating on each section)
+   ========================================================================== */
 .scroll-down-btn {
   position: absolute;
   bottom: 24px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(20px);
   z-index: 20;
   background: transparent;
   border: none;
@@ -497,19 +500,26 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  color: #ffffff !important;
-  opacity: 0.8 !important;
+  color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
   text-decoration: none;
   transition:
-    opacity 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.25s ease;
 }
 
-.scroll-down-btn:hover {
-  opacity: 1 !important;
-  color: #ffffff !important;
-  transform: translateX(-50%) translateY(3px) !important;
+/* Re-animate whenever slide becomes active */
+.scroll-section.slide-animated .scroll-down-btn {
+  opacity: 0.85;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.scroll-section.slide-animated .scroll-down-btn:hover {
+  opacity: 1;
+  transform: translateX(-50%) translateY(3px);
 }
 
 .scroll-down-text {
@@ -517,8 +527,7 @@ body.no-scroll {
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
-  color: #ffffff !important;
-  opacity: 0.8 !important;
+  color: inherit;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
@@ -530,16 +539,10 @@ body.no-scroll {
     color 0.25s ease;
 }
 
-.scroll-down-btn:hover .scroll-down-text {
-  opacity: 1 !important;
-  color: #ffffff !important;
-}
-
 .scroll-down-icon {
   width: 24px;
   height: 24px;
-  color: #ffffff !important;
-  opacity: 0.8 !important;
+  color: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -549,14 +552,36 @@ body.no-scroll {
     color 0.25s ease;
 }
 
-.scroll-down-btn:hover .scroll-down-icon {
-  opacity: 1 !important;
-  color: #ffffff !important;
-}
-
 .scroll-down-icon svg,
 .scroll-down-icon path {
   fill: currentColor;
+}
+
+/* Dark text / deep blue for light background slides */
+.scroll-down-btn--dark-text,
+.scroll-section.sec-services-bg-light .scroll-down-btn,
+.scroll-section.sec-about-bg-light .scroll-down-btn,
+.scroll-section.sec-phase0-bg-light .scroll-down-btn,
+.scroll-section.sec-thirdeye-bg-light .scroll-down-btn,
+.scroll-section.sec-market-bg-light .scroll-down-btn,
+.scroll-section.sec-operational-bg-light .scroll-down-btn,
+.scroll-section.sec-digital-bg-light .scroll-down-btn,
+.scroll-section.sec-capacity-bg-light .scroll-down-btn,
+.scroll-section.sec-contact-bg-light .scroll-down-btn {
+  color: var(--Secondary-Deep-Blue, #011b7f);
+}
+
+.scroll-down-btn--dark-text:hover,
+.scroll-section.sec-services-bg-light .scroll-down-btn:hover,
+.scroll-section.sec-about-bg-light .scroll-down-btn:hover,
+.scroll-section.sec-phase0-bg-light .scroll-down-btn:hover,
+.scroll-section.sec-thirdeye-bg-light .scroll-down-btn:hover,
+.scroll-section.sec-market-bg-light .scroll-down-btn:hover,
+.scroll-section.sec-operational-bg-light .scroll-down-btn:hover,
+.scroll-section.sec-digital-bg-light .scroll-down-btn:hover,
+.scroll-section.sec-capacity-bg-light .scroll-down-btn:hover,
+.scroll-section.sec-contact-bg-light .scroll-down-btn:hover {
+  color: var(--Midnight-Navy, #01103b);
 }
 
 @keyframes bounceDown {
@@ -586,3 +611,4 @@ body.no-scroll {
     bottom: 6px;
   }
 }
+

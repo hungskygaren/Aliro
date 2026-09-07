@@ -354,6 +354,12 @@ document.addEventListener("DOMContentLoaded", async () => {
               }
             });
           }
+
+          const currentSlide = this.slides[this.activeIndex];
+          if (currentSlide) {
+            currentSlide.classList.remove("visited");
+            currentSlide.classList.add("slide-animated");
+          }
         }
       },
 
@@ -368,12 +374,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const currentSlide = this.slides[this.activeIndex];
         if (currentSlide) {
+          currentSlide.classList.remove("visited");
           currentSlide.classList.add("slide-animated");
           triggerCounterAnimations(currentSlide);
         }
       },
     },
   });
+
+    setupScrollDownButtons();
   }
 
   function triggerCounterAnimations(container) {
@@ -434,9 +443,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  function updateHeaderTheme(index) {
-    if (!mainHeader) return;
-
+  function isCurrentSlideDark(index) {
     const activeSlide = domSlides[index];
     if (activeSlide) {
       if (
@@ -451,8 +458,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeSlide.classList.contains("sec-services-bg-dark") ||
         activeSlide.classList.contains("sec-contact-form")
       ) {
-        mainHeader.classList.add("light-theme");
-        return;
+        return true;
       } else if (
         activeSlide.classList.contains("sec-about-bg-light") ||
         activeSlide.classList.contains("sec-phase0-bg-light") ||
@@ -464,26 +470,71 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeSlide.classList.contains("sec-contact-bg-light") ||
         activeSlide.classList.contains("sec-services-bg-light")
       ) {
-        mainHeader.classList.remove("light-theme");
-        return;
+        return false;
       }
     }
 
     const isLightBg = [1, 3, 5, 7, 9, 10, 11].includes(index);
-    mainHeader.classList.toggle("light-theme", !isLightBg);
+    return !isLightBg;
+  }
+
+  function updateHeaderTheme(index) {
+    if (!mainHeader) return;
+    const isDark = isCurrentSlideDark(index);
+    mainHeader.classList.toggle("light-theme", isDark);
+  }
+
+  function setupScrollDownButtons() {
+    if (!swiper || !domSlides || domSlides.length <= 1) return;
+
+    domSlides.forEach((slide, idx) => {
+      const isFooter =
+        idx >= domSlides.length - 1 ||
+        slide.hasAttribute("data-shared-footer") ||
+        slide.classList.contains("sec-10");
+
+      if (isFooter) {
+        const existingBtn = slide.querySelector(".scroll-down-btn");
+        if (existingBtn) existingBtn.remove();
+        return;
+      }
+
+      let btn = slide.querySelector(".scroll-down-btn");
+      if (!btn) {
+        btn = document.createElement("button");
+        btn.className = "scroll-down-btn";
+        btn.setAttribute("aria-label", `Scroll to section ${idx + 2}`);
+        btn.innerHTML = `
+          <span class="scroll-down-text">SCROLL DOWN</span>
+          <span class="scroll-down-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6.41L16.59 5L12 9.58L7.41 5L6 6.41L12 12.41L18 6.41Z" fill="currentColor"/>
+              <path d="M18 13L16.59 11.59L12 16.17L7.41 11.59L6 13L12 19L18 13Z" fill="currentColor"/>
+            </svg>
+          </span>
+        `;
+        slide.appendChild(btn);
+      }
+
+      const isDark = isCurrentSlideDark(idx);
+      if (!isDark) {
+        btn.classList.add("scroll-down-btn--dark-text");
+      } else {
+        btn.classList.remove("scroll-down-btn--dark-text");
+      }
+
+      btn.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        smartSlideTo(idx + 1);
+      };
+    });
   }
 
   function smartSlideTo(targetIndex) {
     if (!swiper) return;
     if (targetIndex < 0 || targetIndex >= sectionIds.length) return;
     swiper.slideTo(targetIndex, 750);
-  }
-
-  if (scrollDownBtn) {
-    scrollDownBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      smartSlideTo(1);
-    });
   }
 
   const isHomePage =

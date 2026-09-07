@@ -234,12 +234,6 @@
   animation: none !important;
 }
 
-.sec-hero.visited .scroll-down-btn {
-  opacity: 0.8 !important;
-  transition: none !important;
-  animation: none !important;
-}
-
 .sec-hero.visited .sec-hero__cliff--left,
 .sec-hero.visited .sec-hero__cliff--right {
   transform: translateX(0) !important;
@@ -247,10 +241,6 @@
 
 .sec-hero.visited .sec-hero__content {
   transform: translateY(0) !important;
-}
-
-.sec-hero.visited .scroll-down-btn {
-  transform: translateX(-50%) translateY(0) !important;
 }
 
 @media (max-width: 1024px) {
