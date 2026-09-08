@@ -40,9 +40,9 @@
 
 .sec-thirdeye-1__left {
   position: relative;
-  width: calc(500 / 1170 * 100%);
-  max-width: 500px;
-  margin-top: calc(177 / 720 * 100dvh);
+  width: calc(520 / 1170 * 100%);
+  max-width: 520px;
+  margin-top: calc(120 / 720 * 100dvh);
   z-index: 4;
   opacity: 0;
   transform: translateY(35px);
@@ -54,9 +54,9 @@
 
 .sec-thirdeye-1__tag {
   font-family: Aptos, var(--font-brand);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 30px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -68,9 +68,9 @@
 
 .sec-thirdeye-1__title {
   font-family: Aptos, var(--font-brand);
-  font-size: 44px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 50px;
+  line-height: 54px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   margin: 0 0 15px 0;
@@ -82,9 +82,9 @@
 
 .sec-thirdeye-1__catchphrase {
   font-family: Aptos, var(--font-brand);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 30px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   margin-bottom: 20px;
   font-feature-settings:
@@ -94,12 +94,12 @@
 
 .sec-thirdeye-1__desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 27px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  max-width: 470px;
+  max-width: 500px;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -107,9 +107,9 @@
 
 .sec-thirdeye-1__right {
   position: relative;
-  width: calc(670 / 1170 * 100%);
-  max-width: 670px;
-  margin-top: calc(53 / 720 * 100dvh);
+  width: calc(650 / 1170 * 100%);
+  max-width: 650px;
+  margin-top: calc(120 / 720 * 100dvh);
   display: flex;
   flex-direction: column;
   align-items: center;

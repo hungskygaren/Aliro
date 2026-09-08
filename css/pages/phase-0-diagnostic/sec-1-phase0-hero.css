@@ -40,9 +40,9 @@
 
 .sec-phase0-1__left {
   position: relative;
-  width: calc(500 / 1170 * 100%);
-  max-width: 500px;
-  margin-top: calc(141 / 720 * 100dvh);
+  width: calc(530 / 1170 * 100%);
+  max-width: 530px;
+  margin-top: calc(120 / 720 * 100dvh);
   z-index: 4;
   opacity: 0;
   transform: translateY(35px);
@@ -143,9 +143,9 @@
 
 .sec-phase0-1__right {
   position: relative;
-  width: calc(670 / 1170 * 100%);
-  max-width: 670px;
-  margin-top: calc(95 / 720 * 100dvh);
+  width: calc(610 / 1170 * 100%);
+  max-width: 610px;
+  margin-top: calc(120 / 720 * 100dvh);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,8 +162,8 @@
 .sec-phase0-1__img-wrapper {
   position: relative;
   width: 100%;
-  max-width: 670px;
-  aspect-ratio: 670 / 447;
+  max-width: 610px;
+  aspect-ratio: 610 / 407;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,7 +176,7 @@
 .sec-phase0-1__img {
   width: 100%;
   height: 100%;
-  aspect-ratio: 670 / 447;
+  aspect-ratio: 610 / 407;
   object-fit: contain;
   display: block;
   position: relative;
@@ -358,7 +358,7 @@
     justify-content: center !important;
     align-items: center !important;
     position: relative !important;
-    aspect-ratio: 670 / 447 !important;
+    aspect-ratio: 610 / 407 !important;
   }
 
   .sec-phase0-1__glow {
@@ -374,7 +374,7 @@
     width: 100% !important;
     max-width: 560px !important;
     height: auto !important;
-    aspect-ratio: 670 / 447 !important;
+    aspect-ratio: 610 / 407 !important;
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;
@@ -489,7 +489,7 @@
     justify-content: center !important;
     align-items: center !important;
     position: relative !important;
-    aspect-ratio: 670 / 447 !important;
+    aspect-ratio: 610 / 407 !important;
   }
 
   .sec-phase0-1__glow {
@@ -504,7 +504,7 @@
     max-width: 320px !important;
     max-height: 210px !important;
     height: auto !important;
-    aspect-ratio: 670 / 447 !important;
+    aspect-ratio: 610 / 407 !important;
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;
