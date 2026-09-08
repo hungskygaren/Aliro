@@ -189,7 +189,7 @@
   width: 670px;
   max-width: 670px;
   height: auto;
-  margin-top: calc(20 / 720 * 100dvh);
+  margin-top: calc(90 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   justify-content: center;

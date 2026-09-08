@@ -45,7 +45,7 @@
   position: relative;
   width: 570px;
   max-width: 570px;
-  margin-top: calc(133 / 720 * 100dvh);
+  margin-top: calc(89 / 720 * 100dvh + 43px);
   flex-shrink: 0;
   z-index: 4;
   opacity: 0;
@@ -134,7 +134,7 @@
   font-family: Aptos, var(--font-brand);
   font-size: 20px;
   font-weight: 700;
-  line-height: normal;
+  line-height: 25px;
   color: #ffffff;
   text-align: right;
   margin-bottom: 18px;
@@ -195,7 +195,7 @@
   }
 
   .sec-about-1__left {
-    margin-top: 20px;
+    margin-top: 43px;
   }
 
   .sec-about-1__right {
