@@ -121,14 +121,17 @@
 
 .sec-thirdeye-3:not(.slide-animated):not(.visited) .phrase,
 .sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__header,
-.sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__diagram-wrapper,
+.sec-thirdeye-3:not(.slide-animated):not(.visited)
+  .sec-thirdeye-3__diagram-wrapper,
 .sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__domains,
-.sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__mobile-card {
+.sec-thirdeye-3:not(.slide-animated):not(.visited)
+  .sec-thirdeye-3__mobile-card {
   opacity: 0 !important;
   transform: translateY(24px) !important;
 }
 
-.sec-thirdeye-3:not(.slide-animated):not(.visited) .sec-thirdeye-3__mobile-card {
+.sec-thirdeye-3:not(.slide-animated):not(.visited)
+  .sec-thirdeye-3__mobile-card {
   transform: translateY(24px) scale(0.92) !important;
 }
 
@@ -143,13 +146,27 @@
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-thirdeye-3__mobile-card:nth-child(1).phrase { transition-delay: 0.22s; }
-.sec-thirdeye-3__mobile-card:nth-child(2).phrase { transition-delay: 0.28s; }
-.sec-thirdeye-3__mobile-card:nth-child(3).phrase { transition-delay: 0.34s; }
-.sec-thirdeye-3__mobile-card:nth-child(4).phrase { transition-delay: 0.40s; }
-.sec-thirdeye-3__mobile-card:nth-child(5).phrase { transition-delay: 0.46s; }
-.sec-thirdeye-3__mobile-card:nth-child(6).phrase { transition-delay: 0.52s; }
-.sec-thirdeye-3__mobile-card:nth-child(7).phrase { transition-delay: 0.58s; }
+.sec-thirdeye-3__mobile-card:nth-child(1).phrase {
+  transition-delay: 0.22s;
+}
+.sec-thirdeye-3__mobile-card:nth-child(2).phrase {
+  transition-delay: 0.28s;
+}
+.sec-thirdeye-3__mobile-card:nth-child(3).phrase {
+  transition-delay: 0.34s;
+}
+.sec-thirdeye-3__mobile-card:nth-child(4).phrase {
+  transition-delay: 0.4s;
+}
+.sec-thirdeye-3__mobile-card:nth-child(5).phrase {
+  transition-delay: 0.46s;
+}
+.sec-thirdeye-3__mobile-card:nth-child(6).phrase {
+  transition-delay: 0.52s;
+}
+.sec-thirdeye-3__mobile-card:nth-child(7).phrase {
+  transition-delay: 0.58s;
+}
 
 .sec-thirdeye-3.slide-animated .sec-thirdeye-3__header {
   opacity: 1;
@@ -392,7 +409,7 @@
   }
 
   .sec-thirdeye-3__title {
-    font-size: 26px !important;
+    font-size: 22px !important;
     line-height: 32px !important;
     max-width: 400px !important;
   }

@@ -6,8 +6,8 @@
   height: 100dvh;
   background: radial-gradient(
     50% 50% at 50% 50%,
-    #1E55B3 0%,
-    #01103B 100%
+    #1e55b3 0%,
+    #01103b 100%
   ) !important;
   box-sizing: border-box;
   color: #ffffff;
@@ -21,7 +21,7 @@
   width: 770px;
   height: 770px;
   border-radius: 770px;
-  background: var(--Bright-Blue, #226CB4);
+  background: var(--Bright-Blue, #226cb4);
   filter: blur(100px);
   pointer-events: none;
   z-index: 1;
@@ -755,7 +755,7 @@
   }
 
   .sec-thirdeye-5__title {
-    font-size: 34px !important;
+    font-size: 28px !important;
     line-height: 40px !important;
     text-align: left !important;
   }
