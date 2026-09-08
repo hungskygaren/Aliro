@@ -524,6 +524,7 @@
   }
 }
 
+/* Tall Phone Breakpoint - Commented out to use iPhone SE / base mobile layout
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-about-7 .container {
     padding-top: var(--section-pt) !important;
@@ -602,3 +603,4 @@
     overflow-wrap: break-word !important;
   }
 }
+*/

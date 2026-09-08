@@ -179,10 +179,10 @@
 }
 
 .sec-market-1__right {
-  width: 670px;
-  max-width: 670px;
-  height: auto;
-  margin-top: calc(20 / 720 * 100dvh);
+  position: relative;
+  width: calc(590 / 1170 * 100%);
+  max-width: 590px;
+  margin-top: calc(98 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -199,6 +199,8 @@
 .sec-market-1__img-wrapper {
   position: relative;
   width: 100%;
+  max-width: 590px;
+  aspect-ratio: 1340 / 1126;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,10 +208,12 @@
 
 .sec-market-1__img {
   width: 100%;
-  height: auto;
-  max-height: 563px;
+  height: 100%;
+  aspect-ratio: 1340 / 1126;
   object-fit: contain;
   display: block;
+  position: relative;
+  z-index: 2;
 }
 
 .sec-market-1.swiper-slide-active .sec-market-1__left,
@@ -259,8 +263,7 @@
   }
 
   .sec-market-1__right {
-    width: 50%;
-    max-width: 540px;
+    max-width: 480px;
   }
 }
 
@@ -388,6 +391,7 @@
     width: 100% !important;
     max-width: 540px !important;
     height: auto !important;
+    aspect-ratio: 1340 / 1126 !important;
     margin-inline: auto !important;
     display: flex !important;
     justify-content: center !important;
@@ -400,7 +404,7 @@
     max-width: 540px !important;
     height: auto !important;
     max-height: none !important;
-    aspect-ratio: 670 / 446 !important;
+    aspect-ratio: 1340 / 1126 !important;
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;
@@ -544,6 +548,7 @@
     width: 100% !important;
     max-width: 320px !important;
     height: auto !important;
+    aspect-ratio: 1340 / 1126 !important;
     margin-inline: auto !important;
     display: flex !important;
     justify-content: center !important;
@@ -555,8 +560,8 @@
     width: 100% !important;
     max-width: 320px !important;
     height: auto !important;
-    max-height: 210px !important;
-    aspect-ratio: 670 / 446 !important;
+    max-height: 280px !important;
+    aspect-ratio: 1340 / 1126 !important;
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;

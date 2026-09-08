@@ -184,10 +184,10 @@
 }
 
 .sec-digital-1__right {
-  width: 670px;
-  max-width: 670px;
-  height: 563px;
-  margin-top: calc(20 / 720 * 100dvh);
+  position: relative;
+  width: calc(560 / 1170 * 100%);
+  max-width: 560px;
+  margin-top: calc(98 / 720 * 100dvh);
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -203,8 +203,9 @@
 
 .sec-digital-1__img-wrapper {
   position: relative;
-  width: 670px;
-  height: 563px;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1340 / 1126;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -213,8 +214,11 @@
 .sec-digital-1__img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 1340 / 1126;
   object-fit: contain;
   display: block;
+  position: relative;
+  z-index: 2;
 }
 
 .sec-digital-1.swiper-slide-active .sec-digital-1__left,
@@ -264,14 +268,7 @@
   }
 
   .sec-digital-1__right {
-    width: 50%;
-    max-width: 540px;
-    height: auto;
-  }
-
-  .sec-digital-1__img-wrapper {
-    width: 100%;
-    height: auto;
+    max-width: 480px;
   }
 }
 
@@ -399,6 +396,7 @@
     width: 100% !important;
     max-width: 540px !important;
     height: auto !important;
+    aspect-ratio: 1340 / 1126 !important;
     margin-inline: auto !important;
     display: flex !important;
     justify-content: center !important;
@@ -411,7 +409,7 @@
     max-width: 540px !important;
     height: auto !important;
     max-height: none !important;
-    aspect-ratio: 670 / 446 !important;
+    aspect-ratio: 1340 / 1126 !important;
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;
@@ -556,6 +554,7 @@
     width: 100% !important;
     max-width: 320px !important;
     height: auto !important;
+    aspect-ratio: 1340 / 1126 !important;
     margin-inline: auto !important;
     display: flex !important;
     justify-content: center !important;
@@ -567,8 +566,8 @@
     width: 100% !important;
     max-width: 320px !important;
     height: auto !important;
-    max-height: 210px !important;
-    aspect-ratio: 670 / 446 !important;
+    max-height: 280px !important;
+    aspect-ratio: 1340 / 1126 !important;
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;

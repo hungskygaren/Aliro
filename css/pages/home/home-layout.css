@@ -68,29 +68,27 @@
 
 .page-home .scroll-down-btn {
   bottom: 12px !important;
-  width: 64px;
-  height: 40px;
-  padding: 0;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
   display: flex !important;
   flex-direction: row !important;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  background: #ffffff;
-  border: 1px solid rgba(1, 16, 59, 0.15);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0 !important;
+  border: none !important;
+  background: #0431B1 !important;
+  box-shadow: 0 4px 12px rgba(4, 49, 177, 0.25) !important;
   cursor: pointer;
   box-sizing: border-box;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  color: #01103b;
+  color: #ffffff !important;
   opacity: 1 !important;
 }
 
 .page-home .scroll-down-btn:hover {
-  background: #f7f9fc;
-  border-color: rgba(1, 16, 59, 0.3);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  transform: translateX(-50%) translateY(-4px) !important;
+  background: #032383 !important;
+  box-shadow: 0 6px 16px rgba(4, 49, 177, 0.4) !important;
+  transform: translateX(-50%) translateY(-2px) !important;
 }
 
 .page-home .scroll-down-btn .scroll-down-text {
@@ -99,34 +97,17 @@
 
 .page-home .scroll-down-btn .scroll-down-icon {
   margin: 0;
-  width: 24px;
-  height: 24px;
+  width: 12px !important;
+  height: 14px !important;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.page-home .scroll-down-btn--dark-text,
-.page-home .sec-architect .scroll-down-btn,
-.page-home .sec-framework .scroll-down-btn,
-.page-home .sec-5 .scroll-down-btn,
-.page-home .sec-7 .scroll-down-btn,
-.page-home .sec-9 .scroll-down-btn {
-  color: #ffffff !important;
-  background: #01103b;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 14px rgba(1, 16, 59, 0.25);
-}
-
-.page-home .scroll-down-btn--dark-text:hover,
-.page-home .sec-architect .scroll-down-btn:hover,
-.page-home .sec-framework .scroll-down-btn:hover,
-.page-home .sec-5 .scroll-down-btn:hover,
-.page-home .sec-7 .scroll-down-btn:hover,
-.page-home .sec-9 .scroll-down-btn:hover {
-  background: #021a59;
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 6px 18px rgba(1, 16, 59, 0.35);
+.page-home .scroll-down-btn .scroll-down-icon svg {
+  width: 12px !important;
+  height: 14px !important;
+  fill: #ffffff !important;
 }
 
 @media (max-width: 1024px) {

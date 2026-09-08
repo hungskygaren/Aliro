@@ -94,7 +94,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  color: #ffffff;
+  color: #eaa936;
   margin: 0 0 16px 0;
   letter-spacing: 0px;
   font-feature-settings:
@@ -254,8 +254,6 @@
   transform: none !important;
   transition: none !important;
 }
-
-
 
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-capacity-1 .flex-center-v {

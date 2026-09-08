@@ -515,113 +515,66 @@ body.no-scroll {
 
 .scroll-down-btn {
   position: absolute;
-  bottom: 0 !important;
+  bottom: 12px !important;
   left: 50%;
   transform: translateX(-50%) translateY(20px);
   z-index: 20;
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
+  width: 36px !important;
+  height: 36px !important;
+  background: #0431b1 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  color: #ffffff;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
   opacity: 0;
   pointer-events: none;
   text-decoration: none;
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    color 0.25s ease;
 }
 
 .scroll-section.slide-animated .scroll-down-btn {
-  opacity: 0.85;
+  opacity: 1 !important;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
 }
 
 .scroll-section.slide-animated .scroll-down-btn:hover {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  opacity: 1 !important;
+  background: #032383 !important;
+  transform: translateX(-50%) translateY(-2px) !important;
 }
 
 .scroll-down-text {
-  font-family: Aptos, var(--font-brand);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: normal;
-  color: inherit;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-  transition:
-    opacity 0.25s ease,
-    color 0.25s ease;
+  display: none !important;
 }
 
 .scroll-down-icon {
-  width: 24px;
-  height: 24px;
-  color: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 24px !important;
+  height: 24px !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   animation: bounceDown 2.2s infinite ease-in-out;
-  transition:
-    opacity 0.25s ease,
-    color 0.25s ease;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.scroll-down-icon svg {
+  width: 24px !important;
+  height: 24x !important;
+  display: block;
 }
 
 .scroll-down-icon svg,
 .scroll-down-icon path {
-  fill: currentColor;
-}
-
-.scroll-down-btn--dark-text,
-.scroll-section.sec-services-bg-light .scroll-down-btn,
-.scroll-section.sec-about-bg-light .scroll-down-btn,
-.scroll-section.sec-phase0-bg-light .scroll-down-btn,
-.scroll-section.sec-thirdeye-bg-light .scroll-down-btn,
-.scroll-section.sec-market-bg-light .scroll-down-btn,
-.scroll-section.sec-operational-bg-light .scroll-down-btn,
-.scroll-section.sec-digital-bg-light .scroll-down-btn,
-.scroll-section.sec-capacity-bg-light .scroll-down-btn,
-.scroll-section.sec-contact-bg-light .scroll-down-btn {
-  color: #01103b;
-}
-
-.scroll-section.slide-animated .scroll-down-btn--dark-text,
-.scroll-section.slide-animated.sec-services-bg-light .scroll-down-btn,
-.scroll-section.slide-animated.sec-about-bg-light .scroll-down-btn,
-.scroll-section.slide-animated.sec-phase0-bg-light .scroll-down-btn,
-.scroll-section.slide-animated.sec-thirdeye-bg-light .scroll-down-btn,
-.scroll-section.slide-animated.sec-market-bg-light .scroll-down-btn,
-.scroll-section.slide-animated.sec-operational-bg-light .scroll-down-btn,
-.scroll-section.slide-animated.sec-digital-bg-light .scroll-down-btn,
-.scroll-section.slide-animated.sec-capacity-bg-light .scroll-down-btn,
-.scroll-section.slide-animated.sec-contact-bg-light .scroll-down-btn {
-  opacity: 0.5;
-}
-
-.scroll-down-btn--dark-text:hover,
-.scroll-section.sec-services-bg-light .scroll-down-btn:hover,
-.scroll-section.sec-about-bg-light .scroll-down-btn:hover,
-.scroll-section.sec-phase0-bg-light .scroll-down-btn:hover,
-.scroll-section.sec-thirdeye-bg-light .scroll-down-btn:hover,
-.scroll-section.sec-market-bg-light .scroll-down-btn:hover,
-.scroll-section.sec-operational-bg-light .scroll-down-btn:hover,
-.scroll-section.sec-digital-bg-light .scroll-down-btn:hover,
-.scroll-section.sec-capacity-bg-light .scroll-down-btn:hover,
-.scroll-section.sec-contact-bg-light .scroll-down-btn:hover {
-  color: #01103b;
-  opacity: 1 !important;
+  fill: #ffffff !important;
+  color: #ffffff !important;
 }
 
 @keyframes bounceDown {
@@ -692,17 +645,16 @@ body.no-scroll {
   }
 
   .scroll-down-text {
-    font-size: 11.5px !important;
-    letter-spacing: 0.8px !important;
+    display: none !important;
   }
 
   .scroll-down-icon {
-    width: 18px !important;
-    height: 18px !important;
+    width: 12px !important;
+    height: 14px !important;
   }
 
   .scroll-down-icon svg {
-    width: 18px !important;
-    height: 18px !important;
+    width: 12px !important;
+    height: 14px !important;
   }
 }

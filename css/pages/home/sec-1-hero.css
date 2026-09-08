@@ -398,14 +398,6 @@
     font-size: 15px !important;
   }
 
-  .sec-hero .scroll-down-text {
-    font-size: 12px;
-  }
-
-  .sec-hero .scroll-down-icon {
-    width: 18px;
-    height: 18px;
-  }
 }
 
 @media (max-height: 650px) and (min-width: 1025px) {

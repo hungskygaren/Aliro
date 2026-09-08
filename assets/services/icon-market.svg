@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(3.37, 2.16)">
+    <!-- Bar 1 (left) -->
+    <path d="M7.56061 18.9319H1.5V34.1848H7.56061V18.9319Z" stroke="#0431B1" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Bar 2 (middle) -->
+    <path d="M19.6606 10.2159H13.6V34.1848H19.6606V10.2159Z" stroke="#0431B1" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Bar 3 (right) -->
+    <path d="M31.7606 1.5H25.7V34.1848H31.7606V1.5Z" stroke="#0431B1" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+</svg>

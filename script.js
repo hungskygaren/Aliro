@@ -615,13 +615,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         btn = document.createElement("button");
         btn.className = "scroll-down-btn";
         btn.setAttribute("aria-label", `Scroll to section ${idx + 2}`);
-        const isHome = document.body.classList.contains("page-home");
         btn.innerHTML = `
-          ${!isHome ? '<span class="scroll-down-text">SCROLL DOWN</span>' : ""}
           <span class="scroll-down-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 6.41L16.59 5L12 9.58L7.41 5L6 6.41L12 12.41L18 6.41Z" fill="currentColor"/>
-              <path d="M18 13L16.59 11.59L12 16.17L7.41 11.59L6 13L12 19L18 13Z" fill="currentColor"/>
+            <svg width="12" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="currentColor"/>
+              <path d="M7.41 14.59L12 19.17l4.59-4.58L18 16l-6 6-6-6 1.41-1.41z" fill="currentColor"/>
             </svg>
           </span>
         `;
