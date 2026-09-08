@@ -424,10 +424,6 @@
     margin-inline: auto !important;
     display: block !important;
   }
-
-  .sec-capacity-1 .scroll-down-btn {
-    display: flex !important;
-  }
 }
 
 @media (max-width: 767px) {
@@ -580,27 +576,6 @@
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;
-  }
-
-  .sec-capacity-1 .scroll-down-btn {
-    display: flex !important;
-    color: #ffffff !important;
-    bottom: 6px !important;
-  }
-
-  .sec-capacity-1.slide-animated .scroll-down-btn {
-    opacity: 0.8 !important;
-  }
-
-  .sec-capacity-1 .scroll-down-text {
-    font-size: 11.5px !important;
-    color: #ffffff !important;
-  }
-
-  .sec-capacity-1 .scroll-down-icon {
-    width: 18px !important;
-    height: 18px !important;
-    color: #ffffff !important;
   }
 }
 

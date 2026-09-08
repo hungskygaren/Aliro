@@ -13,8 +13,8 @@
 .sec-architect__content {
   position: relative;
   z-index: 3;
-  width: 50%;
-  max-width: 585px;
+  width: 55%;
+  max-width: 680px;
   text-align: left;
 }
 
@@ -45,6 +45,7 @@
     "clig" off;
   font-style: normal;
   margin-bottom: 20px;
+  max-width: 700px;
 }
 
 .sec-architect__sub-bottom {
@@ -65,17 +66,13 @@
   font-family: var(--font-brand);
   font-size: 18px;
   font-weight: 500;
-  line-height: normal;
+  line-height: 26px;
   color: var(--Midnight-Navy, #01103b);
   font-feature-settings:
     "liga" off,
     "clig" off;
   margin-bottom: 20px;
-}
-
-.sec-architect__desc .phrase {
-  display: block;
-  white-space: normal;
+  max-width: 470px;
 }
 
 .sec-architect__btn,
@@ -251,6 +248,7 @@
     "clig" off;
   font-style: normal;
   margin-bottom: 18px;
+  max-width: 800px;
 }
 
 .sec-framework__sub-bottom {
@@ -272,17 +270,13 @@
   font-family: var(--font-brand);
   font-size: 18px;
   font-weight: 500;
-  line-height: normal;
+  line-height: 26px;
   color: var(--Midnight-Navy, #01103b);
   font-feature-settings:
     "liga" off,
     "clig" off;
   margin-bottom: 22px;
-}
-
-.sec-framework__desc .phrase {
-  display: block;
-  white-space: nowrap;
+  max-width: 460px;
 }
 
 .sec-framework__content {
@@ -333,7 +327,7 @@
   .sec-framework__img {
     position: relative;
     width: 90%;
-    max-width: 340px;
+    max-width: 360px;
     margin: 0 auto;
     left: auto;
     top: auto;
@@ -374,21 +368,7 @@
   }
 }
 
-.sec-architect__title .line-desktop,
-.sec-architect__sub-bottom .line-desktop,
-.sec-architect__desc .line-desktop,
-.sec-framework__title .line-desktop {
-  display: block;
-}
-
 @media (max-width: 1024px) {
-  .sec-architect__title .line-desktop,
-  .sec-architect__sub-bottom .line-desktop,
-  .sec-architect__desc .line-desktop,
-  .sec-framework__title .line-desktop {
-    display: inline;
-  }
-
   .sec-architect .container,
   .sec-framework .container {
     display: flex;
@@ -464,9 +444,12 @@
       transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
-  .sec-architect__img,
+  .sec-architect__img {
+    max-width: 350px !important;
+  }
+
   .sec-framework__img {
-    max-width: 340px !important;
+    max-width: 360px !important;
   }
 
   .sec-framework__img {
@@ -492,7 +475,7 @@
 
   .sec-architect__sub-top,
   .sec-framework__sub-top {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 22px;
     margin-bottom: 8px;
   }
@@ -506,21 +489,16 @@
 
   .sec-architect__sub-bottom,
   .sec-framework__sub-bottom {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 24px;
     margin-bottom: 14px;
   }
 
   .sec-architect__desc,
   .sec-framework__desc {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     margin-bottom: 16px;
-  }
-
-  .sec-architect__desc .phrase,
-  .sec-framework__desc .phrase {
-    white-space: normal;
   }
 
   .sec-architect__btn,
@@ -533,9 +511,8 @@
 
   .sec-architect__img,
   .sec-framework__img {
-    max-width: 290px !important;
     width: 90% !important;
-    margin-top: 14px !important;
+    margin-top: 1px !important;
   }
 
   .sec-framework__img {
@@ -546,42 +523,41 @@
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-architect__sub-top,
   .sec-framework__sub-top {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 22px;
+    line-height: 27px;
     margin-bottom: 10px;
   }
 
   .sec-architect__title,
   .sec-framework__title {
-    font-size: 33px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 42px;
     margin-bottom: 16px;
   }
 
   .sec-architect__sub-bottom,
   .sec-framework__sub-bottom {
-    font-size: 21px;
+    font-size: 22px;
     line-height: 28px;
     margin-bottom: 18px;
   }
 
   .sec-architect__desc,
   .sec-framework__desc {
-    font-size: 17.5px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 26px;
     margin-bottom: 22px;
   }
 
   .sec-architect__btn,
   .sec-framework__btn {
-    padding: 11px 26px;
-    font-size: 17px;
+    padding: 12px 28px;
+    font-size: 17.5px;
   }
 
   .sec-architect__img,
   .sec-framework__img {
-    max-width: 350px !important;
-    max-height: 280px !important;
+    width: 100% !important;
     margin-top: 16px !important;
   }
 

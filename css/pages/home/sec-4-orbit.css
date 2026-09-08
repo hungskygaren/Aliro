@@ -629,13 +629,13 @@
 
 @media (max-width: 767px) {
   .sec-continuum {
-    --orbit-scale: 0.8;
+    --orbit-scale: 0.75;
     --connector-offset: 150px;
   }
 
   .sec-continuum .container {
     padding-top: var(--section-pt);
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   .sec-continuum__top-text {
@@ -650,14 +650,14 @@
   }
 
   .sec-continuum__title {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .sec-continuum__orbit-wrap {
-    transform: scale(var(--orbit-scale, 0.8)) !important;
-    margin-top: 15px !important;
-    margin-bottom: 15px !important;
+    transform: scale(var(--orbit-scale, 0.75)) !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-continuum__node {
@@ -735,7 +735,7 @@
 
 @media (max-width: 480px) {
   .sec-continuum {
-    --orbit-scale: 0.72;
+    --orbit-scale: 0.67;
   }
 }
 

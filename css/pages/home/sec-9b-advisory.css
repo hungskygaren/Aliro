@@ -18,8 +18,8 @@
 .sec-9b__wrapper {
   width: 100%;
   position: absolute;
-  top: 12.9167dvh; 
-  bottom: 5.1389dvh; 
+  top: 12.9167dvh;
+  bottom: 5.1389dvh;
   left: 0;
   right: 0;
   display: flex;
@@ -30,7 +30,7 @@
 
 .sec-9b__header {
   text-align: center;
-  margin-bottom: 24px; 
+  margin-bottom: 24px;
 }
 
 .sec-9b__tag {
@@ -42,10 +42,10 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28px; 
+  line-height: 28px;
   text-transform: uppercase;
   letter-spacing: 0px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .sec-9b__title {
@@ -57,10 +57,12 @@
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 46px;
   text-transform: uppercase;
   letter-spacing: 0px;
-  margin-bottom: 10px; 
+  max-width: 620px;
+  margin: 0 auto 10px auto;
+  text-align: center;
 }
 
 .sec-9b__desc {
@@ -135,7 +137,7 @@
   justify-content: flex-start;
   margin-bottom: 8px;
   overflow-y: auto;
-  overflow-y: overlay; 
+  overflow-y: overlay;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
   transition: scrollbar-color 0.3s ease;
@@ -336,7 +338,7 @@
   }
 
   .sec-9b__desc {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     margin-bottom: 16px;
   }
@@ -355,11 +357,11 @@
     padding-inline: 16px !important;
     padding-bottom: 10px !important;
     box-sizing: border-box !important;
-    scrollbar-width: none !important; 
+    scrollbar-width: none !important;
   }
 
   .sec-9b__cards::-webkit-scrollbar {
-    display: none !important; 
+    display: none !important;
   }
 
   .sec-9b__cards::after {
@@ -373,6 +375,7 @@
     width: 85% !important;
     max-width: 370px !important;
     height: auto !important;
+    max-height: none !important;
     aspect-ratio: auto !important;
     scroll-snap-align: start !important;
     background: #ffffff !important;

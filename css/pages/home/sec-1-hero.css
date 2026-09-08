@@ -208,15 +208,13 @@
 
 .sec-hero .scroll-down-btn {
   opacity: 0;
-  transform: translateX(-50%) translateY(20px);
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%) !important;
+  transition: none !important;
 }
 
 .sec-hero.slide-animated .scroll-down-btn {
-  opacity: 0.8 !important;
-  transform: translateX(-50%) translateY(0);
+  opacity: 1 !important;
+  transform: translateX(-50%) !important;
 }
 
 .sec-hero.slide-animated .sec-hero__cliff--left,

@@ -458,7 +458,7 @@
     width: 100% !important;
     max-width: 440px !important;
     margin: 0 auto !important;
-    gap: 6px !important;
+    gap: 10px !important;
   }
 
   .sec-operational-4__left {
@@ -469,7 +469,7 @@
   .sec-operational-4__title {
     font-size: 22px !important;
     line-height: 27px !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 12px !important;
     text-align: center !important;
     max-width: 100% !important;
   }
@@ -478,39 +478,39 @@
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-rows: auto !important;
-    gap: 6px 8px !important;
+    gap: 10px 10px !important;
     width: 100% !important;
   }
 
   .sec-operational-4__card {
-    padding: 7px 9px 8px 9px !important;
+    padding: 11px 11px 12px 11px !important;
     height: auto !important;
     min-height: 0 !important;
     box-shadow: 0 2px 8px rgba(1, 16, 59, 0.04) !important;
   }
 
   .sec-operational-4__card-num {
-    font-size: 14px !important;
-    line-height: 17px !important;
+    font-size: 16px !important;
+    line-height: 18px !important;
     font-weight: 700 !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 3px !important;
     color: var(--Highlight-Blue, #0431b1) !important;
   }
 
   .sec-operational-4__card-title {
-    font-size: 13.5px !important;
-    line-height: 17px !important;
+    font-size: 15px !important;
+    line-height: 18.5px !important;
     font-weight: 700 !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 3px !important;
   }
 
   .sec-operational-4__card-desc {
-    font-size: 13px !important;
-    line-height: 16.5px !important;
+    font-size: 14px !important;
+    line-height: 17.5px !important;
   }
 
   .sec-operational-4__card-highlight {
-    font-size: 13px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
   }
 

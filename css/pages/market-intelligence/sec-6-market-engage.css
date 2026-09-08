@@ -363,7 +363,7 @@
   .sec-market-6__img {
     width: 100% !important;
     height: auto !important;
-    max-height: 220px !important;
+
     object-fit: contain !important;
     display: block !important;
   }
@@ -381,7 +381,7 @@
   }
 
   .sec-market-6__eyebrow {
-    font-size: 19px !important;
+    font-size: 22px !important;
     line-height: 24px !important;
     margin-bottom: 10px !important;
   }
@@ -400,7 +400,7 @@
   }
 
   .sec-market-6__img {
-    max-height: 270px !important;
+    width: 390px !important;
   }
 }
 

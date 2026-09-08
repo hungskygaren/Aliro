@@ -86,28 +86,10 @@
 }
 
 .page-home .scroll-down-btn:hover {
-  background: #032383 !important;
-  box-shadow: 0 6px 16px rgba(4, 49, 177, 0.4) !important;
-  transform: translateX(-50%) translateY(-2px) !important;
-}
-
-.page-home .scroll-down-btn .scroll-down-text {
-  display: none !important;
-}
-
-.page-home .scroll-down-btn .scroll-down-icon {
-  margin: 0;
-  width: 12px !important;
-  height: 14px !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.page-home .scroll-down-btn .scroll-down-icon svg {
-  width: 12px !important;
-  height: 14px !important;
-  fill: #ffffff !important;
+  background: #0431B1 !important;
+  box-shadow: 0 4px 12px rgba(4, 49, 177, 0.25) !important;
+  transform: translateX(-50%) !important;
+  transition: none !important;
 }
 
 @media (max-width: 1024px) {

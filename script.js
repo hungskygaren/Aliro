@@ -321,43 +321,47 @@ document.addEventListener("DOMContentLoaded", async () => {
       stage.appendChild(placeholder);
     }
 
-    let mobileSlide = document.getElementById("contactMobileSlide");
-    if (!mobileSlide) {
-      mobileSlide = document.createElement("section");
-      mobileSlide.id = "contactMobileSlide";
-      mobileSlide.className =
-        "scroll-section swiper-slide sec-contact-form-slide sec-contact-bg-light";
-      mobileSlide.setAttribute("data-section-index", "1");
-      mobileSlide.innerHTML = `
-        <div class="container flex-center-v">
-          <div class="sec-contact-form-slide__stage"></div>
-        </div>
-      `;
-    }
-
     const isMobile = window.innerWidth <= 1024;
     if (isMobile) {
+      let mobileSlide =
+        wrapper.querySelector(".sec-contact-form-slide") ||
+        document.getElementById("contactMobileSlide");
+
+      if (!mobileSlide) {
+        mobileSlide = document.createElement("section");
+        mobileSlide.className =
+          "scroll-section swiper-slide sec-contact-form-slide sec-contact-bg-light";
+        mobileSlide.innerHTML = `
+          <div class="container flex-center-v">
+            <div class="sec-contact-form-slide__stage"></div>
+          </div>
+        `;
+      }
+      mobileSlide.id = "contact-form";
+      mobileSlide.setAttribute("data-section-index", "1");
+
       if (mobileSlide.parentNode !== wrapper) {
         wrapper.insertBefore(mobileSlide, sec3);
       }
       const formContainer = mobileSlide.querySelector(
         ".sec-contact-form-slide__stage",
       );
-      if (formBox.parentNode !== formContainer) {
+      if (formContainer && formBox.parentNode !== formContainer) {
         formContainer.appendChild(formBox);
       }
       sec1.id = "contact-intro";
-      mobileSlide.id = "contact-form";
       sec1.setAttribute("data-section-index", "0");
-      mobileSlide.setAttribute("data-section-index", "1");
       sec3.setAttribute("data-section-index", "2");
     } else {
       if (formBox.parentNode !== stage) {
         stage.insertBefore(formBox, placeholder);
       }
-      if (mobileSlide.parentNode === wrapper) {
-        mobileSlide.remove();
-      }
+
+      const allMobileSlides = document.querySelectorAll(
+        ".sec-contact-form-slide, #contactMobileSlide",
+      );
+      allMobileSlides.forEach((slide) => slide.remove());
+
       sec1.id = "contact-form";
       sec1.setAttribute("data-section-index", "0");
       sec3.setAttribute("data-section-index", "1");
@@ -478,7 +482,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (isContactPage) {
       const mql = window.matchMedia("(max-width: 1024px)");
-      mql.addEventListener("change", () => {
+      const handleContactResize = () => {
         setupContactMobileSlides();
         domSlides = Array.from(
           document.querySelectorAll(".main-swiper .swiper-slide"),
@@ -488,10 +492,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
         if (swiper) {
           swiper.update();
+          if (swiper.activeIndex >= domSlides.length) {
+            swiper.slideTo(domSlides.length - 1, 0);
+          }
           setupScrollDownButtons();
           updateHeaderTheme(swiper.activeIndex);
         }
-      });
+      };
+
+      if (mql.addEventListener) {
+        mql.addEventListener("change", handleContactResize);
+      } else if (mql.addListener) {
+        mql.addListener(handleContactResize);
+      }
     }
   }
 
@@ -617,7 +630,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         btn.setAttribute("aria-label", `Scroll to section ${idx + 2}`);
         btn.innerHTML = `
           <span class="scroll-down-icon">
-            <svg width="12" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="currentColor"/>
               <path d="M7.41 14.59L12 19.17l4.59-4.58L18 16l-6 6-6-6 1.41-1.41z" fill="currentColor"/>
             </svg>

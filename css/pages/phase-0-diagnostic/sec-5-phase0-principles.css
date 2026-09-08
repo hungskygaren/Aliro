@@ -416,9 +416,9 @@
 
   .sec-phase0-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 0px !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
+    padding-bottom: 20px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -431,9 +431,9 @@
 
   .sec-phase0-5__header {
     width: 100% !important;
-    max-width: 440px !important;
+    max-width: 100% !important;
     margin-top: 0 !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 16px !important;
     text-align: center !important;
   }
 
@@ -447,7 +447,7 @@
   .sec-phase0-5__stage {
     position: relative !important;
     width: 100% !important;
-    max-width: 440px !important;
+    max-width: 100% !important;
     margin: 0 auto !important;
     display: flex !important;
     justify-content: center !important;
@@ -460,67 +460,71 @@
 
   .sec-phase0-5__cards-container {
     position: relative !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
     width: 100% !important;
-    max-width: 440px !important;
+    max-width: 100% !important;
     margin: 0 auto !important;
   }
 
   .sec-phase0-5__card {
-    padding: 12px 10px 14px 10px !important;
-    min-height: 160px !important;
+    padding: 12px 16px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
     border-radius: 0 !important;
     background: #ffffff !important;
     border: 1px solid rgba(126, 147, 168, 0.5) !important;
     box-sizing: border-box !important;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     justify-content: flex-start !important;
     align-items: center !important;
-    text-align: center !important;
-    gap: 8px !important;
-    box-shadow: 0 4px 14px rgba(1, 16, 59, 0.05) !important;
+    text-align: left !important;
+    gap: 16px !important;
+    box-shadow: none !important;
   }
 
   .sec-phase0-5__card-visual {
-    width: 100% !important;
-    max-width: 75px !important;
-    height: 55px !important;
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px !important;
+    min-height: 60px !important;
     margin-bottom: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    flex-shrink: 0 !important;
   }
 
   .sec-phase0-5__card-img {
     width: 100% !important;
-    max-height: 52px !important;
+    height: 100% !important;
     object-fit: contain !important;
   }
 
   .sec-phase0-5__card-content {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    align-items: flex-start !important;
+    text-align: left !important;
     width: 100% !important;
     max-width: 100% !important;
   }
 
   .sec-phase0-5__card-title {
-    font-size: 16.5px !important;
-    line-height: 20px !important;
-    margin: 0 0 4px 0 !important;
+    font-size: 18px !important;
+    line-height: 23px !important;
+    margin: 0 0 3px 0 !important;
     letter-spacing: 0.2px !important;
-    text-align: center !important;
+    text-align: left !important;
   }
 
   .sec-phase0-5__card-desc {
-    font-size: 13.5px !important;
-    line-height: 18px !important;
-    text-align: center !important;
+    font-size: 15.5px !important;
+    line-height: 21px !important;
+    text-align: left !important;
     margin: 0 !important;
   }
 }
@@ -529,46 +533,56 @@
   .sec-phase0-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .sec-phase0-5__header {
     margin-bottom: 20px !important;
-    max-width: 460px !important;
+    max-width: 100% !important;
   }
 
   .sec-phase0-5__title {
-    font-size: 29px !important;
-    line-height: 35px !important;
+    font-size: 28px !important;
+    line-height: 34px !important;
   }
 
   .sec-phase0-5__cards-container {
-    gap: 16px 16px !important;
-    max-width: 460px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    max-width: 100% !important;
   }
 
   .sec-phase0-5__card {
-    padding: 16px 14px 18px 14px !important;
-    min-height: 185px !important;
-    gap: 10px !important;
+    padding: 14px 18px !important;
+    min-height: 0 !important;
+    gap: 18px !important;
+    flex-direction: row !important;
+    align-items: center !important;
   }
 
   .sec-phase0-5__card-visual {
-    max-width: 95px !important;
-    height: 75px !important;
+    width: 66px !important;
+    height: 66px !important;
+    min-width: 66px !important;
+    min-height: 66px !important;
   }
 
   .sec-phase0-5__card-img {
-    max-height: 72px !important;
+    height: 100% !important;
   }
 
   .sec-phase0-5__card-title {
-    font-size: 18px !important;
-    line-height: 22px !important;
-    margin-bottom: 6px !important;
+    font-size: 19px !important;
+    line-height: 24px !important;
+    margin-bottom: 4px !important;
+    text-align: left !important;
   }
 
   .sec-phase0-5__card-desc {
-    font-size: 15px !important;
-    line-height: 20.5px !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    text-align: left !important;
   }
 }

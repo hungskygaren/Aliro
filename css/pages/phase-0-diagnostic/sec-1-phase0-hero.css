@@ -509,15 +509,6 @@
     margin-inline: auto !important;
     display: block !important;
   }
-
-  .sec-phase0-1 .scroll-down-text {
-    font-size: 12px;
-  }
-
-  .sec-phase0-1 .scroll-down-icon {
-    width: 18px;
-    height: 18px;
-  }
 }
 
 @media (max-width: 767px) and (min-height: 780px) {

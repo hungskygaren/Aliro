@@ -240,7 +240,7 @@
 
 @media (max-width: 767px) {
   .sec-9__tag {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     margin-bottom: 12px;
   }
@@ -252,7 +252,7 @@
   }
 
   .sec-9__desc {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 22px;
     margin-bottom: 20px;
   }
@@ -260,13 +260,13 @@
   .sec-9__btn {
     width: fit-content;
     padding: 8px 20px;
-    font-size: 15px;
+    font-size: 16px;
     margin-inline: auto;
   }
 
   .sec-9__right,
   .sec-9__img {
-    max-width: 270px !important;
+    max-width: 300px !important;
     width: 100% !important;
     margin-top: 0 !important;
   }
@@ -280,7 +280,7 @@
   }
 
   .sec-9__title {
-    font-size: 31px;
+    font-size: 28px;
     line-height: 38px;
     margin-bottom: 16px;
   }
@@ -298,7 +298,6 @@
 
   .sec-9__right,
   .sec-9__img {
-    max-width: 330px !important;
-    max-height: 260px !important;
+    max-width: 370px !important;
   }
 }

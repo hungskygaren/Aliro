@@ -83,7 +83,7 @@
   :root {
     --header-height: 60px;
     --header-offset: 60px;
-    --section-pt: 30px;
+    --section-pt: 60px;
   }
 
   .sec-10,
@@ -91,6 +91,7 @@
   .sec-contact-1,
   .sec-contact-form-slide,
   .sec-about-5,
+  .sec-4,
   .sec-market-4,
   .sec-capacity-2,
   [data-shared-footer] {

@@ -43,7 +43,10 @@
   flex-direction: column;
   width: 100%;
   max-width: 1170px;
-  margin: 0 auto;
+  margin-top: calc(85 / 720 * 100dvh);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
   transition-delay: 0.1s;
 }
 
@@ -230,6 +233,10 @@
     padding-bottom: 70px;
   }
 
+  .sec-contact-3__top {
+    margin-top: 0;
+  }
+
   .sec-contact-3__bottom {
     position: absolute;
     bottom: 16px;
@@ -302,6 +309,7 @@
     align-items: center;
     width: 100%;
     max-width: 680px;
+    margin-top: 0;
   }
 
   .sec-contact-3__title {
@@ -443,6 +451,7 @@
     text-align: center;
     align-items: center;
     width: 100%;
+    margin-top: 0;
     margin-bottom: 0;
   }
 

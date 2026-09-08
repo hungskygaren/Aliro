@@ -235,8 +235,6 @@
   transition: none !important;
 }
 
-
-
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-market-1 .flex-center-v {
     justify-content: center;
@@ -409,10 +407,6 @@
     margin-inline: auto !important;
     display: block !important;
   }
-
-  .sec-market-1 .scroll-down-btn {
-    display: flex !important;
-  }
 }
 
 @media (max-width: 767px) {
@@ -566,27 +560,6 @@
     margin-inline: auto !important;
     display: block !important;
   }
-
-  .sec-market-1 .scroll-down-btn {
-    display: flex !important;
-    color: #ffffff !important;
-    bottom: 6px !important;
-  }
-
-  .sec-market-1.slide-animated .scroll-down-btn {
-    opacity: 0.8 !important;
-  }
-
-  .sec-market-1 .scroll-down-text {
-    font-size: 11.5px !important;
-    color: #ffffff !important;
-  }
-
-  .sec-market-1 .scroll-down-icon {
-    width: 18px !important;
-    height: 18px !important;
-    color: #ffffff !important;
-  }
 }
 
 @media (max-width: 767px) and (min-height: 780px) {
@@ -629,13 +602,13 @@
   .sec-market-1__breadcrumb {
     justify-content: center !important;
     flex-wrap: nowrap !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 18px !important;
     gap: 2px 3px !important;
     width: 100% !important;
   }
 
   .sec-market-1__crumb {
-    font-size: 12px !important;
+    font-size: 13px !important;
     letter-spacing: -0.25px !important;
     white-space: nowrap !important;
   }
@@ -662,6 +635,5 @@
 
   .sec-market-1__img {
     max-width: 380px !important;
-    max-height: 250px !important;
   }
 }

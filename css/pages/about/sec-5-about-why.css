@@ -405,7 +405,7 @@
   }
 
   .sec-about-5__header {
-    margin-bottom: 12px !important;
+    margin-bottom: 4px !important;
   }
 
   .sec-about-5__title {
@@ -477,7 +477,7 @@
     align-items: center !important;
     position: relative !important;
     width: 100% !important;
-    max-width: 300px !important;
+    max-width: 100% !important;
     height: auto !important;
     margin: 4px auto 0 auto !important;
   }
@@ -489,8 +489,8 @@
   }
 
   .sec-about-5__graphic-img {
-    width: 100% !important;
-    max-width: 300px !important;
+    width: 85% !important;
+    max-width: 100% !important;
     aspect-ratio: 4 / 3 !important;
     height: auto !important;
     object-fit: contain !important;
@@ -499,7 +499,6 @@
   }
 }
 
-/* Tall Phone Breakpoint - Commented out to use iPhone SE / base mobile layout
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-about-5 .container {
     padding-top: var(--section-pt) !important;
@@ -508,7 +507,7 @@
   }
 
   .sec-about-5__header {
-    margin-bottom: 16px !important;
+    margin-bottom: 10px !important;
   }
 
   .sec-about-5__title {
@@ -517,7 +516,7 @@
   }
 
   .sec-about-5__main {
-    gap: 14px !important;
+    gap: 10px !important;
   }
 
   .sec-about-5__right {
@@ -538,7 +537,7 @@
 
   .sec-about-5__graphic-img {
     width: 100% !important;
-    max-width: 330px !important;
+    max-width: 320px !important;
     aspect-ratio: 1 / 1 !important;
     height: auto !important;
   }
@@ -571,4 +570,3 @@
     line-height: 20px !important;
   }
 }
-*/

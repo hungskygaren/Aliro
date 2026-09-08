@@ -38,11 +38,14 @@
 .sec-thirdeye-2__title {
   font-family: Aptos, var(--font-brand);
   font-size: 36px;
+  font-style: normal;
   font-weight: 700;
   line-height: 40px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 640px;
+  text-align: center;
   letter-spacing: 0.5px;
   font-feature-settings:
     "liga" off,
@@ -494,6 +497,8 @@
     font-size: 28px !important;
     line-height: 34px !important;
     text-align: center !important;
+    max-width: 623px !important;
+    margin: 0 auto !important;
   }
 
   .sec-thirdeye-2__pipeline {
@@ -583,8 +588,11 @@
 
   .sec-thirdeye-2__title {
     font-size: 22px !important;
-    line-height: 34px !important;
+    line-height: 28px !important;
     letter-spacing: 0.3px !important;
+    text-align: center !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
   }
 
   .sec-thirdeye-2__pipeline {
@@ -692,8 +700,11 @@
   }
 
   .sec-thirdeye-2__title {
-    font-size: 31px !important;
-    line-height: 37px !important;
+    font-size: 28px !important;
+    line-height: 34px !important;
+    text-align: center !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
   }
 
   .sec-thirdeye-2__pipeline {
