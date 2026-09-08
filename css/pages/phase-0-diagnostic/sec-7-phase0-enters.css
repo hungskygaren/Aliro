@@ -17,8 +17,6 @@
   height: 100%;
   position: relative;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
   padding-top: var(--section-pt);
   padding-bottom: 20px;
 }
@@ -164,8 +162,6 @@
     height: 100% !important;
     padding-top: var(--section-pt) !important;
     padding-bottom: 30px !important;
-    padding-left: 24px !important;
-    padding-right: 24px !important;
     box-sizing: border-box !important;
   }
 
@@ -224,8 +220,6 @@
   .sec-phase0-7 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;

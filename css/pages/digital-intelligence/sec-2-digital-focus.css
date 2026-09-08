@@ -17,11 +17,7 @@
   height: 100%;
   padding-top: var(--section-pt);
   padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .sec-digital-2__header {
@@ -397,8 +393,6 @@
   .sec-digital-2 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
     justify-content: center !important;
     height: auto !important;
     min-height: 100dvh !important;

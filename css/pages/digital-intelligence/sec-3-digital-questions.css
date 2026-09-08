@@ -35,11 +35,7 @@
   height: 100%;
   padding-top: var(--section-pt);
   padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
   position: relative;
   z-index: 2;
 }
@@ -258,8 +254,6 @@
   .sec-digital-3 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
     height: 100% !important;
     justify-content: center !important;
   }
@@ -307,8 +301,6 @@
   .sec-digital-3 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
     justify-content: center !important;
     align-items: center !important;
     height: 100% !important;
@@ -406,8 +398,6 @@
   .sec-digital-3 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 20px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
   }
 
   .sec-digital-3__header {

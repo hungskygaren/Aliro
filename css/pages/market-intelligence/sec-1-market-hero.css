@@ -22,12 +22,8 @@
   height: 100%;
   position: relative;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
   padding-top: var(--section-pt);
   padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
   z-index: 3;
 }
 
@@ -285,8 +281,6 @@
     height: auto !important;
     padding-top: var(--section-pt) !important;
     padding-bottom: 35px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
     box-sizing: border-box;
     text-align: center !important;
   }
@@ -425,8 +419,6 @@
   .sec-market-1 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -569,7 +561,7 @@
   }
 
   .sec-market-1__stage {
-    gap: 12px !important;
+    gap: 0px !important;
     max-width: 440px !important;
   }
 

@@ -30,11 +30,7 @@
   height: 100%;
   padding-top: var(--section-pt);
   padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
   position: relative;
 }
 
@@ -482,8 +478,6 @@
     height: auto !important;
     padding-top: var(--section-pt) !important;
     padding-bottom: 30px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
     box-sizing: border-box;
     text-align: center !important;
     position: relative;
@@ -573,11 +567,7 @@
     height: auto !important;
     padding-top: var(--section-pt) !important;
     padding-bottom: 24px !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
     box-sizing: border-box;
-    max-width: 1200px;
-    margin: 0 auto;
     position: relative;
   }
 
@@ -661,8 +651,6 @@
   .sec-contact-1 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 28px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
   }
 
   .sec-contact-1__stage {
@@ -706,8 +694,6 @@
   .sec-contact-form-slide .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
   }
 
   .sec-contact-form-slide__stage {
@@ -858,8 +844,6 @@
   .sec-contact-1 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 36px !important;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
   }
 
   .sec-contact-1__eyebrow {
@@ -893,8 +877,6 @@
   .sec-contact-form-slide .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 20px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
   }
 
   .sec-contact-form-slide .sec-contact-1__right {

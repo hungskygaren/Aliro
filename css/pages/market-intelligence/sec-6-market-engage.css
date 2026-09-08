@@ -24,8 +24,6 @@
   padding-top: var(--section-pt);
   padding-bottom: 20px;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .sec-market-6__stage {
@@ -189,10 +187,6 @@
 }
 
 @media (max-width: 1200px) {
-  .sec-market-6 .flex-center-v {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
 
   .sec-market-6__left {
     max-width: 560px;
@@ -226,8 +220,6 @@
   .sec-market-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 20px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
     justify-content: center !important;
     align-items: center !important;
     height: 100% !important;
@@ -293,8 +285,6 @@
   .sec-market-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
     justify-content: center !important;
     align-items: center !important;
     height: 100% !important;

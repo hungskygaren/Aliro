@@ -61,7 +61,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 20.5556dvh; 
+  padding-top: calc(78 / 720 * 100dvh);
   padding-bottom: 0;
   margin-top: 0;
   margin-bottom: auto;

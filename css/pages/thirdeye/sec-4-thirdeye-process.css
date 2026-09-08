@@ -18,8 +18,6 @@
   padding-top: var(--section-pt);
   padding-bottom: 20px;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
   position: relative;
   z-index: 2;
 }
@@ -306,8 +304,6 @@
     min-height: 100% !important;
     padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
   }
@@ -402,8 +398,6 @@
   .sec-thirdeye-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
     justify-content: center !important;
     align-items: center !important;
     height: auto !important;
@@ -505,8 +499,6 @@
   .sec-thirdeye-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
   }
 
   .sec-thirdeye-4__header {
@@ -514,9 +506,9 @@
   }
 
   .sec-thirdeye-4__title {
-    font-size: 28px !important;
-    line-height: 34px !important;
-    max-width: 420px !important;
+    font-size: 33px !important;
+    line-height: 39px !important;
+    max-width: 440px !important;
   }
 
   .sec-thirdeye-4__stage {
@@ -540,18 +532,18 @@
   }
 
   .sec-thirdeye-4__badge {
-    width: 29px !important;
-    height: 29px !important;
-    font-size: 15px !important;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 16px !important;
   }
 
   .sec-thirdeye-4__feature-title {
-    font-size: 18.5px !important;
-    line-height: 23.5px !important;
+    font-size: 21px !important;
+    line-height: 26px !important;
   }
 
   .sec-thirdeye-4__feature-desc {
-    font-size: 15px !important;
-    line-height: 20.5px !important;
+    font-size: 16.5px !important;
+    line-height: 22.5px !important;
   }
 }

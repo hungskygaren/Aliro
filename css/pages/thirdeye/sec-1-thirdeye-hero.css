@@ -34,15 +34,15 @@
   align-items: flex-start;
   width: 100%;
   max-width: 1170px;
+  padding-top: calc(120 / 720 * 100dvh);
   position: relative;
   z-index: 3;
 }
 
 .sec-thirdeye-1__left {
   position: relative;
-  width: calc(520 / 1170 * 100%);
-  max-width: 520px;
-  margin-top: calc(120 / 720 * 100dvh);
+  width: calc(540 / 1170 * 100%);
+  max-width: 540px;
   z-index: 4;
   opacity: 0;
   transform: translateY(35px);
@@ -54,9 +54,9 @@
 
 .sec-thirdeye-1__tag {
   font-family: Aptos, var(--font-brand);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 34px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -68,12 +68,12 @@
 
 .sec-thirdeye-1__title {
   font-family: Aptos, var(--font-brand);
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 700;
-  line-height: 54px;
+  line-height: 62px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0 0 15px 0;
+  margin: 0 0 16px 0;
   letter-spacing: 0;
   font-feature-settings:
     "liga" off,
@@ -82,9 +82,9 @@
 
 .sec-thirdeye-1__catchphrase {
   font-family: Aptos, var(--font-brand);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 34px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   margin-bottom: 20px;
   font-feature-settings:
@@ -94,12 +94,12 @@
 
 .sec-thirdeye-1__desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 600;
-  line-height: 27px;
+  line-height: 30px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
-  max-width: 500px;
+  max-width: 520px;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -109,7 +109,6 @@
   position: relative;
   width: calc(610 / 1170 * 100%);
   max-width: 610px;
-  margin-top: calc(120 / 720 * 100dvh);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,9 +145,9 @@
 .sec-thirdeye-1__badge {
   margin-top: 10px;
   font-family: Aptos, var(--font-brand);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 30px;
   color: #eaa936;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -183,6 +182,7 @@
 
   .sec-thirdeye-1__grid {
     align-items: center;
+    padding-top: 0;
   }
 
   .sec-thirdeye-1__left,
@@ -234,8 +234,6 @@
     min-height: 100% !important;
     padding-top: var(--section-pt) !important;
     padding-bottom: 40px !important;
-    padding-left: 24px !important;
-    padding-right: 24px !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
   }
@@ -249,6 +247,7 @@
     max-width: 580px !important;
     margin: 0 auto !important;
     gap: 20px !important;
+    padding-top: 0 !important;
     position: static !important;
   }
 
@@ -324,8 +323,10 @@
   }
 
   .sec-thirdeye-1__grid {
-    max-width: 380px !important;
+    width: 100% !important;
+    max-width: 440px !important;
     gap: 14px !important;
+    padding-top: 0 !important;
   }
 
   .sec-thirdeye-1__left {
@@ -357,11 +358,28 @@
   }
 
   .sec-thirdeye-1__right {
-    max-width: 320px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
   }
 
   .sec-thirdeye-1__img-wrapper {
-    max-width: 320px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .sec-thirdeye-1__img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    margin-inline: auto !important;
+    display: block !important;
   }
 
   .sec-thirdeye-1__badge {
@@ -380,41 +398,43 @@
   }
 
   .sec-thirdeye-1__grid {
-    max-width: 410px !important;
+    width: 100% !important;
+    max-width: 440px !important;
     gap: 16px !important;
   }
 
   .sec-thirdeye-1__tag {
-    font-size: 22px !important;
-    line-height: 25px !important;
-    margin-bottom: 8px !important;
+    font-size: 25px !important;
+    line-height: 29px !important;
+    margin-bottom: 10px !important;
+    letter-spacing: 0.4px !important;
   }
 
   .sec-thirdeye-1__title {
-    font-size: 35px !important;
-    line-height: 42px !important;
-    margin-bottom: 8px !important;
-  }
-
-  .sec-thirdeye-1__catchphrase {
-    font-size: 22px !important;
-    line-height: 27px !important;
+    font-size: 40px !important;
+    line-height: 46px !important;
     margin-bottom: 10px !important;
   }
 
+  .sec-thirdeye-1__catchphrase {
+    font-size: 25px !important;
+    line-height: 30px !important;
+    margin-bottom: 12px !important;
+  }
+
   .sec-thirdeye-1__desc {
-    font-size: 18px !important;
-    line-height: 25px !important;
+    font-size: 20px !important;
+    line-height: 27px !important;
   }
 
   .sec-thirdeye-1__right,
   .sec-thirdeye-1__img-wrapper {
-    max-width: 335px !important;
+    max-width: 100% !important;
   }
 
   .sec-thirdeye-1__badge {
-    font-size: 18px !important;
-    line-height: 24px !important;
-    margin-top: 8px !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+    margin-top: 10px !important;
   }
 }

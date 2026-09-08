@@ -623,7 +623,7 @@ body.no-scroll {
 
 @media (max-width: 767px) {
   .scroll-down-btn {
-    bottom: 6px !important;
+    bottom: 12px !important;
   }
 
   .swiper-slide:not(:first-child) .scroll-down-btn,

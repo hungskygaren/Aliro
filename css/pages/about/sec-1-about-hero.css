@@ -22,11 +22,7 @@
   height: 100%;
   padding-top: var(--section-pt);
   padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
   position: relative;
 }
 
@@ -45,7 +41,7 @@
   position: relative;
   width: 570px;
   max-width: 570px;
-  margin-top: calc(89 / 720 * 100dvh + 43px);
+  margin-top: calc(89 / 720 * 100dvh);
   flex-shrink: 0;
   z-index: 4;
   opacity: 0;
@@ -195,7 +191,7 @@
   }
 
   .sec-about-1__left {
-    margin-top: 43px;
+    margin-top: 0;
   }
 
   .sec-about-1__right {
@@ -338,8 +334,6 @@
   .sec-about-1 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0 !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;

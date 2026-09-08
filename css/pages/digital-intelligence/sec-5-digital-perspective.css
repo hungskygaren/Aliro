@@ -17,12 +17,8 @@
   height: 100%;
   position: relative;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
   padding-top: var(--section-pt);
   padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
   z-index: 3;
 }
 
@@ -216,8 +212,6 @@
   .sec-digital-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
-    padding-left: 24px !important;
-    padding-right: 24px !important;
     height: 100% !important;
     justify-content: center !important;
   }
@@ -272,8 +266,6 @@
   .sec-digital-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
     justify-content: center !important;
     height: 100% !important;
   }

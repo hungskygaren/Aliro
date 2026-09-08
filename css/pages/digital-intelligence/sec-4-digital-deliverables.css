@@ -23,11 +23,7 @@
   height: 100%;
   padding-top: var(--section-pt);
   padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .sec-digital-4__stage {
@@ -75,12 +71,12 @@
 
 .sec-digital-4__cards {
   display: grid;
-  grid-template-columns: repeat(2, 290px);
-  grid-template-rows: 155px 165px 150px;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   width: 590px;
   max-width: 590px;
   flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .sec-digital-4__card {
@@ -88,8 +84,6 @@
   border: 1px solid rgba(126, 147, 168, 0.5);
   border-radius: 0px;
   padding: 10px 14px 15px 14px;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -161,7 +155,9 @@
 .sec-digital-4__right {
   flex: 1;
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 0;
+  align-self: stretch;
   margin-top: 0;
   display: flex;
   align-items: center;
@@ -186,6 +182,9 @@
 }
 
 .sec-digital-4__img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -237,7 +236,6 @@
 
   .sec-digital-4__cards {
     gap: 8px;
-    grid-template-rows: auto;
   }
 
   .sec-digital-4__card-num {
@@ -280,12 +278,10 @@
 
   .sec-digital-4__cards {
     gap: 8px;
-    grid-template-rows: auto;
   }
 
   .sec-digital-4__card {
     padding: 8px 12px 12px 12px;
-    height: auto;
   }
 
   .sec-digital-4__card-num {
@@ -315,7 +311,6 @@
     width: 52%;
     max-width: 52%;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
   }
 }
 
@@ -336,8 +331,6 @@
   .sec-digital-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
     height: 100% !important;
     justify-content: center !important;
   }
@@ -353,7 +346,7 @@
   .sec-digital-4__content {
     display: flex !important;
     flex-direction: row !important;
-    align-items: center !important;
+    align-items: stretch !important;
     justify-content: space-between !important;
     gap: 16px !important;
     width: 100% !important;
@@ -370,14 +363,12 @@
     max-width: 560px !important;
     flex-shrink: 1 !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: auto !important;
     gap: 8px !important;
   }
 
   .sec-digital-4__card {
     padding: 8px 10px 10px 10px !important;
     box-shadow: 0 3px 12px rgba(1, 16, 59, 0.04) !important;
-    height: auto !important;
   }
 
   .sec-digital-4__card-num {
@@ -400,11 +391,13 @@
   .sec-digital-4__right {
     margin-top: 0 !important;
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
     flex: 1 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    align-self: stretch !important;
   }
 
   .sec-digital-4__img {
@@ -432,8 +425,6 @@
   .sec-digital-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
     justify-content: center !important;
     height: 100% !important;
   }
@@ -466,14 +457,12 @@
   .sec-digital-4__cards {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: auto !important;
     gap: 6px 8px !important;
     width: 100% !important;
   }
 
   .sec-digital-4__card {
     padding: 7px 9px 8px 9px !important;
-    height: auto !important;
     min-height: 0 !important;
     box-shadow: 0 2px 8px rgba(1, 16, 59, 0.04) !important;
   }
@@ -527,8 +516,6 @@
   .sec-digital-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
   }
 
   .sec-digital-4__stage {
