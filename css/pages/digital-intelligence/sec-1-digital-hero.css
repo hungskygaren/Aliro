@@ -240,8 +240,6 @@
   transition: none !important;
 }
 
-
-
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-1 .flex-center-v {
     justify-content: center;
@@ -560,9 +558,7 @@
 
   .sec-digital-1__img {
     width: 100% !important;
-    max-width: 320px !important;
     height: auto !important;
-    max-height: 280px !important;
     aspect-ratio: 1340 / 1126 !important;
     object-fit: contain !important;
     margin-inline: auto !important;
@@ -577,7 +573,7 @@
   }
 
   .sec-digital-1__stage {
-    gap: 12px !important;
+    gap: 0px !important;
     max-width: 440px !important;
   }
 
@@ -595,13 +591,13 @@
   }
 
   .sec-digital-1__subtitle {
-    font-size: 18px !important;
+    font-size: 20px !important;
     line-height: 23px !important;
     margin-bottom: 8px !important;
   }
 
   .sec-digital-1__desc {
-    font-size: 16.5px !important;
+    font-size: 18px !important;
     line-height: 23px !important;
     max-width: 400px !important;
     margin-bottom: 12px !important;
@@ -616,7 +612,7 @@
   }
 
   .sec-digital-1__crumb {
-    font-size: 12px !important;
+    font-size: 13px !important;
     letter-spacing: -0.25px !important;
     white-space: nowrap !important;
   }
@@ -634,16 +630,15 @@
   }
 
   .sec-digital-1__right {
-    max-width: 380px !important;
+    max-width: 400px !important;
     margin-top: 12px !important;
   }
 
   .sec-digital-1__img-wrapper {
-    max-width: 380px !important;
+    max-width: 400px !important;
   }
 
   .sec-digital-1__img {
-    max-width: 380px !important;
-    max-height: 250px !important;
+    max-width: 400px !important;
   }
 }

@@ -380,7 +380,7 @@
     min-height: 220px !important;
     padding: 12px 10px 14px 10px !important;
     border: 1px solid rgba(126, 147, 168, 0.45) !important;
-    border-radius: 6px !important;
+    border-radius: 0px !important;
     box-shadow: 0 3px 12px rgba(1, 16, 59, 0.05) !important;
     display: flex !important;
     flex-direction: column !important;
@@ -500,7 +500,7 @@
     min-height: 0 !important;
     background-color: #ffffff !important;
     border: 1.5px solid rgba(126, 147, 168, 0.45) !important;
-    border-radius: 10px !important;
+    border-radius: 0px !important;
     padding: 10px 14px !important;
     box-sizing: border-box !important;
     display: flex !important;
@@ -605,7 +605,7 @@
     min-height: 0 !important;
     padding: 12px 18px !important;
     gap: 18px !important;
-    border-radius: 12px !important;
+    border-radius: 0px !important;
   }
 
   .sec-operational-7__card-img-box {

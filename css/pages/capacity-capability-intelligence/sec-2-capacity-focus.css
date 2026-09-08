@@ -507,14 +507,14 @@
   }
 
   .sec-capacity-2__grid {
-    gap: 16px !important;
+    gap: 8px !important;
     max-width: 480px !important;
   }
 
   .sec-capacity-2__card {
     height: auto !important;
     min-height: 0 !important;
-    padding: 14px 18px !important;
+    padding: 12px 16px !important;
   }
 
   .sec-capacity-2__card-left {

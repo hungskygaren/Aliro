@@ -75,7 +75,6 @@
   box-sizing: border-box;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 4px 20px rgba(1, 16, 59, 0.03);
   opacity: 0;
   transform: translateY(40px);
   transition:
