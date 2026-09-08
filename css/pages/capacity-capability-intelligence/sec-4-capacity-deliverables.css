@@ -32,25 +32,15 @@
 
 .sec-capacity-4__stage {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
   max-width: 1170px;
-  gap: 25px;
   margin-top: calc(15 / 720 * 100dvh);
   margin-bottom: auto;
   position: relative;
   z-index: 3;
-}
-
-.sec-capacity-4__left {
-  width: 580px;
-  max-width: 580px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  z-index: 4;
 }
 
 .sec-capacity-4__title {
@@ -74,11 +64,21 @@
   transition-delay: 0.1s;
 }
 
+.sec-capacity-4__content {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 25px;
+}
+
 .sec-capacity-4__cards {
   display: grid;
   grid-template-columns: 280px 290px;
   gap: 10px;
-  width: 100%;
+  width: 580px;
+  max-width: 580px;
+  flex-shrink: 0;
 }
 
 .sec-capacity-4__card {
@@ -156,11 +156,10 @@
 }
 
 .sec-capacity-4__right {
-  width: auto;
-  height: calc(520 / 720 * 100dvh);
-  aspect-ratio: 1 / 1;
-  margin-top: calc(98 / 720 * 100dvh);
-  flex-shrink: 0;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,9 +183,8 @@
 }
 
 .sec-capacity-4__img {
-  width: auto;
+  width: 100%;
   height: 100%;
-  aspect-ratio: 1 / 1;
   object-fit: contain;
   display: block;
 }
@@ -222,6 +220,9 @@
 
   .sec-capacity-4__stage {
     margin-top: 8px;
+  }
+
+  .sec-capacity-4__content {
     gap: 15px;
   }
 
@@ -261,6 +262,9 @@
 
   .sec-capacity-4__stage {
     margin-top: 6px;
+  }
+
+  .sec-capacity-4__content {
     gap: 15px;
   }
 
@@ -295,28 +299,17 @@
     font-size: 14px;
     line-height: normal;
   }
-
-  .sec-capacity-4__right {
-    max-width: 500px;
-  }
 }
 
 @media (max-width: 1200px) and (min-width: 1025px) {
-  .sec-capacity-4__stage {
+  .sec-capacity-4__content {
     gap: 20px;
   }
 
-  .sec-capacity-4__left {
-    width: 52%;
-  }
-
   .sec-capacity-4__cards {
+    width: 52%;
+    max-width: 52%;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sec-capacity-4__right {
-    width: 48%;
-    max-width: 480px;
   }
 }
 
@@ -344,19 +337,20 @@
   }
 
   .sec-capacity-4__stage {
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 16px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
     margin: 0 auto !important;
     width: 100% !important;
     max-width: 960px !important;
   }
 
-  .sec-capacity-4__left {
-    width: 58% !important;
-    max-width: 560px !important;
-    flex-shrink: 1 !important;
+  .sec-capacity-4__content {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    width: 100% !important;
   }
 
   .sec-capacity-4__title {
@@ -366,6 +360,9 @@
   }
 
   .sec-capacity-4__cards {
+    width: 58% !important;
+    max-width: 560px !important;
+    flex-shrink: 1 !important;
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-rows: auto !important;
     gap: 8px !important;
@@ -399,16 +396,17 @@
 
   .sec-capacity-4__right {
     margin-top: 0 !important;
-    width: 38% !important;
-    max-width: 340px !important;
+    width: 100% !important;
+    height: 100% !important;
+    flex: 1 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
   }
 
   .sec-capacity-4__img {
-    max-height: 380px !important;
     width: 100% !important;
+    height: 100% !important;
     object-fit: contain !important;
   }
 }
@@ -443,12 +441,15 @@
     width: 100% !important;
     max-width: 440px !important;
     margin: 0 auto !important;
-    gap: 6px !important;
+    gap: 0 !important;
   }
 
-  .sec-capacity-4__left {
+  .sec-capacity-4__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
     width: 100% !important;
-    max-width: 100% !important;
+    gap: 6px !important;
   }
 
   .sec-capacity-4__title {
@@ -528,8 +529,12 @@
   }
 
   .sec-capacity-4__stage {
-    gap: 18px !important;
+    gap: 0 !important;
     max-width: 480px !important;
+  }
+
+  .sec-capacity-4__content {
+    gap: 18px !important;
   }
 
   .sec-capacity-4__title {

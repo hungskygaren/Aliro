@@ -23,34 +23,20 @@
   height: 100%;
   padding-top: var(--section-pt);
   padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .sec-market-4__stage {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
   max-width: 1170px;
-  gap: 25px;
   margin-top: calc(15 / 720 * 100dvh);
   margin-bottom: auto;
   position: relative;
   z-index: 3;
-}
-
-.sec-market-4__left {
-  width: 580px;
-  max-width: 580px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  z-index: 4;
 }
 
 .sec-market-4__title {
@@ -74,11 +60,22 @@
   transition-delay: 0.1s;
 }
 
+.sec-market-4__content {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 25px;
+}
+
 .sec-market-4__cards {
   display: grid;
-  grid-template-columns: 280px 290px;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  width: 100%;
+  width: 580px;
+  max-width: 580px;
+  flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .sec-market-4__card {
@@ -86,8 +83,6 @@
   border: 1px solid rgba(126, 147, 168, 0.5);
   border-radius: 0px;
   padding: 10px 14px 15px 14px;
-  width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -163,11 +158,12 @@
 }
 
 .sec-market-4__right {
-  width: auto;
-  height: calc(520 / 720 * 100dvh);
-  aspect-ratio: 1 / 1;
-  margin-top: calc(98 / 720 * 100dvh);
-  flex-shrink: 0;
+  flex: 1;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  align-self: stretch;
+  margin-top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,9 +187,11 @@
 }
 
 .sec-market-4__img {
-  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  aspect-ratio: 1 / 1;
   object-fit: contain;
   display: block;
 }
@@ -229,6 +227,9 @@
 
   .sec-market-4__stage {
     margin-top: 8px;
+  }
+
+  .sec-market-4__content {
     gap: 15px;
   }
 
@@ -272,6 +273,9 @@
 
   .sec-market-4__stage {
     margin-top: 6px;
+  }
+
+  .sec-market-4__content {
     gap: 15px;
   }
 
@@ -287,7 +291,6 @@
 
   .sec-market-4__card {
     padding: 8px 12px 12px 12px;
-    height: auto;
   }
 
   .sec-market-4__card-num {
@@ -310,28 +313,17 @@
   .sec-market-4__card-highlight {
     font-size: 14px;
   }
-
-  .sec-market-4__right {
-    max-width: 500px;
-  }
 }
 
 @media (max-width: 1200px) and (min-width: 1025px) {
-  .sec-market-4__stage {
+  .sec-market-4__content {
     gap: 20px;
   }
 
-  .sec-market-4__left {
-    width: 52%;
-  }
-
   .sec-market-4__cards {
+    width: 52%;
+    max-width: 52%;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sec-market-4__right {
-    width: 48%;
-    max-width: 480px;
   }
 }
 
@@ -352,26 +344,25 @@
   .sec-market-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
     height: 100% !important;
     justify-content: center !important;
   }
 
   .sec-market-4__stage {
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 16px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
     margin: 0 auto !important;
     width: 100% !important;
     max-width: 960px !important;
   }
 
-  .sec-market-4__left {
-    width: 58% !important;
-    max-width: 560px !important;
-    flex-shrink: 1 !important;
+  .sec-market-4__content {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    width: 100% !important;
   }
 
   .sec-market-4__title {
@@ -381,8 +372,10 @@
   }
 
   .sec-market-4__cards {
+    width: 58% !important;
+    max-width: 560px !important;
+    flex-shrink: 1 !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: auto !important;
     gap: 8px !important;
   }
 
@@ -414,16 +407,19 @@
 
   .sec-market-4__right {
     margin-top: 0 !important;
-    width: 38% !important;
-    max-width: 340px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex: 1 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    align-self: stretch !important;
   }
 
   .sec-market-4__img {
-    max-height: 380px !important;
     width: 100% !important;
+    height: 100% !important;
     object-fit: contain !important;
   }
 }
@@ -446,8 +442,6 @@
   .sec-market-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
     justify-content: center !important;
     height: 100% !important;
   }
@@ -458,12 +452,15 @@
     width: 100% !important;
     max-width: 440px !important;
     margin: 0 auto !important;
-    gap: 6px !important;
+    gap: 0 !important;
   }
 
-  .sec-market-4__left {
+  .sec-market-4__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
     width: 100% !important;
-    max-width: 100% !important;
+    gap: 6px !important;
   }
 
   .sec-market-4__title {
@@ -477,14 +474,13 @@
   .sec-market-4__cards {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: auto !important;
     gap: 6px 8px !important;
     width: 100% !important;
+    max-width: 100% !important;
   }
 
   .sec-market-4__card {
     padding: 7px 9px 8px 9px !important;
-    height: auto !important;
     min-height: 0 !important;
     box-shadow: 0 2px 8px rgba(1, 16, 59, 0.04) !important;
   }
@@ -538,13 +534,15 @@
   .sec-market-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 25px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
   }
 
   .sec-market-4__stage {
-    gap: 18px !important;
+    gap: 0 !important;
     max-width: 480px !important;
+  }
+
+  .sec-market-4__content {
+    gap: 18px !important;
   }
 
   .sec-market-4__title {
