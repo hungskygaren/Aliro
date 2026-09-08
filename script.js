@@ -301,10 +301,75 @@ document.addEventListener("DOMContentLoaded", async () => {
   const continuumNodes = document.querySelectorAll(".sec-continuum__node");
   const return4icBtns = document.querySelectorAll(".btn-return-4ic");
 
-  const domSlides = Array.from(
+  const isContactPage = document.body.classList.contains("page-contact");
+
+  function setupContactMobileSlides() {
+    if (!isContactPage) return;
+
+    const stage = document.querySelector(".sec-contact-1__stage");
+    const formBox = document.querySelector(".sec-contact-1__right");
+    const sec1 = document.querySelector(".sec-contact-1");
+    const sec3 = document.querySelector(".sec-contact-3");
+    const wrapper = document.querySelector(".swiper-wrapper");
+    if (!stage || !formBox || !sec1 || !sec3 || !wrapper) return;
+
+    let placeholder = document.getElementById("contactFormPlaceholder");
+    if (!placeholder) {
+      placeholder = document.createElement("div");
+      placeholder.id = "contactFormPlaceholder";
+      placeholder.style.display = "none";
+      stage.appendChild(placeholder);
+    }
+
+    let mobileSlide = document.getElementById("contactMobileSlide");
+    if (!mobileSlide) {
+      mobileSlide = document.createElement("section");
+      mobileSlide.id = "contactMobileSlide";
+      mobileSlide.className =
+        "scroll-section swiper-slide sec-contact-form-slide sec-contact-bg-light";
+      mobileSlide.setAttribute("data-section-index", "1");
+      mobileSlide.innerHTML = `
+        <div class="container flex-center-v">
+          <div class="sec-contact-form-slide__stage"></div>
+        </div>
+      `;
+    }
+
+    const isMobile = window.innerWidth <= 1024;
+    if (isMobile) {
+      if (mobileSlide.parentNode !== wrapper) {
+        wrapper.insertBefore(mobileSlide, sec3);
+      }
+      const formContainer = mobileSlide.querySelector(
+        ".sec-contact-form-slide__stage",
+      );
+      if (formBox.parentNode !== formContainer) {
+        formContainer.appendChild(formBox);
+      }
+      sec1.id = "contact-intro";
+      mobileSlide.id = "contact-form";
+      sec1.setAttribute("data-section-index", "0");
+      mobileSlide.setAttribute("data-section-index", "1");
+      sec3.setAttribute("data-section-index", "2");
+    } else {
+      if (formBox.parentNode !== stage) {
+        stage.insertBefore(formBox, placeholder);
+      }
+      if (mobileSlide.parentNode === wrapper) {
+        mobileSlide.remove();
+      }
+      sec1.id = "contact-form";
+      sec1.setAttribute("data-section-index", "0");
+      sec3.setAttribute("data-section-index", "1");
+    }
+  }
+
+  setupContactMobileSlides();
+
+  let domSlides = Array.from(
     document.querySelectorAll(".main-swiper .swiper-slide"),
   );
-  const sectionIds = domSlides.map(
+  let sectionIds = domSlides.map(
     (slide, idx) => slide.id || `section-${idx + 1}`,
   );
 
@@ -410,6 +475,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     setupScrollDownButtons();
+
+    if (isContactPage) {
+      const mql = window.matchMedia("(max-width: 1024px)");
+      mql.addEventListener("change", () => {
+        setupContactMobileSlides();
+        domSlides = Array.from(
+          document.querySelectorAll(".main-swiper .swiper-slide"),
+        );
+        sectionIds = domSlides.map(
+          (slide, idx) => slide.id || `section-${idx + 1}`,
+        );
+        if (swiper) {
+          swiper.update();
+          setupScrollDownButtons();
+          updateHeaderTheme(swiper.activeIndex);
+        }
+      });
+    }
   }
 
   function triggerCounterAnimations(container) {
@@ -495,6 +578,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeSlide.classList.contains("sec-digital-bg-light") ||
         activeSlide.classList.contains("sec-capacity-bg-light") ||
         activeSlide.classList.contains("sec-contact-bg-light") ||
+        activeSlide.classList.contains("sec-contact-form-slide") ||
         activeSlide.classList.contains("sec-services-bg-light")
       ) {
         return false;

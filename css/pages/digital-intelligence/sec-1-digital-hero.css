@@ -505,17 +505,22 @@
 
   .sec-digital-1__breadcrumb {
     justify-content: center !important;
+    flex-wrap: nowrap !important;
     margin-bottom: 10px !important;
-    gap: 3px 8px !important;
+    gap: 2px 3px !important;
+    width: 100% !important;
   }
 
   .sec-digital-1__crumb {
-    font-size: 13px !important;
+    font-size: 12px !important;
+    letter-spacing: -0.25px !important;
+    white-space: nowrap !important;
   }
 
   .sec-digital-1__crumb-sep {
-    width: 14px !important;
-    height: 14px !important;
+    width: 9px !important;
+    height: 9px !important;
+    flex-shrink: 0 !important;
   }
 
   .sec-digital-1__cta-wrap {
@@ -629,12 +634,23 @@
   }
 
   .sec-digital-1__breadcrumb {
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
     margin-bottom: 12px !important;
-    gap: 4px 8px !important;
+    gap: 2px 3px !important;
+    width: 100% !important;
   }
 
   .sec-digital-1__crumb {
-    font-size: 13.5px !important;
+    font-size: 12px !important;
+    letter-spacing: -0.25px !important;
+    white-space: nowrap !important;
+  }
+
+  .sec-digital-1__crumb-sep {
+    width: 9px !important;
+    height: 9px !important;
+    flex-shrink: 0 !important;
   }
 
   .sec-digital-1__btn {
