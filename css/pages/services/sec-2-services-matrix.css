@@ -245,9 +245,9 @@
   opacity: 0;
   transform: translateY(20px);
   transition:
-    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.25s;
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.45s;
 }
 
 .sec-services-2__banner-title {
@@ -275,6 +275,7 @@
 /* Slide Entrance Animations */
 .sec-services-2.slide-animated .sec-services-2__header,
 .sec-services-2.slide-animated .sec-services-2__matrix-wrapper,
+.sec-services-2.slide-animated .sec-services-2__scroll-controller,
 .sec-services-2.slide-animated .sec-services-2__banner {
   opacity: 1;
   transform: translateY(0);
@@ -282,6 +283,7 @@
 
 .sec-services-2.visited .sec-services-2__header,
 .sec-services-2.visited .sec-services-2__matrix-wrapper,
+.sec-services-2.visited .sec-services-2__scroll-controller,
 .sec-services-2.visited .sec-services-2__banner {
   opacity: 1 !important;
   transform: none !important;
@@ -417,15 +419,21 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 820px;
+    width: auto;
+    max-width: 320px;
     margin: 6px auto 0 auto;
-    padding: 4px 12px;
+    padding: 4px 0;
     box-sizing: border-box;
     flex-shrink: 0;
     z-index: 5;
     background: #ffffff;
-    gap: 12px;
+    gap: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: 0.35s;
   }
 
   .sec-services-2__scroll-hint-text {
@@ -438,6 +446,8 @@
     user-select: none;
     line-height: 16px;
     text-align: center;
+    width: 160px;
+    flex-shrink: 0;
   }
 
   .sec-services-2__scroll-btn {
