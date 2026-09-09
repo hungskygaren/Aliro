@@ -25,7 +25,7 @@
   max-width: 1170px;
   margin: 0 auto;
   position: relative;
-  padding-top: var(--section-pt);
+  padding-top: calc(126 / 720 * 100dvh);
   box-sizing: border-box;
 }
 
