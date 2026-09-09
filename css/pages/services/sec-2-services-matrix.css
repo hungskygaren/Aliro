@@ -85,6 +85,11 @@
   box-sizing: border-box;
 }
 
+/* Scroll Controller (hidden on desktop) */
+.sec-services-2__scroll-controller {
+  display: none;
+}
+
 .sec-services-2__matrix {
   width: 100%;
   border-collapse: separate;
@@ -94,12 +99,12 @@
 
 /* Table Head */
 .sec-services-2__matrix thead tr {
-  height: 90px;
+  height: 96px;
 }
 
 .sec-services-2__matrix th {
   background-color: var(--Secondary-Deep-Blue, #011b7f);
-  height: 90px;
+  height: 96px;
   padding: 0;
   vertical-align: middle;
   color: #ffffff;
@@ -133,8 +138,8 @@
   justify-content: flex-end;
   position: relative;
   width: 100%;
-  height: 90px;
-  padding: 14px 14px 14px 18px;
+  height: 96px;
+  padding: 12px 14px 14px 18px;
   text-decoration: none;
   color: #ffffff;
   box-sizing: border-box;
@@ -149,6 +154,7 @@
   color: #ffffff;
   text-align: left;
   letter-spacing: 0;
+  margin-top: 10px;
 }
 
 .sec-services-2__service-arrow {
@@ -388,6 +394,94 @@
     -webkit-overflow-scrolling: touch;
     width: 100%;
     margin-bottom: 0 !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--Highlight-Blue, #0431b1) rgba(1, 16, 59, 0.1) !important;
+  }
+
+  .sec-services-2__matrix-wrapper::-webkit-scrollbar {
+    display: block !important;
+    height: 5px !important;
+  }
+
+  .sec-services-2__matrix-wrapper::-webkit-scrollbar-track {
+    background: rgba(1, 16, 59, 0.08) !important;
+    border-radius: 4px !important;
+  }
+
+  .sec-services-2__matrix-wrapper::-webkit-scrollbar-thumb {
+    background: var(--Highlight-Blue, #0431b1) !important;
+    border-radius: 4px !important;
+  }
+
+  .sec-services-2__scroll-controller {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 820px;
+    margin: 6px auto 0 auto;
+    padding: 4px 12px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    z-index: 5;
+    background: #ffffff;
+    gap: 12px;
+  }
+
+  .sec-services-2__scroll-hint-text {
+    font-family: Aptos, var(--font-brand);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--Mid-Blue-Gray, #7e93a8);
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    user-select: none;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .sec-services-2__scroll-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(1, 49, 177, 0.2);
+    color: var(--Highlight-Blue, #0431b1);
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      opacity 0.2s ease,
+      transform 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .sec-services-2__scroll-btn svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+    fill: currentColor;
+  }
+
+  .sec-services-2__scroll-btn:active:not(:disabled) {
+    transform: scale(0.92);
+    background: rgba(4, 49, 177, 0.08);
+  }
+
+  .sec-services-2__scroll-btn:disabled,
+  .sec-services-2__scroll-btn.is-disabled {
+    opacity: 0.35;
+    border-color: rgba(1, 16, 59, 0.1);
+    color: #b0c2d8;
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
   }
 
   .sec-services-2__matrix {
@@ -452,13 +546,13 @@
   }
 
   .sec-services-2__title {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 32px;
     margin-bottom: 4px;
   }
 
   .sec-services-2__desc {
-    font-size: 15.5px;
+    font-size: 14px;
     line-height: 21px;
   }
 
@@ -472,6 +566,44 @@
     -webkit-overflow-scrolling: touch;
     width: 100%;
     margin-bottom: 0 !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--Highlight-Blue, #0431b1) rgba(1, 16, 59, 0.1) !important;
+  }
+
+  .sec-services-2__matrix-wrapper::-webkit-scrollbar {
+    display: block !important;
+    height: 4px !important;
+  }
+
+  .sec-services-2__matrix-wrapper::-webkit-scrollbar-track {
+    background: rgba(1, 16, 59, 0.08) !important;
+    border-radius: 4px !important;
+  }
+
+  .sec-services-2__matrix-wrapper::-webkit-scrollbar-thumb {
+    background: var(--Highlight-Blue, #0431b1) !important;
+    border-radius: 4px !important;
+  }
+
+  .sec-services-2__scroll-controller {
+    margin: 3px auto 0 auto;
+    padding: 2px 6px;
+    gap: 10px;
+  }
+
+  .sec-services-2__scroll-hint-text {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .sec-services-2__scroll-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sec-services-2__scroll-btn svg {
+    width: 22px;
+    height: 22px;
   }
 
   .sec-services-2__matrix {
@@ -483,20 +615,26 @@
 
   .sec-services-2__matrix thead tr,
   .sec-services-2__matrix th {
-    height: 58px;
+    height: 68px;
     padding: 0;
   }
 
   .sec-services-2__service-header-link {
-    height: 58px;
-    padding: 8px 8px 8px 10px;
+    height: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    padding: 6px 8px 8px 10px;
   }
 
   .sec-services-2__service-arrow {
+    position: absolute;
     top: 6px;
-    right: 6px;
+    right: 8px;
     width: 16px;
     height: 16px;
+    margin-top: 0;
   }
 
   .sec-services-2__matrix th.col-need {
@@ -505,9 +643,14 @@
     padding: 0 10px;
   }
 
+  .sec-services-2__matrix th.col-service {
+    min-width: 130px;
+  }
+
   .sec-services-2__service-title {
-    font-size: 13.5px;
-    line-height: 17px;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 6px;
   }
 
   .sec-services-2__matrix tbody tr {
@@ -541,7 +684,7 @@
   }
 
   .sec-services-2__banner {
-    padding: 14px 16px 36px 16px;
+    padding: 14px 16px 16px 16px;
   }
 
   .sec-services-2__banner-title {
@@ -569,13 +712,13 @@
   }
 
   .sec-services-2__title {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 34px;
     margin-bottom: 6px;
   }
 
   .sec-services-2__desc {
-    font-size: 16.5px;
+    font-size: 15px;
     line-height: 22px;
   }
 
@@ -585,19 +728,26 @@
 
   .sec-services-2__matrix thead tr,
   .sec-services-2__matrix th {
-    height: 62px;
+    height: 72px;
+    padding: 0;
   }
 
   .sec-services-2__service-header-link {
-    height: 62px;
-    padding: 10px 10px 10px 12px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    padding: 8px 10px 10px 12px;
   }
 
   .sec-services-2__service-arrow {
+    position: absolute;
     top: 8px;
-    right: 8px;
-    width: 18px;
-    height: 18px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    margin-top: 0;
   }
 
   .sec-services-2__matrix th.col-need {
@@ -606,8 +756,12 @@
     padding: 0 12px;
   }
 
+  .sec-services-2__matrix th.col-service {
+    min-width: 135px;
+  }
+
   .sec-services-2__service-title {
-    font-size: 14.5px;
+    font-size: 14px;
     line-height: 18px;
   }
 
@@ -621,8 +775,27 @@
     padding-left: 12px;
   }
 
+  .sec-services-2__scroll-controller {
+    margin: 4px auto 0 auto;
+    padding: 5px 8px;
+  }
+
+  .sec-services-2__scroll-hint-text {
+    font-size: 13px;
+  }
+
+  .sec-services-2__scroll-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sec-services-2__scroll-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
   .sec-services-2__banner {
-    padding: 18px 20px 40px 20px;
+    padding: 18px 20px 20px 20px;
   }
 
   .sec-services-2__banner-title {

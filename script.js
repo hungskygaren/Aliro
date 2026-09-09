@@ -287,8 +287,114 @@ async function loadSharedFooter() {
   }
 }
 
+function initMatrixScrollController() {
+  const wrapper = document.querySelector(".sec-services-2__matrix-wrapper");
+  const controller = document.querySelector(".sec-services-2__scroll-controller");
+  if (!wrapper || !controller) return;
+
+  const btnPrev = controller.querySelector(".sec-services-2__scroll-btn--prev");
+  const btnNext = controller.querySelector(".sec-services-2__scroll-btn--next");
+  const hintText = controller.querySelector(".sec-services-2__scroll-hint-text");
+
+  let isTicking = false;
+
+  function updateScrollUI() {
+    const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+    if (maxScroll <= 4) {
+      if (btnPrev) {
+        btnPrev.disabled = true;
+        btnPrev.classList.add("is-disabled");
+      }
+      if (btnNext) {
+        btnNext.disabled = true;
+        btnNext.classList.add("is-disabled");
+      }
+      isTicking = false;
+      return;
+    }
+
+    const currentScroll = Math.max(0, wrapper.scrollLeft);
+
+    // Update buttons
+    const isAtStart = currentScroll <= 4;
+    const isAtEnd = currentScroll >= maxScroll - 4;
+
+    if (btnPrev) {
+      btnPrev.disabled = isAtStart;
+      btnPrev.classList.toggle("is-disabled", isAtStart);
+    }
+    if (btnNext) {
+      btnNext.disabled = isAtEnd;
+      btnNext.classList.toggle("is-disabled", isAtEnd);
+    }
+
+    // Update Hint Text
+    if (hintText) {
+      if (isAtEnd) {
+        hintText.textContent = "Swipe left to return";
+      } else if (isAtStart) {
+        hintText.textContent = "Swipe right to see more";
+      } else {
+        hintText.textContent = "Swipe to see more";
+      }
+    }
+
+    isTicking = false;
+  }
+
+  function onScroll() {
+    if (!isTicking) {
+      requestAnimationFrame(updateScrollUI);
+      isTicking = true;
+    }
+  }
+
+  function getScrollStep() {
+    return Math.max(140, Math.round(wrapper.clientWidth * 0.55));
+  }
+
+  if (btnPrev) {
+    btnPrev.addEventListener("click", (e) => {
+      e.preventDefault();
+      wrapper.scrollBy({ left: -getScrollStep(), behavior: "smooth" });
+    });
+  }
+
+  if (btnNext) {
+    btnNext.addEventListener("click", (e) => {
+      e.preventDefault();
+      wrapper.scrollBy({ left: getScrollStep(), behavior: "smooth" });
+    });
+  }
+
+  wrapper.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", () => {
+    requestAnimationFrame(updateScrollUI);
+  });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            requestAnimationFrame(updateScrollUI);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+    const sec2 = document.getElementById("service-matrix");
+    if (sec2) observer.observe(sec2);
+  }
+
+  setTimeout(updateScrollUI, 100);
+  setTimeout(updateScrollUI, 400);
+  setTimeout(updateScrollUI, 800);
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   await Promise.all([loadSharedHeader(), loadSharedFooter()]);
+  initMatrixScrollController();
 
   const swiperEl = document.querySelector(".main-swiper");
   const wrapperEl = document.querySelector(".swiper-wrapper");
