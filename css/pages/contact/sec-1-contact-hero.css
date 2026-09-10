@@ -544,8 +544,6 @@
   .sec-contact-1 .scroll-down-icon {
     color: #c5daf3 !important;
   }
-
-  /* Section 2 Mobile Slide Styles */
   .sec-contact-form-slide {
     --section-pt: 60px;
     position: relative;
@@ -872,8 +870,6 @@
   .sec-contact-1__body p {
     margin-bottom: 12px !important;
   }
-
-  /* Tall Phone Form Styles - Tăng kích cỡ chữ 15px */
   .sec-contact-form-slide .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 20px !important;

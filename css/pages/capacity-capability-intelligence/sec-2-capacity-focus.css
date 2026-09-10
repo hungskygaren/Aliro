@@ -1,3 +1,8 @@
+/* ==========================================================================
+   Section 2: Capacity & Capability Intelligence - Focus Questions
+   Canvas 1440x720 - Figma Node 6701:5673
+   ========================================================================== */
+
 .sec-capacity-2 {
   position: relative;
   overflow: hidden;
@@ -15,16 +20,46 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: var(--section-pt);
-  padding-bottom: 20px;
+  padding-top: calc(96 / 720 * 100dvh);
+  padding-bottom: 24px;
   box-sizing: border-box;
 }
 
+/* ==========================================================================
+   Header Section (2-Column with Vertical Divider - Figma Node 6701:5673)
+   ========================================================================== */
 .sec-capacity-2__header {
-  text-align: center;
-  margin-top: calc(36 / 720 * 100dvh);
-  margin-bottom: calc(35 / 720 * 100dvh);
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-sizing: border-box;
   z-index: 4;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.sec-capacity-2__header-left {
+  flex: 0 0 570px;
+  text-align: left;
+}
+
+.sec-capacity-2__eyebrow {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #011b7f;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 0px;
 }
 
 .sec-capacity-2__title {
@@ -34,22 +69,52 @@
   line-height: 42px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 8px 0;
   letter-spacing: 0px;
   font-feature-settings:
     "liga" off,
     "clig" off;
-  opacity: 0;
-  transform: translateY(-25px);
-  transition:
-    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 0.1s;
 }
 
+.sec-capacity-2__subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #011b7f;
+  margin: 0;
+}
+
+.sec-capacity-2__header-divider {
+  width: 1px;
+  height: 105px;
+  background-color: rgba(126, 147, 168, 0.5);
+  flex-shrink: 0;
+}
+
+.sec-capacity-2__header-right {
+  flex: 1;
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+}
+
+.sec-capacity-2__intro {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0;
+  text-align: left;
+}
+
+/* ==========================================================================
+   4-Card Grid (Desktop Standard 1440x720 - Figma Node 6701:5673)
+   ========================================================================== */
 .sec-capacity-2__grid {
   display: grid;
-  grid-template-columns: repeat(2, 570px);
+  grid-template-columns: repeat(4, 270px);
   gap: 30px;
   width: 100%;
   max-width: 1170px;
@@ -60,10 +125,9 @@
 
 .sec-capacity-2__card {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 570px;
-  height: 220px;
+  flex-direction: column;
+  width: 270px;
+  height: 410px;
   background-color: #ffffff;
   border: 1px solid rgba(126, 147, 168, 0.5);
   border-radius: 0px;
@@ -72,6 +136,7 @@
   text-decoration: none;
   color: inherit;
   box-shadow: 0 4px 20px rgba(1, 16, 59, 0.03);
+  position: relative;
   opacity: 0;
   transform: translateY(40px);
   transition:
@@ -84,58 +149,97 @@
   transition-delay: 0.2s;
 }
 .sec-capacity-2__card:nth-child(2) {
-  transition-delay: 0.36s;
+  transition-delay: 0.32s;
 }
 .sec-capacity-2__card:nth-child(3) {
-  transition-delay: 0.52s;
+  transition-delay: 0.44s;
 }
 .sec-capacity-2__card:nth-child(4) {
-  transition-delay: 0.68s;
+  transition-delay: 0.56s;
 }
 
 @media (hover: hover) {
   .sec-capacity-2__card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     box-shadow: 0 10px 28px rgba(1, 16, 59, 0.08);
   }
 }
 
-.sec-capacity-2__card-left {
-  width: 350px;
+/* ==========================================================================
+   Card Internal Elements (Figma Node 6701:5673)
+   ========================================================================== */
+.sec-capacity-2__card-tag-row {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  box-sizing: border-box;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.sec-capacity-2__card-icon {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 6px;
-  color: var(--Midnight-Navy, #01103b);
-  display: flex;
-  align-items: center;
+.sec-capacity-2__card-num {
+  font-family: Aptos, var(--font-brand);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--Highlight-Blue, #0431b1);
+  text-transform: uppercase;
+  flex-shrink: 0;
 }
 
-.sec-capacity-2__card-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.sec-capacity-2__card-tag {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #011b7f;
+  text-transform: uppercase;
+}
+
+.sec-capacity-2__card-tag--long {
+  font-size: 16px;
+  letter-spacing: -0.3px;
 }
 
 .sec-capacity-2__card-question {
+  font-family: Aptos, var(--font-brand);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
   color: var(--Midnight-Navy, #01103b);
+  margin: 0 0 10px 0;
+  min-height: 52px;
+  letter-spacing: 0px;
   font-feature-settings:
     "liga" off,
     "clig" off;
+}
+
+.sec-capacity-2__card-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
-  margin: 0 0 10px 0;
-  letter-spacing: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--Midnight-Navy, #01103b);
+  margin: 0 0 12px 0;
+  min-height: 44px;
+}
+
+.sec-capacity-2__card-img-wrap {
+  width: 230px;
+  height: 145px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: auto;
+}
+
+.sec-capacity-2__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
 }
 
 .sec-capacity-2__card-link {
@@ -148,6 +252,8 @@
   color: var(--Highlight-Blue, #0431b1);
   text-decoration: none;
   cursor: pointer;
+  margin-top: auto;
+  padding-top: 8px;
   transition:
     gap 0.25s ease,
     color 0.25s ease;
@@ -164,6 +270,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .sec-capacity-2__card-arrow svg {
@@ -171,29 +278,10 @@
   height: 100%;
 }
 
-.sec-capacity-2__card-right {
-  width: 180px;
-  height: 160px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.sec-capacity-2__card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.sec-capacity-2.slide-animated .sec-capacity-2__title {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* ==========================================================================
+   Animation States (Swiper integration)
+   ========================================================================== */
+.sec-capacity-2.slide-animated .sec-capacity-2__header,
 .sec-capacity-2.slide-animated .sec-capacity-2__card {
   opacity: 1;
   transform: translateY(0);
@@ -204,73 +292,141 @@
   transition: none !important;
 }
 
-.sec-capacity-2.visited .phrase,
-.sec-capacity-2.visited .sec-capacity-2__title,
-.sec-capacity-2.visited .sec-capacity-2__card {
+.sec-capacity-2.visited .sec-capacity-2__header,
+.sec-capacity-2.visited .sec-capacity-2__card,
+.sec-capacity-2.visited .phrase {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
 }
 
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px)
+   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-capacity-2 .flex-center-v {
     padding-top: var(--section-pt);
-    padding-bottom: 15px;
+    padding-bottom: 12px;
     justify-content: center;
   }
 
   .sec-capacity-2__header {
-    margin-top: 0;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
+    gap: 20px;
+  }
+
+  .sec-capacity-2__header-left {
+    flex: 0 0 520px;
+  }
+
+  .sec-capacity-2__eyebrow {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 2px;
   }
 
   .sec-capacity-2__title {
     font-size: 28px;
     line-height: 34px;
-  }
-
-  .sec-capacity-2__grid {
-    gap: 16px;
-    max-width: 1120px;
-  }
-
-  .sec-capacity-2__card {
-    height: 190px;
-    padding: 14px 18px;
-  }
-
-  .sec-capacity-2__card-question {
-    font-size: 21px;
-    line-height: 26px;
-    margin-bottom: 6px;
-  }
-
-  .sec-capacity-2__card-icon {
-    width: 32px;
-    height: 32px;
     margin-bottom: 4px;
   }
 
-  .sec-capacity-2__card-link {
-    font-size: 19px;
+  .sec-capacity-2__subtitle {
+    font-size: 16px;
+    line-height: 20px;
   }
 
-  .sec-capacity-2__card-right {
-    width: 160px;
-    height: 140px;
+  .sec-capacity-2__header-divider {
+    height: 80px;
+  }
+
+  .sec-capacity-2__intro {
+    font-size: 14.5px;
+    line-height: 19px;
+  }
+
+  .sec-capacity-2__grid {
+    gap: 20px;
+    max-width: 1160px;
+  }
+
+  .sec-capacity-2__card {
+    height: 360px;
+    padding: 14px;
+  }
+
+  .sec-capacity-2__card-tag-row {
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .sec-capacity-2__card-num {
+    font-size: 26px;
+    line-height: 20px;
+  }
+
+  .sec-capacity-2__card-tag {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .sec-capacity-2__card-tag--long {
+    font-size: 14px;
+  }
+
+  .sec-capacity-2__card-question {
+    font-size: 16.5px;
+    line-height: 21px;
+    min-height: 42px;
+    margin-bottom: 4px;
+  }
+
+  .sec-capacity-2__card-desc {
+    font-size: 13.5px;
+    line-height: 17px;
+    min-height: 34px;
+    margin-bottom: 6px;
+  }
+
+  .sec-capacity-2__card-img-wrap {
+    width: 100%;
+    height: 125px;
+  }
+
+  .sec-capacity-2__card-link {
+    font-size: 18px;
+    padding-top: 4px;
+  }
+
+  .sec-capacity-2__card-arrow {
+    width: 18px;
+    height: 18px;
   }
 }
 
+/* ==========================================================================
+   Responsive: Small Desktop / Narrow Screens (max-width: 1200px)
+   ========================================================================== */
 @media (max-width: 1200px) {
   .sec-capacity-2 .flex-center-v {
     padding-top: var(--section-pt);
-    padding-bottom: 20px;
+    padding-bottom: 24px;
     justify-content: center;
   }
 
   .sec-capacity-2__header {
-    margin-top: 0;
+    max-width: 100%;
     margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .sec-capacity-2__header-left {
+    flex: 1;
+  }
+
+  .sec-capacity-2__eyebrow {
+    font-size: 22px;
+    line-height: 26px;
   }
 
   .sec-capacity-2__title {
@@ -278,29 +434,75 @@
     line-height: 38px;
   }
 
+  .sec-capacity-2__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .sec-capacity-2__header-divider {
+    height: 90px;
+  }
+
+  .sec-capacity-2__intro {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
   .sec-capacity-2__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1020px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 100%;
   }
 
   .sec-capacity-2__card {
     width: 100%;
-    height: 205px;
-    padding: 16px 20px;
+    height: 440px;
+    padding: 18px 16px;
+  }
+
+  .sec-capacity-2__card-tag-row {
+    gap: 8px;
+  }
+
+  .sec-capacity-2__card-num {
+    font-size: 30px;
+    line-height: 24px;
+  }
+
+  .sec-capacity-2__card-tag {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .sec-capacity-2__card-tag--long {
+    font-size: 14.5px;
   }
 
   .sec-capacity-2__card-question {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 19px;
+    line-height: 23px;
+    min-height: 48px;
   }
 
-  .sec-capacity-2__card-right {
-    width: 160px;
-    height: 140px;
+  .sec-capacity-2__card-desc {
+    font-size: 15px;
+    line-height: 20px;
+    min-height: 40px;
+  }
+
+  .sec-capacity-2__card-img-wrap {
+    width: 100%;
+    height: 150px;
+  }
+
+  .sec-capacity-2__card-link {
+    font-size: 21px;
   }
 }
 
+/* ==========================================================================
+   Responsive: Tablet (max-width: 1024px) - 2x2 Clean Layout
+   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-capacity-2 {
     height: 100vh;
@@ -310,24 +512,59 @@
 
   .sec-capacity-2 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 30px !important;
+    padding-bottom: 24px !important;
     height: 100% !important;
     justify-content: center !important;
   }
 
   .sec-capacity-2__header {
-    margin-top: 0 !important;
-    margin-bottom: 24px !important;
+    max-width: 780px !important;
+    margin-bottom: 16px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .sec-capacity-2__header-divider {
+    display: none !important;
+  }
+
+  .sec-capacity-2__header-left {
+    flex: none !important;
+    width: 100% !important;
+  }
+
+  .sec-capacity-2__eyebrow {
+    font-size: 18px !important;
+    line-height: 22px !important;
+    margin-bottom: 3px !important;
   }
 
   .sec-capacity-2__title {
-    font-size: 30px !important;
-    line-height: 36px !important;
+    font-size: 26px !important;
+    line-height: 32px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-capacity-2__subtitle {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+
+  .sec-capacity-2__header-right {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .sec-capacity-2__intro {
+    font-size: 14.5px !important;
+    line-height: 19px !important;
+    color: #243752 !important;
   }
 
   .sec-capacity-2__grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 18px !important;
+    gap: 14px !important;
     max-width: 780px !important;
     width: 100% !important;
   }
@@ -335,49 +572,70 @@
   .sec-capacity-2__card {
     width: 100% !important;
     height: auto !important;
-    min-height: 180px !important;
-    padding: 16px 18px !important;
+    min-height: 210px !important;
+    padding: 14px 16px !important;
     display: flex !important;
     flex-direction: row !important;
-  }
-
-  .sec-capacity-2__card-left {
-    width: auto !important;
-    flex: 1 !important;
-    height: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
+    align-items: center !important;
     justify-content: space-between !important;
-    gap: 8px !important;
-    padding-right: 12px !important;
+    gap: 12px !important;
   }
 
-  .sec-capacity-2__card-icon {
-    width: 36px !important;
-    height: 36px !important;
-    margin-bottom: 4px !important;
+  .sec-capacity-2__card-tag-row {
+    margin-bottom: 2px !important;
+    gap: 8px !important;
+  }
+
+  .sec-capacity-2__card-num {
+    font-size: 22px !important;
+    line-height: 18px !important;
+  }
+
+  .sec-capacity-2__card-tag {
+    font-size: 16px !important;
+    line-height: 18px !important;
+  }
+
+  .sec-capacity-2__card-tag--long {
+    font-size: 14px !important;
   }
 
   .sec-capacity-2__card-question {
-    font-size: 22px !important;
-    line-height: 28px !important;
+    font-size: 17.5px !important;
+    line-height: 22px !important;
+    min-height: 0 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-capacity-2__card-desc {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    min-height: 0 !important;
     margin-bottom: 6px !important;
   }
 
-  .sec-capacity-2__card-link {
-    font-size: 18px !important;
+  .sec-capacity-2__card-img-wrap {
+    width: 130px !important;
+    height: 115px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
   }
 
-  .sec-capacity-2__card-right {
-    width: 140px !important;
-    height: 130px !important;
-    flex-shrink: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+  .sec-capacity-2__card-link {
+    font-size: 17px !important;
+    padding-top: 0 !important;
+    margin-top: 4px !important;
+  }
+
+  .sec-capacity-2__card-arrow {
+    width: 18px !important;
+    height: 18px !important;
   }
 }
 
+/* ==========================================================================
+   Responsive: Mobile (max-width: 767px) - 2x2 Compact Grid (Font >= 14px)
+   ========================================================================== */
 @media (max-width: 767px) {
   .sec-capacity-2 {
     height: auto !important;
@@ -389,156 +647,292 @@
 
   .sec-capacity-2 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 16px !important;
     justify-content: center !important;
-    height: auto !important;
+    height: 100% !important;
     min-height: 100dvh !important;
     box-sizing: border-box;
   }
 
   .sec-capacity-2__header {
     width: 100% !important;
-    max-width: 440px !important;
+    max-width: 365px !important;
     margin-top: 0 !important;
-    margin-bottom: 12px !important;
-    text-align: center !important;
+    margin-bottom: 8px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+
+  .sec-capacity-2__header-divider {
+    display: none !important;
+  }
+
+  .sec-capacity-2__header-left {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .sec-capacity-2__eyebrow {
+    font-size: 14px !important;
+    line-height: 17px !important;
+    margin-bottom: 2px !important;
   }
 
   .sec-capacity-2__title {
-    font-size: 22px !important;
-    line-height: 32px !important;
-    text-align: center !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-capacity-2__subtitle {
+    font-size: 14px !important;
+    line-height: 17px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-capacity-2__header-right {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .sec-capacity-2__intro {
+    font-size: 14px !important;
+    line-height: 17px !important;
+    color: #243752 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
 
   .sec-capacity-2__grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 6px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
     width: 100% !important;
-    max-width: 440px !important;
+    max-width: 365px !important;
     margin: 0 auto !important;
+    box-sizing: border-box !important;
   }
 
   .sec-capacity-2__card {
     display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
     width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
-    padding: 12px 14px !important;
+    gap: 0 !important;
+    padding: 8px 9px 8px 9px !important;
     box-sizing: border-box !important;
     border: 1px solid rgba(126, 147, 168, 0.45) !important;
-    box-shadow: 0 3px 12px rgba(1, 16, 59, 0.04) !important;
+    box-shadow: 0 3px 10px rgba(1, 16, 59, 0.04) !important;
+    position: relative !important;
   }
 
-  .sec-capacity-2__card-left {
-    width: auto !important;
-    flex: 1 !important;
-    height: auto !important;
+  .sec-capacity-2__card-tag-row {
     display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    gap: 6px !important;
-    padding-right: 12px !important;
+    align-items: baseline !important;
+    gap: 5px !important;
+    margin-bottom: 1px !important;
+    width: 100% !important;
+    overflow: hidden !important;
   }
 
-  .sec-capacity-2__card-icon {
-    width: 24px !important;
-    height: 24px !important;
+  .sec-capacity-2__card-num {
+    font-size: 18px !important;
+    line-height: 18px !important;
+    font-weight: 700 !important;
+    color: var(--Highlight-Blue, #0431b1) !important;
     margin-bottom: 0 !important;
   }
 
+  .sec-capacity-2__card-tag {
+    font-size: 14px !important;
+    line-height: 16px !important;
+    font-weight: 700 !important;
+    color: #011b7f !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+  }
+
+  .sec-capacity-2__card-tag--long {
+    font-size: 12px !important;
+    letter-spacing: -0.4px !important;
+  }
+
   .sec-capacity-2__card-question {
-    font-size: 16px !important;
-    line-height: 21px !important;
-    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 17.5px !important;
     font-weight: 700 !important;
     color: var(--Midnight-Navy, #01103b) !important;
+    min-height: 35px !important;
+    margin: 0 0 2px 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
 
-  .sec-capacity-2__card-link {
-    font-size: 15px !important;
-    gap: 6px !important;
-    margin-top: 2px !important;
+  .sec-capacity-2__card-desc {
+    font-size: 14px !important;
+    line-height: 17px !important;
+    font-weight: 500 !important;
+    color: #243752 !important;
+    min-height: 51px !important;
+    margin: 0 0 4px 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
 
-  .sec-capacity-2__card-arrow {
-    width: 16px !important;
-    height: 16px !important;
-  }
-
-  .sec-capacity-2__card-right {
-    width: 92px !important;
-    height: 84px !important;
-    flex-shrink: 0 !important;
+  .sec-capacity-2__card-img-wrap {
+    width: 100% !important;
+    height: 70px !important;
+    max-height: 70px !important;
+    margin: auto 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    overflow: hidden !important;
   }
 
   .sec-capacity-2__card-img {
     width: 100% !important;
     height: 100% !important;
+    max-height: 70px !important;
     object-fit: contain !important;
+    display: block !important;
+  }
+
+  .sec-capacity-2__card-link {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: var(--Highlight-Blue, #0431b1) !important;
+    gap: 5px !important;
+    margin-top: auto !important;
+    padding-top: 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .sec-capacity-2__card-arrow {
+    width: 16px !important;
+    height: 16px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .sec-capacity-2__card-arrow svg {
+    width: 100%;
+    height: 100%;
   }
 }
 
+/* ==========================================================================
+   Responsive: Tall Mobile (max-width: 767px and min-height: 780px)
+   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-capacity-2 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 20px !important;
+    padding-bottom: 24px !important;
+    justify-content: center !important;
   }
 
   .sec-capacity-2__header {
-    margin-bottom: 20px !important;
+    max-width: 420px !important;
+    margin-bottom: 14px !important;
+    gap: 6px !important;
+  }
+
+  .sec-capacity-2__eyebrow {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin-bottom: 2px !important;
   }
 
   .sec-capacity-2__title {
     font-size: 26px !important;
-    line-height: 32px !important;
+    line-height: 31px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-capacity-2__subtitle {
+    font-size: 15px !important;
+    line-height: 19px !important;
+  }
+
+  .sec-capacity-2__intro {
+    font-size: 14px !important;
+    line-height: 18px !important;
   }
 
   .sec-capacity-2__grid {
-    gap: 8px !important;
-    max-width: 480px !important;
+    gap: 12px !important;
+    max-width: 420px !important;
   }
 
   .sec-capacity-2__card {
-    height: auto !important;
-    min-height: 0 !important;
-    padding: 12px 16px !important;
+    padding: 14px 12px 14px 12px !important;
   }
 
-  .sec-capacity-2__card-left {
-    height: auto !important;
+  .sec-capacity-2__card-tag-row {
     gap: 8px !important;
+    margin-bottom: 2px !important;
   }
 
-  .sec-capacity-2__card-icon {
-    width: 28px !important;
-    height: 28px !important;
-    margin-bottom: 4px !important;
+  .sec-capacity-2__card-num {
+    font-size: 24px !important;
+    line-height: 24px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-capacity-2__card-tag {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
+
+  .sec-capacity-2__card-tag--long {
+    font-size: 13px !important;
   }
 
   .sec-capacity-2__card-question {
-    font-size: 18px !important;
-    line-height: 23px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    min-height: 40px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-capacity-2__card-desc {
+    font-size: 14px !important;
+    line-height: 17.5px !important;
+    min-height: 52px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .sec-capacity-2__card-img-wrap {
+    height: 95px !important;
+    max-height: 95px !important;
+  }
+
+  .sec-capacity-2__card-img {
+    max-height: 95px !important;
   }
 
   .sec-capacity-2__card-link {
-    font-size: 16.5px !important;
-    gap: 7px !important;
+    font-size: 15px !important;
+    padding-top: 6px !important;
   }
 
   .sec-capacity-2__card-arrow {
-    width: 20px !important;
-    height: 20px !important;
-  }
-
-  .sec-capacity-2__card-right {
-    width: 125px !important;
-    height: 112px !important;
+    width: 17px !important;
+    height: 17px !important;
   }
 }

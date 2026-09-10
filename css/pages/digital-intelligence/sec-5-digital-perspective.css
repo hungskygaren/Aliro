@@ -1,3 +1,8 @@
+/* ==========================================================================
+   Section 5: Digital Intelligence - Aliro Perspective
+   Canvas 1440x720 - Figma Node 6703:6090
+   ========================================================================== */
+
 .sec-digital-5 {
   position: relative;
   overflow: hidden;
@@ -12,16 +17,70 @@
 .sec-digital-5 .flex-center-v {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
   position: relative;
   box-sizing: border-box;
-  padding-top: var(--section-pt);
-  padding-bottom: 20px;
+  padding-top: calc(95 / 720 * 100dvh);
+  padding-bottom: 24px;
   z-index: 3;
 }
 
+/* ==========================================================================
+   Top Header (Centered)
+   ========================================================================== */
+.sec-digital-5__header {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 22px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 4;
+}
+
+.sec-digital-5__eyebrow {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 0;
+}
+
+.sec-digital-5__title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.3px;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+.sec-digital-5__subtitle {
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  max-width: 770px;
+  margin: 0 auto;
+  letter-spacing: 0;
+}
+
+/* ==========================================================================
+   Stage: 2 Cards + Center Connector (Figma 1170px wide)
+   ========================================================================== */
 .sec-digital-5__stage {
   display: flex;
   align-items: center;
@@ -29,91 +88,215 @@
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  gap: 40px;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+/* Cards (01 - Aliro & 02 - Specialist Partners) - Figma exact 470px x 290px */
+.sec-digital-5__card {
+  width: 470px;
+  flex: 0 0 470px;
+  height: 290px;
+  background-color: #e9eff7;
+  border-radius: 0;
+  box-sizing: border-box;
+  padding: 17px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
   z-index: 3;
 }
 
-.sec-digital-5__left {
-  width: 50%;
-  max-width: 570px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
+.sec-digital-5__card-header {
+  margin-bottom: 15px;
 }
 
-.sec-digital-5__img-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 570px;
-  aspect-ratio: 1536 / 1024;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sec-digital-5__img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.sec-digital-5__card-num {
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  margin-bottom: 8px;
   display: block;
 }
 
-.sec-digital-5__right {
-  width: 50%;
-  max-width: 570px;
+.sec-digital-5__card-title {
+  font-family: Aptos, var(--font-brand);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 42px;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* Card Items List */
+.sec-digital-5__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+.sec-digital-5__item {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  height: 30px;
+}
+
+.sec-digital-5__item-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.sec-digital-5__item-text {
+  font-family: Aptos, var(--font-brand);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Center Connector (Horizontal Line with Dots + Circle Badge) - Figma 230px wide
+   ========================================================================== */
+.sec-digital-5__connector {
+  width: 230px;
+  flex: 0 0 230px;
+  height: 153px;
+  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: center;
   z-index: 4;
 }
 
-.sec-digital-5__title {
+.sec-digital-5__connector-line {
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2.5px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.sec-digital-5__connector-track {
+  flex: 1;
+  height: 2.5px;
+  background-color: var(--Highlight-Blue, #0431b1);
+}
+
+.sec-digital-5__connector-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--Highlight-Blue, #0431b1);
+  flex-shrink: 0;
+}
+
+.sec-digital-5__connector-dot--left {
+  margin-right: 0;
+}
+
+.sec-digital-5__connector-dot--right {
+  margin-left: 0;
+}
+
+.sec-digital-5__connector-badge {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: var(--Highlight-Blue, #0431b1);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.sec-digital-5__badge-text {
   font-family: Aptos, var(--font-brand);
-  font-size: 38px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 48px;
-  color: var(--Midnight-Navy, #01103b);
-  margin: 0 0 20px 0;
-  letter-spacing: -0.3px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  line-height: 26px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
-.sec-digital-5__desc {
+.sec-digital-5__badge-arrow {
+  width: 28px;
+  height: 28px;
+  margin: -1px 0;
+  display: block;
+}
+
+/* ==========================================================================
+   Bottom Note
+   ========================================================================== */
+.sec-digital-5__bottom-note {
   font-family: Aptos, var(--font-brand);
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 24px;
   color: var(--Midnight-Navy, #01103b);
-  opacity: 0.85;
-  margin: 0;
-  letter-spacing: 0px;
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
+  text-align: center;
+  max-width: 770px;
+  margin: 30px auto 0 auto;
+  box-sizing: border-box;
 }
 
+/* ==========================================================================
+   Animation & Transitions
+   ========================================================================== */
 .sec-digital-5 .phrase {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(24px);
   transition:
     opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-digital-5__left.phrase {
-  transition-delay: 0.12s;
+.sec-digital-5__header.phrase {
+  transition-delay: 0.1s;
 }
 
-.sec-digital-5__title.phrase {
+.sec-digital-5__card--left.phrase {
   transition-delay: 0.22s;
 }
 
-.sec-digital-5__desc.phrase {
+.sec-digital-5__connector.phrase {
   transition-delay: 0.32s;
+}
+
+.sec-digital-5__card--right.phrase {
+  transition-delay: 0.42s;
+}
+
+.sec-digital-5__bottom-note.phrase {
+  transition-delay: 0.52s;
 }
 
 .sec-digital-5.slide-animated .phrase {
@@ -127,81 +310,250 @@
 }
 
 .sec-digital-5.visited .phrase,
-.sec-digital-5.visited .sec-digital-5__left,
-.sec-digital-5.visited .sec-digital-5__title,
-.sec-digital-5.visited .sec-digital-5__desc {
+.sec-digital-5.visited .sec-digital-5__header,
+.sec-digital-5.visited .sec-digital-5__card,
+.sec-digital-5.visited .sec-digital-5__connector,
+.sec-digital-5.visited .sec-digital-5__bottom-note {
   transform: none !important;
 }
 
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Laptop Low-height Viewport */
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-digital-5 .flex-center-v {
-    padding-top: var(--section-pt);
-    padding-bottom: 12px;
+    padding-top: calc(75 / 720 * 100dvh);
+    padding-bottom: 16px;
   }
 
-  .sec-digital-5__stage {
-    gap: 28px;
+  .sec-digital-5__header {
+    margin-bottom: 16px;
   }
 
-  .sec-digital-5__left {
-    max-width: 480px;
-  }
-
-  .sec-digital-5__title {
-    font-size: 28px;
-    line-height: 35px;
-    margin-bottom: 12px;
-  }
-
-  .sec-digital-5__desc {
-    font-size: 16px;
-    line-height: 23px;
-  }
-}
-
-@media (max-height: 640px) and (min-width: 1025px) {
-  .sec-digital-5 .flex-center-v {
-    padding-top: var(--section-pt);
-    padding-bottom: 8px;
-  }
-
-  .sec-digital-5__stage {
-    gap: 20px;
-  }
-
-  .sec-digital-5__left {
-    max-width: 420px;
-  }
-
-  .sec-digital-5__title {
-    font-size: 25px;
-    line-height: 31px;
-    margin-bottom: 10px;
-  }
-
-  .sec-digital-5__desc {
-    font-size: 15px;
-    line-height: 21px;
-  }
-}
-
-@media (max-width: 1200px) and (min-width: 1025px) {
-  .sec-digital-5__stage {
-    gap: 30px;
+  .sec-digital-5__eyebrow {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 6px;
   }
 
   .sec-digital-5__title {
     font-size: 30px;
-    line-height: 38px;
-    margin-bottom: 16px;
+    line-height: 36px;
+    margin-bottom: 4px;
   }
 
-  .sec-digital-5__desc {
+  .sec-digital-5__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 680px;
+  }
+
+  .sec-digital-5__card {
+    width: 440px;
+    flex: 0 0 440px;
+    height: 265px;
+    padding: 14px 18px 16px 18px;
+  }
+
+  .sec-digital-5__card-header {
+    margin-bottom: 12px;
+  }
+
+  .sec-digital-5__card-num {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 6px;
+  }
+
+  .sec-digital-5__card-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .sec-digital-5__list {
+    gap: 9px;
+  }
+
+  .sec-digital-5__item {
+    gap: 15px;
+    height: 26px;
+  }
+
+  .sec-digital-5__item-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .sec-digital-5__item-text {
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  .sec-digital-5__connector {
+    width: 230px;
+    flex: 0 0 230px;
+    height: 130px;
+  }
+
+  .sec-digital-5__connector-badge {
+    width: 118px;
+    height: 118px;
+    padding: 8px;
+  }
+
+  .sec-digital-5__badge-text {
     font-size: 17px;
-    line-height: 25px;
+    line-height: 22px;
+  }
+
+  .sec-digital-5__badge-arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sec-digital-5__bottom-note {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 680px;
+    margin-top: 18px;
   }
 }
 
+/* Ultra low-height screen */
+@media (max-height: 640px) and (min-width: 1025px) {
+  .sec-digital-5 .flex-center-v {
+    padding-top: calc(65 / 720 * 100dvh);
+    padding-bottom: 10px;
+  }
+
+  .sec-digital-5__header {
+    margin-bottom: 12px;
+  }
+
+  .sec-digital-5__eyebrow {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+
+  .sec-digital-5__title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 2px;
+  }
+
+  .sec-digital-5__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 620px;
+  }
+
+  .sec-digital-5__card {
+    width: 400px;
+    flex: 0 0 400px;
+    height: 240px;
+    padding: 12px 16px 14px 16px;
+  }
+
+  .sec-digital-5__card-num {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+
+  .sec-digital-5__card-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .sec-digital-5__list {
+    gap: 7px;
+  }
+
+  .sec-digital-5__item {
+    gap: 12px;
+    height: 24px;
+  }
+
+  .sec-digital-5__item-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sec-digital-5__item-text {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .sec-digital-5__connector {
+    width: 220px;
+    flex: 0 0 220px;
+    height: 115px;
+  }
+
+  .sec-digital-5__connector-badge {
+    width: 105px;
+    height: 105px;
+  }
+
+  .sec-digital-5__badge-text {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .sec-digital-5__badge-arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sec-digital-5__bottom-note {
+    font-size: 14.5px;
+    line-height: 19px;
+    max-width: 620px;
+    margin-top: 12px;
+  }
+}
+
+/* Mid-width Desktop (1025px - 1200px) */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .sec-digital-5__stage {
+    padding: 0 20px;
+  }
+
+  .sec-digital-5__card {
+    width: 410px;
+    flex: 0 0 410px;
+    height: 280px;
+    padding: 16px 18px;
+  }
+
+  .sec-digital-5__card-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .sec-digital-5__item-text {
+    font-size: 20px;
+  }
+
+  .sec-digital-5__connector {
+    width: 230px;
+    flex: 0 0 230px;
+  }
+
+  .sec-digital-5__connector-badge {
+    width: 120px;
+    height: 120px;
+  }
+
+  .sec-digital-5__badge-text {
+    font-size: 18px;
+  }
+}
+
+/* Tablet (768px - 1024px) */
 @media (max-width: 1024px) and (min-width: 768px) {
   .sec-digital-5 {
     height: 100vh !important;
@@ -210,64 +562,160 @@
   }
 
   .sec-digital-5 .flex-center-v {
-    padding-top: var(--section-pt) !important;
-    padding-bottom: 25px !important;
+    padding-top: calc(var(--section-pt) + 10px) !important;
+    padding-bottom: 20px !important;
     height: 100% !important;
     justify-content: center !important;
+  }
+
+  .sec-digital-5__header {
+    margin-bottom: 18px !important;
+    max-width: 720px !important;
+  }
+
+  .sec-digital-5__eyebrow {
+    font-size: 20px !important;
+    line-height: 24px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-digital-5__title {
+    font-size: 30px !important;
+    line-height: 38px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-digital-5__subtitle {
+    font-size: 18px !important;
+    line-height: 24px !important;
+    max-width: 680px !important;
   }
 
   .sec-digital-5__stage {
     flex-direction: row !important;
     align-items: center !important;
-    justify-content: space-between !important;
-    gap: 24px !important;
+    justify-content: center !important;
+    gap: 16px !important;
     margin: 0 auto !important;
     width: 100% !important;
     max-width: 960px !important;
+    padding: 0 15px !important;
   }
 
-  .sec-digital-5__left {
-    width: 48% !important;
-    max-width: 440px !important;
+  .sec-digital-5__card {
+    width: clamp(260px, 30vw, 310px) !important;
+    flex: 0 0 clamp(260px, 30vw, 310px) !important;
+    height: 270px !important;
+    padding: 15px 16px !important;
   }
 
-  .sec-digital-5__img-wrapper {
-    max-width: 440px !important;
-    aspect-ratio: 1536 / 1024 !important;
+  .sec-digital-5__card-num {
+    font-size: 19px !important;
+    line-height: 24px !important;
+    margin-bottom: 6px !important;
   }
 
-  .sec-digital-5__right {
-    width: 48% !important;
-    max-width: 460px !important;
-    text-align: left !important;
-    align-items: flex-start !important;
+  .sec-digital-5__card-title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+    margin-bottom: 12px !important;
   }
 
-  .sec-digital-5__title {
-    font-size: 30px !important;
-    line-height: 38px !important;
-    margin-bottom: 14px !important;
+  .sec-digital-5__list {
+    gap: 10px !important;
   }
 
-  .sec-digital-5__desc {
-    font-size: 18px !important;
-    line-height: 26px !important;
+  .sec-digital-5__item {
+    gap: 12px !important;
+    height: auto !important;
+    min-height: 26px !important;
+  }
+
+  .sec-digital-5__item-icon {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .sec-digital-5__item-text {
+    font-size: 16px !important;
+    line-height: 21px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  .sec-digital-5__connector {
+    width: clamp(190px, 25vw, 240px) !important;
+    flex: 0 0 clamp(190px, 25vw, 240px) !important;
+    height: 120px !important;
+  }
+
+  .sec-digital-5__connector-badge {
+    width: clamp(80px, 9vw, 92px) !important;
+    height: clamp(80px, 9vw, 92px) !important;
+    padding: 6px !important;
+  }
+
+  .sec-digital-5__badge-text {
+    font-size: 13px !important;
+    line-height: 17px !important;
+  }
+
+  .sec-digital-5__badge-arrow {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .sec-digital-5__bottom-note {
+    font-size: 15.5px !important;
+    line-height: 22px !important;
+    max-width: 700px !important;
+    margin-top: 20px !important;
   }
 }
 
+/* Mobile Screen (< 768px) */
 @media (max-width: 767px) {
   .sec-digital-5 {
-    height: 100vh !important;
-    height: 100dvh !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
   }
 
   .sec-digital-5 .flex-center-v {
-    padding-top: var(--section-pt) !important;
-    padding-bottom: 0px !important;
+    padding-top: calc(var(--section-pt) + 6px) !important;
+    padding-bottom: 20px !important;
     justify-content: center !important;
     height: 100% !important;
+    min-height: 100dvh !important;
+    box-sizing: border-box !important;
+  }
+
+  .sec-digital-5__header {
+    margin-bottom: 12px !important;
+    padding: 0 14px !important;
+    max-width: 100% !important;
+  }
+
+  .sec-digital-5__eyebrow {
+    font-size: 16px !important;
+    line-height: 18px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-digital-5__title {
+    font-size: 19px !important;
+    line-height: 24px !important;
+    margin-bottom: 4px !important;
+    letter-spacing: -0.2px !important;
+  }
+
+  .sec-digital-5__subtitle {
+    font-size: 13.5px !important;
+    line-height: 18px !important;
+    max-width: 380px !important;
   }
 
   .sec-digital-5__stage {
@@ -276,104 +724,342 @@
     justify-content: center !important;
     width: 100% !important;
     max-width: 440px !important;
-    margin: 0 auto !important;
-    gap: 18px !important;
-    text-align: center !important;
+    padding: 0 12px !important;
+    gap: 0 !important;
   }
 
-  .sec-digital-5__right {
-    order: 1 !important;
+  .sec-digital-5__card {
+    width: 100% !important;
+    flex: none !important;
+    max-width: 440px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 12px 14px 14px 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  .sec-digital-5__card-header {
+    margin-bottom: 10px !important;
+  }
+
+  .sec-digital-5__card-num {
+    font-size: 13px !important;
+    line-height: 16px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-digital-5__card-title {
+    font-size: 17px !important;
+    line-height: 21px !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* List as a clean 2x2 Grid */
+  .sec-digital-5__list {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px 10px !important;
+    width: 100% !important;
+  }
+
+  .sec-digital-5__item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    height: auto !important;
+    min-height: 25px !important;
+    box-sizing: border-box !important;
+  }
+
+  .sec-digital-5__item-icon {
+    width: 21px !important;
+    height: 21px !important;
+    flex-shrink: 0 !important;
+    margin-top: 1px !important;
+  }
+
+  .sec-digital-5__item-text {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    font-weight: 700 !important;
+    color: var(--Secondary-Deep-Blue, #011b7f) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    flex: 1 !important;
+  }
+
+  /* Connector on mobile: vertical line connecting Card 1 down to Card 2 */
+  .sec-digital-5__connector {
     width: 100% !important;
     max-width: 440px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  .sec-digital-5__title {
-    font-size: 26px !important;
-    line-height: 34px !important;
-    margin-bottom: 12px !important;
-    text-align: center !important;
-  }
-
-  .sec-digital-5__desc {
-    font-size: 16.5px !important;
-    line-height: 24px !important;
-    text-align: center !important;
-    max-width: 420px !important;
-  }
-
-  .sec-digital-5__left {
-    order: 2 !important;
-    width: 100% !important;
-    max-width: 350px !important;
+    flex: none !important;
+    height: 120px !important;
+    margin: 0 auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    position: relative !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
   }
 
-  .sec-digital-5__img-wrapper {
-    width: 100% !important;
-    max-width: 350px !important;
-    aspect-ratio: 1536 / 1024 !important;
+  .sec-digital-5__connector-line {
+    position: absolute !important;
+    top: -4px !important;
+    bottom: -4px !important;
+    left: 50% !important;
+    right: auto !important;
+    width: 2.5px !important;
+    height: auto !important;
+    transform: translateX(-50%) !important;
+    flex-direction: column !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    z-index: 1 !important;
   }
 
-  .sec-digital-5__img {
-    max-height: 235px !important;
-    width: 100% !important;
-    object-fit: contain !important;
+  .sec-digital-5__connector-track {
+    width: 2.5px !important;
+    flex: 1 !important;
+    height: auto !important;
+    background-color: var(--Highlight-Blue, #0431b1) !important;
   }
 
-  .sec-digital-5__title.phrase {
-    transition-delay: 0.12s !important;
+  .sec-digital-5__connector-dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background-color: var(--Highlight-Blue, #0431b1) !important;
+    flex-shrink: 0 !important;
   }
 
-  .sec-digital-5__desc.phrase {
-    transition-delay: 0.22s !important;
+  .sec-digital-5__connector-dot--left {
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
-  .sec-digital-5__left.phrase {
-    transition-delay: 0.32s !important;
+  .sec-digital-5__connector-dot--right {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .sec-digital-5__connector-badge {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 80px !important;
+    height: 80px !important;
+    min-width: 0 !important;
+    border-radius: 50% !important;
+    padding: 6px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    box-shadow: 0 3px 10px rgba(4, 49, 177, 0.25) !important;
+    box-sizing: border-box !important;
+  }
+
+  .sec-digital-5__badge-text {
+    font-family: Aptos, var(--font-brand) !important;
+    font-size: 11.5px !important;
+    font-weight: 700 !important;
+    line-height: 14px !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  .sec-digital-5__badge-arrow {
+    width: 15px !important;
+    height: 15px !important;
+    margin: 1px 0 !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+  }
+
+  .sec-digital-5__bottom-note {
+    font-size: 14px !important;
+    line-height: 17px !important;
+    padding: 0 14px !important;
+    margin-top: 10px !important;
+    max-width: 380px !important;
   }
 }
 
-@media (max-width: 767px) and (min-height: 780px) {
+/* Extra small mobile screens (<= 360px) */
+@media (max-width: 360px) {
   .sec-digital-5 .flex-center-v {
-    padding-top: var(--section-pt) !important;
-    padding-bottom: 20px !important;
-  }
-
-  .sec-digital-5__stage {
-    gap: 22px !important;
-  }
-
-  .sec-digital-5__right {
-    max-width: 450px !important;
+    padding-top: calc(var(--section-pt) + 2px) !important;
+    padding-bottom: 14px !important;
   }
 
   .sec-digital-5__title {
-    font-size: 30px !important;
-    line-height: 38px !important;
-    margin-bottom: 14px !important;
+    font-size: 17.5px !important;
+    line-height: 22px !important;
   }
 
-  .sec-digital-5__desc {
-    font-size: 18px !important;
-    line-height: 26px !important;
-    max-width: 440px !important;
+  .sec-digital-5__card-title {
+    font-size: 15.5px !important;
+    line-height: 19px !important;
   }
 
-  .sec-digital-5__left {
-    max-width: 380px !important;
+  .sec-digital-5__item-icon {
+    width: 17px !important;
+    height: 17px !important;
   }
 
-  .sec-digital-5__img-wrapper {
-    max-width: 380px !important;
+  .sec-digital-5__item-text {
+    font-size: 12px !important;
+    line-height: 15px !important;
   }
 
-  .sec-digital-5__img {
-    max-height: 260px !important;
+  .sec-digital-5__connector {
+    height: 105px !important;
+  }
+
+  .sec-digital-5__connector-badge {
+    width: 66px !important;
+    height: 66px !important;
+    min-width: 0 !important;
+    border-radius: 50% !important;
+    padding: 4px !important;
+    gap: 1px !important;
+  }
+
+  .sec-digital-5__badge-text {
+    font-size: 10px !important;
+    line-height: 12px !important;
+  }
+
+  .sec-digital-5__badge-arrow {
+    width: 12px !important;
+    height: 12px !important;
+    margin: 1px 0 !important;
+  }
+
+  .sec-digital-5__bottom-note {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Tall Mobile (max-width: 767px and min-height: 780px)
+   ========================================================================== */
+@media (max-width: 767px) and (min-height: 780px) {
+  .sec-digital-5 .flex-center-v {
+    padding-top: calc(var(--section-pt) + 12px) !important;
+    padding-bottom: 24px !important;
+    justify-content: center !important;
+  }
+
+  .sec-digital-5__header {
+    margin-bottom: 16px !important;
+    padding: 0 16px !important;
+  }
+
+  .sec-digital-5__eyebrow {
+    font-size: 20px !important;
+    line-height: 22px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-digital-5__title {
+    font-size: 24px !important;
+    line-height: 29px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .sec-digital-5__subtitle {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    max-width: 420px !important;
+  }
+
+  .sec-digital-5__stage {
+    max-width: 450px !important;
+  }
+
+  .sec-digital-5__card {
+    max-width: 450px !important;
+    padding: 14px 16px 16px 16px !important;
+  }
+
+  .sec-digital-5__card-header {
+    margin-bottom: 12px !important;
+  }
+
+  .sec-digital-5__card-num {
+    font-size: 15px !important;
+    line-height: 19px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-digital-5__card-title {
+    font-size: 20px !important;
+    line-height: 25px !important;
+  }
+
+  .sec-digital-5__list {
+    gap: 10px 12px !important;
+  }
+
+  .sec-digital-5__item {
+    gap: 9px !important;
+    min-height: 28px !important;
+  }
+
+  .sec-digital-5__item-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .sec-digital-5__item-text {
+    font-size: 15.5px !important;
+    line-height: 20px !important;
+  }
+
+  .sec-digital-5__connector {
+    height: 135px !important;
+    max-width: 450px !important;
+  }
+
+  .sec-digital-5__connector-line {
+    top: -4.5px !important;
+    bottom: -4.5px !important;
+  }
+
+  .sec-digital-5__connector-dot {
+    width: 9px !important;
+    height: 9px !important;
+  }
+
+  .sec-digital-5__connector-badge {
+    width: 92px !important;
+    height: 92px !important;
+    padding: 10px !important;
+    gap: 2px !important;
+  }
+
+  .sec-digital-5__badge-text {
+    font-size: 13.5px !important;
+    line-height: 17px !important;
+    letter-spacing: 0.4px !important;
+  }
+
+  .sec-digital-5__badge-arrow {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .sec-digital-5__bottom-note {
+    font-size: 15.5px !important;
+    line-height: 21px !important;
+    max-width: 420px !important;
+    margin-top: 16px !important;
   }
 }

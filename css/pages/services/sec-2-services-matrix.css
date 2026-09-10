@@ -618,7 +618,7 @@
 
   .sec-services-2__matrix {
     min-width: 680px;
-    border-spacing: 3px;
+    border-spacing: 0;
     height: 100%;
     flex: 1;
   }
