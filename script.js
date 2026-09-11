@@ -689,6 +689,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       ) {
         return true;
       } else if (
+        activeSlide.classList.contains("sec-hero") ||
         activeSlide.classList.contains("sec-about-bg-light") ||
         activeSlide.classList.contains("sec-phase0-bg-light") ||
         activeSlide.classList.contains("sec-thirdeye-bg-light") ||

@@ -1,10 +1,6 @@
 .sec-hero {
   position: relative;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #1e55b3 20%,
-    #01103b 100%
-  ) !important;
+  background: var(--White, #fff) !important;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
@@ -27,26 +23,22 @@
 
 .sec-hero__cliff--left {
   left: 0;
-  bottom: 6.8056%; 
+  top: calc(205 / 720 * 100dvh);
   background-image: url("../../../assets/hero-bg-left.webp");
-  background-position: left bottom;
-  width: 38.1944%; 
-  height: 65%; 
-  max-width: 550px;
-  max-height: 468px;
-  aspect-ratio: 550 / 468;
+  background-position: left top;
+  width: 36.875vw;
+  aspect-ratio: 531 / 424;
+  height: auto;
 }
 
 .sec-hero__cliff--right {
   right: 0;
-  bottom: 6.9444%; 
+  top: calc(205 / 720 * 100dvh);
   background-image: url("../../../assets/hero-bg-right.webp");
-  background-position: right bottom;
-  width: 39.1667%; 
-  height: 64.5833%; 
-  max-width: 564px;
-  max-height: 465px;
-  aspect-ratio: 564 / 465;
+  background-position: right top;
+  width: 36.8056vw;
+  aspect-ratio: 530 / 424;
+  height: auto;
 }
 
 .sec-hero__img-mobile {
@@ -57,7 +49,7 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: var(--container-width, 1170px);
+  max-width: calc(var(--container-width, 1170px) * 6 / 12);
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -77,7 +69,7 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 65px;
-  color: #EAA936;
+  color: #e09b21;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -89,7 +81,7 @@
 }
 
 .sec-hero__title {
-  color: #ffffff;
+  color: var(--Midnight-Navy, #01103b);
   text-align: center;
   font-feature-settings:
     "liga" off,
@@ -111,7 +103,7 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 32px;
-  color: #ffffff;
+  color: var(--Midnight-Navy, #01103b);
   text-align: center;
   text-transform: none;
   letter-spacing: 0;
@@ -125,27 +117,23 @@
 }
 
 .sec-hero__desc {
-  font-family: var(--font-brand);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.4;
-  color: #ffffff;
+  color: var(--Midnight-Navy, #01103b);
   text-align: center;
   font-feature-settings:
     "liga" off,
     "clig" off;
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
   font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin-top: 20px;
   margin-bottom: 0;
-  max-width: 570px;
+  width: 100%;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.sec-hero__title .line-desktop,
-.sec-hero__sub-bottom .line-desktop,
-.sec-hero__desc .line-desktop {
-  display: block;
+  align-self: center;
 }
 
 .btn-hero-cta {
@@ -168,7 +156,7 @@
   white-space: nowrap;
   text-transform: none;
   text-decoration: none;
-  margin-top: 24px !important; 
+  margin-top: 24px !important;
 }
 
 .sec-hero .sec-hero__bg {
@@ -245,12 +233,6 @@
   .sec-hero {
     justify-content: center !important;
   }
-  
-  .sec-hero__title .line-desktop,
-  .sec-hero__sub-bottom .line-desktop,
-  .sec-hero__desc .line-desktop {
-    display: inline;
-  }
 
   .sec-hero .container {
     display: flex !important;
@@ -269,6 +251,7 @@
     position: relative;
     z-index: 3 !important;
     width: 100%;
+    max-width: 100% !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     padding-top: 0 !important;
@@ -301,14 +284,14 @@
 
   .sec-hero__cliff--left {
     width: 52%;
-    max-width: 540px;
-    max-height: 460px;
+    aspect-ratio: 531 / 424;
+    height: auto;
   }
 
   .sec-hero__cliff--right {
     width: 52%;
-    max-width: 540px;
-    max-height: 460px;
+    aspect-ratio: 530 / 424;
+    height: auto;
   }
 }
 
@@ -323,28 +306,28 @@
   }
 
   .sec-hero__sub-top {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 24px;
     letter-spacing: 0.5px;
   }
 
   .sec-hero__title {
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 30px;
+    line-height: 38px;
     margin-top: 4px;
     max-width: 100%;
   }
 
   .sec-hero__sub-bottom {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 17px;
+    line-height: 24px;
     margin-top: 8px;
     max-width: 100%;
   }
 
   .sec-hero__desc {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 15.5px;
+    line-height: 22px;
     margin-top: 10px;
   }
 
@@ -358,7 +341,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 0 !important;
     width: 100% !important;
     max-width: 380px !important;
     height: auto !important;
@@ -377,7 +360,7 @@
   .hero-mb-img {
     width: 48%;
     max-width: 180px;
-    height: auto;
+    height: auto !important;
     object-fit: contain;
   }
 
@@ -392,58 +375,48 @@
     margin-top: 16px !important;
     margin-inline: auto !important;
     width: fit-content !important;
-    padding: 9px 18px !important;
-    font-size: 15px !important;
-  }
-
-}
-
-@media (max-height: 650px) and (min-width: 1025px) {
-  .sec-hero__content {
-    padding-top: 75px;
-  }
-
-  .sec-hero .scroll-down-btn {
-    bottom: 0 !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
   }
 }
 
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-hero__sub-top {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .sec-hero__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 34px;
+    line-height: 46px;
     margin-top: 8px;
   }
 
   .sec-hero__sub-bottom {
-    font-size: 20px;
-    line-height: 27px;
+    font-size: 22px;
+    line-height: 28px;
     margin-top: 14px;
   }
 
   .sec-hero__desc {
-    font-size: 17.5px;
-    line-height: 25px;
+    font-size: 18.5px;
+    line-height: 26px;
     margin-top: 16px;
   }
 
   .sec-hero__img-mobile {
     max-width: 460px !important;
-    margin-top: 28px !important;
+    margin-top: 26px !important;
   }
 
   .hero-mb-img {
     max-width: 230px;
+    height: auto !important;
   }
 
   .btn-hero-cta {
-    margin-top: 26px !important;
+    margin-top: 24px !important;
     padding: 12px 26px !important;
-    font-size: 17px !important;
+    font-size: 18px !important;
   }
 }
