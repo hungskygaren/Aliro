@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 7: Digital Intelligence - Aliro Perspective (Technology Is Only Starting Point)
-   Design Reference: Figma Node 6701:5856 (Canvas 1440x720)
-   ========================================================================== */
-
 .sec-digital-7 {
   position: relative;
   overflow: hidden;
@@ -26,9 +21,6 @@
   box-sizing: border-box;
 }
 
-/* ==========================================================================
-   Header: Eyebrow + Title + 2-line Description
-   ========================================================================== */
 .sec-digital-7__header {
   display: flex;
   flex-direction: column;
@@ -80,9 +72,6 @@
   margin: 0;
 }
 
-/* ==========================================================================
-   Flow Diagram: 2 Cards + Center Arrow (Total 1170px)
-   ========================================================================== */
 .sec-digital-7__flow {
   display: flex;
   align-items: center;
@@ -115,7 +104,6 @@
   transform: none !important;
 }
 
-/* Card 1: Technology Inventory (370px width x 240px height) */
 .sec-digital-7__card--inventory {
   width: 370px;
   flex: 0 0 370px;
@@ -203,7 +191,6 @@
   color: #011b7f;
 }
 
-/* Center Arrow: Look Beyond The Technology (170px width x 115px height) */
 .sec-digital-7__arrow-wrap {
   width: 170px;
   flex: 0 0 170px;
@@ -240,10 +227,9 @@
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  padding-right: 22px; /* Optically center text in shaft before tip */
+  padding-right: 22px;
 }
 
-/* Card 2: Where Value Is Created (570px width x 240px height) */
 .sec-digital-7__card--value {
   width: 570px;
   flex: 0 0 570px;
@@ -313,9 +299,6 @@
   white-space: nowrap;
 }
 
-/* ==========================================================================
-   Bottom Banner: OPERATIONAL IMPROVEMENT -> MEASURABLE IMPACT (1170px width x 60px height)
-   ========================================================================== */
 .sec-digital-7__banner {
   width: 100%;
   max-width: 1170px;
@@ -372,9 +355,6 @@
   display: block;
 }
 
-/* ==========================================================================
-   Bottom Subtext
-   ========================================================================== */
 .sec-digital-7__subtext {
   font-family: Aptos, var(--font-brand);
   font-size: 18px;
@@ -394,9 +374,6 @@
   transition-delay: 0.35s;
 }
 
-/* ==========================================================================
-   Animation States (Swiper integration)
-   ========================================================================== */
 .sec-digital-7.slide-animated .sec-digital-7__header,
 .sec-digital-7.slide-animated .sec-digital-7__flow,
 .sec-digital-7.slide-animated .sec-digital-7__banner,
@@ -420,10 +397,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px)
-   Chỉ giảm các khoảng cách margin, padding - không thu nhỏ kích thước nội dung
-   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-7 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -460,10 +433,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Very Short Screens (max-height: 620px and min-width: 1025px)
-   Chỉ giảm thêm các khoảng cách margin và padding
-   ========================================================================== */
 @media (max-height: 620px) and (min-width: 1025px) {
   .sec-digital-7 .flex-center-v {
     padding-top: calc(var(--section-pt) - 10px) !important;
@@ -500,9 +469,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Small Desktop (max-width: 1200px)
-   ========================================================================== */
 @media (max-width: 1200px) {
   .sec-digital-7__title {
     font-size: 36px !important;
@@ -530,9 +496,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet (max-width: 1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-digital-7 {
     height: auto !important;
@@ -642,9 +605,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile (max-width: 767px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-digital-7 {
     height: auto !important;
@@ -701,7 +661,6 @@
     margin: 6px auto !important;
   }
 
-  /* Card base: must NOT be constrained by flexbox, naturally expanding */
   .sec-digital-7__card {
     width: 100% !important;
     max-width: 100% !important;
@@ -721,7 +680,6 @@
     margin-bottom: 6px !important;
   }
 
-  /* Card 1 Inventory on Mobile */
   .sec-digital-7__inventory-body {
     display: grid !important;
     grid-template-columns: auto 1fr !important;
@@ -793,7 +751,6 @@
     white-space: nowrap !important;
   }
 
-  /* Center Connector on Mobile */
   .sec-digital-7__arrow-wrap {
     width: 100% !important;
     flex: none !important;
@@ -841,7 +798,6 @@
     content: none !important;
   }
 
-  /* Card 2 Value on Mobile */
   .sec-digital-7__value-list {
     display: flex !important;
     flex-direction: row !important;
@@ -889,7 +845,6 @@
     white-space: nowrap !important;
   }
 
-  /* Bottom Banner on Mobile */
   .sec-digital-7__banner {
     width: 100% !important;
     max-width: 440px !important;
@@ -928,7 +883,6 @@
     height: 12px !important;
   }
 
-  /* Subtext on Mobile */
   .sec-digital-7__subtext {
     font-size: 14px !important;
     line-height: 18px !important;
@@ -937,9 +891,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tall Mobile (max-width: 767px and min-height: 780px)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-digital-7 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -989,7 +940,6 @@
     margin-bottom: 8px !important;
   }
 
-  /* Card 1 Inventory */
   .sec-digital-7__inventory-body {
     gap: 13px !important;
   }
@@ -1037,7 +987,6 @@
     white-space: nowrap !important;
   }
 
-  /* Arrow Connector */
   .sec-digital-7__arrow-wrap {
     margin: 3px auto !important;
   }
@@ -1054,7 +1003,6 @@
     letter-spacing: 0.5px !important;
   }
 
-  /* Card 2 Value */
   .sec-digital-7__value-list {
     gap: 5px 8px !important;
   }
@@ -1088,7 +1036,6 @@
     line-height: 19px !important;
   }
 
-  /* Banner */
   .sec-digital-7__banner {
     padding: 8px 14px !important;
     max-width: 460px !important;
@@ -1112,7 +1059,6 @@
     height: 13px !important;
   }
 
-  /* Subtext */
   .sec-digital-7__subtext {
     font-size: 14.5px !important;
     line-height: 19px !important;

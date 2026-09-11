@@ -1,8 +1,3 @@
-/* ==========================================================================
-   SERVICES OVERVIEW - SECTION 1: HERO (FROM DIAGNOSTIC TO DELIVERY)
-   Figma Node: 6701:2963
-   ========================================================================== */
-
 .sec-services-1 {
   position: relative;
   overflow: hidden;
@@ -99,7 +94,6 @@
     "clig" off;
 }
 
-/* --- 4 Cards Grid --- */
 .sec-services-1__grid {
   display: flex;
   align-items: stretch;
@@ -239,7 +233,6 @@
   transform: translateX(4px);
 }
 
-/* Animations */
 .sec-services-1.slide-animated .sec-services-1__header,
 .sec-services-1.slide-animated .sec-services-1__card {
   opacity: 1;
@@ -253,7 +246,6 @@
   transition: none !important;
 }
 
-/* Short Desktop Screen Adaptations (<= 660px) */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-services-1__header {
     margin-top: calc(20 / 720 * 100dvh);
@@ -265,7 +257,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 1200px) {
   .sec-services-1__header {
     margin-bottom: 24px;

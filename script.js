@@ -315,7 +315,6 @@ function initMatrixScrollController() {
 
     const currentScroll = Math.max(0, wrapper.scrollLeft);
 
-    // Update buttons
     const isAtStart = currentScroll <= 4;
     const isAtEnd = currentScroll >= maxScroll - 4;
 
@@ -328,7 +327,6 @@ function initMatrixScrollController() {
       btnNext.classList.toggle("is-disabled", isAtEnd);
     }
 
-    // Update Hint Text
     if (hintText) {
       if (isAtEnd) {
         hintText.textContent = "Swipe left to return";
@@ -857,6 +855,5 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
   });
-
 
 });

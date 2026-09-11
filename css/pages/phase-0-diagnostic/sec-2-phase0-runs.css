@@ -358,6 +358,9 @@
     padding-top: var(--section-pt);
     padding-bottom: 5px;
   }
+  .sec-phase0-2__badge-wrapper {
+    margin-bottom: 5px;
+  }
 
   .sec-phase0-2__header {
     margin-top: 4px;
@@ -385,7 +388,7 @@
 
   .sec-phase0-2__step-desc {
     font-size: 16px;
-    line-height: 21px;
+    line-height: 19px;
   }
 }
 

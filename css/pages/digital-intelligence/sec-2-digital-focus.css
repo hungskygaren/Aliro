@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Section 2: Digital Intelligence - Focus Questions
-   Canvas 1440x720 - Figma Node 6701:5656
-   ========================================================================== */
-
 .sec-digital-2 {
   position: relative;
   overflow: hidden;
@@ -25,9 +20,6 @@
   box-sizing: border-box;
 }
 
-/* ==========================================================================
-   Header Section (2-Column with Vertical Divider - Figma Node 6701:5656)
-   ========================================================================== */
 .sec-digital-2__header {
   width: 100%;
   max-width: 1170px;
@@ -109,9 +101,6 @@
   text-align: left;
 }
 
-/* ==========================================================================
-   4-Card Grid (Desktop Standard 1440x720 - Figma Node 6701:5656)
-   ========================================================================== */
 .sec-digital-2__grid {
   display: grid;
   grid-template-columns: repeat(4, 270px);
@@ -165,9 +154,6 @@
   }
 }
 
-/* ==========================================================================
-   Card Internal Elements (Figma Node 6701:5656)
-   ========================================================================== */
 .sec-digital-2__card-tag-row {
   display: flex;
   align-items: baseline;
@@ -272,9 +258,6 @@
   height: 100%;
 }
 
-/* ==========================================================================
-   Animation States (Swiper integration)
-   ========================================================================== */
 .sec-digital-2.slide-animated .sec-digital-2__header,
 .sec-digital-2.slide-animated .sec-digital-2__card {
   opacity: 1;
@@ -294,9 +277,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Small Desktop / Narrow Screens (max-width: 1200px)
-   ========================================================================== */
 @media (max-width: 1200px) and (min-width: 1025px) {
   .sec-digital-2 .flex-center-v {
     padding-top: var(--section-pt);
@@ -390,9 +370,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px)
-   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-2 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -492,9 +469,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Very Short Screens (max-height: 620px and min-width: 1025px)
-   ========================================================================== */
 @media (max-height: 620px) and (min-width: 1025px) {
   .sec-digital-2 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -537,9 +511,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tablet (max-width: 1024px) - 2x2 Clean Layout
-   ========================================================================== */
 @media (max-width: 1024px) {
   .sec-digital-2 {
     height: 100vh;
@@ -666,9 +637,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Mobile (max-width: 767px) - 2x2 Compact Grid (Font >= 14px)
-   ========================================================================== */
 @media (max-width: 767px) {
   .sec-digital-2 {
     height: auto !important;
@@ -861,9 +829,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Tall Mobile (max-width: 767px and min-height: 780px)
-   ========================================================================== */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-digital-2 .flex-center-v {
     padding-top: var(--section-pt) !important;

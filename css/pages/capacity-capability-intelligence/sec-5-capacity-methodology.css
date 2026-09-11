@@ -339,9 +339,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 685px and min-width: 1025px) - 95% Scale
-   ========================================================================== */
 @media (max-height: 685px) and (min-width: 1025px) {
   .sec-capacity-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -405,9 +402,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 630px and min-width: 1025px) - 92.5% Scale
-   ========================================================================== */
 @media (max-height: 630px) and (min-width: 1025px) {
   .sec-capacity-5 .flex-center-v {
     padding-top: var(--section-pt) !important;

@@ -371,9 +371,6 @@
   transform: translate(-50%, -50%) !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 719px and min-width: 1025px)
-   ========================================================================== */
 @media (max-height: 719px) and (min-width: 1025px) {
   .sec-market-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -445,9 +442,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 680px and min-width: 1025px) - 90% Scale
-   ========================================================================== */
 @media (max-height: 680px) and (min-width: 1025px) {
   .sec-market-5 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -519,9 +513,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 630px and min-width: 1025px) - 88% Scale
-   ========================================================================== */
 @media (max-height: 630px) and (min-width: 1025px) {
   .sec-market-5 .flex-center-v {
     padding-top: var(--section-pt) !important;

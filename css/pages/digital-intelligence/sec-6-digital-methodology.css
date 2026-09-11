@@ -340,9 +340,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px)
-   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-6 .flex-center-v {
     padding-top: var(--section-pt) !important;

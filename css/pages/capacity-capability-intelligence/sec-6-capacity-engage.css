@@ -391,10 +391,6 @@
   transition: none !important;
 }
 
-/* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 700px and min-width: 1025px)
-   Mốc 700: Chỉ giảm các khoảng cách margin, padding - giữ nguyên kích thước
-   ========================================================================== */
 @media (max-height: 700px) and (min-width: 1025px) {
   .sec-capacity-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -434,10 +430,6 @@
   }
 }
 
-/* ==========================================================================
-   Responsive: Very Short Screens (max-height: 660px and min-width: 1025px)
-   Mốc 660: Giảm nhẹ font-size và kích thước (giảm ít thôi ~90-93%)
-   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-capacity-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
