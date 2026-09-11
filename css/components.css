@@ -92,7 +92,7 @@
 }
 
 .nav-item--dropdown {
-  cursor: default;
+  cursor: pointer;
 }
 
 .dropdown-arrow {

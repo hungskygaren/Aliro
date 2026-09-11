@@ -348,6 +348,9 @@
   .sec-phase0-2__subtitle {
     margin-top: 4px;
   }
+  .sec-phase0-2__step-desc {
+    font-size: 16px;
+  }
 }
 
 @media (max-height: 620px) and (min-width: 1025px) {
