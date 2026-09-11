@@ -138,7 +138,6 @@
 .sec-phase0-6__img-wrapper {
   width: 100%;
   height: 100%;
-  max-height: 432px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -504,7 +503,7 @@
 
   .sec-phase0-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 8px !important;
     min-height: 100dvh !important;
     height: auto !important;
     justify-content: center !important;
@@ -527,28 +526,39 @@
 
   .sec-phase0-6__right {
     margin-top: 0 !important;
-    height: 220px !important;
+    height: auto !important;
     max-width: 100% !important;
+  }
+
+  .sec-phase0-6__img-wrapper {
+    height: auto !important;
+    max-height: 240px !important;
+  }
+
+  .sec-phase0-6__img {
+    height: auto !important;
+    max-height: 240px !important;
+    object-fit: contain !important;
   }
 
   .sec-phase0-6__title {
     font-size: 26px !important;
     line-height: 30px !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 4px !important;
     text-align: left !important;
   }
 
   .sec-phase0-6__statement-1 {
     font-size: 17px !important;
     line-height: 23px !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 4px !important;
     text-align: left !important;
   }
 
   .sec-phase0-6__statement-2 {
     font-size: 20px !important;
     line-height: 26px !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 4px !important;
     text-align: left !important;
   }
 
@@ -565,7 +575,7 @@
     height: auto !important;
     min-height: 48px !important;
     padding: 12px 14px !important;
-    margin-top: 0px !important;
+    margin-top: 12px !important;
     flex-direction: column !important;
     gap: 10px !important;
     align-items: flex-start !important;
@@ -587,13 +597,16 @@
   .sec-phase0-6__step-subtitle {
     font-size: 12px !important;
   }
+  .sec-phase0-6__callout-bar {
+    width: 20px !important;
+  }
 }
 
 /* Tall Phone Screen (min-height: 780px) */
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-phase0-6 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 8px !important;
   }
 
   .sec-phase0-6__title {
@@ -615,7 +628,7 @@
   }
 
   .sec-phase0-6__callout-bar {
-    width: 44px !important;
+    width: 24px !important;
   }
 
   .sec-phase0-6__callout-text {
@@ -623,7 +636,17 @@
   }
 
   .sec-phase0-6__right {
-    height: 270px !important;
+    height: auto !important;
+    max-height: 390px !important;
+  }
+
+  .sec-phase0-6__img-wrapper {
+    max-height: 390px !important;
+  }
+
+  .sec-phase0-6__img {
+    height: auto !important;
+    max-height: 390px !important;
   }
 
   .sec-phase0-6__banner {
