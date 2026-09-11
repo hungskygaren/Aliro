@@ -365,10 +365,9 @@
 }
 
 /* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px)
+   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px) - DISABLED
    (Standard project breakpoint: strictly only for screens <= 660px)
-   ========================================================================== */
-
+   ==========================================================================
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-market-7 .flex-center-v {
     padding-top: var(--section-pt) !important;
@@ -476,6 +475,7 @@
     margin-bottom: 12px !important;
   }
 }
+*/
 
 /* ==========================================================================
    Responsive: Small Desktop / Narrow Screens (max-width: 1200px)

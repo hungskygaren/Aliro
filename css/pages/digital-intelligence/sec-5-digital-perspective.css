@@ -318,10 +318,8 @@
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
-   ========================================================================== */
-
-/* Laptop Low-height Viewport */
+   Responsive Breakpoints: Laptop Low-height Viewports (695px / 640px) - DISABLED
+   ==========================================================================
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-digital-5 .flex-center-v {
     padding-top: calc(75 / 720 * 100dvh);
@@ -421,7 +419,6 @@
   }
 }
 
-/* Ultra low-height screen */
 @media (max-height: 640px) and (min-width: 1025px) {
   .sec-digital-5 .flex-center-v {
     padding-top: calc(65 / 720 * 100dvh);
@@ -515,6 +512,7 @@
     margin-top: 12px;
   }
 }
+*/
 
 /* Mid-width Desktop (1025px - 1200px) */
 @media (max-width: 1200px) and (min-width: 1025px) {

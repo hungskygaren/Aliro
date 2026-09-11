@@ -371,6 +371,9 @@
   transform: translate(-50%, -50%) !important;
 }
 
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 695px / 640px) - DISABLED
+   ==========================================================================
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-market-5 .flex-center-v {
     justify-content: center;
@@ -488,6 +491,7 @@
     line-height: 20px;
   }
 }
+*/
 
 @media (max-width: 1200px) and (min-width: 1025px) {
   .sec-market-5__stepper {

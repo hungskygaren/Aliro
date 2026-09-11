@@ -421,8 +421,8 @@
 }
 
 /* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px)
-   ========================================================================== */
+   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px) - DISABLED
+   ==========================================================================
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-7 .flex-center-v {
     padding-top: calc(var(--section-pt) - 10px) !important;
@@ -529,6 +529,7 @@
     margin-top: 6px !important;
   }
 }
+*/
 
 /* ==========================================================================
    Responsive: Small Desktop (max-width: 1200px)

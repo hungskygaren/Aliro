@@ -339,6 +339,9 @@
   transition: none !important;
 }
 
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 695px / 640px) - DISABLED
+   ==========================================================================
 @media (max-height: 695px) and (min-width: 1025px) {
   .sec-capacity-5 .flex-center-v {
     justify-content: center;
@@ -441,6 +444,7 @@
     height: 24px;
   }
 }
+*/
 
 @media (max-width: 1200px) and (min-width: 1025px) {
   .sec-capacity-5__stepper {
