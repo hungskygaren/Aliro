@@ -107,9 +107,9 @@
 
 .sec-services-2__matrix th.col-need {
   width: 410px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 26px;
   letter-spacing: 0;
   text-align: left;
   padding: 0 24px;
@@ -138,9 +138,9 @@
 
 .sec-services-2__service-title {
   font-family: Aptos, var(--font-brand);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 24px;
   text-transform: uppercase;
   color: #ffffff;
   text-align: left;
@@ -152,8 +152,8 @@
   position: absolute;
   top: 10px;
   right: 12px;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   color: #ffffff;
   transition: transform 0.25s ease;
 }
@@ -163,11 +163,11 @@
 }
 
 .sec-services-2__matrix tbody tr {
-  height: 40px;
+  height: 44px;
 }
 
 .sec-services-2__matrix td {
-  height: 40px;
+  height: 44px;
   padding: 0 12px;
   text-align: center;
   vertical-align: middle;
@@ -184,7 +184,7 @@
 
 .sec-services-2__matrix td.cell-label {
   font-family: Manrope, Aptos, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--Midnight-Navy, #01103b);
   text-align: left;
@@ -197,25 +197,25 @@
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   color: #0431b1;
 }
 
 .sec-services-2__check svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   fill: #0431b1;
 }
 
 .sec-services-2__dash {
   display: inline-block;
   vertical-align: middle;
-  width: 24px;
-  height: 2px;
+  width: 28px;
+  height: 3px;
   background: #0431b1;
   opacity: 0.2;
-  border-radius: 1px;
+  border-radius: 1.5px;
 }
 
 .sec-services-2__banner {
@@ -346,14 +346,15 @@
     min-height: 0;
     height: auto !important;
     padding-top: var(--section-pt) !important;
-    padding-bottom: 12px;
+    padding-bottom: 14px;
+    padding-inline: 48px;
     width: 100%;
     box-sizing: border-box;
   }
 
   .sec-services-2__header {
     flex-shrink: 0;
-    margin-top: 12px;
+    margin-top: 10px;
     margin-bottom: 14px;
   }
 
@@ -402,14 +403,14 @@
     align-items: center;
     justify-content: center;
     width: auto;
-    max-width: 320px;
-    margin: 6px auto 0 auto;
-    padding: 4px 0;
+    max-width: 400px;
+    margin: 10px auto 0 auto;
+    padding: 6px 0;
     box-sizing: border-box;
     flex-shrink: 0;
     z-index: 5;
     background: #ffffff;
-    gap: 0;
+    gap: 14px;
     opacity: 0;
     transform: translateY(20px);
     transition:
@@ -420,15 +421,15 @@
 
   .sec-services-2__scroll-hint-text {
     font-family: Aptos, var(--font-brand);
-    font-size: 13.5px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--Mid-Blue-Gray, #7e93a8);
     letter-spacing: 0.2px;
     white-space: nowrap;
     user-select: none;
-    line-height: 16px;
+    line-height: 20px;
     text-align: center;
-    width: 160px;
+    width: 210px;
     flex-shrink: 0;
   }
 
@@ -436,11 +437,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: transparent;
-    border: 1px solid rgba(1, 49, 177, 0.2);
+    border: 1.5px solid rgba(1, 49, 177, 0.25);
     color: var(--Highlight-Blue, #0431b1);
     padding: 0;
     cursor: pointer;
@@ -455,8 +456,8 @@
   }
 
   .sec-services-2__scroll-btn svg {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
     display: block;
     fill: currentColor;
   }
@@ -478,19 +479,38 @@
 
   .sec-services-2__matrix {
     width: 100%;
-    min-width: 820px;
+    min-width: 860px;
     height: 100%;
     flex: 1;
   }
 
+  .sec-services-2__matrix thead tr,
+  .sec-services-2__matrix th {
+    height: 100px;
+  }
+
+  .sec-services-2__service-header-link {
+    height: 100px;
+    padding: 14px 16px 16px 18px;
+  }
+
   .sec-services-2__matrix th.col-need {
-    font-size: 19px;
-    line-height: 25px;
+    font-size: 22px;
+    line-height: 28px;
+    padding: 0 20px;
   }
 
   .sec-services-2__service-title {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 21px;
+    line-height: 26px;
+    margin-top: 8px;
+  }
+
+  .sec-services-2__service-arrow {
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    right: 14px;
   }
 
   .sec-services-2__matrix tbody tr {
@@ -499,29 +519,46 @@
 
   .sec-services-2__matrix td {
     height: auto !important;
-    padding: 6px 12px;
+    padding: 10px 14px;
   }
 
   .sec-services-2__matrix td.cell-label {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 26px;
+    padding-left: 20px;
+  }
+
+  .sec-services-2__check {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sec-services-2__check svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .sec-services-2__dash {
+    width: 30px;
+    height: 3.5px;
+    border-radius: 2px;
   }
 
   .sec-services-2__banner {
     flex-shrink: 0;
     height: auto !important;
-    padding: 22px 24px 38px 24px;
+    padding: 24px 32px 38px 32px;
   }
 
   .sec-services-2__banner-title {
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 32px;
+    line-height: 38px;
     margin-bottom: 6px;
   }
 
   .sec-services-2__banner-desc {
-    font-size: 19px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 27px;
   }
 }
 
@@ -629,8 +666,8 @@
   }
 
   .sec-services-2__matrix th.col-need {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 16px;
+    line-height: 20px;
     padding: 0 10px;
   }
 
@@ -639,8 +676,8 @@
   }
 
   .sec-services-2__service-title {
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 14.5px;
+    line-height: 18px;
     margin-top: 6px;
   }
 
@@ -650,28 +687,28 @@
 
   .sec-services-2__matrix td {
     height: auto !important;
-    padding: 5px 8px;
+    padding: 6px 8px;
   }
 
   .sec-services-2__matrix td.cell-label {
-    font-size: 14.5px;
-    line-height: 19px;
+    font-size: 15.5px;
+    line-height: 20px;
     padding-left: 10px;
   }
 
   .sec-services-2__check {
+    width: 22px;
+    height: 22px;
+  }
+
+  .sec-services-2__check svg {
     width: 20px;
     height: 20px;
   }
 
-  .sec-services-2__check svg {
-    width: 18px;
-    height: 18px;
-  }
-
   .sec-services-2__dash {
-    width: 20px;
-    height: 2px;
+    width: 22px;
+    height: 2.5px;
   }
 
   .sec-services-2__banner {
@@ -735,14 +772,14 @@
     position: absolute;
     top: 8px;
     right: 10px;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     margin-top: 0;
   }
 
   .sec-services-2__matrix th.col-need {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 17.5px;
+    line-height: 22px;
     padding: 0 12px;
   }
 
@@ -751,17 +788,17 @@
   }
 
   .sec-services-2__service-title {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .sec-services-2__matrix td {
-    padding: 6px 10px;
+    padding: 8px 10px;
   }
 
   .sec-services-2__matrix td.cell-label {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 16.5px;
+    line-height: 22px;
     padding-left: 12px;
   }
 
@@ -771,17 +808,17 @@
   }
 
   .sec-services-2__scroll-hint-text {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .sec-services-2__scroll-btn {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 
   .sec-services-2__scroll-btn svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
   }
 
   .sec-services-2__banner {
@@ -800,7 +837,7 @@
   }
 }
 
-@media (max-width: 1024px) and (max-height: 560px) {
+@media (max-width: 1024px) and (max-height: 640px) {
   .sec-services-2 {
     height: auto !important;
     min-height: 100dvh;
