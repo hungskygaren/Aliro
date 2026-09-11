@@ -324,69 +324,70 @@
   }
 
   .sec-market-2__header {
-    margin-bottom: 12px !important;
+    margin-bottom: 14px !important;
   }
 
   .sec-market-2__eyebrow {
-    font-size: 18px !important;
-    line-height: 22px !important;
-    margin-bottom: 2px !important;
+    font-size: 22px !important;
+    line-height: 24px !important;
+    margin-bottom: 4px !important;
   }
 
   .sec-market-2__title {
-    font-size: 28px !important;
-    line-height: 34px !important;
-    margin-bottom: 3px !important;
+    font-size: 32px !important;
+    line-height: 38px !important;
+    margin-bottom: 6px !important;
   }
 
   .sec-market-2__subtitle {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
   }
 
   .sec-market-2__grid {
-    gap: 16px !important;
-    max-width: 1160px !important;
+    gap: 30px !important;
+    max-width: 1170px !important;
   }
 
   .sec-market-2__card {
-    height: 350px !important;
-    padding: 12px 14px !important;
+    height: 410px !important;
+    padding: 20px !important;
   }
 
   .sec-market-2__card-num {
-    font-size: 24px !important;
-    line-height: 20px !important;
-    margin-bottom: 3px !important;
+    font-size: 32px !important;
+    line-height: 24px !important;
+    margin-bottom: 10px !important;
   }
 
   .sec-market-2__card-question {
-    font-size: 16.5px !important;
-    line-height: 21px !important;
-    min-height: 42px !important;
-    margin-bottom: 3px !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
+    min-height: 48px !important;
+    margin-bottom: 10px !important;
   }
 
   .sec-market-2__card-desc {
-    font-size: 13px !important;
-    line-height: 16.5px !important;
-    min-height: 33px !important;
-    margin-bottom: 4px !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    min-height: 40px !important;
+    margin-bottom: 12px !important;
   }
 
   .sec-market-2__card-img-wrap {
     width: 100% !important;
-    height: 125px !important;
+    max-width: 230px !important;
+    height: 170px !important;
   }
 
   .sec-market-2__card-link {
-    font-size: 17px !important;
-    padding-top: 3px !important;
+    font-size: 22px !important;
+    padding-top: 8px !important;
   }
 
   .sec-market-2__card-arrow {
-    width: 17px !important;
-    height: 17px !important;
+    width: 24px !important;
+    height: 24px !important;
   }
 }
 
@@ -404,38 +405,24 @@
   }
 
   .sec-market-2__title {
-    font-size: 25px !important;
-    line-height: 29px !important;
+    font-size: 28px !important;
+    line-height: 32px !important;
   }
 
   .sec-market-2__subtitle {
-    font-size: 15px !important;
-    line-height: 18px !important;
+    font-size: 18px !important;
+    line-height: 20px !important;
   }
 
   .sec-market-2__card {
-    height: 320px !important;
-    padding: 10px 12px !important;
-  }
-
-  .sec-market-2__card-question {
-    font-size: 15px !important;
-    line-height: 19px !important;
-    min-height: 38px !important;
-  }
-
-  .sec-market-2__card-desc {
-    font-size: 12px !important;
-    line-height: 15px !important;
-    min-height: 30px !important;
+    height: 390px !important;
   }
 
   .sec-market-2__card-img-wrap {
-    height: 105px !important;
-  }
-
-  .sec-market-2__card-link {
-    font-size: 15px !important;
+    width: 100% !important;
+    max-width: 203px !important;
+    height: 150px !important;
+    aspect-ratio: 230 / 170;
   }
 }
 
@@ -767,5 +754,3 @@
     height: 17px !important;
   }
 }
-
-

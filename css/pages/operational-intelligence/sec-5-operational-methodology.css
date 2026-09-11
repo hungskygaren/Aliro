@@ -341,111 +341,89 @@
 }
 
 /* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 695px / 640px) - DISABLED
-   ==========================================================================
-@media (max-height: 695px) and (min-width: 1025px) {
+   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px) - 95% Scale
+   ========================================================================== */
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-operational-5 .flex-center-v {
-    justify-content: center;
-    padding-top: var(--section-pt);
-    padding-bottom: 10px;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 16px !important;
+    justify-content: center !important;
   }
 
   .sec-operational-5__stepper {
-    margin-top: 0;
-    margin-bottom: 6px;
-    max-width: 560px;
+    max-width: 606px !important;
+    margin-top: calc(20 / 720 * 100dvh) !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-operational-5__step-node {
-    width: 34px;
-    height: 34px;
-    font-size: 20px;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 23px !important;
+  }
+
+  .sec-operational-5__step-line {
+    left: 19px !important;
+    right: 19px !important;
+  }
+
+  .sec-operational-5__stage {
+    max-width: 1045px !important;
   }
 
   .sec-operational-5__col {
-    width: 290px;
-    max-width: 290px;
+    width: 323px !important;
+    max-width: 323px !important;
   }
 
   .sec-operational-5__col-title {
-    font-size: 28px;
-    line-height: 32px;
-    margin-bottom: 4px;
+    font-size: 34px !important;
+    line-height: 38px !important;
+    margin-bottom: 7px !important;
   }
 
   .sec-operational-5__col-desc {
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 8px;
+    font-size: 17px !important;
+    line-height: 23px !important;
+    margin-bottom: 16px !important;
+    max-width: 352px !important;
   }
 
   .sec-operational-5__img-box {
-    width: 290px;
-    max-width: 290px;
-    height: 290px;
+    width: 323px !important;
+    max-width: 323px !important;
+    height: 361px !important;
   }
 
   .sec-operational-5__arrow-wrap {
-    width: 160px;
-    margin: 200px 10px 0 10px;
+    width: 218px !important;
+    margin: 246px 13px 0 13px !important;
   }
 
   .sec-operational-5__arrow-icon {
-    width: 160px;
-    height: 30px;
+    width: 218px !important;
+    height: 38px !important;
   }
 }
 
-@media (max-height: 640px) and (min-width: 1025px) {
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 630px and min-width: 1025px)
+   ========================================================================== */
+@media (max-height: 630px) and (min-width: 1025px) {
   .sec-operational-5 .flex-center-v {
-    padding-top: var(--section-pt);
-    padding-bottom: 6px;
-  }
-
-  .sec-operational-5__stepper {
-    max-width: 500px;
-    margin-bottom: 4px;
-  }
-
-  .sec-operational-5__step-node {
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
-  }
-
-  .sec-operational-5__col {
-    width: 250px;
-    max-width: 250px;
-  }
-
-  .sec-operational-5__col-title {
-    font-size: 24px;
-    line-height: 28px;
-  }
-
-  .sec-operational-5__col-desc {
-    font-size: 13.5px;
-    line-height: 18px;
-    margin-bottom: 6px;
+    padding-bottom: 12px !important;
   }
 
   .sec-operational-5__img-box {
-    width: 250px;
-    max-width: 250px;
-    height: 240px;
+    width: 310px !important;
+    max-width: 310px !important;
+    height: 346px !important;
   }
 
   .sec-operational-5__arrow-wrap {
-    width: 130px;
-    margin: 160px 8px 0 8px;
-  }
-
-  .sec-operational-5__arrow-icon {
-    width: 130px;
-    height: 24px;
+    margin-top: 238px !important;
   }
 }
-*/
 
 @media (max-width: 1200px) and (min-width: 1025px) {
   .sec-operational-5__stepper {

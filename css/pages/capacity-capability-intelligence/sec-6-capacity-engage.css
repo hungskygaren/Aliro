@@ -152,7 +152,7 @@
   gap: 15px;
   text-align: center;
   border-radius: 0px;
-  box-shadow: 0 4px 20px rgba(1, 16, 59, 0.04);
+  box-shadow: none;
   transform: none !important;
   transition: none !important;
 }
@@ -210,7 +210,7 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 0px;
-  box-shadow: 0 4px 20px rgba(1, 16, 59, 0.04);
+  box-shadow: none;
 }
 
 .sec-capacity-6__step {
@@ -391,6 +391,196 @@
   transition: none !important;
 }
 
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 700px and min-width: 1025px)
+   Mốc 700: Chỉ giảm các khoảng cách margin, padding - giữ nguyên kích thước
+   ========================================================================== */
+@media (max-height: 700px) and (min-width: 1025px) {
+  .sec-capacity-6 .flex-center-v {
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 12px !important;
+    justify-content: flex-start !important;
+  }
+
+  .sec-capacity-6__header {
+    margin: 0 auto !important;
+  }
+
+  .sec-capacity-6__eyebrow {
+    margin-bottom: 4px !important;
+  }
+
+  .sec-capacity-6__flow {
+    margin: 14px auto 10px auto !important;
+  }
+
+  .sec-capacity-6__col {
+    padding: 12px 10px 14px 10px !important;
+    gap: 10px !important;
+    box-shadow: none !important;
+  }
+
+  .sec-capacity-6__ownership-card {
+    padding: 12px 14px 14px 14px !important;
+    box-shadow: none !important;
+  }
+
+  .sec-capacity-6__step {
+    gap: 10px !important;
+  }
+
+  .sec-capacity-6__banner {
+    margin: 0 auto 8px auto !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Very Short Screens (max-height: 660px and min-width: 1025px)
+   Mốc 660: Giảm nhẹ font-size và kích thước (giảm ít thôi ~90-93%)
+   ========================================================================== */
+@media (max-height: 660px) and (min-width: 1025px) {
+  .sec-capacity-6 .flex-center-v {
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 10px !important;
+    justify-content: flex-start !important;
+  }
+
+  .sec-capacity-6__header {
+    grid-template-columns: 570px 1px 1fr !important;
+    gap: 26px !important;
+    max-width: 1170px !important;
+    margin-top: 10px !important;
+  }
+
+  .sec-capacity-6__eyebrow {
+    font-size: 22px !important;
+    line-height: 26px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-capacity-6__title {
+    font-size: 36px !important;
+    line-height: 42px !important;
+  }
+
+  .sec-capacity-6__divider {
+    height: 120px !important;
+  }
+
+  .sec-capacity-6__statement-headline {
+    font-size: 19.5px !important;
+    line-height: 26px !important;
+  }
+
+  .sec-capacity-6__statement-desc {
+    font-size: 17px !important;
+    line-height: 22px !important;
+  }
+
+  .sec-capacity-6__flow {
+    margin: 10px auto 8px auto !important;
+  }
+
+  .sec-capacity-6__icon-box {
+    width: 110px !important;
+    height: 110px !important;
+    min-width: 110px !important;
+    min-height: 110px !important;
+    max-width: 110px !important;
+    max-height: 110px !important;
+  }
+
+  .sec-capacity-6__col {
+    width: 200px !important;
+    flex: 0 0 200px !important;
+    height: 258px !important;
+    padding: 12px 10px 14px 10px !important;
+    gap: 10px !important;
+    box-shadow: none !important;
+  }
+
+  .sec-capacity-6__col-title {
+    font-size: 19.5px !important;
+    line-height: 23px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-capacity-6__col-desc {
+    font-size: 17px !important;
+    line-height: 20px !important;
+  }
+
+  .sec-capacity-6__arrow--outer {
+    width: 50px !important;
+    flex: 0 0 50px !important;
+  }
+
+  .sec-capacity-6__arrow--outer img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .sec-capacity-6__ownership-card {
+    width: 650px !important;
+    flex: 0 0 650px !important;
+    height: 258px !important;
+    padding: 12px 14px 14px 14px !important;
+    box-shadow: none !important;
+  }
+
+  .sec-capacity-6__step {
+    width: 185px !important;
+    flex: 0 0 185px !important;
+    gap: 10px !important;
+  }
+
+  .sec-capacity-6__step-title {
+    font-size: 19.5px !important;
+    line-height: 23px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-capacity-6__step-desc {
+    font-size: 17px !important;
+    line-height: 20px !important;
+  }
+
+  .sec-capacity-6__arrow--inner {
+    width: 28px !important;
+    flex: 0 0 28px !important;
+  }
+
+  .sec-capacity-6__arrow--inner::before,
+  .sec-capacity-6__arrow--inner::after {
+    height: 88px !important;
+  }
+
+  .sec-capacity-6__arrow--inner img {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .sec-capacity-6__banner {
+    height: 54px !important;
+    margin: 0 auto 8px auto !important;
+  }
+
+  .sec-capacity-6__banner-text {
+    font-size: 26px !important;
+    line-height: 26px !important;
+  }
+
+  .sec-capacity-6__banner-arrow img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .sec-capacity-6__subtext {
+    font-size: 30px !important;
+    line-height: 28px !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .sec-capacity-6__header {
     max-width: 95% !important;
@@ -552,11 +742,11 @@
     margin: 12px auto 16px auto !important;
   }
 
-.sec-capacity-6__arrow--outer {
+  .sec-capacity-6__arrow--outer {
     display: none !important;
   }
 
-.sec-capacity-6__col {
+  .sec-capacity-6__col {
     width: 100% !important;
     max-width: 560px !important;
     flex: none !important;
@@ -629,7 +819,7 @@
     margin: 0 !important;
   }
 
-.sec-capacity-6__ownership-card {
+  .sec-capacity-6__ownership-card {
     width: 100% !important;
     max-width: 560px !important;
     flex: none !important;
@@ -717,7 +907,7 @@
     margin: 0 !important;
   }
 
-.sec-capacity-6__arrow--inner {
+  .sec-capacity-6__arrow--inner {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -760,7 +950,7 @@
     z-index: 1 !important;
   }
 
-.sec-capacity-6__banner {
+  .sec-capacity-6__banner {
     width: 100% !important;
     max-width: 560px !important;
     height: auto !important;
@@ -798,7 +988,7 @@
     height: 18px !important;
   }
 
-.sec-capacity-6__subtext {
+  .sec-capacity-6__subtext {
     font-size: 26px !important;
     line-height: 30px !important;
     max-width: 560px !important;
@@ -825,7 +1015,7 @@
     box-sizing: border-box;
   }
 
-.sec-capacity-6__header {
+  .sec-capacity-6__header {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -867,7 +1057,7 @@
     line-height: 18px !important;
   }
 
-.sec-capacity-6__flow {
+  .sec-capacity-6__flow {
     display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
@@ -877,11 +1067,11 @@
     margin: 12px auto 4px auto !important;
   }
 
-.sec-capacity-6__arrow--outer {
+  .sec-capacity-6__arrow--outer {
     display: none !important;
   }
 
-.sec-capacity-6__col {
+  .sec-capacity-6__col {
     width: 100% !important;
     max-width: 440px !important;
     flex: none !important;
@@ -954,7 +1144,7 @@
     margin: 0 !important;
   }
 
-.sec-capacity-6__ownership-card {
+  .sec-capacity-6__ownership-card {
     width: 100% !important;
     max-width: 440px !important;
     flex: none !important;
@@ -1042,7 +1232,7 @@
     margin: 0 !important;
   }
 
-.sec-capacity-6__arrow--inner {
+  .sec-capacity-6__arrow--inner {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -1085,7 +1275,7 @@
     z-index: 1 !important;
   }
 
-.sec-capacity-6__banner {
+  .sec-capacity-6__banner {
     width: 100% !important;
     max-width: 440px !important;
     height: auto !important;
@@ -1123,7 +1313,7 @@
     height: 16px !important;
   }
 
-.sec-capacity-6__subtext {
+  .sec-capacity-6__subtext {
     font-size: 22px !important;
     line-height: 26px !important;
     max-width: 440px !important;
@@ -1173,7 +1363,7 @@
     margin: 11px auto 15px auto !important;
   }
 
-.sec-capacity-6__col {
+  .sec-capacity-6__col {
     max-width: 455px !important;
     padding: 15px 18px !important;
     gap: 16px !important;
@@ -1198,7 +1388,7 @@
     line-height: 19px !important;
   }
 
-.sec-capacity-6__ownership-card {
+  .sec-capacity-6__ownership-card {
     max-width: 455px !important;
     padding: 17px 11px 19px 11px !important;
     gap: 7px !important;
@@ -1238,7 +1428,7 @@
     height: 16px !important;
   }
 
-.sec-capacity-6__banner {
+  .sec-capacity-6__banner {
     padding: 9px 15px !important;
     max-width: 455px !important;
     margin-bottom: 7px !important;

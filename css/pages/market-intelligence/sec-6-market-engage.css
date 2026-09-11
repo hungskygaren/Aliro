@@ -29,12 +29,12 @@
    ========================================================================== */
 .sec-market-6__header {
   display: grid;
-  grid-template-columns: 530px 1px 1fr;
-  gap: 32px;
+  grid-template-columns: 570px 1px 540px;
+  gap: 30px;
   align-items: center;
   width: 100%;
   max-width: 1170px;
-  margin: 0 auto 24px auto;
+  margin: 0 auto 30px auto;
   z-index: 3;
   opacity: 0;
   transform: translateY(-20px);
@@ -62,9 +62,9 @@
 
 .sec-market-6__title {
   font-family: Aptos, var(--font-brand);
-  font-size: 40px;
+  font-size: 44px;
   font-weight: 700;
-  line-height: 48px;
+  line-height: 50px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
   margin: 0;
@@ -76,9 +76,9 @@
 
 .sec-market-6__divider {
   width: 1px;
-  height: 110px;
+  height: 136px;
   background-color: #7e93a8;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .sec-market-6__header-right {
@@ -90,7 +90,7 @@
 
 .sec-market-6__statement-headline {
   font-family: Aptos, var(--font-brand);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   color: #011b7f;
@@ -99,9 +99,9 @@
 
 .sec-market-6__statement-desc {
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 23px;
+  line-height: 24px;
   color: var(--Midnight-Navy, #01103b);
   margin: 0;
 }
@@ -115,8 +115,8 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1170px;
-  margin: 0 auto 20px auto;
-  gap: 16px;
+  margin: 0 auto 24px auto;
+  gap: 0;
   z-index: 3;
   opacity: 0;
   transform: translateY(20px);
@@ -127,15 +127,16 @@
 }
 
 .sec-market-6__col {
-  flex: 1;
+  flex: 0 0 350px;
+  width: 350px;
   max-width: 350px;
-  height: 330px;
-  padding: 22px 24px;
+  height: 308px;
+  padding: 14px 16px 20px 16px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   border-radius: 0px;
-  box-shadow: 0 4px 20px rgba(1, 16, 59, 0.04);
+  box-shadow: none;
   transform: none !important;
   transition: none !important;
 }
@@ -146,29 +147,34 @@
 }
 
 .sec-market-6__col-header {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+/* Card 1 has subtitle, subtitle to items is 18px */
+.sec-market-6__col--assumptions .sec-market-6__col-header {
+  margin-bottom: 18px;
 }
 
 .sec-market-6__col-title {
   font-family: Aptos, var(--font-brand);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
   margin: 0;
+  white-space: nowrap;
 }
 
 .sec-market-6__col-subtitle {
   font-family: Aptos, var(--font-brand);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 20px;
-  margin-top: 4px;
+  line-height: 22px;
+  margin-top: 5px;
 }
 
 .sec-market-6__col-subtitle--empty {
-  height: 20px;
-  margin-top: 4px;
+  display: none;
 }
 
 /* Card 1: Market Assumptions */
@@ -222,18 +228,18 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 12px;
 }
 
 .sec-market-6__item {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 19px;
 }
 
 .sec-market-6__icon-box {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,9 +255,10 @@
 
 .sec-market-6__item-text {
   font-family: Aptos, var(--font-brand);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 28px;
+  white-space: nowrap;
 }
 
 /* Connecting Arrows between columns */
@@ -265,8 +272,8 @@
 }
 
 .sec-market-6__arrow img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   display: block;
 }
 
@@ -276,12 +283,12 @@
 .sec-market-6__banner {
   width: 100%;
   max-width: 1170px;
-  height: 50px;
+  height: 60px;
   background-color: #011b7f;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  margin: 0 auto 16px auto;
+  margin: 0 auto;
   z-index: 3;
   opacity: 0;
   transform: translateY(20px);
@@ -293,12 +300,12 @@
 
 .sec-market-6__banner-text {
   font-family: Aptos, var(--font-brand);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 28px;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0px;
   white-space: nowrap;
 }
 
@@ -321,8 +328,8 @@
 }
 
 .sec-market-6__banner-arrow img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   display: block;
 }
 
@@ -351,128 +358,141 @@
 }
 
 /* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px) - DISABLED
-   ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px)
+   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-market-6 .flex-center-v {
-    padding-top: var(--section-pt);
-    padding-bottom: 12px;
-    justify-content: center;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 14px !important;
+    justify-content: center !important;
   }
 
   .sec-market-6__header {
-    margin-bottom: 18px;
-    gap: 26px;
+    grid-template-columns: 530px 1px 1fr !important;
+    gap: 26px !important;
+    max-width: 1170px !important;
+    margin-bottom: 10px !important;
   }
 
   .sec-market-6__eyebrow {
-    font-size: 21px;
-    line-height: 25px;
-    margin-bottom: 5px;
+    font-size: 22px !important;
+    line-height: 26px !important;
+    margin-bottom: 6px !important;
   }
 
   .sec-market-6__title {
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 38px !important;
+    line-height: 44px !important;
   }
 
   .sec-market-6__divider {
-    height: 100px;
+    height: 120px !important;
   }
 
   .sec-market-6__statement-headline {
-    font-size: 21px;
-    line-height: 27px;
+    font-size: 22px !important;
+    line-height: 26px !important;
   }
 
   .sec-market-6__statement-desc {
-    font-size: 15.5px;
-    line-height: 22px;
+    font-size: 16px !important;
+    line-height: 22px !important;
   }
 
   .sec-market-6__flow {
-    margin-bottom: 16px;
-    gap: 16px;
+    max-width: 1170px !important;
+    margin-bottom: 8px !important;
+    gap: 0 !important;
   }
 
   .sec-market-6__col {
-    height: 305px;
-    padding: 18px 22px;
+    flex: 0 0 350px !important;
+    width: 350px !important;
+    max-width: 350px !important;
+    height: 288px !important;
+    padding: 14px 16px 16px 16px !important;
   }
 
   .sec-market-6__col-header {
-    margin-bottom: 14px;
+    margin-bottom: 16px !important;
+  }
+
+  .sec-market-6__col--assumptions .sec-market-6__col-header {
+    margin-bottom: 14px !important;
   }
 
   .sec-market-6__col-title {
-    font-size: 22.5px;
-    line-height: 26px;
+    font-size: 25px !important;
+    line-height: 26px !important;
   }
 
   .sec-market-6__col-subtitle {
-    font-size: 15.5px;
-    line-height: 19px;
-    margin-top: 3px;
+    font-size: 16.5px !important;
+    line-height: 20px !important;
+    margin-top: 4px !important;
   }
 
   .sec-market-6__col-subtitle--empty {
-    height: 19px;
-    margin-top: 3px;
+    display: none !important;
   }
 
   .sec-market-6__list {
-    gap: 11px;
+    gap: 10px !important;
+  }
+
+  .sec-market-6__item {
+    gap: 16px !important;
   }
 
   .sec-market-6__icon-box {
-    width: 24px;
-    height: 24px;
+    width: 27px !important;
+    height: 27px !important;
   }
 
   .sec-market-6__item-text {
-    font-size: 18.5px;
-    line-height: 23px;
+    font-size: 20px !important;
+    line-height: 25px !important;
   }
 
   .sec-market-6__arrow {
-    width: 28px;
-    height: 28px;
+    width: 28px !important;
+    height: 28px !important;
   }
 
   .sec-market-6__arrow img {
-    width: 24px;
-    height: 24px;
+    width: 28px !important;
+    height: 28px !important;
   }
 
   .sec-market-6__banner {
-    height: 48px;
-    margin-bottom: 12px;
+    max-width: 1170px !important;
+    height: 52px !important;
+    margin: 0 auto !important;
   }
 
   .sec-market-6__banner-text {
-    font-size: 21.5px;
-    line-height: 26px;
+    font-size: 25px !important;
+    line-height: 26px !important;
   }
 
   .sec-market-6__banner-text--left {
-    padding-right: 22px;
+    padding-right: 20px !important;
   }
 
   .sec-market-6__banner-text--right {
-    padding-left: 22px;
+    padding-left: 20px !important;
   }
 
   .sec-market-6__banner-arrow {
-    width: 28px;
-    height: 28px;
+    width: 28px !important;
+    height: 28px !important;
   }
 
   .sec-market-6__banner-arrow img {
-    width: 24px;
-    height: 24px;
+    width: 26px !important;
+    height: 26px !important;
   }
 }
-*/
 
 /* ==========================================================================
    Responsive: Small Desktop / Narrow Screens (max-width: 1200px)

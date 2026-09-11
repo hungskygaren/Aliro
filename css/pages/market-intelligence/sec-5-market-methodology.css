@@ -47,7 +47,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 641px;
-  margin-top: calc(32 / 720 * 100dvh);
+  margin-top: calc(28 / 720 * 100dvh);
   margin-bottom: 10px;
   z-index: 4;
 }
@@ -372,126 +372,226 @@
 }
 
 /* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 695px / 640px) - DISABLED
-   ==========================================================================
-@media (max-height: 695px) and (min-width: 1025px) {
+   Responsive: Short Screens / Laptops (max-height: 719px and min-width: 1025px)
+   ========================================================================== */
+@media (max-height: 719px) and (min-width: 1025px) {
   .sec-market-5 .flex-center-v {
-    justify-content: center;
-    padding-top: var(--section-pt);
-    padding-bottom: 10px;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 18px !important;
+    justify-content: center !important;
   }
 
   .sec-market-5__stepper {
-    margin-top: 0;
-    margin-bottom: 6px;
-    max-width: 560px;
+    max-width: 606px !important;
+    margin-top: calc(22 / 720 * 100dvh) !important;
+    margin-bottom: 9px !important;
   }
 
   .sec-market-5__step-node {
-    width: 34px;
-    height: 34px;
-    font-size: 20px;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 23px !important;
+  }
+
+  .sec-market-5__step-line {
+    left: 19px !important;
+    right: 19px !important;
+  }
+
+  .sec-market-5__stage {
+    max-width: 1045px !important;
   }
 
   .sec-market-5__col {
-    width: 290px;
-    max-width: 290px;
+    width: 323px !important;
+    max-width: 323px !important;
   }
 
   .sec-market-5__col-title {
-    font-size: 28px;
-    line-height: 32px;
-    margin-bottom: 4px;
+    font-size: 34px !important;
+    line-height: 38px !important;
+    margin-bottom: 7px !important;
   }
 
   .sec-market-5__col-desc {
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 8px;
+    font-size: 17px !important;
+    line-height: 23px !important;
+    margin-bottom: 16px !important;
   }
 
   .sec-market-5__img-box {
-    width: 290px;
-    max-width: 290px;
-    height: 290px;
+    width: 323px !important;
+    max-width: 323px !important;
+    height: 361px !important;
   }
 
   .sec-market-5__arrow-wrap {
-    width: 160px;
-    margin: 200px 10px 0 10px;
+    width: 218px !important;
+    margin: 246px 13px 0 13px !important;
   }
 
   .sec-market-5__arrow-icon {
-    width: 160px;
-    height: 30px;
+    width: 218px !important;
+    height: 38px !important;
   }
 
   .sec-market-5__bottom {
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin-top: 20px !important;
   }
 
   .sec-market-5__bottom-text {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 19px !important;
+    line-height: 26px !important;
   }
 }
 
-@media (max-height: 640px) and (min-width: 1025px) {
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 680px and min-width: 1025px) - 90% Scale
+   ========================================================================== */
+@media (max-height: 680px) and (min-width: 1025px) {
   .sec-market-5 .flex-center-v {
-    padding-top: var(--section-pt);
-    padding-bottom: 6px;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 14px !important;
+    justify-content: center !important;
   }
 
   .sec-market-5__stepper {
-    max-width: 500px;
-    margin-bottom: 4px;
+    max-width: 573px !important;
+    margin-top: calc(16 / 720 * 100dvh) !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-market-5__step-node {
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 22px !important;
+  }
+
+  .sec-market-5__step-line {
+    left: 18px !important;
+    right: 18px !important;
+  }
+
+  .sec-market-5__stage {
+    max-width: 990px !important;
   }
 
   .sec-market-5__col {
-    width: 250px;
-    max-width: 250px;
+    width: 306px !important;
+    max-width: 306px !important;
   }
 
   .sec-market-5__col-title {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 32px !important;
+    line-height: 36px !important;
+    margin-bottom: 6px !important;
   }
 
   .sec-market-5__col-desc {
-    font-size: 13.5px;
-    line-height: 18px;
-    margin-bottom: 6px;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    margin-bottom: 14px !important;
   }
 
   .sec-market-5__img-box {
-    width: 250px;
-    max-width: 250px;
-    height: 240px;
+    width: 306px !important;
+    max-width: 306px !important;
+    height: 342px !important;
   }
 
   .sec-market-5__arrow-wrap {
-    width: 130px;
-    margin: 160px 8px 0 8px;
+    width: 207px !important;
+    margin: 231px 12px 0 12px !important;
   }
 
   .sec-market-5__arrow-icon {
-    width: 130px;
-    height: 24px;
+    width: 207px !important;
+    height: 36px !important;
+  }
+
+  .sec-market-5__bottom {
+    margin-top: 16px !important;
   }
 
   .sec-market-5__bottom-text {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 18px !important;
+    line-height: 25px !important;
   }
 }
-*/
+
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 630px and min-width: 1025px) - 88% Scale
+   ========================================================================== */
+@media (max-height: 630px) and (min-width: 1025px) {
+  .sec-market-5 .flex-center-v {
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 10px !important;
+    justify-content: center !important;
+  }
+
+  .sec-market-5__stepper {
+    max-width: 559px !important;
+    margin-top: calc(12 / 720 * 100dvh) !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-market-5__step-node {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 21px !important;
+  }
+
+  .sec-market-5__step-line {
+    left: 17px !important;
+    right: 17px !important;
+  }
+
+  .sec-market-5__stage {
+    max-width: 970px !important;
+  }
+
+  .sec-market-5__col {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  .sec-market-5__col-title {
+    font-size: 31px !important;
+    line-height: 35px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-market-5__col-desc {
+    font-size: 15.5px !important;
+    line-height: 21px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .sec-market-5__img-box {
+    width: 300px !important;
+    max-width: 300px !important;
+    height: 335px !important;
+  }
+
+  .sec-market-5__arrow-wrap {
+    width: 202px !important;
+    margin: 224px 11px 0 11px !important;
+  }
+
+  .sec-market-5__arrow-icon {
+    width: 202px !important;
+    height: 35px !important;
+  }
+
+  .sec-market-5__bottom {
+    margin-top: 14px !important;
+  }
+
+  .sec-market-5__bottom-text {
+    font-size: 17.5px !important;
+    line-height: 24px !important;
+  }
+}
 
 @media (max-width: 1200px) and (min-width: 1025px) {
   .sec-market-5__stepper {

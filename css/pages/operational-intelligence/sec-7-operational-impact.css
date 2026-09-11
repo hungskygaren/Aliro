@@ -362,14 +362,13 @@
 }
 
 /* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px) - DISABLED
-   (Standard project breakpoint: strictly only for screens <= 660px)
-   ==========================================================================
-@media (max-height: 660px) and (min-width: 1025px) {
+   Responsive: Short Screens / Laptops (max-height: 719px and min-width: 1025px)
+   Mốc 719: Chỉ giảm các khoảng cách margin, padding - giữ nguyên kích thước
+   ========================================================================== */
+@media (max-height: 719px) and (min-width: 1025px) {
   .sec-operational-7 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 12px !important;
-    justify-content: center !important;
+    padding-bottom: 14px !important;
   }
 
   .sec-operational-7__header {
@@ -377,54 +376,202 @@
   }
 
   .sec-operational-7__eyebrow {
-    font-size: 20px !important;
-    line-height: 24px !important;
     margin-bottom: 4px !important;
   }
 
   .sec-operational-7__title {
-    font-size: 34px !important;
-    line-height: 40px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-operational-7__card-question {
+    margin-bottom: 6px !important;
+  }
+
+  .sec-operational-7__card-list {
+    gap: 6px !important;
+  }
+
+  .sec-operational-7__decision-card {
+    padding: 16px 20px 16px 20px !important;
+  }
+
+  .sec-operational-7__decision-eyebrow {
+    margin-bottom: 6px !important;
+  }
+
+  .sec-operational-7__decision-desc {
+    margin-bottom: 10px !important;
+  }
+
+  .sec-operational-7__decision-cta {
+    margin-top: 10px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 685px and min-width: 1025px)
+   Mốc 685: Giảm nhẹ font-size và kích thước ảnh (~95% tỉ lệ)
+   ========================================================================== */
+@media (max-height: 685px) and (min-width: 1025px) {
+  .sec-operational-7 .flex-center-v {
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 12px !important;
+  }
+
+  .sec-operational-7__header {
+    margin-bottom: 10px !important;
+  }
+
+  .sec-operational-7__eyebrow {
+    font-size: 23px !important;
+    line-height: 27px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-operational-7__title {
+    font-size: 40px !important;
+    line-height: 46px !important;
     margin-bottom: 4px !important;
   }
 
   .sec-operational-7__subtitle {
-    font-size: 15.5px !important;
-    line-height: 20px !important;
-  }
-
-  .sec-operational-7__stage {
-    gap: 14px !important;
+    font-size: 17px !important;
+    line-height: 23px !important;
   }
 
   .sec-operational-7__card {
-    width: 215px !important;
-    height: 325px !important;
-    padding: 10px 10px 12px 10px !important;
+    height: 375px !important;
   }
 
   .sec-operational-7__card-num {
-    font-size: 24px !important;
-    top: 10px !important;
-    left: 10px !important;
+    font-size: 30px !important;
+    line-height: 23px !important;
   }
 
   .sec-operational-7__card-img-box {
-    width: 120px !important;
-    height: 130px !important;
+    width: 156px !important;
+    height: 170px !important;
     margin-bottom: 4px !important;
   }
 
   .sec-operational-7__card-title {
+    font-size: 21px !important;
+    line-height: 23px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-operational-7__card-question {
     font-size: 17px !important;
-    line-height: 20px !important;
+    line-height: 21px !important;
+    min-height: 42px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-operational-7__card-item {
+    height: 26px !important;
+    gap: 10px !important;
+  }
+
+  .sec-operational-7__card-item-icon {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .sec-operational-7__card-item-text {
+    font-size: 14.5px !important;
+    line-height: 26px !important;
+  }
+
+  .sec-operational-7__decision-card {
+    height: 375px !important;
+    padding: 18px 20px 18px 20px !important;
+  }
+
+  .sec-operational-7__decision-eyebrow {
+    font-size: 23px !important;
+    line-height: 27px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-operational-7__decision-desc {
+    font-size: 19px !important;
+    line-height: 23px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .sec-operational-7__decision-headline {
+    font-size: 34px !important;
+    line-height: 38px !important;
+  }
+
+  .sec-operational-7__btn {
+    font-size: 13.5px !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 645px and min-width: 1025px)
+   Mốc 645: Giảm tiếp font-size, kích thước ảnh và chiều cao card (~91-92% tỉ lệ)
+   ========================================================================== */
+@media (max-height: 645px) and (min-width: 1025px) {
+  .sec-operational-7 .flex-center-v {
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 10px !important;
+  }
+
+  .sec-operational-7__header {
+    margin-bottom: 8px !important;
+  }
+
+  .sec-operational-7__eyebrow {
+    font-size: 21px !important;
+    line-height: 25px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-operational-7__title {
+    font-size: 37px !important;
+    line-height: 42px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-operational-7__subtitle {
+    font-size: 16px !important;
+    line-height: 21px !important;
+  }
+
+  .sec-operational-7__stage {
+    gap: 16px !important;
+  }
+
+  .sec-operational-7__card {
+    height: 355px !important;
+    padding: 8px 10px 10px 10px !important;
+  }
+
+  .sec-operational-7__card-num {
+    font-size: 28px !important;
+    line-height: 22px !important;
+    top: 8px !important;
+    left: 10px !important;
+  }
+
+  .sec-operational-7__card-img-box {
+    width: 142px !important;
+    height: 154px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-operational-7__card-title {
+    font-size: 20px !important;
+    line-height: 22px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-operational-7__card-question {
-    font-size: 14.5px !important;
-    line-height: 18px !important;
-    min-height: 36px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    min-height: 40px !important;
     margin-bottom: 6px !important;
   }
 
@@ -433,49 +580,52 @@
   }
 
   .sec-operational-7__card-item {
+    height: 24px !important;
     gap: 8px !important;
-    height: 22px !important;
   }
 
   .sec-operational-7__card-item-icon {
-    width: 18px !important;
-    height: 18px !important;
+    width: 20px !important;
+    height: 20px !important;
   }
 
   .sec-operational-7__card-item-text {
-    font-size: 13px !important;
-    line-height: 22px !important;
+    font-size: 14px !important;
+    line-height: 23px !important;
   }
 
   .sec-operational-7__decision-card {
-    width: 320px !important;
-    height: 325px !important;
-    padding: 16px 16px !important;
-    margin-left: 4px !important;
+    height: 355px !important;
+    padding: 16px 16px 16px 16px !important;
   }
 
   .sec-operational-7__decision-eyebrow {
-    font-size: 20px !important;
-    line-height: 24px !important;
+    font-size: 21px !important;
+    line-height: 25px !important;
     margin-bottom: 6px !important;
   }
 
   .sec-operational-7__decision-desc {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 17px !important;
+    line-height: 22px !important;
     margin-bottom: 10px !important;
   }
 
   .sec-operational-7__decision-headline {
-    font-size: 26px !important;
-    line-height: 30px !important;
+    font-size: 30px !important;
+    line-height: 34px !important;
   }
 
   .sec-operational-7__decision-cta {
     margin-top: 10px !important;
   }
+
+  .sec-operational-7__btn {
+    font-size: 13.5px !important;
+    height: 31px !important;
+    padding: 6px 15px !important;
+  }
 }
-*/
 
 /* ==========================================================================
    Responsive: Narrow Desktop (max-width: 1200px)

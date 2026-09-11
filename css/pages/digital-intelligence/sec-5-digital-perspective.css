@@ -318,201 +318,62 @@
 }
 
 /* ==========================================================================
-   Responsive Breakpoints: Laptop Low-height Viewports (695px / 640px) - DISABLED
-   ==========================================================================
-@media (max-height: 695px) and (min-width: 1025px) {
+   Responsive: Laptop Short Screens (max-height: 670px and min-width: 1025px)
+   Mốc 670: Chỉ giảm các khoảng cách (margin, padding, gap), giữ nguyên kích thước & typography
+   ========================================================================== */
+@media (max-height: 670px) and (min-width: 1025px) {
   .sec-digital-5 .flex-center-v {
-    padding-top: calc(75 / 720 * 100dvh);
-    padding-bottom: 16px;
+    padding-top: 90px !important;
+    padding-bottom: 12px !important;
+    justify-content: flex-start !important;
   }
 
   .sec-digital-5__header {
-    margin-bottom: 16px;
+    margin: 0 auto 12px auto !important;
   }
 
   .sec-digital-5__eyebrow {
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 6px;
+    margin-bottom: 4px !important;
   }
 
   .sec-digital-5__title {
-    font-size: 30px;
-    line-height: 36px;
-    margin-bottom: 4px;
-  }
-
-  .sec-digital-5__subtitle {
-    font-size: 18px;
-    line-height: 24px;
-    max-width: 680px;
+    margin: 0 0 4px 0 !important;
   }
 
   .sec-digital-5__card {
-    width: 440px;
-    flex: 0 0 440px;
-    height: 265px;
-    padding: 14px 18px 16px 18px;
+    padding: 14px 20px 16px 20px !important;
   }
 
   .sec-digital-5__card-header {
-    margin-bottom: 12px;
+    margin-bottom: 10px !important;
   }
 
   .sec-digital-5__card-num {
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 6px;
-  }
-
-  .sec-digital-5__card-title {
-    font-size: 28px;
-    line-height: 34px;
+    margin-bottom: 4px !important;
   }
 
   .sec-digital-5__list {
-    gap: 9px;
+    gap: 8px !important;
   }
 
   .sec-digital-5__item {
-    gap: 15px;
-    height: 26px;
-  }
-
-  .sec-digital-5__item-icon {
-    width: 26px;
-    height: 26px;
-  }
-
-  .sec-digital-5__item-text {
-    font-size: 19px;
-    line-height: 24px;
-  }
-
-  .sec-digital-5__connector {
-    width: 230px;
-    flex: 0 0 230px;
-    height: 130px;
-  }
-
-  .sec-digital-5__connector-badge {
-    width: 118px;
-    height: 118px;
-    padding: 8px;
-  }
-
-  .sec-digital-5__badge-text {
-    font-size: 17px;
-    line-height: 22px;
-  }
-
-  .sec-digital-5__badge-arrow {
-    width: 24px;
-    height: 24px;
+    gap: 14px !important;
   }
 
   .sec-digital-5__bottom-note {
-    font-size: 16px;
-    line-height: 22px;
-    max-width: 680px;
-    margin-top: 18px;
+    margin: 14px auto 0 auto !important;
   }
 }
 
-@media (max-height: 640px) and (min-width: 1025px) {
+/* ==========================================================================
+   Responsive: Very Short Screens (max-height: 630px and min-width: 1025px)
+   Mốc 630: padding-top chuyển thành 70px
+   ========================================================================== */
+@media (max-height: 630px) and (min-width: 1025px) {
   .sec-digital-5 .flex-center-v {
-    padding-top: calc(65 / 720 * 100dvh);
-    padding-bottom: 10px;
-  }
-
-  .sec-digital-5__header {
-    margin-bottom: 12px;
-  }
-
-  .sec-digital-5__eyebrow {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 4px;
-  }
-
-  .sec-digital-5__title {
-    font-size: 26px;
-    line-height: 32px;
-    margin-bottom: 2px;
-  }
-
-  .sec-digital-5__subtitle {
-    font-size: 16px;
-    line-height: 20px;
-    max-width: 620px;
-  }
-
-  .sec-digital-5__card {
-    width: 400px;
-    flex: 0 0 400px;
-    height: 240px;
-    padding: 12px 16px 14px 16px;
-  }
-
-  .sec-digital-5__card-num {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 4px;
-  }
-
-  .sec-digital-5__card-title {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  .sec-digital-5__list {
-    gap: 7px;
-  }
-
-  .sec-digital-5__item {
-    gap: 12px;
-    height: 24px;
-  }
-
-  .sec-digital-5__item-icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .sec-digital-5__item-text {
-    font-size: 17px;
-    line-height: 22px;
-  }
-
-  .sec-digital-5__connector {
-    width: 220px;
-    flex: 0 0 220px;
-    height: 115px;
-  }
-
-  .sec-digital-5__connector-badge {
-    width: 105px;
-    height: 105px;
-  }
-
-  .sec-digital-5__badge-text {
-    font-size: 15px;
-    line-height: 20px;
-  }
-
-  .sec-digital-5__badge-arrow {
-    width: 20px;
-    height: 20px;
-  }
-
-  .sec-digital-5__bottom-note {
-    font-size: 14.5px;
-    line-height: 19px;
-    max-width: 620px;
-    margin-top: 12px;
+    padding-top: 70px !important;
   }
 }
-*/
 
 /* Mid-width Desktop (1025px - 1200px) */
 @media (max-width: 1200px) and (min-width: 1025px) {

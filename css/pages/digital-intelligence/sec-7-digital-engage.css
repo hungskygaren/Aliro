@@ -421,115 +421,84 @@
 }
 
 /* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px) - DISABLED
-   ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 660px and min-width: 1025px)
+   Chỉ giảm các khoảng cách margin, padding - không thu nhỏ kích thước nội dung
+   ========================================================================== */
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-7 .flex-center-v {
-    padding-top: calc(var(--section-pt) - 10px) !important;
-    padding-bottom: 8px !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 12px !important;
+    justify-content: flex-start !important;
+  }
+
+  .sec-digital-7__header {
+    margin: 0 auto !important;
   }
 
   .sec-digital-7__eyebrow {
-    font-size: 19px !important;
-    line-height: 23px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-digital-7__title {
+    margin-bottom: 4px !important;
+  }
+
+  .sec-digital-7__flow {
+    margin: 14px auto 10px auto !important;
+  }
+
+  .sec-digital-7__card--inventory {
+    padding: 12px 16px 14px 16px !important;
+  }
+
+  .sec-digital-7__card--value {
+    padding: 12px 16px 16px 20px !important;
+  }
+
+  .sec-digital-7__subtext {
+    margin: 6px auto 0 auto !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive: Very Short Screens (max-height: 620px and min-width: 1025px)
+   Chỉ giảm thêm các khoảng cách margin và padding
+   ========================================================================== */
+@media (max-height: 620px) and (min-width: 1025px) {
+  .sec-digital-7 .flex-center-v {
+    padding-top: calc(var(--section-pt) - 10px) !important;
+    padding-bottom: 6px !important;
+    justify-content: flex-start !important;
+  }
+
+  .sec-digital-7__header {
+    margin-top: 10px !important;
+  }
+
+  .sec-digital-7__eyebrow {
     margin-bottom: 2px !important;
   }
 
   .sec-digital-7__title {
-    font-size: 34px !important;
-    line-height: 40px !important;
-    margin-bottom: 4px !important;
-  }
-
-  .sec-digital-7__desc {
-    font-size: 17px !important;
-    line-height: 22px !important;
+    margin-bottom: 2px !important;
   }
 
   .sec-digital-7__flow {
-    margin: 10px auto 10px auto !important;
+    margin: 8px auto 6px auto !important;
   }
 
-  .sec-digital-7__card--inventory,
+  .sec-digital-7__card--inventory {
+    padding: 8px 14px 10px 14px !important;
+  }
+
   .sec-digital-7__card--value {
-    height: 180px !important;
-    padding: 12px 16px !important;
-  }
-
-  .sec-digital-7__card--inventory .sec-digital-7__card-title,
-  .sec-digital-7__card--value .sec-digital-7__card-title {
-    font-size: 21px !important;
-    line-height: 25px !important;
-    margin-bottom: 4px !important;
-  }
-
-  .sec-digital-7__visual-box {
-    width: 95px !important;
-    height: 95px !important;
-  }
-
-  .sec-digital-7__item-icon-box {
-    width: 20px !important;
-    height: 20px !important;
-  }
-
-  .sec-digital-7__item-name {
-    font-size: 16px !important;
-    line-height: 20px !important;
-  }
-
-  .sec-digital-7__inventory-list {
-    gap: 5px !important;
-  }
-
-  .sec-digital-7__arrow-box {
-    width: 120px !important;
-    height: 70px !important;
-  }
-
-  .sec-digital-7__arrow-text {
-    font-size: 12px !important;
-    line-height: 15px !important;
-    padding-right: 14px !important;
-  }
-
-  .sec-digital-7__value-icon-box {
-    width: 48px !important;
-    height: 48px !important;
-  }
-
-  .sec-digital-7__value-name {
-    font-size: 15px !important;
-    line-height: 18px !important;
-  }
-
-  .sec-digital-7__banner {
-    height: 44px !important;
-    padding: 0 20px !important;
-  }
-
-  .sec-digital-7__banner-text {
-    font-size: 19px !important;
-    line-height: 23px !important;
-  }
-
-  .sec-digital-7__banner-arrow {
-    width: 22px !important;
-    height: 22px !important;
-  }
-
-  .sec-digital-7__banner-arrow img {
-    width: 18px !important;
-    height: 18px !important;
+    padding: 8px 14px 12px 16px !important;
   }
 
   .sec-digital-7__subtext {
-    font-size: 15px !important;
-    line-height: 20px !important;
-    margin-top: 6px !important;
+    margin-top: 3px !important;
   }
 }
-*/
 
 /* ==========================================================================
    Responsive: Small Desktop (max-width: 1200px)

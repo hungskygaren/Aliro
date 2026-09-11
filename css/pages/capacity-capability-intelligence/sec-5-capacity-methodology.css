@@ -340,111 +340,136 @@
 }
 
 /* ==========================================================================
-   Responsive: Short Screens / Laptops (max-height: 695px / 640px) - DISABLED
-   ==========================================================================
-@media (max-height: 695px) and (min-width: 1025px) {
+   Responsive: Short Screens / Laptops (max-height: 685px and min-width: 1025px) - 95% Scale
+   ========================================================================== */
+@media (max-height: 685px) and (min-width: 1025px) {
   .sec-capacity-5 .flex-center-v {
-    justify-content: center;
-    padding-top: var(--section-pt);
-    padding-bottom: 10px;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 16px !important;
+    justify-content: center !important;
   }
 
   .sec-capacity-5__stepper {
-    margin-top: 0;
-    margin-bottom: 6px;
-    max-width: 560px;
+    max-width: 606px !important;
+    margin-top: calc(20 / 720 * 100dvh) !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-capacity-5__step-node {
-    width: 34px;
-    height: 34px;
-    font-size: 20px;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 23px !important;
+  }
+
+  .sec-capacity-5__step-line {
+    left: 19px !important;
+    right: 19px !important;
+  }
+
+  .sec-capacity-5__stage {
+    max-width: 1045px !important;
   }
 
   .sec-capacity-5__col {
-    width: 290px;
-    max-width: 290px;
+    width: 323px !important;
+    max-width: 323px !important;
   }
 
   .sec-capacity-5__col-title {
-    font-size: 28px;
-    line-height: 32px;
-    margin-bottom: 4px;
+    font-size: 34px !important;
+    line-height: 38px !important;
+    margin-bottom: 7px !important;
   }
 
   .sec-capacity-5__col-desc {
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 8px;
+    font-size: 17px !important;
+    line-height: 23px !important;
+    margin-bottom: 16px !important;
+    max-width: 352px !important;
   }
 
   .sec-capacity-5__img-box {
-    width: 290px;
-    max-width: 290px;
-    height: 290px;
+    width: 323px !important;
+    max-width: 323px !important;
+    height: 361px !important;
   }
 
   .sec-capacity-5__arrow-wrap {
-    width: 160px;
-    margin: 200px 10px 0 10px;
+    width: 218px !important;
+    margin: 246px 13px 0 13px !important;
   }
 
   .sec-capacity-5__arrow-icon {
-    width: 160px;
-    height: 30px;
+    width: 218px !important;
+    height: 38px !important;
   }
 }
 
-@media (max-height: 640px) and (min-width: 1025px) {
+/* ==========================================================================
+   Responsive: Short Screens / Laptops (max-height: 630px and min-width: 1025px) - 92.5% Scale
+   ========================================================================== */
+@media (max-height: 630px) and (min-width: 1025px) {
   .sec-capacity-5 .flex-center-v {
-    padding-top: var(--section-pt);
-    padding-bottom: 6px;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 12px !important;
+    justify-content: center !important;
   }
 
   .sec-capacity-5__stepper {
-    max-width: 500px;
-    margin-bottom: 4px;
+    max-width: 591px !important;
+    margin-top: calc(15 / 720 * 100dvh) !important;
+    margin-bottom: 7px !important;
   }
 
   .sec-capacity-5__step-node {
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
+    width: 37px !important;
+    height: 37px !important;
+    font-size: 22px !important;
+  }
+
+  .sec-capacity-5__step-line {
+    left: 18px !important;
+    right: 18px !important;
+  }
+
+  .sec-capacity-5__stage {
+    max-width: 1018px !important;
   }
 
   .sec-capacity-5__col {
-    width: 250px;
-    max-width: 250px;
+    width: 315px !important;
+    max-width: 315px !important;
   }
 
   .sec-capacity-5__col-title {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 33px !important;
+    line-height: 37px !important;
+    margin-bottom: 7px !important;
   }
 
   .sec-capacity-5__col-desc {
-    font-size: 13.5px;
-    line-height: 18px;
-    margin-bottom: 6px;
+    font-size: 16.5px !important;
+    line-height: 22px !important;
+    margin-bottom: 15px !important;
+    max-width: 343px !important;
   }
 
   .sec-capacity-5__img-box {
-    width: 250px;
-    max-width: 250px;
-    height: 240px;
+    width: 315px !important;
+    max-width: 315px !important;
+    height: 352px !important;
   }
 
   .sec-capacity-5__arrow-wrap {
-    width: 130px;
-    margin: 160px 8px 0 8px;
+    width: 213px !important;
+    margin: 238px 13px 0 13px !important;
   }
 
   .sec-capacity-5__arrow-icon {
-    width: 130px;
-    height: 24px;
+    width: 213px !important;
+    height: 37px !important;
   }
 }
-*/
 
 @media (max-width: 1200px) and (min-width: 1025px) {
   .sec-capacity-5__stepper {
