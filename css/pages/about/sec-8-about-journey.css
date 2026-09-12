@@ -758,3 +758,15 @@
     max-width: 380px !important;
   }
 }
+
+@media (min-height: 730px) and (min-width: 1025px) {
+  .sec-about-8 .container {
+    justify-content: center !important;
+    padding-top: var(--section-pt, 70px) !important;
+    padding-bottom: 24px !important;
+  }
+
+  .sec-about-8__header {
+    margin-top: 0 !important;
+  }
+}

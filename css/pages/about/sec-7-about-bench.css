@@ -243,6 +243,16 @@
   }
 }
 
+@media (min-height: 730px) and (min-width: 1025px) {
+  .sec-about-7__header {
+    top: calc(50dvh - 198px) !important;
+  }
+  .sec-about-7__center,
+  .sec-about-7__advisor {
+    top: calc(50dvh - 132px) !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .sec-about-7 {
     height: auto !important;

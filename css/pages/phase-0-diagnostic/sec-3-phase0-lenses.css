@@ -286,6 +286,27 @@
   }
 }
 
+@media (min-height: 730px) and (min-width: 1025px) {
+  .sec-phase0-3 .flex-center-v {
+    justify-content: center !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: var(--section-pt) !important;
+  }
+  .sec-phase0-3 .flex-center-v > .sec-phase0-3__header {
+    margin-top: 0 !important;
+  }
+  .sec-phase0-3 .flex-center-v > .sec-phase0-3__stage {
+    height: 411px !important;
+    margin-top: 7px !important;
+  }
+}
+
+@media (min-height: 730px) and (min-width: 1025px) and (max-width: 1200px) {
+  .sec-phase0-3 .flex-center-v > .sec-phase0-3__stage {
+    height: 400px !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .sec-phase0-3__title {
     font-size: 32px;

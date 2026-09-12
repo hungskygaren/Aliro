@@ -266,6 +266,19 @@
   }
 }
 
+@media (min-height: 730px) and (min-width: 1025px) {
+  .sec-about-6 .flex-center-v {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .sec-about-6__left,
+  .sec-about-6__right {
+    margin-top: 0 !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .sec-about-6 {
     height: auto !important;

@@ -984,3 +984,43 @@
     margin-top: 18px !important;
   }
 }
+
+/* ==========================================================================
+   CĂN GIỮA THEO TRỤC DỌC CHO CÁC TRỤ CỘT TRÊN HOMEPAGE KHI MÀN CAO (min-height: 730px)
+   Áp dụng trên Desktop (min-width: 1025px)
+   ========================================================================== */
+@media (min-height: 730px) and (min-width: 1025px) {
+  /* Section 5: Market Intelligence */
+  .sec-5__img-right {
+    top: calc(50dvh + var(--section-pt, 70px) / 2 - 255px) !important;
+  }
+  .sec-5__content {
+    top: calc(50dvh + var(--section-pt, 70px) / 2 - 185px) !important;
+  }
+
+  /* Section 6: Operational Intelligence */
+  .sec-6__img-left,
+  .sec-6 .container::after {
+    top: calc(50dvh + var(--section-pt, 70px) / 2 - 267px) !important;
+  }
+  .sec-6__content {
+    top: calc(50dvh + var(--section-pt, 70px) / 2 - 190px) !important;
+  }
+
+  /* Section 7: Digital Intelligence */
+  .sec-7__img-right {
+    top: calc(50dvh + var(--section-pt, 70px) / 2 - 250px) !important;
+  }
+  .sec-7__content {
+    top: calc(50dvh + var(--section-pt, 70px) / 2 - 190px) !important;
+  }
+
+  /* Section 8: Capacity & Capability Intelligence */
+  .sec-8__img-left,
+  .sec-8 .container::after {
+    top: calc(50dvh + var(--section-pt, 70px) / 2 - 228px) !important;
+  }
+  .sec-8__content {
+    top: calc(50dvh + var(--section-pt, 70px) / 2 - 190px) !important;
+  }
+}
