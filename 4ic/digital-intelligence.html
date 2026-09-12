@@ -1221,7 +1221,30 @@
               </div>
             </div>
 
-            <p class="sec-digital-8__hint phrase">Swipe right to see more</p>
+            <div class="sec-digital-8__scroll-controller" aria-label="Bảng điều khiển cuộn">
+              <button
+                type="button"
+                class="sec-digital-8__scroll-btn sec-digital-8__scroll-btn--prev is-disabled"
+                aria-label="Cuộn sang trái"
+                disabled
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                  <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+                </svg>
+              </button>
+
+              <span class="sec-digital-8__scroll-hint-text">Swipe right to see more</span>
+
+              <button
+                type="button"
+                class="sec-digital-8__scroll-btn sec-digital-8__scroll-btn--next"
+                aria-label="Cuộn sang phải"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                  <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </section>
 

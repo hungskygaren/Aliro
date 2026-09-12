@@ -390,9 +390,130 @@ function initMatrixScrollController() {
   setTimeout(updateScrollUI, 800);
 }
 
+function initImpactScrollControllers() {
+  const configs = [
+    { wrapperSel: ".sec-market-7__stage", ctrlSel: ".sec-market-7__scroll-controller" },
+    { wrapperSel: ".sec-operational-7__stage", ctrlSel: ".sec-operational-7__scroll-controller" },
+    { wrapperSel: ".sec-digital-8__stage", ctrlSel: ".sec-digital-8__scroll-controller" },
+    { wrapperSel: ".sec-capacity-7__stage", ctrlSel: ".sec-capacity-7__scroll-controller" },
+  ];
+
+  configs.forEach(({ wrapperSel, ctrlSel }) => {
+    const wrapper = document.querySelector(wrapperSel);
+    const controller = document.querySelector(ctrlSel);
+    if (!wrapper || !controller) return;
+
+    const btnPrev = controller.querySelector("button:first-of-type, [class*='--prev']");
+    const btnNext = controller.querySelector("button:last-of-type, [class*='--next']");
+    const hintText = controller.querySelector("[class*='hint-text']");
+
+    let isTicking = false;
+
+    function updateScrollUI() {
+      const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+      if (maxScroll <= 4) {
+        if (btnPrev) {
+          btnPrev.disabled = true;
+          btnPrev.classList.add("is-disabled");
+        }
+        if (btnNext) {
+          btnNext.disabled = true;
+          btnNext.classList.add("is-disabled");
+        }
+        isTicking = false;
+        return;
+      }
+
+      const currentScroll = Math.max(0, wrapper.scrollLeft);
+
+      const isAtStart = currentScroll <= 6;
+      const isAtEnd = currentScroll >= maxScroll - 6;
+
+      if (btnPrev) {
+        btnPrev.disabled = isAtStart;
+        btnPrev.classList.toggle("is-disabled", isAtStart);
+      }
+      if (btnNext) {
+        btnNext.disabled = isAtEnd;
+        btnNext.classList.toggle("is-disabled", isAtEnd);
+      }
+
+      if (hintText) {
+        if (isAtEnd) {
+          hintText.textContent = "Swipe left to return";
+        } else if (isAtStart) {
+          hintText.textContent = "Swipe right to see more";
+        } else {
+          hintText.textContent = "Swipe to see more";
+        }
+      }
+
+      isTicking = false;
+    }
+
+    function onScroll() {
+      if (!isTicking) {
+        requestAnimationFrame(updateScrollUI);
+        isTicking = true;
+      }
+    }
+
+    function getScrollStep() {
+      const firstCard = wrapper.querySelector("[class*='__card'], [class*='__decision-card']");
+      if (firstCard && firstCard.offsetWidth > 0) {
+        return firstCard.offsetWidth + 14;
+      }
+      return Math.max(160, Math.round(wrapper.clientWidth * 0.85));
+    }
+
+    if (btnPrev) {
+      btnPrev.addEventListener("click", (e) => {
+        e.preventDefault();
+        wrapper.scrollBy({ left: -getScrollStep(), behavior: "smooth" });
+      });
+    }
+
+    if (btnNext) {
+      btnNext.addEventListener("click", (e) => {
+        e.preventDefault();
+        wrapper.scrollBy({ left: getScrollStep(), behavior: "smooth" });
+      });
+    }
+
+    wrapper.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", () => {
+      requestAnimationFrame(updateScrollUI);
+    });
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              requestAnimationFrame(updateScrollUI);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      const parentSection = wrapper.closest("section") || document.getElementById("business-impact");
+      if (parentSection) observer.observe(parentSection);
+    }
+
+    setTimeout(updateScrollUI, 100);
+    setTimeout(updateScrollUI, 400);
+    setTimeout(updateScrollUI, 800);
+  });
+}
+
+function initMarketImpactScrollController() {
+  initImpactScrollControllers();
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   await Promise.all([loadSharedHeader(), loadSharedFooter()]);
   initMatrixScrollController();
+  initImpactScrollControllers();
 
   const swiperEl = document.querySelector(".main-swiper");
   const wrapperEl = document.querySelector(".swiper-wrapper");

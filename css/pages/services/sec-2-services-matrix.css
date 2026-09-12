@@ -329,75 +329,8 @@
   }
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
-  .sec-services-2 {
-    height: 100vh !important;
-    height: 100dvh !important;
-    overflow: hidden !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-  }
-
-  .sec-services-2 .flex-center-v {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    height: auto !important;
-    padding-top: var(--section-pt) !important;
-    padding-bottom: 14px;
-    padding-inline: 48px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .sec-services-2__header {
-    flex-shrink: 0;
-    margin-top: 10px;
-    margin-bottom: 14px;
-  }
-
-  .sec-services-2__title {
-    font-size: 36px;
-    line-height: 42px;
-    margin-bottom: 6px;
-  }
-
-  .sec-services-2__desc {
-    font-size: 19px;
-    line-height: 26px;
-  }
-
-  .sec-services-2__matrix-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    overflow-x: auto !important;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    margin-bottom: 0 !important;
-    scrollbar-width: thin !important;
-    scrollbar-color: var(--Highlight-Blue, #0431b1) rgba(1, 16, 59, 0.1) !important;
-  }
-
-  .sec-services-2__matrix-wrapper::-webkit-scrollbar {
-    display: block !important;
-    height: 5px !important;
-  }
-
-  .sec-services-2__matrix-wrapper::-webkit-scrollbar-track {
-    background: rgba(1, 16, 59, 0.08) !important;
-    border-radius: 4px !important;
-  }
-
-  .sec-services-2__matrix-wrapper::-webkit-scrollbar-thumb {
-    background: var(--Highlight-Blue, #0431b1) !important;
-    border-radius: 4px !important;
-  }
-
+/* Scroll Controller Base - Cho Tablet & Mobile (<= 1024px) */
+@media (max-width: 1024px) {
   .sec-services-2__scroll-controller {
     display: flex !important;
     align-items: center;
@@ -475,6 +408,76 @@
     cursor: default;
     pointer-events: none;
     box-shadow: none;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .sec-services-2 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  .sec-services-2 .flex-center-v {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: auto !important;
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 14px;
+    padding-inline: 48px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sec-services-2__header {
+    flex-shrink: 0;
+    margin-top: 10px;
+    margin-bottom: 14px;
+  }
+
+  .sec-services-2__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 6px;
+  }
+
+  .sec-services-2__desc {
+    font-size: 19px;
+    line-height: 26px;
+  }
+
+  .sec-services-2__matrix-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    margin-bottom: 0 !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--Highlight-Blue, #0431b1) rgba(1, 16, 59, 0.1) !important;
+  }
+
+  .sec-services-2__matrix-wrapper::-webkit-scrollbar {
+    display: block !important;
+    height: 5px !important;
+  }
+
+  .sec-services-2__matrix-wrapper::-webkit-scrollbar-track {
+    background: rgba(1, 16, 59, 0.08) !important;
+    border-radius: 4px !important;
+  }
+
+  .sec-services-2__matrix-wrapper::-webkit-scrollbar-thumb {
+    background: var(--Highlight-Blue, #0431b1) !important;
+    border-radius: 4px !important;
   }
 
   .sec-services-2__matrix {
@@ -624,6 +627,7 @@
   .sec-services-2__scroll-hint-text {
     font-size: 14px;
     line-height: 15px;
+    width: auto;
   }
 
   .sec-services-2__scroll-btn {
@@ -810,7 +814,8 @@
   }
 
   .sec-services-2__scroll-hint-text {
-    font-size: 14px;
+    font-size: 13px;
+    width: auto;
   }
 
   .sec-services-2__scroll-btn {
