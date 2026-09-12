@@ -343,6 +343,7 @@
   .sec-thirdeye-6__subtitle {
     font-size: 15.5px !important;
     line-height: 22px !important;
+    color: #e09b21 !important;
   }
 
   .sec-thirdeye-6__right {
@@ -445,7 +446,7 @@
   .sec-thirdeye-6__subtitle {
     font-size: 16px !important;
     line-height: 22px !important;
-    color: #01103b !important;
+    color: #e09b21 !important;
     font-weight: 600 !important;
     margin: 0 !important;
   }

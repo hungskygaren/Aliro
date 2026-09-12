@@ -392,7 +392,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-phase0-2 {
     height: 100vh !important;
     height: 100dvh !important;
@@ -517,7 +517,7 @@
   }
 }
 
-@media (max-width: 1024px) and (max-height: 660px) {
+@media (max-width: 1024px) and (min-width: 768px) and (max-height: 660px) {
   .sec-phase0-2 {
     overflow-y: auto !important;
     height: auto !important;
@@ -540,9 +540,17 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  .sec-phase0-2 .container,
+  .sec-phase0-2 .flex-center-v {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
   .sec-phase0-2 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
     justify-content: center !important;
     align-items: center !important;
     height: auto !important;

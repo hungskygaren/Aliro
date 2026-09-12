@@ -239,7 +239,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-phase0-1 {
     background: linear-gradient(
       180deg,
@@ -380,6 +380,13 @@
 
 @media (max-width: 767px) {
   .sec-phase0-1 {
+    background: linear-gradient(
+      180deg,
+      #ffffff 30%,
+      #8eaad9 52%,
+      #2053a9 72%,
+      #01103b 100%
+    ) !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
   }

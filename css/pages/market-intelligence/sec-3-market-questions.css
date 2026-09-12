@@ -244,7 +244,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-market-3 {
     height: 100vh !important;
     height: 100dvh !important;

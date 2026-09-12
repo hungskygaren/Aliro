@@ -445,7 +445,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-phase0-7 .flex-center-v {
     padding-top: var(--section-pt);
     padding-bottom: 24px;

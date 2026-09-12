@@ -675,7 +675,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-market-7 {
     height: 100vh;
     height: 100dvh;
@@ -776,7 +776,8 @@
   }
 }
 
-.sec-market-7__dots {
+.sec-market-7__dots,
+.sec-market-7__hint {
   display: none;
 }
 
@@ -792,7 +793,7 @@
     height: 100% !important;
     min-height: 100% !important;
     padding-top: calc(var(--section-pt, 70px) + 6px) !important;
-    padding-bottom: 16px !important;
+    padding-bottom: 8px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     justify-content: space-between !important;
@@ -874,8 +875,6 @@
     width: 85% !important;
     max-width: 345px !important;
     height: 100% !important;
-    max-height: 480px !important;
-    min-height: 420px !important;
     scroll-snap-align: center !important;
     scroll-snap-stop: always !important;
     border-radius: 8px !important;
@@ -901,8 +900,8 @@
 
   .sec-market-7__card-img-box {
     width: 160px !important;
-    height: 170px !important;
-    margin: 0 auto 10px auto !important;
+    height: 155px !important;
+    margin: 0 auto 8px auto !important;
     flex-shrink: 0 !important;
   }
 
@@ -991,6 +990,17 @@
     white-space: nowrap !important;
     text-align: center !important;
   }
+
+  .sec-market-7__hint {
+    display: block !important;
+    flex-shrink: 0 !important;
+    text-align: center !important;
+    font-family: Aptos, var(--font-brand) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--Mid-Blue-Gray, #7e93a8) !important;
+    margin: 4px 0 0 0 !important;
+  }
 }
 
 @media (max-width: 767px) and (min-height: 780px) {
@@ -1022,14 +1032,13 @@
 
   .sec-market-7__card,
   .sec-market-7__decision-card {
-    min-height: 500px !important;
-    max-height: 550px !important;
+    height: 100% !important;
     padding: 26px 24px !important;
   }
 
   .sec-market-7__card-img-box {
     width: 180px !important;
-    height: 190px !important;
+    height: 175px !important;
     margin-bottom: 12px !important;
   }
 
@@ -1100,5 +1109,10 @@
     font-size: 14px !important;
     padding: 9px 18px !important;
     width: fit-content !important;
+  }
+
+  .sec-market-7__hint {
+    font-size: 16px !important;
+    margin-top: 6px !important;
   }
 }

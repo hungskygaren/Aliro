@@ -259,7 +259,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-digital-1 {
     background: linear-gradient(
       180deg,

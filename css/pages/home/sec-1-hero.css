@@ -502,7 +502,7 @@
 
   .sec-hero__title {
     font-size: 30px;
-    line-height: 38px;
+    line-height: 34px;
     margin-top: 4px;
     max-width: 100%;
   }
@@ -510,20 +510,20 @@
   .sec-hero__sub-bottom {
     font-size: 17px;
     line-height: 24px;
-    margin-top: 8px;
+    margin-top: 4px;
     max-width: 100%;
   }
 
   .sec-hero__desc {
     font-size: 15.5px;
     line-height: 22px;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .sec-hero__tagline {
     font-size: 16px;
     line-height: 22px;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   .sec-hero__img-mobile {
@@ -532,7 +532,7 @@
   }
 
   .btn-hero-cta {
-    margin-top: 16px !important;
+    margin-top: 8px !important;
     margin-inline: auto !important;
     width: fit-content !important;
     padding: 10px 20px !important;

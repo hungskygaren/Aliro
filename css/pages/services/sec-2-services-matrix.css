@@ -329,7 +329,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-services-2 {
     height: 100vh !important;
     height: 100dvh !important;
@@ -566,6 +566,8 @@
   .sec-services-2 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 8px;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
   }
 
   .sec-services-2__header {
@@ -837,7 +839,7 @@
   }
 }
 
-@media (max-width: 1024px) and (max-height: 640px) {
+@media (max-width: 1024px) and (min-width: 768px) and (max-height: 640px) {
   .sec-services-2 {
     height: auto !important;
     min-height: 100dvh;

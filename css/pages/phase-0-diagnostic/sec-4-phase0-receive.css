@@ -437,7 +437,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-phase0-4 .flex-center-v {
     display: flex !important;
     flex-direction: column !important;
@@ -555,6 +555,7 @@
   .sec-phase0-4__outcome-text {
     font-size: 18px !important;
     line-height: 24px !important;
+    color: #e09b21 !important;
   }
 }
 
@@ -687,6 +688,7 @@
   .sec-phase0-4__outcome-text {
     font-size: 17px !important;
     line-height: 23px !important;
+    color: #e09b21 !important;
   }
 }
 

@@ -282,7 +282,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-operational-1 .flex-center-v {
     display: flex !important;
     flex-direction: column !important;

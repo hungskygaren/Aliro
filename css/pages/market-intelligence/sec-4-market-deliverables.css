@@ -39,6 +39,24 @@
   z-index: 3;
 }
 
+.sec-market-4__eyebrow {
+  display: none;
+  font-family: Aptos, var(--font-brand);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 0px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.05s;
+}
+
 .sec-market-4__title {
   font-family: Aptos, var(--font-brand);
   font-size: 36px;
@@ -196,6 +214,7 @@
   display: block;
 }
 
+.sec-market-4.slide-animated .sec-market-4__eyebrow,
 .sec-market-4.slide-animated .sec-market-4__title,
 .sec-market-4.slide-animated .sec-market-4__card {
   opacity: 1;
@@ -212,6 +231,7 @@
   transition: none !important;
 }
 
+.sec-market-4.visited .sec-market-4__eyebrow,
 .sec-market-4.visited .sec-market-4__title,
 .sec-market-4.visited .sec-market-4__card,
 .sec-market-4.visited .sec-market-4__right,
@@ -448,11 +468,26 @@
 
   .sec-market-4__stage {
     flex-direction: column !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     width: 100% !important;
     max-width: 440px !important;
     margin: 0 auto !important;
     gap: 0 !important;
+  }
+
+  .sec-market-4__eyebrow {
+    display: block !important;
+    font-family: Aptos, var(--font-brand);
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    line-height: 31px !important;
+    color: var(--Secondary-Deep-Blue, #011b7f) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0px !important;
+    margin-bottom: 4px !important;
+    text-align: left !important;
+    align-self: flex-start !important;
+    width: 100% !important;
   }
 
   .sec-market-4__content {
@@ -467,8 +502,10 @@
     font-size: 22px !important;
     line-height: 27px !important;
     margin-bottom: 6px !important;
-    text-align: center !important;
+    text-align: left !important;
+    align-self: flex-start !important;
     max-width: 100% !important;
+    width: 100% !important;
   }
 
   .sec-market-4__cards {
@@ -494,14 +531,14 @@
   }
 
   .sec-market-4__card-title {
-    font-size: 13.5px !important;
+    font-size: 16px !important;
     line-height: 17px !important;
     font-weight: 700 !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 4px !important;
   }
 
   .sec-market-4__card-desc {
-    font-size: 13px !important;
+    font-size: 14px !important;
     line-height: 16.5px !important;
   }
 
@@ -545,10 +582,17 @@
     gap: 18px !important;
   }
 
+  .sec-market-4__eyebrow {
+    font-size: 28px !important;
+    line-height: 33px !important;
+    margin-bottom: 8px !important;
+  }
+
   .sec-market-4__title {
     font-size: 27px !important;
     line-height: 33px !important;
     margin-bottom: 8px !important;
+    text-align: left !important;
   }
 
   .sec-market-4__cards {

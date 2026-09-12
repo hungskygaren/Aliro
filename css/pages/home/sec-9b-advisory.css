@@ -291,6 +291,10 @@
   }
 }
 
+.sec-9b__hint {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .sec-9b .container {
     display: flex;
@@ -443,6 +447,17 @@
     margin-top: auto;
     width: 100%;
     flex-shrink: 0;
+  }
+
+  .sec-9b__hint {
+    display: block !important;
+    flex-shrink: 0 !important;
+    text-align: center !important;
+    font-family: Aptos, var(--font-brand) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--Mid-Blue-Gray, #7e93a8) !important;
+    margin: 10px 0 0 0 !important;
   }
 }
 

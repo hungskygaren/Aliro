@@ -417,7 +417,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .sec-market-2 {
     height: 100vh;
     height: 100dvh;
@@ -576,7 +576,7 @@
   }
 }
 
-@media (max-width: 1024px) and (max-height: 720px) {
+@media (max-width: 1024px) and (min-width: 768px) and (max-height: 720px) {
   .sec-market-2 {
     height: auto !important;
     min-height: 100dvh;
