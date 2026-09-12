@@ -407,8 +407,6 @@ function initImpactScrollControllers() {
     if (wrapper._hasImpactScrollInited) {
       if (typeof wrapper._updateImpactScrollUI === "function") {
         wrapper._updateImpactScrollUI();
-        requestAnimationFrame(wrapper._updateImpactScrollUI);
-        setTimeout(wrapper._updateImpactScrollUI, 120);
       }
       return;
     }
@@ -437,17 +435,8 @@ function initImpactScrollControllers() {
 
       const currentScroll = Math.max(0, wrapper.scrollLeft);
 
-      const firstCard = wrapper.querySelector("[class*='__card'], [class*='__decision-card']");
-      let isAtStart = currentScroll <= 12;
-      if (firstCard && wrapper.clientWidth > 0) {
-        const wrapperRect = wrapper.getBoundingClientRect();
-        const cardRect = firstCard.getBoundingClientRect();
-        if (cardRect.left >= wrapperRect.left - 30) {
-          isAtStart = true;
-        }
-      }
-
-      const isAtEnd = currentScroll >= maxScroll - 12;
+      const isAtStart = currentScroll <= 6;
+      const isAtEnd = currentScroll >= maxScroll - 6;
 
       if (btnPrev) {
         btnPrev.disabled = isAtStart;
@@ -682,12 +671,10 @@ document.addEventListener("DOMContentLoaded", async () => {
               triggerCounterAnimations(initialSlide);
             }
           });
-          initImpactScrollControllers();
         },
 
         slideChange: function () {
           updateHeaderTheme(this.activeIndex);
-          initImpactScrollControllers();
 
           const targetId =
             sectionIds[this.activeIndex] || `section-${this.activeIndex + 1}`;
