@@ -70,6 +70,7 @@
   --Light-Glow: #c5daf3;
   --Teal-Blue: #4f8f9d;
   --color-text-dark: #123e6b;
+  --Gold-Dark: #e09b21;
   --bg-dark: #071729;
 
   --container-width: 1170px;
@@ -298,6 +299,12 @@ body {
 }
 .gap-48 {
   gap: 48px;
+}
+
+/* Color utilities */
+.text-gold,
+.highlight-gold {
+  color: var(--Gold-Dark, #e09b21) !important;
 }
 
 /* ==========================================================================

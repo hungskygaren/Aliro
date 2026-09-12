@@ -68,6 +68,10 @@
     "clig" off;
 }
 
+.sec-operational-2__title span {
+  color: var(--Gold-Dark, #e09b21);
+}
+
 .sec-operational-2__subtitle {
   font-family: Aptos, var(--font-brand);
   font-size: 20px;
