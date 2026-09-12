@@ -795,7 +795,6 @@
     min-width: 300px !important;
     height: 100% !important;
     scroll-snap-align: center !important;
-    scroll-snap-stop: always !important;
     border-radius: 8px !important;
     box-sizing: border-box !important;
     box-shadow: none !important;
@@ -939,7 +938,6 @@
     max-width: 335px !important;
     height: 100% !important;
     scroll-snap-align: center !important;
-    scroll-snap-stop: always !important;
     border-radius: 8px !important;
     box-sizing: border-box !important;
   }
@@ -1132,7 +1130,7 @@
   }
 
   .sec-operational-7__card-question {
-    font-size: 18px !important;
+    font-size: 20px !important;
     line-height: 24px !important;
     min-height: 48px !important;
     margin-bottom: 14px !important;
@@ -1143,19 +1141,19 @@
   }
 
   .sec-operational-7__card-item {
-    min-height: 30px !important;
+    min-height: 34px !important;
     height: auto !important;
     gap: 12px !important;
     align-items: center !important;
   }
 
   .sec-operational-7__card-item-icon {
-    width: 26px !important;
-    height: 26px !important;
+    width: 30px !important;
+    height: 30px !important;
   }
 
   .sec-operational-7__card-item-text {
-    font-size: 17.5px !important;
+    font-size: 18px !important;
     line-height: 23px !important;
     white-space: normal !important;
   }

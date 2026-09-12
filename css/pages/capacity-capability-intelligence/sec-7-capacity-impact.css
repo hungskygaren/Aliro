@@ -915,7 +915,6 @@
     min-width: 300px !important;
     height: 100% !important;
     scroll-snap-align: center !important;
-    scroll-snap-stop: always !important;
     border-radius: 8px !important;
     box-sizing: border-box !important;
     box-shadow: none !important;
@@ -1059,7 +1058,6 @@
     max-width: 340px !important;
     height: 100% !important;
     scroll-snap-align: center !important;
-    scroll-snap-stop: always !important;
     border-radius: 8px !important;
     box-sizing: border-box !important;
   }
@@ -1252,7 +1250,7 @@
   }
 
   .sec-capacity-7__card-question {
-    font-size: 18px !important;
+    font-size: 15px !important;
     line-height: 24px !important;
     min-height: 48px !important;
     margin-bottom: 14px !important;

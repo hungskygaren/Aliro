@@ -381,12 +381,12 @@
 
   .sec-9b__scroll-btn:disabled,
   .sec-9b__scroll-btn.is-disabled {
-    opacity: 0.35;
-    border-color: rgba(1, 16, 59, 0.1);
-    color: #b0c2d8;
-    cursor: default;
-    pointer-events: none;
-    box-shadow: none;
+    opacity: 0.35 !important;
+    border-color: rgba(1, 16, 59, 0.1) !important;
+    color: #b0c2d8 !important;
+    cursor: default !important;
+    pointer-events: none !important;
+    box-shadow: none !important;
   }
 }
 
@@ -458,7 +458,6 @@
     height: auto !important;
     max-height: none !important;
     scroll-snap-align: center !important;
-    scroll-snap-stop: always !important;
     box-shadow: none !important;
   }
 }

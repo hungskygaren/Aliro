@@ -851,7 +851,6 @@
     min-width: 300px !important;
     height: 100% !important;
     scroll-snap-align: center !important;
-    scroll-snap-stop: always !important;
     border-radius: 8px !important;
     box-sizing: border-box !important;
     box-shadow: none !important;
@@ -1009,7 +1008,6 @@
     max-width: 345px !important;
     height: 100% !important;
     scroll-snap-align: center !important;
-    scroll-snap-stop: always !important;
     border-radius: 8px !important;
     box-sizing: border-box !important;
   }
