@@ -340,7 +340,7 @@
     user-select: none;
     line-height: 18px;
     text-align: center;
-    width: auto;
+    width: 210px;
     flex-shrink: 0;
   }
 
@@ -635,6 +635,7 @@
   .sec-9b__scroll-hint-text {
     font-size: 14px !important;
     line-height: 16px !important;
+    width: 175px !important;
   }
 }
 

@@ -783,7 +783,7 @@
     user-select: none;
     line-height: 18px;
     text-align: center;
-    width: auto;
+    width: 210px;
     flex-shrink: 0;
   }
 
@@ -1185,6 +1185,7 @@
   .sec-capacity-7__scroll-hint-text {
     font-size: 14px;
     line-height: 16px;
+    width: 175px;
   }
 
   .sec-capacity-7__scroll-btn {

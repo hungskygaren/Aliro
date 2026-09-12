@@ -478,9 +478,9 @@
   .sec-market-4__eyebrow {
     display: block !important;
     font-family: Aptos, var(--font-brand);
-    font-size: 26px !important;
+    font-size: 22px !important;
     font-weight: 700 !important;
-    line-height: 31px !important;
+    line-height: 26px !important;
     color: var(--Secondary-Deep-Blue, #011b7f) !important;
     text-transform: uppercase !important;
     letter-spacing: 0px !important;
@@ -499,8 +499,8 @@
   }
 
   .sec-market-4__title {
-    font-size: 22px !important;
-    line-height: 27px !important;
+    font-size: 23px !important;
+    line-height: 28px !important;
     margin-bottom: 6px !important;
     text-align: center !important;
     align-self: center !important;
@@ -584,16 +584,16 @@
   }
 
   .sec-market-4__eyebrow {
-    font-size: 28px !important;
-    line-height: 33px !important;
+    font-size: 22px !important;
+    line-height: 26px !important;
     margin-bottom: 8px !important;
     text-align: center !important;
     align-self: center !important;
   }
 
   .sec-market-4__title {
-    font-size: 27px !important;
-    line-height: 33px !important;
+    font-size: 28px !important;
+    line-height: 34px !important;
     margin-bottom: 8px !important;
     text-align: center !important;
     align-self: center !important;
