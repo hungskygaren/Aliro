@@ -468,7 +468,7 @@
 
   .sec-market-4__stage {
     flex-direction: column !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     width: 100% !important;
     max-width: 440px !important;
     margin: 0 auto !important;
@@ -485,8 +485,8 @@
     text-transform: uppercase !important;
     letter-spacing: 0px !important;
     margin-bottom: 4px !important;
-    text-align: left !important;
-    align-self: flex-start !important;
+    text-align: center !important;
+    align-self: center !important;
     width: 100% !important;
   }
 
@@ -502,8 +502,8 @@
     font-size: 22px !important;
     line-height: 27px !important;
     margin-bottom: 6px !important;
-    text-align: left !important;
-    align-self: flex-start !important;
+    text-align: center !important;
+    align-self: center !important;
     max-width: 100% !important;
     width: 100% !important;
   }
@@ -576,6 +576,7 @@
   .sec-market-4__stage {
     gap: 0 !important;
     max-width: 480px !important;
+    align-items: center !important;
   }
 
   .sec-market-4__content {
@@ -586,13 +587,16 @@
     font-size: 28px !important;
     line-height: 33px !important;
     margin-bottom: 8px !important;
+    text-align: center !important;
+    align-self: center !important;
   }
 
   .sec-market-4__title {
     font-size: 27px !important;
     line-height: 33px !important;
     margin-bottom: 8px !important;
-    text-align: left !important;
+    text-align: center !important;
+    align-self: center !important;
   }
 
   .sec-market-4__cards {

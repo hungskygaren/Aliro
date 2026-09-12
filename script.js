@@ -396,12 +396,21 @@ function initImpactScrollControllers() {
     { wrapperSel: ".sec-operational-7__stage", ctrlSel: ".sec-operational-7__scroll-controller" },
     { wrapperSel: ".sec-digital-8__stage", ctrlSel: ".sec-digital-8__scroll-controller" },
     { wrapperSel: ".sec-capacity-7__stage", ctrlSel: ".sec-capacity-7__scroll-controller" },
+    { wrapperSel: ".sec-9b__cards", ctrlSel: ".sec-9b__scroll-controller" },
   ];
 
   configs.forEach(({ wrapperSel, ctrlSel }) => {
     const wrapper = document.querySelector(wrapperSel);
     const controller = document.querySelector(ctrlSel);
     if (!wrapper || !controller) return;
+
+    if (wrapper._hasImpactScrollInited) {
+      if (typeof wrapper._updateImpactScrollUI === "function") {
+        wrapper._updateImpactScrollUI();
+      }
+      return;
+    }
+    wrapper._hasImpactScrollInited = true;
 
     const btnPrev = controller.querySelector("button:first-of-type, [class*='--prev']");
     const btnNext = controller.querySelector("button:last-of-type, [class*='--next']");
@@ -450,6 +459,7 @@ function initImpactScrollControllers() {
 
       isTicking = false;
     }
+    wrapper._updateImpactScrollUI = updateScrollUI;
 
     function onScroll() {
       if (!isTicking) {
@@ -699,6 +709,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             currentSlide.classList.add("slide-animated");
             triggerCounterAnimations(currentSlide);
           }
+          initImpactScrollControllers();
         },
       },
     });
