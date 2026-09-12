@@ -472,7 +472,7 @@
     min-height: 100dvh;
     height: auto !important;
     padding-top: var(--section-pt);
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     box-sizing: border-box;
     position: relative;
   }
