@@ -45,13 +45,24 @@
 
 .sec-capacity-2__eyebrow {
   font-family: Aptos, var(--font-brand);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 28px;
   color: #011b7f;
   text-transform: uppercase;
   margin-bottom: 8px;
   letter-spacing: 0px;
+  display: inline-block;
+}
+
+.sec-capacity-2__eyebrow::after {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 2px;
+  background-color: #eaa936;
+  margin-top: 4px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
 }
 
 .sec-capacity-2__title {
@@ -268,8 +279,43 @@
   height: 100%;
 }
 
+.sec-capacity-2__bottom {
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.6s;
+}
+
+.sec-capacity-2__bottom-label {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sec-capacity-2__bottom-line {
+  flex: 1;
+  max-width: 880px;
+  height: 1px;
+  background-color: var(--Midnight-Navy, #01103b);
+}
+
 .sec-capacity-2.slide-animated .sec-capacity-2__header,
-.sec-capacity-2.slide-animated .sec-capacity-2__card {
+.sec-capacity-2.slide-animated .sec-capacity-2__card,
+.sec-capacity-2.slide-animated .sec-capacity-2__bottom {
   opacity: 1;
   transform: translateY(0);
 }
@@ -281,6 +327,7 @@
 
 .sec-capacity-2.visited .sec-capacity-2__header,
 .sec-capacity-2.visited .sec-capacity-2__card,
+.sec-capacity-2.visited .sec-capacity-2__bottom,
 .sec-capacity-2.visited .phrase {
   opacity: 1 !important;
   transform: none !important;
@@ -542,6 +589,10 @@
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
+  .sec-capacity-2__bottom {
+    display: none !important;
+  }
+
   .sec-capacity-2 {
     height: 100vh;
     height: 100dvh;

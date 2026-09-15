@@ -16,7 +16,7 @@
   align-items: center;
   height: 100%;
   padding-top: calc(90 / 720 * 100dvh);
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   box-sizing: border-box;
 }
 
@@ -32,13 +32,14 @@
 
 .sec-digital-8__eyebrow {
   font-family: Aptos, var(--font-brand);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 28px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0px;
   margin: 0 0 8px 0;
+  display: inline-block;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -48,6 +49,16 @@
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.05s;
+}
+
+.sec-digital-8__eyebrow::after {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 2px;
+  background-color: #eaa936;
+  margin-top: 4px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
 }
 
 .sec-digital-8__title {
@@ -324,12 +335,47 @@
   color: #ffffff;
 }
 
+.sec-digital-8__bottom {
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 15px;
+  position: relative;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.5s;
+}
+
+.sec-digital-8__bottom-label {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sec-digital-8__bottom-line {
+  flex: 1;
+  max-width: 880px;
+  height: 1px;
+  background-color: #011b7f;
+}
+
 .sec-digital-8.slide-animated .sec-digital-8__eyebrow,
 .sec-digital-8.slide-animated .sec-digital-8__title,
 .sec-digital-8.slide-animated .sec-digital-8__subtitle,
 .sec-digital-8.slide-animated .sec-digital-8__card,
 .sec-digital-8.slide-animated .sec-digital-8__decision-card,
-.sec-digital-8.slide-animated .sec-digital-8__scroll-controller {
+.sec-digital-8.slide-animated .sec-digital-8__scroll-controller,
+.sec-digital-8.slide-animated .sec-digital-8__bottom {
   opacity: 1;
   transform: translateY(0);
 }
@@ -345,6 +391,7 @@
 .sec-digital-8.visited .sec-digital-8__card,
 .sec-digital-8.visited .sec-digital-8__decision-card,
 .sec-digital-8.visited .sec-digital-8__scroll-controller,
+.sec-digital-8.visited .sec-digital-8__bottom,
 .sec-digital-8.visited .phrase {
   transform: none !important;
 }
@@ -627,6 +674,10 @@
 
 /* Scroll Controller Base & Card Box Shadow Reset - Cho Tablet & Mobile (<= 1024px) */
 @media (max-width: 1024px) {
+  .sec-digital-8__bottom {
+    display: none !important;
+  }
+
   .sec-digital-8__card,
   .sec-digital-8__decision-card {
     box-shadow: none !important;

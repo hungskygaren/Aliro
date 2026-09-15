@@ -647,3 +647,72 @@ body.no-scroll {
     height: 24px !important;
   }
 }
+
+/* ==========================================================================
+   Blueprint Background Decor (Reusable across sections & screens)
+   ========================================================================== */
+.bg-blueprint {
+  position: absolute;
+  top: 0;
+  height: 100dvh;
+  width: calc(120 / 720 * 100dvh);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+img.bg-blueprint {
+  display: block;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+/* Theo chuẩn Figma: bản dark hòa trộn vào nền navy qua lighten và opacity 70% */
+img.bg-blueprint[src*="dark"] {
+  background-color: #01103b;
+  mix-blend-mode: lighten;
+  opacity: 0.7 !important;
+}
+
+.bg-blueprint--left {
+  left: 0;
+}
+
+.bg-blueprint--right {
+  right: 0;
+}
+
+/* Chuẩn Figma CSS khi dùng thẻ <div> với background-blend-mode */
+.bg-blueprint--dark-left {
+  background:
+    url("../assets/bg-blueprint-dark-left.png") -0.009px 0px / 100.015% 100%
+      no-repeat,
+    #01103b;
+  background-blend-mode: lighten, normal;
+  opacity: 0.7;
+}
+
+.bg-blueprint--dark-right {
+  background:
+    url("../assets/bg-blueprint-dark-right.png") -0.009px 0px / 100.015% 100%
+      no-repeat,
+    #01103b;
+  background-blend-mode: lighten, normal;
+  opacity: 0.7;
+}
+
+.bg-blueprint--light-left {
+  background: url("../assets/bg-blueprint-light-left.png") lightgray -0.028px
+    0px / 100.046% 100% no-repeat;
+}
+
+.bg-blueprint--light-right {
+  background: url("../assets/bg-blueprint-light-right.png") lightgray -0.028px
+    0px / 100.046% 100% no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .bg-blueprint {
+    display: none !important;
+  }
+}

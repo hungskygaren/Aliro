@@ -11,8 +11,9 @@
   background: radial-gradient(
     50% 50% at 50% 50%,
     #1e55b3 0%,
-    #01103b 100%
-  ) !important;
+    rgba(16, 50, 119, 0.5) 50%,
+    rgba(1, 16, 59, 0) 100%
+  ), #01103b !important;
 }
 
 .sec-5,
@@ -318,7 +319,7 @@
 
 .sec-6.slide-animated .container::after,
 .sec-6.visited .container::after {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .sec-8 .container::after {
@@ -340,7 +341,7 @@
 
 .sec-8.slide-animated .container::after,
 .sec-8.visited .container::after {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .sec-6__img-left {

@@ -16,7 +16,7 @@
   align-items: center;
   height: 100%;
   padding-top: calc(90 / 720 * 100dvh);
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   box-sizing: border-box;
 }
 
@@ -32,13 +32,14 @@
 
 .sec-market-7__eyebrow {
   font-family: Aptos, var(--font-brand);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 28px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
   letter-spacing: 0px;
   margin: 0 0 8px 0;
+  display: inline-block;
   font-feature-settings:
     "liga" off,
     "clig" off;
@@ -48,6 +49,16 @@
     opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.05s;
+}
+
+.sec-market-7__eyebrow::after {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 2px;
+  background-color: #eaa936;
+  margin-top: 4px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
 }
 
 .sec-market-7__title {
@@ -327,12 +338,47 @@
   color: #ffffff;
 }
 
+.sec-market-7__bottom {
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 15px;
+  position: relative;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.35s;
+}
+
+.sec-market-7__bottom-label {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sec-market-7__bottom-line {
+  flex: 1;
+  max-width: 880px;
+  height: 1px;
+  background-color: #226cb4;
+}
+
 .sec-market-7.slide-animated .sec-market-7__eyebrow,
 .sec-market-7.slide-animated .sec-market-7__title,
 .sec-market-7.slide-animated .sec-market-7__subtitle,
 .sec-market-7.slide-animated .sec-market-7__card,
 .sec-market-7.slide-animated .sec-market-7__decision-card,
-.sec-market-7.slide-animated .sec-market-7__scroll-controller {
+.sec-market-7.slide-animated .sec-market-7__scroll-controller,
+.sec-market-7.slide-animated .sec-market-7__bottom {
   opacity: 1;
   transform: translateY(0);
 }
@@ -348,6 +394,7 @@
 .sec-market-7.visited .sec-market-7__card,
 .sec-market-7.visited .sec-market-7__decision-card,
 .sec-market-7.visited .sec-market-7__scroll-controller,
+.sec-market-7.visited .sec-market-7__bottom,
 .sec-market-7.visited .phrase {
   transform: none !important;
 }
@@ -393,6 +440,10 @@
   .sec-market-7__decision-cta {
     margin-top: 10px !important;
   }
+
+  .sec-market-7__bottom {
+    margin-top: 10px !important;
+  }
 }
 
 @media (max-height: 685px) and (min-width: 1025px) {
@@ -406,8 +457,8 @@
   }
 
   .sec-market-7__eyebrow {
-    font-size: 23px !important;
-    line-height: 27px !important;
+    font-size: 17px !important;
+    line-height: 24px !important;
     margin-bottom: 4px !important;
   }
 
@@ -490,6 +541,10 @@
   .sec-market-7__btn {
     font-size: 13.5px !important;
   }
+
+  .sec-market-7__bottom {
+    margin-top: 8px !important;
+  }
 }
 
 @media (max-height: 645px) and (min-width: 1025px) {
@@ -503,8 +558,8 @@
   }
 
   .sec-market-7__eyebrow {
-    font-size: 21px !important;
-    line-height: 25px !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
     margin-bottom: 3px !important;
   }
 
@@ -604,6 +659,10 @@
     height: 31px !important;
     padding: 6px 15px !important;
   }
+
+  .sec-market-7__bottom {
+    margin-top: 6px !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -683,6 +742,10 @@
 
 /* Scroll Controller Base & Card Box Shadow Reset - Cho Tablet & Mobile (<= 1024px) */
 @media (max-width: 1024px) {
+  .sec-market-7__bottom {
+    display: none !important;
+  }
+
   .sec-market-7__card,
   .sec-market-7__decision-card {
     box-shadow: none !important;
