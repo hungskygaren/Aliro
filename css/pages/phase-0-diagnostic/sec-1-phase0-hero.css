@@ -254,6 +254,9 @@
   background-color: #226cb4;
 }
 
+.sec-phase0-1.swiper-slide-active .sec-phase0-1__top,
+.sec-phase0-1.swiper-slide-active .sec-phase0-1__left,
+.sec-phase0-1.swiper-slide-active .sec-phase0-1__bottom,
 .sec-phase0-1.slide-animated .sec-phase0-1__top,
 .sec-phase0-1.slide-animated .sec-phase0-1__left,
 .sec-phase0-1.slide-animated .sec-phase0-1__bottom {
@@ -261,6 +264,7 @@
   transform: translateY(0);
 }
 
+.sec-phase0-1.swiper-slide-active .sec-phase0-1__right,
 .sec-phase0-1.slide-animated .sec-phase0-1__right {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -386,6 +390,7 @@
     left: auto !important;
     width: 100% !important;
     max-width: 640px !important;
+    flex: 0 0 auto !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     margin-inline: auto !important;
@@ -442,6 +447,8 @@
     right: auto !important;
     width: 100% !important;
     max-width: 560px !important;
+    flex: 0 0 auto !important;
+    height: auto !important;
     margin-top: 0 !important;
     margin-inline: auto !important;
     display: flex !important;
@@ -453,12 +460,13 @@
   .sec-phase0-1__img-wrapper {
     width: 100% !important;
     max-width: 560px !important;
+    height: auto !important;
     margin-inline: auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     position: relative !important;
-    aspect-ratio: 610 / 407 !important;
+    aspect-ratio: 670 / 447 !important;
   }
 
   .sec-phase0-1__glow {
@@ -474,7 +482,7 @@
     width: 100% !important;
     max-width: 560px !important;
     height: auto !important;
-    aspect-ratio: 610 / 407 !important;
+    aspect-ratio: 670 / 447 !important;
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;
@@ -517,7 +525,9 @@
 
   .sec-phase0-1 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 24px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -535,7 +545,7 @@
     justify-content: center !important;
     gap: 0 !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 440px !important;
     margin: 0 auto !important;
     text-align: center !important;
     padding-top: 0 !important;
@@ -544,6 +554,7 @@
   .sec-phase0-1__left {
     width: 100% !important;
     max-width: 100% !important;
+    flex: 0 0 auto !important;
     margin-top: 0 !important;
     margin-inline: auto !important;
     display: flex !important;
@@ -553,33 +564,33 @@
   }
 
   .sec-phase0-1__tag {
-    font-size: 18px !important;
-    line-height: 23px !important;
-    margin-bottom: 8px !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    margin-bottom: 6px !important;
     text-align: center !important;
   }
 
   .sec-phase0-1__title {
-    font-size: 33px !important;
-    line-height: 39px !important;
-    margin-bottom: 8px !important;
+    font-size: 28px !important;
+    line-height: 34px !important;
+    margin-bottom: 6px !important;
     text-align: center !important;
     max-width: 100% !important;
   }
 
   .sec-phase0-1__catchphrase {
-    font-size: 20px !important;
-    line-height: 25px !important;
-    margin-bottom: 8px !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+    margin-bottom: 6px !important;
     text-align: center !important;
   }
 
   .sec-phase0-1__desc {
-    font-size: 17px !important;
-    line-height: 24px !important;
-    max-width: 390px !important;
+    font-size: 15.5px !important;
+    line-height: 22px !important;
+    max-width: 380px !important;
     text-align: center !important;
-    margin: 0 auto 16px auto !important;
+    margin: 0 auto 14px auto !important;
   }
 
   .sec-phase0-1__btn-wrapper {
@@ -590,8 +601,8 @@
   }
 
   .sec-phase0-1__btn {
-    padding: 10px 24px !important;
-    font-size: 15.5px !important;
+    padding: 8px 20px !important;
+    font-size: 14px !important;
     border-radius: 0 !important;
     width: fit-content !important;
     margin-inline: auto !important;
@@ -599,8 +610,10 @@
 
   .sec-phase0-1__right {
     width: 100% !important;
-    max-width: 100% !important;
-    margin-top: 18px !important;
+    max-width: 280px !important;
+    flex: 0 0 auto !important;
+    height: auto !important;
+    margin-top: 12px !important;
     margin-inline: auto !important;
     display: flex !important;
     flex-direction: column !important;
@@ -610,13 +623,14 @@
 
   .sec-phase0-1__img-wrapper {
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 280px !important;
+    height: auto !important;
     margin-inline: auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     position: relative !important;
-    aspect-ratio: 610 / 407 !important;
+    aspect-ratio: 670 / 447 !important;
   }
 
   .sec-phase0-1__glow {
@@ -628,13 +642,64 @@
 
   .sec-phase0-1__img {
     width: 100% !important;
-    max-width: 320px !important;
-    max-height: 210px !important;
+    max-width: 280px !important;
+    max-height: 185px !important;
     height: auto !important;
-    aspect-ratio: 610 / 407 !important;
+    aspect-ratio: 670 / 447 !important;
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;
+  }
+}
+
+@media (max-width: 767px) and (max-height: 640px) {
+  .sec-phase0-1 .flex-center-v {
+    padding-top: calc(var(--section-pt) - 10px) !important;
+    padding-bottom: 16px !important;
+  }
+
+  .sec-phase0-1__tag {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-phase0-1__title {
+    font-size: 24px !important;
+    line-height: 28px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-phase0-1__catchphrase {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .sec-phase0-1__desc {
+    font-size: 14px !important;
+    line-height: 19px !important;
+    max-width: 340px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .sec-phase0-1__btn {
+    padding: 7px 18px !important;
+    font-size: 13px !important;
+  }
+
+  .sec-phase0-1__right {
+    max-width: 220px !important;
+    margin-top: 8px !important;
+  }
+
+  .sec-phase0-1__img-wrapper {
+    max-width: 220px !important;
+  }
+
+  .sec-phase0-1__img {
+    max-width: 220px !important;
+    max-height: 145px !important;
   }
 }
 
@@ -646,48 +711,57 @@
 
   .sec-phase0-1__grid {
     gap: 16px !important;
+    max-width: 460px !important;
+  }
+
+  .sec-phase0-1__left {
+    flex: 0 0 auto !important;
   }
 
   .sec-phase0-1__tag {
-    font-size: 20px !important;
+    font-size: 19px !important;
     line-height: 25px !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-phase0-1__title {
-    font-size: 36px !important;
-    line-height: 42px !important;
-    margin-bottom: 12px !important;
+    font-size: 34px !important;
+    line-height: 40px !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-phase0-1__catchphrase {
-    font-size: 22px !important;
-    line-height: 28px !important;
-    margin-bottom: 12px !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+    margin-bottom: 8px !important;
   }
 
   .sec-phase0-1__desc {
-    font-size: 18px !important;
-    line-height: 25px !important;
-    max-width: 420px !important;
-    margin-bottom: 18px !important;
+    font-size: 17px !important;
+    line-height: 24px !important;
+    max-width: 410px !important;
+    margin-bottom: 16px !important;
   }
 
   .sec-phase0-1__btn {
-    padding: 11px 24px !important;
-    font-size: 16.5px !important;
+    padding: 10px 24px !important;
+    font-size: 15.5px !important;
     border-radius: 0 !important;
   }
 
   .sec-phase0-1__right {
     width: 100% !important;
-    max-width: 100% !important;
-    margin-top: 36px !important;
+    max-width: 340px !important;
+    flex: 0 0 auto !important;
+    height: auto !important;
+    margin-top: 24px !important;
   }
 
   .sec-phase0-1__img-wrapper {
     width: 100% !important;
-    max-width: 365px !important;
+    max-width: 340px !important;
+    height: auto !important;
+    aspect-ratio: 670 / 447 !important;
   }
 
   .sec-phase0-1__glow {
@@ -698,7 +772,7 @@
 
   .sec-phase0-1__img {
     width: 100% !important;
-    max-width: 365px !important;
+    max-width: 340px !important;
     max-height: none !important;
     height: auto !important;
     aspect-ratio: 670 / 447 !important;
