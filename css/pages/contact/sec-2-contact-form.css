@@ -296,13 +296,11 @@
     transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sec-contact-2.swiper-slide-active .phrase,
 .sec-contact-2.slide-animated .phrase {
   opacity: 1;
   transform: translateY(0);
 }
 
-.sec-contact-2.swiper-slide-active .sec-contact-2__right,
 .sec-contact-2.slide-animated .sec-contact-2__right {
   opacity: 1;
   transform: translateY(0) scale(1);

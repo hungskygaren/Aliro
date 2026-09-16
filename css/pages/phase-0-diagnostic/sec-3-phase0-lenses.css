@@ -574,7 +574,6 @@
       transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .sec-phase0-3.swiper-slide-active .sec-phase0-3__card,
   .sec-phase0-3.slide-animated .sec-phase0-3__card {
     opacity: 1;
     transform: translateY(0);
@@ -818,7 +817,6 @@
     right: auto !important;
   }
 
-  .sec-phase0-3.swiper-slide-active .sec-phase0-3__card,
   .sec-phase0-3.slide-animated .sec-phase0-3__card {
     opacity: 1 !important;
     transform: translateY(0) !important;
