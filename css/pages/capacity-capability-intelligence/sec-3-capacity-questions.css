@@ -379,6 +379,14 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  .sec-capacity-3__top {
+    display: none !important;
+  }
+
+  .sec-capacity-3__bottom {
+    display: none !important;
+  }
+
   .sec-capacity-3 .flex-center-v {
     padding-top: var(--section-pt) !important;
     padding-bottom: 0px !important;

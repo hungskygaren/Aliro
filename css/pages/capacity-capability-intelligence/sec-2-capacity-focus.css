@@ -71,7 +71,6 @@
   font-weight: 700;
   line-height: 42px;
   color: var(--Midnight-Navy, #01103b);
-  text-transform: uppercase;
   margin: 0 0 8px 0;
   letter-spacing: 0px;
   font-feature-settings:
@@ -134,7 +133,7 @@
   height: 410px;
   background-color: #ffffff;
   border: 1px solid rgba(126, 147, 168, 0.5);
-  border-radius: 0px;
+  border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
   text-decoration: none;
@@ -364,8 +363,8 @@
   }
 
   .sec-capacity-2__eyebrow {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .sec-capacity-2__title {
@@ -460,8 +459,8 @@
   }
 
   .sec-capacity-2__eyebrow {
-    font-size: 22px !important;
-    line-height: 24px !important;
+    font-size: 17px !important;
+    line-height: 22px !important;
     margin-bottom: 4px !important;
   }
 
@@ -808,6 +807,10 @@
 }
 
 @media (max-width: 767px) {
+  .sec-capacity-2__bottom {
+    display: none !important;
+  }
+
   .sec-capacity-2 {
     height: auto !important;
     min-height: 100vh;

@@ -540,9 +540,13 @@
 
   .sec-capacity-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 16px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
     justify-content: center !important;
     height: 100% !important;
+    min-height: 100dvh !important;
+    box-sizing: border-box !important;
   }
 
   .sec-capacity-4__stage {
@@ -557,16 +561,20 @@
   .sec-capacity-4__eyebrow {
     display: block !important;
     font-family: Aptos, var(--font-brand);
-    font-size: 22px !important;
+    font-size: 15px !important;
     font-weight: 700 !important;
-    line-height: 26px !important;
+    line-height: 19px !important;
     color: var(--Secondary-Deep-Blue, #011b7f) !important;
     text-transform: uppercase !important;
     letter-spacing: 0px !important;
     margin-bottom: 4px !important;
     text-align: center !important;
     align-self: center !important;
-    width: 100% !important;
+    width: auto !important;
+  }
+
+  .sec-capacity-4__eyebrow::after {
+    margin: 4px auto 0 auto !important;
   }
 
   .sec-capacity-4__content {
@@ -579,8 +587,8 @@
 
   .sec-capacity-4__title {
     font-size: 23px !important;
-    line-height: 28px !important;
-    margin-bottom: 6px !important;
+    line-height: 27px !important;
+    margin-bottom: 8px !important;
     text-align: center !important;
     align-self: center !important;
     max-width: 100% !important;
@@ -592,36 +600,44 @@
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 6px 8px !important;
     width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
   }
 
   .sec-capacity-4__card {
-    padding: 7px 9px 8px 9px !important;
+    width: 100% !important;
+    height: auto !important;
     min-height: 0 !important;
+    aspect-ratio: auto !important;
+    padding: 8px 9px 9px 9px !important;
+    box-sizing: border-box !important;
     box-shadow: 0 2px 8px rgba(1, 16, 59, 0.04) !important;
   }
 
   .sec-capacity-4__card-num {
-    font-size: 14px !important;
-    line-height: 17px !important;
+    font-size: 15px !important;
+    line-height: 18px !important;
     font-weight: 700 !important;
     margin-bottom: 2px !important;
     color: var(--Highlight-Blue, #0431b1) !important;
   }
 
   .sec-capacity-4__card-title {
-    font-size: 18px !important;
+    font-size: 13.5px !important;
     line-height: 17px !important;
     font-weight: 700 !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 3px !important;
+    color: var(--Midnight-Navy, #01103b) !important;
   }
 
   .sec-capacity-4__card-desc {
-    font-size: 16px !important;
-    line-height: 16.5px !important;
+    font-size: 12.5px !important;
+    line-height: 16px !important;
+    color: #243752 !important;
   }
 
   .sec-capacity-4__card-highlight {
-    font-size: 13px !important;
+    font-size: 12.5px !important;
     font-weight: 700 !important;
   }
 
@@ -629,26 +645,17 @@
     display: none !important;
   }
 
-  .sec-capacity-4__img-wrapper {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-  }
-
-  .sec-capacity-4__img {
-    max-height: 105px !important;
-    width: 140px !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    display: block !important;
+  .sec-capacity-4__bottom {
+    display: none !important;
   }
 }
 
 @media (max-width: 767px) and (min-height: 780px) {
   .sec-capacity-4 .flex-center-v {
     padding-top: var(--section-pt) !important;
-    padding-bottom: 25px !important;
+    padding-bottom: 24px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
   }
 
   .sec-capacity-4__stage {
@@ -658,53 +665,57 @@
   }
 
   .sec-capacity-4__content {
-    gap: 18px !important;
+    gap: 12px !important;
   }
 
   .sec-capacity-4__eyebrow {
-    font-size: 22px !important;
-    line-height: 26px !important;
-    margin-bottom: 8px !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    margin-bottom: 6px !important;
     text-align: center !important;
     align-self: center !important;
   }
 
   .sec-capacity-4__title {
-    font-size: 28px !important;
-    line-height: 34px !important;
+    font-size: 26px !important;
+    line-height: 32px !important;
     margin-bottom: 8px !important;
     text-align: center !important;
     align-self: center !important;
   }
 
   .sec-capacity-4__cards {
-    gap: 14px 12px !important;
+    gap: 10px 10px !important;
+    width: 100% !important;
   }
 
   .sec-capacity-4__card {
-    padding: 14px 13px 16px 13px !important;
+    width: 100% !important;
+    height: auto !important;
     min-height: 0 !important;
+    aspect-ratio: auto !important;
+    padding: 12px 12px 13px 12px !important;
   }
 
   .sec-capacity-4__card-num {
-    font-size: 17px !important;
-    line-height: 20px !important;
-    margin-bottom: 4px !important;
+    font-size: 16px !important;
+    line-height: 19px !important;
+    margin-bottom: 3px !important;
   }
 
   .sec-capacity-4__card-title {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 14.5px !important;
+    line-height: 18.5px !important;
     margin-bottom: 4px !important;
   }
 
   .sec-capacity-4__card-desc {
-    font-size: 15px !important;
-    line-height: 19.5px !important;
+    font-size: 13.5px !important;
+    line-height: 17.5px !important;
   }
 
   .sec-capacity-4__card-highlight {
-    font-size: 15px !important;
+    font-size: 13.5px !important;
   }
 
   .sec-capacity-4__right {
@@ -713,5 +724,40 @@
 
   .sec-capacity-4__bottom {
     display: none !important;
+  }
+}
+
+@media (max-width: 374px) {
+  .sec-capacity-4__eyebrow {
+    font-size: 13.5px !important;
+    line-height: 17px !important;
+  }
+
+  .sec-capacity-4__title {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+
+  .sec-capacity-4__cards {
+    gap: 5px 6px !important;
+  }
+
+  .sec-capacity-4__card {
+    padding: 7px 7px 8px 7px !important;
+  }
+
+  .sec-capacity-4__card-num {
+    font-size: 14px !important;
+    line-height: 16px !important;
+  }
+
+  .sec-capacity-4__card-title {
+    font-size: 12.5px !important;
+    line-height: 15.5px !important;
+  }
+
+  .sec-capacity-4__card-desc {
+    font-size: 11.5px !important;
+    line-height: 14.5px !important;
   }
 }

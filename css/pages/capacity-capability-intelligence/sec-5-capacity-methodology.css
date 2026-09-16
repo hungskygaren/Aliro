@@ -44,8 +44,8 @@
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  padding-top: var(--section-pt);
-  padding-bottom: 25px;
+  padding-top: 90px;
+  padding-bottom: 2px;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
@@ -94,7 +94,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 641px;
-  margin-top: -30px;
+  margin-top: -10px;
   margin-bottom: 10px;
   z-index: 4;
 }
@@ -210,7 +210,7 @@
   color: #ffffff;
   margin: 0 0 16px 0;
   width: max-content;
-  max-width: 371px;
+  max-width: 367px;
   text-align: center;
   opacity: 0;
   transform: translateY(20px);
@@ -243,9 +243,9 @@
 }
 
 .sec-capacity-5__img-box {
-  width: 340px;
-  max-width: 340px;
-  height: 380px;
+  width: 292px;
+  max-width: 292px;
+  height: 335px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -324,7 +324,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-top: 14px;
+  margin-top: 33px;
   position: relative;
   z-index: 4;
   opacity: 0;
@@ -409,16 +409,16 @@
   transition: none !important;
 }
 
-@media (max-height: 685px) and (min-width: 1025px) {
+@media (max-height: 700px) and (min-width: 1025px) {
   .sec-capacity-5 .flex-center-v {
-    padding-top: var(--section-pt) !important;
+    padding-top: 85px !important;
     padding-bottom: 16px !important;
     justify-content: center !important;
   }
 
   .sec-capacity-5__stepper {
     max-width: 606px !important;
-    margin-top: calc(20 / 720 * 100dvh) !important;
+    margin-top: -10px !important;
     margin-bottom: 8px !important;
   }
 
@@ -456,14 +456,14 @@
   }
 
   .sec-capacity-5__img-box {
-    width: 323px !important;
-    max-width: 323px !important;
-    height: 361px !important;
+    width: 275px !important;
+    max-width: 275px !important;
+    height: 315px !important;
   }
 
   .sec-capacity-5__arrow-wrap {
     width: 218px !important;
-    margin: 246px 13px 0 13px !important;
+    margin: 240px 13px 0 13px !important;
   }
 
   .sec-capacity-5__arrow-icon {
@@ -472,23 +472,23 @@
   }
 }
 
-@media (max-height: 630px) and (min-width: 1025px) {
+@media (max-height: 660px) and (min-width: 1025px) {
   .sec-capacity-5 .flex-center-v {
-    padding-top: var(--section-pt) !important;
+    padding-top: 72px !important;
     padding-bottom: 12px !important;
     justify-content: center !important;
   }
 
   .sec-capacity-5__stepper {
-    max-width: 591px !important;
-    margin-top: calc(15 / 720 * 100dvh) !important;
-    margin-bottom: 7px !important;
+    max-width: 580px !important;
+    margin-top: -10px !important;
+    margin-bottom: 6px !important;
   }
 
   .sec-capacity-5__step-node {
-    width: 37px !important;
-    height: 37px !important;
-    font-size: 22px !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 21px !important;
   }
 
   .sec-capacity-5__step-line {
@@ -497,43 +497,48 @@
   }
 
   .sec-capacity-5__stage {
-    max-width: 1018px !important;
+    max-width: 990px !important;
   }
 
   .sec-capacity-5__col {
-    width: 315px !important;
-    max-width: 315px !important;
+    width: 305px !important;
+    max-width: 305px !important;
   }
 
   .sec-capacity-5__col-title {
-    font-size: 33px !important;
-    line-height: 37px !important;
-    margin-bottom: 7px !important;
+    font-size: 31px !important;
+    line-height: 35px !important;
+    margin-bottom: 5px !important;
   }
 
   .sec-capacity-5__col-desc {
-    font-size: 16.5px !important;
-    line-height: 22px !important;
-    margin-bottom: 15px !important;
-    max-width: 343px !important;
+    font-size: 15.5px !important;
+    line-height: 21px !important;
+    margin-bottom: 12px !important;
+    max-width: 335px !important;
   }
 
   .sec-capacity-5__img-box {
-    width: 315px !important;
-    max-width: 315px !important;
-    height: 352px !important;
+    width: 260px !important;
+    max-width: 260px !important;
+    height: 298px !important;
   }
 
   .sec-capacity-5__arrow-wrap {
-    width: 213px !important;
-    margin: 238px 13px 0 13px !important;
+    width: 205px !important;
+    margin: 226px 12px 0 12px !important;
   }
 
   .sec-capacity-5__arrow-icon {
-    width: 213px !important;
-    height: 37px !important;
+    width: 205px !important;
+    height: 36px !important;
+  }
+
+  .sec-capacity-5__bottom {
+    margin-top: 18px !important;
   }
 }
+
 
 @media (max-width: 1200px) and (min-width: 1025px) {
   .sec-capacity-5__stepper {

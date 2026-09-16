@@ -22,7 +22,7 @@
   height: 100%;
   position: relative;
   box-sizing: border-box;
-  padding-top: var(--section-pt);
+  padding-top: calc(90 / 720 * 100dvh);
   padding-bottom: 20px;
   z-index: 3;
 }
@@ -30,19 +30,22 @@
 .sec-digital-1__stage {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  padding-top: calc(98 / 720 * 100dvh);
   gap: 30px;
   position: relative;
   z-index: 3;
 }
 
 .sec-digital-1__left {
-  flex: 1;
-  max-width: 530px;
+  flex: 0 0 calc(470 / 1170 * 100%);
+  max-width: 470px;
+  width: 100%;
+  margin-top: calc(
+    20 / 720 * 100dvh
+  ); /* Visual top at y=90, Logo top at y=110 (90 + 20) */
   z-index: 4;
   opacity: 0;
   transform: translateY(35px);
@@ -52,6 +55,22 @@
   transition-delay: 0.15s;
 }
 
+.sec-digital-1__logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  line-height: 0;
+  transition-delay: 0.05s;
+}
+
+.sec-digital-1__logo-img {
+  width: 80px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+}
+
 .sec-digital-1__eyebrow {
   font-family: Aptos, var(--font-brand);
   font-size: 24px;
@@ -59,7 +78,7 @@
   line-height: 28px;
   color: var(--Secondary-Deep-Blue, #011b7f);
   text-transform: uppercase;
-  margin: 0 0 16px 0;
+  margin: 0 0 10px 0;
   letter-spacing: 0px;
   font-feature-settings:
     "liga" off,
@@ -74,8 +93,8 @@
   line-height: 50px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0 0 18px 0;
-  max-width: 440px;
+  margin: 0 0 10px 0;
+  max-width: 570px;
   letter-spacing: 0px;
   font-feature-settings:
     "liga" off,
@@ -89,7 +108,7 @@
   font-weight: 700;
   line-height: 28px;
   color: var(--Secondary-Deep-Blue, #011b7f);
-  margin: 0 0 16px 0;
+  margin: 0 0 10px 0;
   letter-spacing: 0px;
   font-feature-settings:
     "liga" off,
@@ -113,7 +132,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 4px 6px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   transition-delay: 0.3s;
 }
 
@@ -180,10 +199,12 @@
 }
 
 .sec-digital-1__right {
-  position: relative;
-  flex: 1;
-  min-width: 0;
-  width: auto;
+  flex: 0 0 670px;
+  width: 670px;
+  max-width: 670px;
+  height: auto;
+  margin-top: 0;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,6 +228,8 @@
 .sec-digital-1__img {
   width: 100%;
   height: auto;
+  max-height: 563px;
+  aspect-ratio: 670 / 563;
   object-fit: contain;
   display: block;
   position: relative;
@@ -234,17 +257,68 @@
 
 @media (max-height: 660px) and (min-width: 1025px) {
   .sec-digital-1 .flex-center-v {
-    justify-content: center;
+    padding-top: calc(75 / 720 * 100dvh);
+    justify-content: flex-start;
   }
 
   .sec-digital-1__stage {
-    align-items: center;
-    padding-top: 0;
+    align-items: flex-start;
   }
 
-  .sec-digital-1__left,
+  .sec-digital-1__left {
+    margin-top: 15px;
+  }
+
   .sec-digital-1__right {
     margin-top: 0;
+    width: 670px;
+    max-width: 670px;
+  }
+
+  .sec-digital-1__logo {
+    margin-bottom: 16px;
+  }
+
+  .sec-digital-1__logo-img {
+    width: 78px;
+    height: 98px;
+  }
+
+  .sec-digital-1__eyebrow {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .sec-digital-1__title {
+    font-size: 44px;
+    line-height: 50px;
+    margin-bottom: 8px;
+  }
+
+  .sec-digital-1__subtitle {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .sec-digital-1__desc {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 18px;
+  }
+
+  .sec-digital-1__breadcrumb {
+    margin-bottom: 20px;
+  }
+
+  .sec-digital-1__btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .sec-digital-1__img {
+    max-height: 540px;
   }
 }
 
@@ -256,6 +330,16 @@
   .sec-digital-1__title {
     font-size: 38px;
     line-height: 44px;
+  }
+
+  .sec-digital-1__right {
+    width: 55%;
+    max-width: 640px;
+    flex: 0 0 auto;
+  }
+
+  .sec-digital-1__img {
+    max-height: 520px;
   }
 }
 
@@ -308,6 +392,17 @@
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+  }
+
+  .sec-digital-1__logo {
+    justify-content: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  .sec-digital-1__logo-img {
+    margin-inline: auto !important;
+    width: 70px !important;
+    height: 88px !important;
   }
 
   .sec-digital-1__eyebrow {
@@ -447,6 +542,17 @@
     text-align: center !important;
   }
 
+  .sec-digital-1__logo {
+    justify-content: center !important;
+    margin-bottom: 8px !important;
+  }
+
+  .sec-digital-1__logo-img {
+    margin-inline: auto !important;
+    width: 52px !important;
+    height: 65px !important;
+  }
+
   .sec-digital-1__eyebrow {
     font-size: 17px !important;
     line-height: 22px !important;
@@ -516,8 +622,9 @@
 
   .sec-digital-1__right {
     width: 100% !important;
+    max-width: 250px !important;
     height: auto !important;
-    margin-top: 8px !important;
+    margin-top: 0px !important;
     margin-inline: auto !important;
     display: flex !important;
     flex-direction: column !important;
@@ -527,6 +634,7 @@
 
   .sec-digital-1__img-wrapper {
     width: 100% !important;
+    max-width: 250px !important;
     height: auto !important;
     margin-inline: auto !important;
     display: flex !important;
@@ -537,7 +645,9 @@
 
   .sec-digital-1__img {
     width: 100% !important;
+    max-width: 250px !important;
     height: auto !important;
+    max-height: 180px !important;
     object-fit: contain !important;
     margin-inline: auto !important;
     display: block !important;
@@ -607,7 +717,26 @@
     border-radius: 0px !important;
   }
 
+  .sec-digital-1__logo {
+    margin-bottom: 12px !important;
+  }
+
+  .sec-digital-1__logo-img {
+    width: 60px !important;
+    height: 75px !important;
+  }
+
   .sec-digital-1__right {
+    max-width: 100% !important;
     margin-top: 12px !important;
+  }
+
+  .sec-digital-1__img-wrapper {
+    max-width: 100% !important;
+  }
+
+  .sec-digital-1__img {
+    max-width: 100% !important;
+    max-height: none !important;
   }
 }
