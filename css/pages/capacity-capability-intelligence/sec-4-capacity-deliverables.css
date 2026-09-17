@@ -344,10 +344,6 @@
   .sec-capacity-4__cards {
     gap: 8px;
   }
-
-  .sec-capacity-4__card {
-    padding: 8px 12px 12px 12px;
-  }
 }
 
 @media (max-width: 1200px) and (min-width: 1025px) {
