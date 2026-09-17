@@ -1036,7 +1036,8 @@
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .sec-capacity-6__top,
-  .sec-capacity-6__bottom {
+  .sec-capacity-6__bottom,
+  .sec-capacity-6__capacity-eyebrow {
     display: none !important;
   }
 
@@ -1365,7 +1366,8 @@
 
 @media (max-width: 767px) {
   .sec-capacity-6__top,
-  .sec-capacity-6__bottom {
+  .sec-capacity-6__bottom,
+  .sec-capacity-6__capacity-eyebrow {
     display: none !important;
   }
 
