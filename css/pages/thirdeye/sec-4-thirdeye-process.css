@@ -15,17 +15,60 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding-top: var(--section-pt);
+  padding-top: calc(91 / 720 * 100dvh);
   padding-bottom: 20px;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
 }
 
+/* ----------------------------------------------------
+   TOP / EYEBROW
+   ---------------------------------------------------- */
+.sec-thirdeye-4__top {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto -21px auto;
+  text-align: left;
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.05s;
+}
+
+.sec-thirdeye-4__eyebrow {
+  display: inline-block;
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Secondary-Deep-Blue, #011b7f);
+  text-transform: uppercase;
+  margin-bottom: 0;
+  letter-spacing: 0px;
+}
+
+.sec-thirdeye-4__eyebrow::after {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 2px;
+  background-color: #eaa936;
+  margin-top: 4px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ----------------------------------------------------
+   HEADER / TITLE
+   ---------------------------------------------------- */
 .sec-thirdeye-4__header {
   text-align: center;
-  margin-top: calc(40 / 720 * 100dvh);
-  margin-bottom: 0;
+  margin: 0 auto;
   z-index: 4;
   opacity: 0;
   transform: translateY(-20px);
@@ -42,19 +85,23 @@
   line-height: 40px;
   color: var(--Midnight-Navy, #01103b);
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto 20px auto;
   letter-spacing: 0.5px;
+  white-space: normal;
   font-feature-settings:
     "liga" off,
     "clig" off;
 }
 
+/* ----------------------------------------------------
+   CENTRAL ISOMETRIC STAGE & 4 FEATURES
+   ---------------------------------------------------- */
 .sec-thirdeye-4__stage {
   position: relative;
   width: 100%;
   max-width: 1170px;
   height: 510px;
-  margin-top: 15px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,6 +197,24 @@
     "clig" off;
 }
 
+.sec-thirdeye-4__feature--top-left .sec-thirdeye-4__feature-title {
+  max-width: 170px;
+}
+
+.sec-thirdeye-4__feature--top-right .sec-thirdeye-4__feature-title {
+  max-width: 205px;
+}
+
+.sec-thirdeye-4__feature--bottom-right .sec-thirdeye-4__feature-title {
+  max-width: 270px;
+  margin-bottom: 6px;
+}
+
+.sec-thirdeye-4__feature--bottom-left .sec-thirdeye-4__feature-title {
+  max-width: 270px;
+  margin-bottom: 5px;
+}
+
 .sec-thirdeye-4__feature-desc {
   font-family: Aptos, var(--font-brand);
   font-size: 16px;
@@ -160,7 +225,7 @@
 }
 
 .sec-thirdeye-4__feature--top-left {
-  top: 15px;
+  top: 25px;
   left: 0;
   align-items: flex-end;
   text-align: right;
@@ -169,7 +234,7 @@
 }
 
 .sec-thirdeye-4__feature--top-right {
-  top: 15px;
+  top: 25px;
   right: 0;
   align-items: flex-start;
   text-align: left;
@@ -178,7 +243,7 @@
 }
 
 .sec-thirdeye-4__feature--bottom-right {
-  bottom: 15px;
+  top: 289px;
   right: 0;
   align-items: flex-start;
   text-align: left;
@@ -187,7 +252,7 @@
 }
 
 .sec-thirdeye-4__feature--bottom-left {
-  bottom: 15px;
+  top: 289px;
   left: 0;
   align-items: flex-end;
   text-align: right;
@@ -195,80 +260,149 @@
   transition-delay: 0.8s;
 }
 
-.sec-thirdeye-4.slide-animated .sec-thirdeye-4__header {
+/* ----------------------------------------------------
+   BOTTOM BLOCK
+   ---------------------------------------------------- */
+.sec-thirdeye-4__bottom {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto -2px auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.4s;
+}
+
+.sec-thirdeye-4__bottom-label {
+  font-family: Aptos, var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--Midnight-Navy, #01103b);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sec-thirdeye-4__bottom-line {
+  flex: 1;
+  max-width: 880px;
+  height: 1px;
+  background-color: #226cb4;
+}
+
+/* ----------------------------------------------------
+   ACTIVE & VISITED STATES
+   ---------------------------------------------------- */
+.sec-thirdeye-4.swiper-slide-active .sec-thirdeye-4__top,
+.sec-thirdeye-4.swiper-slide-active .sec-thirdeye-4__header,
+.sec-thirdeye-4.swiper-slide-active .sec-thirdeye-4__bottom,
+.sec-thirdeye-4.slide-animated .sec-thirdeye-4__top,
+.sec-thirdeye-4.slide-animated .sec-thirdeye-4__header,
+.sec-thirdeye-4.slide-animated .sec-thirdeye-4__bottom {
   opacity: 1;
   transform: translateY(0);
 }
 
+.sec-thirdeye-4.swiper-slide-active .sec-thirdeye-4__center-wrapper,
 .sec-thirdeye-4.slide-animated .sec-thirdeye-4__center-wrapper {
   opacity: 1;
   transform: scale(1);
 }
 
+.sec-thirdeye-4.swiper-slide-active .sec-thirdeye-4__feature,
 .sec-thirdeye-4.slide-animated .sec-thirdeye-4__feature {
   opacity: 1;
   transform: translate(0, 0);
 }
 
+.sec-thirdeye-4.visited .sec-thirdeye-4__top,
 .sec-thirdeye-4.visited .sec-thirdeye-4__header,
 .sec-thirdeye-4.visited .sec-thirdeye-4__center-wrapper,
-.sec-thirdeye-4.visited .sec-thirdeye-4__feature {
+.sec-thirdeye-4.visited .sec-thirdeye-4__feature,
+.sec-thirdeye-4.visited .sec-thirdeye-4__bottom {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
 }
 
-@media (max-height: 660px) and (min-width: 1025px) {
+/* ----------------------------------------------------
+   RESPONSIVE HEIGHT (DESKTOP)
+   ---------------------------------------------------- */
+@media (max-height: 700px) and (min-width: 1025px) {
   .sec-thirdeye-4 .flex-center-v {
-    padding-top: var(--section-pt);
     padding-bottom: 10px;
-  }
-
-  .sec-thirdeye-4__header {
-    margin-top: 10px;
-  }
-
-  .sec-thirdeye-4__stage {
-    margin-top: 10px;
-  }
-}
-
-@media (max-height: 620px) and (min-width: 1025px) {
-  .sec-thirdeye-4 .flex-center-v {
-    padding-top: var(--section-pt);
-    padding-bottom: 5px;
-  }
-
-  .sec-thirdeye-4__header {
-    margin-top: 4px;
+    justify-content: center;
   }
 
   .sec-thirdeye-4__title {
     font-size: 34px;
     line-height: 38px;
+    margin-bottom: 16px;
   }
 
   .sec-thirdeye-4__stage {
-    margin-top: 4px;
-    height: 485px;
-  }
-
-  .sec-thirdeye-4__center-wrapper {
-    max-width: 542px;
-    height: 485px;
-  }
-
-  .sec-thirdeye-4__feature-title {
-    font-size: 22px;
-    line-height: 26px;
-  }
-
-  .sec-thirdeye-4__feature-desc {
-    font-size: 15px;
-    line-height: 20px;
+    transform: scale(0.96);
+    transform-origin: center top;
+    height: 490px;
+    margin-top: 0;
   }
 }
 
+@media (max-height: 660px) and (min-width: 1025px) {
+  .sec-thirdeye-4 .flex-center-v {
+    padding-top: 75px;
+    padding-bottom: 8px;
+  }
+
+  .sec-thirdeye-4__title {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 12px;
+  }
+
+  .sec-thirdeye-4__stage {
+    transform: scale(0.925);
+    transform-origin: center top;
+    height: 472px;
+    margin-top: 0;
+  }
+}
+
+@media (max-height: 630px) and (min-width: 1025px) {
+  .sec-thirdeye-4 .flex-center-v {
+    padding-top: 75px;
+    padding-bottom: 6px;
+  }
+
+  .sec-thirdeye-4__eyebrow {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .sec-thirdeye-4__title {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .sec-thirdeye-4__stage {
+    transform: scale(0.88);
+    transform-origin: center top;
+    height: 450px;
+    margin-top: 0;
+  }
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE WIDTH (TABLET & NARROW DESKTOP)
+   ---------------------------------------------------- */
 @media (max-width: 1200px) {
   .sec-thirdeye-4__title {
     font-size: 30px;
@@ -282,7 +416,15 @@
     aspect-ratio: 571 / 510;
   }
   .sec-thirdeye-4__feature {
-    width: 270px;
+    width: 240px;
+  }
+  .sec-thirdeye-4__feature--top-left,
+  .sec-thirdeye-4__feature--top-right {
+    top: 15px;
+  }
+  .sec-thirdeye-4__feature--bottom-left,
+  .sec-thirdeye-4__feature--bottom-right {
+    top: 240px;
   }
   .sec-thirdeye-4__feature-title {
     font-size: 20px;
@@ -308,6 +450,11 @@
     overflow: hidden !important;
   }
 
+  .sec-thirdeye-4__top,
+  .sec-thirdeye-4__bottom {
+    display: none !important;
+  }
+
   .sec-thirdeye-4__header {
     margin-top: 0 !important;
     margin-bottom: 16px !important;
@@ -317,6 +464,7 @@
   .sec-thirdeye-4__title {
     font-size: 26px !important;
     line-height: 32px !important;
+    white-space: normal !important;
   }
 
   .sec-thirdeye-4__stage {
@@ -404,6 +552,11 @@
     min-height: 100dvh !important;
   }
 
+  .sec-thirdeye-4__top,
+  .sec-thirdeye-4__bottom {
+    display: none !important;
+  }
+
   .sec-thirdeye-4__header {
     margin-top: 0 !important;
     margin-bottom: 16px !important;
@@ -416,6 +569,7 @@
     text-align: center !important;
     max-width: 380px !important;
     margin: 0 auto !important;
+    white-space: normal !important;
   }
 
   .sec-thirdeye-4__stage {
@@ -509,6 +663,7 @@
     font-size: 33px !important;
     line-height: 39px !important;
     max-width: 440px !important;
+    white-space: normal !important;
   }
 
   .sec-thirdeye-4__stage {

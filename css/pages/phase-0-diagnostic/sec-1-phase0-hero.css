@@ -495,20 +495,7 @@
   }
 
   .sec-phase0-1__top {
-    width: 100% !important;
-    text-align: center !important;
-    margin-bottom: 8px !important;
-  }
-
-  .sec-phase0-1__eyebrow {
-    font-size: 15px !important;
-    line-height: 19px !important;
-    text-align: center !important;
-    width: auto !important;
-  }
-
-  .sec-phase0-1__eyebrow::after {
-    margin: 4px auto 0 auto !important;
+    display: none !important;
   }
 
   .sec-phase0-1 {
