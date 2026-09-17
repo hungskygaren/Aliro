@@ -23,8 +23,8 @@
   align-items: center;
   height: 100%;
   position: relative;
-  padding-top: var(--section-pt);
-  padding-bottom: 20px;
+  padding-top: 75px;
+  padding-bottom: 0px;
   box-sizing: border-box;
 }
 

@@ -310,27 +310,6 @@
     gap: 8px;
   }
 
-  .sec-capacity-4__card-num {
-    font-size: 19px;
-    line-height: 23px;
-    margin-bottom: 2px;
-  }
-
-  .sec-capacity-4__card-title {
-    font-size: 19px;
-    line-height: 23px;
-    margin-bottom: 2px;
-  }
-
-  .sec-capacity-4__card-desc {
-    font-size: 15px;
-    line-height: normal;
-  }
-
-  .sec-capacity-4__card-highlight {
-    font-size: 15px;
-  }
-
   .sec-capacity-4__bottom {
     margin-top: 18px;
   }
@@ -368,23 +347,6 @@
 
   .sec-capacity-4__card {
     padding: 8px 12px 12px 12px;
-  }
-
-  .sec-capacity-4__card-num {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 2px;
-  }
-
-  .sec-capacity-4__card-title {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 2px;
-  }
-
-  .sec-capacity-4__card-desc {
-    font-size: 14px;
-    line-height: normal;
   }
 }
 

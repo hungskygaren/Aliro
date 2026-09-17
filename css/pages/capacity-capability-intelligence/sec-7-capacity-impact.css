@@ -344,7 +344,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-top: 15px;
+  margin-top: 10px;
   position: relative;
   z-index: 4;
   opacity: 0;
@@ -472,71 +472,204 @@
 
   .sec-capacity-7__card {
     height: 375px !important;
+    padding: 8px 10px 14px 10px !important;
   }
 
   .sec-capacity-7__card-num {
-    font-size: 30px !important;
+    font-size: 29px !important;
     line-height: 23px !important;
+    top: 8px !important;
+    left: 10px !important;
   }
 
   .sec-capacity-7__card-img-box {
-    width: 156px !important;
-    height: 170px !important;
-    margin-bottom: 4px !important;
+    width: 142px !important;
+    height: 152px !important;
+    margin: 0 auto 3px auto !important;
   }
 
   .sec-capacity-7__card-title {
-    font-size: 21px !important;
+    font-size: 19px !important;
     line-height: 23px !important;
-    margin-bottom: 3px !important;
+    margin-bottom: 2px !important;
   }
 
   .sec-capacity-7__card-question {
-    font-size: 15.5px !important;
-    line-height: 20px !important;
-    min-height: 40px !important;
+    font-size: 16px !important;
+    line-height: normal !important;
+    min-height: 44px !important;
     margin-bottom: 6px !important;
   }
 
+  .sec-capacity-7__card-list {
+    gap: 6px !important;
+  }
+
   .sec-capacity-7__card-item {
-    height: 26px !important;
-    gap: 10px !important;
+    height: auto !important;
+    min-height: 22px !important;
+    align-items: center !important;
+    gap: 8px !important;
   }
 
   .sec-capacity-7__card-item-icon {
-    width: 22px !important;
-    height: 22px !important;
+    width: 19px !important;
+    height: 19px !important;
+    flex-shrink: 0 !important;
   }
 
   .sec-capacity-7__card-item-text {
-    font-size: 14.5px !important;
-    line-height: 26px !important;
+    font-size: 13.5px !important;
+    line-height: 1.35 !important;
   }
 
   .sec-capacity-7__decision-card {
     height: 375px !important;
-    padding: 18px 20px 18px 20px !important;
+    padding: 18px 18px 18px 18px !important;
   }
 
   .sec-capacity-7__decision-eyebrow {
-    font-size: 23px !important;
-    line-height: 27px !important;
+    font-size: 22px !important;
+    line-height: 26px !important;
     margin-bottom: 6px !important;
   }
 
   .sec-capacity-7__decision-desc {
-    font-size: 19px !important;
-    line-height: 23px !important;
-    margin-bottom: 12px !important;
+    font-size: 17.5px !important;
+    line-height: 22px !important;
+    margin-bottom: 10px !important;
   }
 
   .sec-capacity-7__decision-headline {
-    font-size: 34px !important;
-    line-height: 38px !important;
+    font-size: 30px !important;
+    line-height: 34px !important;
+  }
+
+  .sec-capacity-7__decision-cta {
+    margin-top: 10px !important;
   }
 
   .sec-capacity-7__btn {
     font-size: 13.5px !important;
+    height: 32px !important;
+    padding: 6px 16px !important;
+  }
+}
+
+@media (max-height: 660px) and (min-width: 1025px) {
+  .sec-capacity-7 .flex-center-v {
+    padding-top: var(--section-pt) !important;
+    padding-bottom: 11px !important;
+  }
+
+  .sec-capacity-7__header {
+    margin-bottom: 9px !important;
+  }
+
+  .sec-capacity-7__eyebrow {
+    font-size: 22px !important;
+    line-height: 26px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-capacity-7__title {
+    font-size: 38px !important;
+    line-height: 44px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .sec-capacity-7__subtitle {
+    font-size: 16.5px !important;
+    line-height: 22px !important;
+  }
+
+  .sec-capacity-7__stage {
+    gap: 18px !important;
+  }
+
+  .sec-capacity-7__card {
+    height: 365px !important;
+    padding: 8px 10px 13px 10px !important;
+  }
+
+  .sec-capacity-7__card-num {
+    font-size: 28.5px !important;
+    line-height: 22.5px !important;
+    top: 8px !important;
+    left: 10px !important;
+  }
+
+  .sec-capacity-7__card-img-box {
+    width: 140px !important;
+    height: 150px !important;
+    margin: 0 auto 3px auto !important;
+  }
+
+  .sec-capacity-7__card-title {
+    font-size: 18.5px !important;
+    line-height: 22px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .sec-capacity-7__card-question {
+    font-size: 16px !important;
+    line-height: normal !important;
+    min-height: 44px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .sec-capacity-7__card-list {
+    gap: 5px !important;
+  }
+
+  .sec-capacity-7__card-item {
+    height: auto !important;
+    min-height: 22px !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .sec-capacity-7__card-item-icon {
+    width: 19px !important;
+    height: 19px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .sec-capacity-7__card-item-text {
+    font-size: 13.5px !important;
+    line-height: 1.35 !important;
+  }
+
+  .sec-capacity-7__decision-card {
+    height: 365px !important;
+    padding: 17px 17px 17px 17px !important;
+  }
+
+  .sec-capacity-7__decision-eyebrow {
+    font-size: 21.5px !important;
+    line-height: 25.5px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .sec-capacity-7__decision-desc {
+    font-size: 17px !important;
+    line-height: 21px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .sec-capacity-7__decision-headline {
+    font-size: 29.5px !important;
+    line-height: 33.5px !important;
+  }
+
+  .sec-capacity-7__decision-cta {
+    margin-top: 10px !important;
+  }
+
+  .sec-capacity-7__btn {
+    font-size: 13.5px !important;
+    height: 31px !important;
+    padding: 6px 15px !important;
   }
 }
 
@@ -573,7 +706,7 @@
 
   .sec-capacity-7__card {
     height: 355px !important;
-    padding: 8px 10px 10px 10px !important;
+    padding: 8px 10px 13px 10px !important;
   }
 
   .sec-capacity-7__card-num {
@@ -584,22 +717,22 @@
   }
 
   .sec-capacity-7__card-img-box {
-    width: 142px !important;
-    height: 154px !important;
+    width: 138px !important;
+    height: 148px !important;
     margin-bottom: 3px !important;
   }
 
   .sec-capacity-7__card-title {
-    font-size: 20px !important;
+    font-size: 18.5px !important;
     line-height: 22px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-capacity-7__card-question {
-    font-size: 15px !important;
-    line-height: 19px !important;
-    min-height: 38px !important;
-    margin-bottom: 6px !important;
+    font-size: 16px !important;
+    line-height: normal !important;
+    min-height: 44px !important;
+    margin-bottom: 5px !important;
   }
 
   .sec-capacity-7__card-list {
@@ -607,18 +740,21 @@
   }
 
   .sec-capacity-7__card-item {
-    height: 24px !important;
+    height: auto !important;
+    min-height: 22px !important;
+    align-items: center !important;
     gap: 8px !important;
   }
 
   .sec-capacity-7__card-item-icon {
-    width: 20px !important;
-    height: 20px !important;
+    width: 19px !important;
+    height: 19px !important;
+    flex-shrink: 0 !important;
   }
 
   .sec-capacity-7__card-item-text {
-    font-size: 14px !important;
-    line-height: 23px !important;
+    font-size: 13.5px !important;
+    line-height: 1.35 !important;
   }
 
   .sec-capacity-7__decision-card {
@@ -634,13 +770,13 @@
 
   .sec-capacity-7__decision-desc {
     font-size: 17px !important;
-    line-height: 22px !important;
+    line-height: 21px !important;
     margin-bottom: 10px !important;
   }
 
   .sec-capacity-7__decision-headline {
-    font-size: 30px !important;
-    line-height: 34px !important;
+    font-size: 29px !important;
+    line-height: 33px !important;
   }
 
   .sec-capacity-7__decision-cta {
@@ -672,74 +808,76 @@
   }
 
   .sec-capacity-7__title {
-    font-size: 34px !important;
-    line-height: 39px !important;
+    font-size: 33px !important;
+    line-height: 38px !important;
     margin-bottom: 2px !important;
-    max-width: 750px !important;
   }
 
   .sec-capacity-7__subtitle {
-    font-size: 15px !important;
+    font-size: 15.5px !important;
     line-height: 20px !important;
     max-width: 850px !important;
   }
 
   .sec-capacity-7__stage {
-    gap: 15px !important;
+    gap: 16px !important;
   }
 
   .sec-capacity-7__card {
-    height: 345px !important;
-    padding: 7px 10px 9px 10px !important;
+    height: 340px !important;
+    padding: 7px 10px 12px 10px !important;
   }
 
   .sec-capacity-7__card-num {
-    font-size: 26px !important;
-    line-height: 20px !important;
+    font-size: 27px !important;
+    line-height: 21px !important;
     top: 7px !important;
     left: 9px !important;
   }
 
   .sec-capacity-7__card-img-box {
-    width: 136px !important;
-    height: 146px !important;
+    width: 126px !important;
+    height: 133px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-capacity-7__card-title {
-    font-size: 19px !important;
+    font-size: 17.5px !important;
     line-height: 21px !important;
     margin-bottom: 2px !important;
   }
 
   .sec-capacity-7__card-question {
-    font-size: 14.5px !important;
-    line-height: 18px !important;
-    min-height: 36px !important;
-    margin-bottom: 4px !important;
+    font-size: 16px !important;
+    line-height: normal !important;
+    min-height: 44px !important;
+    margin-bottom: 3px !important;
   }
 
   .sec-capacity-7__card-list {
-    gap: 5px !important;
+    gap: 6px !important;
   }
 
   .sec-capacity-7__card-item {
-    height: 22px !important;
-    gap: 8px !important;
+    height: auto !important;
+    min-height: 21px !important;
+    align-items: center !important;
+    gap: 10px !important;
   }
 
   .sec-capacity-7__card-item-icon {
-    width: 19px !important;
-    height: 19px !important;
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
   }
 
   .sec-capacity-7__card-item-text {
     font-size: 13.5px !important;
-    line-height: 20px !important;
+    line-height: 1.35 !important;
   }
 
   .sec-capacity-7__decision-card {
-    height: 345px !important;
+    height: 340px !important;
     padding: 15px 15px !important;
   }
 
@@ -750,8 +888,8 @@
   }
 
   .sec-capacity-7__decision-desc {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 16.5px !important;
+    line-height: 20.5px !important;
     margin-bottom: 8px !important;
   }
 
@@ -765,9 +903,9 @@
   }
 
   .sec-capacity-7__btn {
-    font-size: 13px !important;
-    height: 30px !important;
-    padding: 6px 14px !important;
+    font-size: 13.5px !important;
+    height: 31px !important;
+    padding: 6px 15px !important;
   }
 }
 
