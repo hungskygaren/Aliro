@@ -26,7 +26,7 @@
   top: calc(205 / 720 * 100dvh);
   background-image: url("../../../assets/hero-bg-left.webp");
   background-position: left top;
-  width: 36.875vw;
+  width: calc(525 / 1440 * 100vw);
   aspect-ratio: 525 / 448;
   height: auto;
 }
@@ -36,7 +36,7 @@
   top: calc(205 / 720 * 100dvh);
   background-image: url("../../../assets/hero-bg-right.webp");
   background-position: right top;
-  width: 36.875vw;
+  width: calc(529 / 1440 * 100vw);
   aspect-ratio: 529 / 448;
   height: auto;
 }
@@ -49,7 +49,7 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: calc(var(--container-width, 1170px) * 6 / 12);
+  max-width: 770px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -96,6 +96,8 @@
   margin-top: 2px;
   margin-bottom: 0;
   width: 100%;
+  max-width: 770px;
+  margin-inline: auto;
 }
 
 .sec-hero__sub-bottom {
@@ -111,9 +113,11 @@
     "liga" off,
     "clig" off;
   font-style: normal;
-  margin-top: 18px;
+  margin-top: 12px;
   margin-bottom: 0;
   width: 100%;
+  max-width: 591px;
+  margin-inline: auto;
 }
 
 .sec-hero__desc {
@@ -264,7 +268,7 @@
   .sec-hero__sub-bottom {
     font-size: 29px;
     line-height: 31px;
-    margin-top: 16px;
+    margin-top: 11px;
   }
 
   .sec-hero__desc {
@@ -308,7 +312,7 @@
   .sec-hero__sub-bottom {
     font-size: 28px;
     line-height: 30px;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   .sec-hero__desc {
@@ -353,7 +357,7 @@
   .sec-hero__sub-bottom {
     font-size: 27px;
     line-height: 29px;
-    margin-top: 13px;
+    margin-top: 9px;
   }
 
   .sec-hero__desc {

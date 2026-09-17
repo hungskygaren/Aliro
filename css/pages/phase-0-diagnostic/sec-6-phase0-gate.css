@@ -297,7 +297,6 @@
   background-color: var(--Midnight-Navy, #01103b);
 }
 
-/* Animations */
 .sec-phase0-6.slide-animated .sec-phase0-6__top {
   opacity: 1;
   transform: translateY(0);
@@ -333,7 +332,6 @@
   transition: none !important;
 }
 
-/* Breakpoints */
 @media (max-height: 690px) and (min-width: 1025px) {
   .sec-phase0-6 .flex-center-v {
     padding-top: 72px !important;

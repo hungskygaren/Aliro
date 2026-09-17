@@ -648,9 +648,6 @@ body.no-scroll {
   }
 }
 
-/* ==========================================================================
-   Blueprint Background Decor (Reusable across sections & screens)
-   ========================================================================== */
 .bg-blueprint {
   position: absolute;
   top: 0;
@@ -667,7 +664,6 @@ img.bg-blueprint {
   object-position: bottom;
 }
 
-/* Theo chuẩn Figma: bản dark hòa trộn vào nền navy qua lighten và opacity 70% */
 img.bg-blueprint[src*="dark"] {
   background-color: #01103b;
   mix-blend-mode: lighten;
@@ -682,7 +678,6 @@ img.bg-blueprint[src*="dark"] {
   right: 0;
 }
 
-/* Chuẩn Figma CSS khi dùng thẻ <div> với background-blend-mode */
 .bg-blueprint--dark-left {
   background:
     url("../assets/bg-blueprint-dark-left.png") -0.009px 0px / 100.015% 100%

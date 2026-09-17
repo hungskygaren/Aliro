@@ -329,7 +329,6 @@
   }
 }
 
-/* Scroll Controller Base - Cho Tablet & Mobile (<= 1024px) */
 @media (max-width: 1024px) {
   .sec-services-2__scroll-controller {
     display: flex !important;

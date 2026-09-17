@@ -314,7 +314,6 @@
   transition: none !important;
 }
 
-/* Breakpoints */
 @media (max-height: 690px) and (min-width: 1025px) {
   .sec-phase0-7 .flex-center-v {
     padding-top: 75px !important;

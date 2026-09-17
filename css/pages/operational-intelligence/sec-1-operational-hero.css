@@ -225,7 +225,7 @@
   width: 670px;
   max-width: 670px;
   height: auto;
-  margin-top: 50px; /* 40px WHAT YOU RECEIVE height + 10px gap */
+  margin-top: 50px; 
   flex-shrink: 0;
   display: flex;
   justify-content: center;

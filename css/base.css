@@ -301,18 +301,13 @@ body {
   gap: 48px;
 }
 
-/* Color utilities */
 .text-gold,
 .highlight-gold {
   color: var(--Gold-Dark, #e09b21) !important;
 }
 
-/* ==========================================================================
-   TỰ ĐỘNG CĂN GIỮA TOÀN DỰ ÁN CHO MÀN HÌNH CAO (min-height: 730px)
-   Áp dụng trên Desktop (min-width: 1025px)
-   ========================================================================== */
 @media (min-height: 730px) and (min-width: 1025px) {
-  /* 1. Container ngoài cùng: phân bổ không gian và căn giữa theo trục dọc */
+  
   .scroll-section .flex-center-v,
   .swiper-slide .flex-center-v {
     display: flex !important;
@@ -324,7 +319,6 @@ body {
     box-sizing: border-box !important;
   }
 
-  /* 2. Khung sân khấu chính (stage, grid, wrapper, content): ôm sát nội dung và xóa khoảng đẩy thủ công */
   .scroll-section .flex-center-v > [class*="__stage"]:not(.sec-phase0-3__stage),
   .scroll-section .flex-center-v > [class*="__grid"],
   .scroll-section .flex-center-v > [class*="__wrapper"],
@@ -339,7 +333,6 @@ body {
     margin-bottom: 0 !important;
   }
 
-  /* 3. Khung header và stepper trong các section */
   .scroll-section .flex-center-v > [class*="__header"],
   .scroll-section .flex-center-v > [class*="__stepper"],
   .swiper-slide .flex-center-v > [class*="__header"],
@@ -348,13 +341,11 @@ body {
     padding-top: 0 !important;
   }
 
-  /* 4. Khung bottom trong các section (xóa margin-bottom: auto gây dồn nội dung lên đỉnh) */
   .scroll-section .flex-center-v > [class*="__bottom"],
   .swiper-slide .flex-center-v > [class*="__bottom"] {
     margin-bottom: 0 !important;
   }
 
-  /* 5. Chuẩn hóa đỉnh 2 cột cho các Hero có margin-top thủ công */
   .sec-operational-1__left,
   .sec-operational-1__right,
   .sec-market-1__left,
@@ -366,7 +357,6 @@ body {
     margin-top: 0 !important;
   }
 
-  /* 6. Section 2 cột trực tiếp trong flex-center-v (không có khung grid/stage bọc ngoài) */
   .sec-about-6 .flex-center-v {
     flex-direction: row !important;
     justify-content: space-between !important;
@@ -377,7 +367,6 @@ body {
     margin-top: 0 !important;
   }
 
-  /* 7. Section Leadership (#leadership) & Journey (#journey) trên trang About */
   .sec-about-7__header {
     top: calc(50dvh - 198px) !important;
   }
@@ -395,7 +384,6 @@ body {
     margin-top: 0 !important;
   }
 
-  /* 8. Section Four Lenses (#four-lenses) trên trang Phase 0 Diagnostic */
   .sec-phase0-3 .flex-center-v {
     justify-content: center !important;
     padding-top: var(--section-pt) !important;

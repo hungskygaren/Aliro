@@ -210,7 +210,7 @@
   height: auto;
   margin-top: calc(
     38 / 720 * 100dvh
-  ); /* Logo top at y=122, Visual top at y=160 (122 + 38) */
+  ); 
   flex-shrink: 0;
   display: flex;
   justify-content: center;

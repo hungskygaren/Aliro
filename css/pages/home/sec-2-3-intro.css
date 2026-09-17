@@ -112,8 +112,9 @@
   right: 0;
   top: 50%;
   z-index: 2;
-  width: 52%;
-  max-width: 600px;
+  width: calc(669 / 1170 * 100%);
+  max-width: 669px;
+  aspect-ratio: 669 / 517;
   height: auto;
   object-fit: contain;
   object-position: right center;

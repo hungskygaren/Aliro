@@ -271,7 +271,6 @@
   display: none;
 }
 
-/* Scroll Controller Base & Card Box Shadow Reset - Cho Tablet & Mobile (<= 1024px) */
 @media (max-width: 1024px) {
   .sec-9b__card,
   .sec-9b__card:hover {
@@ -390,7 +389,6 @@
   }
 }
 
-/* Tablet View (769px - 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
   .sec-9b {
     height: 100vh;
